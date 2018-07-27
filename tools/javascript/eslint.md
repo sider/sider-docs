@@ -137,11 +137,13 @@ Please check the following if you learn more details of command line interface o
 
 ### What if our repo does not have `package.json`?
 
+{% hint style="warning" %}
 We generally recommend using `npm install` in Sider to install dependencies. This standard way allows us to handle your dependency correctly. We never install ESLint of a version you are not intended to use.
 
 However, we also try to install the dependencies even if `package.json` cannot be found in your repository. This mechanism is for backward compatibility. This is unstable and unreliable. And we are no longer actively working for this.
 
 Put `package.json` in your repository and turn `npm_install: true`. This is stable and future-proof.
+{% endhint %}
 
 If your repository does not contain `package.json` or the setting of `npm_install:` does not allow `npm install`, Sider tries to install required npm packages as the following:
 
