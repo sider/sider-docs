@@ -1,3 +1,3 @@
 # Swift
 
-* [SwiftLint](../swiftlint.md)
+* [SwiftLint](./swiftlint.md)

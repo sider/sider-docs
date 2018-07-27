@@ -1,3 +1,3 @@
 # Python
 
-* [Flake8](../flake8.md)
+* [Flake8](./flake8.md)

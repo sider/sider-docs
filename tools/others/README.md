@@ -1,4 +1,4 @@
 # Others
 
-* [Misspell](../misspell.md)
-* [Goodcheck](../goodcheck.md)
+* [Misspell](./misspell.md)
+* [Goodcheck](./goodcheck.md)
