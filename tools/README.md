@@ -2,51 +2,51 @@
 
 ## Ruby
 
-* [RuboCop](./rubocop.md)
-* [Reek](./reek.md)
-* [Querly](./querly.md)
-* [Brakeman](./brakeman.md)
-* [Rails Best Practices](./rails_bestpractices.md)
-* [HAML-Lint](./haml_lint.md)
+* [RuboCop](./ruby/rubocop.md)
+* [Reek](./ruby/reek.md)
+* [Querly](./ruby/querly.md)
+* [Brakeman](./ruby/brakeman.md)
+* [Rails Best Practices](./ruby/rails_bestpractices.md)
+* [HAML-Lint](./ruby/haml_lint.md)
 
 ## Java
 
-* [Checkstyle](./checkstyle.md)
-* [PMD](./pmd_java.md)
+* [Checkstyle](./java/checkstyle.md)
+* [PMD](./java/pmd.md)
 
 ## JavaScript / AltJS
 
-* [ESLint](./eslint.md)
-* [JSHint](./jshint.md)
-* [TSLint](./tslint.md)
-* [CoffeeLint](./coffeelint.md)
+* [ESLint](./javascript/eslint.md)
+* [JSHint](./javascript/jshint.md)
+* [TSLint](./javascript/tslint.md)
+* [CoffeeLint](./javascript/coffeelint.md)
 
 ## PHP
 
-* [PHPMD](./phpmd.md)
-* [PHP_CodeSniffer](./codesniffer.md)
+* [PHPMD](./php/phpmd.md)
+* [PHP_CodeSniffer](./php/codesniffer.md)
 
 ## Python
 
-* [Flake8](./flake8.md)
+* [Flake8](./python/flake8.md)
 
 ## Swift
 
-* [SwiftLint](./swiftlint.md)
+* [SwiftLint](./swift/swiftlint.md)
 
 ## CSS
 
-* [stylelint](./stylelint.md)
-* [SCSS-Lint](./scss-lint.md)
+* [stylelint](./css/stylelint.md)
+* [SCSS-Lint](./css/scss-lint.md)
 
 ## Go
 
-* [go vet](./govet.md)
-* [Go Meta Linter](./gometalinter.md)
-* [Golint](./golint.md)
+* [go vet](./go/govet.md)
+* [Go Meta Linter](./go/gometalinter.md)
+* [Golint](./go/golint.md)
 
 ## Others
 
-* [Misspell](./misspell.md)
-* [Goodcheck](./goodcheck.md)
+* [Misspell](./others/misspell.md)
+* [Goodcheck](./others/goodcheck.md)
 

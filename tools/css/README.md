@@ -1,4 +1,4 @@
 # CSS
 
-* [stylelint](../stylelint.md)
-* [SCSS-Lint](../scss-lint.md)
+* [stylelint](./stylelint.md)
+* [SCSS-Lint](./scss-lint.md)
