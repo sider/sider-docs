@@ -9,4 +9,5 @@ We have prepared sections below.
 * [Analysis Tools](./tools/README.md)
 * [Billing and Plans](./billing-and-plans.md)
 * [Troubleshooting](./troubleshooting.md)
+* [On-Premise](./onpremise/README.md)
 
