@@ -45,4 +45,9 @@
 * [Billing and Plans](./billing-and-plans.md)
 * [Troubleshooting](./troubleshooting.md)
 * [On-Premise](./onpremise/README.md)
+  * [Quick Start Guide](./onpremise/quick_start/README.md)
+    * [How to Setup](./onpremise/quick_start/setup.md)
+    * [How to Update](./onpremise/quick_start/update.md)
+  * [Testing for Sider setup](./onpremise/testing/README.md)
+  * [Release Note](./onpremise/releases/README.md)
 
