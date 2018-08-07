@@ -1,7 +1,7 @@
 # ESLint
 
 | Language | Web Site |
-|:--:|:--:|:--:|
+|:--:|:--:|
 | JavaScript(Node.js 8.11.3) | [https://eslint.org](https://eslint.org) |
 
 ## Getting Started
