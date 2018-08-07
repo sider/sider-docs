@@ -2,9 +2,9 @@
 
 * [Introduction](./README.md)
 * [Getting Started](./getting-started/README.md)
-  * [Setting Sider up](./getting-started/starting-up.md)
+  * [Setting Sider up](./getting-started/setup.md)
   * [Repository Settings](./getting-started/repository-settings.md)
-  * [Sider Analysis Custom Configuration](./getting-started/configuring-sider-analysis-for-yourself.md)
+  * [Sider Analysis Custom Configuration](./getting-started/custom-configuration.md)
   * [Working with Issues](./getting-started/working-with-issues.md)
 * [Analysis Tools](./tools/README.md)
   * [Ruby](./tools/ruby/README.md)
