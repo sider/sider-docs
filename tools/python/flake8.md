@@ -28,7 +28,7 @@ Our default configuration is available in GitHub repository.
 
 Here is an example setting for Flake8 under `flake8`:
 
-```yaml
+```yaml:sideci.yml
 linter:
   flake8:
     version: 2

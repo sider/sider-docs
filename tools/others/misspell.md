@@ -12,7 +12,7 @@ To start using Misspell, enable it in repository settings page on [sider.review]
 
 Here are example settings for Misspell under `misspell`:
 
-```yaml
+```yaml:sideci.yml
 linter:
   misspell:
     exclude:

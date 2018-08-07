@@ -14,7 +14,7 @@ If you need additional configuration, write `sideci.yml` and add to your reposit
 
 Example settings for HAML-Lint under `haml_lint`:
 
-```yaml
+```yaml:sideci.yml
 linter:
   haml_lint:
     options:

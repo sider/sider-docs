@@ -1,14 +1,14 @@
 # TSLint
 
 | Language | Web Site |
-|:--:|:--:|:--:|
+|:--:|:--:|
 | JavaScript(Node.js 8.11.3) | [https://palantir.github.io/tslint/](https://palantir.github.io/tslint/) |
 
 ## Getting Started
 
 To start using TSLint in Sider, declare dependency in `package.json` in your repository.
 
-```bash
+```sh
 $ npm install tslint -D
 ```
 
@@ -18,7 +18,7 @@ If you need customization, use standard TSLint config file. Create `tslint.json`
 
 Here is an example setting for TSLint under `tslint`:
 
-```yaml
+```yaml:sideci.yml
 linter:
   tslint:
     npm_install: true
@@ -62,7 +62,7 @@ This option controls which files TSLint excludes from linting. Default value of 
 
 In case you would like to exclude multiple files/directories, declare it as a sequence:
 
-```yaml
+```yaml:sideci.yml
 linter:
   tslint:
     options:

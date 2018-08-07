@@ -12,7 +12,7 @@ To start using SCSS-Lint, you do not need to prepare particular settings or file
 
 Here are example settings for SCSS-Lint.
 
-```yaml
+```yaml:sideci.yml
 linter:
   scss_lint:
     options:

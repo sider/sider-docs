@@ -8,7 +8,7 @@
 
 To start using PHP\_CodeSniffer, enable it in repository setting. To customize standard you want to follow, add `sideci.yml` in your repository and write down your desired standard in it.
 
-```yaml
+```yaml:sideci.yml
 linter:
   code_sniffer:
     dir: app/
@@ -20,7 +20,7 @@ linter:
 
 Sider assumes you are using PHP\_CodeSniffer 2.9, for compatibility. If you want to use version 3, declare that in `sideci.yml`.
 
-```yaml
+```yaml:sideci.yml
 linter:
   code_sniffer:
     version: 3
@@ -52,7 +52,7 @@ The autodetection is based on file and directory structure. For the case auto de
 
 Example setting for PHP\_CodeSniffer under `code_sniffer` is the following:
 
-```yaml
+```yaml:sideci.yml
 linter:
   code_sniffer:
     version: 3

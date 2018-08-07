@@ -18,7 +18,7 @@ Sider provides a default configuration. The default configuration is used when y
 
 ## Configuration via `sideci.yml`
 
-```yaml
+```yaml:sideci.yml
 linter:
   jshint:
     options:

@@ -1,7 +1,7 @@
 # ESLint
 
 | Language | Web Site |
-|:--:|:--:|:--:|
+|:--:|:--:|
 | JavaScript(Node.js 8.11.3) | [https://eslint.org](https://eslint.org) |
 
 ## Getting Started
@@ -14,7 +14,7 @@ $ npm install eslint -D
 
 Add `sideci.yml` to your repository.
 
-```yaml
+```yaml:sideci.yml
 linter:
   eslint:
     npm_install: true
@@ -34,7 +34,7 @@ Sider provides a recommended configuration for ESLint. The configuration is used
 
 Put settings for ESLint under `eslint`:
 
-```yaml
+```yaml:sideci.yml
 linter:
   eslint:
     npm_install: true
@@ -65,7 +65,7 @@ When your `package.json` contains dependency which cannot be installed in Sider 
 
 This option controls name of directory to pass to `eslint`. The default value is `.`. You can declare directory to analyze below:
 
-```yaml
+```yaml:sideci.yml
 linter
   eslint:
     dir: frontend/src
@@ -73,7 +73,7 @@ linter
 
 And also, if you would like to analyze multiple dirctories with Sider, you can set them below:
 
-```yaml
+```yaml:sideci.yml
 linter:
   eslint:
     dir:
@@ -84,13 +84,13 @@ linter:
 
 However, the following cases cannot give you correct analysis results because the values are regarded themselves as string literal.
 
-```yaml
+```yaml:sideci.yml
 linter:
   eslint:
     dir: frontend/src app/assets/javascripts
 ```
 
-```yaml
+```yaml:sideci.yml
 linter:
   eslint:
     dir: frontend/src,app/assets/javascripts
@@ -104,7 +104,7 @@ This option controls command line options given to `eslint`.
 
 This option controls an additional configuration file. ESLint uses your `.eslintrc{.yaml,.yml,.json}` on root directory of your project by default. Thus you need not use this option when you have used default file name: for example `.eslintrc`, `.eslintrc.yaml`, `.eslintrc.yml` and `.eslintrc.json`. But if your default named ESLint config file has been put in a directory except for root directory, you should use this option like below:
 
-```yaml
+```yaml:sideci.yml
 linter:
   eslint:
     options:
@@ -137,7 +137,7 @@ Please check the following if you learn more details of command line interface o
 
 ### What if our repo does not have `package.json`?
 
-{% hint style="warning" %}
+{% hint style="info" %}
 We generally recommend using `npm install` in Sider to install dependencies. This standard way allows us to handle your dependency correctly. We never install ESLint of a version you are not intended to use.
 
 However, we also try to install the dependencies even if `package.json` cannot be found in your repository. This mechanism is for backward compatibility. This is unstable and unreliable. And we are no longer actively working for this.
