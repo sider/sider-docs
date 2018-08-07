@@ -2,7 +2,7 @@
 
 | Supported Version | Language | Web Site |
 |:--:|:--:|:--:|
-| 4.3.1 | HAML 5.0.4 / Ruby 2.5.1 | [https://github.com/brigade/haml-lint](https://github.com/brigade/haml-lint) |
+| 0.28.0 | HAML 5.0.4 / Ruby 2.5.1 | [https://github.com/brigade/haml-lint](https://github.com/brigade/haml-lint) |
 
 ## Getting Started
 
@@ -34,7 +34,7 @@ linter:
 
 This option controls command line options that are given to `haml_lint`.
 
-#### `include_lniter`
+#### `include_linter`
 
 This option controls which linters you include to analysis object. You should put it as an array. The specified array will be passed to the parameter as a comma separated string.
 
