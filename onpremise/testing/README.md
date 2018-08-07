@@ -105,7 +105,7 @@ $ docker run --rm -t quay.io/actcat/exotic-shorthair:master pusher [API_ID] [KEY
 ```
 
 ### Test Items
-In this test, you will send test messages practically as Pusher connected. You can confirm whether to send the messages on management pages of `pusher.com`.
+In this test, you will send test messages practically as Pusher connected. You can confirm whether to send the messages on administration console of `pusher.com`.
 
 ### Specify Pusher Parameters from Environment Variables
 Check Pusher connection with the values of environment variables, `PUSHER_API_ID`, `PUSHER_API_KEY`, `PUSHER_API_SECRET` and `PUSHER_CLUSTER`.

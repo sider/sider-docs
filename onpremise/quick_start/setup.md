@@ -369,12 +369,12 @@ $ docker image prune --all     # To prune ALL unused images of containers.
 If you run these processes in running Sider, the application images, which are sideci, catpost and setaria, won't be deleted. On the other hand, idled analyzer images will be deleted. In the case, analyzers images will be downloaded automatically when Sider requires to analyze.
 
 ### Set Administrators
-You can assign administrators who are able to access admin pages. The page provides registered users information, analysis information and so on with the administrators.
+You can assign administrators who are able to access administration console. The page provides registered users information, analysis information and so on with the administrators.
 
 ```sh
 $ docker-compose run sideci_web bundle exec rake admin:promote[{{FIXME: github nickname}}]
 ```
 
-Replace `{{FIXME: github nickname}}` with your GitHub username and execute the comamnd. Only GitHub users assigned administrator can access to the admin pages. You can see the GitHub usernames if you see the user page of GitHub Enterprise; for example, if the page URL is `https://github.com/sider_user`, the user name is `sider_user`.
+Replace `{{FIXME: github nickname}}` with your GitHub username and execute the comamnd. Only GitHub users assigned administrator can access to the console. You can see the GitHub usernames if you see the user page of GitHub Enterprise; for example, if the page URL is `https://github.com/sider_user`, the user name is `sider_user`.
 
 As a user is assigned administrator by the command above, signin Sider with GitHub Enterprise account and access to `/admin` in Sider.
