@@ -28,7 +28,7 @@ Sider uses our recommended configuration if your repository does not have `.rubo
 
 Example settings for RuboCop under `rubocop`.
 
-```yaml
+```yaml:sideci.yml
 linter:
   rubocop:
     gems:
@@ -42,7 +42,7 @@ linter:
 
 This option allows you to install RuboCop plugins or configuration gems during analysis.
 
-```yaml
+```yaml:sideci.yml
 linter:
   rubocop:
     gems:
@@ -70,7 +70,7 @@ This option controls command line options that are given to rubocop.
 
 This option controls a configuration file. RuboCop uses your `.rubocop.yml` on root directory of your project by default. Thus you do not need to use this option when you have named the file `.rubocop.yml`. But if your `.rubocop.yml` has been put in a directory except for root directory, you should use this option like below:
 
-```yaml
+```yaml:sideci.yml
 linter:
   rubocop:
     options:
@@ -83,7 +83,7 @@ This option controls whether to run Rails Cops. If it is omitted, Sider automati
 
 This option is used for the case that you do not wish Sider to run Rails Cops even though your project is a Ruby on Rails project.
 
-```yaml
+```yaml:sideci.yml
 linter:
   rubocop:
     options:

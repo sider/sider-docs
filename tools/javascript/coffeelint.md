@@ -12,7 +12,7 @@ To start using CoffeeLint, you do not need to prepare particular settings or fil
 
 Here is an example setting for CoffeeLint.
 
-```yaml
+```yaml:sideci.yml
 linter:
   coffeelint:
     npm_install: true

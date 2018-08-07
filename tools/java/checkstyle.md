@@ -12,7 +12,7 @@ To start using Checkstyle, enable it in the repository setting.
 
 You can customize Checkstyle analysis using `sideci.yml`.
 
-```yaml
+```yaml:sideci.yml
 linter:
   checkstyle:
     config: google

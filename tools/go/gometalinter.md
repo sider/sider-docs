@@ -28,7 +28,7 @@ If your `sideci.yml` does not contain `config` option, Sider will use the defaul
 
 Put your Go Meta Linter configuration under `gometalinter`:
 
-```yaml
+```yaml:sideci.yml
 linter:
   gometalinter:
     import_path: github.com/your-org-name/your-repo-name

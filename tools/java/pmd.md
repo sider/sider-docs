@@ -12,7 +12,7 @@ To start using PMD, enable it in the repository setting.
 
 You can customize PMD analysis by using `sideci.yml`.
 
-```yaml
+```yaml:sideci.yml
 linter:
   pmd_java:
     dir: src

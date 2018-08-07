@@ -14,7 +14,7 @@ Visit [its project page](https://github.com/sider/goodcheck#goodcheckyml) for mo
 
 Here are example settings for Goodcheck under `goodcheck`:
 
-```yaml
+```yaml:sideci.yml
 linter:
   goodcheck:
     config: lib/goodcheck.yml

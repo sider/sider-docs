@@ -20,7 +20,7 @@ Sider uses the following settings of Rails Best Practices if there is no config 
 
 Here are example settings for Rails Best Practices under `rails_best_practices`.
 
-```yaml
+```yaml:sideci.yml
 linter:
   rails_best_practices:
     options:
@@ -56,7 +56,7 @@ This option controls whether to include files of `features` directory. When opti
 
 This option controls files/directories to exclude them from analysis. If you would like to set up multiple files/directories, write them as a comma separated list:
 
-```yaml
+```yaml:sideci.yml
 linter:
   rails_best_practices:
     options:
@@ -67,7 +67,7 @@ linter:
 
 This option manages files/directories to analyze. When this option is declared, Sider analyzes only matching a pattern. If you would like to set up multiple files/directories, write them as a comma separated list:
 
-```yaml
+```yaml:sideci.yml
 linter:
   rails_best_practices:
     options:

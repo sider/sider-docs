@@ -26,7 +26,7 @@ Sider uses the latest version of [stylelit-config-recommended](https://github.co
 
 Here are example settings for stylelint under `stylelint`.
 
-```yaml
+```yaml:sideci.yml
 linter:
   stylelint:
     npm_install: true
@@ -44,7 +44,12 @@ linter:
 
 This option controls `npm` command invocation. By using this option, you can install dependencies on your program.
 
-\|Value\|Execution Command\| \|_----\|_---\| \|`true`\|`npm install --ignore-scripts`\| \|`development`\|`npm install --only=development --ignore-scripts`\| \|`production`\|`npm install --only=production --ignore-scripts`\| \|Other values\|None\|
+| Value | Execution Command |
+| :---- | :---------------- |
+| `true` | `npm install --ignore-scripts` |
+| `development` | `npm install --only=development --ignore-scripts` |
+| `production` | `npm install --only=production --ignore-scripts` |
+| Other values | None |
 
 When your `package.json` contains dependecies which cannot be installed in Sider container, `npm install` fails. The analysis will be done but the result may be an unexpected one. In this case, try using `development` or `production` option. You could also let the dependency be `optionalDependency`.
 
