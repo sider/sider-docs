@@ -2,7 +2,7 @@
 
 | Supported Version | Language | Web Site |
 |:--:|:--:|:--:|
-| 4.3.1 | Ruby 2.5.1 | [https://github.com/soutaro/querly](https://github.com/soutaro/querly) |
+| 0.12.0 | Ruby 2.5.1 | [https://github.com/soutaro/querly](https://github.com/soutaro/querly) |
 
 ## Getting Started
 

@@ -1,8 +1,8 @@
 # RuboCop
 
-| Supported Version | Language | Web Site |
-|:--:|:--:|:--:|
-| 4.3.1 | Ruby 2.5.1 | [https://github.com/rubocop-hq/rubocop](https://github.com/rubocop-hq/rubocop) |
+| Language | Web Site |
+|:--:|:--:|
+| Ruby 2.5.1 | [https://github.com/rubocop-hq/rubocop](https://github.com/rubocop-hq/rubocop) |
 
 ## Gettings Started
 

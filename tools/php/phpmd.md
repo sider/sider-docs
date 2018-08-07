@@ -2,7 +2,7 @@
 
 | Supported Version | Language | Web Site |
 |:--:|:--:|:--:|
-| 2.9.1, 3.3.0 | PHP 7.1.9 | [https://phpmd.org/](https://phpmd.org/) |
+| 2.6.0 | PHP 7.1.9 | [https://phpmd.org/](https://phpmd.org/) |
 
 ## Getting Started
 

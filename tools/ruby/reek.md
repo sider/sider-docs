@@ -2,7 +2,7 @@
 
 | Supported Version | Language | Web Site |
 |:--:|:--:|:--:|
-| 4.3.1 | Ruby 2.5.1 | [https://github.com/troessner/reek](https://github.com/troessner/reek) |
+| 5.0.2 | Ruby 2.5.1 | [https://github.com/troessner/reek](https://github.com/troessner/reek) |
 
 ## Gettings Started
 
