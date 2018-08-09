@@ -28,8 +28,8 @@ If you would like to enable Test Mode, check it. This is the mode that you can t
 
 Select languages or frameworks that you're using in your project. The checked tools will be used for the first analysis. Here's the full list of available ones:
 
-| *Language* | *Tools* |
-| :--- | :--- |
+| Language / Framework | Tools |
+| :------------------- | :---- |
 | Ruby | RuboCop, Reek |
 | Ruby on Rails | RuboCop, Reek, Brakeman, Rails Best Practices, JSHint, stylelint, CoffeeLint |
 | PHP | PHPMD |

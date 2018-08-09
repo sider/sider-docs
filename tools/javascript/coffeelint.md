@@ -1,7 +1,7 @@
 # CoffeeLint
 
 | Supported Version | Language | Web Site |
-|:--:|:--:|:--:|
+| ----------------- | -------- | -------- |
 | 1.16.0 | JavaScript(Node.js 8.11.3) | [http://www.coffeelint.org/](http://www.coffeelint.org/) |
 
 ## Getting Started

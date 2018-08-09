@@ -6,8 +6,8 @@
 * [Reek](./ruby/reek.md)
 * [Querly](./ruby/querly.md)
 * [Brakeman](./ruby/brakeman.md)
-* [Rails Best Practices](./ruby/rails_bestpractices.md)
-* [HAML-Lint](./ruby/haml_lint.md)
+* [Rails Best Practices](./ruby/rails-bestpractices.md)
+* [HAML-Lint](./ruby/haml-lint.md)
 
 ## Java
 

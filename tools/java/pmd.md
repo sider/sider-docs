@@ -1,7 +1,7 @@
 # PMD
 
 | Supported Version | Language | Web Site |
-|:--:|:--:|:--:|
+| ----------------- | -------- | -------- |
 | 6.5.0 | Java 8 | [https://pmd.github.io](https://pmd.github.io) |
 
 ## Getting Started

@@ -1,7 +1,7 @@
 # Querly
 
 | Supported Version | Language | Web Site |
-|:--:|:--:|:--:|
+| ----------------- | -------- | -------- |
 | 0.12.0 | Ruby 2.5.1 | [https://github.com/soutaro/querly](https://github.com/soutaro/querly) |
 
 ## Getting Started

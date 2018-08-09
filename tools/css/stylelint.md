@@ -1,7 +1,7 @@
 # stylelint
 
 | Language | Web Site |
-|:--:|:--:|
+| -------- | -------- |
 | CSS / Any languages that PostCSS can parse(e.g. SCSS, SugarSS and Less) | [https://stylelint.io/](https://stylelint.io/) |
 
 ## Getting Started

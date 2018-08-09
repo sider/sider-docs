@@ -1,7 +1,7 @@
 # TSLint
 
 | Language | Web Site |
-|:--:|:--:|
+| -------- | -------- |
 | JavaScript(Node.js 8.11.3) | [https://palantir.github.io/tslint/](https://palantir.github.io/tslint/) |
 
 ## Getting Started

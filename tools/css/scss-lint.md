@@ -1,7 +1,7 @@
 # SCSS-Lint
 
 | Supported Version | Language | Web Site |
-|:--:|:--:|:--:|
+| ----------------- | -------- | -------- |
 | 0.57.0 | SCSS 3.5.6 / Ruby 2.5.1|| 0.57.0 | [https://github.com/brigade/scss-lint](https://github.com/brigade/scss-lint) |
 
 ## Getting Started

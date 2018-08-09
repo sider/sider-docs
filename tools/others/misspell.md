@@ -1,7 +1,7 @@
 # Misspell
 
 | Supported Version | Language | Web Site |
-|:--:|:--:|:--:|
+| ----------------- | -------- | -------- |
 | 0.3.4 | Others(Spell Checking) | [https://github.com/client9/misspell](https://github.com/client9/misspell) |
 
 ## Getting Started

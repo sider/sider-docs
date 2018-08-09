@@ -1,7 +1,7 @@
 # PHPMD
 
 | Supported Version | Language | Web Site |
-|:--:|:--:|:--:|
+| ----------------- | -------- | -------- |
 | 2.6.0 | PHP 7.1.9 | [https://phpmd.org/](https://phpmd.org/) |
 
 ## Getting Started

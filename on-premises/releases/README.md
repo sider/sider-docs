@@ -3,7 +3,7 @@
 ## Latest Release Tags
 
 | Application Name | Tag |
-| ------------- | ------- |
+| ---------------- | --- |
 | sider(sideci) | release-2018072001 |
 | catpost | release-2018071701 |
 | setaria | release-2018071701|
@@ -15,12 +15,12 @@ Main changes are as follows.
 * Fix failure to rendering analysis results page and newsfeed pages when pull requests which had been opened since several month ago remained on Sider.
 
 ### Update Procedure
-For updating, see also [Update Guide](/onpremise/quick_start/update).
+For updating, see also [Update Guide](../../on-premises/quick-start/update.md).
 
 1. Download the application image of `sider`.
 2. Stop applications.
 3. Refresh release tag on `docker-compose.yml`.
-  * For `sideci_web` and `sideci_worker`, replace older release tags with `release-2018072001`.
+    * For `sideci_web` and `sideci_worker`, replace older release tags with `release-2018072001`.
 4. Start applications.
 
 ## release-2018071701
@@ -35,7 +35,7 @@ This update has required to apply changes to database.
 1. Download application images.
 2. Stop applications.
 3. Refresh release tags on `docker-compose.yml`.
-  * Replace older release tags with `release-2018071701`.
+    * Replace older release tags with `release-2018071701`.
 4. Run migration process(as follows commands).
 5. Start applications.
 
@@ -64,12 +64,12 @@ If you have enabled `Required` for `ci/sideci` as "Require status checks" on rep
 ![Commit Status Context](../../.gitbook/assets/commit-status-context.png)
 
 ### Update Procedure
-For updating, see also [Update Guide](/onpremise/quick_start/update).
+For updating, see also [Update Guide](../../on-premises/quick-start/update.md).
 
 1. Download application images.
 2. Stop applications.
 3. Refresh release tag on `docker-compose.yml`.
-  * Replace older release tags with `release-2018061501`.
+    * Replace older release tags with `release-2018061501`.
 4. Start applications.
 
 ## release-2018051401
@@ -79,7 +79,7 @@ Apply the update with following steps.
 1. Download application images.
 2. Stop applications.
 3. Refresh release tags on `docker-compose.yml`.
-  * Replace older release tags with `release-2018051401`.
+    * Replace older release tags with `release-2018051401`.
 4. Run migration process(as follows commands).
 5. Start applications.
 
@@ -100,7 +100,7 @@ Apply the update with following steps.
 1. Download application images.
 2. Stop applications.
 3. Refresh release tags on `docker-compose.yml`.
-  * Replace older release tags with `release-2018041601`.
+    * Replace older release tags with `release-2018041601`.
 4. Run migration process(as follows commands).
 5. Start applications.
 
@@ -129,7 +129,7 @@ Apply the update with following steps.
 1. Download application images.
 2. Stop applications.
 3. Refresh release tags on `docker-compose.yml`.
-  * Replace older release tags with `release-2018030701`.
+    * Replace older release tags with `release-2018030701`.
 4. Run migration process(as follows commands).
 5. Start applications.
 
