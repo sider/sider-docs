@@ -1,4 +1,4 @@
-# How to Setup Sider
+# Setup Guide
 
 We have prepared guides whether applications have been set up correctly.
 * [Testing for Sider setup](../testing/README.md)
