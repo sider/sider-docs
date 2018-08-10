@@ -310,7 +310,7 @@ volumes:
 ### Setup Database
 Start containers and create database and tables based with the `docker-compose.yml`.
 
-```sh
+```
 $ docker-compose run sideci_web bundle exec rake db:setup db:seed_fu
 $ docker-compose run catpost_web bundle exec rake db:setup
 $ docker-compose run setaria_web bundle exec rake db:setup
@@ -319,7 +319,7 @@ $ docker-compose run setaria_web bundle exec rake db:setup
 ### Starting Applications
 Run up the applications after completion of database setup.
 
-```sh
+```
 $ docker-compose up
 ```
 
@@ -345,7 +345,7 @@ Sider building is completed if you check behaviors above!
 ### Settings for Batch Tasks
 Sider has tasks which should be executed to keep operations stabiled. Therefore, set crontab to run following commands everyday.
 
-```sh
+```
 $ docker-compose run sideci_web bundle exec rake onprem:batch:daily
 $ docker-compose run catpost_web bundle exec rake onprem:batch:daily
 $ docker-compose run setaria_web bundle exec rake onprem:batch:daily
@@ -361,7 +361,7 @@ As you use Sider, disk usage will be increasing because unused images increases.
 
 It will cause unexpected errors as unused iamges occupy disk. Thus we recommend you to prune the images on a regular basis.
 
-```sh
+```
 $ docker image prune
 $ docker image prune --all     # To prune ALL unused images of containers.
 ```
@@ -371,7 +371,7 @@ If you run these processes in running Sider, the application images, which are s
 ### Set Administrators
 You can assign administrators who are able to access administration console. The page provides registered users information, analysis information and so on with the administrators.
 
-```sh
+```
 $ docker-compose run sideci_web bundle exec rake admin:promote[{{FIXME: github nickname}}]
 ```
 

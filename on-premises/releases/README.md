@@ -41,7 +41,7 @@ This update has required to apply changes to database.
 
 Commands:
 
-```sh
+```
 $ docker-compose run --rm sideci_web bundle exec rake db:migrate VERSION=20180621063716
 $ docker-compose run --rm sideci_web bundle exec rails r 'User.where(locale: nil).find_each { |user| user.update!(locale: :ja) }'
 $ docker-compose run --rm sideci_web bundle exec rake db:migrate
@@ -85,7 +85,7 @@ Apply the update with following steps.
 
 Commands:
 
-```sh
+```
 $ docker-compose run --rm sideci_web bundle exec rake db:migrate VERSION=20180423083742
 $ docker-compose run --rm sideci_web bundle exec rails r 'Services::ApiCacheRefreshService.refresh_all!'
 $ docker-compose run --rm sideci_web bundle exec rake db:migrate
@@ -106,7 +106,7 @@ Apply the update with following steps.
 
 Commands:
 
-```sh
+```
 $ docker-compose run --rm sideci_web bundle exec rake db:migrate VERSION=20180326070805
 $ docker-compose run --rm sideci_web bundle exec rails r script/migrate/20180402_set_display_name_from_name_in_organizations.rb
 $ docker-compose run --rm sideci_web bundle exec rake db:migrate
@@ -145,7 +145,7 @@ bundle exec sidekiq -C ./config/sidekiq.yml
 ### Update Database
 With following commands, update database:
 
-```sh
+```
 $ docker-compose run --rm sideci_web bundle exec rails r script/migrate/20180220_ghrepo_null2false.rb
 $ docker-compose run --rm sideci_web bundle exec rails r script/migrate/20180123_migrate_trial_subscriptions.rb
 $ docker-compose run --rm sideci_web bundle exec rails r script/migrate/20180302_update_last_analyzed_at_of_pull_requests.rb
