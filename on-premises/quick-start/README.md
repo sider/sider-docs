@@ -1,4 +1,4 @@
-# Quick Start Guide
+# Quick Start Guides
 This guide has explained about setting up Sider application on an Amazon EC2 instance.
 It has assumed that you are using following services:
 
@@ -16,5 +16,5 @@ It has assumed that you are using following services:
 If you setup Sider with a different conposition from above, you would need to check each application guide and setup Sider in order to meet the requirement.
 
 ## Setup and Operational Guide
-* [How to Setup](./setup.md)
-* [How to Update](./update.md)
+* [Setup Guide](./setup.md)
+* [Update Guide](./update.md)
