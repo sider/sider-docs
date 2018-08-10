@@ -16,7 +16,7 @@ Sider tries to download dependencies if your project contains `glide.yaml`. This
 
 If `glide.yaml` contains a dependency to a library in a private repository, please add the SSH key necessary to clone it.
 
-* [Use other private repositories for analysis](https://github.com/sider/sider-docs/tree/ab39e9af13db392d996b023a7ec337b44baf5e86/docs/tools/advanced-settings/private-dependencies.md)
+* [Use other private repositories for analysis](../../advanced-settings/private-dependencies.md)
 
 ## Default Configuration
 
