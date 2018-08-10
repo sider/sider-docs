@@ -1,7 +1,7 @@
 # Rails Best Practices
 
 | Supported Version | Language | Web Site |
-|:--:|:--:|:--:|
+| ----------------- | -------- | -------- |
 | 1.19.2 | Ruby 2.5.1 | [https://rails-bestpractices.com/](https://rails-bestpractices.com/) |
 
 ## Getting Started

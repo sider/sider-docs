@@ -1,7 +1,7 @@
 # SwiftLint
 
 | Supported Version | Language | Web Site |
-|:--:|:--:|:--:|
+| ----------------- | -------- | -------- |
 | 0.23.1 | Swift 3.1.1 | [https://github.com/realm/SwiftLint](https://github.com/realm/SwiftLint) |
 
 ## Getting Started

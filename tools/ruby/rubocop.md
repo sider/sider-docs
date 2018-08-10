@@ -1,7 +1,7 @@
 # RuboCop
 
 | Language | Web Site |
-|:--:|:--:|
+| -------- | -------- |
 | Ruby 2.5.1 | [https://github.com/rubocop-hq/rubocop](https://github.com/rubocop-hq/rubocop) |
 
 ## Gettings Started

@@ -1,7 +1,7 @@
 # PHP\_CodeSniffer
 
 | Supported Version | Language | Web Site |
-|:--:|:--:|:--:|
+| ----------------- | -------- | -------- |
 | 2.9.1, 3.3.0 | PHP 7.1.9 | [http://pear.php.net/package/PHP\_CodeSniffer](http://pear.php.net/package/PHP_CodeSniffer) |
 
 ## Getting Started

@@ -1,7 +1,7 @@
 # Reek
 
 | Supported Version | Language | Web Site |
-|:--:|:--:|:--:|
+| ----------------- | -------- | -------- |
 | 5.0.2 | Ruby 2.5.1 | [https://github.com/troessner/reek](https://github.com/troessner/reek) |
 
 ## Gettings Started

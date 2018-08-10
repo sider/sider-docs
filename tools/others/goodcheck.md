@@ -1,7 +1,7 @@
 # Goodcheck
 
 | Supported Version | Language | Web Site |
-|:--:|:--:|:--:|
+| ----------------- | -------- | -------- |
 | 1.2.0 | Others(Regexp) | [https://github.com/sider/goodcheck](https://github.com/sider/goodcheck) |
 
 ## Getting Started
