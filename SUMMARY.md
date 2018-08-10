@@ -45,9 +45,9 @@
 * [Billing and Plans](./billing-and-plans.md)
 * [Troubleshooting](./troubleshooting.md)
 * [On-Premise](./on-premises/README.md)
-  * [Quick Start Guide](./on-premises/quick-start/README.md)
-    * [How to Setup](./on-premises/quick-start/setup.md)
-    * [How to Update](./on-premises/quick-start/update.md)
+  * [Quick Start Guides](./on-premises/quick-start/README.md)
+    * [Setup Guide](./on-premises/quick-start/setup.md)
+    * [Update Guide](./on-premises/quick-start/update.md)
   * [Testing for Sider setup](./on-premises/testing/README.md)
   * [Release Notes](./on-premises/releases/README.md)
 
