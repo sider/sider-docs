@@ -1,6 +1,6 @@
 # Setup Guide
 
-We have prepared guides whether applications have been set up correctly.
+We have provided a guide whether applications have been set up correctly.
 * [Testing for Sider setup](../testing/README.md)
 
 ## Setup
@@ -10,7 +10,7 @@ First of all, register new OAuth app on GitHub Enterprise; check "[Creating an O
 
 | Application name | Homepage URL | Application description | Authorization callback |
 | :--------------- | :----------- | :---------------------- | :--------------------- |
-| Sider | https://[your-web-service-domain]/ (e.g. https://sider.review/) | (Optional) | https://[your-web-service-domain]/users/auth/github |
+| Sider | `https://[your-web-service-domain]/` (e.g. `https://sider.review/`) | (Optional) | `https://[your-web-service-domain]/users/auth/github` |
 
 After succeeding the registration, `Client ID` and `Client Secret` will be created. You have to keep the parameters because these are set as environment variables.
 
@@ -88,7 +88,7 @@ We have confirmed behavior when we used docker-compose version `1.17.0` as a tes
 Sider consists of 3 applications which have provided as Docker images on Quay.io. So, pull the images with a robot account that can access Quay.io.
 When you login with a robot account, the document, "[Robot Accounts](https://docs.quay.io/glossary/robot-accounts.html)", will help you.
 
-```sh
+```
 $ docker pull quay.io/actcat/sideci:${VERSION}
 $ docker pull quay.io/actcat/catpost:${VERSION}
 $ docker pull quay.io/actcat/setaria:${VERSION}
@@ -103,7 +103,7 @@ Set required environment variables for each application. You need to replace `{{
 Create `sideci.env` as an env file for Sider.
 
 {% hint style="info" %}
-NOTE: `EXCEPTION_NOTIFIER_EMAIL` and `EXCEPTION_NOTIFIER_BUGSNAG` will be optional variables in the future.
+`EXCEPTION_NOTIFIER_EMAIL` and `EXCEPTION_NOTIFIER_BUGSNAG` will be optional variables in the future.
 {% endhint %}
 
 ```:sideci.env
@@ -141,7 +141,7 @@ LOGGLY_URL=https://logs-01.loggly.com/inputs/{{FIXME: Loggly token}}/tag/sideci
 Create `catpost.env` as an env file for Catpost.
 
 {% hint style="info" %}
-NOTE: `EXCEPTION_NOTIFIER_EMAIL` and `EXCEPTION_NOTIFIER_BUGSNAG` will be optional variables and `API_TOKEN` will be replaced with `API_SECRET` in the future.
+`EXCEPTION_NOTIFIER_EMAIL` and `EXCEPTION_NOTIFIER_BUGSNAG` will be optional variables and `API_TOKEN` will be replaced with `API_SECRET` in the future.
 {% endhint %}
 
 ```:catpost.env
@@ -175,7 +175,7 @@ LOGGLY_URL=https://logs-01.loggly.com/inputs/{{FIXME: Loggly token}}/tag/catpost
 Create `setaria.env` as an env file for Setaria.
 
 {% hint style="info" %}
-NOTE: `EXCEPTION_NOTIFIER_EMAIL` and `EXCEPTION_NOTIFIER_BUGSNAG` will be optional variables in the future.
+`EXCEPTION_NOTIFIER_EMAIL` and `EXCEPTION_NOTIFIER_BUGSNAG` will be optional variables in the future.
 {% endhint %}
 
 ```:setaria.env
