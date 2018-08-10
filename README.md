@@ -1,8 +1,6 @@
 # Introduction
 
-Guids for Sider, analyzers, and customization.
-
-We have prepared sections below.
+Guides for Sider, analyzers, and customization.
 
 * [Getting Started](./getting-started/README.md)
 * [Advanced Settings](./advanced-settings/README.md)
