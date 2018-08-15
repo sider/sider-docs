@@ -2,11 +2,11 @@
 
 ## Latest Release Tags
 
-| Application Name | Tag |
-| ---------------- | --- |
-| sider(sideci) | release-2018081501 |
-| catpost | release-2018081501 |
-| setaria | release-2018081501
+| Application Name | Tag                |
+| ---------------- | ------------------ |
+| sider(sideci)    | release-2018081501 |
+| catpost          | release-2018081501 |
+| setaria          | release-2018081501 |
 
 ## release-2018081501
 Main changes are as follows.
