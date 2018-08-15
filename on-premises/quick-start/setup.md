@@ -106,10 +106,6 @@ Create `sideci.env` as an env file for Sider.
 `EXCEPTION_NOTIFIER_EMAIL` and `EXCEPTION_NOTIFIER_BUGSNAG` will be optional variables in the future.
 {% endhint %}
 
-{% hint style="warning" %}
-`BUGSNAG_API_KEY` is required even if you don't use Bugsnag. Please set something like "foo".
-{% endhint %}
-
 ```:sideci.env
 RAILS_ENV=onprem
 SECRET_KEY_BASE={{FIXME: Secret for running the application}}
@@ -148,10 +144,6 @@ Create `catpost.env` as an env file for Catpost.
 `EXCEPTION_NOTIFIER_EMAIL` and `EXCEPTION_NOTIFIER_BUGSNAG` will be optional variables and `API_TOKEN` will be replaced with `API_SECRET` in the future.
 {% endhint %}
 
-{% hint style="warning" %}
-`BUGSNAG_API_KEY` is required even if you don't use Bugsnag. Please set something like "foo".
-{% endhint %}
-
 ```:catpost.env
 RAILS_ENV=onprem
 SECRET_KEY_BASE={{FIXME: Secret for running the application}}
@@ -184,10 +176,6 @@ Create `setaria.env` as an env file for Setaria.
 
 {% hint style="info" %}
 `EXCEPTION_NOTIFIER_EMAIL` and `EXCEPTION_NOTIFIER_BUGSNAG` will be optional variables in the future.
-{% endhint %}
-
-{% hint style="warning" %}
-`BUGSNAG_API_KEY` is required even if you don't use Bugsnag. Please set something like "foo".
 {% endhint %}
 
 ```:setaria.env
