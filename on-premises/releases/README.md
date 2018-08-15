@@ -2,11 +2,17 @@
 
 ## Latest Release Tags
 
-| Application Name | Tag |
-| ---------------- | --- |
-| sider(sideci) | release-2018072001 |
-| catpost | release-2018071701 |
-| setaria | release-2018071701|
+| Application Name | Tag                |
+| ---------------- | ------------------ |
+| sider(sideci)    | release-2018081501 |
+| catpost          | release-2018081501 |
+| setaria          | release-2018081501 |
+
+## release-2018081501
+Main changes are as follows.
+
+### Fixes
+* Fix failure to delete users on admin page
 
 ## release-2018072001
 Main changes are as follows.
