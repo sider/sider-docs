@@ -44,7 +44,7 @@
   * [Inline Comments](./advanced-settings/inline-comments.md)
 * [Billing and Plans](./billing-and-plans.md)
 * [Troubleshooting](./troubleshooting.md)
-* [On-Premise](./on-premises/README.md)
+* [On-Premises](./on-premises/README.md)
   * [Quick Start Guides](./on-premises/quick-start/README.md)
     * [Setup Guide](./on-premises/quick-start/setup.md)
     * [Update Guide](./on-premises/quick-start/update.md)
