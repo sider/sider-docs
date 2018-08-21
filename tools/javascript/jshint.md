@@ -2,7 +2,7 @@
 
 | Supported Version | Language | Web Site |
 | ----------------- | -------- | -------- |
-| 2.9.5 | JavaScript(Node.js 8.11.3) | [http://jshint.com/](http://jshint.com/) |
+| 2.9.6 | JavaScript(Node.js 8.11.3) | [http://jshint.com/](http://jshint.com/) |
 
 ## Getting Started
 
