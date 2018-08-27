@@ -43,6 +43,7 @@ linter:
       standard: phpcs.xml
       extensions: php,inc,lib
       encoding: utf-8
+      ignore: app/Vendor
 ```
 
 ### `version`
@@ -87,3 +88,8 @@ This option controls extensions of files Sider inspects. The default value is `p
 #### `encoding`
 
 This option controls file encoding.
+
+#### `ignore`
+
+A comma separated list of patterns to ignore files and directories.
+

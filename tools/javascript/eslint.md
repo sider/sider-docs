@@ -46,6 +46,7 @@ linter:
       no-ignore: application.js
       ignore-pattern: /src/vendor/*
       global: require,exports:true welcome.js
+      quiet: true
 ```
 
 ### `npm_install`
@@ -125,13 +126,17 @@ This option controls use of ignore files or patterns to disable.
 
 #### `ignore-pattern`
 
-This option controls patterns of files to ignore. It requires String.
+This option controls patterns of files to ignore. It must be a String or an Array.
 
 #### `global`
 
 This option controls definition of global variables. It requires String and comma-separeted.
 
 Please check the following if you learn more details of command line interface of ESLint: [ESLint - Command Line Interface](http://eslint.org/docs/user-guide/command-line-interface)
+
+#### `quiet`
+
+This option controls warnings. Report only errors if it is `true`.
 
 ## Troubleshooting
 
