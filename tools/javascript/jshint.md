@@ -21,9 +21,14 @@ Sider provides a default configuration. The default configuration is used when y
 ```yaml:sideci.yml
 linter:
   jshint:
+    dir: src
     options:
       config: lint_yml/.jshintrc
 ```
+
+### `dir`
+
+The directory where the analysis is performed. It is passed as an argument of JSHint.
 
 ### `options`
 
