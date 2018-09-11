@@ -4,9 +4,23 @@
 
 | Application Name | Tag                |
 | ---------------- | ------------------ |
-| sider(sideci)    | release-2018081501 |
-| catpost          | release-2018081501 |
-| setaria          | release-2018081501 |
+| sider(sideci)    | release-2018091101 |
+| catpost          | release-2018091101 |
+| setaria          | release-2018091101 |
+
+## release-2018091101
+
+### Features
+* Send emails when the inline comments fail
+
+### Fixes
+
+* Fixed several UI issues
+* Bug fixes
+
+### Update Procedure
+
+See [Update Guide](../../on-premises/quick-start/update.md).
 
 ## release-2018081501
 Main changes are as follows.
