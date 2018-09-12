@@ -18,6 +18,12 @@ If `glide.yaml` contains a dependency to a library in a private repository, plea
 
 * [Use other private repositories for analysis](../../advanced-settings/private-dependencies.md)
 
+
+{% hint style="info" %}
+Note that need to set `import_path` option in `sideci.yml` when you would like to run `glide install` on analysis.
+See [here](#import_path) for details.
+{% endhint %}
+
 ## Default Configuration
 
 If your `sideci.yml` does not contain `config` option, Sider will use the default configuration. The default configuration is available in our repository.
