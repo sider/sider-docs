@@ -43,7 +43,7 @@ linter:
       config: '.myeslintrc'
       ext: 'js,jsx,es6'
       ignore-path: .gitignore
-      no-ignore: application.js
+      no-ignore: true
       ignore-pattern: /src/vendor/*
       global: require,exports:true welcome.js
       quiet: true
