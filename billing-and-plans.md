@@ -34,6 +34,10 @@ You can check payment histories on the page. And also you can view details of in
 
 The page will tell you details of the invoice. Click "Print this invoice out", then you will get the invoice as PDF to print.
 
+You can include your company information: company name, postal code, address and so on. Click "Add additional information" button on detailed invoice page, and fill in the information as necessary.
+
+![Company Information](./.gitbook/assets/invoice-company-info.png)
+
 You must have the owner role for the organization to see or edit the invoice.
 
 ## Q&A
