@@ -25,6 +25,7 @@
   * [PHP](./tools/php/README.md)
     * [PHPMD](./tools/php/phpmd.md)
     * [PHP_CodeSniffer](./tools/php/codesniffer.md)
+    * [Phinder](./tools/php/phinder.md)
   * [Python](./tools/python/README.md)
     * [Flake8](./tools/python/flake8.md)
   * [Swift](./tools/swift/README.md)
