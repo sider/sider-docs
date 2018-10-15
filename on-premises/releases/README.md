@@ -4,9 +4,26 @@
 
 | Application Name | Tag                |
 | ---------------- | ------------------ |
-| sider(sideci)    | release-2018091101 |
-| catpost          | release-2018091101 |
-| setaria          | release-2018091101 |
+| sider(sideci)    | release-2018101501 |
+| catpost          | release-2018101201 |
+| setaria          | release-2018101201 |
+
+## release-2018101201
+
+### Features
+* Add [Phinder](../../tools/php/phinder.md) - A new analyzer for PHP
+* [New analysis page](https://blog.sideci.com/announcing-new-analysis-page-d7ce2f39df7f)
+
+### Fixes
+
+* Bug fixes
+* Use HTTPS for Pusher
+    - Although using HTTP, the data leakage has not occurred because we have not included secure data in Pusher payload.
+      We just use it for triggering dispatch in browsers
+
+### Update Procedure
+
+See [Update Guide](../../on-premises/quick-start/update.md).
 
 ## release-2018091101
 
