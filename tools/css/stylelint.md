@@ -30,58 +30,69 @@ Here are example settings for stylelint under `stylelint`.
 linter:
   stylelint:
     npm_install: true
-    options:
-      config: lint_yml/mystylelintrc.yaml
-      ignore-path: .stylelintignore
-      syntax: sugarss
-      ignore-disables: true
-      report-needless-disables: true
-      quiet: true
-      glob: '**/*.{css,scss}'
+    config: lint_yml/mystylelintrc.yaml
+    ignore-path: .gitignore
+    syntax: sugarss
+    ignore-disables: true
+    report-needless-disables: true
+    quiet: true
+    glob: '**/*.{css,scss}'
 ```
 
-### `npm_install`
+### Options
 
-This option controls `npm` command invocation. By using this option, you can install dependencies on your program.
+You can use several options to more comfortable analysis to your project.
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| [`npm_install`](#npm_install) | boolean,<br>string | Resolve dependencies when analyzing with `npm`. |
+| [`config`](#config) | string | Set configuration file for stylelint. |
+| [`syntax`](#syntax) | string | Set non-standard syntax of PostCSS. |
+| [`ignore-path`](#ignore-path) | string | Set ignore file as necessary to exclude files from analysis. |
+| [`ignore-disables`](#ignore-disables) | boolean | If set `true`, you can ignore all disable comments. |
+| [`report-needless-disables`](#report-needless-disables) | boolean | If set `true`, report `stylelint-disable` comments. |
+| [`quiet`](#quiet) | boolean | If set `true`, rules without error severity will be ignored. |
+| [`glob`](#glob) | string | Specify file extensions inspected by stylelint. |
+
+Details of options are in below.
+
+#### `npm_install`
+
+This controls npm command invocation. By using this option, you can install dependencies on your program with following commands. When using the option with string, only *development* and *production* are allowed.
 
 | Value | Execution Command |
 | :---- | :---------------- |
 | `true` | `npm install --ignore-scripts` |
 | `development` | `npm install --only=development --ignore-scripts` |
 | `production` | `npm install --only=production --ignore-scripts` |
-| Other values | None |
+| Other values | Sider analysis fails. |
 
-When your `package.json` contains dependecies which cannot be installed in Sider container, `npm install` fails. The analysis will be done but the result may be an unexpected one. In this case, try using `development` or `production` option. You could also let the dependency be `optionalDependency`.
-
-### `options`
-
-This option allows you to control an additional command line options given to `stylelint`.
+Note that when your `package.json` contains dependecies which cannot be installed in Sider container, `npm install` fails. In the case, try using `development` or `production` option. You could also let the dependency be `optionalDependency`.
 
 #### `config`
 
-This option allows you to control a configuration file for stylelint. If you have your own settings file for stylelint, you can your configuration putting it in this option. The valid extensions for stylelintrc are `.yml`, `.yaml`, `.json`. You can also use `.stylelintc` and `package.json` for configuration.
-
-#### `ignore-path`
-
-This option allows you to control an additional configuration file to exclude from analysis. If you have `.stylelintignore`, put it in this option.
+This option allows you to control a configuration file for stylelint. If you have your own settings file for stylelint, putting the file in this option. The valid extensions for stylelintrc are `.yml`, `.yaml`, `.json` and `.js`. You can also use `.stylelintc` and `package.json` for configuration.
 
 #### `syntax`
 
-This option allows you to control non-standard syntax of PostCSS. You can specify `scss`, `less` or `sugarss`. By default, non-standard syntaxes such as `.scss`, `.less` and `.sss` files are detected.
+This option allows you to control non-standard syntax of PostCSS. You can specify `scss`, `sass`, `less` or `sugarss`. By default, non-standard syntaxes such as `.scss`, `.sass`,`.less` and `.sss` files are detected.
+
+#### `ignore-path`
+
+This option helps you to exclude files from analysis. By default stylelint detects and uses `.stylelintrc` even if you don't use the option. When you'd like to use other ignore files, such as `.gitignore`, `.eslintignore` and so on, put it in this option.
 
 #### `ignore-disables`
 
-This option allows you to decide whether to ignore all disable comments \(e.g. `/* stylelint-disable block-no-empty */`.\) If you would like to ignore these comments, declare `true` in this option.
+This option allows you to decide whether to ignore all disable comments, i.e. `/* stylelint-disable block-no-empty */`. If you would like to ignore these comments, declare `true` in this option.
 
 #### `report-needless-disables`
 
-This option allows you to control whether to report stylelint-disable comments.
+This option allows you to control whether to report `stylelint-disable` comments.
 
 #### `quiet`
 
-This option allows you to control whether to ignore warning severity. When you set `true` in this option, only rules with error severity will be registered.
+This option allows you to ignore warning severity. When you set `true` in this option, only rules with error severity will be registered.
 
 #### `glob`
 
-This option allows you to control file extensions which are inspected by stylelint. By default, `**/*.{css,less,scss,sss}` files are inspected.
-
+This option allows you to specify file extensions which are inspected by stylelint. By default, `**/*.{css,less,scss,sss}` files are done.
