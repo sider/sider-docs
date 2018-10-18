@@ -237,7 +237,7 @@ LOGGLY_URL=https://logs-01.loggly.com/inputs/{{FIXME: Loggly token}}/tag/setaria
 | `PUSHER_CLUSTER` | sideci | Value provided by Pusher. |
 | `GITHUB_CLIENT_ID` | sideci | Client ID you got when registered an OAuth App. |
 | `GITHUB_CLIENT_SECRET` | sideci | Client Secret you got when registered an OAuth App. |
-| `GITHUB_OAUTH_HEAD_ENCRYPTION_KEY` | sideci | Key that is used to encrypt OAuth token for each user generated in GitHub. Set characters; you can get it with `tr -dc '[:alnum:]' < /dev/urandom | head -c32`. DO NOT CHANGE the value after you set once because Sider fails to decrypt stored OAuth tokens. |
+| `GITHUB_OAUTH_HEAD_ENCRYPTION_KEY` | sideci | Key that is used to encrypt OAuth token for each user generated in GitHub. Set characters; you can get it with ```tr -dc '[:alnum:]' < /dev/urandom | head -c32```. DO NOT CHANGE the value after you set once because Sider fails to decrypt stored OAuth tokens. |
 | `GITHUB_API_ENDPOINT` | sideci | API endpoint that Sider uses to connect GitHub Enterprise; which is `https://[your-github-enterprise-host]/api/v3/`. |
 | `CATPOST_BASE_URL` | sideci | Set `http://catpost_web:3000`. If you would like to change service name or port number on `docker-compose`, replace the URL with the name/number you set. |
 | `CATPOST_SECRET` | sideci | Set the same value of `API_TOKEN`. |
@@ -249,11 +249,11 @@ LOGGLY_URL=https://logs-01.loggly.com/inputs/{{FIXME: Loggly token}}/tag/setaria
 | `LOGGLY_URL` | ALL | URL provided by Loggly. Loggly is used for investigating problems. |
 | `S3_BUCKET_NAME` | catpost | The bucket name you get when created a bucket. |
 | `S3_REGION_NAME` | catpost | The region name you get when created a bucket. |
-| `URL_ENCRYPTION_KEY` | catpost | The key that is used to encrypt URL that includes OAuth token. Set characters; you can get it with `tr -dc '[:alnum:]' < /dev/urandom | head -c32`. |
-| `ARCHIVE_ENCRYPTOIN_KEY` | catpost | The key that is used to encrypt source code before analyzing. Set characters; you can get it with `tr -dc '[:alnum:]' < /dev/urandom | head -c32`. |
-| `ARCHIVE_NAME_SECRET` | catpost | The random data that to hash archived name of encrypted source code. Set characters; you can get it with `tr -dc '[:alnum:]' < /dev/urandom | head -c32`. |
+| `URL_ENCRYPTION_KEY` | catpost | The key that is used to encrypt URL that includes OAuth token. Set characters; you can get it with ```tr -dc '[:alnum:]' < /dev/urandom | head -c32```. |
+| `ARCHIVE_ENCRYPTOIN_KEY` | catpost | The key that is used to encrypt source code before analyzing. Set characters; you can get it with ```tr -dc '[:alnum:]' < /dev/urandom | head -c32```. |
+| `ARCHIVE_NAME_SECRET` | catpost | The random data that to hash archived name of encrypted source code. Set characters; you can get it with ```tr -dc '[:alnum:]' < /dev/urandom | head -c32```. |
 | `GIT_REPOS_DIR` | catpost | Directory name that Catpost stores cache to a local storage. Specify the file path on the container which is mounted on running up. |
-| `SSH_KEY_ENCRYPTION_KEY` | setaria | The encryption key to enctypt SSH private key. It is resolves private dependencies. Set characters; you can get it with `tr -dc '[:alnum:]' < /dev/urandom | head -c32`. DO NOT CHANGE the value after you set once because Setaria fails to dectypt stored OAuth tokens and source code. |
+| `SSH_KEY_ENCRYPTION_KEY` | setaria | The encryption key to enctypt SSH private key. It is resolves private dependencies. Set characters; you can get it with ```tr -dc '[:alnum:]' < /dev/urandom | head -c32```. DO NOT CHANGE the value after you set once because Setaria fails to dectypt stored OAuth tokens and source code. |
 | `QUAY_ROBOT_NAME` | setaria | The robot name provided by Quay.io; it is used to pull Docker images of analyzers. |
 | `QUAY_ROBOT_PASSWORD` | setaria | The robot password provided by Quay.io; it is used to pull Docker images of analyzers. |
 
