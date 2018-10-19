@@ -250,7 +250,7 @@ LOGGLY_URL=https://logs-01.loggly.com/inputs/{{FIXME: Loggly token}}/tag/setaria
 | `S3_BUCKET_NAME` | catpost | The bucket name you get when created a bucket. |
 | `S3_REGION_NAME` | catpost | The region name you get when created a bucket. |
 | `URL_ENCRYPTION_KEY` | catpost | The key that is used to encrypt URL that includes OAuth token. Set characters; you can get it with `tr -dc '[:alnum:]' < /dev/urandom \| head -c32`. |
-| `ARCHIVE_ENCRYPTOIN_KEY` | catpost | The key that is used to encrypt source code before analyzing. Set characters; you can get it with `tr -dc '[:alnum:]' < /dev/urandom \| head -c32`. |
+| `ARCHIVE_ENCRYPTION_KEY` | catpost | The key that is used to encrypt source code before analyzing. Set characters; you can get it with `tr -dc '[:alnum:]' < /dev/urandom \| head -c32`. |
 | `ARCHIVE_NAME_SECRET` | catpost | The random data that to hash archived name of encrypted source code. Set characters; you can get it with `tr -dc '[:alnum:]' < /dev/urandom \| head -c32`. |
 | `GIT_REPOS_DIR` | catpost | Directory name that Catpost stores cache to a local storage. Specify the file path on the container which is mounted on running up. |
 | `SSH_KEY_ENCRYPTION_KEY` | setaria | The encryption key to enctypt SSH private key. It is resolves private dependencies. Set characters; you can get it with `tr -dc '[:alnum:]' < /dev/urandom \| head -c32`. DO NOT CHANGE the value after you set once because Setaria fails to dectypt stored OAuth tokens and source code. |
