@@ -33,12 +33,23 @@ linter:
   rubocop:
     gems:
       - foo_gem
-    options:
-      config: .myrubocop.yml
-      rails: false
+    config: .myrubocop.yml
+    rails: false
 ```
 
-### `gems`
+### Options
+
+You can use several options to more comfortable analysis to your project.
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| [`gems`](#gems) | `array<string>` | Specify gems and their version when analyzing. |
+| [`config`](#config) | `string` | Set your own config file for RuboCop. |
+| [`rails`](#rails) | `boolean` | If `true`, Rails Cops are executed. Default value is `true`. |
+
+Details of options are in below.
+
+#### `gems`
 
 This option allows you to install RuboCop plugins or configuration gems during analysis.
 
@@ -61,10 +72,6 @@ otacop, unasukecop, sanelint, hint-rubocop_style, rubocop-salemove, mad_rubocop,
 ws-style, rubocop-config-umbrellio, pulis, gc_ruboconfig, fincop, rubocop-github, ezcater_rubocop,
 rubocop-rspec, rubocop-verbose, rubocop-cask, rubocop-thread_safety
 ```
-
-### `options`
-
-This option controls command line options that are given to rubocop.
 
 #### `config`
 
@@ -89,4 +96,3 @@ linter:
     options:
       rails: false
 ```
-
