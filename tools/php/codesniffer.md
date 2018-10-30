@@ -39,18 +39,32 @@ Example setting for PHP\_CodeSniffer under `code_sniffer` is the following:
 linter:
   code_sniffer:
     dir: app/
-    options:
-      standard: phpcs.xml
-      extensions: php,inc,lib
-      encoding: utf-8
-      ignore: app/Vendor
+    standard: phpcs.xml
+    extensions: php,inc,lib
+    encoding: utf-8
+    ignore: app/Vendor
 ```
 
-### `version`
+### Options
+
+You can use several options to more comfortable analysis to your project.
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| [`version`](#version) | `string`,<br />`integer` | Using PHP\_CodeSniffer version 2 or 3. |
+| [`dir`](#dir) | `string` | Set targets to analyze. |
+| [`standard`](#standard) | `string` | Set coding standard or your config file when analyzing. |
+| [`extensions`](#extensions) | `string` | Set extensions to analyze. |
+| [`encoding`](#encoding) | `string` | Set file encoding. |
+| [`ignore`](#ignore) | `string` | Set exclude files or directories from analysis. |
+
+Details of options are in below.
+
+#### `version`
 
 This option controls a major version of PHP\_CodeSniffer in running. Default value is `3`.
 
-If you wish to use PHP_CodeSniffer 2.9.x, use this option like:
+If you wish to use PHP\_CodeSniffer 2.9.x, use this option like:
 
 ```yaml
 linter:
@@ -58,15 +72,11 @@ linter:
     version: 2
 ```
 
-### `dir`
+#### `dir`
 
 This option controls directories Sider inspects. The default value is depended on frameworks PHP\_CodeSniffer supports. If you use no frameworks or use any frameworks PHP\_CodeSniffer does not support, `./` is adopted by default.
 
 In case you would like to exclude specific directories, you should write it in your custom ruleset file.
-
-### `options`
-
-This option controls command line options given to phpcs.
 
 #### `standard`
 
@@ -92,4 +102,3 @@ This option controls file encoding.
 #### `ignore`
 
 A comma separated list of patterns to ignore files and directories.
-
