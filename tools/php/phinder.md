@@ -26,14 +26,12 @@ linter:
 
 ## Options
 
-| Name | Type |
-| ---- | ---- |
-| rule | String |
-| php | String |
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| [`rule`](#rule) | `string` | Specify your configuration file or directory name for Phinder. |
+| [`php`](#php) | `string` | Specify file name or directory name to analyze. |
 
 ### `rule`
-
-Required Type: `String`
 
 This option allows you to specify file or directory name for Phinder ruleset.
 If you set file name, Phinder will use the file for analysis instead of `phinder.yml`. And if set directory name, Phinder will analyze your project with all `yml` files under the directory.
@@ -45,8 +43,6 @@ linter:
 ```
 
 ### `php`
-
-Required Type: `String`
 
 This option allows you to specify path of your project to analyze. If you set file name, Phinder will analyze merely the file. In other way, as directory name is set, Phinder will analyze all `.php` files under the directory.
 
