@@ -39,26 +39,43 @@ linter:
   eslint:
     npm_install: true
     dir: frontend/app
-    options:
-      config: '.myeslintrc'
-      ext: 'js,jsx,es6'
-      ignore-path: .gitignore
-      no-ignore: true
-      ignore-pattern: /src/vendor/*
-      global: require,exports:true welcome.js
-      quiet: true
+    config: '.myeslintrc'
+    ext: '.js,.jsx,.es6'
+    ignore-path: .gitignore
+    no-ignore: true
+    ignore-pattern: /src/vendor/*
+    global: require,exports:true welcome.js
+    quiet: true
 ```
+
+### Options
+
+You can use several options to make analysis fitter for your project.
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| [`npm_install`](#npm_install) | `boolean`,<br />`string` | Resolve dependencies when analyzing with `npm`. |
+| [`dir`](#dir) | `string`,<br />`array<string>` | Set files or directories name to analyze. |
+| [`config`](#config) | `string` | Set configuration file for ESLint. |
+| [`ext`](#ext) | `string` | Specify file extensions inspected by ESLint. |
+| [`ignore-path`](#ignore-path) | `string` | Set ignore file as necessary to exclude files from analysis. |
+| [`ignore-pattern`](#ignore-pattern) | `string`,<br />`array<string>` | Set ignore patterns to exclude files from analysis. |
+| [`no-ignore`](#no-ignore) | `boolean` | If `true`, disable excluded files from ignore settings of ESLint. |
+| [`global`](#global) | `string` | Define global variables with this option. |
+| [`quiet`](#quiet) | `boolean` | If `true`, ESLint reports only error. |
+
+For details of the options, check following items.
 
 ### `npm_install`
 
 This option controls `npm` command invocation. Using this option, you can install dependencies to your program.
 
-|Value|Execution Command|
-|:---|:---|
-|`true`|`npm install --ignore-scripts`|
-|`development`|`npm install --only=development --ignore-scripts`|
-|`production`|`npm install --only=production --ignore-scripts`|
-|Other values|None|
+| Value | Execution Command |
+| :---- | :---------------- |
+| `true` |`npm install --ignore-scripts` |
+| `development` | `npm install --only=development --ignore-scripts` |
+| `production` | `npm install --only=production --ignore-scripts` |
+| Other values | Sider analysis fails. |
 
 When your `package.json` contains dependency which cannot be installed in Sider container, `npm install` fails. The analysis will be done but the result may be an unexpected one. In this case, try using `development` or `production` option, or let the dependency be `optionalDependency`.
 
@@ -97,10 +114,6 @@ linter:
     dir: frontend/src,app/assets/javascripts
 ```
 
-### `options`
-
-This option controls command line options given to `eslint`.
-
 #### `config`
 
 This option controls an additional configuration file. ESLint uses your `.eslintrc{.yaml,.yml,.json}` on root directory of your project by default. Thus you need not use this option when you have used default file name: for example `.eslintrc`, `.eslintrc.yaml`, `.eslintrc.yml` and `.eslintrc.json`. But if your default named ESLint config file has been put in a directory except for root directory, you should use this option like below:
@@ -118,7 +131,7 @@ This option controls file extensions. By default, only `.js` files are inspected
 
 #### `ignore-path`
 
-This option controls an ignore file when running `eslint`.
+This option helps you to exclude files from analysis. By default ESLint detects and uses `.eslintrc` even if you don't use the option. When you'd like to use other ignore files, such as `.gitignore`, put it in this option.
 
 #### `no-ignore`
 
@@ -126,13 +139,13 @@ This option controls use of ignore files or patterns to disable.
 
 #### `ignore-pattern`
 
-This option controls patterns of files to ignore. It must be a String or an Array.
+This option controls to ignore from analysis with patterns.
 
 #### `global`
 
 This option controls definition of global variables. It requires String and comma-separeted.
 
-Please check the following if you learn more details of command line interface of ESLint: [ESLint - Command Line Interface](http://eslint.org/docs/user-guide/command-line-interface)
+Please check the following if you learn more details of command line interface of ESLint: [ESLint - Command Line Interface](https://eslint.org/docs/user-guide/command-line-interface).
 
 #### `quiet`
 

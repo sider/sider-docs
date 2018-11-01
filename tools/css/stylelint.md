@@ -45,14 +45,14 @@ You can use several options to more comfortable analysis to your project.
 
 | Name | Type | Description |
 | ---- | ---- | ----------- |
-| [`npm_install`](#npm_install) | boolean,<br>string | Resolve dependencies when analyzing with `npm`. |
-| [`config`](#config) | string | Set configuration file for stylelint. |
-| [`syntax`](#syntax) | string | Set non-standard syntax of PostCSS. |
-| [`ignore-path`](#ignore-path) | string | Set ignore file as necessary to exclude files from analysis. |
-| [`ignore-disables`](#ignore-disables) | boolean | If set `true`, you can ignore all disable comments. |
-| [`report-needless-disables`](#report-needless-disables) | boolean | If set `true`, report `stylelint-disable` comments. |
-| [`quiet`](#quiet) | boolean | If set `true`, rules without error severity will be ignored. |
-| [`glob`](#glob) | string | Specify file extensions inspected by stylelint. |
+| [`npm_install`](#npm_install) | `boolean`,<br>`string` | Resolve dependencies when analyzing with `npm`. |
+| [`config`](#config) | `string` | Set configuration file for stylelint. |
+| [`syntax`](#syntax) | `string` | Set non-standard syntax of PostCSS. |
+| [`ignore-path`](#ignore-path) | `string` | Set ignore file as necessary to exclude files from analysis. |
+| [`ignore-disables`](#ignore-disables) | `boolean` | If set `true`, you can ignore all disable comments. |
+| [`report-needless-disables`](#report-needless-disables) | `boolean` | If set `true`, report `stylelint-disable` comments. |
+| [`quiet`](#quiet) | `boolean` | If set `true`, rules without error severity will be ignored. |
+| [`glob`](#glob) | `string` | Specify file extensions inspected by stylelint. |
 
 Details of options are in below.
 
