@@ -23,18 +23,26 @@ Here are some example settings for Rails Best Practices in `sideci.yml`, under `
 ```yaml:sideci.yml
 linter:
   rails_best_practices:
-    options:
-      vendor: false
-      spec: true
-      test: true
-      features: true
-      exclude: foo_dir
-      only: bar_dir
+    vendor: false
+    spec: true
+    test: true
+    features: true
+    exclude: foo_dir
+    only: bar_dir
 ```
 
-### `options`
+### Options
 
-This controls the command line options that are passed to `rails_best_practices`.
+You can use several options to more comfortable analysis to your project.
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| [`vendor`](#vendor) | `boolean` | It's the flag whether to analyze `vendor` directory's files. |
+| [`spec`](#spec) | `boolean` | It's the flag whether to analyze `spec` directory's files. |
+| [`test`](#test) | `boolean` | It's the flag whether to analyze `test` directory's files. |
+| [`features`](#features) | `boolean` | It's the flag whether to analyze `featuers` directory's files. |
+| [`exclude`](#exclude) | `string` | It's the option to specific files or directories which you'd like to exclude from analysis. |
+| [`only`](#only) | `string` | It's the options to specific files or directories when analyzing. |
 
 #### `vendor`
 
