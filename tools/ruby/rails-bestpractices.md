@@ -29,6 +29,7 @@ linter:
     features: true
     exclude: foo_dir
     only: bar_dir
+    config: my_rbp_settings.yml
 ```
 
 ### Options
@@ -37,12 +38,13 @@ You can use several options to more comfortable analysis to your project.
 
 | Name | Type | Description |
 | ---- | ---- | ----------- |
-| [`vendor`](#vendor) | `boolean` | It's the flag whether to analyze `vendor` directory's files. |
-| [`spec`](#spec) | `boolean` | It's the flag whether to analyze `spec` directory's files. |
-| [`test`](#test) | `boolean` | It's the flag whether to analyze `test` directory's files. |
-| [`features`](#features) | `boolean` | It's the flag whether to analyze `featuers` directory's files. |
-| [`exclude`](#exclude) | `string` | It's the option to specific files or directories which you'd like to exclude from analysis. |
-| [`only`](#only) | `string` | It's the options to specific files or directories when analyzing. |
+| [`vendor`](#vendor) | `boolean` | When `true`, files in the `vendor` directory will be analyzed. |
+| [`spec`](#spec) | `boolean` | When `true`, files in the `spec` directory will be analyzed. |
+| [`test`](#test) | `boolean` | When `true`, files in the `test` directory will be analyzed. |
+| [`features`](#features) | `boolean` | When `true`, files in the `features` directory will be analyzed. |
+| [`exclude`](#exclude) | `string` | Excludes the listed files and directories from analysis. Enter multiple values as a comma-separated list. |
+| [`only`](#only) | `string` | When the only is present, Rails Best Practices will analyze only the files or directories listed, and exclude everything else. Enter multiple values as a comma-separated list. |
+| [`config`](#config) | `string` | You can use this option to specify an alternate config file for Rails Best Practices |
 
 #### `vendor`
 
@@ -82,3 +84,6 @@ linter:
       only: app/controllers/,app/models/,lib/foo.rb
 ```
 
+#### `config`
+
+You can use this option to specify an alternate config file for Rails Best Practices. If your config file is in `config/rails_best_practices.yml`, you don't need to use this.
