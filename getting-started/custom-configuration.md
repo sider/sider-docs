@@ -45,7 +45,7 @@ linter:
     root_dir: 'frontend'
 ```
 
-Sider will run ESLint analysis in `./frontend directory`. This allows you to omit some configurations in `sideci.yml`. **TODO: Not sure what this last sentence means?**
+Sider will run ESLint analysis in `./frontend` directory.
 
 ## `ignore` option
 
