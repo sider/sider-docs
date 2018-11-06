@@ -6,7 +6,7 @@
 
 ## Getting Started
 
-To start using Brakeman, enable it in repository setting.
+To start using Brakeman, enable it in [Repository Settings](../../getting-started/repository-settings.md).
 
 ## Configuration
 

@@ -6,19 +6,19 @@
 
 ## Getting Started
 
-To start using Rails Best Practices, enable it in repository setting.
+To start using Rails Best Practices, enable it in [Repository Settings](../../getting-started/repository-settings.md).
 
-If you want some customization, add Rails Best Practices config file at `config/rails_best_practices.yml`.
+To customize Rails Best Practices, use the standard config file at `config/rails_best_practices.yml`.
 
 ## Default Configuration
 
-Sider uses the following settings of Rails Best Practices if there is no config file in your repository.
+Sider uses the following settings for Rails Best Practices if there is no config file in your repository:
 
 * [Sider recommended settings for Rails Best Practices](https://github.com/actcat/sideci_config/blob/master/ruby/rails_best_practices/sideci_rails_best_practices.yml)
 
 ## Configuration via `sideci.yml`
 
-Here are example settings for Rails Best Practices under `rails_best_practices`.
+Here are some example settings for Rails Best Practices in `sideci.yml`, under `rails_best_practices`:
 
 ```yaml:sideci.yml
 linter:
@@ -34,27 +34,27 @@ linter:
 
 ### `options`
 
-This option controls command line options that are given to `rails_best_practices`.
+This controls the command line options that are passed to `rails_best_practices`.
 
 #### `vendor`
 
-This option controls whether to include files of `vendor` directory. When option is declared `true`, the vendor files will be inspected. The default value in Sider is `true`.
+This option controls whether to include files in `vendor` directory. When `true`, the vendor files will be inspected. The default value in Sider is `true`.
 
 #### `spec`
 
-This option controls whether to include files of `spec` directory. When options is declared `true`, the spec files will be inspected. The default value in Sider is `false`.
+This option controls whether to include files in `spec` directory. When `true`, the spec files will be inspected. The default value in Sider is `false`.
 
 #### `test`
 
-This option controls whether to include files of `test` directory. When options is declared `true`, the test files will be inspected. The default value in Sider is `false`.
+This option controls whether to include files in `test` directory. When `true`, the test files will be inspected. The default value in Sider is `false`.
 
 #### `features`
 
-This option controls whether to include files of `features` directory. When options is declared `true`, the features files will be inspected. The default value in Sider is `false`.
+This option controls whether to include files in `features` directory. When `true`, the features files will be inspected. The default value in Sider is `false`.
 
 #### `exclude`
 
-This option controls files/directories to exclude them from analysis. If you would like to set up multiple files/directories, write them as a comma separated list:
+This option allows you to exclude files/directories from analysis. If you would like to set up multiple files/directories, write them as a comma separated list:
 
 ```yaml:sideci.yml
 linter:
@@ -65,7 +65,7 @@ linter:
 
 #### `only`
 
-This option manages files/directories to analyze. When this option is declared, Sider analyzes only matching a pattern. If you would like to set up multiple files/directories, write them as a comma separated list:
+This option manages files/directories to analyze. When this option is present, Sider analyzes only those files and directories that match one of the patterns included. If you would like to set up multiple files/directories, write them as a comma separated list:
 
 ```yaml:sideci.yml
 linter:
