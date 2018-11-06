@@ -1,38 +1,38 @@
 # Repository Settings
 
-This page is a guide for configuring your repository. You will see the repository setting screen upon enabling your repository on Sider.
+The Repository Settings page allows you to configure Sider's behavior for each repository. You will see the Repository Settings screen upon adding your repository to Sider.
 
-You must have write permission for the repository to change these settings.
+You must have write permission to the repository to change these settings.
 
 ## Analyzer Settings
 
-![Analyzers settings](../.gitbook/assets/project-analyzers.png)
+![Analyzer settings](../.gitbook/assets/project-analyzers.png)
 
-These checkboxes allow you to enable analyzers you would like to use. The tools become available once you have checked them.
+This section allows you to enable the analyzers you would like to use. Tools that are enabled will be run against new pull requests in your repository.
 
 ## Slack Notification
 
 ![Slack notification](../.gitbook/assets/project-slack-notification.png)
 
-In this section, you can enable Slack notifications from Sider. Set `team#channel` as Name and register webhook as URL.
+In this section, you can enable Slack notifications from Sider. Enter `team#channel` in the Name field and enter your Slack webhook url in the `URL` field.
 
 ## Test Mode
 
 ![Test mode](../.gitbook/assets/project-testflight.png)
 
-This section allows you to enable Test mode.
+This section allows you to enable Test Mode.
 
 ## Translate
 
 ![Translate](../.gitbook/assets/project-translate.png)
 
-This section allows you to choose whether to enable issue contents translation to Japanese.
+When Translation is turned on, issue messages will be translated to Japanese.
 
 ## Disable Sider
 
 ![Disable Sider](../.gitbook/assets/project-disable.png)
 
-You can disable Sider for the repository in this section. Once you have disabled it, Sider will stop analysis. When you wish to re-enable Sider, add the repository from the "Add Repository" screen.
+You can disable Sider for the repository in this section. Once disabled, Sider will no longer analyze new pull requests. If you wish to re-enable Sider, re-add the repository from the "Add Repository" screen.
 
 {% hint style="warning" %}
 You must have admin permissions to disable Sider.
