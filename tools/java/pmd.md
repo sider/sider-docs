@@ -6,11 +6,11 @@
 
 ## Getting Started
 
-To start using PMD, enable it in the repository setting.
+To start using PMD, enable it in [Repository Settings](../../getting-started/repository-settings.md).
 
 ## Configuration
 
-You can customize PMD analysis by using `sideci.yml`.
+You can customize PMD analysis by using `sideci.yml`:
 
 ```yaml:sideci.yml
 linter:
@@ -29,7 +29,7 @@ This option allows you to specify the directory to analyze. The default value is
 
 ### `rulesets`
 
-This option allows you to enable and disable rulesets. The value will be passed to the `-rulesets` commandline option of PMD. The value should be a sequence of strings.
+This option allows you to enable and disable rulesets. The value will be passed to PMD's `-rulesets` option. The value should be a sequence of strings.
 
 The default value contains the 4 rulesets:
 
@@ -42,9 +42,9 @@ You can also specify the rulesets file in your repository.
 
 ### `encoding`
 
-This option allows you to specify encoding of the Java source code. The value will be passed to the `-encoding` commandline option of PMD, and the default is `UTF-8`.
+This option allows you to specify the encoding of the Java source code. The value will be passed to PMD's `-encoding` option of PMD. The default is `UTF-8`.
 
 ### `min_priority`
 
-This option specifies the `-minimumpriority` commandline option of PMD. There is no default value.
+This option specifies PMD's `-minimumpriority` option. There is no default value.
 

@@ -6,7 +6,7 @@
 
 ## Getting Started
 
-To start using Checkstyle, enable it in the repository setting.
+To start using Checkstyle, enable it in [Repository Settings](../../getting-started/repository-settings.md).
 
 ## Configuration
 
@@ -27,7 +27,7 @@ linter:
 
 ### `config`
 
-This option allows you to declare the configuration you want to follow. The default value is `google`.
+This option allows you to declare the coding standard you want to follow. The default value is `google`.
 
 Supported values are:
 
@@ -45,23 +45,23 @@ You can write a string or a sequence of strings.
 
 ### `exclude`
 
-This option allows you to specify `-e` and `-x` command line option of checkstyle command. The value should be a sequence of the followings:
+This option allows you to specify `-e` and `-x` command line options passed to the `checkstyle` command.
 
-* When you write a string, `-e` option will be given,
-* When you write a object with `string` key, like `{ string: vendor }`, `-e` option will be given, or
-* When you write a object with `pattern` key, like `{ pattern: vendor }`, `-x` option will be given.
+* If `exlcude` is a string, the `-e` option will be used.
+* If it's an object with a `string` key, \(`{ string: vendor }`\), the `-e` option will be used.
+* If it's as object with a `pattern` key, \(`{ pattern: vendor }`\), the `-x` option will be used.
 
-The default value is empty \(nothing will be excluded.\)
+The default value is empty \(nothing will be excluded\).
 
 ### `ignore`
 
-This option allows you to ignore issues based on their severity. Write the list of severities you want to ignore in Sider.
+This option allows you to ignore issues based on their severity. Write the list of severities you want to ignore.
 
-The default value is empty \(nothing will be ignored.\)
+The default value is empty \(nothing will be ignored\).
 
 ### `properties`
 
-This option allows you to specify properties file given to checkstyle. The value will be passed to the `-p` commandline option of checkstyle.
+This option allows you to specify the properties file passed to `checkstyle`. The value will be passed to Checkstyle's `-p` option.
 
 There is no default value.
 
