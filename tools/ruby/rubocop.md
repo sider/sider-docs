@@ -6,27 +6,27 @@
 
 ## Gettings Started
 
-To start using RuboCop, enable RuboCop in repository setting.
+To start using RuboCop, enable it in [Repository Settings](../../getting-started/repository-settings.md).
 
-If you want to customize, use standard RuboCop config files, `rubocop.yml`.
+To customize RuboCop, use the standard RuboCop config file, `rubocop.yml`.
 
 ## Versioning
 
 If your `Gemfile.lock` contains dependency to RuboCop, Sider uses the locked version. Otherwise, Sider assumes you are using the latest version of RuboCop.
 
 {% hint style="warning" %}
-RuboCop often introduces incompatibilities on its configuration, and we strongly recommend to have it in your `Gemfile.lock`.
+RuboCop often introduces incompatibilities in its configuration, so we strongly recommend that you include it in your `Gemfile.lock`.
 {% endhint %}
 
 ## Default Configuration
 
-Sider uses our recommended configuration if your repository does not have `.rubocop.yml`. The configuration is available as a RubyGem and it is called MeowCop.
+Sider uses our recommended configuration if your repository does not have `.rubocop.yml`. The configuration is available as a RubyGem, called MeowCop.
 
 * [MeowCop](https://github.com/sider/meowcop)
 
 ## Configuration via `sideci.yml`
 
-Example settings for RuboCop under `rubocop`.
+Example settings for RuboCop under `rubocop`:
 
 ```yaml:sideci.yml
 linter:
@@ -39,7 +39,7 @@ linter:
 
 ### Options
 
-You can use several options to more comfortable analysis to your project.
+You can use several options to fine-tune analysis to your project:
 
 | Name | Type | Description |
 | ---- | ---- | ----------- |
@@ -47,7 +47,7 @@ You can use several options to more comfortable analysis to your project.
 | [`config`](#config) | `string` | Set your own config file for RuboCop. |
 | [`rails`](#rails) | `boolean` | If `true`, Rails Cops are executed. Default value is `true`. |
 
-Details of options are in below.
+Details of options are below:
 
 #### `gems`
 
@@ -62,9 +62,9 @@ linter:
         version: 1.17.0
 ```
 
-You can specify either the name or the name and version of the gems you want to install. If the version is omitted, Sider tries to install the version which is specified in `Gemfile.lock`.
+You can specify either the name or the name and version of the gems you want to install. If the version is omitted, Sider will try to install the version specified in `Gemfile.lock`.
 
-If you do not specify gems option, RuboCop analysis will start with the following pre-installed gems.
+If you do not specify gems option, RuboCop analysis will start with the following pre-installed gems:
 
 ```text
 meowcop, onkcop, deka_eiwakun, forkwell_cop, cookstyle, rubocop-rails_config, salsify_rubocop,
@@ -75,7 +75,7 @@ rubocop-rspec, rubocop-verbose, rubocop-cask, rubocop-thread_safety
 
 #### `config`
 
-This option controls a configuration file. RuboCop uses your `.rubocop.yml` on root directory of your project by default. Thus you do not need to use this option when you have named the file `.rubocop.yml`. But if your `.rubocop.yml` has been put in a directory except for root directory, you should use this option like below:
+RuboCop uses the `.rubocop.yml` in the root directory of your project by default. Using this option, you can override this behavior. For example, if your `.rubocop.yml` is in a different directory, you could use the configoption like this:
 
 ```yaml:sideci.yml
 linter:

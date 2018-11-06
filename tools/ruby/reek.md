@@ -6,7 +6,7 @@
 
 ## Gettings Started
 
-To start using Reek, enable it in repository setting.
+To start using Reek, enable it in [Repository Settings](../../getting-started/repository-settings.md).
 
 To customize the analysis, add Reek config files in your repository.
 

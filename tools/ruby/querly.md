@@ -6,9 +6,10 @@
 
 ## Getting Started
 
-To start using Querly, enable it in the repository setting and put config file `querly.yaml` in your repository.
+To start using Querly, enable it in [Repository Settings](../../getting-started/repository-settings.md),
+and put a `querly.yaml` config in your repository's root directory.
 
-Visit its project page for more information about writing rules.
+Visit the Querly project page for more information about writing rules:
 
 * [Configuration](https://github.com/soutaro/querly/blob/master/manual/configuration.md)
 * [Examples](https://github.com/soutaro/querly/blob/master/manual/examples.md)
