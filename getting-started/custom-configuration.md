@@ -33,7 +33,7 @@ Currently, `root_dir` is the only common option.
 
 ## Analysis tool specific configuration
 
-You need to put settings on `sideci.yml` if you cannot configure in your settings file of the tool. It usually means command line interface of each tool. In addition, you can use an option to make execution environment of analyzers such as npm install. See [documentations](../tools/README.md) for each tool for the available option of the tool. **TODO: I can't really understand this - need clarification**
+You can use `sideci.yml` to configure each analyzer's vendor-supplied settings. Sider also provides extra options for some analyzers that configure how Sider runs the analyzer (for example, some tools might need to run `npm install` before beginning analysis). The [tools documentation](../tools/README.md) has more information about which options are available for each tool.
 
 ## `root_dir` option
 
