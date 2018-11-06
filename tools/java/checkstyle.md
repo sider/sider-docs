@@ -47,7 +47,7 @@ You can write a string or a sequence of strings.
 
 This option allows you to specify `-e` and `-x` command line options passed to the `checkstyle` command.
 
-* If `exlcude` is a string, the `-e` option will be used.
+* If `exclude` is a string, the `-e` option will be used.
 * If it's an object with a `string` key, \(`{ string: vendor }`\), the `-e` option will be used.
 * If it's as object with a `pattern` key, \(`{ pattern: vendor }`\), the `-x` option will be used.
 
