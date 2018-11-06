@@ -48,7 +48,7 @@ This option controls the configuration file HAML-Lint uses for analysis. You sho
 
 #### `file`
 
-This option allows you to control which files you want Sider to analyze. You should enter it as a string. It is passed as a parameter when `haml_Lint` is executed. If this setting is not present in `sideci.yml`, Sider passes `.` as a parameter.
+This option allows you to control which files you want Sider to analyze. You should enter it as a string. It is passed as a parameter when `haml_lint` is executed. If this setting is not present in `sideci.yml`, Sider passes `.` as a parameter.
 
 #### `exclude`
 
