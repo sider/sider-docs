@@ -1,14 +1,12 @@
-# Sider Analysis Custom Configuration
+# Custom Analysis Configuration
 
-Your pull requests will be analyzed by Sider as soon as you register your project without specific configuration. Sider provides you analysis results even if you do not configure any settings. However, in some cases, it may not provide you analysis results you expected. For example, this includes situations such as when you would use your own config files: `.myrubocop.yml` and so on.
-
-Using `sideci.yml` can help you to resolve that.
+You don't need to do any special configuration in order for Sider to start analyzing your code. However, Sider also offers advanced settings for special cases via the sideci.yml file.
 
 ## Configuration via `sideci.yml`
 
-You need to add `sideci.yml` in your project's root directory to control Sider analysis.
+First, add a file named `sideci.yml` in your project's root directory.
 
-```yaml
+```yaml:sideci.yml
 linter:
   rubocop:
     config: 'lint_yml/.myrubocop.yml'
@@ -26,36 +24,36 @@ linter:
       glob: '**/*.{css,scss}'
 ```
 
-The options you can specify through `sideci.yml` are grouped into two categories.
+The options you can specify in `sideci.yml` are grouped into two categories:
 
 1. Analyzer specific options
 2. Common options available to all analyzers
 
-Currently, `root_dir` is the only one common option.
+Currently, `root_dir` is the only common option.
 
 ## Analysis tool specific configuration
 
-You need to put settings on `sideci.yml` if you cannot configure in your settings file of the tool. It usually means command line interface of each tool. In addition, you can use an option to make execution environment of analyzers such as npm install. See [documentations](../tools/README.md) for each tool for the available option of the tool.
+You can use `sideci.yml` to configure each analyzer's vendor-supplied settings. Sider also provides extra options for some analyzers that configure how Sider runs the analyzer (for example, some tools might need to run `npm install` before beginning analysis). The [tools documentation](../tools/README.md) has more information about which options are available for each tool.
 
 ## `root_dir` option
 
-This is the common option for analyzers. The option is to specify the directory in your repository where Sider runs the analyzer in. For example, when you put all JavaScript files in frontend directory, you would have a `sideci.yml` like below:
+This is a common option available to all analyzers. This option specifies a directory in your repository from which Sider should run the analyzer in. For example, if you have all your JavaScript files in the `./frontend` directory, you could configure `sideci.yml` like this:
 
-```yaml
+```yaml:sideci.yml
 linter:
   eslint:
     root_dir: 'frontend'
 ```
 
-Sider runs ESLint analysis in `frontend` directory. This allows to omit some configurations in `sideci.yml`.
+Sider will run ESLint analysis in `./frontend` directory.
 
 ## `ignore` option
 
 This option allows you to ignore specific files. It helps to improve the analysis execution time and the analysis stability.
 
-In order to use the option, add settings below to `sideci.yml`.
+In order to use this option, add it to `sideci.yml` like this:
 
-```yaml
+```yaml:sideci.yml
 linter:
   eslint:
     npm_install: true
