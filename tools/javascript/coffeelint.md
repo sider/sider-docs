@@ -6,11 +6,11 @@
 
 ## Getting Started
 
-To start using CoffeeLint, you do not need to prepare particular settings or files.
+To start using CoffeeLint, enable it in [Repository Settings](../../getting-started/repository-settings.md).
 
 ## Configuration via `sideci.yml`
 
-Here is an example setting for CoffeeLint.
+Here are example settings for CoffeeLint:
 
 ```yaml:sideci.yml
 linter:
@@ -22,7 +22,7 @@ linter:
 
 ### `npm_install`
 
-By using this option, you can install coffeelint and dependencies to your program. This means you can install CoffeeScript with the specified version that is written in `package.json`. Default value of this option is `false`.
+By using this option, you can install coffeelint and dependencies before analysis. This means you can install the version of CoffeeScript specified in `package.json`. The default is `false`.
 
 |Value|Execution Command|
 |:---|:---|
@@ -33,5 +33,5 @@ By using this option, you can install coffeelint and dependencies to your progra
 
 ### `file`
 
-This option controls configuration file. If you have `coffeelint.json`, put it in this option. This option is not required so you can use CoffeeLint without setting up this option.
+This option controls the configuration file. If you have a `coffeelint.json` file, put the path to the file here. This option is not required.
 

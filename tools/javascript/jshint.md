@@ -6,13 +6,13 @@
 
 ## Getting Started
 
-To start using JSHint, enable it in repository setting.
+To start using JSHint, enable it in [Repository Settings](../../getting-started/repository-settings.md).
 
-To customize the configuration, put `.jshintrc` or `.jshintignore` files in your repository. Configuration via `jshintConfig` in `package.json` is also supported.
+To customize the configuration, use the standard `.jshintrc` or `.jshintignore` files. Configuration via `jshintConfig` in `package.json` is also supported.
 
 ## Default Configuration
 
-Sider provides a default configuration. The default configuration is used when you don't specify configuration.
+Sider uses its default configuration where there is no custom configuration preset:
 
 * [Sider's configuration for jshintrc](https://github.com/actcat/sideci_config/blob/master/javascript/jshint/sideci_jshintrc)
 
@@ -28,13 +28,13 @@ linter:
 
 ### `dir`
 
-The directory where the analysis is performed. It is passed as an argument of JSHint.
+The directory where the analysis is performed. It is passed as an argument to JSHint.
 
 ### `options`
 
-This option controls command line options given to jshint.
+This option controls command line options padded to `jshint`.
 
 #### `config`
 
-This option controls whether use your own configuration file for JSHint. If you have .jshintrc, put it in this option.
+This option allows you to use your own configuration file for JSHint. If you have a `.jshintrc` file, use this option.
 
