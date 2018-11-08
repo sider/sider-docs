@@ -6,13 +6,13 @@
 
 ## Getting Started
 
-To start using TSLint in Sider, declare dependency in `package.json` in your repository.
+To start using TSLint in Sider, declare it as a dependency in `package.json` in your repository.
 
 ```sh
 $ npm install tslint -D
 ```
 
-If you need customization, use standard TSLint config file. Create `tslint.json` and include your repository.
+If you need customization, use the standard TSLint config file. Create a `tslint.json` file in the root directory of your repository.
 
 ## Configuration via `sideci.yml`
 
@@ -42,25 +42,25 @@ This option controls `npm` command invocation. By using this option, you can ins
 |`production`|`npm install --only=production --ignore-scripts`|
 |Other values|None|
 
-When your `package.json` contains dependency which cannot be installed in Sider container, `npm install` fails. The analysis will be done but the result may be an unexpected one. In such cases, try using `development` or `production` option. You can also let the dependency be `optionalDependency`.
+If your `package.json` contains a dependency which cannot be installed in the Sider container, `npm install` fails. The analysis will continue but the results may be inaccurate. In this case, try using the `development` or `production` options, or use the `optionalDependency` setting.
 
 ### `options`
 
-This option controls command line options given to `tslint`.
+This option controls command line options passed to `tslint`.
 
-Please check the following URL for more details about the execution parameters when running tslint.
+Please see here for more details about `tslint`'s command line interface.
 
 * [TSLint - CLI Usage](https://palantir.github.io/tslint/usage/cli/#cli-usage)
 
 #### `config`
 
-This option controls configurations file for TSLint. If you have `tslint.json` file, use this option.
+This option controls which configuration file TSLint uses. If you have a `tslint.json` file, use this option.
 
 #### `exclude`
 
-This option controls which files TSLint excludes from linting. Default value of this option is `node_modules/**`.
+This option controls which files TSLint excludes from linting. The default value is `node_modules/**`.
 
-In case you would like to exclude multiple files/directories, declare it as a sequence:
+If you want to exclude multiple files/directories, declare them as a sequence:
 
 ```yaml:sideci.yml
 linter:
@@ -82,9 +82,9 @@ This option controls customized rules that TSLint inspects.
 
 #### `type-check`
 
-This option controls whether to enable the type checking when running TSLint. If you want type checking, declare true.
+This option controls whether to enable type checking when running TSLint. If you want type checking, set this to `true`.
 
-The option is deprecated in version 5.8.0 of TSLint. TSLint no longer type checks. If you would like to know about the change, see [https://github.com/palantir/tslint/pull/3322](https://github.com/palantir/tslint/pull/3322).
+The option is deprecated in version 5.8.0 of TSLint. TSLint no longer does type checking. If you would like to know about the change, see [https://github.com/palantir/tslint/pull/3322](https://github.com/palantir/tslint/pull/3322).
 
 ### `glob`
 
