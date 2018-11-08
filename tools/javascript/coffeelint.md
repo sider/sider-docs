@@ -22,7 +22,7 @@ linter:
 
 ### `npm_install`
 
-By using this option, you can install coffeelint and dependencies before analysis. This means you can install the version of CoffeeScript specified in `package.json`. The default is `false`.
+By using this option, you can install coffeelint and dependencies before analysis. This means you can install the version of CoffeeScript specified in `package.json`.
 
 |Value|Execution Command|
 |:---|:---|
