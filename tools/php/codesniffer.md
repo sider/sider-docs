@@ -24,7 +24,7 @@ If you don't specify anything, Sider tries to detect the standard and target dir
 
 Sider tries to detect the most suitable standard and target directory for your project, based on the framework your project is using.
 
-The following standards  aredetected automatically:
+The following standards are detected automatically:
 
 * `CakePHP`
 * `Symfony`
