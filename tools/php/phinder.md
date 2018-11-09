@@ -2,22 +2,19 @@
 
 | Supported Version | Language | Web Site |
 | ----------------- | -------- | -------- |
-| 0.4.1 | PHP 7.1.9 | [https://github.com/tomokinakamaru/phinder](https://github.com/tomokinakamaru/phinder) |
+| 0.4.1 | PHP 7.1.9 | [https://github.com/sider/phinder](https://github.com/sider/phinder) |
 
 ## Getting Started
 
-To start using Phinder, enable it in the repository setting and put a config file, `phinder.yml`, in your repository.
-As visiting its project page on GitHub, you can see a sample of Phinder using.
+To start using Phinder, enable it in [Repository Settings](../../getting-started/repository-settings.md) and put a `phinder.yml` config file in your repository. Visit the project page on GitHub to see a sample `phinder.yml`:
 
 * [Phinder sample](https://github.com/tomokinakamaru/phinder/tree/master/sample)
 
 ## Sample Configuration
 
-Following is an example settings for Phinder to use it with Sider.
+Here's a sample Phinder configuration in `sideci.yml`:
 
-Write them in `sideci.yml`:
-
-```yaml
+```yaml:sideci.yml
 linter:
   phinder:
     rule: myphinder.yml
@@ -33,10 +30,10 @@ linter:
 
 ### `rule`
 
-This option allows you to specify file or directory name for Phinder ruleset.
-If you set file name, Phinder will use the file for analysis instead of `phinder.yml`. And if set directory name, Phinder will analyze your project with all `yml` files under the directory.
+This option allows you to specify file or directory name where your Phinder ruleset is located.
+If you set file name, Phinder will use the file for analysis instead of `phinder.yml`. If this is a directory name, Phinder will analyze your project with all `yml` files under the directory.
 
-```yaml
+```yaml:sideci.yml
 linter:
   phinder:
     rule: rules # Phinder will use './rules/*.yml' when analyzing.
@@ -44,9 +41,9 @@ linter:
 
 ### `php`
 
-This option allows you to specify path of your project to analyze. If you set file name, Phinder will analyze merely the file. In other way, as directory name is set, Phinder will analyze all `.php` files under the directory.
+This option allows you to specify the path of your project to analyze. If this is a file name, Phinder will analyze merely the file. If it's a directory, Phinder will analyze all `.php` files under the directory.
 
-```yaml
+```yaml:sideci.yml
 linter:
   phinder:
     php: src # Phinder will analyze '.php' files in '/src' directory.

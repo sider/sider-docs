@@ -6,7 +6,7 @@
 
 ## Getting Started
 
-To start using PHP\_CodeSniffer, enable it in repository setting. To customize standard you want to follow, add `sideci.yml` in your repository and write down your desired standard in it.
+To start using PHP\_CodeSniffer, enable it in [Repository Settings](../../getting-started/repository-settings.md). To configure the coding standard you want to follow, add `sideci.yml` in your repository and set the `standard` option:
 
 ```yaml:sideci.yml
 linter:
@@ -18,22 +18,22 @@ linter:
 
 ## Default Configuration
 
-Sider tries to detect standard and target directory for your project automatically when you specifies nothing in `sideci.yml`. If it cannot find appropriate standard, it assumes PSR2 as its standard and analyzes all PHP files in your repository.
+If you don't specify anything, Sider tries to detect the standard and target directory for your project automatically. If it cannot find an appropriate standard, it assumes PSR2 as its standard and analyzes all PHP files in your repository.
 
 ### Standard and Analysis Target
 
 Sider tries to detect the most suitable standard and target directory for your project, based on the framework your project is using.
 
-The following standards have been detected automatically:
+The following standards are detected automatically:
 
 * `CakePHP`
 * `Symfony`
 
-The autodetection is based on file and directory structure. For the case auto detection fails, you can specify standard in `sideci.yml`.
+Autodetection is based on file names and directory structure. If autodetection fails, you can specify a standard in `sideci.yml`.
 
 ## Configuration via `sideci.yml`
 
-Example setting for PHP\_CodeSniffer under `code_sniffer` is the following:
+Example setting for PHP\_CodeSniffer under `code_sniffer`:
 
 ```yaml:sideci.yml
 linter:
@@ -47,7 +47,7 @@ linter:
 
 ### Options
 
-You can use several options to more comfortable analysis to your project.
+You can use several options to fine-tune PHP\_CodeSniffer to your project:
 
 | Name | Type | Description |
 | ---- | ---- | ----------- |
@@ -56,15 +56,13 @@ You can use several options to more comfortable analysis to your project.
 | [`standard`](#standard) | `string` | Set coding standard or your config file when analyzing. |
 | [`extensions`](#extensions) | `string` | Set extensions to analyze. |
 | [`encoding`](#encoding) | `string` | Set file encoding. |
-| [`ignore`](#ignore) | `string` | Set exclude files or directories from analysis. |
-
-Details of options are in below.
+| [`ignore`](#ignore) | `string` | Excludes files or directories from analysis. |
 
 #### `version`
 
-This option controls a major version of PHP\_CodeSniffer in running. Default value is `3`.
+This option controls which major version of PHP\_CodeSniffer is used. The default value is `3`.
 
-If you wish to use PHP\_CodeSniffer 2.9.x, use this option like:
+If you wish to use PHP\_CodeSniffer 2.9.x, set this option to `2`:
 
 ```yaml
 linter:
@@ -74,22 +72,24 @@ linter:
 
 #### `dir`
 
-This option controls directories Sider inspects. The default value is depended on frameworks PHP\_CodeSniffer supports. If you use no frameworks or use any frameworks PHP\_CodeSniffer does not support, `./` is adopted by default.
+This option controls directories Sider inspects. The default value is dependent on the frameworks PHP\_CodeSniffer supports. If you are not using any frameworks or are using a framework PHP\_CodeSniffer does not support, `./` is used.
 
-In case you would like to exclude specific directories, you should write it in your custom ruleset file.
+If you would like to exclude specific directories, you can specify them in a custom ruleset file.
 
 #### `standard`
 
-This option controls coding standard of your project. If you leave this value absent, Sider tries to detect standard automatically.
+This option controls coding standard of your project. If you leave this value empty, Sider tries to detect the standard automatically.
 
 `PSR2` is used when auto detection fails.
 
-You available your custom ruleset to declare it in a `standard` like `/path/to/MyStandard`. Furthermore, you can use other standards which PHP\_CodeSniffer supports below:
+You can use any standards the PHP\_CodeSniffer supports:
 
-```
+```bash
 $ phpcs3 -i
 The installed coding standards are MySource, PEAR, PSR1, PSR2, Squiz, Zend, Symfony, CakePHP, WordPress-Docs, WordPress-Core, WordPress, WordPress-Extra and WordPress-VIP
 ```
+
+You can also define your own standard, and enter the path to the config file here.
 
 #### `extensions`
 
@@ -101,4 +101,4 @@ This option controls file encoding.
 
 #### `ignore`
 
-A comma separated list of patterns to ignore files and directories.
+A comma-separated list of patterns to ignore files and directories by.
