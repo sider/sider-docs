@@ -6,13 +6,13 @@
 
 ## Getting Started
 
-To start using SwiftLint, enable it in repository setting.
+To start using SwiftLint, enable it in [Repository Settings](../../getting-started/repository-settings.md).
 
-To customize SwiftLint, put `.swiftlint.yml` in your repository.
+To customize SwiftLint, put a `.swiftlint.yml` file in your repository.
 
 ## Configuration via `sideci.yml`
 
-Here are example settings for SwiftLint under `swiftlint`.
+Here are example settings for SwiftLint under `swiftlint`:
 
 ```yaml:sideci.yml
 linter:
@@ -27,25 +27,25 @@ linter:
 
 ### `ignore_warnings`
 
-This option allows you to decides whether to ignore issues that are `severity: "warnings"`. Default value is `false`.
+This option allows you to ignore issues that are `severity: "warnings"`. The default value is `false`.
 
 ### `options`
 
-This option allows you to control command line options that are given to `swiftlint`.
+This option controls the command line options that are passed to `swiftlint`.
 
 #### `path`
 
-This option allows you to control the path that analyzes file or directory to lint.
+This option allows you to specify a path (file or directory) that gets analyzed.
 
 #### `config`
 
-This option allows you control configuration file when running SwiftLint. If you have `.swiftlint.yml`, put it in this option.
+This option allows you to specify a configuration file when running SwiftLint. If you have a `.swiftlint.yml`, use this option.
 
 #### `lenient`
 
-This option allows you to control levels of violations. It downgrades serious violations to warnings and makes warning threshold disabled. Default value is `false`.
+Lenient mode downgrades serious violations to warnings, and ignores warnings. The default value is `false`.
 
 #### `enable-all-rules`
 
-This option allows you to control whether to run SwiftLint with all rules including opt-in and disabled ones. Furthermore, it ignores `whitelist_rules`. Default value is `false`.
+This option runs SwiftLint with all rules, including opt-in and disabled ones. `whitelist_rules` will be ignored. The default value is `false`.
 
