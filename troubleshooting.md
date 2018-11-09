@@ -1,6 +1,6 @@
 # Troubleshooting
 
-## I cannot find my repository
+## I cannot find my organization
 This may be because Sider does not have access to your organization on Github. You can solve this problem by granting Sider access permission to your organization on GitHub shown as the following:
 
 1. In your [Personal settings](https://github.com/settings/applications) on GitHub, proceed `Applications`, then open `Authorized OAuth Apps`, and select *Sider*.
