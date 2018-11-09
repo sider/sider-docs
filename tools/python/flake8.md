@@ -6,27 +6,27 @@
 
 ## Getting Started
 
-To start using Flake8, enable it in repository settings.
+To start using Flake8, enable it in [Repository Settings](../../getting-started/repository-settings.md).
 
-To customize Flake8, put `.flake8` in your repository.
+To customize Flake8, put a `.flake8` file in your repository.
 
 ## Python Version
 
-If your repository contains `.python-version`, the python version is inferred from the file. You can specify Python version via `sideci.yml`. The default is Python 3.
+If your repository contains a `.python-version` file, the Python version is Sider will use the version specified in that file. You can also specify a Python version via `sideci.yml`. The default is Python 3.
 
 The latest versions of Python 2 or Python 3 can be used.
 
 ## Default Configuration
 
-Sider provides default configuration for Flake8. If your repository does not include `.flake8`, `setup.cfg` or `tox.ini`, our default configuration will be used.
+Sider provides a default configuration for Flake8. If your repository does not include `.flake8`, `setup.cfg` or `tox.ini`, our default configuration will be used.
 
-Our default configuration is available in GitHub repository.
+Our default configuration is available here:
 
 * [Sider's configuration for Flake8](https://github.com/actcat/sideci_config/blob/master/python/flake8/sideci_config.ini)
 
 ## Configuration via `sideci.yml`
 
-Here is an example setting for Flake8 under `flake8`:
+Here are example settings for Flake8 under `flake8`:
 
 ```yaml:sideci.yml
 linter:
@@ -40,9 +40,9 @@ linter:
 
 ### `version`
 
-This setting manages Python's version when running `flake8`. Python 3 will be used if omitted.
+This setting manages the Python version used when running `flake8`. Python 3 will be used if omitted.
 
 ### `plugins`
 
-This option allows you to enable Flake8 plugins. You can set arbitrary plugin names and also specify \(minimum\) version number. Without package version number, Sider will install the latest version.
+This option allows you to enable Flake8 plugins. You can set arbitrary plugin names and also specify a \(minimum\) version number. If no version is specified, Sider will install the latest version.
 

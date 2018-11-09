@@ -6,11 +6,11 @@
 
 ## Getting Started
 
-To start using SCSS-Lint, you do not need to prepare particular settings or files.
+To start using SCSS-Lint, enable it in [Repository Settings](../../getting-started/repository-settings.md).
 
 ## Configuration via `sideci.yml`
 
-Here are example settings for SCSS-Lint.
+Here are example settings for SCSS-Lint:
 
 ```yaml:sideci.yml
 linter:
@@ -21,5 +21,5 @@ linter:
 
 ### `config`
 
-This option allows you to control configuration file. If you have `.scss-lint.yml`, put it in this option. You can use SCSS-Lint without this option because it is optional.
+This option allows you specify a configuration file. If you have a `.scss-lint.yml` file, use this option. You can use SCSS-Lint without this option.
 
