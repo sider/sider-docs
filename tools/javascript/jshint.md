@@ -22,17 +22,21 @@ Sider uses its default configuration where there is no custom configuration pres
 linter:
   jshint:
     dir: src
-    options:
-      config: lint_yml/.jshintrc
+    config: lint_yml/.jshintrc
 ```
 
-### `dir`
+### Options
+
+You can use sereral options to make analysis fitter for your project.
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| [`dir`](#dir) | `string` | Set directory name as analysis target. |
+| [`config`](#config) | `string` | Set configuration file for JSHint. |
+
+#### `dir`
 
 The directory where the analysis is performed. It is passed as an argument to JSHint.
-
-### `options`
-
-This option controls command line options padded to `jshint`.
 
 #### `config`
 
