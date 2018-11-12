@@ -4,9 +4,25 @@
 
 | Application Name | Tag                |
 | ---------------- | ------------------ |
-| sider(sideci)    | release-2018101501 |
-| catpost          | release-2018101201 |
-| setaria          | release-2018101201 |
+| sideci           | release-2018111201 |
+| catpost          | release-2018111201 |
+| setaria          | release-2018111201 |
+
+## release-2018111201
+
+### Features
+
+* [Analysis Tools Updates](https://blog.sideci.com/announcement-20181016-1cab5c2cca70)
+* [New Repository Page](https://blog.sideci.com/announcement-20181105-6f2b2b66164)
+
+### Fixes
+
+* [GitHub OAuth2 Authorization Scopes Change](https://blog.sideci.com/github-authorization-scopes-update-8225a2d90cdf)
+* Fix Invalidation process for browser sessions
+
+### Update Procedure
+
+See [Update Guide](../../on-premises/quick-start/update.md).
 
 ## release-2018101201
 
@@ -54,7 +70,7 @@ Main changes are as follows.
 ### Update Procedure
 For updating, see also [Update Guide](../../on-premises/quick-start/update.md).
 
-1. Download the application image of `sider`.
+1. Download the application image of `sideci`.
 2. Stop applications.
 3. Refresh release tag on `docker-compose.yml`.
     * For `sideci_web` and `sideci_worker`, replace older release tags with `release-2018072001`.
