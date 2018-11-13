@@ -12,7 +12,7 @@ Once you've authorized GitHub access, you will land on the welcome page. From he
 
 ![Add a new organization](../.gitbook/assets/add-a-new-organization.png)
 
-Please note that in order to add an organization you need to be an [owner](https://help.github.com/articles/permission-levels-for-an-organization/) of that organization on GitHub. If you cannot find the organization you would like to add, Sider may not be able to access your GitHub organization. See [troubleshooting guide](../troubleshooting#i-cannot-find-my-organization).
+Please note that in order to add an organization you need to be an [owner](https://help.github.com/articles/permission-levels-for-an-organization/) of that organization on GitHub. If you cannot find the organization you would like to add, Sider may not be able to access your GitHub organization. See [troubleshooting guide](../troubleshooting.md#i-cannot-find-my-organization).
 
 
 ## Select a Repository
