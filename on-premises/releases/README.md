@@ -24,6 +24,12 @@
 
 See [Update Guide](../../on-premises/quick-start/update.md).
 
+And you MUST run this command:
+
+```
+$ docker-compose run --rm sideci_web bundle exec rails r script/migrate/20181105_remove_unused_tools.rb
+```
+
 ## release-2018101201
 
 ### Features
