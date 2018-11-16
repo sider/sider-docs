@@ -35,6 +35,7 @@ linter:
       - foo_gem
     config: .myrubocop.yml
     rails: false
+    safe: true
 ```
 
 ### Options
@@ -46,6 +47,7 @@ You can use several options to fine-tune analysis to your project:
 | [`gems`](#gems) | `array<string>` | Specify gems and their version when analyzing. |
 | [`config`](#config) | `string` | Set your own config file for RuboCop. |
 | [`rails`](#rails) | `boolean` | If `true`, Rails Cops are executed. Default value is `true`. |
+| [`safe`](#safe) | `boolean` | If `true`, RuboCop will analyze only cops with `Enabled: true` and `Safe: true`. |
 
 Details of options are below:
 
@@ -96,3 +98,9 @@ linter:
     options:
       rails: false
 ```
+
+### `safe`
+
+This option controls to cops RuboCop inspects. If `true`, RuboCop will inspect cops which have been set `Safe: true` and `Enabled: true` in `.rubocop.yml`.
+
+When you use this option, RuboCop version must be after `0.60.0`.
