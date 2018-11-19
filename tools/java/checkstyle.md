@@ -2,7 +2,7 @@
 
 | Supported Version | Language | Web Site |
 | ----------------- | -------- | -------- |
-| 8.13 | Java 8 | [http://checkstyle.sourceforge.net/](http://checkstyle.sourceforge.net/) |
+| 8.14 | Java 8 | [http://checkstyle.sourceforge.net/](http://checkstyle.sourceforge.net/) |
 
 ## Getting Started
 

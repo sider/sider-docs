@@ -2,7 +2,7 @@
 
 | Supported Version | Language | Web Site |
 | ----------------- | -------- | -------- |
-| 1.19.3 | Ruby 2.5.1 | [https://rails-bestpractices.com/](https://rails-bestpractices.com/) |
+| 1.19.4 | Ruby 2.5.1 | [https://rails-bestpractices.com/](https://rails-bestpractices.com/) |
 
 ## Getting Started
 
