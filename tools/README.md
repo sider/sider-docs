@@ -25,6 +25,7 @@
 
 * [PHPMD](./php/phpmd.md)
 * [PHP_CodeSniffer](./php/codesniffer.md)
+* [Phinder](./php/phinder.md)
 
 ## Python
 
