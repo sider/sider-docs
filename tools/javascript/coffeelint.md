@@ -16,22 +16,31 @@ Here are example settings for CoffeeLint:
 linter:
   coffeelint:
     npm_install: true
-    options:
-      file: coffeelint.json
+    file: coffeelint.json
 ```
 
-### `npm_install`
+### Options
+
+You can use several options to make analysis fitter for your project.
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| [`npm_install`](#npm_install) | `boolean`,<br />`string` | Resolve dependencies when analyzing with `npm`. |
+| [`file`](#file) | `string` | Set configuration file for CoffeeLint. |
+
+#### `npm_install`
 
 By using this option, you can install coffeelint and dependencies before analysis. This means you can install the version of CoffeeScript specified in `package.json`.
 
-|Value|Execution Command|
-|:---|:---|
-|`true`|`npm install --ignore-scripts`|
-|`development`|`npm install --only=development --ignore-scripts`|
-|`production`|`npm install --only=production --ignore-scripts`|
-|Other values|None|
+| Value | Execution Command |
+| :---- | :---------------- |
+| `true` | `npm install --ignore-scripts` |
+| `false` | None. |
+| `development` | `npm install --only=development --ignore-scripts` |
+| `production` | `npm install --only=production --ignore-scripts` |
+| Other values | Sider analysis fails. |
 
-### `file`
+#### `file`
 
 This option controls the configuration file. If you have a `coffeelint.json` file, put the path to the file here. This option is not required.
 
