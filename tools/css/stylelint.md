@@ -59,6 +59,7 @@ This option allows you to use `npm install` to install dependencies before analy
 | Value | Execution Command |
 | :---- | :---------------- |
 | `true` | `npm install --ignore-scripts` |
+| `false` | None. |
 | `development` | `npm install --only=development --ignore-scripts` |
 | `production` | `npm install --only=production --ignore-scripts` |
 | Other values | Sider analysis fails. |

@@ -70,7 +70,8 @@ This option controls `npm` command invocation. Using this option, you can instal
 
 | Value | Execution Command |
 | :---- | :---------------- |
-| `true` |`npm install --ignore-scripts` |
+| `true` | `npm install --ignore-scripts` |
+| `false` | None. |
 | `development` | `npm install --only=development --ignore-scripts` |
 | `production` | `npm install --only=production --ignore-scripts` |
 | Other values | Sider analysis fails. |
