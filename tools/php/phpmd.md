@@ -97,7 +97,7 @@ For more information about PHPMD rulesets, see [PHPMD - PHP Mess Detector: Docum
 
 This option controls the rule priority threshold. Rules below the priority you declare will be ignored.
 
-#### `suffixies`
+#### `suffixes`
 
 This option controls valid filename extensions. Use a comma-separated list to inspect multiple file extensions, e.g. `php,phtml`.
 
