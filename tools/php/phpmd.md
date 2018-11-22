@@ -17,8 +17,7 @@ If you have your own `ruleset.xml` for your project, you can add it under the `r
 ```yaml:sideci.yml
 linter:
   phpmd:
-    options:
-      rule: ruleset.xml
+    rule: ruleset.xml
 ```
 
 ## Performance Issues
@@ -53,21 +52,29 @@ linter:
     target:
       - index.php
       - wp-content
-    options:
-      rule: codesize,unusedcode
-      minimumpriority: 3
-      suffixes: php,phtml
-      exclude: app/Vendor/
-      strict: true
+    rule: codesize,unusedcode
+    minimumpriority: 3
+    suffixes: php,phtml
+    exclude: app/Vendor/
+    strict: true
 ```
 
-### `target`
+### Options
+
+You can use several options to fine-tune PHPMD to your project:
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| [`target`](#target) | `array<string>` | Set target files or directories to analyze. |
+| [`rule`](#rule) | `string` | Specify coding rules or your own rule set file. |
+| [`minimumpriority`](#minimumpriority) | `integer` | Set the priority threshold which PHPMD ignores.  |
+| [`suffixes`](#suffixes) | `string` | Set extensions of filenames for analysis. |
+| [`exclude`](#exclude) | `string` | Set files or directories to exclude from analysis. |
+| [`strict`](#strict) | `boolean` | If `true`, PHPMD will report `@SuppressWarnings` nodes. |
+
+#### `target`
 
 This option controls target paths to inspect. This is an optional setting that you do not need to specify if you don't have any performance issues.
-
-### `options`
-
-This option controls command line options that are passed to `phpmd`.
 
 #### `rule`
 
@@ -87,8 +94,7 @@ You can also specify a rule set file name:
 ```yaml:sideci.yml
 linter:
   phpmd:
-    options:
-      rule: ruleset.xml
+    rule: ruleset.xml
 ```
 
 For more information about PHPMD rulesets, see [PHPMD - PHP Mess Detector: Documentation\#Rules](https://phpmd.org/rules/index.html).
