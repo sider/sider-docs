@@ -14,14 +14,12 @@ linter:
   eslint:
     root_dir: 'frontend'
     npm_install: true
-    options:
-      config: 'frontend/.eslintrc'
-      ext: 'js,jsx'
+    config: 'frontend/.eslintrc'
+    ext: 'js,jsx'
 
   stylelint:
     root_dir: 'app/assets/stylesheets'
-    options:
-      glob: '**/*.{css,scss}'
+    glob: '**/*.{css,scss}'
 ```
 
 The options you can specify in `sideci.yml` are grouped into two categories:
