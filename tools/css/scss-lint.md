@@ -15,11 +15,18 @@ Here are example settings for SCSS-Lint:
 ```yaml:sideci.yml
 linter:
   scss_lint:
-    options:
-      config: lint_yml/.scss-lint.yml
+    config: lint_yml/.scss-lint.yml
 ```
 
-### `config`
+### Options
+
+You can use several options to fine-tune SCSS-Lint to your project:
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| [`config`](#config) | `string` | Specify configuration file for SCSS-Lint. |
+
+#### `config`
 
 This option allows you specify a configuration file. If you have a `.scss-lint.yml` file, use this option. You can use SCSS-Lint without this option.
 
