@@ -53,11 +53,36 @@ In order to use this option, add it to `sideci.yml` like this:
 
 ```yaml:sideci.yml
 linter:
-  eslint:
-    npm_install: true
+  # Some linter settings...
 ignore:
   - ".pdf"
   - ".mp4"
   - "images/**"
 ```
+
+## `branches` option
+
+This option allows you to exclude branches from the analysis. If there are branches that it is unnecessary for your team to analyze, use `branches` option.
+When setting this option, Sider will not analyze the branch specified in this option.
+
+In order to use this option, add it to `sideci.yml` like this:
+
+```yaml:sideci.yml
+linter:
+  # Some linter settings...
+branches:
+  exclude:
+    - master
+    - development
+    - another_branch
+```
+
+With above setting, Sider will ignore `master`, `development` and `another_branch` branches when these branches(pull requests) are updated or opened. That is, even if these branches have any changes, Sider will not send commit status and not reivew them.
+
+{% hint style="hint" %}
+If Sider is enabled to make status checks required on GitHub, you cannot merge a branch because Sider will not send commit status to GitHub.
+In this case, you need to disable check status setting on your GitHub repository page.
+
+If you know more details this GitHub setting, See GitHub documentation; [About required status checks](https://help.github.com/articles/about-required-status-checks/) and [Enabling required status check](https://help.github.com/articles/enabling-required-status-checks/).
+{% endhint %}
 
