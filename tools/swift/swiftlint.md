@@ -18,20 +18,27 @@ Here are example settings for SwiftLint under `swiftlint`:
 linter:
   swiftlint:
     ignore_warnings: true
-    options:
-      path: Source/
-      config: lint_yml/.swiftlint.yml
-      lenient: true
-      enable-all-rules: true
+    path: Source/
+    config: lint_yml/.swiftlint.yml
+    lenient: true
+    enable-all-rules: true
 ```
 
-### `ignore_warnings`
+### Options
+
+You can use several options to fine-tune SwiftLint to your project.
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| [`ignore_warnings`](#ignore_warnings) | `boolean` | If `true`, Sider will not report `severity: "warnings"` issues. |
+| [`path`](#path) | `string` | Set a file or directory path to analyze. |
+| [`config`](#config) | `string` | Set a configuration file for SwiftLint. |
+| [`lenient`](#lenient) | `boolean` | If `true`, downgrade serious violations to warnings and make warning threshold disabled. |
+| [`enable-all-rules`](#enable-all-rules) | `boolean` | If `true`, SwiftLint will run with all rules. |
+
+#### `ignore_warnings`
 
 This option allows you to ignore issues that are `severity: "warnings"`. The default value is `false`.
-
-### `options`
-
-This option controls the command line options that are passed to `swiftlint`.
 
 #### `path`
 
