@@ -38,11 +38,20 @@ linter:
       - flake8-mypy>=17.3.3
 ```
 
-### `version`
+### Options
+
+You can use several options to fine-tune Flake8 to your project.
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| [`version`](#version) | `integer` | Specify Python version. |
+| [`plugins`](#plugins) | `string`<br />`array<string>` | Set Flake8 plugins. It also allows to specify these plugins' versions. |
+
+#### `version`
 
 This setting manages the Python version used when running `flake8`. Python 3 will be used if omitted.
 
-### `plugins`
+#### `plugins`
 
 This option allows you to enable Flake8 plugins. You can set arbitrary plugin names and also specify a \(minimum\) version number. If no version is specified, Sider will install the latest version.
 
