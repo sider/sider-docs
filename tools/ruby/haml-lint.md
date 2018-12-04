@@ -17,22 +17,29 @@ Example settings for HAML-Lint under `haml_lint`:
 ```yaml:sideci.yml
 linter:
   haml_lint:
-    options:
-      include_linter:
-        - EmptyScript
-        - LineLength
-        - MultilinePipe
-      exclude_linter:
-        - TagName
-      config: 'my-haml-lint-conf.yml'
-      file: '**/*haml'
-      exclude:
-        - 'app/views/layouts/application.html.haml'
+    include_linter:
+      - EmptyScript
+      - LineLength
+      - MultilinePipe
+    exclude_linter:
+      - TagName
+    config: 'my-haml-lint-conf.yml'
+    file: '**/*haml'
+    exclude:
+      - 'app/views/layouts/application.html.haml'
 ```
 
-### `options`
+### Options
 
-This option controls command line options that are passed to `haml_lint`.
+You can use several options to fine-tune HAML-Lint to your project.
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| [`include_linter`](#include_linter) | `string`<br />`array<string>` | Specify rule names to analyze. |
+| [`exclude_linter`](#exclude_linter) | `string`<br />`array<string>` | Specify rule names to exclude from analysis.  |
+| [`config`](#config) | `string` | Set the configuration file for HAML-Lint. |
+| [`file`](#file) | `string` | Set files to analyze, default to `.`. |
+| [`exclude`](#exclude) | `string`<br />`array<string>` | Specific files to exclude from analysis. |
 
 #### `include_linter`
 
