@@ -4,9 +4,26 @@
 
 | Application Name | Tag                |
 | ---------------- | ------------------ |
-| sideci           | release-2018111201 |
-| catpost          | release-2018111201 |
-| setaria          | release-2018111201 |
+| sideci           | release-2018121001 |
+| catpost          | release-2018121001 |
+| setaria          | release-2018121001 |
+
+## release-2018121001
+
+### Features
+
+* [Analysis Tools Updates](https://blog.sideci.com/announcement-20181122-fac5ba645901)
+* [New Add Repository Flow](https://blog.sideci.com/announcement-20181114-a6314d4c015c)
+
+### Fixes
+
+* Validations of environment variables
+    - Previously, sideci would start even if required environment variables were missing, which can lead to runtime
+      errors. The server will now raise an error at startup if any required environment variables are missing.
+
+### Update Procedure
+
+See [Update Guide](../../on-premises/quick-start/update.md).
 
 ## release-2018111201
 
