@@ -23,7 +23,7 @@
 
 ### Update Procedure
 
-See [Update Guide](../../on-premises/quick-start/update.md).
+See [Update Guide](../../enterprise/quick-start/update.md).
 
 ## release-2018111201
 
@@ -39,7 +39,7 @@ See [Update Guide](../../on-premises/quick-start/update.md).
 
 ### Update Procedure
 
-See [Update Guide](../../on-premises/quick-start/update.md).
+See [Update Guide](../../enterprise/quick-start/update.md).
 
 And you MUST run this command:
 
@@ -62,7 +62,7 @@ $ docker-compose run --rm sideci_web bundle exec rails r script/migrate/20181105
 
 ### Update Procedure
 
-See [Update Guide](../../on-premises/quick-start/update.md).
+See [Update Guide](../../enterprise/quick-start/update.md).
 
 ## release-2018091101
 
@@ -76,7 +76,7 @@ See [Update Guide](../../on-premises/quick-start/update.md).
 
 ### Update Procedure
 
-See [Update Guide](../../on-premises/quick-start/update.md).
+See [Update Guide](../../enterprise/quick-start/update.md).
 
 ## release-2018081501
 Main changes are as follows.
@@ -91,7 +91,7 @@ Main changes are as follows.
 * Fix failure to rendering analysis results page and newsfeed pages when pull requests which had been opened since several month ago remained on Sider.
 
 ### Update Procedure
-For updating, see also [Update Guide](../../on-premises/quick-start/update.md).
+For updating, see also [Update Guide](../../enterprise/quick-start/update.md).
 
 1. Download the application image of `sideci`.
 2. Stop applications.
@@ -140,7 +140,7 @@ If you have enabled `Required` for `ci/sideci` as "Require status checks" on rep
 ![Commit Status Context](../../.gitbook/assets/commit-status-context.png)
 
 ### Update Procedure
-For updating, see also [Update Guide](../../on-premises/quick-start/update.md).
+For updating, see also [Update Guide](../../enterprise/quick-start/update.md).
 
 1. Download application images.
 2. Stop applications.
