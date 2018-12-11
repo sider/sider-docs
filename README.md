@@ -7,5 +7,5 @@ Guides for Sider, analyzers, and customization.
 * [Analysis Tools](./tools/README.md)
 * [Billing and Plans](./billing-and-plans.md)
 * [Troubleshooting](./troubleshooting.md)
-* [Enterprise](./enterprise/README.md)
+* [On-Premises](./on-premises/README.md)
 
