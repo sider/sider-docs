@@ -6,6 +6,7 @@
   * [Repository Settings](./getting-started/repository-settings.md)
   * [Sider Analysis Custom Configuration](./getting-started/custom-configuration.md)
   * [Working with Issues](./getting-started/working-with-issues.md)
+  * [Permissions](./getting-started/permissions.md)
 * [Analysis Tools](./tools/README.md)
   * [Ruby](./tools/ruby/README.md)
     * [RuboCop](./tools/ruby/rubocop.md)
