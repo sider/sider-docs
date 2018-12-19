@@ -22,12 +22,6 @@ In this section, you can enable Slack notifications from Sider. Enter `team#chan
 
 This section allows you to enable Test Mode.
 
-## Translate
-
-![Translate](../.gitbook/assets/project-translate.png)
-
-When Translation is turned on, issue messages will be translated to Japanese.
-
 ## Disable Sider
 
 ![Disable Sider](../.gitbook/assets/project-disable.png)
