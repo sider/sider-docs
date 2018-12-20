@@ -1,6 +1,6 @@
 # Private Dependencies
 
-Analyzing a private project sometimes need an access to another private repository. Your team might be using Git repository to distribute private library. This kind of dependency is supported in some tools including Bundler, npm, and Glide.
+Analyzing a private project sometimes need an access to another private repository. Your team might be using Git repository to distribute private library. This kind of dependency is supported in some tools including Bundler, npm.
 
 ## Private Dependencies
 
@@ -13,10 +13,10 @@ We support using SSH to access private repository during an analysis session.
 
 ![Add SSH key](../.gitbook/assets/ssh-key-settings.png)
 
-1. Visit the repository setting.
-2. Click *Add* button of *SSH Key Config* section.
-3. Fill the text field with the content of key file.
-4. You can specify the description of the SSH key.
+1. Visit the repository setting page.
+2. Fill the text field with the content of key file.
+3. You can specify the description of the SSH key.
+4. Save
 
 {% hint style="warning" %}
 Note that the private key cannot have a passphrase and must be an RSA key.
@@ -26,8 +26,7 @@ Note that the private key cannot have a passphrase and must be an RSA key.
 
 Currently, only a few analysis tools use SSH configuration.
 
-1. JavaScript tools use SSH via `npm install` to access private repository.
-2. Go Meta Linter runs Glide to download dependencies from Git repository.
+* JavaScript tools use SSH via `npm install` to access private repository.
 
 Other tools do not use SSH so adding SSH key for such tools are not needed at all.
 
