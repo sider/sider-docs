@@ -10,14 +10,6 @@ If an analysis tool find more than 5 issues, a summary of the issues will be pos
 
 ## Setting up
 
-Choose an account on the repository settings page of Sider.
-
 ![Inline Comments Settings](../.gitbook/assets/inline-comments-setting.png)
 
-If you cannot find a user that you would like them to post comments, please make sure the following:
-
-* The user is signed up to Sider.
-* The user has write permission to the repository on GitHub.
-
-You may need to click `Synchronize` button to let Sider refresh the organization data.
-
+If `ON` in Test Mode section, Sider will post comments to your pull request. Note that this interface requires to enable Sider as a GitHub App.

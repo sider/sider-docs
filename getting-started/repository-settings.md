@@ -16,17 +16,23 @@ This section allows you to enable the analyzers you would like to use. Tools tha
 
 In this section, you can enable Slack notifications from Sider. Enter `team#channel` in the Name field and enter your Slack webhook url in the `URL` field.
 
+## GitHub Sync
+
+![Sync with GitHub](../.gitbook/assets/project-sync-with-github.png)
+
+Sider will refresh your repository's information by clicking "Begin sync" button. If you have problems when operating Sider, click this button. 
+
 ## Test Mode
 
-![Test mode](../.gitbook/assets/project-testflight.png)
+![Test mode](../.gitbook/assets/project-testmode.png)
 
-This section allows you to enable Test Mode.
+This section allows you to enable Test Mode. If `ON`, Sider will send only success as a commit status.
 
-## Disable Sider
+## Delete a Repository from Sider
 
-![Disable Sider](../.gitbook/assets/project-disable.png)
+![Delete a repository](../.gitbook/assets/project-delete.png)
 
-You can disable Sider for the repository in this section. Once disabled, Sider will no longer analyze new pull requests. If you wish to re-enable Sider, re-add the repository from the "Add Repository" screen.
+You can delete the repository from Sider in this section. Once deleted, Sider will delete your repository data including repository settings and analysis results and no longer analyze new pull requests. If you wish to re-enable Sider, re-add the repository from the "Add a new repository" screen.
 
 {% hint style="warning" %}
 You must have admin permissions to disable Sider.
