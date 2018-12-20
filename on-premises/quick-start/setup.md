@@ -191,6 +191,7 @@ ACTION_MAILER_SMTP_ADDRESS={{FIXME: SMTP server host}}
 ACTION_MAILER_SMTP_PORT={{FIXME: SMTP server port number}}
 ACTION_MAILER_SMTP_AUTHENTICATION={{FIXME: SMTP authentication method}}
 ACTION_MAILER_SMTP_ENABLE_STARTSSL_AUTO=true
+ACTION_MAILER_DEFAULT_FROM_EMAIL={{FIXME: Default FROM Email address}}
 BASE_URL=https://{{FIXME: Your Sider domain name}}
 PUSHER_API_ID={{FIXME: Your Pusher API ID}}
 PUSHER_API_KEY={{FIXME: Your Pusher API Key}}
@@ -239,6 +240,7 @@ ACTION_MAILER_SMTP_ADDRESS={{FIXME: SMTP server host}}
 ACTION_MAILER_SMTP_PORT={{FIXME: SMTP server port number}}
 ACTION_MAILER_SMTP_AUTHENTICATION={{FIXME: SMTP authentication method}}
 ACTION_MAILER_SMTP_ENABLE_STARTSSL_AUTO=true
+ACTION_MAILER_DEFAULT_FROM_EMAIL={{FIXME: Default FROM Email address}}
 S3_BUCKET_NAME={{FIXME: Your S3 bucket name}}
 S3_REGION_NAME={{FIXME: Your AWS region name}}
 API_TOKEN={{FIXME: Catpost secret}}
@@ -277,6 +279,7 @@ ACTION_MAILER_SMTP_ADDRESS={{FIXME: SMTP server host}}
 ACTION_MAILER_SMTP_PORT={{FIXME: SMTP server port number}}
 ACTION_MAILER_SMTP_AUTHENTICATION={{FIXME: SMTP authentication method}}
 ACTION_MAILER_SMTP_ENABLE_STARTSSL_AUTO=true
+ACTION_MAILER_DEFAULT_FROM_EMAIL={{FIXME: Default FROM Email address}}
 QUAY_ROBOT_NAME={{FIXME: Quay robot account name}}
 QUAY_ROBOT_PASSWORD={{FIXME: Quay robot account password}}
 API_SECRET={{FIXME: Setaria secret}}
@@ -303,6 +306,7 @@ LOGGLY_URL=https://logs-01.loggly.com/inputs/{{FIXME: Loggly token}}/tag/setaria
 | `ACTION_MAILER_SMTP_PORT` | ALL | The port number of your mail server. See "[Action Mailer Configuration](https://guides.rubyonrails.org/action_mailer_basics.html#action-mailer-configuration)". |
 | `ACTION_MAILER_SMTP_AUTHENTICATION` | ALL | The authentication type. See "[Action Mailer Configuration](https://guides.rubyonrails.org/action_mailer_basics.html#action-mailer-configuration)". |
 | `ACTION_MAILER_SMTP_ENABLE_STARTSSL_AUTO` | ALL | Detects if STARTTLS is enabled in your STTP server. The default value is `true`. See "[Action Mailer Configuration](https://guides.rubyonrails.org/action_mailer_basics.html#action-mailer-configuration)". |
+| `ACTION_MAILER_DEFAULT_FROM_EMAIL` | ALL | Default FROM Email address which is included in Emails sent from Sider |
 | `BASE_URL` | sideci | Homepage URL you got when registered an OAuth App. |
 | `PUSHER_API_ID` | sideci | Value provided by Pusher. |
 | `PUSHER_API_KEY` | sideci | Value provided by Pusher. |
