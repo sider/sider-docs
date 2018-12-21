@@ -2,7 +2,7 @@
 
 | Supported Version | Language | Web Site |
 | ----------------- | -------- | -------- |
-| 0.6.1 | PHP 7.1.9 | [https://github.com/sider/phinder](https://github.com/sider/phinder) |
+| 0.6.1 | PHP 7.3.0 | [https://github.com/sider/phinder](https://github.com/sider/phinder) |
 
 ## Getting Started
 
