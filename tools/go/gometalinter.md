@@ -4,6 +4,10 @@
 | ----------------- | -------- | -------- |
 | 2.0.11 | Go 1.8 | [https://github.com/alecthomas/gometalinter](https://github.com/alecthomas/gometalinter) |
 
+{% hint style="warning" %}
+Sider will end of support for Go Meta Linter. Sider will no longer update the tool versions even if Go Meta Linter is updated.
+{% endhint %}
+
 ## Getting Started
 
 To start using Go Meta Linter, enable it in repository setting.
