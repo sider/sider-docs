@@ -52,10 +52,12 @@
     * [Update Guide](./enterprise/quick-start/update.md)
   * [Testing for Sider setup](./enterprise/testing/README.md)
   * [Release Notes](./enterprise/releases/README.md)
-* Old documents
-  * [On-premises](./onpremises/README.md)
-    * [Quick Start Guides](./on-premises/quick-start/README.md)
-      * [Setup Guide](./on-premises/quick-start/setup.md)
-      * [Update Guide](./on-premises/quick-start/update.md)
-    * [Testing for Sider setup](./on-premises/testing/README.md)
-    * [Release Notes](./on-premises/releases/README.md)
+
+# Old documents
+
+* [On-premises](./onpremises/README.md)
+  * [Quick Start Guides](./on-premises/quick-start/README.md)
+    * [Setup Guide](./on-premises/quick-start/setup.md)
+    * [Update Guide](./on-premises/quick-start/update.md)
+  * [Testing for Sider setup](./on-premises/testing/README.md)
+  * [Release Notes](./on-premises/releases/README.md)
