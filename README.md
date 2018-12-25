@@ -8,4 +8,3 @@ Guides for Sider, analyzers, and customization.
 * [Billing and Plans](./billing-and-plans.md)
 * [Troubleshooting](./troubleshooting.md)
 * [On-Premises](./on-premises/README.md)
-
