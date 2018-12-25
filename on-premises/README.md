@@ -1,3 +1,5 @@
-# On-Premises
+# Sider On-Prem Docs
 
-This page has moved to [/enterprise](/enterprise/README.md).
+* [Quick Start Guide](./quick-start/README.md)
+* [Testing for Sider setup](./testing/README.md)
+* [Release Notes](./releases/README.md)
