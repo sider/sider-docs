@@ -114,7 +114,7 @@ Check Pusher connection with the values of environment variables, `PUSHER_API_ID
 $ docker run --rm -t --env-file sideci.env quay.io/actcat/exotic-shorthair:master pusher
 ```
 
-### Check Load Balancer
+## Check Load Balancer
 You can start a web server to check load balancer.
 
 ```
