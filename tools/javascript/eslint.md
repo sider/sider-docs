@@ -2,7 +2,7 @@
 
 | Language | Web Site |
 | -------- | -------- |
-| JavaScript(Node.js 8.11.3) | [https://eslint.org](https://eslint.org) |
+| JavaScript(Node.js 11.5.0) | [https://eslint.org](https://eslint.org) |
 
 ## Getting Started
 

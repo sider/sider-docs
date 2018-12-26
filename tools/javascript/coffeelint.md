@@ -2,7 +2,7 @@
 
 | Supported Version | Language | Web Site |
 | ----------------- | -------- | -------- |
-| 1.16.0 | JavaScript(Node.js 8.11.3) | [http://www.coffeelint.org/](http://www.coffeelint.org/) |
+| 1.16.0 | JavaScript(Node.js 11.5.0) | [http://www.coffeelint.org/](http://www.coffeelint.org/) |
 
 ## Getting Started
 
