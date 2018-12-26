@@ -26,7 +26,6 @@ linter:
     exclude: 'node_modules/**'
     project: 'tsconfig.json'
     rules-dir 'your_custom_rule'
-    type-check: true
     glob: '**/*.ts{,x}'
 ```
 
