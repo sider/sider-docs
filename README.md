@@ -1,10 +1,4 @@
-# Introduction
+# Sider docs
 
-Guides for Sider, analyzers, and customization.
+TBD
 
-* [Getting Started](./getting-started/README.md)
-* [Advanced Settings](./advanced-settings/README.md)
-* [Analysis Tools](./tools/README.md)
-* [Billing and Plans](./billing-and-plans.md)
-* [Troubleshooting](./troubleshooting.md)
-* [Enterprise](./on-premises/README.md)
