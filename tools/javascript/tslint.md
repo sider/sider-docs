@@ -25,7 +25,7 @@ linter:
     config: 'lint_yml/tslint.json'
     exclude: 'node_modules/**'
     project: 'tsconfig.json'
-    rules-dir 'your_custom_rule'
+    rules-dir: 'your_custom_rule'
     glob: '**/*.ts{,x}'
 ```
 
