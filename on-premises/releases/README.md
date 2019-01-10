@@ -4,9 +4,38 @@
 
 | Application Name | Tag                |
 | ---------------- | ------------------ |
-| sideci           | release-2018121001 |
-| catpost          | release-2018121001 |
-| setaria          | release-2018121001 |
+| sideci           | release-2019011001 |
+| catpost          | release-2019011001 |
+| setaria          | release-2019011001 |
+
+## release-2019011001
+
+### Features
+
+* Update the Admin Dashboard page to show more detailed statistics
+* Redesign the repository settings page
+* Redesign the display of issues on the pull request page
+* Add support for GitHub Apps (see [our blog](https://blog.sideci.com/you-can-now-install-sider-as-a-github-app-f52a073b54b7))
+
+### Fixes
+
+* Bug fixes & UI design improvements
+* Remove "Account & Billing" from the organization page because it's not necessary for Sider Enterprise
+
+### Notes
+
+* Drop support for translation of issues (For more details, see [our blog](https://blog-ja.sideci.com/entry/20181203-announsement))
+
+### Update Procedure
+
+This release requires you to configure additional settings.
+
+First, follow the [guide](../../on-premises/quick-start/setup.md#creating-a-new-github-app-for-sider) to create a GitHub App on your GitHub Enterprise.
+
+Secondly, set the environment variable `ACTION_MAILER_DEFAULT_FROM_EMAIL` in `sideci.env`, `catpost.env`, and `setaria.env` file.
+For example, you can set it `support@example.com`. This email address is used when sending system error. See [here](../../on-premises/quick-start/setup.md).
+
+After that, update Sider Enterprise as usual (See [here](../../on-premises/quick-start/update.md)).
 
 ## release-2018121001
 
