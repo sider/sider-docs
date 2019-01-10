@@ -5,14 +5,81 @@ We have provided a guide whether applications have been set up correctly.
 
 ## Setup
 
-### Register an OAuth App
-First of all, register new OAuth app on GitHub Enterprise; check "[Creating an OAuth App](https://developer.github.com/apps/building-oauth-apps/creating-an-oauth-app/)" as necessary. Put each field down below:
+### Creating an OAuth App for Sider
+First of all, create a new OAuth app on GitHub Enterprise; check "[Creating an OAuth App](https://developer.github.com/apps/building-oauth-apps/creating-an-oauth-app/)" as necessary.
+Put each field down below:
 
-| Application name | Homepage URL | Application description | Authorization callback |
-| :--------------- | :----------- | :---------------------- | :--------------------- |
-| Sider | `https://[your-web-service-domain]/` (e.g. `https://sider.review/`) | (Optional) | `https://[your-web-service-domain]/users/auth/github` |
+* **Application name**: `Sider`
+* **Homepage URL**: `https://[your-web-service-domain]/` (e.g. `https://sider.review/`)
+* **Application description**: (optional)
+* **Authorization callback URL**: `https://[your-web-service-domain]/users/auth/github`
 
-After succeeding the registration, `Client ID` and `Client Secret` will be created. You have to keep the parameters because these are set as environment variables.
+
+After succeeding the registration, store **Client ID** and **Client Secret** as environment variables below:
+
+* **Client ID**: `GITHUB_CLIENT_ID`
+* **Client Secret**: `GITHUB_CLIENT_SECRET`
+
+### Creating a new GitHub App for Sider
+
+Also, you must create a new GitHub App for Sider. Follow these steps:
+
+1. Go to `https://[your-github-enterprise-domain]/organizations/[your-organization-name]/settings/apps/new`
+    - `[your-organization-name]` is the arbirtrary organization name. You can see your organizations on
+      `https://[your-github-enterprise-domain]/settings/organizations`
+
+2. Fill out the **Register new GitHub App** form, specifying the following:
+    - **GitHub App name**: `Sider`
+        + Store the value in lowercase as an environment variable `GITHUB_APP_NAME`
+    - **Homepage URL**: `https://[your-web-service-domain]/` (e.g. `https://sider.example.com/`)
+    - **User authorization callback URL**: `https://[your-web-service-domain]/users/auth/github_app_oauth2/callback`
+    - **Setup URL**: `https://[your-web-service-domain]/gh/setup`
+    - **Webhook URL**: `https://[your-web-service-domain]/webhooks/github`
+    - **Webhook secret**: Arbitrary secret characters
+        + For example, you can get it by running `tr -dc '[:alnum:]' < /dev/urandom | head -c32` on your terminal.
+        + Store the value as an environment variable `GITHUB_APP_WEBHOOK_SECRET`
+
+![Register GitHub App](../../.gitbook/assets/GitHubApp-Register.png)
+
+3. Set up the application's **Permissions** like the below:
+
+| Permission name      | Access       |
+| -------------------- | ------------ |
+| Repository contents  | Read-only    |
+| Repository metadata  | Read-only    |
+| Pull requests        | Read & Write |
+| Commit statuses      | Read & Write |
+| Organization members | Read-only    |
+
+![GitHub App Permissions](../../.gitbook/assets/GitHubApp-Permissions.png)
+
+4. Enable the following events on **Subscribe to events**:
+
+* **Member**
+* **Organization**
+* **Pull request**
+* **Pull request review**
+* **Pull request review comment**
+* **Repository**
+
+![GitHub App Events](../../.gitbook/assets/GitHubApp-SubscribeToEvents.png)
+
+5. Choose **Any account** on **Where can this GitHub App be installed?**
+
+![GitHub App Installable scope](../../.gitbook/assets/GitHubApp-WhereCanThisGitHubAppBeInstalled.png)
+
+6. Click **Create GitHub App**
+    - After the success of the registration, keep the parameters as environment variables:
+        + **ID** as `GITHUB_APP_ID`
+        + **Client ID** as `GITHUB_APP_OAUTH2_CLIENT_ID`
+        + **Client secret** as `GITHUB_APP_OAUTH2_CLIENT_SECRET`
+
+7. Click **Generate private key**
+    - Then your browser downloads PEM file
+
+8. Encode the PEM file with Base64 and keep the value as an environment variable `GITHUB_APP_PRIVATE_KEY`
+    - Run `base64 /path/to/PEM` if your OS is macOS
+    - Run `base64 -w0 /path/to/PEM` if your OS is Linux
 
 ### Create a Database Instance
 Create a database instance on AWS; as you need, check "[Creating a DB Instance Running the MySQL Database Engine](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_CreateInstance.html)". After create, select the engine version `5.7.x`. Then select a instance type and a strage size according as your team's scale. We have confirmed behaviors when we set `db.t2.medium` and `50GB` storage size, which is for an example.
@@ -129,6 +196,12 @@ PUSHER_API_ID={{FIXME: Your Pusher API ID}}
 PUSHER_API_KEY={{FIXME: Your Pusher API Key}}
 PUSHER_API_SECRET={{FIXME: Your Pusher API Secret}}
 PUSHER_CLUSTER={{FIXME: Your Pusher cluster name}}
+GITHUB_APP_ID={{FIXME: Your GitHub App ID}}
+GITHUB_APP_NAME={{FIXME: Your GitHub App name}}
+GITHUB_APP_PRIVATE_KEY={{FIXME: Your GitHub App Private Key encoded with Base64}}
+GITHUB_APP_OAUTH2_CLIENT_ID={{FIXME: Your GitHub App OAuth2 Client ID}}
+GITHUB_APP_OAUTH2_CLIENT_SECRET={{FIXME: Your GitHub App OAuth2 Client Secret}}
+GITHUB_APP_WEBHOOK_SECRET={{FIXME: Your GitHub App Webhook Secret}}
 GITHUB_CLIENT_ID={{FIXME: Your GitHub Enterprise OAuth2 client ID}}
 GITHUB_CLIENT_SECRET={{FIXME: Your GitHub Enterprise OAuth2 client secret}}
 GITHUB_OAUTH_HEAD_ENCRYPTION_KEY={{FIXME: Encryption key}}
@@ -235,6 +308,12 @@ LOGGLY_URL=https://logs-01.loggly.com/inputs/{{FIXME: Loggly token}}/tag/setaria
 | `PUSHER_API_KEY` | sideci | Value provided by Pusher. |
 | `PUSHER_API_SECRET` | sideci | Value provided by Pusher. |
 | `PUSHER_CLUSTER` | sideci | Value provided by Pusher. |
+| `GITHUB_APP_ID` | sideci | GitHub App ID. See "[Creating a new GitHub App for Sider](#creating-a-new-github-app-for-sider)". |
+| `GITHUB_APP_NAME` | sideci | GitHub App name. We recommend you to set the value `sider`. See "[Creating a new GitHub App for Sider](#creating-a-new-github-app-for-sider)". |
+| `GITHUB_APP_PRIVATE_KEY` | sideci | GitHub App private key encoded with Base64. See "[Creating a new GitHub App for Sider](#creating-a-new-github-app-for-sider)". |
+| `GITHUB_APP_OAUTH2_CLIENT_ID` | sideci | GitHub App OAuth2 client ID. See "[Creating a new GitHub App for Sider](#creating-a-new-github-app-for-sider)". |
+| `GITHUB_APP_OAUTH2_CLIENT_SECRET` | sideci | GitHub App OAuth2 client secret. See "[Creating a new GitHub App for Sider](#creating-a-new-github-app-for-sider)". |
+| `GITHUB_APP_WEBHOOK_SECRET` | sideci | GitHub App Webhook secret. See "[Creating a new GitHub App for Sider](#creating-a-new-github-app-for-sider)". |
 | `GITHUB_CLIENT_ID` | sideci | Client ID you got when registered an OAuth App. |
 | `GITHUB_CLIENT_SECRET` | sideci | Client Secret you got when registered an OAuth App. |
 | `GITHUB_OAUTH_HEAD_ENCRYPTION_KEY` | sideci | Key that is used to encrypt OAuth token for each user generated in GitHub. Set characters; you can get it with `tr -dc '[:alnum:]' < /dev/urandom \| head -c32`. DO NOT CHANGE the value after you set once because Sider fails to decrypt stored OAuth tokens. |
