@@ -52,4 +52,5 @@
     * [Update Guide](./on-premises/quick-start/update.md)
   * [Testing for Sider setup](./on-premises/testing/README.md)
   * [Release Notes](./on-premises/releases/README.md)
+  * [Computer Resources](./on-premises/resources.md)
 
