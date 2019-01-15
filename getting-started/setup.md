@@ -28,7 +28,7 @@ On this screen, you can set up your repository:
 
 ![Configure a repository](../.gitbook/assets/configure-a-repository.png)
 
-Select whether to you'd like to choose your project's stack and use Test Mode.
+Select whether you'd like to choose your project's stack and use Test Mode.
 
 ### Choose your stack
 

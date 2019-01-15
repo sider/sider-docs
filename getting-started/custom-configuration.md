@@ -1,6 +1,6 @@
 # Custom Analysis Configuration
 
-You don't need to do any special configuration in order for Sider to start analyzing your code. However, Sider also offers advanced settings for special cases via the sideci.yml file.
+You don't need to do any special configuration for Sider to start analyzing your code. However, Sider also offers advanced settings for special cases via the sideci.yml file.
 
 ## Configuration via `sideci.yml`
 
@@ -62,7 +62,7 @@ ignore:
 
 ## `branches` option
 
-This option allows you to exclude branches from the analysis. If there are branches that it is unnecessary for your team to analyze, use `branches` option.
+This option allows you to exclude branches from the analysis. If there are branches that are unnecessary for your team to analyze, use the `branches` option.
 When setting this option, Sider will not analyze the branch specified in this option.
 
 In order to use this option, add it to `sideci.yml` like this:
@@ -77,12 +77,12 @@ branches:
     - another_branch
 ```
 
-With above setting, Sider will ignore `master`, `development` and `another_branch` branches when these branches(pull requests) are updated or opened. That is, even if these branches have any changes, Sider will not send commit status and not reivew them.
+With the above setting, Sider will ignore `master`, `development` and `another_branch` branches when these branches(pull requests) are updated or opened. That is, even if these branches have any changes, Sider will not send commit status and not review them.
 
 {% hint style="hint" %}
-If Sider is enabled to make status checks required on GitHub, you cannot merge a branch because Sider will not send commit status to GitHub.
-In this case, you need to disable check status setting on your GitHub repository page.
+If Sider is enabled to make status checks required on GitHub, you cannot merge a branch because Sider will not send the commit status to GitHub.
+In this case, you need to disable the check status setting on your GitHub repository page.
 
-If you know more details this GitHub setting, See GitHub documentation; [About required status checks](https://help.github.com/articles/about-required-status-checks/) and [Enabling required status check](https://help.github.com/articles/enabling-required-status-checks/).
+If you want to know more details about this GitHub setting, read the GitHub documentation; [About required status checks](https://help.github.com/articles/about-required-status-checks/) and [Enabling required status check](https://help.github.com/articles/enabling-required-status-checks/).
 {% endhint %}
 

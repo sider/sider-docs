@@ -38,7 +38,7 @@ Make sure to carefully review all of the changes and double-check the issues tha
 If you see an issue you do not think should be ignored, click the `Reopen` button and ask the developer to fix it.
 
 ## Who Can Close Issues?
-Sider decides whether to allow users to close issues based on their GitHub permissions. If a user does not have a permission to push to the repository, Sider will not grant them permission to close issues.
+Sider decides whether to allow users to close issues based on their GitHub permissions. If a user does not have permission to push to the repository, Sider will not grant them permission to close issues.
 
 * If a user has permission to push to the repository, Sider will assume they are qualified and experienced enough developers to judge which issues can be ignored safely.
 * If developers are not allowed to push to the repository, Sider will assume they are junior developers and not allow them to close issues.
