@@ -2,7 +2,7 @@
 
 | Supported Version | Language | Web Site |
 | ----------------- | -------- | -------- |
-| 2.9.1, 3.3.2 | PHP 7.3.0 | [http://pear.php.net/package/PHP\_CodeSniffer](http://pear.php.net/package/PHP_CodeSniffer) |
+| 2.9.1, 3.4.0 | PHP 7.3.0 | [http://pear.php.net/package/PHP\_CodeSniffer](http://pear.php.net/package/PHP_CodeSniffer) |
 
 ## Getting Started
 

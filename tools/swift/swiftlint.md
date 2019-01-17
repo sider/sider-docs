@@ -2,7 +2,7 @@
 
 | Supported Version | Language | Web Site |
 | ----------------- | -------- | -------- |
-| 0.29.1 | Swift 4.2.1 | [https://github.com/realm/SwiftLint](https://github.com/realm/SwiftLint) |
+| 0.29.3 | Swift 4.2.1 | [https://github.com/realm/SwiftLint](https://github.com/realm/SwiftLint) |
 
 ## Getting Started
 
