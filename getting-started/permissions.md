@@ -1,9 +1,9 @@
 # Permissions
 
-Sider requires specific permissions from users to operate. Because Sider is integrated into GitHub, names of permission levels are the same as those set on GitHub.
+Users are required to have specific permissions to perform certain actions with Sider. Because Sider is integrated into GitHub, names of permission levels are the same as those set on GitHub.
 If you need more information about permission levels, read the GitHub documentations: "[Permission levels for an organization](https://help.github.com/articles/permission-levels-for-an-organization/)" and "[Repository permission levels for an organization](https://help.github.com/articles/repository-permission-levels-for-an-organization/)".
 
-For the organization settings, Sider checks for permissions in an organization. For repository settings, appropriate permissions to a repository is needed.
+For the organization settings, Sider checks for permissions in an organization. For the repository settings, appropriate permissions to a repository is needed.
 
 ## Permissions requirement for an organization
 
