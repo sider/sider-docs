@@ -27,7 +27,7 @@ The sum of the memory is the required amount of memory.
 |---|---|---|
 | sideci-web | 1GB | 100 |
 | sideci-worker | 2GB | 100 |
-| catpost-web | 1GB | 100 | 
+| catpost-web | 1GB | 100 |
 | catpost-worker | 2GB | 25 |
 | setaria-web | 1GB | 100 |
 | setaria-worker | 2GB | 10 |

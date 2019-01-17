@@ -95,6 +95,7 @@
     "Billing and Plans": ["billing-and-plans"],
     "Troubleshooting": ["troubleshooting"],
     "Enterprise": [
+      "enterprise/resources",
       {
         "type": "subcategory",
         "label": "Quick Start",
