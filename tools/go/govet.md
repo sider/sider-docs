@@ -2,7 +2,7 @@
 
 | Supported Version | Language | Web Site |
 | ----------------- | -------- | -------- |
-| 2.0.11 | Go 1.8 | [https://golang.org/cmd/vet/](https://golang.org/cmd/vet/) |
+| 2.0.12 | Go 1.8 | [https://golang.org/cmd/vet/](https://golang.org/cmd/vet/) |
 
 ## Getting Started
 
