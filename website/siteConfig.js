@@ -14,7 +14,7 @@ const users = [
     caption: 'User1',
     // You will need to prepend the image path with your baseUrl
     // if it is not '/', like: '/test-site/img/docusaurus.svg'.
-    image: '/img/docusaurus.svg',
+    image: '/img/header-logo.svg',
     infoLink: 'https://sider.review/',
     pinned: true,
   },
@@ -46,14 +46,14 @@ const siteConfig = {
   users,
 
   /* path to images for header/footer */
-  headerIcon: 'img/docusaurus.svg',
-  footerIcon: 'img/docusaurus.svg',
-  favicon: 'img/favicon.png',
+  headerIcon: 'img/header-logo.svg',
+  footerIcon: 'img/footer-logo.svg',
+  favicon: 'img/favicon/favicon.ico',
 
   /* Colors for website */
   colors: {
     primaryColor: '#475466',
-    secondaryColor: '#C75140',
+    secondaryColor: '#2E3B4D',
   },
 
   /* Custom fonts for website */
@@ -87,8 +87,8 @@ const siteConfig = {
   cleanUrl: true,
 
   // Open Graph and Twitter card images.
-  ogImage: 'img/docusaurus.png',
-  twitterImage: 'img/docusaurus.png',
+  ogImage: 'img/og_thumb.png',
+  twitterImage: 'img/og_thumb.png',
 
   // See: https://docusaurus.io/docs/en/site-config#docsurl-string
   docsUrl: '',
