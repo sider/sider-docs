@@ -14,3 +14,41 @@
 
 @media only screen and (min-width: 1500px) {
 }
+
+/* color settings */
+
+body {
+  --orange: #C75140;
+  --dark-grey: #475466;
+  --light-grey: #E1E8F2;
+  --white-grey: #F7FAFF;
+  --black: #2E3B4D;
+  --white: #FFFFFF;
+
+  color: var(--black);
+}
+
+.button {
+  border-color: var(--orange);
+  color: var(--orange);
+}
+
+.button:hover {
+  background-color: var(--orange);
+}
+
+.lightBackground {
+  background-color: var(--white-grey);
+}
+
+.darkBackground {
+  background-color: var(--dark-grey);
+}
+
+.nav-footer {
+  background-color: var(--black);
+}
+
+.nav-footer .sitemap {
+  max-width: 1400px;
+}
