@@ -72,11 +72,10 @@ If you want to exclude multiple files/directories, declare them as a sequence:
 ```yaml:sideci.yml
 linter:
   tslint:
-    options:
-      exclude:
-        - 'node_modules/**'
-        - '.git/**'
-        - 'cache/**'
+    exclude:
+      - 'node_modules/**'
+      - '.git/**'
+      - 'cache/**'
 ```
 
 #### `project`
