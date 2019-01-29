@@ -39,7 +39,7 @@ You can use several options to make analysis fitter for your project.
 | [`config`](#config) | `string` | Set configuration file for TSLint. |
 | [`exclude`](#exclude) | `string`,<br />`array<string>`| Specify file and/or directory patterns to exclude from analysis. |
 | [`project`](#project) | `string` | Set your TypeScript project file; `tsconfig.json`. |
-| [`rules-dir`](#rules-dir) | `string` | Specify a directory which is custom rules that TSLint inspects. |
+| [`rules-dir`](#rules-dir) | `string`, <br />`array<string>` | Specify a directory which is custom rules that TSLint inspects. |
 | [`type-check`](#type-check) | `boolean` | [Deprecate] If you use TSLint 5.8.0+ and set `true`, Sider's analysis will be failed. |
 | [`glob`](#glob) | `string` | Specify glob patterns to analyze. |
 
@@ -86,6 +86,18 @@ This option controls project file. If you have `tsconfig.json` file, declare it 
 #### `rules-dir`
 
 This option controls customized rules that TSLint inspects.
+
+If you want to set multiple custom rules, declare them as follow:
+
+```yaml:sideci.yml
+linter:
+  tslint:
+    rules-dir:
+      - rules/ACustomRule
+      - rules/AnotherCustomRule
+```
+
+Note that you need to use TSLint after version 5.12.0 to set `rules-dir` option as an array.
 
 #### `type-check`
 
