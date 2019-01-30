@@ -4,9 +4,26 @@
 
 | Application Name | Tag                |
 | ---------------- | ------------------ |
-| sideci           | release-2019011001 |
+| sideci           | release-2019013001 |
 | catpost          | release-2019011001 |
 | setaria          | release-2019011001 |
+
+## release-2019013001
+
+* Fix user deletion function on Admin page
+
+### Notes
+
+This release is applied to only sideci.
+
+### Update Procedure
+
+Follow the below steps:
+
+1. Run `docker-compose down` to stop applications
+2. Replace docker image tags of "sideci_web" and "sideci_worker" with **release-2019013001** in "docker-compose.yml"
+3. Run `docker-compose run sideci_web bundle exec rake db:migrate db:seed_fu`
+4. Run `docker-compose up` to start applications
 
 ## release-2019011001
 
