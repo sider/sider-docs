@@ -9,11 +9,47 @@ hide_title: true
 
 ## Latest Release Tags
 
-| Application Name | Tag                |
-| ---------------- | ------------------ |
-| sideci           | release-2019013001 |
-| catpost          | release-2019011001 |
-| setaria          | release-2019011001 |
+| Application Name | Tag              |
+| ---------------- | ---------------- |
+| sideci           | release-201902.1 |
+| catpost          | release-201902.1 |
+| setaria          | release-201902.0 |
+
+## release-201902
+
+### Features
+
+* Redesign the pull request page to stick the navigation header on top of it
+* Improve RuboCop analysis so that users can install gems more flexibly (see [our blog](https://blog.sideci.com/now-available-flexible-gem-installation-for-rubocop-1ecee85eec2c))
+* Add self-signup restriction
+    - You can restrict your users from signing up by themselves
+    - Set environment variable `RESTRICT_SIGN_UP` to `true` on sideci to enable this feature
+
+### Fixes
+
+* Bug fixes & UI design improvements
+
+### Update Procedure
+
+See [Update Guide](../../enterprise/quick-start/update.md).
+
+#### catpost: Resque scheduler container on catpost no longer required <!-- https://github.com/sider/catpost/pull/289 -->
+
+You don't have to run `rake environment resque:scheduler`.
+You can stop the container and let `rake onprem:batch:daily` do all of the scheduled works.
+
+#### catpost: `ACTION_MAILER_DEFAULT_FROM_EMAIL` is required <!-- https://github.com/sider/catpost/pull/275 -->
+
+`ACTION_MAILER_DEFAULT_FROM_EMAIL` is now required and cannot be empty. See [Configure gem page](https://github.com/sider/configure) for details.
+
+#### setaria: `ACTION_MAILER_DEFAULT_FROM_EMAIL` is required <!-- https://github.com/sider/setaria/pull/630 -->
+
+`ACTION_MAILER_DEFAULT_FROM_EMAIL` is now required and cannot be empty. See [Configure gem page](https://github.com/sider/configure) for details.
+
+#### setaria: Analyzer containers start in the parent containers' network <!-- https://github.com/sider/setaria/pull/651 -->
+
+Analyzer containers now run in the parent (`setaria_worker`) containers' network.
+If you want to run the analyzer containers in the _default_ network, specify an environment variable `RUNNER_USE_DEFAULT_NETWORK=1`.
 
 ## release-2019013001
 
