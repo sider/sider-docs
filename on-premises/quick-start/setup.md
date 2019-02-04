@@ -137,7 +137,10 @@ An application that runs on an instance uploads your source code to S3. Thus, yo
       "Sid": "Stmt151246256049",
       "Action": "s3:*",
       "Effect": "Allow",
-      "Resource": "arn:aws:s3:::your-bucket-name/*"
+      "Resource": [
+        "arn:aws:s3:::your-bucket-name",
+        "arn:aws:s3:::your-bucket-name/*"
+      ]
     }
   ]
 }
