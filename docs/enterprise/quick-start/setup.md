@@ -4,13 +4,8 @@ title: Setup Guide
 sidebar_label: Setup Guide
 ---
 
-<<<<<<< HEAD:on-premises/quick-start/setup.md
 We have provided a guide to test whether applications have been correctly set up.
-* [Testing for Sider setup](../testing/README.md)
-=======
-We have provided a guide whether applications have been set up correctly.
 * [Testing Guide](../testing/guide)
->>>>>>> Move to Docusaurus:docs/enterprise/quick-start/setup.md
 
 ## Setup
 
@@ -179,13 +174,9 @@ Set required environment variables for each application. You need to replace `{{
 ##### ENV File for Sider
 Create `sideci.env` as an env file for Sider.
 
-{% hint style="info" %}
-`EXCEPTION_NOTIFIER_EMAIL` and `EXCEPTION_NOTIFIER_BUGSNAG` will be optional variables in the future.
-{% endhint %}
+> `EXCEPTION_NOTIFIER_EMAIL` and `EXCEPTION_NOTIFIER_BUGSNAG` will be optional variables in the future.
 
-{% hint style="warning" %}
-`BUGSNAG_API_KEY` is required even if you don't use Bugsnag. Please set to something like "foo".
-{% endhint %}
+> `BUGSNAG_API_KEY` is required even if you don't use Bugsnag. Please set to something like "foo".
 
 ```:sideci.env
 RAILS_ENV=onprem
@@ -228,13 +219,9 @@ LOGGLY_URL=https://logs-01.loggly.com/inputs/{{FIXME: Loggly token}}/tag/sideci
 ##### ENV File for Catpost
 Create `catpost.env` as an env file for Catpost.
 
-{% hint style="info" %}
-`EXCEPTION_NOTIFIER_EMAIL` and `EXCEPTION_NOTIFIER_BUGSNAG` will be optional variables and `API_TOKEN` will be replaced with `API_SECRET` in the future.
-{% endhint %}
+> `EXCEPTION_NOTIFIER_EMAIL` and `EXCEPTION_NOTIFIER_BUGSNAG` will be optional variables and `API_TOKEN` will be replaced with `API_SECRET` in the future.
 
-{% hint style="warning" %}
-`BUGSNAG_API_KEY` is required even if you don't use Bugsnag. Please set to something like "foo".
-{% endhint %}
+> `BUGSNAG_API_KEY` is required even if you don't use Bugsnag. Please set to something like "foo".
 
 ```:catpost.env
 RAILS_ENV=onprem
@@ -267,13 +254,9 @@ LOGGLY_URL=https://logs-01.loggly.com/inputs/{{FIXME: Loggly token}}/tag/catpost
 ##### ENV File for Setaria
 Create `setaria.env` as an env file for Setaria.
 
-{% hint style="info" %}
-`EXCEPTION_NOTIFIER_EMAIL` and `EXCEPTION_NOTIFIER_BUGSNAG` will be optional variables in the future.
-{% endhint %}
+> `EXCEPTION_NOTIFIER_EMAIL` and `EXCEPTION_NOTIFIER_BUGSNAG` will be optional variables in the future.
 
-{% hint style="warning" %}
-`BUGSNAG_API_KEY` is required even if you don't use Bugsnag. Please set to something like "foo".
-{% endhint %}
+> `BUGSNAG_API_KEY` is required even if you don't use Bugsnag. Please set to something like "foo".
 
 ```:setaria.env
 RAILS_ENV=onprem

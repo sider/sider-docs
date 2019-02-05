@@ -144,13 +144,11 @@ This option controls warnings. When `true`, ESLint will only report errors (and 
 
 ### What if our repo does not have `package.json`?
 
-{% hint style="info" %}
-We generally recommend using `npm install` to install dependencies. This standard way allows us to handle your dependencies correctly. This way, we'll never install an ESLint version different from the one you want to use.
-
-However, we also try to install dependencies even if `package.json` cannot be found in your repository. This mechanism is for backward compatibility. It is unstable and unreliable, and we are no longer actively supporting it.
-
-Put `package.json` in your repository and set  `npm_install: true`. This is stable and future-proof.
-{% endhint %}
+> We generally recommend using `npm install` to install dependencies. This standard way allows us to handle your dependencies correctly. This way, we'll never install an ESLint version different from the one you want to use.
+>
+> However, we also try to install dependencies even if `package.json` cannot be found in your repository. This mechanism is for backward compatibility. It is unstable and unreliable, and we are no longer actively supporting it.
+>
+> Put `package.json` in your repository and set  `npm_install: true`. This is stable and future-proof.
 
 If your repository does not contain a `package.json` or have `npm_install:` set to `true`, Sider tries to install required npm packages as the following:
 

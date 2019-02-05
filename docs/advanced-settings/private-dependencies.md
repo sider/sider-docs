@@ -22,9 +22,7 @@ We support using SSH to access a private repository during an analysis session.
 3. You can specify the description of the SSH key.
 4. Save.
 
-{% hint style="warning" %}
-Note that the private key cannot have a passphrase and must be an RSA key.
-{% endhint %}
+> Note that the private key cannot have a passphrase and must be an RSA key.
 
 ## Using SSH
 

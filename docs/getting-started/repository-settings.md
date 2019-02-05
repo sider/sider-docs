@@ -38,7 +38,5 @@ This section allows you to enable Test Mode. If `ON`, Sider will send only succe
 
 You can delete the repository from Sider in this section. Once deleted, Sider will delete your repository data including repository settings and analysis results and no longer analyze new pull requests. If you wish to re-enable Sider, re-add the repository from the "Add a new repository" screen.
 
-{% hint style="warning" %}
-You must have admin permissions to disable Sider.
-{% endhint %}
+> You must have admin permissions to disable Sider.
 

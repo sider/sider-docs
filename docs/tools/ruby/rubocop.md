@@ -18,9 +18,7 @@ To customize RuboCop, use the standard RuboCop config file, `rubocop.yml`.
 
 If your `Gemfile.lock` contains dependency to RuboCop, Sider uses the locked version. Otherwise, Sider assumes you are using the latest version of RuboCop.
 
-{% hint style="warning" %}
-RuboCop often introduces incompatibilities in its configuration, so we strongly recommend that you include it in your `Gemfile.lock`.
-{% endhint %}
+> RuboCop often introduces incompatibilities in its configuration, so we strongly recommend that you include it in your `Gemfile.lock`.
 
 ## Default Configuration
 

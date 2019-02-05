@@ -8,9 +8,7 @@ sidebar_label: Go Meta Linter
 | ----------------- | -------- | -------- |
 | 2.0.11 | Go 1.8 | [https://github.com/alecthomas/gometalinter](https://github.com/alecthomas/gometalinter) |
 
-{% hint style="warning" %}
-Sider will end of support for Go Meta Linter. Sider will no longer update the tool versions even if Go Meta Linter is updated.
-{% endhint %}
+> Sider will end of support for Go Meta Linter. Sider will no longer update the tool versions even if Go Meta Linter is updated.
 
 ## Getting Started
 
@@ -27,10 +25,8 @@ If `glide.yaml` contains a dependency to a library in a private repository, plea
 * [Use other private repositories for analysis](../../advanced-settings/private-dependencies.md)
 
 
-{% hint style="info" %}
-Note that need to set `import_path` option in `sideci.yml` when you would like to run `glide install` on analysis.
-See [here](#import_path) for details.
-{% endhint %}
+> Note that need to set `import_path` option in `sideci.yml` when you would like to run `glide install` on analysis.
+> See [here](#import_path) for details.
 
 ## Default Configuration
 
