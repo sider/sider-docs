@@ -1,7 +1,7 @@
 ---
 id: querly
 title: Querly
-sidebar_label: quelry
+sidebar_label: querly
 ---
 
 | Supported Version | Language | Web Site |
