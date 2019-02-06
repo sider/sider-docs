@@ -280,4 +280,4 @@ These commands will
 
 ## release-2018010801
 
-Iniaial release🎉
+Initial release🎉

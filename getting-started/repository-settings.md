@@ -20,7 +20,7 @@ In this section, you can enable Slack notifications from Sider. Enter `team#chan
 
 ![Sync with GitHub](../.gitbook/assets/project-sync-with-github.png)
 
-Sider will refresh your repository's information by clicking "Begin sync" button. If you have problems when operating Sider, click this button. 
+Sider will refresh your repository's information when the "Begin sync" button is clicked. If you have problems when operating Sider, click this button. 
 
 ## Test Mode
 

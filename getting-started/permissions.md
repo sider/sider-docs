@@ -1,9 +1,9 @@
 # Permissions
 
-Sider requires specific permissions to users corresponding to operate. Because Sider is integrated into GitHub, names of permission levels are the same as GitHub.
-Therefore, if you need more information about permission levels, see GitHub documentations: "[Permission levels for an organization](https://help.github.com/articles/permission-levels-for-an-organization/)" and "[Repository permission levels for an organization](https://help.github.com/articles/repository-permission-levels-for-an-organization/)".
+Users are required to have specific permissions to perform certain actions with Sider. Because Sider is integrated into GitHub, names of permission levels are the same as those set on GitHub.
+If you need more information about permission levels, read the GitHub documentations: "[Permission levels for an organization](https://help.github.com/articles/permission-levels-for-an-organization/)" and "[Repository permission levels for an organization](https://help.github.com/articles/repository-permission-levels-for-an-organization/)".
 
-Principally, as to organization settings, Sider checks permissions to an organization; as to repository settings, need appropriate permissions to a repository.
+For the organization settings, Sider checks for permissions in an organization. For the repository settings, appropriate permissions to a repository is needed.
 
 ## Permissions requirement for an organization
 
@@ -11,8 +11,8 @@ Principally, as to organization settings, Sider checks permissions to an organiz
 | ------ | :-------------: | :-----: | :----: |
 | Install Sider | | | X |
 | See repository adding page | | X | X |
-| Add repositories | | X<sup>1</sup> | X |
-| See repositories | | X<sup>2</sup> | X |
+| Add repositories | | X¹| X |
+| See repositories | | X² | X |
 | Enable repositories | | | X |
 | Delete repositories | | | X |
 | Register credit cards | | | X |
@@ -25,15 +25,15 @@ Principally, as to organization settings, Sider checks permissions to an organiz
 | Show invoices | X | X | X |
 | Add supplementary information to a invoice | | | X |
 
-<sup>1</sup> Admin permission to a repository is required.
+¹ Admin permission to a repository is required.
 
-<sup>2</sup> Only repositories you can access will be displayed.
+² Only repositories you can access will be displayed.
 
 ## Permissions requirement for a repository
 
 | Action | Read permissions | Write permissions | Admin permissions |
 | ------ | :--------------: | :---------------: | :---------------: |
-| Add repositories | | | X<sup>3</sup> |
+| Add repositories | | | X³ |
 | See analyzing/analyzed pull requests | X | X | X |
 | See analysis results | X | X | X |
 | Comment to issues | X | X | X |
@@ -54,4 +54,4 @@ Principally, as to organization settings, Sider checks permissions to an organiz
 | Enable test mode | | X | X |
 | Edit analysis tools | | X | X |
 
-<sup>3</sup> You must have Member or Owner permission to your organization.
+³ You must have Member or Owner permission to your organization.
