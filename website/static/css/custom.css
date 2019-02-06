@@ -13,6 +13,13 @@ body {
   color: var(--black);
 }
 
+a {
+  color: #0173ad;
+}
+a:hover {
+  text-decoration: underline;
+}
+
 .button {
   border-color: var(--orange);
   color: var(--orange);
@@ -31,7 +38,7 @@ body {
 }
 
 .headerTitleWithLogo {
-  width: 200px; 
+  width: 200px;
   font-weight: normal;
 }
 
