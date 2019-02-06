@@ -1,0 +1,123 @@
+{
+  "docs": {
+    "Introduction": ["introduction"],
+    "Getting Started": [
+      "getting-started/setup",
+      "getting-started/repository-settings",
+      "getting-started/custom-configuration",
+      "getting-started/working-with-issues",
+      "getting-started/permissions"
+    ],
+    "Analysis Tools": [
+      {
+        "type": "subcategory",
+        "label": "Ruby",
+        "ids": [
+          "tools/ruby/rubocop",
+          "tools/ruby/reek",
+          "tools/ruby/querly",
+          "tools/ruby/rails-bestpractices",
+          "tools/ruby/brakeman",
+          "tools/ruby/haml-lint"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Java",
+        "ids": [
+          "tools/java/checkstyle",
+          "tools/java/pmd"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "JavaScript and Flavors",
+        "ids": [
+          "tools/javascript/eslint",
+          "tools/javascript/jshint",
+          "tools/javascript/tslint",
+          "tools/javascript/coffeelint"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "PHP",
+        "ids": [
+          "tools/php/phinder",
+          "tools/php/phpmd",
+          "tools/php/codesniffer"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Python",
+        "ids": [
+          "tools/python/flake8"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Swift",
+        "ids": [
+          "tools/swift/swiftlint"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "CSS",
+        "ids": [
+          "tools/css/stylelint",
+          "tools/css/scss-lint"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Go",
+        "ids": [
+          "tools/go/govet",
+          "tools/go/golint",
+          "tools/go/gometalinter"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Others",
+        "ids": [
+          "tools/others/goodcheck",
+          "tools/others/misspell"
+        ]
+      }
+    ],
+    "Advanced Settings": [
+      "advanced-settings/inline-comments",
+      "advanced-settings/private-dependencies"
+    ],
+    "Billing and Plans": ["billing-and-plans"],
+    "Troubleshooting": ["troubleshooting"],
+    "Enterprise": [
+      "enterprise/resources",
+      {
+        "type": "subcategory",
+        "label": "Quick Start",
+        "ids": [
+          "enterprise/quick-start/setup",
+          "enterprise/quick-start/update"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Testing",
+        "ids": [
+          "enterprise/testing/guide"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Releases",
+        "ids": [
+          "enterprise/releases/changelog"
+        ]
+      }
+    ]
+  }
+}

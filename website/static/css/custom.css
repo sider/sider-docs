@@ -1,0 +1,78 @@
+/* your custom css */
+
+/* color settings */
+
+body {
+  --orange: #C75140;
+  --dark-grey: #475466;
+  --light-grey: #E1E8F2;
+  --white-grey: #F7FAFF;
+  --black: #2E3B4D;
+  --white: #FFFFFF;
+
+  color: var(--black);
+}
+
+a {
+  color: #0173ad;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+.button {
+  border-color: var(--orange);
+  color: var(--orange);
+}
+
+.button:hover {
+  background-color: var(--orange);
+}
+
+.lightBackground {
+  background-color: var(--white-grey);
+}
+
+.darkBackground {
+  background-color: var(--dark-grey);
+}
+
+.headerTitleWithLogo {
+  width: 200px;
+  font-weight: normal;
+}
+
+.nav-footer {
+  background-color: var(--black);
+}
+
+.nav-footer .sitemap {
+  max-width: 1400px;
+  padding: 0 20px;
+}
+
+.nav-footer .sitemap .nav-home {
+  padding: 0;
+  width: 100px;
+}
+
+/* media queries */
+
+@media only screen and (max-width: 736px) {
+  .nav-footer .sitemap {
+    margin: 0 !important;
+    width: 100% !important;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+}
+
+@media only screen and (max-width: 1023px) {
+}
+
+@media only screen and (min-width: 1400px) {
+}
+
+@media only screen and (min-width: 1500px) {
+}
