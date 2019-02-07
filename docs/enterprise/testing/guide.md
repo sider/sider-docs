@@ -2,7 +2,10 @@
 id: guide
 title: Testing Guide
 sidebar_label: Testing for Sider running
+hide_title: true
 ---
+
+# Testing Guide
 
 Sider has equipped tools to check connections with services needed to run.
 

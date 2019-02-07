@@ -2,7 +2,10 @@
 id: changelog
 title: Release Notes
 sidebar_label: Release Notes
+hide_title: true
 ---
+
+# Release Notes
 
 ## Latest Release Tags
 

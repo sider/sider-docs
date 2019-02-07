@@ -2,7 +2,10 @@
 id: resources
 title: Computer Resources
 sidebar_label: Computer Resources
+hide_title: true
 ---
+
+# Computer Resources
 
 The following is a table of the computer resources required to serve Sider based on the number of developers.
 
