@@ -1,9 +1,0 @@
-# Tools
-/tools  /introduction#analysis-tools
-
-# Enterprise
-/on-premises  /enterprise/releases/changelog
-/on-premises/quick-start  /enterprise/quick-start/setup
-/on-premises/quickstart/* /enterprise/quick-start/:splat
-/on-premises/testing  /enterprise/testings/guide
-/on-premises/releases* /enterprise/releases/changelog:splat
