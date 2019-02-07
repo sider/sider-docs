@@ -1,0 +1,23 @@
+[[redirects]]
+from = "/tools"
+to = "/introduction#analysis-tools"
+
+[[redirects]]
+from = "/on-premises"
+to = "/enterprise/releases/changelog"
+
+[[redirects]]
+from = "/on-premises/quick-start"
+to = "/enterprise/quick-start/setup"
+
+[[redirects]]
+from = "/on-premises/quick-start/*"
+to = "/enterprise/quick-start/:splat"
+
+[[redirects]]
+from = "/on-premises/testing"
+to = "/enterprise/testing/guide"
+
+[[redirects]]
+from = "/on-premises/releases*"
+to = "/enterprise/releases/changelog:splat"
