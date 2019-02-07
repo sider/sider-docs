@@ -2,7 +2,10 @@
 id: update
 title: Update Guide
 sidebar_label: Update Guide
+hide_title: true
 ---
+
+# Update Guide
 
 This section explains how to do a regular update of Sider with docker-compose.
 

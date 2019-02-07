@@ -2,7 +2,10 @@
 id: setup
 title: Setup Guide
 sidebar_label: Setup Guide
+hide_title: true
 ---
+
+# Setup Guide
 
 We have provided a guide to test whether applications have been correctly set up.
 * [Testing Guide](../testing/guide)
