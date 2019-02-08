@@ -14,7 +14,7 @@ Sider's plan depends on the number of users who are assigned seats. The seat-ass
 
 You can upgrade the plan and increase/decrease seats in the organization settings page.
 
-![Seat Allocation](../assets/seat_allocation_modal.png)
+![Seat Allocation](./assets/seat_allocation_modal.png)
 
 You must have the owner role for your organization if you would like to change organization settings or repository settings.
 
@@ -30,17 +30,17 @@ Sider uses [Stripe](https://stripe.com/) for payment. You can use either a credi
 
 You can confirm your invoice on the organization settings page.
 
-![Invoice](../assets/invoices.png)
+![Invoice](./assets/invoices.png)
 
 You can check payment histories on the page. And also you can view details of invoice.
 
-![Invoice Details](../assets/invoice_details.png)
+![Invoice Details](./assets/invoice_details.png)
 
 The page will tell you details of the invoice. Click "Print this invoice out", then you will get the invoice as PDF to print.
 
 You can include your company information: company name, postal code, address and so on. Click "Add additional information" button on detailed invoice page, and fill in the information as necessary.
 
-![Company Information](../assets/invoice-company-info.png)
+![Company Information](./assets/invoice-company-info.png)
 
 You must have the owner role for the organization to see or edit the invoice.
 
@@ -49,7 +49,7 @@ You must have the owner role for the organization to see or edit the invoice.
 ### How to assign seats?
 You can assign seats for your teammates on the organization settings page. After buying seats, assign them to the teammates.
 
-![Assign seats for users](../assets/assign_seats_for_users.png)
+![Assign seats for users](./assets/assign_seats_for_users.png)
 
 Click "Assign seat" with users that you would like to assign seats to use Sider.
 
