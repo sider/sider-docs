@@ -21,3 +21,11 @@ It requires [Yarn](https://yarnpkg.com/en/) or [docker-compose](https://docs.doc
 ## Documentation
 
 sider-docs is powered by [Docusaurus](https://docusaurus.io/en/). Thus, if you face with problems, check that documents.
+
+## Lint
+
+To lint source files, run the following command:
+
+```
+$ yarn run lint
+```
