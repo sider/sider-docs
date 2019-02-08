@@ -7,27 +7,23 @@ hide_title: true
 
 # RuboCop
 
-| Language | Web Site |
-| -------- | -------- |
-| Ruby 2.5.1 | [https://github.com/rubocop-hq/rubocop](https://github.com/rubocop-hq/rubocop) |
+| Supported Version | Language | Web Site |
+| ----------------- | -------- | -------- |
+| >= 0.35.0 (default to 0.62.0) | Ruby 2.5.1 | [https://github.com/rubocop-hq/rubocop](https://github.com/rubocop-hq/rubocop) |
 
 ## Gettings Started
 
-To start using RuboCop, enable it in [Repository Settings](../../getting-started/repository-settings.md).
-
-To customize RuboCop, use the standard RuboCop config file, `rubocop.yml`.
+To start performing analysis, you are required to turn on RuboCop in [Repository Settings](../../getting-started/repository-settings.md).
 
 ## Versioning
 
-If your `Gemfile.lock` contains dependency to RuboCop, Sider uses the locked version. Otherwise, Sider assumes you are using the latest version of RuboCop.
+If your `Gemfile` or `Gemfile.lock` contains a dependency to RuboCop, Sider uses the locked version instead of the default version.
 
 > RuboCop often introduces incompatibilities in its configuration, so we strongly recommend that you include it in your `Gemfile.lock`.
 
 ## Default Configuration
 
-Sider uses our recommended configuration if your repository does not have `.rubocop.yml`. The configuration is available as a RubyGem, called MeowCop.
-
-* [MeowCop](https://github.com/sider/meowcop)
+Sider performs analysis according to our recommended configuration if `.rubocop.yml` does not exist in your repository. The configuration comes from [MeowCop](https://github.com/sider/meowcop) gem.
 
 ## Configuration via `sideci.yml`
 
@@ -37,8 +33,8 @@ Example settings for RuboCop under `rubocop`:
 linter:
   rubocop:
     gems:
-      - foo_gem
-    config: .myrubocop.yml
+      - "rubocop-rspec"
+    config: "web/.rubocop.yml"
     rails: false
     safe: true
 ```
@@ -49,10 +45,10 @@ You can use several options to fine-tune analysis to your project:
 
 | Name | Type | Description |
 | ---- | ---- | ----------- |
-| [`gems`](#gems) | `array<string>` | Specify gems and their version when analyzing. |
-| [`config`](#config) | `string` | Set your own config file for RuboCop. |
-| [`rails`](#rails) | `boolean` | If `true`, Rails Cops are executed. Default value is `true`. |
-| [`safe`](#safe) | `boolean` | If `true`, RuboCop will analyze only cops with `Enabled: true` and `Safe: true`. |
+| [`gems`](#gems) | `array<string, object>` | Definition of gems to be installed. |
+| [`config`](#config) | `string` | A file path of the configuration. |
+| [`rails`](#rails) | `boolean` | Run extra Rails cops. Default: `true` |
+| [`safe`](#safe) | `boolean` | Run only safe cops. Default: `false` |
 
 Details of options are below:
 
@@ -64,31 +60,46 @@ This option allows you to install RuboCop plugins or configuration gems during a
 linter:
   rubocop:
     gems:
-      - rubocop-rspec
-      - name: meowcop
-        version: 1.17.0
+      - 'rubocop-rspec'
+      - name: 'meowcop'
+        version: '1.17.0'
+      - name: 'private-office-cop'
+        version: '0.60.0'
+        source: 'https://gems.example.com'
+      - name: 'gitcop'
+        git:
+          repo: 'git@github.com:org/repo.git'
+          tag: 'v0.62.0'
 ```
 
-You can specify either the name or the name and version of the gems you want to install. If the version is omitted, Sider will try to install the version specified in `Gemfile.lock`.
+You can define each gem with the following attributes:
 
-If you do not specify gems option, RuboCop analysis will start with the following pre-installed gems:
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| `name` | `string` | Gem name. |
+| `version` | `string` | Gem version. |
+| `source` | `string` | RubyGems repository. Default: `https://rubygems.org` |
+| `git` | `object` | Definition of the gem source as a Git repository. |
 
-```text
-meowcop, onkcop, deka_eiwakun, forkwell_cop, cookstyle, rubocop-rails_config, salsify_rubocop,
-otacop, unasukecop, sanelint, hint-rubocop_style, rubocop-salemove, mad_rubocop, unifacop,
-ws-style, rubocop-config-umbrellio, pulis, gc_ruboconfig, fincop, rubocop-github, ezcater_rubocop,
-rubocop-rspec, rubocop-verbose, rubocop-cask, rubocop-thread_safety
-```
+`git` option has options below:
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| `repo` | `string` | Git repository location. The repository can be accessed via HTTP(S)/SSH protocols. |
+| `branch` | `string` | Branch name. |
+| `tag` | `string` | Tag name. |
+| `ref` | `string` | Ref name. |
+
+If you define a gem as a string, Sider will try to install the gem according to your locked version in `Gemfile.lock`.
 
 #### `config`
 
-RuboCop uses the `.rubocop.yml` in the root directory of your project by default. Using this option, you can override this behavior. For example, if your `.rubocop.yml` is in a different directory, you could use the configoption like this:
+Sider performs analysis in the root directory of your project by default. This option allows you to specify the file path of the RuboCop's `--config` option.
 
 ```yaml:sideci.yml
 linter:
   rubocop:
-    options:
-      config: lint_yml/.rubocop.yml
+    config: web/.rubocop.yml
 ```
 
 #### `rails`
@@ -100,8 +111,7 @@ This option is used for the case that you do not wish Sider to run Rails Cops ev
 ```yaml:sideci.yml
 linter:
   rubocop:
-    options:
-      rails: false
+    rails: false
 ```
 
 #### `safe`
