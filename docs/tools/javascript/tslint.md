@@ -2,7 +2,10 @@
 id: tslint
 title: TSLint
 sidebar_label: TSLint
+hide_title: true
 ---
+
+# TSLint
 
 | Language | Web Site |
 | -------- | -------- |

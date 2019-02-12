@@ -2,7 +2,10 @@
 id: rubocop
 title: RuboCop
 sidebar_label: RuboCop
+hide_title: true
 ---
+
+# RuboCop
 
 | Language | Web Site |
 | -------- | -------- |

@@ -2,7 +2,10 @@
 id: scss-lint
 title: SCSS-Lint
 sidebar_label: SCSS-Lint
+hide_title: true
 ---
+
+# SCSS-Lint
 
 | Supported Version | Language | Web Site |
 | ----------------- | -------- | -------- |

@@ -2,7 +2,10 @@
 id: golint
 title: Golint
 sidebar_label: Golint
+hide_title: true
 ---
+
+# Golint
 
 | Supported Version | Language | Web Site |
 | ----------------- | -------- | -------- |

@@ -2,7 +2,10 @@
 id: pmd
 title: PMD
 sidebar_label: PMD
+hide_title: true
 ---
+
+# PMD
 
 | Supported Version | Language | Web Site |
 | ----------------- | -------- | -------- |

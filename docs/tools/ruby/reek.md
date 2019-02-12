@@ -2,7 +2,10 @@
 id: reek
 title: Reek
 sidebar_label: Reek
+hide_title: true
 ---
+
+# Reek
 
 | Supported Version | Language | Web Site |
 | ----------------- | -------- | -------- |

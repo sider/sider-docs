@@ -2,7 +2,10 @@
 id: repository-settings
 title: Repository Settings
 sidebar_label: Repository Settings
+hide_title: true
 ---
+
+# Repository Settings
 
 The Repository Settings page allows you to configure Sider's behavior for each repository. You will see the Repository Settings screen upon adding your repository to Sider.
 

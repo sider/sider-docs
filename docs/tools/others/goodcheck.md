@@ -2,7 +2,10 @@
 id: goodcheck
 title: Goodcheck
 sidebar_label: Goodcheck
+hide_title: true
 ---
+
+# Goodcheck
 
 | Supported Version | Language | Web Site |
 | ----------------- | -------- | -------- |

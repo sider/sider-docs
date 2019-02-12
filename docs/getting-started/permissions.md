@@ -2,7 +2,10 @@
 id: permissions
 title: Permissions
 sidebar_label: Permissions
+hide_title: true
 ---
+
+# Permissions
 
 Users are required to have specific permissions to perform certain actions with Sider. Because Sider is integrated into GitHub, names of permission levels are the same as those set on GitHub.
 If you need more information about permission levels, read the GitHub documentations: "[Permission levels for an organization](https://help.github.com/articles/permission-levels-for-an-organization/)" and "[Repository permission levels for an organization](https://help.github.com/articles/repository-permission-levels-for-an-organization/)".

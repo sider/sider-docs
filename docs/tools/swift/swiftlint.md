@@ -2,7 +2,10 @@
 id: swiftlint
 title: SwiftLint
 sidebar_label: SwiftLint
+hide_title: true
 ---
+
+# SwiftLint
 
 | Supported Version | Language | Web Site |
 | ----------------- | -------- | -------- |

@@ -2,7 +2,10 @@
 id: troubleshooting
 title: Troubleshooting
 sidebar_label: Troubleshooting
+hide_title: true
 ---
+
+# Troubleshooting
 
 ## I cannot find my organization
 This may be because Sider does not have access to your organization on GitHub. You can solve this problem by granting Sider access permission to your organization on GitHub shown as the following:
