@@ -43,7 +43,7 @@ const siteConfig = {
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
-    {page: 'help', label: 'Help'},
+    // {page: 'help', label: 'Help'},
     { search: true }
   ],
 
