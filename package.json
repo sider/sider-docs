@@ -4,10 +4,12 @@
   },
   "devDependencies": {
     "remark-cli": "^6.0.1",
+    "remark-lint-no-duplicate-headings": "^1.0.2",
     "remark-validate-links": "^8.0.0"
   },
   "remarkConfig": {
     "plugins": [
+      "remark-lint-no-duplicate-headings",
       "remark-validate-links"
     ]
   }
