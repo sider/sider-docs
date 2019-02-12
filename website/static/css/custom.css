@@ -1,5 +1,10 @@
 /* your custom css */
 
+/* Styles for any pages */
+summary {
+  cursor: pointer;
+}
+
 /* color settings */
 
 body {
