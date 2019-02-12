@@ -105,6 +105,8 @@ const siteConfig = {
   // template. For example, if you need your repo's URL...
   repoUrl: 'https://github.com/sider/sider-docs',
   // wrapPagesHTML: true,
+
+  editUrl: 'https://github.com/sider/sider-docs/edit/master/docs/',
 };
 
 module.exports = siteConfig;
