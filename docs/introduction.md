@@ -10,7 +10,7 @@ hide_title: true
 ## About the documentation
 
 This is guides for Sider, analyzers and customization.
-We have prepared contents to use Sider confortably.
+We have prepared contents to use Sider comfortably.
 
 ## Gettings Started
 
