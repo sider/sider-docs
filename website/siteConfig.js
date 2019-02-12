@@ -36,6 +36,11 @@ const siteConfig = {
   // e.g., for the https://JoelMarcey.github.io site, it would be set like...
   //   organizationName: 'JoelMarcey'
 
+  algolia: {
+    apiKey: '049a35b7a22ba1310e14ad116d32c18b',
+    indexName: 'sider',
+  },
+
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
     {page: 'help', label: 'Help'},
