@@ -2,7 +2,10 @@
 id: eslint
 title: ESLint
 sidebar_label: ESLint
+hide_title: true
 ---
+
+# ESLint
 
 | Language | Web Site |
 | -------- | -------- |

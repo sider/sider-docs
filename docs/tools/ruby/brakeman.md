@@ -2,7 +2,10 @@
 id: brakeman
 title: Brakeman
 sidebar_label: Brakeman
+hide_title: true
 ---
+
+# Brakeman
 
 | Supported Version | Language | Web Site |
 | ----------------- | -------- | -------- |

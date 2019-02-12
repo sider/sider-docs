@@ -2,7 +2,10 @@
 id: codesniffer
 title: PHP_CodeSniffer
 sidebar_label: PHP_CodeSniffer
+hide_title: true
 ---
+
+# PHP_CodeSniffer
 
 | Supported Version | Language | Web Site |
 | ----------------- | -------- | -------- |

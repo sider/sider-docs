@@ -21,7 +21,7 @@ a:hover {
 }
 
 /* To fix h1 position */
-header.postHeader:empty + article h1 {
+article h1 {
   margin-top: 0;
 }
 

@@ -2,7 +2,10 @@
 id: haml-lint
 title: HAML-Lint
 sidebar_label: HAML-Lint
+hide_title: true
 ---
+
+# HAML-Lint
 
 | Supported Version | Language | Web Site |
 | ----------------- | -------- | -------- |

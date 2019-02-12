@@ -2,7 +2,10 @@
 id: working-with-issues
 title: Working with Issues
 sidebar_label: Working with Issues
+hide_title: true
 ---
+
+# Working with Issues
 
 You can view all the issues Sider has found on a given pull request from the pull request page in Sider. This page also offers several handy ways to interact with issues, including ignoring issues and requesting feedback.
 

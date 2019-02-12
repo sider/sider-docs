@@ -10,8 +10,6 @@ hide_title: true
 We have provided a guide to test whether applications have been correctly set up.
 * [Testing Guide](../testing/guide.md)
 
-## Setup
-
 ### Creating an OAuth App for Sider
 First of all, create a new OAuth app on GitHub Enterprise; check "[Creating an OAuth App](https://developer.github.com/apps/building-oauth-apps/creating-an-oauth-app/)" as necessary.
 Fill in each field to match your specifications:
@@ -90,9 +88,7 @@ You must also create a new GitHub App for Sider. Follow these steps:
 ### Create a Database Instance
 Create a database instance on AWS; as needed, check "[Creating a DB Instance Running the MySQL Database Engine](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_CreateInstance.html)". After creating a database, select the engine version `5.7.x`. Then select an instance type and a stage size according to your team's scale. We have confirmed behaviors when we set `db.t2.medium` and `50GB` storage size as a test.
 
-{% hint style="warning" %}
-Pay attention not to create initial databases when creating an instance on RDS because it has problems against character code. And, `max_allowed_packet` should be set around `128MB` to store analysis results in the database properly.
-{% end hint %}
+> Pay attention not to create initial databases when creating an instance on RDS because it has problems against character code. And, `max_allowed_packet` should be set around `128MB` to store analysis results in the database properly.
 
 ### Create an ElastiCache cluster
 Create an ElastiCache cluster; as needed, check "[What Is Amazon ElastiCache for Redis?](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/WhatIs.html)".

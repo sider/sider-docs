@@ -2,7 +2,10 @@
 id: govet
 title: go vet
 sidebar_label: go vet
+hide_title: true
 ---
+
+# go vet
 
 | Supported Version | Language | Web Site |
 | ----------------- | -------- | -------- |

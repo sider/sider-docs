@@ -2,7 +2,10 @@
 id: introduction
 title: Introduction
 sidebar_label: Introduction
+hide_title: true
 ---
+
+# Introduction
 
 ## About the documentation
 

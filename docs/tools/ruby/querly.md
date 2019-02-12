@@ -2,7 +2,10 @@
 id: querly
 title: Querly
 sidebar_label: Querly
+hide_title: true
 ---
+
+# Querly
 
 | Supported Version | Language | Web Site |
 | ----------------- | -------- | -------- |

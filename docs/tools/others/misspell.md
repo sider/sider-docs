@@ -2,7 +2,10 @@
 id: misspell
 title: Misspell
 sidebar_label: Misspell
+hide_title: true
 ---
+
+# Misspell
 
 | Supported Version | Language | Web Site |
 | ----------------- | -------- | -------- |

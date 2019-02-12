@@ -2,11 +2,12 @@
 id: private-dependencies
 title: Private Dependencies
 sidebar_label: Private Dependencies
+hide_title: true
 ---
 
-Analyzing a private project sometimes needs access to another private repository. Your team might be using a Git repository to distribute a private library. This kind of dependency is supported in some tools including Bundler, npm.
+# Private Dependencies
 
-## Private Dependencies
+Analyzing a private project sometimes needs access to another private repository. Your team might be using a Git repository to distribute a private library. This kind of dependency is supported in some tools including Bundler, npm.
 
 We support using SSH to access a private repository during an analysis session.
 

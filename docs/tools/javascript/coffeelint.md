@@ -2,7 +2,10 @@
 id: coffeelint
 title: CoffeeLint
 sidebar_label: CoffeeLint
+hide_title: true
 ---
+
+# CoffeLint
 
 | Supported Version | Language | Web Site |
 | ----------------- | -------- | -------- |

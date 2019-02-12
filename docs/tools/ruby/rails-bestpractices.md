@@ -2,7 +2,10 @@
 id: rails-bestpractices
 title: Rails Best Practices
 sidebar_label: Rails Best Practices
+hide_title: true
 ---
+
+# Rails Best Practices
 
 | Supported Version | Language | Web Site |
 | ----------------- | -------- | -------- |
@@ -73,8 +76,7 @@ This option allows you to exclude files/directories from analysis. If you would 
 ```yaml:sideci.yml
 linter:
   rails_best_practices:
-    options:
-      exclude: app/controllers/foo/,app/models/bar.rb
+    exclude: app/controllers/foo/,app/models/bar.rb
 ```
 
 #### `only`
@@ -84,8 +86,7 @@ This option manages files/directories to analyze. When this option is present, S
 ```yaml:sideci.yml
 linter:
   rails_best_practices:
-    options:
-      only: app/controllers/,app/models/,lib/foo.rb
+    only: app/controllers/,app/models/,lib/foo.rb
 ```
 
 #### `config`

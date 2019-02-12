@@ -2,7 +2,10 @@
 id: custom-configuration
 title: Custom Analysis Configuration
 sidebar_label: Custom Analysis Configuration
+hide_title: true
 ---
+
+# Custom Analysis Configuration
 
 You don't need to do any special configuration for Sider to start analyzing your code. However, Sider also offers advanced settings for special cases via the sideci.yml file.
 

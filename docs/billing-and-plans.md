@@ -2,7 +2,10 @@
 id: billing-and-plans
 title: Billing and Plans
 sidebar_label: Billing and Plans
+hide_title: true
 ---
+
+# Billing and Plans
 
 ## Sider Plans
 

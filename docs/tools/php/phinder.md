@@ -2,7 +2,10 @@
 id: phinder
 title: Phinder
 sidebar_label: Phinder
+hide_title: true
 ---
+
+# Phinder
 
 | Supported Version | Language | Web Site |
 | ----------------- | -------- | -------- |

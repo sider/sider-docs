@@ -2,7 +2,10 @@
 id: setup
 title: Setting up Sider
 sidebar_label: Setting up Sider
+hide_title: true
 ---
+
+# Setting up Sider
 
 ## Sign Up
 

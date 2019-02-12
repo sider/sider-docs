@@ -2,7 +2,10 @@
 id: gometalinter
 title: Go Meta Linter
 sidebar_label: Go Meta Linter
+hide_title: true
 ---
+
+# Go Meta Linter
 
 | Supported Version | Language | Web Site |
 | ----------------- | -------- | -------- |
