@@ -97,6 +97,7 @@
     "Troubleshooting": ["troubleshooting"],
     "Enterprise": [
       "enterprise/resources",
+      "enterprise/storage",
       "enterprise/testing/guide",
       {
         "type": "subcategory",
