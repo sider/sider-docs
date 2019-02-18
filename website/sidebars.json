@@ -99,6 +99,7 @@
       "enterprise/quickstart",
       "enterprise/resources",
       "enterprise/github",
+      "enterprise/database",
       "enterprise/storage",
       "enterprise/containers",
       "enterprise/scaling",
