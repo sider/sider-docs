@@ -97,6 +97,7 @@
     "Troubleshooting": ["troubleshooting"],
     "Enterprise": [
       "enterprise/resources",
+      "enterprise/github",
       "enterprise/storage",
       "enterprise/containers",
       "enterprise/testing/guide",
