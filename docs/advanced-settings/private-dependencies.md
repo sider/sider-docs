@@ -29,7 +29,11 @@ We support using SSH to access a private repository during an analysis session.
 
 Currently, only a few analysis tools use an SSH configuration.
 
-* JavaScript tools use SSH via `npm install` to access private repositories.
+* ESLint (npm install)
+* TSLint (npm install)
+* CoffeeLint (npm install)
+* stylelint (npm install)
+* RuboCop (bundle install)
 
 Other tools do not use SSH so adding an SSH key for such tools are not needed.
 

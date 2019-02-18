@@ -11,17 +11,25 @@ The Repository Settings page allows you to configure Sider's behavior for each r
 
 You must have write permission to the repository to change these settings.
 
-## Analyzer Settings
+## Tools
 
 ![Analyzer settings](../assets/project-analyzers.png)
 
-This section allows you to enable the analyzers you would like to use. Tools that are enabled will be run against new pull requests in your repository.
+This section allows you to enable the analysis tool you would like to use. Tools that are enabled will be run against new pull requests in your repository.
 
-## Slack Notification
+## Integrations
 
 ![Slack notification](../assets/project-slack-notification.png)
 
 In this section, you can enable Slack notifications from Sider. Enter `team#channel` in the Name field and enter your Slack webhook url in the `URL` field.
+
+## Inline Comments
+
+See [Inline Comments](../advanced-settings/inline-comments.md).
+
+## Keys
+
+See [Private Dependencies](../advanced-settings/private-dependencies.md).
 
 ## GitHub Sync
 
@@ -35,11 +43,12 @@ Sider will refresh your repository's information when the "Begin sync" button is
 
 This section allows you to enable Test Mode. If `ON`, Sider will send only success as a commit status.
 
-## Delete a Repository from Sider
+## Admin-only Settings
 
-![Delete a repository](../assets/project-delete.png)
+> You must have admin permissions to see this section.
+
+![Admin](../assets/project-admin.png)
 
 You can delete the repository from Sider in this section. Once deleted, Sider will delete your repository data including repository settings and analysis results and no longer analyze new pull requests. If you wish to re-enable Sider, re-add the repository from the "Add a new repository" screen.
 
-> You must have admin permissions to disable Sider.
-
+See also [Restricting access to Close button](../advanced-settings/restricting-access-to-close-button.md).
