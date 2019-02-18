@@ -97,21 +97,7 @@
     "Troubleshooting": ["troubleshooting"],
     "Enterprise": [
       "enterprise/resources",
-      {
-        "type": "subcategory",
-        "label": "Quick Start",
-        "ids": [
-          "enterprise/quick-start/setup",
-          "enterprise/quick-start/update"
-        ]
-      },
-      {
-        "type": "subcategory",
-        "label": "Testing",
-        "ids": [
-          "enterprise/testing/guide"
-        ]
-      },
+      "enterprise/testing/guide",
       {
         "type": "subcategory",
         "label": "Releases",
