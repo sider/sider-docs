@@ -102,6 +102,7 @@
       "enterprise/storage",
       "enterprise/containers",
       "enterprise/scaling",
+      "enterprise/config",
       "enterprise/testing/guide",
       {
         "type": "subcategory",
