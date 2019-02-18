@@ -96,6 +96,7 @@
     "Billing and Plans": ["billing-and-plans"],
     "Troubleshooting": ["troubleshooting"],
     "Enterprise": [
+      "enterprise/quickstart",
       "enterprise/resources",
       "enterprise/github",
       "enterprise/storage",
