@@ -7,9 +7,9 @@ hide_title: true
 
 # Golint
 
-| Supported Version | Language | Web Site |
-| ----------------- | -------- | -------- |
-| 2.0.12 | Go 1.8 | [https://github.com/golang/lint](https://github.com/golang/lint) |
+| Language | Web Site |
+| -------- | -------- |
+| Go 1.8 | [https://github.com/golang/lint](https://github.com/golang/lint) |
 
 ## Getting Started
 

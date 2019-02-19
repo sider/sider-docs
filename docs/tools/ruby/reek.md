@@ -9,7 +9,7 @@ hide_title: true
 
 | Supported Version | Language | Web Site |
 | ----------------- | -------- | -------- |
-| 5.3.0 | Ruby 2.5.1 | [https://github.com/troessner/reek](https://github.com/troessner/reek) |
+| 5.3.1 | Ruby 2.5.1 | [https://github.com/troessner/reek](https://github.com/troessner/reek) |
 
 ## Gettings Started
 
