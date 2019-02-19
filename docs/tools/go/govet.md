@@ -7,9 +7,9 @@ hide_title: true
 
 # go vet
 
-| Supported Version | Language | Web Site |
-| ----------------- | -------- | -------- |
-| 2.0.12 | Go 1.8 | [https://golang.org/cmd/vet/](https://golang.org/cmd/vet/) |
+| Language | Web Site |
+| -------- | -------- |
+| Go 1.8 | [https://golang.org/cmd/vet/](https://golang.org/cmd/vet/) |
 
 ## Getting Started
 

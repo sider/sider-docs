@@ -9,7 +9,7 @@ hide_title: true
 
 | Supported Version | Language | Web Site |
 | ----------------- | -------- | -------- |
-| 3.6.0 | Python 2.7.13, 3.6.2 | [http://flake8.pycqa.org/en/latest/](http://flake8.pycqa.org/en/latest/) |
+| 3.7.5 | Python 2.7.13, 3.6.2 | [http://flake8.pycqa.org/en/latest/](http://flake8.pycqa.org/en/latest/) |
 
 ## Getting Started
 

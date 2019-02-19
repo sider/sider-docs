@@ -7,9 +7,9 @@ hide_title: true
 
 # stylelint
 
-| Language | Web Site |
-| -------- | -------- |
-| CSS / Any languages that PostCSS can parse(e.g. SCSS, SugarSS and Less) | [https://stylelint.io/](https://stylelint.io/) |
+| Supported Version | Language | Web Site |
+| ----------------- | -------- | -------- |
+| Optional (default to 9.10.1) | CSS / Any languages that PostCSS can parse<br />(e.g. SCSS, SugarSS and Less) | [https://stylelint.io/](https://stylelint.io/) |
 
 ## Getting Started
 

@@ -9,7 +9,7 @@ hide_title: true
 
 | Supported Version | Language | Web Site |
 | ----------------- | -------- | -------- |
-| 2.9.7 | JavaScript(Node.js 11.5.0) | [https://jshint.com/](https://jshint.com/) |
+| 2.10.1 | JavaScript(Node.js 11.5.0) | [https://jshint.com/](https://jshint.com/) |
 
 ## Getting Started
 
