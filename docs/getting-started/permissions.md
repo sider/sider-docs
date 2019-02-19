@@ -44,10 +44,10 @@ For the organization settings, Sider checks for permissions in an organization. 
 | See analyzing/analyzed pull requests | X | X | X |
 | See analysis results | X | X | X |
 | Comment to issues | X | X | X |
-| Comment and close issues | | X | X |
-| Close issues | | X | X |
-| Close all issues simultaneously | | X | X |
-| Reopen issues | | X | X |
+| Comment and close issues | | X⁴ | X |
+| Close issues | | X⁴ | X |
+| Close all issues simultaneously | | X⁴ | X |
+| Reopen issues | | X⁴ | X |
 | Retry analyses | | X | X |
 | See analysis logs | X | X | X |
 | See repository settings | | X | X |
@@ -60,5 +60,8 @@ For the organization settings, Sider checks for permissions in an organization. 
 | Delete Slack integration | | X | X |
 | Enable test mode | | X | X |
 | Edit analysis tools | | X | X |
+| Restrict who can close issues | | | X |
 
 ³ You must have Member or Owner permission to your organization.
+
+⁴ It is possible to restrict closing issues. See [Restricting access to Close button](../advanced-settings/restricting-access-to-close-button.md).
