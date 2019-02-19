@@ -1,11 +1,10 @@
 ---
-id: introduction
-title: Introduction
-sidebar_label: Introduction
+title: Home
+sidebar_label: Home
 hide_title: true
 ---
 
-# Introduction
+# Sider Documentation
 
 ## About the documentation
 
