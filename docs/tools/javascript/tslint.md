@@ -7,9 +7,9 @@ hide_title: true
 
 # TSLint
 
-| Language | Web Site |
-| -------- | -------- |
-| JavaScript(Node.js 11.5.0) | [https://palantir.github.io/tslint/](https://palantir.github.io/tslint/) |
+| Supported Version | Language | Web Site |
+| ----------------- | -------- | -------- |
+| Optional (default to 5.12.1) | JavaScript(Node.js 11.5.0) | [https://palantir.github.io/tslint/](https://palantir.github.io/tslint/) |
 
 ## Getting Started
 
