@@ -28,7 +28,7 @@ This section has listed documents about analysis tools which Sider supports. We 
 ### Ruby
 
 <details>
-  <summary>7 tools are available.</summary>
+  <summary>6 tools are available.</summary>
   * [RuboCop](./tools/ruby/rubocop.md)
   * [Reek](./tools/ruby/reek.md)
   * [Querly](./tools/ruby/querly.md)
