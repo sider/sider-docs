@@ -104,6 +104,7 @@
       "enterprise/storage",
       "enterprise/containers",
       "enterprise/updating",
+      "enterprise/administration",
       "enterprise/scaling",
       "enterprise/config",
       "enterprise/testing/guide",
