@@ -103,6 +103,7 @@
       "enterprise/database",
       "enterprise/storage",
       "enterprise/containers",
+      "enterprise/updating",
       "enterprise/scaling",
       "enterprise/config",
       "enterprise/testing/guide",
