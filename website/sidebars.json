@@ -96,22 +96,18 @@
     "Billing and Plans": ["billing-and-plans"],
     "Troubleshooting": ["troubleshooting"],
     "Enterprise": [
+      "enterprise/outline",
+      "enterprise/quickstart",
       "enterprise/resources",
-      {
-        "type": "subcategory",
-        "label": "Quick Start",
-        "ids": [
-          "enterprise/quick-start/setup",
-          "enterprise/quick-start/update"
-        ]
-      },
-      {
-        "type": "subcategory",
-        "label": "Testing",
-        "ids": [
-          "enterprise/testing/guide"
-        ]
-      },
+      "enterprise/github",
+      "enterprise/database",
+      "enterprise/storage",
+      "enterprise/containers",
+      "enterprise/updating",
+      "enterprise/administration",
+      "enterprise/scaling",
+      "enterprise/config",
+      "enterprise/testing/guide",
       {
         "type": "subcategory",
         "label": "Releases",

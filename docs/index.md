@@ -116,21 +116,10 @@ This section has listed documents about analysis tools which Sider supports. We 
 
 * [Troubleshooting](./troubleshooting.md)
 
-## Enterprise
+## Sider Enterprise
 
-Sider is available for GitHub Enterprise users. Hence, following contents provides how to setup Sider and release notes and so on.
+Sider supports GitHub Enterprise by Sider Enterprise.
+Read the following enterprise documents for Sider Enterprise setup.
 
-* [Computer Resources for running Sider](./enterprise/resources.md)
-
-### Quick Start
-
-* [Setup Guide](./enterprise/quick-start/setup.md)
-* [Update Guide](./enterprise/quick-start/update.md)
-
-### Testing
-
-* [Testing Guide](./enterprise/testing/guide.md)
-
-### Release Notes
-
+* [Sider Enterprise Outline](./enterprise/outline.md)
 * [Release Notes](./enterprise/releases/changelog.md)

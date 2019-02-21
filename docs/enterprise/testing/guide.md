@@ -74,6 +74,27 @@ $ docker run --rm -t --env-file [ENV_FILE] quay.io/actcat/exotic-shorthair:maste
 
 SMTP settings refers to each environment variable specified by Sider.
 
+## Minio Testing
+
+You can check access to Minio for Catpost and Setaria.
+
+### Check Items
+
+`minio` command checks:
+
+* If uploading objects to Minio works or not (for Catpost.)
+* If downloading objects through presigned URLs from Minio works or not (for Setaria.)
+
+### From Command Line
+
+You can specify the endpoint for Minio and name of the bucket from the commandline.
+
+```
+$ docker run --rm -t quay.io/actcat/exotic-shorthair:master minio [ENDPOINT] [BUCKET]
+```
+
+The authentication to Minio is done through `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` environment variables. Specify the environment variables to test Minio server.
+
 ## S3 Testing
 You can check access to S3 Buckets for Catpost and Setaria.
 
