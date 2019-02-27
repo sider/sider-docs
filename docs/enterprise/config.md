@@ -70,13 +70,6 @@ URL to allow end users to access Sider.
 #### Example
     BASE_URL=https://sider.example.com
 
-### `DOCS_PAGE_URL` 
-
-URL which points to document page.
-
-#### Example
-    DOCS_PAGE_URL=https://help.sider.review
-
 ### `EXCEPTION_NOTIFIER_RECIPIENT_EMAILS` 
 
 Comma-separated list of recipients for error reporting emails.
@@ -88,13 +81,6 @@ Comma-separated list of recipients for error reporting emails.
 
 Random string to encrypt GitHub credential.
 Note that changing this value will make all organizations invalid.
-
-### `STATUS_PAGE_URL` 
-
-URL to share service status.
-
-#### Example
-    STATUS_PAGE_URL=https://status.sider.review
 
 ### `SECRET_KEY_BASE` 
 
