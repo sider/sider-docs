@@ -11,19 +11,19 @@ Analyzing a private project sometimes needs access to another private repository
 
 We support using SSH to access a private repository during an analysis session.
 
-* You can specify your SSH private key for each project.
-* During an analysis session, the `GIT_SSH` environment variable will be set so that your Git access will use that key.
+## Generating an SSH private key
 
-## Uploading the SSH Key
+![Generate SSH private key](../assets/ssh-key-generate-key.png)
 
-![Add SSH key](../assets/ssh-key-settings.png)
+When you click the “Generate Key” button, Sider generates a 4096 bit RSA key used in analysis sessions automatically.
 
-1. Visit the repository setting page.
-2. Fill in the text field with the content of the key file.
-3. You can specify the description of the SSH key.
-4. Save.
+> We strongly recommend against adding secret keys to public repositories. Their analysis results are publicly accessible, and your secret keys might get exposed.
 
-> Note that the private key cannot have a passphrase and must be an RSA key.
+## Downloading the SSH public key
+
+![Download SSH public key](../assets/ssh-key-download-key.png)
+
+After generating, you can download the SSH public key used in analysis sessions from this page. The key is able to be added as [Deploy Keys](https://developer.github.com/v3/guides/managing-deploy-keys/#deploy-keys) in GitHub.
 
 ## Using SSH
 
