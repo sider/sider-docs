@@ -81,7 +81,7 @@ $ docker run catpost:TAG bundle exec puma
 The `catpost_worker` runs with `rake` command. Use the following command to run `catpost_worker`.
 
 ```
-$ docker run catpost:TAG bundle exec rake resque:work
+$ docker run catpost:TAG bundle exec rake environment resque:work
 ```
 
 `catpost_worker` does not listen on any port.
