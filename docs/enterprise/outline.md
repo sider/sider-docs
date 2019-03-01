@@ -86,10 +86,10 @@ Note that:
 * `catpost` caches Git repositories in storage.
 * `setaria` requires access to a Docker service.
 
-You have to start six kinds of processes to run Sider.
+You have to start seven kinds of processes to run Sider.
 
 * `sideci_web` and `sideci_worker` using `sideci` image
-* `catpost_web` and `catpost_worker` using `catpost` image
+* `catpost_web`, `catpost_worker`, and `catpost_scheduler` using `catpost` image
 * `setaria_web` and `setaria_worker` using `setaria` image
 
 ### License and Authorization
