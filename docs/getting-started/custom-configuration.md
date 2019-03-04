@@ -91,3 +91,12 @@ With the above setting, Sider will ignore `master`, `development` and `another_b
 
 > If you want to know more details about this GitHub setting, read the GitHub documentation; [About required status checks](https://help.github.com/articles/about-required-status-checks/) and [Enabling required status check](https://help.github.com/articles/enabling-required-status-checks/).
 
+You can also use regular expressions as the `exclude` pattern:
+
+```yaml:sideci.yml
+branches:
+  exclude:
+    - /^release-.*$/
+```
+
+In the above example, all branches such as `release-20190304` are ignored.
