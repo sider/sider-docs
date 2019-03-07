@@ -81,10 +81,23 @@ $ docker run catpost:TAG bundle exec puma
 The `catpost_worker` runs with `rake` command. Use the following command to run `catpost_worker`.
 
 ```
-$ docker run catpost:TAG bundle exec rake resque:work
+$ docker run catpost:TAG bundle exec rake environment resque:work
 ```
 
 `catpost_worker` does not listen on any port.
+
+### Running the job scheduler
+
+This scheduler container does not require much processor power.
+You need only one scheduler in the whole system of Sider Enterprise, but you can run multiple scheduler containers for redundancy.
+
+The `catpost_scheduler` runes with `rake` command. Use the following command to run `catpost_scheduler`.
+
+```
+$ docker run catpost:TAG bundle exec rake environment resque:scheduler
+```
+
+`catpost_scheduler` does not listen on any port.
 
 ### Running batch jobs
 
