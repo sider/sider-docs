@@ -29,11 +29,11 @@ After generating, you can download the SSH public key used in analysis sessions 
 
 Currently, only a few analysis tools use an SSH configuration.
 
-* ESLint (npm install)
-* TSLint (npm install)
-* CoffeeLint (npm install)
-* stylelint (npm install)
-* RuboCop (bundle install)
+* [ESLint](../tools/javascript/eslint.md) (npm install)
+* [TSLint](../tools/javascript/tslint.md) (npm install)
+* [CoffeeLint](../tools/javascript/coffeelint.md) (npm install)
+* [stylelint](../tools/css/stylelint.md) (npm install)
+* [RuboCop](../tools/ruby/rubocop.md) (bundle install)
 
 Other tools do not use SSH so adding an SSH key for such tools are not needed.
 
