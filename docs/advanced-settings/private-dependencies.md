@@ -29,7 +29,7 @@ After generating, you can download the SSH public key used in analysis sessions 
 
 Currently, only a few analysis tools use an SSH configuration.
 
-* [ESLint]((../tools/javascript/eslint.md)) (npm install)
+* [ESLint](../tools/javascript/eslint.md) (npm install)
 * [TSLint](../tools/javascript/tslint.md) (npm install)
 * [CoffeeLint](../tools/javascript/coffeelint.md) (npm install)
 * [stylelint](../tools/css/stylelint.md) (npm install)
