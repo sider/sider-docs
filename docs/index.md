@@ -27,80 +27,95 @@ This section has listed documents about analysis tools which Sider supports. We 
 
 ### Ruby
 
-<details>
+<details open>
   <summary>6 tools are available.</summary>
+
   * [RuboCop](./tools/ruby/rubocop.md)
   * [Reek](./tools/ruby/reek.md)
   * [Querly](./tools/ruby/querly.md)
   * [Rails Best Practices](./tools/ruby/rails-bestpractices.md)
   * [Brakeman](./tools/ruby/brakeman.md)
   * [HAML-Lint](./tools/ruby/haml-lint.md)
+
 </details>
 
 ### Java
 
-<details>
+<details open>
   <summary>2 tools are available.</summary>
+
   * [Checkstyle](./tools/java/checkstyle.md)
   * [PMD](./tools/java/pmd.md)
 </details>
 
 ### JavaScript and Flavors
 
-<details>
+<details open>
   <summary>4 tools are available.</summary>
+
   * [ESLint](./tools/javascript/eslint.md)
   * [JSHint](./tools/javascript/tslint.md)
   * [TSLint](./tools/javascript/jshint.md)
   * [CoffeeLint](./tools/javascript/coffeelint.md)
+
 </details>
 
 ### PHP
 
-<details>
+<details open>
   <summary>3 tools are available.</summary>
+
   * [Phinder](./tools/php/phinder.md)
   * [PHPMD](./tools/php/phpmd.md)
   * [PHP_CodeSniffer](./tools/php/codesniffer.md)
+
 </details>
 
 ### Python
 
-<details>
+<details open>
   <summary>1 tool is available.</summary>
+
   * [Flake8](./tools/python/flake8.md)
+
 </details>
 
 ### Swift
 
-<details>
+<details open>
   <summary>1 tool is available.</summary>
   * [SwiftLint](./tools/swift/swiftlint.md)
 </details>
 
 ### CSS
 
-<details>
+<details open>
   <summary>2 tools are available.</summary>
+
   * [stylelint](./tools/css/stylelint.md)
   * [SCSS-Lint](./tools/css/scss-lint.md)
+
 </details>
 
 ### Go
 
-<details>
+<details open>
   <summary>3 tools are available.</summary>
+
   * [go vet](./tools/go/govet.md)
   * [Golint](./tools/go/golint.md)
   * [Go Meta Linter](./tools/go/gometalinter.md)
+
 </details>
 
 ### Others
 
-<details>
+<details open>
   <summary>2 tools are available.</summary>
+
   * [Goodcheck](./tools/others/goodcheck.md)
   * [Misspell](./tools/others/misspell.md)
+
 </details>
 
 ## Advanced Settings
