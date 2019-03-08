@@ -91,7 +91,8 @@
     "Advanced Settings": [
       "advanced-settings/inline-comments",
       "advanced-settings/private-dependencies",
-      "advanced-settings/restricting-access-to-close-button"
+      "advanced-settings/restricting-access-to-close-button",
+      "advanced-settings/transferring-a-repository"
     ],
     "Billing and Plans": ["billing-and-plans"],
     "Troubleshooting": ["troubleshooting"],
