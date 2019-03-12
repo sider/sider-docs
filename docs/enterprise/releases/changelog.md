@@ -11,9 +11,30 @@ hide_title: true
 
 | Application Name | Tag              |
 | ---------------- | ---------------- |
-| sideci           | release-201902.1 |
-| catpost          | release-201902.1 |
-| setaria          | release-201902.0 |
+| sideci           | release-201903.0 |
+| catpost          | release-201903.0 |
+| setaria          | release-201903.0 |
+
+## release-201903
+
+### Notes
+
+From this release, Sider Enterprise only starts analyses of the pull requests created by users who have signed up Sider Enterprise, with the exception of ones by Bot account.
+In other words, pull request authors must sign up Sider Enterprise if they want their pull requests to get analyzed.
+
+### Features
+
+* [Analysis Tools Updates](https://blog.sideci.com/analysis-tools-updates-in-february-2019-4943e1c82e83)
+* [Restricting access to Close button](https://blog.sideci.com/restricting-access-to-close-button-b0d3e0c12346)
+* [Defining rules for excluding branches with regular expressions](https://blog.sideci.com/defining-rules-for-excluding-branches-with-regular-expressions-bfd01edb6675)
+
+### Fixes
+
+* Bug fixes & UI design improvements
+
+### Update Procedure
+
+See [Update Guide](../../enterprise/updating.md).
 
 ## release-201902
 
