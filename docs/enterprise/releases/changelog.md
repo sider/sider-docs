@@ -33,11 +33,6 @@ hide_title: true
 
 See [Update Guide](../../enterprise/quick-start/update.md).
 
-#### catpost: Resque scheduler container on catpost no longer required <!-- https://github.com/sider/catpost/pull/289 -->
-
-You don't have to run `rake environment resque:scheduler`.
-You can stop the container and let `rake onprem:batch:daily` do all of the scheduled works.
-
 #### catpost: `ACTION_MAILER_DEFAULT_FROM_EMAIL` is required <!-- https://github.com/sider/catpost/pull/275 -->
 
 `ACTION_MAILER_DEFAULT_FROM_EMAIL` is now required and cannot be empty. See [Configure gem page](https://github.com/sider/configure) for details.
