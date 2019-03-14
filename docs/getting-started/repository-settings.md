@@ -23,6 +23,8 @@ This section allows you to enable the analysis tool you would like to use. Tools
 
 In this section, you can enable Slack notifications from Sider. Enter `team#channel` in the Name field and enter your Slack webhook url in the `URL` field.
 
+In addition, if you wish not to receive notifications for analyses with no issue, choose `Errors Only`. Then, Sider will notify analysis results to your Slack channel only when it detects issues.
+
 ## Inline Comments
 
 See [Inline Comments](../advanced-settings/inline-comments.md).
