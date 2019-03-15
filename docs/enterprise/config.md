@@ -106,6 +106,22 @@ If self sign up is disabled, administrator should register each user account.
 #### Example
     RESTRICT_SIGN_UP=true
 
+### `SIDECI_TIMEZONE` (Optional)
+
+|Introduced|Deprecated|
+|----------|----------|
+|201903|-|
+
+Set the timezone used for admin console.
+This does not affect the time formats for Sider Enterprise end users.
+It depends on `ActiveSupport::TimeZone` class.
+See the reference manual for available options.
+
+- https://api.rubyonrails.org/classes/ActiveSupport/TimeZone.html
+
+#### Example
+    SIDECI_TIMEZONE=Asia/Tokyo
+
 
 ## Database Configuration
 
