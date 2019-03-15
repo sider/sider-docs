@@ -11,9 +11,9 @@ hide_title: true
 
 | Application Name | Tag              |
 | ---------------- | ---------------- |
-| sideci           | release-201903.0 |
-| catpost          | release-201903.0 |
-| setaria          | release-201903.0 |
+| sideci           | release-201903.1 |
+| catpost          | release-201903.1 |
+| setaria          | release-201903.1 |
 
 ## release-201903
 
@@ -27,6 +27,9 @@ In other words, pull request authors must sign up Sider Enterprise if they want 
 * [Analysis Tools Updates](https://blog.sideci.com/analysis-tools-updates-in-february-2019-4943e1c82e83)
 * [Restricting access to Close button](https://blog.sideci.com/restricting-access-to-close-button-b0d3e0c12346)
 * [Defining rules for excluding branches with regular expressions](https://blog.sideci.com/defining-rules-for-excluding-branches-with-regular-expressions-bfd01edb6675)
+* [Improved Slack integration](https://blog.sideci.com/sider-update-improved-slack-integration-6b51735d313)
+* Add `SIDECI_TIMEZONE` configuration
+    - This lets you see the timestamp on the admin page with an arbitrary time zone
 
 ### Fixes
 
