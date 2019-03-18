@@ -9,7 +9,7 @@ hide_title: true
 
 | Supported Version | Language | Web Site |
 | ----------------- | -------- | -------- |
-| Optional (default to 5.13.0) | JavaScript(Node.js 11.5.0) | [https://eslint.org](https://eslint.org) |
+| Optional (default to 5.15.2) | JavaScript(Node.js 11.5.0) | [https://eslint.org](https://eslint.org) |
 
 ## Getting Started
 
