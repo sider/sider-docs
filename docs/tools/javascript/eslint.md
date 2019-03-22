@@ -90,7 +90,7 @@ If your `package.json` contains a dependency which cannot be installed in the Si
 This option controls name of directory to pass to `eslint`. The default value is `.`. Declare directory to analyze like this:
 
 ```yaml:sideci.yml
-linter
+linter:
   eslint:
     dir: frontend/src
 ```
