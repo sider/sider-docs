@@ -76,11 +76,11 @@ linter:
 
 ### Understanding the analyzer version
 
-Sider searches for the analyzer version in the following order:
+Sider decides the analyzer version in the following order:
 
-- `gems` option in `sideci.yml`
-- `Gemfile.lock`
-- The default version
+1. `gems` option in `sideci.yml`
+2. `Gemfile.lock`
+3. The default version
 
 However, if the version was written in `Gemfile.lock` does not satisfy our constraints, that version is skipped.
 
