@@ -97,7 +97,7 @@ linter:
 
 If the gem is not found in `Gemfile.lock`, the latest version is installed.
 
-### Install gems from thrid-party RubyGems repository
+### Install gems from third-party RubyGems repository
 
 You can select an alternate RubyGems repository as a gem source via the source option:
 
