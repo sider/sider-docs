@@ -7,14 +7,18 @@ hide_title: true
 
 # Computer Resources
 
-The following is a table of the computer resources required to serve Sider based on the number of developers.
+The following is a table of the computer resources required to serve Sider based on the number of developers and analyses.
 
-| # of developers | Memory |
-|-----------------|--------|
-| 0 (for testing) | 8GB    |
-| ~50             | 32GB   |
-| ~250            | 64GB   |
-| ~1000           | 150GB  |
+| # of developers | # of Analyses | Memory |
+|-----------------|---------------|--------|
+| 0 (for testing) | -             | 8GB    |
+| ~50             | ~100          | 32GB   |
+| ~250            | ~500          | 64GB   |
+| ~1,000          | ~2,000        | 150GB  |
+
+The number of analyses are based on the usage on our SaaS version.
+Sider starts analysis when new commits are pushed to the GitHub pull request.
+It is clear that the estimation is rough, and you should try with your own workload to make your estimation more acculate.
 
 ## Estimating Required Resources
 
