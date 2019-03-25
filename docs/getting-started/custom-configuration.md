@@ -137,7 +137,7 @@ linter:
 | `tag` | `string` | Tag name. |
 | `ref` | `string` | Ref name. |
 
-If you would like to install a gem located in a private git repository, see [private dependencies guide](../advanced-settings/private-dependencies.md) and configure your SSH key.
+If you would like to install a gem located in a private git repository, see [private dependencies guide](../advanced-settings/private-dependencies.md) and configure SSH key.
 
 ## `ignore` option
 
