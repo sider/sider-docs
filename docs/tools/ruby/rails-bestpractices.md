@@ -102,7 +102,7 @@ Rails Best Practices supports some template engines. Sider finds the following g
 - [sass](https://github.com/sass/ruby-sass)
 - [sassc](https://github.com/sass/sassc-ruby)
 
-These gems will not be installed when the `gems` option is specified. We are encouraged to explicitly specify gems in the [`gems` option](../../getting-started/custom-configuration.md#gems-option) in `sideci.yml` as follows:
+These gems will not be installed when the `gems` option is specified. We encourage you to explicitly specify gems in the [`gems` option](../../getting-started/custom-configuration.md#gems-option) in `sideci.yml` as follows:
 
 ```yaml:sideci.yml
 linter:
