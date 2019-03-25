@@ -22,4 +22,5 @@ jobs:
             - ~/.cache/yarn
 
       # run remark-cli
-      - run: yarn lint
+      # See https://github.com/sider/sider-docs/pull/134#discussion_r268517057
+      #- run: yarn lint
