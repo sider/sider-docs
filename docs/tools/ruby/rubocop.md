@@ -7,19 +7,13 @@ hide_title: true
 
 # RuboCop
 
-| Supported Version | Language | Web Site |
+| Version Constraints | Language | Web Site |
 | ----------------- | -------- | -------- |
 | >= 0.35.0 (default to 0.65.0) | Ruby 2.5.1 | [https://github.com/rubocop-hq/rubocop](https://github.com/rubocop-hq/rubocop) |
 
 ## Gettings Started
 
 To start performing analysis, you are required to turn on RuboCop in [Repository Settings](../../getting-started/repository-settings.md).
-
-## Versioning
-
-If your `Gemfile` or `Gemfile.lock` contains a dependency to RuboCop, Sider uses the locked version instead of the default version.
-
-> RuboCop often introduces incompatibilities in its configuration, so we strongly recommend that you include it in your `Gemfile.lock`.
 
 ## Default Configuration
 
@@ -34,7 +28,7 @@ linter:
   rubocop:
     gems:
       - "rubocop-rspec"
-    config: "web/.rubocop.yml"
+    config: "config/.rubocop.yml"
     rails: false
     safe: true
 ```
@@ -54,43 +48,7 @@ Details of options are below:
 
 #### `gems`
 
-This option allows you to install RuboCop plugins or configuration gems during analysis.
-
-```yaml:sideci.yml
-linter:
-  rubocop:
-    gems:
-      - 'rubocop-rspec'
-      - name: 'meowcop'
-        version: '1.17.0'
-      - name: 'private-office-cop'
-        version: '0.60.0'
-        source: 'https://gems.example.com'
-      - name: 'gitcop'
-        git:
-          repo: 'git@github.com:org/repo.git'
-          tag: 'v0.62.0'
-```
-
-You can define each gem with the following attributes:
-
-| Name | Type | Description |
-| ---- | ---- | ----------- |
-| `name` | `string` | Gem name. |
-| `version` | `string` | Gem version. |
-| `source` | `string` | RubyGems repository. Default: `https://rubygems.org` |
-| `git` | `object` | Definition of the gem source as a Git repository. |
-
-`git` option has options below:
-
-| Name | Type | Description |
-| ---- | ---- | ----------- |
-| `repo` | `string` | Git repository location. The repository can be accessed via HTTP(S)/SSH protocols. |
-| `branch` | `string` | Branch name. |
-| `tag` | `string` | Tag name. |
-| `ref` | `string` | Ref name. |
-
-If you define a gem as a string, Sider will try to install the gem according to your locked version in `Gemfile.lock`.
+See [`gems` option](../../getting-started/custom-configuration.md#gems-option) for details.
 
 #### `config`
 
