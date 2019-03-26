@@ -48,4 +48,4 @@ Sider finds the following gems in `Gemfile.lock` and installs them automatically
 - [slim](https://github.com/slim-template/slim)
 - [haml](https://github.com/haml/haml)
 
-These gems will not be installed when the `gems` option is specified. We encourage you to explicitly specify gems in the [`gems` option](../../getting-started/custom-configuration.md#gems-option) in `sideci.yml`.
+These gems are not installed automatically when the `gems` option is specified. We encourage you to explicitly specify gems in the [`gems` option](../../getting-started/custom-configuration.md#gems-option) in `sideci.yml`.
