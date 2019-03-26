@@ -34,6 +34,8 @@ Currently, only a few analysis tools use an SSH configuration.
 * [CoffeeLint](../tools/javascript/coffeelint.md) (npm install)
 * [stylelint](../tools/css/stylelint.md) (npm install)
 * [RuboCop](../tools/ruby/rubocop.md) (bundle install)
+* [Reek](../tools/ruby/reek.md) (bundle install)
+* [Rails Best Practices](../tools/ruby/rails-bestpractices.md) (bundle install)
 
 Other tools do not use SSH so adding an SSH key for such tools are not needed.
 
