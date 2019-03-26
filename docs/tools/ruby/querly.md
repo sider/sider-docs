@@ -7,9 +7,9 @@ hide_title: true
 
 # Querly
 
-| Supported Version | Language | Web Site |
+| Version Constraints | Language | Web Site |
 | ----------------- | -------- | -------- |
-| 0.15.1 | Ruby 2.5.1 | [https://github.com/soutaro/querly](https://github.com/soutaro/querly) |
+| >= 0.5.0 (default to 0.15.1) | Ruby 2.5.1 | [https://github.com/soutaro/querly](https://github.com/soutaro/querly) |
 
 ## Getting Started
 
@@ -22,7 +22,30 @@ Visit the Querly project page for more information about writing rules:
 * [Examples](https://github.com/soutaro/querly/blob/master/manual/examples.md)
 * [Patterns](https://github.com/soutaro/querly/blob/master/manual/patterns.md)
 
-## Configuration
+## Configuration via `sideci.yml`
 
-There is no configuration available.
+Here are some example settings for Querly in `sideci.yml`, under `querly`:
 
+```yaml:sideci.yml
+linter:
+  querly:
+    gems:
+      - "slim"
+```
+
+## Options
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#root-dir-option) | `string` | Directory which runs the analyzer. |
+| [`gems`](../../getting-started/custom-configuration.md#gems-option) | `array<string, object>` | Definition of gems to be installed. |
+
+## Analyzing view templates
+
+Querly has a mechanism called [preprocessor](https://github.com/soutaro/querly/blob/master/manual/configuration.md#preprocessor) for analyzing templates which contain Ruby code.
+Sider finds the following gems in `Gemfile.lock` and installs them automatically for backward compatibility:
+
+- [slim](https://github.com/slim-template/slim)
+- [haml](https://github.com/haml/haml)
+
+These gems will not be installed when the `gems` option is specified. We encourage you to explicitly specify gems in the [`gems` option](../../getting-started/custom-configuration.md#gems-option) in `sideci.yml`.
