@@ -7,15 +7,25 @@ hide_title: true
 
 # Brakeman
 
-| Supported Version | Language | Web Site |
+| Version Constraints | Language | Web Site |
 | ----------------- | -------- | -------- |
-| 4.3.1 | Ruby 2.5.1 | [https://brakemanscanner.org/](https://brakemanscanner.org/) |
+| >= 4.0.0, < 4.4.0 (default to 4.3.1) | Ruby 2.5.1 | [https://brakemanscanner.org/](https://brakemanscanner.org/) |
 
-## Getting Started
+## Configuration via `sideci.yml`
 
-To start using Brakeman, enable it in [Repository Settings](../../getting-started/repository-settings.md).
+Here are some example settings for Brakeman in `sideci.yml`, under `brakeman`:
 
-## Configuration
+```yaml:sideci.yml
+linter:
+  querly:
+    gems:
+      - name: "brakeman"
+      - version: "4.3.0"
+```
 
-There is no configuration available.
+## Options
 
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#root-dir-option) | `string` | Directory which runs the analyzer. |
+| [`gems`](../../getting-started/custom-configuration.md#gems-option) | `array<string, object>` | Definition of gems to be installed. |
