@@ -131,8 +131,6 @@ linter:
 
 ### Options
 
-You can use several options to more comfortable analysis to your project.
-
 | Name | Type | Description |
 | ---- | ---- | ----------- |
 | [`root_dir`](../../getting-started/custom-configuration.md#root-dir-option) | `string` | Directory which runs the analyzer. |
