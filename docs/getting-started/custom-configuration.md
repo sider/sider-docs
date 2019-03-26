@@ -82,7 +82,7 @@ Sider decides the analyzer version in the following order:
 2. `Gemfile.lock`
 3. The default version
 
-However, if the version was written in `Gemfile.lock` does not satisfy our constraints, that version is skipped.
+However, if the version written in `Gemfile.lock` does not satisfy our constraints, that version is skipped.
 
 ### Install gems from Gemfile.lock
 
