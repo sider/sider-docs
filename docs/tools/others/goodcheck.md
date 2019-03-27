@@ -17,6 +17,11 @@ To start using Goodcheck, enable it in the repository setting and put config fil
 
 Visit [its project page](https://github.com/sider/goodcheck#goodcheckyml) for more information about writing rules.
 
+<div style="position:relative;padding-top:56.25%;">
+  <iframe src="https://www.youtube.com/embed/8Zpm2gguE1M" frameborder="0" allowfullscreen
+    style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+</div>
+
 ## Configuration via `sideci.yml`
 
 Here are example settings for Goodcheck under `goodcheck`:
