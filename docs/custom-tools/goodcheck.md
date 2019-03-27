@@ -112,6 +112,12 @@ rules:
      It allows modifying original tab URLs from opened tabs.
 ```
 
+## Goodcheck video tutorial
+
+<div style="position:relative;padding-top:56.25%;">
+  <iframe src="https://www.youtube.com/embed/8Zpm2gguE1M" frameborder="0" allowfullscreen
+    style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+</div>
 
 ## Links
 * Goodcheck [Documentation](https://github.com/sider/goodcheck)
