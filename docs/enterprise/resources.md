@@ -9,7 +9,7 @@ hide_title: true
 
 The following is a table of the computer resources required to serve Sider based on the number of developers and analyses.
 
-| # of developers | # of Analyses | Memory |
+| # of developers | # of Analyses/day | Memory |
 |-----------------|---------------|--------|
 | 0 (for testing) | -             | 8GB    |
 | ~50             | ~100          | 32GB   |
@@ -18,7 +18,7 @@ The following is a table of the computer resources required to serve Sider based
 
 The number of analyses are based on the usage on our SaaS version.
 Sider starts analysis when new commits are pushed to the GitHub pull request.
-It is clear that the estimation is rough, and you should try with your own workload to make your estimation more acculate.
+It is clear that the estimation is rough, and you should try with your own workload to make your estimation more accurate.
 
 ## Estimating Required Resources
 
@@ -55,4 +55,3 @@ The following table is an example of how many containers you need based on the n
 | catpost-worker | 2 | 3 | 8 |
 | setaria-web | 1 | 2 | 2 |
 | setaria-worker | 10 | 20 | 50 |
-
