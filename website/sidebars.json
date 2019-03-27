@@ -88,6 +88,9 @@
         ]
       }
     ],
+    "Custom Tools": [
+      "custom-tools/goodcheck"
+    ],
     "Advanced Settings": [
       "advanced-settings/inline-comments",
       "advanced-settings/private-dependencies",
