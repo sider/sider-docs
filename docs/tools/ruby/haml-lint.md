@@ -7,15 +7,9 @@ hide_title: true
 
 # HAML-Lint
 
-| Supported Version | Language | Web Site |
+| Version Constraints | Language | Web Site |
 | ----------------- | -------- | -------- |
-| 0.28.0 | HAML 5.0.4 / Ruby 2.5.1 | [https://github.com/brigade/haml-lint](https://github.com/brigade/haml-lint) |
-
-## Getting Started
-
-To start using HAML-Lint, enable it in [Repository Settings](../../getting-started/repository-settings.md).
-
-For additional configuration, use `sideci.yml`.
+| >= 0.26.0 (default to 0.28.0) | Ruby 2.5.1 | [https://github.com/brigade/haml-lint](https://github.com/brigade/haml-lint) |
 
 ## Configuration via `sideci.yml`
 
@@ -24,13 +18,16 @@ Example settings for HAML-Lint under `haml_lint`:
 ```yaml:sideci.yml
 linter:
   haml_lint:
+    gems:
+      - "rubocop"
+      - "haml"
     include_linter:
       - EmptyScript
       - LineLength
       - MultilinePipe
     exclude_linter:
       - TagName
-    config: 'my-haml-lint-conf.yml'
+    config: '.rubocop_haml.yml'
     file: '**/*haml'
     exclude:
       - 'app/views/layouts/application.html.haml'
@@ -42,33 +39,20 @@ You can use several options to fine-tune HAML-Lint to your project.
 
 | Name | Type | Description |
 | ---- | ---- | ----------- |
-| [`include_linter`](#include_linter) | `string`<br />`array<string>` | Specify rule names to analyze. |
-| [`exclude_linter`](#exclude_linter) | `string`<br />`array<string>` | Specify rule names to exclude from analysis.  |
-| [`config`](#config) | `string` | Set the configuration file for HAML-Lint. |
-| [`file`](#file) | `string` | Set files to analyze, default to `.`. |
-| [`exclude`](#exclude) | `string`<br />`array<string>` | Specific files to exclude from analysis. |
+| [`root_dir`](../../getting-started/custom-configuration.md#root-dir-option) | `string` | Directory which runs the analyzer. |
+| [`gems`](../../getting-started/custom-configuration.md#gems-option) | `array<string, object>` | Definition of gems to be installed. |
+| `include_linter` | `string`<br />`array<string>` | Rule names passed as `--include-linter` option. |
+| `exclude_linter` | `string`<br />`array<string>` | Rule names passed as `--exclude-linter` option. |
+| `config` | `string` | A file path passed as `--config` option. |
+| `file` | `string` | Files which are analyzed. default to `.`. |
+| `exclude` | `string`<br />`array<string>` | Files passed as `--exclude` option. |
 
-#### `include_linter`
+### Installing RuboCop plugins and configuration gems
 
-This option specifies which linters HAML-Lint should run. `sideci.yml` expects this to be an array. The array will be passed as a comma separated string to `haml_lint`. For more information on linters in HAML-Lint, see the [HAML-Lint Linter documentation](https://github.com/brigade/haml-lint/blob/master/lib/haml_lint/linter/README.md).
+Sider automatically finds and installs gems likely to be related to RuboCop from `Gemfile.lock`, but this behavior only works for backward compatibility. Therefore, this is skipped if you specify the `gems` option.
 
-#### `exclude_linter`
+We encourage you to explicitly specify gems in the [`gems` option](../../getting-started/custom-configuration.md#gems-option) in `sideci.yml`.
 
-This option excludes specific linters from the HAML-Lint run. As with `include_linter`, it should specified as an array, which will be passed as a comma-separated string. For more information, see the [HAML-Lint documentation](https://github.com/brigade/haml-lint#configuration).
+## Default Configuration
 
-#### `config`
-
-This option controls the configuration file HAML-Lint uses for analysis. You should enter it as a string. Use this when you want to use your own configuration file for HAML-Lint.
-
-#### `file`
-
-This option allows you to control which files you want Sider to analyze. You should enter it as a string. It is passed as a parameter when `haml_lint` is executed. If this setting is not present in `sideci.yml`, Sider passes `.` as a parameter.
-
-#### `exclude`
-
-This option allows you to control which files you want Sider to exclude in analysis. You should put it as an array. You are able to declare files or directories.
-
-Please see the following URL for more details about the execution parameters:
-
-* [HAML-Lint\#Command Line Flags](https://github.com/brigade/haml-lint#command-line-flags)
-
+Sider performs analysis according to our recommended configuration if `.rubocop.yml` does not exist in your repository. The configuration comes from [MeowCop](https://github.com/sider/meowcop) gem.
