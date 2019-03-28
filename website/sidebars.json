@@ -88,8 +88,8 @@
         ]
       }
     ],
-    "Custom Tools": [
-      "custom-tools/goodcheck"
+    "Custom Rules": [
+      "custom-rules/goodcheck"
     ],
     "Advanced Settings": [
       "advanced-settings/inline-comments",

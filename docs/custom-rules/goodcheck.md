@@ -11,7 +11,7 @@ Goodcheck is a cross-language linter which allows you to create custom rules. Ru
 
 ## Rules & Examples
 Example rules can be copied and pasted into your `goodcheck.yml` file.
-For more information on setting up Goodcheck please see [basic instructions](#basic-instructions).
+For more information on setting up Goodcheck, please see [basic instructions](#basic-instructions).
 
 The rule hash contains the following __required__ keys.
 * `id`: a string to identify rules.
@@ -28,6 +28,7 @@ The rule hash contains the following _optional_ keys.
 When `target = "_blank"` is used, the opened page can access the original window object and potentially redirect the original page to a malicious URL. In this example, the rule will look for patterns of `"_blank"` and suggest to use `rel="noopener"` to prevent the opened page from having access.
 
 ```yaml
+rules:
  - id: security.link
    pattern:
    - token: 'target = "_blank"' 
@@ -53,6 +54,7 @@ When `target = "_blank"` is used, the opened page can access the original window
 Keep wording consistent to provide a clear experience for users. In this example, the use of Log in or Log out would prompt the use of sign in / sign out instead.
 
 ```yaml
+rules:
   - id: wording.signin
     pattern:
       - token: Log in
@@ -83,6 +85,7 @@ Keep wording consistent to provide a clear experience for users. In this example
 A mixin lets you make groups of CSS declarations that you want to reuse throughout your site. In this example, it creates a warning when the color pattern is used and suggests using a mixin instead.
 
 ```yaml
+rules:
 - id: use-mixin
   message: Use mixin.
   pattern: "color: #038cf4;"
@@ -96,21 +99,9 @@ A mixin lets you make groups of CSS declarations that you want to reuse througho
 ## Basic instructions
 1. Enable goodcheck in your Sider repository. (Skip this step if Goodcheck is already activated)
 2. Create a `goodcheck.yml` file in the root directory of your repository.
-3. Write your own rule or copy rule(s) into the goodcheck.yml file.
-4. Sider will check pull requests against the goodcheck.yml file.
-
-## Sample `goodcheck.yml`
-```yaml
-rules:
- - id: security.link
-   pattern:
-   - token: 'target = "_blank"' 
-   - token: 'target: "_blank"'
-   message: |
-     Specify rel="noopener" for security reason
-     Opening new tab without `rel="noopener"` may cause a security issue.
-     It allows modifying original tab URLs from opened tabs.
-```
+3. Write your own rule or copy rule(s) into the goodcheck.yml file. 
+  <br>(`rules:` is only needed as the first line of the `goodcheck.yml` file.)
+4. Sider will check open pull requests against the `goodcheck.yml` file.
 
 ## Goodcheck video tutorial
 
