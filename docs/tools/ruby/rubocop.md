@@ -11,10 +11,6 @@ hide_title: true
 | ----------------- | -------- | -------- |
 | >= 0.35.0 (default to 0.65.0) | Ruby 2.5.1 | [https://github.com/rubocop-hq/rubocop](https://github.com/rubocop-hq/rubocop) |
 
-## Default Configuration
-
-Sider performs analysis according to our recommended configuration if `.rubocop.yml` does not exist in your repository. The configuration comes from [MeowCop](https://github.com/sider/meowcop) gem.
-
 ## Configuration via `sideci.yml`
 
 Example settings for RuboCop under `rubocop`:
@@ -62,3 +58,7 @@ This option controls to cops RuboCop inspects. If `true`, RuboCop will inspect c
 Sider automatically finds and installs gems likely to be related to RuboCop from `Gemfile.lock`, but this behavior only works for backward compatibility. Therefore, this is skipped if you specify the `gems` option.
 
 We encourage you to explicitly specify gems in the [`gems` option](../../getting-started/custom-configuration.md#gems-option) in `sideci.yml`.
+
+## Default Configuration
+
+Sider performs analysis according to our recommended configuration if `.rubocop.yml` does not exist in your repository. The configuration comes from [MeowCop](https://github.com/sider/meowcop) gem.
