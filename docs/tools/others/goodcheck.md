@@ -7,13 +7,13 @@ hide_title: true
 
 # Goodcheck
 
-| Supported Version | Language | Web Site |
+| Version Constraints | Language | Web Site |
 | ----------------- | -------- | -------- |
-| 1.5.0 | Others(Regexp) | [https://github.com/sider/goodcheck](https://github.com/sider/goodcheck) |
+| >= 1.0.0, < 2.0 (default to 1.5.0) | Others(Regexp) | [https://github.com/sider/goodcheck](https://github.com/sider/goodcheck) |
 
 ## Getting Started
 
-To start using Goodcheck, enable it in the repository setting and put config file `goodcheck.yml` in your repository.
+To start using Goodcheck, put config file `goodcheck.yml` in your repository.
 
 Visit [its project page](https://github.com/sider/goodcheck#goodcheckyml) for more information about writing rules.
 
@@ -30,11 +30,11 @@ linter:
       - app
 ```
 
-### `config`
+### Options
 
-This option allows you to specify a config file. By default, Goodcheck looks `goodcheck.yml` in the current directory.
-
-### `target`
-
-This option allows you to specify files or directories which Goodcheck analyzes. You need to set values of the option as a list.
-
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#root-dir-option) | `string` | Directory which runs the analyzer. |
+| [`gems`](../../getting-started/custom-configuration.md#gems-option) | `array<string, object>` | Definition of gems to be installed. |
+| `config` | `string` | A file path passed as `--config` option. |
+| `target` | `string`<br />`array<string>` | Files or directories which are analyzed. |

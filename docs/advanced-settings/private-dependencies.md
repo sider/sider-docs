@@ -29,15 +29,11 @@ After generating, you can download the SSH public key used in analysis sessions 
 
 Currently, only a few analysis tools use an SSH configuration.
 
+* All Ruby analyzers (bundle install)
 * [ESLint](../tools/javascript/eslint.md) (npm install)
 * [TSLint](../tools/javascript/tslint.md) (npm install)
 * [CoffeeLint](../tools/javascript/coffeelint.md) (npm install)
 * [stylelint](../tools/css/stylelint.md) (npm install)
-* [RuboCop](../tools/ruby/rubocop.md) (bundle install)
-* [Reek](../tools/ruby/reek.md) (bundle install)
-* [Querly](../tools/ruby/querly.md) (bundle install)
-* [Rails Best Practices](../tools/ruby/rails-bestpractices.md) (bundle install)
-* [Brakeman](../tools/ruby/brakeman.md) (bundle install)
 
 Other tools do not use SSH so adding an SSH key for such tools are not needed.
 
