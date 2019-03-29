@@ -88,6 +88,9 @@
         ]
       }
     ],
+    "Custom Rules": [
+      "custom-rules/goodcheck"
+    ],
     "Advanced Settings": [
       "advanced-settings/inline-comments",
       "advanced-settings/private-dependencies",
