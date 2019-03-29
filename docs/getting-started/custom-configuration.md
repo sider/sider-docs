@@ -52,6 +52,93 @@ linter:
 
 Sider will run ESLint analysis in `./frontend` directory.
 
+## `gems` option
+
+Some analyzers written in Ruby can be customized with third-party [gems](https://rubygems.org/). With Sider, you can use [Bundler](https://bundler.io/) to install any gem. The following is an example of installing RuboCop plugins or configuration gems:
+
+```yaml:sideci.yml
+linter:
+  rubocop:
+    gems:
+      - name: 'meowcop'
+        version: '1.17.0'
+```
+
+You can also set the version of the analyzer you want to use. However, the version must meet Sider's constraints. Please refer to each analyzer page.
+
+```yaml:sideci.yml
+linter:
+  rubocop:
+    gems:
+      - name: 'rubocop'
+        version: '0.66.0'
+```
+
+### Understanding the analyzer version
+
+Sider decides the analyzer version in the following order:
+
+1. `gems` option in `sideci.yml`
+2. `Gemfile.lock`
+3. The default version
+
+However, if the version written in `Gemfile.lock` does not satisfy our constraints, that version is skipped.
+
+### Install gems from Gemfile.lock
+
+If you want to additionally install a specific gem written in `Gemfile.lock`, you can omit the `version` as follows:
+
+```yaml:sideci.yml
+linter:
+  rubocop:
+    gems:
+      - 'rubocop-rspec'
+```
+
+If the gem is not found in `Gemfile.lock`, the latest version is installed.
+
+### Install gems from third-party RubyGems repository
+
+You can select an alternate RubyGems repository as a gem source via the source option:
+
+```yaml:sideci.yml
+linter:
+  rubocop:
+    gems:
+      - name: "rubocop-mycompany"
+        version: "0.63.0"
+        source: "https://gems.mycompany.com"
+```
+
+### Install gems from git repositories
+
+You can also install a gem in a git repository. Please note that the git option cannot be specified with version or source.
+
+```yaml:sideci.yml
+linter:
+  rubocop:
+    gems:
+      - name: "rubocop-mycompany-standard"
+        git:
+          repo: "https://github.com/mycompany/rubocop-mycompany-standard.git"
+          branch: "master"
+      - name: "rubocop-mycompany-extensions"
+        git:
+          repo: "git@github.com/mycomapny/rubocop-mycompany-extensions.git"
+          tag: "v0.63.0"
+```
+
+`git` option has options below:
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| `repo` | `string` | Git repository location. The repository can be accessed via HTTP(S)/SSH protocols. |
+| `branch` | `string` | Branch name. |
+| `tag` | `string` | Tag name. |
+| `ref` | `string` | Ref name. |
+
+If you would like to install a gem located in a private git repository, see [private dependencies guide](../advanced-settings/private-dependencies.md) and configure SSH key.
+
 ## `ignore` option
 
 This option allows you to ignore specific files. It helps to improve the analysis execution time and the analysis stability.

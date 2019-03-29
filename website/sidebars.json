@@ -111,6 +111,7 @@
       "enterprise/administration",
       "enterprise/scaling",
       "enterprise/config",
+      "enterprise/healthcheck",
       "enterprise/testing/guide",
       {
         "type": "subcategory",
