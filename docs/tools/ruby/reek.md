@@ -11,6 +11,25 @@ hide_title: true
 | ----------------- | -------- | -------- |
 | >= 4.4.0, < 6.0 (default to 5.3.1) | Ruby 2.5.1 | [https://github.com/troessner/reek](https://github.com/troessner/reek) |
 
+## Configuration via `sideci.yml`
+
+Here are some example settings for Reek in `sideci.yml`, under `reek`:
+
+```yaml:sideci.yml
+linter:
+  reek:
+    gems:
+      - name: "reek"
+        version: "5.2.0"
+```
+
+### Options
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#root-dir-option) | `string` | Directory which runs the analyzer. |
+| [`gems`](../../getting-started/custom-configuration.md#gems-option) | `array<string, object>` | Definition of gems to be installed. |
+
 
 ## Default Configuration
 
@@ -116,22 +135,3 @@ detectors:
     enabled: false
     exclude: []
 ```
-
-## Configuration via `sideci.yml`
-
-Here are some example settings for Reek in `sideci.yml`, under `reek`:
-
-```yaml:sideci.yml
-linter:
-  reek:
-    gems:
-      - name: "reek"
-        version: "5.2.0"
-```
-
-### Options
-
-| Name | Type | Description |
-| ---- | ---- | ----------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#root-dir-option) | `string` | Directory which runs the analyzer. |
-| [`gems`](../../getting-started/custom-configuration.md#gems-option) | `array<string, object>` | Definition of gems to be installed. |
