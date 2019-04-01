@@ -39,7 +39,7 @@ You can use several options to fine-tune HAML-Lint to your project.
 
 | Name | Type | Description |
 | ---- | ---- | ----------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#root-dir-option) | `string` | Directory in which the analyzer runs. |
+| [`root_dir`](../../getting-started/custom-configuration.md#root_dir-option) | `string` | Directory in which the analyzer runs. |
 | [`gems`](../../getting-started/custom-configuration.md#gems-option) | `array<string, object>` | Definition of gems to be installed. |
 | `include_linter` | `string`<br />`array<string>` | Rule names passed as `--include-linter` option. |
 | `exclude_linter` | `string`<br />`array<string>` | Rule names passed as `--exclude-linter` option. |
