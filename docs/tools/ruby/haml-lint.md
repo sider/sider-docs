@@ -15,7 +15,7 @@ hide_title: true
 
 Example settings for HAML-Lint under `haml_lint`:
 
-```yaml:sideci.yml
+```yaml
 linter:
   haml_lint:
     gems:

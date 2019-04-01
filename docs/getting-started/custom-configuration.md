@@ -13,7 +13,7 @@ You don't need to do any special configuration for Sider to start analyzing your
 
 First, add a file named `sideci.yml` in your project's root directory.
 
-```yaml:sideci.yml
+```yaml
 linter:
   rubocop:
     config: 'lint_yml/.myrubocop.yml'
@@ -44,7 +44,7 @@ You can use `sideci.yml` to configure each analyzer's vendor-supplied settings. 
 
 This is a common option available to all analyzers. This option specifies a directory in your repository from which Sider should run the analyzer in. For example, if you have all your JavaScript files in the `./frontend` directory, you could configure `sideci.yml` like this:
 
-```yaml:sideci.yml
+```yaml
 linter:
   eslint:
     root_dir: 'frontend'
@@ -56,7 +56,7 @@ Sider will run ESLint analysis in `./frontend` directory.
 
 Some analyzers written in Ruby can be customized with third-party [gems](https://rubygems.org/). With Sider, you can use [Bundler](https://bundler.io/) to install any gem. The following is an example of installing RuboCop plugins or configuration gems:
 
-```yaml:sideci.yml
+```yaml
 linter:
   rubocop:
     gems:
@@ -66,7 +66,7 @@ linter:
 
 You can also set the version of the analyzer you want to use. However, the version must meet Sider's constraints. Please refer to each analyzer page.
 
-```yaml:sideci.yml
+```yaml
 linter:
   rubocop:
     gems:
@@ -88,7 +88,7 @@ However, if the version written in `Gemfile.lock` does not satisfy our constrain
 
 If you want to additionally install a specific gem written in `Gemfile.lock`, you can omit the `version` as follows:
 
-```yaml:sideci.yml
+```yaml
 linter:
   rubocop:
     gems:
@@ -101,7 +101,7 @@ If the gem is not found in `Gemfile.lock`, the latest version is installed.
 
 You can select an alternate RubyGems repository as a gem source via the source option:
 
-```yaml:sideci.yml
+```yaml
 linter:
   rubocop:
     gems:
@@ -114,7 +114,7 @@ linter:
 
 You can also install a gem in a git repository. Please note that the git option cannot be specified with version or source.
 
-```yaml:sideci.yml
+```yaml
 linter:
   rubocop:
     gems:
@@ -145,7 +145,7 @@ This option allows you to ignore specific files. It helps to improve the analysi
 
 In order to use this option, add it to `sideci.yml` like this:
 
-```yaml:sideci.yml
+```yaml
 linter:
   # Some linter settings...
 ignore:
@@ -161,7 +161,7 @@ When setting this option, Sider will not analyze the branch specified in this op
 
 In order to use this option, add it to `sideci.yml` like this:
 
-```yaml:sideci.yml
+```yaml
 linter:
   # Some linter settings...
 branches:
@@ -180,7 +180,7 @@ With the above setting, Sider will ignore `master`, `development` and `another_b
 
 You can also use regular expressions as the `exclude` pattern:
 
-```yaml:sideci.yml
+```yaml
 branches:
   exclude:
     - /^release-.*$/

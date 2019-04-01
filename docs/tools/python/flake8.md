@@ -35,7 +35,7 @@ Our default configuration is available here:
 
 Here are example settings for Flake8 under `flake8`:
 
-```yaml:sideci.yml
+```yaml
 linter:
   flake8:
     version: 2

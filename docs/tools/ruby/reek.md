@@ -15,7 +15,7 @@ hide_title: true
 
 Here are some example settings for Reek in `sideci.yml`, under `reek`:
 
-```yaml:sideci.yml
+```yaml
 linter:
   reek:
     gems:

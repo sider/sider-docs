@@ -31,7 +31,7 @@ If you don't have any custom configuration defined, Sider uses the latest versio
 
 Here are example settings for stylelint under `stylelint`:
 
-```yaml:sideci.yml
+```yaml
 linter:
   stylelint:
     npm_install: true

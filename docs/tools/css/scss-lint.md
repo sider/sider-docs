@@ -19,7 +19,7 @@ To start using SCSS-Lint, enable it in [Repository Settings](../../getting-start
 
 Here are example settings for SCSS-Lint:
 
-```yaml:sideci.yml
+```yaml
 linter:
   scss_lint:
     config: lint_yml/.scss-lint.yml

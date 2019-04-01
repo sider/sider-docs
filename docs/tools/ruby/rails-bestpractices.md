@@ -15,7 +15,7 @@ hide_title: true
 
 Here are some example settings for Rails Best Practices in `sideci.yml`, under `rails_best_practices`:
 
-```yaml:sideci.yml
+```yaml
 linter:
   rails_best_practices:
     gems:
@@ -53,7 +53,7 @@ Rails Best Practices supports some template engines. Sider finds the following g
 
 These gems will not be installed when the `gems` option is specified. We encourage you to explicitly specify gems in the [`gems` option](../../getting-started/custom-configuration.md#gems-option) in `sideci.yml` as follows:
 
-```yaml:sideci.yml
+```yaml
 linter:
   rails_best_practices:
     gems:

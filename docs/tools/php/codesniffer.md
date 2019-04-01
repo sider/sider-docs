@@ -15,7 +15,7 @@ hide_title: true
 
 To start using PHP\_CodeSniffer, enable it in [Repository Settings](../../getting-started/repository-settings.md). To configure the coding standard you want to follow, add `sideci.yml` in your repository and set the `standard` option:
 
-```yaml:sideci.yml
+```yaml
 linter:
   code_sniffer:
     dir: app/
@@ -42,7 +42,7 @@ Autodetection is based on file names and directory structure. If autodetection f
 
 Example setting for PHP\_CodeSniffer under `code_sniffer`:
 
-```yaml:sideci.yml
+```yaml
 linter:
   code_sniffer:
     dir: app/
