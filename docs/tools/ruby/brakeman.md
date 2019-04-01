@@ -27,5 +27,5 @@ linter:
 
 | Name | Type | Description |
 | ---- | ---- | ----------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#root-dir-option) | `string` | Directory which runs the analyzer. |
+| [`root_dir`](../../getting-started/custom-configuration.md#root-dir-option) | `string` | Directory in which the analyzer runs. |
 | [`gems`](../../getting-started/custom-configuration.md#gems-option) | `array<string, object>` | Definition of gems to be installed. |
