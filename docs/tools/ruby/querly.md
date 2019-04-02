@@ -31,7 +31,7 @@ Visit the Querly project page for more information about writing rules:
 
 Here are some example settings for Querly in `sideci.yml`, under `querly`:
 
-```yaml:sideci.yml
+```yaml
 linter:
   querly:
     gems:

@@ -19,7 +19,7 @@ To start using CoffeeLint, enable it in [Repository Settings](../../getting-star
 
 Here are example settings for CoffeeLint:
 
-```yaml:sideci.yml
+```yaml
 linter:
   coffeelint:
     npm_install: true

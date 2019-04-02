@@ -21,7 +21,7 @@ You can use `sideci.yml` to configure PHPMD.
 
 If you have your own `ruleset.xml` for your project, you can add it under the `rule` option in `sideci.yml`.
 
-```yaml:sideci.yml
+```yaml
 linter:
   phpmd:
     rule: ruleset.xml
@@ -35,7 +35,7 @@ To mitigate this, Sider deletes files that are not changed in the pull request. 
 
 If it still times out, you can limit the target of PHPMD analysis by using the `target` option:
 
-```yaml:sideci.yml
+```yaml
 linter:
   phpmd:
     target:
@@ -53,7 +53,7 @@ If you leave the `rule` option undefined in `sideci.yml`, Sider runs PHPMD with 
 
 Here is are some example settings for PHPMD in `sideci.yml`:
 
-```yaml:sideci.yml
+```yaml
 linter:
   phpmd:
     target:
@@ -98,7 +98,7 @@ The valid rule names are:
 
 You can also specify a rule set file name:
 
-```yaml:sideci.yml
+```yaml
 linter:
   phpmd:
     rule: ruleset.xml

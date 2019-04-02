@@ -26,7 +26,7 @@ To start using Phinder, enable it in [Repository Settings](../../getting-started
 
 Here's a sample Phinder configuration in `sideci.yml`:
 
-```yaml:sideci.yml
+```yaml
 linter:
   phinder:
     rule: myphinder.yml
@@ -45,7 +45,7 @@ linter:
 This option allows you to specify file or directory name where your Phinder ruleset is located.
 If you set file name, Phinder will use the file for analysis instead of `phinder.yml`. If this is a directory name, Phinder will analyze your project with all `yml` files under the directory.
 
-```yaml:sideci.yml
+```yaml
 linter:
   phinder:
     rule: rules # Phinder will use './rules/*.yml' when analyzing.
@@ -55,7 +55,7 @@ linter:
 
 This option allows you to specify the path of your project to analyze. If this is a file name, Phinder will analyze merely the file. If it's a directory, Phinder will analyze all `.php` files under the directory.
 
-```yaml:sideci.yml
+```yaml
 linter:
   phinder:
     php: src # Phinder will analyze '.php' files in '/src' directory.

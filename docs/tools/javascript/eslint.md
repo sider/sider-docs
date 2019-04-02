@@ -21,7 +21,7 @@ $ npm install eslint -D
 
 Add `sideci.yml` to your repository:
 
-```yaml:sideci.yml
+```yaml
 linter:
   eslint:
     npm_install: true
@@ -39,7 +39,7 @@ Sider provides a recommended configuration for ESLint. The configuration is used
 
 Put settings for ESLint under `eslint`:
 
-```yaml:sideci.yml
+```yaml
 linter:
   eslint:
     npm_install: true
@@ -89,7 +89,7 @@ If your `package.json` contains a dependency which cannot be installed in the Si
 
 This option controls name of directory to pass to `eslint`. The default value is `.`. Declare directory to analyze like this:
 
-```yaml:sideci.yml
+```yaml
 linter:
   eslint:
     dir: frontend/src
@@ -97,7 +97,7 @@ linter:
 
 If you would like to analyze multiple directories with Sider, you can set them like this:
 
-```yaml:sideci.yml
+```yaml
 linter:
   eslint:
     dir:
@@ -110,7 +110,7 @@ linter:
 
 This option allows you specify an additional configuration file. ESLint uses your `.eslintrc{.yaml,.yml,.json}` in the root directory of your project by default, so you don't need to use this option if you have used one of the default filenames. If your ESLint config file has a different name, or is not in the root directory, you should use this option:
 
-```yaml:sideci.yml
+```yaml
 linter:
   eslint:
     options:

@@ -21,7 +21,7 @@ To customize SwiftLint, put a `.swiftlint.yml` file in your repository.
 
 Here are example settings for SwiftLint under `swiftlint`:
 
-```yaml:sideci.yml
+```yaml
 linter:
   swiftlint:
     ignore_warnings: true

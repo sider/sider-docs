@@ -25,7 +25,7 @@ Sider uses its default configuration where there is no custom configuration pres
 
 ## Configuration via `sideci.yml`
 
-```yaml:sideci.yml
+```yaml
 linter:
   jshint:
     dir: src

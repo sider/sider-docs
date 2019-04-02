@@ -25,7 +25,7 @@ If you need customization, use the standard TSLint config file. Create a `tslint
 
 Here is an example setting for TSLint under `tslint`:
 
-```yaml:sideci.yml
+```yaml
 linter:
   tslint:
     npm_install: true
@@ -76,7 +76,7 @@ This option controls which files TSLint excludes from linting. The default value
 
 If you want to exclude multiple files/directories, declare them as a sequence:
 
-```yaml:sideci.yml
+```yaml
 linter:
   tslint:
     exclude:
@@ -95,7 +95,7 @@ This option controls customized rules that TSLint inspects.
 
 If you want to set multiple custom rules, declare them as follow:
 
-```yaml:sideci.yml
+```yaml
 linter:
   tslint:
     rules-dir:

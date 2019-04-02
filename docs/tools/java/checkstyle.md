@@ -19,7 +19,7 @@ To start using Checkstyle, enable it in [Repository Settings](../../getting-star
 
 You can customize Checkstyle analysis using `sideci.yml`.
 
-```yaml:sideci.yml
+```yaml
 linter:
   checkstyle:
     config: google

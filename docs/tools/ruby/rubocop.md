@@ -15,7 +15,7 @@ hide_title: true
 
 Example settings for RuboCop under `rubocop`:
 
-```yaml:sideci.yml
+```yaml
 linter:
   rubocop:
     gems:
@@ -41,7 +41,7 @@ This option controls whether to run Rails Cops. If it is omitted, Sider automati
 
 This option is used for the case that you do not wish Sider to run Rails Cops even though your project is a Ruby on Rails project.
 
-```yaml:sideci.yml
+```yaml
 linter:
   rubocop:
     rails: false

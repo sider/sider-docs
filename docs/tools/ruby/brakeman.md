@@ -15,7 +15,7 @@ hide_title: true
 
 Here are some example settings for Brakeman in `sideci.yml`, under `brakeman`:
 
-```yaml:sideci.yml
+```yaml
 linter:
   querly:
     gems:
