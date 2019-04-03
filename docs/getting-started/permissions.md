@@ -53,9 +53,9 @@ For the organization settings, Sider checks for permissions in an organization. 
 | See repository settings | | X | X |
 | Enable inline comments | | X | X |
 | Sync repositories with GitHub | | X | X |
-| Generate an SSH private key | | X | X |
-| Download an SSH public key | | X | X |
-| Delete an SSH private key | | X | X |
+| Generate an SSH private key | | | X |
+| Download an SSH public key | | | X |
+| Delete an SSH private key | | | X |
 | Add Slack integration | | X | X |
 | Edit Slack integration | | X | X |
 | Delete Slack integration | | X | X |
