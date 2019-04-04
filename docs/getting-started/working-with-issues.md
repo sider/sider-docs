@@ -7,7 +7,7 @@ hide_title: true
 
 # Working with Issues
 
-Although Sider needs all issues to be dealt with before allowing commit status on GitHub, this doesn't mean that all issues need to be fixed. A combination of fixing or closing all issues will also allow commit status on GitHub. 
+Although Sider needs all issues to be dealt with before passing status checks on GitHub, this doesn't mean that all issues need to be fixed. A combination of fixing or closing all issues will also pass status checks on GitHub. 
 All this can be done from the pull request's analysis results page in Sider. This page offers several ways to review issues, including fixing issues, closing issues and commenting on GitHub.
 
 ## Fixing Issues
