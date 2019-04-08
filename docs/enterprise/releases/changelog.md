@@ -11,9 +11,34 @@ hide_title: true
 
 | Application Name | Tag              |
 | ---------------- | ---------------- |
-| sideci           | release-201903.1 |
-| catpost          | release-201903.1 |
-| setaria          | release-201903.1 |
+| sideci           | release-201904.0 |
+| catpost          | release-201904.0 |
+| setaria          | release-201904.0 |
+
+## release-201904
+
+### Notes
+
+From this release, SSH key generation on the repository page settings is limited to only admin users.
+
+### Features
+
+* [Analysis Tools Updates](https://blog.sideci.com/analysis-tools-updates-in-march-2019-9e5da6f594b9)
+* Users can choose the versions of Ruby related tools with `Gemfile.lock` or `sideci.yml`
+    - See [here](../../getting-started/custom-configuration.md#gems-option) for more details
+* Support JSON, HCL and TOML languages in code highlighting on the pull request page
+* Redesign the pull request page to separate into **Issues** and **Tools** tabs
+* Support Sider Enterprise without Pusher configuration
+* Support Markdown format in issue messages on the pull request page
+    - You can now write the messages of your custom rules with Markdown format
+
+### Fixes
+
+* Bug fixes & UI design improvements
+
+### Update Procedure
+
+See [Update Guide](../../enterprise/updating.md).
 
 ## release-201903
 
