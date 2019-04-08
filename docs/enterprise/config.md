@@ -254,26 +254,32 @@ Client secret of the GitHub App.
 Webhook secret of the GitHub App.
 
 
-## Integration Configuration
+## Live Update Configuration
 
-Sider uses Pusher to implement a push notification to web browser.
-Put the PUSHER_* values obtained from Pusher web page.
+Sider web app can detect events that happened in the server and updates its content automatically.
+Users don't have to reload their browser to update their pages.
+Sider uses two mechanisms to implement this: Pusher and polling.
 
-You can optionally setup Loggly and Bugsnag integration.
+To configure Pusher, sign up to Pusher and set up the `PUSHER_*` variables.
 
-### `PUSHER_API_ID`
+If you leave the `PUSHER_*` variables empty, Pusher will be disabled, and Sider will work only with polling.
+You can configure the polling interval with `FRONTEND_POLLING_INTERVAL`: fine tune the value for both UI responsiveness and the server load.
 
-Pusher API configuration.
+- https://pusher.com
 
-### `PUSHER_API_KEY`
-
-Pusher API configuration.
-
-### `PUSHER_API_SECRET`
+### `PUSHER_API_ID` (Optional)
 
 Pusher API configuration.
 
-### `PUSHER_CLUSTER`
+### `PUSHER_API_KEY` (Optional)
+
+Pusher API configuration.
+
+### `PUSHER_API_SECRET` (Optional)
+
+Pusher API configuration.
+
+### `PUSHER_CLUSTER` (Optional)
 
 Pusher API configuration.
 
@@ -285,7 +291,11 @@ Pusher API configuration.
 
 Polling interval in seconds.
 The default value is 30, which means each browser calls Ajax requests every 30 seconds.
-Note this parameter affects Sider only if any of Pusher parameters are not configured.
+
+
+## Integration Configuration
+
+You can optionally setup Loggly and Bugsnag integration.
 
 ### `LOGGLY_URL` (Optional)
 
