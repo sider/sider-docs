@@ -17,14 +17,14 @@ You can see the detail of the configuration at Sider GitHub page and Ruby net/ht
 Sider sends emails for operation and error reporting.
 While you can skip email configuration, we strongly recommend to set up email for production environment.
 
-### `ACTION_MAILER_SMTP_ADDRESS` 
+### `ACTION_MAILER_SMTP_ADDRESS`
 
 SMTP server address.
 
 #### Example
     ACTION_MAILER_SMTP_ADDRESS=smtp.example.com
 
-### `ACTION_MAILER_DEFAULT_FROM_EMAIL` 
+### `ACTION_MAILER_DEFAULT_FROM_EMAIL`
 
 From address of emails sent from Sider.
 
@@ -63,30 +63,30 @@ Domain name for HELO command.
 
 ## General Configuration
 
-### `BASE_URL` 
+### `BASE_URL`
 
 URL to allow end users to access Sider.
 
 #### Example
     BASE_URL=https://sider.example.com
 
-### `EXCEPTION_NOTIFIER_RECIPIENT_EMAILS` 
+### `EXCEPTION_NOTIFIER_RECIPIENT_EMAILS`
 
 Comma-separated list of recipients for error reporting emails.
 
 #### Example
     EXCEPTION_NOTIFIER_RECIPIENT_EMAILS=foo@example.com,bar@example.com
 
-### `GITHUB_OAUTH_HEAD_ENCRYPTION_KEY` 
+### `GITHUB_OAUTH_HEAD_ENCRYPTION_KEY`
 
 Random string to encrypt GitHub credential.
 Note that changing this value will make all organizations invalid.
 
-### `SECRET_KEY_BASE` 
+### `SECRET_KEY_BASE`
 
 Secret for encryption required by Rails.
 
-### `RAILS_ENV` 
+### `RAILS_ENV`
 
 The *environment* for Rails framework.
 You cannot change the value from `onprem`.
@@ -136,7 +136,7 @@ Read the database configuration guide for the details.
 
 * https://help.sider.review/onprem/database
 
-### `DATABASE_URL` 
+### `DATABASE_URL`
 
 URL to connect database.
 
@@ -155,7 +155,7 @@ Read the IANA documentation for the details.
 
 * http://www.iana.org/assignments/uri-schemes/prov/redis
 
-### `REDIS_URL` 
+### `REDIS_URL`
 
 URL to connect Redis.
 
@@ -165,28 +165,28 @@ URL to connect Redis.
 
 ## Catpost Configuration
 
-### `CATPOST_BASE_URL` 
+### `CATPOST_BASE_URL`
 
 URL which points to catpost endpoint.
 
 #### Example
     CATPOST_BASE_URL=https://catpost.example.com:3000
 
-### `CATPOST_SECRET` 
+### `CATPOST_SECRET`
 
 Random string used to authorize requests to catpost.
 
 
 ## Setaria Configuration
 
-### `SETARIA_BASE_URL` 
+### `SETARIA_BASE_URL`
 
 URL which points to setaria endpoint.
 
 #### Example
     SETARIA_BASE_URL=https://setaria.example.com:3000
 
-### `SETARIA_SECRET` 
+### `SETARIA_SECRET`
 
 Random string used to authorize requests to setaria.
 
@@ -198,7 +198,7 @@ Configure access to your GitHub Enterprise.
 Sider requires two GitHub integration; OAuth App and GitHub App.
 Visit the GitHub Enterprise, register two applications, and fill the credentials.
 
-### `GITHUB_ENDPOINT` 
+### `GITHUB_ENDPOINT`
 
 URL which points to GitHub Enterprise web page.
 Example: https://github.example.com
@@ -206,7 +206,7 @@ Example: https://github.example.com
 #### Example
     GITHUB_ENDPOINT=https://github.example.com
 
-### `GITHUB_API_ENDPOINT` 
+### `GITHUB_API_ENDPOINT`
 
 URL which points to GitHub Enterprise API endpoint.
 Example: https://github.example.com/api/v3/
@@ -214,19 +214,19 @@ Example: https://github.example.com/api/v3/
 #### Example
     GITHUB_API_ENDPOINT=https://github.example.com/api/v3
 
-### `GITHUB_CLIENT_ID` 
+### `GITHUB_CLIENT_ID`
 
 Client ID of the OAuth App.
 
-### `GITHUB_CLIENT_SECRET` 
+### `GITHUB_CLIENT_SECRET`
 
 Client secret of the OAuth App.
 
-### `GITHUB_APP_ID` 
+### `GITHUB_APP_ID`
 
 Application ID of the GitHub App.
 
-### `GITHUB_APP_NAME` 
+### `GITHUB_APP_NAME`
 
 Application name of the GitHub App.
 You can find the name in the `Public link` of the GitHub App.
@@ -235,21 +235,21 @@ When the `Public link` is `https://github.example.com/apps/sider-enterprise`, th
 #### Example
     GITHUB_APP_NAME=sider-enterprise
 
-### `GITHUB_APP_PRIVATE_KEY` 
+### `GITHUB_APP_PRIVATE_KEY`
 
 Base64 encoded private key of the GitHub App.
 Generate and download the key from GitHub Enterprise and use `base64` command like:
   $ base64 downloaded-private-key.pem
 
-### `GITHUB_APP_OAUTH2_CLIENT_ID` 
+### `GITHUB_APP_OAUTH2_CLIENT_ID`
 
 Client ID of the GitHub App.
 
-### `GITHUB_APP_OAUTH2_CLIENT_SECRET` 
+### `GITHUB_APP_OAUTH2_CLIENT_SECRET`
 
 Client secret of the GitHub App.
 
-### `GITHUB_APP_WEBHOOK_SECRET` 
+### `GITHUB_APP_WEBHOOK_SECRET`
 
 Webhook secret of the GitHub App.
 
@@ -261,21 +261,31 @@ Put the PUSHER_* values obtained from Pusher web page.
 
 You can optionally setup Loggly and Bugsnag integration.
 
-### `PUSHER_API_ID` 
+### `PUSHER_API_ID`
 
 Pusher API configuration.
 
-### `PUSHER_API_KEY` 
+### `PUSHER_API_KEY`
 
 Pusher API configuration.
 
-### `PUSHER_API_SECRET` 
+### `PUSHER_API_SECRET`
 
 Pusher API configuration.
 
-### `PUSHER_CLUSTER` 
+### `PUSHER_CLUSTER`
 
 Pusher API configuration.
+
+### `FRONTEND_POLLING_INTERVAL` (Optional)
+
+|Introduced|Deprecated|
+|----------|----------|
+|201904|-|
+
+Polling interval in seconds.
+The default value is 10, which means each browser calls Ajax requests every 10 seconds.
+Note this parameter affects Sider only if any of Pusher parameters are not configured.
 
 ### `LOGGLY_URL` (Optional)
 
@@ -307,29 +317,29 @@ Bugsnag On-Premises session endpoint.
 
 ## General Configuration
 
-### `SECRET_KEY_BASE` 
+### `SECRET_KEY_BASE`
 
 Secret for encryption required by Rails.
 
-### `API_TOKEN` 
+### `API_TOKEN`
 
 Random string to authenticate API access.
 
-### `GIT_REPOS_DIR` 
+### `GIT_REPOS_DIR`
 
 Path to put git repository cache.
 
 #### Example
     GIT_REPOS_DIR=/repos
 
-### `EXCEPTION_NOTIFIER_RECIPIENT_EMAILS` 
+### `EXCEPTION_NOTIFIER_RECIPIENT_EMAILS`
 
 Comma-separated list of recipients for error reporting emails.
 
 #### Example
     EXCEPTION_NOTIFIER_RECIPIENT_EMAILS=foo@example.com,bar@example.com
 
-### `RAILS_ENV` 
+### `RAILS_ENV`
 
 The *environment* for Rails framework.
 You cannot change the value from `onprem`.
@@ -337,7 +347,7 @@ You cannot change the value from `onprem`.
 #### Example
     RAILS_ENV=onprem
 
-### `TERM_CHILD` 
+### `TERM_CHILD`
 
 An option for Resque.
 You cannot change the value.
@@ -345,7 +355,7 @@ You cannot change the value.
 #### Example
     TERM_CHILD=1
 
-### `QUEUE` 
+### `QUEUE`
 
 An option for Resque.
 You cannot change the value.
@@ -367,7 +377,7 @@ Read the database configuration guide for the details.
 
 * https://help.sider.review/onprem/database
 
-### `DATABASE_URL` 
+### `DATABASE_URL`
 
 URL to connect database.
 
@@ -386,7 +396,7 @@ Read the IANA documentation for the details.
 
 * http://www.iana.org/assignments/uri-schemes/prov/redis
 
-### `REDIS_URL` 
+### `REDIS_URL`
 
 URL to connect Redis.
 
@@ -396,16 +406,16 @@ URL to connect Redis.
 
 ## Encryption Configuration
 
-### `URL_ENCRYPTION_KEY` 
+### `URL_ENCRYPTION_KEY`
 
 32 bytes of random string to encrypt URL pointing to repositories.
 You cannot change this value once you set up.
 
-### `ARCHIVE_ENCRYPTION_KEY` 
+### `ARCHIVE_ENCRYPTION_KEY`
 
 Random string to make archive encrypted.
 
-### `ARCHIVE_NAME_SECRET` 
+### `ARCHIVE_NAME_SECRET`
 
 Random string to make archive name more unpredictable.
 
@@ -418,7 +428,7 @@ Setup the following variables for Minio.
 If you want to use AWS S3, comment out S3_ENDPOINT configuration.
 You may also comment out AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY when you use IAM role for authorization.
 
-### `S3_ENDPOINT` 
+### `S3_ENDPOINT`
 
 Minio endpoint, something like `http://object_storage:9000`.
 Remove the configuration if you use AWS S3.
@@ -426,7 +436,7 @@ Remove the configuration if you use AWS S3.
 #### Example
     S3_ENDPOINT=http://minio:9000
 
-### `S3_BUCKET_NAME` 
+### `S3_BUCKET_NAME`
 
 Object storage bucket name.
 Sider automatically creates the bucket if it doesn't exist on Minio.
@@ -435,7 +445,7 @@ Specify the name of an existing bucket if you use AWS S3.
 #### Example
     S3_BUCKET_NAME=sider-example
 
-### `S3_REGION_NAME` 
+### `S3_REGION_NAME`
 
 Object storage region name.
 If you are using Minio, you can use any region name.
@@ -444,12 +454,12 @@ Specify correct region name if you use AWS S3.
 #### Example
     S3_REGION_NAME=us-east-1
 
-### `AWS_ACCESS_KEY_ID` 
+### `AWS_ACCESS_KEY_ID`
 
 Authorization for object storage.
 If you use AWS S3, you can authorize using IAM role and remove this configuration.
 
-### `AWS_SECRET_ACCESS_KEY` 
+### `AWS_SECRET_ACCESS_KEY`
 
 Authorization for object storage.
 If you use AWS S3, you can authorize using IAM role and remove this configuration.
@@ -489,24 +499,24 @@ Bugsnag On-Premises session endpoint.
 
 ## General Configuration
 
-### `SECRET_KEY_BASE` 
+### `SECRET_KEY_BASE`
 
 Secret for encryption required by Rails.
 
-### `API_SECRET` 
+### `API_SECRET`
 
 Random string to authenticate API access from sideci.
 
-### `SSH_KEY_ENCRYPTION_KEY` 
+### `SSH_KEY_ENCRYPTION_KEY`
 
 32 bytes of random string to encrypt SSH secret key associated to repositories.
 You cannot change this value once you set up.
 
-### `EXCEPTION_NOTIFIER_RECIPIENT_EMAILS` 
+### `EXCEPTION_NOTIFIER_RECIPIENT_EMAILS`
 
 Comma-separated list of recipients for error reporting emails.
 
-### `RAILS_ENV` 
+### `RAILS_ENV`
 
 The *environment* for Rails framework.
 You cannot change the value from `onprem`.
@@ -514,7 +524,7 @@ You cannot change the value from `onprem`.
 #### Example
     RAILS_ENV=onprem
 
-### `TERM_CHILD` 
+### `TERM_CHILD`
 
 An option for Resque.
 You cannot change the value.
@@ -522,7 +532,7 @@ You cannot change the value.
 #### Example
     TERM_CHILD=1
 
-### `QUEUE` 
+### `QUEUE`
 
 An option for Resque.
 You cannot change the value.
@@ -555,7 +565,7 @@ Read the database configuration guide for the details.
 
 * https://help.sider.review/onprem/database
 
-### `DATABASE_URL` 
+### `DATABASE_URL`
 
 URL to connect database.
 
@@ -574,7 +584,7 @@ Read the IANA documentation for the details.
 
 * http://www.iana.org/assignments/uri-schemes/prov/redis
 
-### `REDIS_URL` 
+### `REDIS_URL`
 
 URL to connect Redis.
 
@@ -587,14 +597,14 @@ URL to connect Redis.
 setaria needs to authenticate to Quay docker image repository.
 Sider provides the login name and password to access Quay repositories.
 
-### `QUAY_ROBOT_NAME` 
+### `QUAY_ROBOT_NAME`
 
 Quay account name.
 
 #### Example
     QUAY_ROBOT_NAME=actcat+example
 
-### `QUAY_ROBOT_PASSWORD` 
+### `QUAY_ROBOT_PASSWORD`
 
 Quay account password.
 
