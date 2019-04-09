@@ -25,6 +25,21 @@ When you click the “Generate Key” button, Sider generates a 4096 bit RSA key
 
 After generating, you can download the SSH public key used in analysis sessions from this page. The key is able to be added as [Deploy Keys](https://developer.github.com/v3/guides/managing-deploy-keys/#deploy-keys) in GitHub.
 
+> The SSH public key is supposed to be configured in another repository.
+>
+> For example, think about the case your repository A depends on another private repository B,
+> which is hosted on GitHub.
+> You should configure following the steps:
+>
+> 1. Access the repository settings page of A on Sider
+> 2. Click "Generate Key"
+> 3. Click "Download Public Key"
+> 4. Access the repository settings page of B on GitHub
+> 5. Click "Deploy keys"
+> 6. Click "Add deploy key"
+> 7. Copy the downloaded public key and paste it in "Key" input form
+> 8. Click "Add key"
+
 ## Using SSH
 
 Currently, only a few analysis tools use an SSH configuration.
