@@ -124,7 +124,7 @@ This section has documents about analysis tools which Sider supports. We have an
 
 This section has information, examples, and tips about custom rules. Learn how to create them for your projects.
 
-* [Intro to Custom Rules](/custom-rules/introduction-to-custom-rules)
+* [Intro to Custom Rules](./custom-rules/introduction-to-custom-rules.md)
 * [Goodcheck](./custom-rules/goodcheck.md)
 
 ## Advanced Settings
@@ -154,16 +154,16 @@ Sider supports GitHub Enterprise with Sider Enterprise.
 Read the following enterprise documents for Sider Enterprise setup.
 
 * [Sider Enterprise Outline](./enterprise/outline.md)
-* [Quickstart](./enterprise/quickstart)
-* [Computer Resources](./enterprise/resources)
-* [GitHub Setup](./enterprise/github)
-* [Database Guide](./enterprise/database)
-* [Object Storage Guide](./enterprise/storage)
-* [Containers Guide](./enterprise/containers)
-* [Updating Guide](./enterprise/updating)
-* [Administration Guide](./enterprise/administration)
-* [Scaling Guide](./enterprise/scaling)
-* [Configuration Index](./enterprise/config)
-* [Health Check Guide](./enterprise/healthcheck)
-* [Testing for Sider running](./enterprise/testing/guide)
+* [Quickstart](./enterprise/quickstart.md)
+* [Computer Resources](./enterprise/resources.md)
+* [GitHub Setup](./enterprise/github.md)
+* [Database Guide](./enterprise/database.md)
+* [Object Storage Guide](./enterprise/storage.md)
+* [Containers Guide](./enterprise/containers.md)
+* [Updating Guide](./enterprise/updating.md)
+* [Administration Guide](./enterprise/administration.md)
+* [Scaling Guide](./enterprise/scaling.md)
+* [Configuration Index](./enterprise/config.md)
+* [Health Check Guide](./enterprise/healthcheck.md)
+* [Testing for Sider running](./enterprise/testing/guide.md)
 * [Release Notes](./enterprise/releases/changelog.md)
