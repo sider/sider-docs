@@ -8,22 +8,22 @@ hide_title: true
 
 ## About the documentation
 
-This is guides for Sider, analyzers and customization.
-We have prepared contents to use Sider comfortably.
+This documentation is a collection of guides for Sider, analyzers and customization features.
+We have prepared the content to improve your experience with Sider. If you have any problems or comments about Sider, please let us know.
 
 ## Gettings Started
 
-This section has listed documents about how to use Sider.
+This section has documents about how to use Sider.
 
 * [Setting up Sider](./getting-started/setup.md)
 * [Repository Settings](./getting-started/repository-settings.md)
-* [Custom Configuration](./getting-started/custom-configuration.md)
+* [Custom Analysis Configuration](./getting-started/custom-configuration.md)
 * [Working with Issues](./getting-started/working-with-issues.md)
 * [Permission](./getting-started/permissions.md)
 
 ## Analysis Tools
 
-This section has listed documents about analysis tools which Sider supports. We have analysis options to fit your project. Sider supports 20+ tools for 8 languages.
+This section has documents about analysis tools which Sider supports. We have analysis options to fit your project. Sider supports 20+ tools for 8 languages.
 
 ### Ruby
 
@@ -84,7 +84,9 @@ This section has listed documents about analysis tools which Sider supports. We 
 
 <details open>
   <summary>1 tool is available.</summary>
+
   * [SwiftLint](./tools/swift/swiftlint.md)
+
 </details>
 
 ### CSS
@@ -118,23 +120,50 @@ This section has listed documents about analysis tools which Sider supports. We 
 
 </details>
 
+## Custom Rules
+
+This section has information, examples, and tips about custom rules. Learn how to create them for your projects.
+
+* [Intro to Custom Rules](./custom-rules/introduction-to-custom-rules.md)
+* [Goodcheck](./custom-rules/goodcheck.md)
+
 ## Advanced Settings
+
+This section covers advanced features outside of the basic setup of Sider.
 
 * [Inline Comments](./advanced-settings/inline-comments.md)
 * [Private Dependencies](./advanced-settings/private-dependencies.md)
+* [Restricting access to Close button](./advanced-settings/restricting-access-to-close-button.md)
+* [Transferring a repository](./advanced-settings/transferring-a-repository.md)
 
 ## Billing and Plans
+
+This section covers questions about billing, invoices, and plans. 
 
 * [Billing and Plans](./billing-and-plans.md)
 
 ## Troubleshooting
 
+This section answers common questions about how to use Sider.
+
 * [Troubleshooting](./troubleshooting.md)
 
 ## Sider Enterprise
 
-Sider supports GitHub Enterprise by Sider Enterprise.
+Sider supports GitHub Enterprise with Sider Enterprise.
 Read the following enterprise documents for Sider Enterprise setup.
 
 * [Sider Enterprise Outline](./enterprise/outline.md)
+* [Quickstart](./enterprise/quickstart.md)
+* [Computer Resources](./enterprise/resources.md)
+* [GitHub Setup](./enterprise/github.md)
+* [Database Guide](./enterprise/database.md)
+* [Object Storage Guide](./enterprise/storage.md)
+* [Containers Guide](./enterprise/containers.md)
+* [Updating Guide](./enterprise/updating.md)
+* [Administration Guide](./enterprise/administration.md)
+* [Scaling Guide](./enterprise/scaling.md)
+* [Configuration Index](./enterprise/config.md)
+* [Health Check Guide](./enterprise/healthcheck.md)
+* [Testing for Sider running](./enterprise/testing/guide.md)
 * [Release Notes](./enterprise/releases/changelog.md)
