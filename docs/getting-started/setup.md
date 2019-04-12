@@ -19,7 +19,7 @@ Once you've authorized GitHub access, click "Add Organization", then you will be
 
 ![Install Sider](../assets/install-github-apps.png)
 
-NOTE: 14-day free trial starts when the app is installed.
+**NOTE**: **14-day** free trial starts when the app is installed.
 
 ## Select a Repository
 
