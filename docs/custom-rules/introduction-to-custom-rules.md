@@ -72,7 +72,7 @@ rules:
     justification:
       - When you need an authentication for API calls
     examples:
-      - before: user.oauth_token[0...8]+"..."
+      - before: "user.oauth_token[0...8] + '...'"
         after: "user.oauth_token(filtered: true)"
 ```
 
