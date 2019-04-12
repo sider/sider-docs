@@ -46,6 +46,7 @@ This section has documents about analysis tools which Sider supports. We have an
 
   * [Checkstyle](./tools/java/checkstyle.md)
   * [PMD](./tools/java/pmd.md)
+
 </details>
 
 ### JavaScript and Flavors
