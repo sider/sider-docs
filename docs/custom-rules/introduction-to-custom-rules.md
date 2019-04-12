@@ -55,35 +55,35 @@ rules:
       - "Sign out"
 ```
 
-In this example, Goodcheck will analyze files with ‘.html’, ‘.erb’ and ‘.yml’ extensions for the pattern “Log in” or “Log out”. If the pattern is found, it would display the message “Please use “sign in”/”sign out..”
+In this example, Goodcheck will analyze files with `.html`, `.erb` and `.yml` extensions for the pattern “Log in” or “Log out”. If the pattern is found, it would display the message “Please use “sign in”/”sign out".”
 
 ### Querly
 
 Querly is a tool that understands Ruby syntax. It can take more complex patterns and find them in Ruby code.
 
-In this example, assume there is an oauth_token method in your codebase. It is a credential and should not be leaked to logs. A developer adds a new option filtered. When filtered is true, the method returns an obfuscated token instead of a raw token so that you can write the obfuscated token on logs. Note that the behavior of oauth_token cannot be changed because the method is already used in the codebase.
+In this example, assume there is an `oauth_token` method in your codebase. It is a credential and should not be leaked to logs. A developer adds a new option filtered. When filtered is true, the method returns an obfuscated token instead of a raw token so that you can write the obfuscated token on logs. Note that the behavior of `oauth_token` cannot be changed because the method is already used in the codebase.
 
 ```yaml
 rules:
   - id: sider.auth_token
     pattern: "_.oauth_token(!filtered: true)"
     message: |
-   OAuth tokens are credential! Make sure they are filtered in logs.
+      OAuth tokens are credential! Make sure they are filtered in logs.
     justification:
       - When you need an authentication for API calls
     examples:
-      - before: user.oauth_token[0...8]+"..."
+      - before: "user.oauth_token[0...8] + '...'"
         after: "user.oauth_token(filtered: true)"
 ```
 
-With this rule, Querly would analyze Ruby source code files for any Ruby expression that includes the `oauth_token` method and checks if there is `filtered: true` as an argument. If there isn’t, then a message will notify developers of the ‘filtered’ option. 
+With this rule, Querly would analyze Ruby source code files for any Ruby expression that includes the `oauth_token` method and checks if there is `filtered: true` as an argument. If there isn’t, then a message will notify developers of the `filtered` option. 
 
 
 ### Phinder
 
 Phinder is a tool that understands PHP syntax. It can take complex PHP patterns and match them with PHP code.
 
-Assume your service had an outage because of a PostCategory::import_records(associations) call. The method implements bulk insertion of given rows into a table. It is faster than inserting the rows one by one but may result in a deadlock, which is what caused the service outage. You can put links to the issue reports to help the developer to understand what they have to do to make the function call safe.
+Assume your service had an outage because of a `PostCategory::import_records(associations)` call. The method implements bulk insertion of given rows into a table. It is faster than inserting the rows one by one but may result in a deadlock, which is what caused the service outage. You can put links to the issue reports to help the developer to understand what they have to do to make the function call safe.
 
 ```yaml
 - id: com.example.app.article 
