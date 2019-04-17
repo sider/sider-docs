@@ -9,7 +9,7 @@ hide_title: true
 
 | Supported Version | Language | Web Site |
 | ----------------- | -------- | -------- |
-| 8.18 | Java 8 | [http://checkstyle.sourceforge.net/](http://checkstyle.sourceforge.net/) |
+| 8.19 | Java 8 | [http://checkstyle.sourceforge.net/](http://checkstyle.sourceforge.net/) |
 
 ## Getting Started
 

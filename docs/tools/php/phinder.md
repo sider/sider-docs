@@ -9,13 +9,13 @@ hide_title: true
 
 | Supported Version | Language | Web Site |
 | ----------------- | -------- | -------- |
-| 0.6.2 | PHP 7.3.0 | [https://github.com/sider/phinder](https://github.com/sider/phinder) |
+| 0.7.3 | PHP 7.3.0 | [https://github.com/sider/phinder](https://github.com/sider/phinder) |
 
 ## Getting Started
 
 To start using Phinder, enable it in [Repository Settings](../../getting-started/repository-settings.md) and put a `phinder.yml` config file in your repository. Visit the project page on GitHub to see a sample `phinder.yml`:
 
-* [Phinder sample](https://github.com/tomokinakamaru/phinder/tree/master/sample)
+* [Phinder sample](https://github.com/sider/phinder/tree/master/sample)
 
 <div style="position:relative;padding-top:56.25%;">
   <iframe src="https://www.youtube.com/embed/ErHtinxR3ns" frameborder="0" allowfullscreen
