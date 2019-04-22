@@ -45,3 +45,20 @@ linter:
     - "*.pdf"
     - "*.mp4"
 ```
+
+## Sider analysis never starts
+
+It might be because of the following situation:
+
+* The author of the pull request has not been assigned a seat to Sider.
+* Sider is configured as a "Required" status check on GitHub.
+
+![Never Start Analysis](./assets/never-start-analysis.png)
+
+In order to solve this problem, we recommend you to try the following:
+
+1. Assign a seat to the pull request's author.
+    * The author must sign up to Sider.
+2. Add a new commit to the pull request by either of the following ways.
+    * `git commit --amend` and force pushing it.
+    * Push another commit to the pull request.
