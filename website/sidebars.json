@@ -91,7 +91,8 @@
     ],
     "Custom Rules": [
       "custom-rules/introduction-to-custom-rules",
-      "custom-rules/goodcheck"
+      "custom-rules/goodcheck",
+      "custom-rules/tips"
     ],
     "Advanced Settings": [
       "advanced-settings/inline-comments",
