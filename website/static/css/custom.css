@@ -1,5 +1,83 @@
 /* your custom css */
 
+.video {
+	position: relative;
+	padding-top: 56.25%;
+}
+
+.video iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+ul.video-list {
+	list-style: none;
+	padding-left: 0;
+	position: relative
+}
+
+ul.video-list a {
+	position: relative;
+	padding: 2rem 2rem 2rem 2.5rem;
+	display: block;
+	box-sizing: border-box
+}
+
+ul.video-list a .info {
+	padding-top: 0.25rem;
+	min-height: 8rem
+}
+
+ul.video-list a .info>p,
+ul.video-list a .info>span {
+	color: #2E3B4D
+}
+
+ul.video-list a .info .title {
+	margin-top: 0;
+	margin-bottom: 0.5rem
+}
+
+ul.video-list a .info .description {
+	margin-bottom: 0;
+}
+
+ul.video-list a .info .duration,
+ul.video-list a .info .duration span {
+	color: #6e6e6e;
+}
+
+ul.video-list a:hover,
+ul.video-list a:focus {
+	text-decoration: none
+}
+
+ul.video-list a:hover {
+	background: #f2f2f2
+}
+
+ul.video-list a:hover::after {
+	content: '';
+	display: block;
+	width: 4rem;
+	height: 4rem;
+	position: absolute;
+	background: url("../assets/play-button.svg");
+	background-size: 4rem;
+	top: 4rem;
+	left: 7.5rem
+}
+
+ul.video-list .thumb {
+	max-height: 8rem;
+	padding-right: 2rem;
+	position: relative;
+	float: left
+}
+
 /* Styles for any pages */
 summary {
   cursor: pointer;

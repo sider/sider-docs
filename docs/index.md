@@ -15,6 +15,7 @@ We have prepared the content to improve your experience with Sider. If you have 
 
 This section has documents about how to use Sider.
 
+* [Introductory Videos](./getting-started/intro-videos.md)
 * [Setting up Sider](./getting-started/setup.md)
 * [Repository Settings](./getting-started/repository-settings.md)
 * [Custom Analysis Configuration](./getting-started/custom-configuration.md)

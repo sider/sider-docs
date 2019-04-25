@@ -63,3 +63,9 @@ Test Mode allows you to try Sider in your project, without getting in your teamm
 Click "Analyze open pull requests" to start analysis. Sider will analyze your 3 latest pull requests.
 
 You will be able to fine-tune your project's configuration at any time after the initial analysis.
+
+## Video Tutorial
+
+<div class="video">
+ <iframe src="https://www.youtube.com/embed/bCfgdf4cjcU" frameborder="0" allowfullscreen></iframe>
+</div>
