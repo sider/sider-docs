@@ -13,9 +13,8 @@ All this can be done from the pull request's analysis results page in Sider. Thi
 ## Fixing Issues
 When there is an issue that needs to be fixed, make the changes and commit them to your pull request. Sider will analyze the pull request again and update the status of the issue. 
 
-<div style="position:relative;padding-top:56.25%;">
- <iframe src="https://www.youtube.com/embed/PBZU2Fw2k8A" frameborder="0" allowfullscreen
-   style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+<div class="video">
+ <iframe src="https://www.youtube.com/embed/PBZU2Fw2k8A" frameborder="0" allowfullscreen></iframe>
 </div>
 
 ## Closing Issues
@@ -34,9 +33,8 @@ When there are no open issues left in the pull request, the commit status on Git
 ## Commenting on GitHub
 Reviewers can comment on issues directly onto the GitHub pull request page by clicking on the issue's `Comment on GitHub` button. You will need to give Sider authorization the first time you perform this action.
 
-<div style="position:relative;padding-top:56.25%;">
- <iframe src="https://www.youtube.com/embed/16MuYzj_Ml0" frameborder="0" allowfullscreen
-   style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+<div class="video">
+ <iframe src="https://www.youtube.com/embed/16MuYzj_Ml0" frameborder="0" allowfullscreen></iframe>
 </div>
 
 ## Requesting Feedback
