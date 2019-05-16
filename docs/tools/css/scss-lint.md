@@ -9,7 +9,7 @@ hide_title: true
 
 | Supported Version | Language | Web Site |
 | ----------------- | -------- | -------- |
-| 0.57.1 | Sass 3.6.0 / Ruby 2.5.1| [https://github.com/brigade/scss-lint](https://github.com/brigade/scss-lint) |
+| 0.57.1 | Sass 3.6.0 / Ruby 2.5.1| [https://github.com/sds/scss-lint](https://github.com/sds/scss-lint) |
 
 ## Getting Started
 
