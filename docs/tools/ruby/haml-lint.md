@@ -9,7 +9,7 @@ hide_title: true
 
 | Version Constraints | Language | Web Site |
 | ----------------- | -------- | -------- |
-| >= 0.26.0 (default to 0.28.0) | Ruby 2.5.1 | [https://github.com/brigade/haml-lint](https://github.com/brigade/haml-lint) |
+| >= 0.26.0 (default to 0.30.0) | Ruby 2.5.1 | [https://github.com/sds/haml-lint](https://github.com/sds/haml-lint) |
 
 ## Configuration via `sideci.yml`
 

@@ -9,7 +9,7 @@ hide_title: true
 
 | Supported Version | Language | Web Site |
 | ----------------- | -------- | -------- |
-| 0.31.0 | Swift 4.2.1 | [https://github.com/realm/SwiftLint](https://github.com/realm/SwiftLint) |
+| 0.32.0 | Swift 4.2.1 | [https://github.com/realm/SwiftLint](https://github.com/realm/SwiftLint) |
 
 ## Getting Started
 
