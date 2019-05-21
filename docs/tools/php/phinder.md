@@ -9,7 +9,7 @@ hide_title: true
 
 | Supported Version | Language | Web Site |
 | ----------------- | -------- | -------- |
-| 0.7.3 | PHP 7.3.0 | [https://github.com/sider/phinder](https://github.com/sider/phinder) |
+| 0.8.7 | PHP 7.3.0 | [https://github.com/sider/phinder](https://github.com/sider/phinder) |
 
 ## Getting Started
 
@@ -28,7 +28,7 @@ Here's a sample Phinder configuration in `sideci.yml`:
 ```yaml
 linter:
   phinder:
-    rule: myphinder.yml
+    rule: config/phinder.yml
     php: src
 ```
 
