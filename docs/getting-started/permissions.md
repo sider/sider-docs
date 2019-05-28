@@ -26,6 +26,8 @@ For the organization settings, Sider checks for permissions in an organization. 
 | Upgrade plan | | | X |
 | Cancel plan | | | X |
 | Assign seats | | | X |
+| Sync with GitHub | | | X |
+| Invite members | | | X |
 | Add Billing Manager | | | X |
 | Edit Billing Manager | | | X |
 | Delete Billing Manager | | | X |
