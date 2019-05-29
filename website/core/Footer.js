@@ -7,6 +7,11 @@
 
 const React = require('react');
 
+// TODO: It is the workaround because Docusaurus 1.x does not support to edit <head> tag.
+//       Thus, if we update Docusaurus 2.x, delete this script and we would like to use Google Tag Manager,
+//       which is required set script tags within <head> and <body> tag.
+const Inspectlet = require('./plugins/Inspectlet')
+
 class Footer extends React.Component {
   docUrl(doc, language) {
     const baseUrl = this.props.config.baseUrl;
@@ -26,6 +31,7 @@ class Footer extends React.Component {
   render() {
     return (
       <footer className="nav-footer" id="footer">
+        <Inspectlet />
         <section className="sitemap">
           <div>
             <a href={this.props.config.baseUrl} className="nav-home">
