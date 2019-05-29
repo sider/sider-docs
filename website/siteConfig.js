@@ -112,7 +112,7 @@ const siteConfig = {
   // wrapPagesHTML: true,
 
   editUrl: 'https://github.com/sider/sider-docs/edit/master/docs/',
-  
+
   gaTrackingId: 'UA-48995135-1',
 };
 
