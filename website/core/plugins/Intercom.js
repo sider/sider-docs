@@ -1,6 +1,6 @@
 const React = require('react');
 
-const appId = process.env.NODE_ENV === 'production' ? "rpwp2i8e" : "671su9bf";
+const appId = process.env.CONTEXT === 'production' ? "rpwp2i8e" : "671su9bf";
 
 class Intercom extends React.Component {
   intercomChat() {
