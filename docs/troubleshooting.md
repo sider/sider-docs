@@ -23,6 +23,18 @@ Visit [this page](https://github.com/apps/sider/installations/new) and select yo
 ## I cannot add my repository
 Users who can add their repository must have admin permission for the repository. This page helps you to configure your organization registration in Sider.
 
+## I would like to assign seats to my teammates, but could not find them.
+Check whether GitHub users you would like to assign seats for already have accounts for Sider. If they have already signed up, synchronizing with GitHub will make them appear in organization settings page. You can synchronize with GitHub by trying either of following:
+
+* From the Organization settings page, click the **Refresh from GitHub** button under the **Users** tab.
+* Click the **Begin sync** button in the Repository settings page.
+
+#### Refresh button in Organization settings page
+![Refresh button](./assets/refresh-from-github-button.png)
+
+#### Refresh button in Repository settings page
+![Synchronize with GitHub](./assets/synchronize-with-github-button.png)
+
 ## How can I change repository settings?
 Sign in [sider.review](https://sider.review) and select repository page you would like to change settings. And click `Repository Settings` in the left column. Then, you can change your repository settings such as the following:
 
