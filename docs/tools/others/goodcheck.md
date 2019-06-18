@@ -9,7 +9,7 @@ hide_title: true
 
 | Version Constraints | Language | Web Site |
 | ----------------- | -------- | -------- |
-| >= 1.0.0, < 3.0 (default to 2.1.1) | Others(Regexp) | [https://github.com/sider/goodcheck](https://github.com/sider/goodcheck) |
+| >= 1.0.0, < 3.0 (default to 2.1.2) | Others(Regexp) | [https://github.com/sider/goodcheck](https://github.com/sider/goodcheck) |
 
 ## Getting Started
 
