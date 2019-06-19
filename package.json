@@ -4,7 +4,7 @@
   },
   "devDependencies": {
     "remark-cli": "^6.0.1",
-    "remark-validate-links": "^8.0.0"
+    "remark-validate-links": "^8.0.3"
   },
   "remarkConfig": {
     "plugins": [
