@@ -9,7 +9,7 @@ hide_title: true
 
 | Supported Version | Language | Web Site |
 | ----------------- | -------- | -------- |
-| 0.8.7 | PHP 7.3.0 | [https://github.com/sider/phinder](https://github.com/sider/phinder) |
+| 0.9.1 | PHP 7.3.0 | [https://github.com/sider/phinder](https://github.com/sider/phinder) |
 
 ## Getting Started
 
