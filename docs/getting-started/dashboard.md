@@ -85,4 +85,4 @@ See members with assigned seats. Admins will have the ability to assign seats an
 
 Add additional seats, include billing details and track invoices in this section.
 
-For more details look at [Billing and Plans](../billing-and-plans).
+For more details look at [Billing and Plans](../billing-and-plans.md).
