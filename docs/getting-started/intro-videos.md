@@ -11,7 +11,7 @@ Start using Sider and custom rules with the help of these introductory videos. T
 
 ## Starter Videos
 
-### [Getting Started with Sider](../getting-started/setup#video-tutorial)
+### [Getting Started with Sider](../getting-started/setup.md#video-tutorial)
 
 <ul class="video-list">
 		<a href="../getting-started/setup#video-tutorial">
@@ -23,7 +23,7 @@ Start using Sider and custom rules with the help of these introductory videos. T
 		</a>
 </ul>
 
-### [Intro to the Sider Dashboard](../getting-started/dashboard#introduction-video)
+### [Intro to the Sider Dashboard](../getting-started/dashboard.md#introduction-video)
 
 <ul class="video-list">
 		<a href="../getting-started/dashboard#introduction-video">
@@ -35,7 +35,7 @@ Start using Sider and custom rules with the help of these introductory videos. T
 		</a>
 </ul>
 
-### [Intro to Repository Settings](../getting-started/repository-settings#introduction-video)
+### [Intro to Repository Settings](../getting-started/repository-settings.md#introduction-video)
 
 <ul class="video-list">
 		<a href="../getting-started/repository-settings#introduction-video">
@@ -47,7 +47,7 @@ Start using Sider and custom rules with the help of these introductory videos. T
 		</a>
 </ul>
 
-### [Intro to the Pull Request Analysis page](../getting-started/working-with-issues#introduction-video)
+### [Intro to the Pull Request Analysis page](../getting-started/working-with-issues.md#introduction-video)
 
 <ul class="video-list">
 		<a href="../getting-started/working-with-issues#introduction-video">
@@ -61,7 +61,7 @@ Start using Sider and custom rules with the help of these introductory videos. T
 
 ## Troubleshooting
 
-### [Add comments in Sider](../getting-started/working-with-issues#commenting-on-github)
+### [Add comments in Sider](../getting-started/working-with-issues.md#commenting-on-github)
 
 <ul class="video-list">
 		<a href="../getting-started/working-with-issues#commenting-on-github">
@@ -73,7 +73,7 @@ Start using Sider and custom rules with the help of these introductory videos. T
 		</a>
 </ul>
 
-### [Fixing a pull request with Sider](../getting-started/working-with-issues#fixing-issues)
+### [Fixing a pull request with Sider](../getting-started/working-with-issues.md#fixing-issues)
 
 <ul class="video-list">
 		<a href="../getting-started/working-with-issues#fixing-issues">
@@ -86,7 +86,7 @@ Start using Sider and custom rules with the help of these introductory videos. T
 	</li>
 </ul>
 
-### [Closing all issues in Sider](../getting-started/working-with-issues#how-do-i-close-many-issues-at-once)
+### [Closing all issues in Sider](../getting-started/working-with-issues.md#how-do-i-close-many-issues-at-once)
 
 <ul class="video-list">
 		<a href="../getting-started/working-with-issues#how-do-i-close-many-issues-at-once">
@@ -102,7 +102,7 @@ Start using Sider and custom rules with the help of these introductory videos. T
 
 ## Custom Rules
 
-### [Getting Started with Goodcheck](../tools/others/goodcheck#getting-started)
+### [Getting Started with Goodcheck](../tools/others/goodcheck.md#getting-started)
 
 <ul class="video-list">
 		<a href="../tools/others/goodcheck#getting-started">
@@ -114,7 +114,7 @@ Start using Sider and custom rules with the help of these introductory videos. T
 		</a>
 </ul>
 
-### [Code Review with Querly](../tools/ruby/querly#getting-started)
+### [Code Review with Querly](../tools/ruby/querly.md#getting-started)
 
 <ul class="video-list">
 		<a href="../tools/ruby/querly#getting-started">
@@ -126,7 +126,7 @@ Start using Sider and custom rules with the help of these introductory videos. T
 		</a>
 </ul>
 
-### [Code Review with Phinder](../tools/php/phinder#getting-started)
+### [Code Review with Phinder](../tools/php/phinder.md#getting-started)
 
 <ul class="video-list">
 		<a href="../tools/php/phinder#getting-started">
