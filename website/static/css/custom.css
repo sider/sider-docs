@@ -21,28 +21,30 @@ ul.video-list {
 
 ul.video-list a {
 	position: relative;
-	padding: 2rem 2rem 2rem 2.5rem;
+	padding: .5rem .5rem .5rem .5rem;
 	display: block;
-	box-sizing: border-box
+	box-sizing: border-box;
+	margin: 0 0 4rem;
+	border-radius: .25rem;
 }
 
 ul.video-list a .info {
-	padding-top: 0.25rem;
+	padding-top: .25rem;
 	min-height: 8rem
 }
 
 ul.video-list a .info>p,
 ul.video-list a .info>span {
-	color: #2E3B4D
+	color: var(--black)
 }
 
 ul.video-list a .info .title {
 	margin-top: 0;
-	margin-bottom: 0.5rem
+	margin-bottom: 1rem
 }
 
 ul.video-list a .info .description {
-	margin-bottom: 0;
+	margin-bottom: .5rem;
 }
 
 ul.video-list a .info .duration,
@@ -56,7 +58,7 @@ ul.video-list a:focus {
 }
 
 ul.video-list a:hover {
-	background: #f2f2f2
+	background: var(--white-grey)
 }
 
 ul.video-list a:hover::after {
@@ -67,15 +69,16 @@ ul.video-list a:hover::after {
 	position: absolute;
 	background: url("../assets/play-button.svg");
 	background-size: 4rem;
-	top: 4rem;
-	left: 7.5rem
+	top: 2.75rem;
+	left: 5.75rem;
 }
 
 ul.video-list .thumb {
 	max-height: 8rem;
-	padding-right: 2rem;
+	margin-right: 2rem;
 	position: relative;
-	float: left
+	float: left;
+	border: 1px solid var(--light-grey);
 }
 
 /* Styles for any pages */

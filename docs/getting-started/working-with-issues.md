@@ -10,6 +10,12 @@ hide_title: true
 Although Sider needs all issues to be dealt with before passing status checks on GitHub, this doesn't mean that all issues need to be fixed. A combination of fixing or closing all issues will also pass status checks on GitHub. 
 All this can be done from the pull request's analysis results page in Sider. This page offers several ways to review issues, including fixing issues, closing issues and commenting on GitHub.
 
+## Introduction Video
+
+<div class="video">
+ <iframe src="https://www.youtube.com/embed/A2CbtgI8_DY" frameborder="0" allowfullscreen></iframe>
+</div>
+
 ## Fixing Issues
 When there is an issue that needs to be fixed, make the changes and commit them to your pull request. Sider will analyze the pull request again and update the status of the issue. 
 
@@ -59,3 +65,11 @@ If you see an issue you do not think should be ignored, click the yellow `Reopen
 By default users with write or admin permissions can close issues.
 
 You can also change this restriction to only users with admin permissions. See [Restricting access to Close button](../advanced-settings/restricting-access-to-close-button.md).
+
+## How do I close many issues at once?
+
+You can close all issues or filtered issues at once by clicking on `more` and selecting `Close all filtered issues`.
+
+<div class="video">
+ <iframe src="https://www.youtube.com/embed/vnwf6pVLtWM" frameborder="0" allowfullscreen></iframe>
+</div>
