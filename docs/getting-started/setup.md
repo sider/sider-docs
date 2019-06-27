@@ -66,6 +66,6 @@ You will be able to fine-tune your project's configuration at any time after the
 
 ## Video Tutorial
 
-<div class="video">
- <iframe src="https://www.youtube.com/embed/bCfgdf4cjcU" frameborder="0" allowfullscreen></iframe>
+<div class="Video">
+ <iframe class="Video__iframe" src="https://www.youtube.com/embed/bCfgdf4cjcU" frameborder="0" allowfullscreen></iframe>
 </div>

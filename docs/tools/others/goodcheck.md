@@ -17,8 +17,8 @@ To start using Goodcheck, put config file `goodcheck.yml` in your repository.
 
 Visit [its project page](https://github.com/sider/goodcheck#goodcheckyml) for more information about writing rules.
 
-<div class="video">
-  <iframe src="https://www.youtube.com/embed/8Zpm2gguE1M" frameborder="0" allowfullscreen></iframe>
+<div class="Video">
+ <iframe class="Video__iframe" src="https://www.youtube.com/embed/8Zpm2gguE1M" frameborder="0" allowfullscreen></iframe>
 </div>
 
 ## Configuration via `sideci.yml`

@@ -11,9 +11,8 @@ The Dashboard page gives an overview of the latest pull requests, last active re
 
 ## Introduction Video
 
-<div style="position:relative;padding-top:56.25%;">
-  <iframe src="https://www.youtube.com/embed/TIQ61lCm6nI" frameborder="0" allowfullscreen
-    style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+<div class="Video">
+ <iframe class="Video__iframe" src="https://www.youtube.com/embed/TIQ61lCm6nI" frameborder="0" allowfullscreen></iframe>
 </div>
 
 ## Latest Analysed Pull Requests

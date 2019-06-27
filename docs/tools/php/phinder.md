@@ -17,8 +17,8 @@ To start using Phinder, enable it in [Repository Settings](../../getting-started
 
 * [Phinder sample](https://github.com/sider/phinder/tree/master/sample)
 
-<div class="video">
-  <iframe src="https://www.youtube.com/embed/ErHtinxR3ns" frameborder="0" allowfullscreen></iframe>
+<div class="Video">
+ <iframe class="Video__iframe" src="https://www.youtube.com/embed/ErHtinxR3ns" frameborder="0" allowfullscreen></iframe>
 </div>
 
 ## Sample Configuration

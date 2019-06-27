@@ -12,15 +12,15 @@ All this can be done from the pull request's analysis results page in Sider. Thi
 
 ## Introduction Video
 
-<div class="video">
- <iframe src="https://www.youtube.com/embed/A2CbtgI8_DY" frameborder="0" allowfullscreen></iframe>
+<div class="Video">
+ <iframe class="Video__iframe" src="https://www.youtube.com/embed/A2CbtgI8_DY" frameborder="0" allowfullscreen></iframe>
 </div>
 
 ## Fixing Issues
 When there is an issue that needs to be fixed, make the changes and commit them to your pull request. Sider will analyze the pull request again and update the status of the issue. 
 
-<div class="video">
- <iframe src="https://www.youtube.com/embed/PBZU2Fw2k8A" frameborder="0" allowfullscreen></iframe>
+<div class="Video">
+ <iframe class="Video__iframe" src="https://www.youtube.com/embed/PBZU2Fw2k8A" frameborder="0" allowfullscreen></iframe>
 </div>
 
 ## Closing Issues
@@ -39,8 +39,8 @@ When there are no open issues left in the pull request, the commit status on Git
 ## Commenting on GitHub
 Reviewers can comment on issues directly onto the GitHub pull request page by clicking on the issue's `Comment on GitHub` button. You will need to give Sider authorization the first time you perform this action.
 
-<div class="video">
- <iframe src="https://www.youtube.com/embed/16MuYzj_Ml0" frameborder="0" allowfullscreen></iframe>
+<div class="Video">
+ <iframe class="Video__iframe" src="https://www.youtube.com/embed/16MuYzj_Ml0" frameborder="0" allowfullscreen></iframe>
 </div>
 
 ## Requesting Feedback
@@ -70,6 +70,6 @@ You can also change this restriction to only users with admin permissions. See [
 
 You can close all issues or filtered issues at once by clicking on `more` and selecting `Close all filtered issues`.
 
-<div class="video">
- <iframe src="https://www.youtube.com/embed/vnwf6pVLtWM" frameborder="0" allowfullscreen></iframe>
+<div class="Video">
+ <iframe class="Video__iframe" src="https://www.youtube.com/embed/vnwf6pVLtWM" frameborder="0" allowfullscreen></iframe>
 </div>

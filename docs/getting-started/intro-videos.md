@@ -13,129 +13,126 @@ Start using Sider and custom rules with the help of these introductory videos. T
 
 ### [Getting Started with Sider](../getting-started/setup.md#video-tutorial)
 
-<ul class="video-list">
-		<a href="../getting-started/setup#video-tutorial">
-			<img src="https://img.youtube.com/vi/bCfgdf4cjcU/mqdefault.jpg" alt="" aria-hidden="true" class="thumb">
-			<div class="info">
-				<p class="description">Learn how to install Sider to automatically review your code.</p>
-				<span class="duration">Duration 3 min</span>
-			</div>
-		</a>
-</ul>
+<div class="VideoLink">
+  <a class="VideoLink__link" href="../getting-started/setup#video-tutorial">
+    <img class="VideoLink__thumb" src="https://img.youtube.com/vi/bCfgdf4cjcU/mqdefault.jpg" alt="" aria-hidden="true">
+    <div>
+      <p>Learn how to install Sider to automatically review your code.</p>
+      <span class="VideoLink__duration">Duration 3 min</span>
+    </div>
+  </a>
+</div>
 
 ### [Intro to the Sider Dashboard](../getting-started/dashboard.md#introduction-video)
 
-<ul class="video-list">
-		<a href="../getting-started/dashboard#introduction-video">
-			<img src="https://img.youtube.com/vi/TIQ61lCm6nI/mqdefault.jpg" alt="" aria-hidden="true" class="thumb">
-			<div class="info">
-				<p class="description">Get a general overview of the Sider Dashboard and Organization Page.</p>
-				<span class="duration">Duration 3 min</span>
-			</div>
-		</a>
-</ul>
+<div class="VideoLink">
+  <a class="VideoLink__link" href="../getting-started/dashboard#introduction-video">
+    <img class="VideoLink__thumb" src="https://img.youtube.com/vi/TIQ61lCm6nI/mqdefault.jpg" alt="" aria-hidden="true">
+    <div>
+      <p>Get a general overview of the Sider Dashboard and Organization Page.</p>
+      <span class="VideoLink__duration">Duration 3 min</span>
+    </div>
+  </a>
+</div>
 
 ### [Intro to Repository Settings](../getting-started/repository-settings.md#introduction-video)
 
-<ul class="video-list">
-		<a href="../getting-started/repository-settings#introduction-video">
-			<img src="https://img.youtube.com/vi/D7e8YZDrqQY/mqdefault.jpg" alt="" aria-hidden="true" class="thumb">
-			<div class="info">
-				<p class="description">Get a general overview of the Repository Settings page.</p>
-				<span class="duration">Duration 3 min</span>
-			</div>
-		</a>
-</ul>
+<div class="VideoLink">
+  <a class="VideoLink__link" href="../getting-started/repository-settings#introduction-video">
+    <img class="VideoLink__thumb" src="https://img.youtube.com/vi/D7e8YZDrqQY/mqdefault.jpg" alt="" aria-hidden="true">
+    <div>
+      <p>Get a general overview of the Repository Settings page.</p>
+      <span class="VideoLink__duration">Duration 3 min</span>
+    </div>
+  </a>
+</div>
 
 ### [Intro to the Pull Request Analysis page](../getting-started/working-with-issues.md#introduction-video)
 
-<ul class="video-list">
-		<a href="../getting-started/working-with-issues#introduction-video">
-			<img src="https://img.youtube.com/vi/A2CbtgI8_DY/mqdefault.jpg" alt="" aria-hidden="true" class="thumb">
-			<div class="info">
-				<p class="description">Get a general overview of the Pull Request Analysis page.</p>
-				<span class="duration">Duration 3 min</span>
-			</div>
-		</a>
-</ul>
+<div class="VideoLink">
+  <a class="VideoLink__link" href="../getting-started/working-with-issues#introduction-video">
+    <img class="VideoLink__thumb" src="https://img.youtube.com/vi/A2CbtgI8_DY/mqdefault.jpg" alt="" aria-hidden="true">
+    <div>
+      <p>Get a general overview of the Pull Request Analysis page.</p>
+      <span class="VideoLink__duration">Duration 3 min</span>
+    </div>
+  </a>
+</div>
 
 ## Troubleshooting
 
 ### [Add comments in Sider](../getting-started/working-with-issues.md#commenting-on-github)
 
-<ul class="video-list">
-		<a href="../getting-started/working-with-issues#commenting-on-github">
-			<img src="https://img.youtube.com/vi/16MuYzj_Ml0/mqdefault.jpg" alt="" aria-hidden="true" class="thumb">
-			<div class="info">
-				<p class="description">Learn how to make comments in Sider that get posted into the GitHub pull request.</p>
-				<span class="duration">Duration 2 min</span>
-			</div>
-		</a>
-</ul>
+<div class="VideoLink">
+  <a class="VideoLink__link" href="../getting-started/working-with-issues#commenting-on-github">
+    <img class="VideoLink__thumb" src="https://img.youtube.com/vi/16MuYzj_Ml0/mqdefault.jpg" alt="" aria-hidden="true">
+    <div>
+      <p>Learn how to make comments in Sider that get posted into the GitHub pull request.</p>
+      <span class="VideoLink__duration">Duration 2 min</span>
+    </div>
+  </a>
+</div>
 
 ### [Fixing a pull request with Sider](../getting-started/working-with-issues.md#fixing-issues)
 
-<ul class="video-list">
-		<a href="../getting-started/working-with-issues#fixing-issues">
-			<img src="https://img.youtube.com/vi/PBZU2Fw2k8A/mqdefault.jpg" alt="" aria-hidden="true" class="thumb">
-			<div class="info">
-				<p class="description">Learn how to fix an open issue in Sider.</p>
-				<span class="duration">Duration 2 min</span>
-			</div>
-		</a>
-	</li>
-</ul>
+<div class="VideoLink">
+  <a class="VideoLink__link" href="../getting-started/working-with-issues#fixing-issues">
+    <img class="VideoLink__thumb" src="https://img.youtube.com/vi/PBZU2Fw2k8A/mqdefault.jpg" alt="" aria-hidden="true">
+    <div>
+      <p>Learn how to fix an open issue in Sider.</p>
+      <span class="VideoLink__duration">Duration 2 min</span>
+    </div>
+  </a>
+</div>
 
 ### [Closing all issues in Sider](../getting-started/working-with-issues.md#how-do-i-close-many-issues-at-once)
 
-<ul class="video-list">
-		<a href="../getting-started/working-with-issues#how-do-i-close-many-issues-at-once">
-			<img src="https://img.youtube.com/vi/vnwf6pVLtWM/mqdefault.jpg" alt="" aria-hidden="true" class="thumb">
-			<div class="info">
-				<p class="description">Learn how to fix an open issue in Sider.</p>
-				<span class="duration">Duration 2 min</span>
-			</div>
-		</a>
-	</li>
-</ul>
-
+<div class="VideoLink">
+  <a class="VideoLink__link" href="../getting-started/working-with-issues#how-do-i-close-many-issues-at-once">
+    <img class="VideoLink__thumb" src="https://img.youtube.com/vi/vnwf6pVLtWM/mqdefault.jpg" alt="" aria-hidden="true">
+    <div>
+      <p>Learn how to fix many issues at once in Sider.</p>
+      <span class="VideoLink__duration">Duration 2 min</span>
+    </div>
+  </a>
+</div>
 
 ## Custom Rules
 
 ### [Getting Started with Goodcheck](../tools/others/goodcheck.md#getting-started)
 
-<ul class="video-list">
-		<a href="../tools/others/goodcheck#getting-started">
-			<img src="https://img.youtube.com/vi/8Zpm2gguE1M/mqdefault.jpg" alt="" aria-hidden="true" class="thumb">
-			<div class="info">
-				<p class="description">Learn how to enable and create a Goodcheck rule.</p>
-				<span class="duration">Duration 3 min</span>
-			</div>
-		</a>
-</ul>
+<div class="VideoLink">
+  <a class="VideoLink__link" href="../tools/others/goodcheck#getting-started">
+    <img class="VideoLink__thumb" src="https://img.youtube.com/vi/8Zpm2gguE1M/mqdefault.jpg" alt="" aria-hidden="true">
+    <div>
+      <p>Learn how to enable and create a Goodcheck rule.</p>
+      <span class="VideoLink__duration">Duration 3 min</span>
+    </div>
+  </a>
+</div>
 
 ### [Code Review with Querly](../tools/ruby/querly.md#getting-started)
 
-<ul class="video-list">
-		<a href="../tools/ruby/querly#getting-started">
-			<img src="https://img.youtube.com/vi/WtHmNuWJzPA/mqdefault.jpg" alt="" aria-hidden="true" class="thumb">
-			<div class="info">	
-				<p class="description">Learn how to create a custom rule to search for code written in Ruby.</p>
-				<span class="duration">Duration 3 min</span>
-			</div>
-		</a>
-</ul>
+<div class="VideoLink">
+  <a class="VideoLink__link" href="../tools/ruby/querly#getting-started">
+    <img class="VideoLink__thumb" src="https://img.youtube.com/vi/WtHmNuWJzPA/mqdefault.jpg" alt="" aria-hidden="true">
+    <div>
+      <p>Learn how to create a custom rule to search for code written in Ruby.</p>
+      <span class="VideoLink__duration">Duration 3 min</span>
+    </div>
+  </a>
+</div>
 
 ### [Code Review with Phinder](../tools/php/phinder.md#getting-started)
 
-<ul class="video-list">
-		<a href="../tools/php/phinder#getting-started">
-			<img src="https://img.youtube.com/vi/ErHtinxR3ns/mqdefault.jpg" alt="" aria-hidden="true" class="thumb">
-			<div class="info">
-				<p class="description">Learn how to create a custom rule to search for code written in PHP.</p>
-				<span class="duration">Duration 3 min</span>
-			</div>
-		</a>
-</ul>
+<div class="VideoLink">
+  <a class="VideoLink__link" href="../tools/php/phinder#getting-started">
+    <img class="VideoLink__thumb" src="https://img.youtube.com/vi/ErHtinxR3ns/mqdefault.jpg" alt="" aria-hidden="true">
+    <div>
+      <p>Learn how to create a custom rule to search for code written in PHP.</p>
+      <span class="VideoLink__duration">Duration 3 min</span>
+    </div>
+  </a>
+</div>
 
 

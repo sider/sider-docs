@@ -22,8 +22,8 @@ Visit the Querly project page for more information about writing rules:
 * [Examples](https://github.com/soutaro/querly/blob/master/manual/examples.md)
 * [Patterns](https://github.com/soutaro/querly/blob/master/manual/patterns.md)
 
-<div class="video">
-  <iframe src="https://www.youtube.com/embed/WtHmNuWJzPA" frameborder="0" allowfullscreen></iframe>
+<div class="Video">
+ <iframe class="Video__iframe" src="https://www.youtube.com/embed/WtHmNuWJzPA" frameborder="0" allowfullscreen></iframe>
 </div>
 
 ## Configuration via `sideci.yml`

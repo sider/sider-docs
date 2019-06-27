@@ -13,9 +13,8 @@ You must have write permission to the repository to change these settings.
 
 ## Introduction Video
 
-<div style="position:relative;padding-top:56.25%;">
-  <iframe src="https://www.youtube.com/embed/D7e8YZDrqQY" frameborder="0" allowfullscreen
-    style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+<div class="Video">
+ <iframe class="Video__iframe" src="https://www.youtube.com/embed/D7e8YZDrqQY" frameborder="0" allowfullscreen></iframe>
 </div>
 
 ## Tools

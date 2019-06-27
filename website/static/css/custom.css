@@ -1,11 +1,11 @@
 /* your custom css */
 
-.video {
+.Video {
 	position: relative;
 	padding-top: 56.25%;
 }
 
-.video iframe {
+.Video__iframe {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -13,72 +13,45 @@
 	height: 100%;
 }
 
-ul.video-list {
-	list-style: none;
-	padding-left: 0;
-	position: relative
+.VideoLink {
+	/* Docusaurus needs a wrapper element. */
+}
+  
+.VideoLink__link {
+  display: flex;
+  color: currentColor;
+  padding: .5rem;
+  border-radius: .25rem;
+  position: relative;
+}
+  
+.VideoLink__link:hover,
+.VideoLink__link:focus {
+  text-decoration: none;
+  background: var(--white-grey);
 }
 
-ul.video-list a {
-	position: relative;
-	padding: .5rem .5rem .5rem .5rem;
-	display: block;
-	box-sizing: border-box;
-	margin: 0 0 4rem;
-	border-radius: .25rem;
+.VideoLink__link:hover::after,
+.VideoLink__link:focus::after {
+  content: '';
+  display: block;
+  width: 4rem;
+  height: 4rem;
+  position: absolute;
+  background: url("/assets/play-button.svg");
+  background-size: 4rem;
+  top: 2.75rem;
+  left: 5.75rem;
 }
-
-ul.video-list a .info {
-	padding-top: .25rem;
-	min-height: 8rem
+  
+.VideoLink__thumb {
+  max-height: 8rem;
+  margin-right: 2rem;
+  border: 1px solid var(--light-grey);
 }
-
-ul.video-list a .info>p,
-ul.video-list a .info>span {
-	color: var(--black)
-}
-
-ul.video-list a .info .title {
-	margin-top: 0;
-	margin-bottom: 1rem
-}
-
-ul.video-list a .info .description {
-	margin-bottom: .5rem;
-}
-
-ul.video-list a .info .duration,
-ul.video-list a .info .duration span {
-	color: #6e6e6e;
-}
-
-ul.video-list a:hover,
-ul.video-list a:focus {
-	text-decoration: none
-}
-
-ul.video-list a:hover {
-	background: var(--white-grey)
-}
-
-ul.video-list a:hover::after {
-	content: '';
-	display: block;
-	width: 4rem;
-	height: 4rem;
-	position: absolute;
-	background: url("../assets/play-button.svg");
-	background-size: 4rem;
-	top: 2.75rem;
-	left: 5.75rem;
-}
-
-ul.video-list .thumb {
-	max-height: 8rem;
-	margin-right: 2rem;
-	position: relative;
-	float: left;
-	border: 1px solid var(--light-grey);
+  
+.VideoLink__duration {
+  color: #6e6e6e;
 }
 
 /* Styles for any pages */
