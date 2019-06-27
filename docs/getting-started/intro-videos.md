@@ -11,7 +11,7 @@ Start using Sider and custom rules with the help of these introductory videos. T
 
 ## Starter Videos
 
-### [Getting Started with Sider](../getting-started/setup.md#video-tutorial)
+### Getting Started with Sider
 
 <div class="VideoLink">
   <a class="VideoLink__link" href="../getting-started/setup#video-tutorial">
@@ -23,7 +23,7 @@ Start using Sider and custom rules with the help of these introductory videos. T
   </a>
 </div>
 
-### [Intro to the Sider Dashboard](../getting-started/dashboard.md#introduction-video)
+### Intro to the Sider Dashboard
 
 <div class="VideoLink">
   <a class="VideoLink__link" href="../getting-started/dashboard#introduction-video">
@@ -35,7 +35,7 @@ Start using Sider and custom rules with the help of these introductory videos. T
   </a>
 </div>
 
-### [Intro to Repository Settings](../getting-started/repository-settings.md#introduction-video)
+### Intro to Repository Settings
 
 <div class="VideoLink">
   <a class="VideoLink__link" href="../getting-started/repository-settings#introduction-video">
@@ -47,7 +47,7 @@ Start using Sider and custom rules with the help of these introductory videos. T
   </a>
 </div>
 
-### [Intro to the Pull Request Analysis page](../getting-started/working-with-issues.md#introduction-video)
+### Intro to the Pull Request Analysis page
 
 <div class="VideoLink">
   <a class="VideoLink__link" href="../getting-started/working-with-issues#introduction-video">
@@ -61,7 +61,7 @@ Start using Sider and custom rules with the help of these introductory videos. T
 
 ## Troubleshooting
 
-### [Add comments in Sider](../getting-started/working-with-issues.md#commenting-on-github)
+### Add comments in Sider
 
 <div class="VideoLink">
   <a class="VideoLink__link" href="../getting-started/working-with-issues#commenting-on-github">
@@ -73,7 +73,7 @@ Start using Sider and custom rules with the help of these introductory videos. T
   </a>
 </div>
 
-### [Fixing a pull request with Sider](../getting-started/working-with-issues.md#fixing-issues)
+### Fixing a pull request with Sider
 
 <div class="VideoLink">
   <a class="VideoLink__link" href="../getting-started/working-with-issues#fixing-issues">
@@ -85,7 +85,7 @@ Start using Sider and custom rules with the help of these introductory videos. T
   </a>
 </div>
 
-### [Closing all issues in Sider](../getting-started/working-with-issues.md#how-do-i-close-many-issues-at-once)
+### Closing all issues in Sider
 
 <div class="VideoLink">
   <a class="VideoLink__link" href="../getting-started/working-with-issues#how-do-i-close-many-issues-at-once">
@@ -99,7 +99,7 @@ Start using Sider and custom rules with the help of these introductory videos. T
 
 ## Custom Rules
 
-### [Getting Started with Goodcheck](../tools/others/goodcheck.md#getting-started)
+### Getting Started with Goodcheck
 
 <div class="VideoLink">
   <a class="VideoLink__link" href="../tools/others/goodcheck#getting-started">
@@ -111,7 +111,7 @@ Start using Sider and custom rules with the help of these introductory videos. T
   </a>
 </div>
 
-### [Code Review with Querly](../tools/ruby/querly.md#getting-started)
+### Code Review with Querly
 
 <div class="VideoLink">
   <a class="VideoLink__link" href="../tools/ruby/querly#getting-started">
@@ -123,7 +123,7 @@ Start using Sider and custom rules with the help of these introductory videos. T
   </a>
 </div>
 
-### [Code Review with Phinder](../tools/php/phinder.md#getting-started)
+### Code Review with Phinder
 
 <div class="VideoLink">
   <a class="VideoLink__link" href="../tools/php/phinder#getting-started">
