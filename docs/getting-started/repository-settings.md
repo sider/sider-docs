@@ -11,6 +11,12 @@ The Repository Settings page allows you to configure Sider's behavior for each r
 
 You must have write permission to the repository to change these settings.
 
+## Introduction Video
+
+<div class="Video">
+ <iframe class="Video__iframe" src="https://www.youtube.com/embed/D7e8YZDrqQY" frameborder="0" allowfullscreen></iframe>
+</div>
+
 ## Tools
 
 ![Analyzer settings](../assets/project-analyzers.png)

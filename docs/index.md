@@ -18,6 +18,7 @@ This section has documents about how to use Sider.
 * [Introductory Videos](./getting-started/intro-videos.md)
 * [Setting up Sider](./getting-started/setup.md)
 * [Repository Settings](./getting-started/repository-settings.md)
+* [Dashboard Overview](./getting-started/dashboard.md)
 * [Custom Analysis Configuration](./getting-started/custom-configuration.md)
 * [Working with Issues](./getting-started/working-with-issues.md)
 * [Permission](./getting-started/permissions.md)
