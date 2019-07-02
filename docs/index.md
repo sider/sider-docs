@@ -56,8 +56,8 @@ This section has documents about analysis tools which Sider supports. We have an
   <summary>4 tools are available.</summary>
 
   * [ESLint](./tools/javascript/eslint.md)
-  * [JSHint](./tools/javascript/tslint.md)
-  * [TSLint](./tools/javascript/jshint.md)
+  * [JSHint](./tools/javascript/jshint.md)
+  * [TSLint](./tools/javascript/tslint.md)
   * [CoffeeLint](./tools/javascript/coffeelint.md)
 
 </details>
