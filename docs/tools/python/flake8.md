@@ -19,7 +19,7 @@ To customize Flake8, put a `.flake8` file in your repository.
 
 ## Python Version
 
-If your repository contains a `.python-version` file, the Python version is Sider will use the version specified in that file. You can also specify a Python version via `sideci.yml`. The default is Python 3.
+If your repository contains a `.python-version` file, the Python version is Sider will use the version specified in that file. You can also specify a Python version via `sider.yml`. The default is Python 3.
 
 The latest versions of Python 2 or Python 3 can be used.
 
@@ -31,7 +31,7 @@ Our default configuration is available here:
 
 * [Sider's configuration for Flake8](https://github.com/actcat/sideci_config/blob/master/python/flake8/sideci_config.ini)
 
-## Configuration via `sideci.yml`
+## Configuration via `sider.yml`
 
 Here are example settings for Flake8 under `flake8`:
 

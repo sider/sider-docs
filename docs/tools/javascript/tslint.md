@@ -21,7 +21,7 @@ $ npm install tslint -D
 
 If you need customization, use the standard TSLint config file. Create a `tslint.json` file in the root directory of your repository.
 
-## Configuration via `sideci.yml`
+## Configuration via `sider.yml`
 
 Here is an example setting for TSLint under `tslint`:
 

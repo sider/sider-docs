@@ -23,7 +23,7 @@ To start using Phinder, enable it in [Repository Settings](../../getting-started
 
 ## Sample Configuration
 
-Here's a sample Phinder configuration in `sideci.yml`:
+Here's a sample Phinder configuration in `sider.yml`:
 
 ```yaml
 linter:

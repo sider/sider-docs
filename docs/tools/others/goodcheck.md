@@ -21,7 +21,7 @@ Visit [its project page](https://github.com/sider/goodcheck#goodcheckyml) for mo
  <iframe class="Video__iframe" src="https://www.youtube.com/embed/8Zpm2gguE1M" frameborder="0" allowfullscreen></iframe>
 </div>
 
-## Configuration via `sideci.yml`
+## Configuration via `sider.yml`
 
 Here are example settings for Goodcheck under `goodcheck`:
 

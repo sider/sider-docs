@@ -17,7 +17,7 @@ To start using Checkstyle, enable it in [Repository Settings](../../getting-star
 
 ## Configuration
 
-You can customize Checkstyle analysis using `sideci.yml`.
+You can customize Checkstyle analysis using `sider.yml`.
 
 ```yaml
 linter:

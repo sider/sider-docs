@@ -15,11 +15,11 @@ hide_title: true
 
 To start using PHPMD, enable it in [Repository Settings](../../getting-started/repository-settings.md).
 
-You can use `sideci.yml` to configure PHPMD.
+You can use `sider.yml` to configure PHPMD.
 
 ## Using Your Configuration File
 
-If you have your own `ruleset.xml` for your project, you can add it under the `rule` option in `sideci.yml`.
+If you have your own `ruleset.xml` for your project, you can add it under the `rule` option in `sider.yml`.
 
 ```yaml
 linter:
@@ -45,13 +45,13 @@ linter:
 
 ## Default Configuration
 
-If you leave the `rule` option undefined in `sideci.yml`, Sider runs PHPMD with our recommended settings. The recommended settings are available in our GitHub repository:
+If you leave the `rule` option undefined in `sider.yml`, Sider runs PHPMD with our recommended settings. The recommended settings are available in our GitHub repository:
 
 * [Sider recommended settings for PHPMD](https://github.com/actcat/sideci_config/blob/master/php/phpmd/sideci_config.xml)
 
-## Configuration via `sideci.yml`
+## Configuration via `sider.yml`
 
-Here is are some example settings for PHPMD in `sideci.yml`:
+Here is are some example settings for PHPMD in `sider.yml`:
 
 ```yaml
 linter:

@@ -27,7 +27,7 @@ If you need more customization, use the standard stylelint config files. For exa
 
 If you don't have any custom configuration defined, Sider uses the latest version of [stylelit-config-recommended](https://github.com/stylelint/stylelint-config-recommended).
 
-## Configuration via `sideci.yml`
+## Configuration via `sider.yml`
 
 Here are example settings for stylelint under `stylelint`:
 

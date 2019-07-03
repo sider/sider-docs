@@ -26,9 +26,9 @@ Visit the Querly project page for more information about writing rules:
  <iframe class="Video__iframe" src="https://www.youtube.com/embed/WtHmNuWJzPA" frameborder="0" allowfullscreen></iframe>
 </div>
 
-## Configuration via `sideci.yml`
+## Configuration via `sider.yml`
 
-Here are some example settings for Querly in `sideci.yml`, under `querly`:
+Here are some example settings for Querly in `sider.yml`, under `querly`:
 
 ```yaml
 linter:
@@ -52,4 +52,4 @@ Sider finds the following gems in `Gemfile.lock` and installs them automatically
 - [slim](https://github.com/slim-template/slim)
 - [haml](https://github.com/haml/haml)
 
-These gems are not installed automatically when the `gems` option is specified. We encourage you to explicitly specify gems in the [`gems` option](../../getting-started/custom-configuration.md#gems-option) in `sideci.yml`.
+These gems are not installed automatically when the `gems` option is specified. We encourage you to explicitly specify gems in the [`gems` option](../../getting-started/custom-configuration.md#gems-option) in `sider.yml`.

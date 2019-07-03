@@ -13,7 +13,7 @@ hide_title: true
 
 ## Getting Started
 
-To start using PHP\_CodeSniffer, enable it in [Repository Settings](../../getting-started/repository-settings.md). To configure the coding standard you want to follow, add `sideci.yml` in your repository and set the `standard` option:
+To start using PHP\_CodeSniffer, enable it in [Repository Settings](../../getting-started/repository-settings.md). To configure the coding standard you want to follow, add `sider.yml` in your repository and set the `standard` option:
 
 ```yaml
 linter:
@@ -36,9 +36,9 @@ The following standards are detected automatically:
 * `CakePHP`
 * `Symfony`
 
-Autodetection is based on file names and directory structure. If autodetection fails, you can specify a standard in `sideci.yml`.
+Autodetection is based on file names and directory structure. If autodetection fails, you can specify a standard in `sider.yml`.
 
-## Configuration via `sideci.yml`
+## Configuration via `sider.yml`
 
 Example setting for PHP\_CodeSniffer under `code_sniffer`:
 

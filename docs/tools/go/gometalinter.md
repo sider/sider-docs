@@ -17,7 +17,7 @@ hide_title: true
 
 To start using Go Meta Linter, enable it in repository setting.
 
-To customize Go Meta Linter, write your configuration, put it in your repository, and set up `sideci.yml`.
+To customize Go Meta Linter, write your configuration, put it in your repository, and set up `sider.yml`.
 
 ## Dependencies
 
@@ -28,16 +28,16 @@ If `glide.yaml` contains a dependency to a library in a private repository, plea
 * [Use other private repositories for analysis](../../advanced-settings/private-dependencies.md)
 
 
-> Note that need to set `import_path` option in `sideci.yml` when you would like to run `glide install` on analysis.
+> Note that need to set `import_path` option in `sider.yml` when you would like to run `glide install` on analysis.
 > See [here](#import_path) for details.
 
 ## Default Configuration
 
-If your `sideci.yml` does not contain `config` option, Sider will use the default configuration. The default configuration is available in our repository.
+If your `sider.yml` does not contain `config` option, Sider will use the default configuration. The default configuration is available in our repository.
 
 * [Sider's configuration for Go Meta Linter](https://github.com/actcat/sideci_config/blob/master/go/gometalinter/gometalinter.json)
 
-## Configuration via `sideci.yml`
+## Configuration via `sider.yml`
 
 Put your Go Meta Linter configuration under `gometalinter`:
 

@@ -7,11 +7,11 @@ hide_title: true
 
 # Custom Analysis Configuration
 
-You don't need to do any special configuration for Sider to start analyzing your code. However, Sider also offers advanced settings for special cases via the sideci.yml file.
+You don't need to do any special configuration for Sider to start analyzing your code. However, Sider also offers advanced settings for special cases via the `sider.yml` file.
 
-## Configuration via `sideci.yml`
+## Configuration via `sider.yml`
 
-First, add a file named `sideci.yml` in your project's root directory.
+First, add a file named `sider.yml` in your project's root directory.
 
 ```yaml
 linter:
@@ -29,7 +29,7 @@ linter:
     glob: '**/*.{css,scss}'
 ```
 
-The options you can specify in `sideci.yml` are grouped into two categories:
+The options you can specify in `sider.yml` are grouped into two categories:
 
 1. Analyzer specific options
 2. Common options available to all analyzers
@@ -38,11 +38,11 @@ Currently, `root_dir` is the only common option.
 
 ## Analysis tool specific configuration
 
-You can use `sideci.yml` to configure each analyzer's vendor-supplied settings. Sider also provides extra options for some analyzers that configure how Sider runs the analyzer (for example, some tools might need to run `npm install` before beginning analysis). The tools documentation has more information about which options are available for each tool.
+You can use `sider.yml` to configure each analyzer's vendor-supplied settings. Sider also provides extra options for some analyzers that configure how Sider runs the analyzer (for example, some tools might need to run `npm install` before beginning analysis). The tools documentation has more information about which options are available for each tool.
 
 ## `root_dir` option
 
-This is a common option available to all analyzers. This option specifies a directory in your repository from which Sider should run the analyzer in. For example, if you have all your JavaScript files in the `./frontend` directory, you could configure `sideci.yml` like this:
+This is a common option available to all analyzers. This option specifies a directory in your repository from which Sider should run the analyzer in. For example, if you have all your JavaScript files in the `./frontend` directory, you could configure `sider.yml` like this:
 
 ```yaml
 linter:
@@ -78,7 +78,7 @@ linter:
 
 Sider decides the analyzer version in the following order:
 
-1. `gems` option in `sideci.yml`
+1. `gems` option in `sider.yml`
 2. `Gemfile.lock`
 3. The default version
 
@@ -143,7 +143,7 @@ If you would like to install a gem located in a private git repository, see [pri
 
 This option allows you to ignore specific files. It helps to improve the analysis execution time and the analysis stability.
 
-In order to use this option, add it to `sideci.yml` like this:
+In order to use this option, add it to `sider.yml` like this:
 
 ```yaml
 linter:
@@ -159,7 +159,7 @@ ignore:
 This option allows you to exclude branches from the analysis. If there are branches that are unnecessary for your team to analyze, use the `branches` option.
 When setting this option, Sider will not analyze the branch specified in this option.
 
-In order to use this option, add it to `sideci.yml` like this:
+In order to use this option, add it to `sider.yml` like this:
 
 ```yaml
 linter:

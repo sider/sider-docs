@@ -15,7 +15,7 @@ hide_title: true
 
 To start using Misspell, enable it in repository settings page on [sider.review](https://sider.review/).
 
-## Configuration via `sideci.yml`
+## Configuration via `sider.yml`
 
 Here are example settings for Misspell under `misspell`:
 

@@ -23,7 +23,7 @@ Sider uses its default configuration where there is no custom configuration pres
 
 * [Sider's configuration for jshintrc](https://github.com/actcat/sideci_config/blob/master/javascript/jshint/sideci_jshintrc)
 
-## Configuration via `sideci.yml`
+## Configuration via `sider.yml`
 
 ```yaml
 linter:
