@@ -19,7 +19,7 @@ To start using ESLint in Sider, declare it as a dependency in your `package.json
 $ npm install eslint -D
 ```
 
-Add `sideci.yml` to your repository:
+Add `sider.yml` to your repository:
 
 ```yaml
 linter:
@@ -31,11 +31,11 @@ If you need more customization, use standard ESLint config files. For instance, 
 
 ## Default Configuration
 
-Sider provides a recommended configuration for ESLint. The configuration is used when you haven't added any ESLint configurations in your `sideci.yml` and don't have the default config files, `.eslintrc`, `.eslintrc.yml`, `.eslintrc.yaml`, or `.eslintrc.json` in your repository.
+Sider provides a recommended configuration for ESLint. The configuration is used when you haven't added any ESLint configurations in your `sider.yml` and don't have the default config files, `.eslintrc`, `.eslintrc.yml`, `.eslintrc.yaml`, or `.eslintrc.json` in your repository.
 
 * [Sider recommended settings for ESLint](https://github.com/actcat/sideci_config/blob/master/javascript/eslint/eslintrc)
 
-## Configuration via `sideci.yml`
+## Configuration via `sider.yml`
 
 Put settings for ESLint under `eslint`:
 

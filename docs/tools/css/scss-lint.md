@@ -15,7 +15,7 @@ hide_title: true
 
 To start using SCSS-Lint, enable it in [Repository Settings](../../getting-started/repository-settings.md).
 
-## Configuration via `sideci.yml`
+## Configuration via `sider.yml`
 
 Here are example settings for SCSS-Lint:
 

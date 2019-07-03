@@ -11,9 +11,9 @@ hide_title: true
 | ----------------- | -------- | -------- |
 | >= 4.0.0, < 4.4.0 (default to 4.3.1) | Ruby 2.5.1 | [https://brakemanscanner.org/](https://brakemanscanner.org/) |
 
-## Configuration via `sideci.yml`
+## Configuration via `sider.yml`
 
-Here are some example settings for Brakeman in `sideci.yml`, under `brakeman`:
+Here are some example settings for Brakeman in `sider.yml`, under `brakeman`:
 
 ```yaml
 linter:

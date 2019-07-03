@@ -11,9 +11,9 @@ hide_title: true
 | ----------------- | -------- | -------- |
 | >= 4.4.0, < 6.0 (default to 5.4.0) | Ruby 2.5.1 | [https://github.com/troessner/reek](https://github.com/troessner/reek) |
 
-## Configuration via `sideci.yml`
+## Configuration via `sider.yml`
 
-Here are some example settings for Reek in `sideci.yml`, under `reek`:
+Here are some example settings for Reek in `sider.yml`, under `reek`:
 
 ```yaml
 linter:

@@ -17,7 +17,7 @@ To start using SwiftLint, enable it in [Repository Settings](../../getting-start
 
 To customize SwiftLint, put a `.swiftlint.yml` file in your repository.
 
-## Configuration via `sideci.yml`
+## Configuration via `sider.yml`
 
 Here are example settings for SwiftLint under `swiftlint`:
 

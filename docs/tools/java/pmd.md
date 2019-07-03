@@ -17,7 +17,7 @@ To start using PMD, enable it in [Repository Settings](../../getting-started/rep
 
 ## Configuration
 
-You can customize PMD analysis by using `sideci.yml`:
+You can customize PMD analysis by using `sider.yml`:
 
 ```yaml
 linter:

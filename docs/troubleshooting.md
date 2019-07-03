@@ -49,7 +49,7 @@ You can also disable Sider for the repository if you are an admin of the reposit
 ## Why did a pull request fail to checkout?
 In many cases, the checkout failed will be resolved by retrying. However, if the error occurs in spite of several retries, the cause of the error is possible that the analyses have been taken a lot of time.
 
-You can ignore specific files to fix the problem. Write the settings to `sideci.yml` like below:
+You can ignore specific files to fix the problem. Write the settings to `sider.yml` like below:
 
 ```yaml
 linter:
