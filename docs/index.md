@@ -44,20 +44,22 @@ This section has documents about analysis tools which Sider supports. We have an
 ### Java
 
 <details open>
-  <summary>2 tools are available.</summary>
+  <summary>3 tools are available.</summary>
 
   * [Checkstyle](./tools/java/checkstyle.md)
   * [PMD](./tools/java/pmd.md)
+  * [JavaSee](./tools/java/javasee.md)
 </details>
 
 ### JavaScript and Flavors
 
 <details open>
-  <summary>4 tools are available.</summary>
+  <summary>5 tools are available.</summary>
 
   * [ESLint](./tools/javascript/eslint.md)
   * [JSHint](./tools/javascript/jshint.md)
   * [TSLint](./tools/javascript/tslint.md)
+  * [TyScan](./tools/javascript/tyscan.md)
   * [CoffeeLint](./tools/javascript/coffeelint.md)
 
 </details>
