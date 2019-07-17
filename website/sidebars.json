@@ -28,7 +28,8 @@
         "label": "Java",
         "ids": [
           "tools/java/checkstyle",
-          "tools/java/pmd"
+          "tools/java/pmd",
+          "tools/java/javasee"
         ]
       },
       {
@@ -38,6 +39,7 @@
           "tools/javascript/eslint",
           "tools/javascript/jshint",
           "tools/javascript/tslint",
+          "tools/javascript/tyscan",
           "tools/javascript/coffeelint"
         ]
       },
