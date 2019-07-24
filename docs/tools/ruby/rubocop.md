@@ -37,6 +37,8 @@ linter:
 
 #### `rails`
 
+> The option is ignored after `0.72.0`. Please use `rubocop-rails` plugin instead.
+
 This option controls whether to run Rails Cops. If it is omitted, Sider automatically determines whether to run Rails Cops or not.
 
 This option is used for the case that you do not wish Sider to run Rails Cops even though your project is a Ruby on Rails project.
