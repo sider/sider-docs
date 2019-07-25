@@ -9,7 +9,7 @@ hide_title: true
 
 | Supported Version | Language | Web Site |
 | ----------------- | -------- | -------- |
-| 1.16.0 | JavaScript(Node.js 11.5.0) | https://github.com/jashkenas/coffeescript |
+| 1.16.0 | JavaScript(Node.js 11.5.0) | https://github.com/clutchski/coffeelint |
 
 ## Getting Started
 
