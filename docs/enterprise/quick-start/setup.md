@@ -205,7 +205,6 @@ GITHUB_APP_OAUTH2_CLIENT_SECRET={{FIXME: Your GitHub App OAuth2 Client Secret}}
 GITHUB_APP_WEBHOOK_SECRET={{FIXME: Your GitHub App Webhook Secret}}
 GITHUB_CLIENT_ID={{FIXME: Your GitHub Enterprise OAuth2 client ID}}
 GITHUB_CLIENT_SECRET={{FIXME: Your GitHub Enterprise OAuth2 client secret}}
-GITHUB_OAUTH_HEAD_ENCRYPTION_KEY={{FIXME: Encryption key}}
 GITHUB_API_ENDPOINT=https://{{FIXME: Your GitHub Enterprise host name}}/api/v3/
 GITHUB_ENDPOINT=https://{{FIXME: Your GitHub Enterprise host name}}/
 CATPOST_BASE_URL=http://catpost_web:3000
@@ -240,7 +239,6 @@ ACTION_MAILER_DEFAULT_FROM_EMAIL={{FIXME: Default FROM Email address}}
 S3_BUCKET_NAME={{FIXME: Your S3 bucket name}}
 S3_REGION_NAME={{FIXME: Your AWS region name}}
 API_TOKEN={{FIXME: Catpost secret}}
-URL_ENCRYPTION_KEY={{FIXME: URL Encryption key}}
 ARCHIVE_ENCRYPTION_KEY={{FIXME: Archive Encryption key}}
 ARCHIVE_NAME_SECRET={{FIXME: Archive name secret}}
 GIT_REPOS_DIR=/var/git_repos
@@ -272,10 +270,7 @@ ACTION_MAILER_SMTP_PORT={{FIXME: SMTP server port number}}
 ACTION_MAILER_SMTP_AUTHENTICATION={{FIXME: SMTP authentication method}}
 ACTION_MAILER_SMTP_ENABLE_STARTSSL_AUTO=true
 ACTION_MAILER_DEFAULT_FROM_EMAIL={{FIXME: Default FROM Email address}}
-QUAY_ROBOT_NAME={{FIXME: Quay robot account name}}
-QUAY_ROBOT_PASSWORD={{FIXME: Quay robot account password}}
 API_SECRET={{FIXME: Setaria secret}}
-SSH_KEY_ENCRYPTION_KEY={{FIXME: SSH Key Encryption key}}
 TERM_CHILD=1
 QUEUE=*
 VERBOSE=1
@@ -312,7 +307,6 @@ LOGGLY_URL=https://logs-01.loggly.com/inputs/{{FIXME: Loggly token}}/tag/setaria
 | `GITHUB_APP_WEBHOOK_SECRET` | sideci | GitHub App Webhook secret. See "[Creating a new GitHub App for Sider](#creating-a-new-github-app-for-sider)". |
 | `GITHUB_CLIENT_ID` | sideci | Client ID you got when registering for an OAuth App. |
 | `GITHUB_CLIENT_SECRET` | sideci | Client Secret you got when registering for an OAuth App. |
-| `GITHUB_OAUTH_HEAD_ENCRYPTION_KEY` | sideci | Key that is used to encrypt an OAuth token for each user generated in GitHub. Set characters; you can get it with following [command](#command-to-get-keys). DO NOT CHANGE the value after you set it once because Sider fails to decrypt stored OAuth tokens. |
 | `GITHUB_API_ENDPOINT` | sideci | API endpoint that Sider uses to connect GitHub Enterprise; which is `https://[your-github-enterprise-host]/api/v3/`. |
 | `CATPOST_BASE_URL` | sideci | Set `http://catpost_web:3000`. If you would like to change the service name or port number on `docker-compose`, replace the URL with the name/number you set. |
 | `CATPOST_SECRET` | sideci | Set the same value of `API_TOKEN`. |
@@ -324,13 +318,9 @@ LOGGLY_URL=https://logs-01.loggly.com/inputs/{{FIXME: Loggly token}}/tag/setaria
 | `LOGGLY_URL` | ALL | URL provided by Loggly. Loggly is used for investigating problems. |
 | `S3_BUCKET_NAME` | catpost | The bucket name you got when you created a bucket. |
 | `S3_REGION_NAME` | catpost | The region name you got when you created a bucket. |
-| `URL_ENCRYPTION_KEY` | catpost | The key used to encrypt the URL that includes the OAuth token. Set characters; you can get it with following [command](#command-to-get-keys). |
 | `ARCHIVE_ENCRYPTION_KEY` | catpost | The key that is used to encrypt source code before analyzing. Set characters; you can get it with following [command](#command-to-get-keys). |
 | `ARCHIVE_NAME_SECRET` | catpost | The random data that is used to hash archived names of encrypted source code. Set characters; you can get it with following [command](#command-to-get-keys). |
 | `GIT_REPOS_DIR` | catpost | Directory names that Catpost stores cache to at local storage. Specify the file path on the container which is mounted on run. |
-| `SSH_KEY_ENCRYPTION_KEY` | setaria | The encryption key to encrypt the  SSH private key. It resolves private dependencies. Set characters; you can get it with following [command](#command-to-get-keys). DO NOT CHANGE the value after you set it once because Setaria fails to decrypt stored OAuth tokens and source code. |
-| `QUAY_ROBOT_NAME` | setaria | The robot name provided by Quay.io. It is used to pull Docker images of analyzers. |
-| `QUAY_ROBOT_PASSWORD` | setaria | The robot password provided by Quay.io. It is used to pull Docker images of analyzers. |
 
 
 ##### Command to get keys
@@ -413,7 +403,7 @@ volumes:
 Start containers and create a database and tables base with the `docker-compose.yml`.
 
 ```
-$ docker-compose run sideci_web bundle exec rake db:setup db:seed_fu
+$ docker-compose run sideci_web bundle exec rake db:setup
 $ docker-compose run catpost_web bundle exec rake db:setup
 $ docker-compose run setaria_web bundle exec rake db:setup
 ```

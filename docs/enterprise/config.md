@@ -77,11 +77,6 @@ Comma-separated list of recipients for error reporting emails.
 #### Example
     EXCEPTION_NOTIFIER_RECIPIENT_EMAILS=foo@example.com,bar@example.com
 
-### `GITHUB_OAUTH_HEAD_ENCRYPTION_KEY`
-
-Random string to encrypt GitHub credential.
-Note that changing this value will make all organizations invalid.
-
 ### `SECRET_KEY_BASE`
 
 Secret for encryption required by Rails.
@@ -121,6 +116,30 @@ See the reference manual for available options.
 
 #### Example
     SIDECI_TIMEZONE=Asia/Tokyo
+
+### `ENCRYPTION_SERVICE_KEY`
+
+|Introduced|Deprecated|
+|----------|----------|
+|201908|-|
+
+Random string to encrypt secret data.
+You cannot change this value once you set up.
+
+#### Example
+    ENCRYPTION_SERVICE_KEY=aQ8NSFFTrDjdYydClJKFOrLKgR6UzjvL
+
+### `ENCRYPTION_SERVICE_SALT`
+
+|Introduced|Deprecated|
+|----------|----------|
+|201908|-|
+
+32 bytes of random string to use for ENCRYPTION_SERVICE_KEY as a salt.
+You cannot change this value once you set up.
+
+#### Example
+    ENCRYPTION_SERVICE_SALT=q1eRUq0DqBgdEbKDvAvSNFBih6qyNrT5
 
 
 ## Database Configuration
@@ -373,6 +392,30 @@ You cannot change the value.
 #### Example
     QUEUE=*
 
+### `ENCRYPTION_SERVICE_KEY`
+
+|Introduced|Deprecated|
+|----------|----------|
+|201908|-|
+
+Random string to encrypt secret data.
+You cannot change this value once you set up.
+
+#### Example
+    ENCRYPTION_SERVICE_KEY=IppyCqZsWGu6Px1A2qQAoIdkr4J6h8S0
+
+### `ENCRYPTION_SERVICE_SALT`
+
+|Introduced|Deprecated|
+|----------|----------|
+|201908|-|
+
+32 bytes of random string to use for ENCRYPTION_SERVICE_KEY as a salt.
+You cannot change this value once you set up.
+
+#### Example
+    ENCRYPTION_SERVICE_SALT=EaDFh02Df7TzbfDUUBXn6bIdaISc5ou1
+
 
 ## Database Configuration
 
@@ -415,11 +458,6 @@ URL to connect Redis.
 
 
 ## Encryption Configuration
-
-### `URL_ENCRYPTION_KEY`
-
-32 bytes of random string to encrypt URL pointing to repositories.
-You cannot change this value once you set up.
 
 ### `ARCHIVE_ENCRYPTION_KEY`
 
@@ -517,11 +555,6 @@ Secret for encryption required by Rails.
 
 Random string to authenticate API access from sideci.
 
-### `SSH_KEY_ENCRYPTION_KEY`
-
-32 bytes of random string to encrypt SSH secret key associated to repositories.
-You cannot change this value once you set up.
-
 ### `EXCEPTION_NOTIFIER_RECIPIENT_EMAILS`
 
 Comma-separated list of recipients for error reporting emails.
@@ -560,6 +593,30 @@ Specify any value if you want to run the analyzers in `default` network of Docke
 
 #### Example
     RUNNER_USE_DEFAULT_NETWORK=1
+
+### `ENCRYPTION_SERVICE_KEY`
+
+|Introduced|Deprecated|
+|----------|----------|
+|201908|-|
+
+Random string to encrypt secret data.
+You cannot change this value once you set up.
+
+#### Example
+    ENCRYPTION_SERVICE_KEY=oFToypGCAekqPaPyK0P9vqty94nVuyNo
+
+### `ENCRYPTION_SERVICE_SALT`
+
+|Introduced|Deprecated|
+|----------|----------|
+|201908|-|
+
+32 bytes of random string to use for ENCRYPTION_SERVICE_KEY as a salt.
+You cannot change this value once you set up.
+
+#### Example
+    ENCRYPTION_SERVICE_SALT=anglwu4rgRrHkhBcdmPUOr7Nn7j8Wbyy
 
 
 ## Database Configuration
@@ -646,6 +703,3 @@ Bugsnag On-Premises endpoint.
 |201902|-|
 
 Bugsnag On-Premises session endpoint.
-
-
-

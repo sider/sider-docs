@@ -41,7 +41,7 @@ You have to stop Sider Enterprise during the update. Running an older version of
 We provide DB migrations and update scripts. You need to run the scripts to modify your database. Most Sider Enterprise releases require DB migrations which you can apply using the following commands.
 
 ```
-$ docker run quay.io/actcat/sideci:NEW_TAG bundle exec rake db:migrate db:seed_fu
+$ docker run quay.io/actcat/sideci:NEW_TAG bundle exec rake db:migrate
 $ docker run quay.io/actcat/catpost:NEW_TAG bundle exec rake db:migrate
 $ docker run quay.io/actcat/setaria:NEW_TAG bundle exec rake db:migrate
 ```
