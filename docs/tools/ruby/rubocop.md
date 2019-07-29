@@ -27,6 +27,8 @@ linter:
 
 ### Options
 
+You can use several options to more comfortable analysis to your project.
+
 | Name | Type | Description |
 | ---- | ---- | ----------- |
 | [`root_dir`](../../getting-started/custom-configuration.md#root_dir-option) | `string` | Directory in which the analyzer runs. |
@@ -35,7 +37,7 @@ linter:
 | [`rails`](#rails) | `boolean` | Add `--rails` flag. |
 | [`safe`](#safe) | `boolean` | Add `--safe` flag. Default: `false` |
 
-#### `rails`
+### `rails`
 
 > The option is ignored after the version `0.72.0`. Please use the [`rubocop-rails`](https://github.com/rubocop-hq/rubocop-rails) plugin instead.
 
@@ -49,7 +51,7 @@ linter:
     rails: false
 ```
 
-#### `safe`
+### `safe`
 
 This option controls to cops RuboCop inspects. If `true`, RuboCop will inspect cops which have been set `Safe: true` and `Enabled: true` in `.rubocop.yml`.
 

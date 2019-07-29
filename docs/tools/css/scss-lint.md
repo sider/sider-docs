@@ -33,7 +33,7 @@ You can use several options to fine-tune SCSS-Lint to your project:
 | ---- | ---- | ----------- |
 | [`config`](#config) | `string` | Specify configuration file for SCSS-Lint. |
 
-#### `config`
+### `config`
 
 This option allows you specify a configuration file. If you have a `.scss-lint.yml` file, use this option. You can use SCSS-Lint without this option.
 

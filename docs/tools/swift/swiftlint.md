@@ -43,23 +43,23 @@ You can use several options to fine-tune SwiftLint to your project.
 | [`lenient`](#lenient) | `boolean` | If `true`, downgrade serious violations to warnings and make warning threshold disabled. |
 | [`enable-all-rules`](#enable-all-rules) | `boolean` | If `true`, SwiftLint will run with all rules. |
 
-#### `ignore_warnings`
+### `ignore_warnings`
 
 This option allows you to ignore issues that are `severity: "warnings"`. The default value is `false`.
 
-#### `path`
+### `path`
 
 This option allows you to specify a path (file or directory) that gets analyzed.
 
-#### `config`
+### `config`
 
 This option allows you to specify a configuration file when running SwiftLint. If you have a `.swiftlint.yml`, use this option.
 
-#### `lenient`
+### `lenient`
 
 Lenient mode downgrades serious violations to warnings, and ignores warnings. The default value is `false`.
 
-#### `enable-all-rules`
+### `enable-all-rules`
 
 This option runs SwiftLint with all rules, including opt-in and disabled ones. `whitelist_rules` will be ignored. The default value is `false`.
 

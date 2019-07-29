@@ -35,7 +35,7 @@ You can use several options to make analysis fitter for your project.
 | [`npm_install`](#npm_install) | `boolean`,<br />`string` | Resolve dependencies when analyzing with `npm`. |
 | [`file`](#file) | `string` | Set configuration file for CoffeeLint. |
 
-#### `npm_install`
+### `npm_install`
 
 By using this option, you can install coffeelint and dependencies before analysis. This means you can install the version of CoffeeScript specified in `package.json`.
 
@@ -47,7 +47,7 @@ By using this option, you can install coffeelint and dependencies before analysi
 | `production` | `npm install --only=production --ignore-scripts` |
 | Other values | Sider analysis fails. |
 
-#### `file`
+### `file`
 
 This option controls the configuration file. If you have a `coffeelint.json` file, put the path to the file here. This option is not required.
 

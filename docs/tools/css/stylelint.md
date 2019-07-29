@@ -59,7 +59,7 @@ You can use several options to fine-tune stylelint to your project.
 | [`quiet`](#quiet) | `boolean` | If `true`, rules less severe than 'error' will be ignored. |
 | [`glob`](#glob) | `string` | Specify the file extensions inspected by stylelint. |
 
-#### `npm_install`
+### `npm_install`
 
 This option allows you to use `npm install` to install dependencies before analysis starts.
 
@@ -73,30 +73,30 @@ This option allows you to use `npm install` to install dependencies before analy
 
 Note that if your `package.json` contains dependecies which cannot be installed in the Sider container, `npm install` will fail. In this case, try using the `development` or `production` option. You can also make the failing dependency an `optionalDependency`.
 
-#### `config`
+### `config`
 
 This option allows you to specify a configuration file for stylelint. If you have your own settings file for stylelint, use this option. The valid extensions for `stylelintrc` are `.yml`, `.yaml`, `.json` and `.js`. You can also use `.stylelintc` and `package.json` for configuration.
 
-#### `syntax`
+### `syntax`
 
 This option allows you to control the non-standard syntaxes analyzed by PostCSS. You can specify `scss`, `sass`, `less` or `sugarss`. By default, non-standard syntaxes such as `.scss`, `.sass`,`.less` and `.sss` files are detected.
 
-#### `ignore-path`
+### `ignore-path`
 
 This option allows you to exclude files from analysis. By default stylelint detects and uses `.stylelintrc`, even if this option isn't set. If you'd like to use other ignore files, such as `.gitignore`, `.eslintignore` and so on, put them in this option.
 
-#### `ignore-disables`
+### `ignore-disables`
 
 This option allows you to ignore all disable comments, i.e. `/* stylelint-disable block-no-empty */`. If you would like to ignore these comments, set this to `true`.
 
-#### `report-needless-disables`
+### `report-needless-disables`
 
 This option allows you to control whether `stylelint-disable` comments are reported or not.
 
-#### `quiet`
+### `quiet`
 
 This option allows you to ignore warnings and only report errors.
 
-#### `glob`
+### `glob`
 
 This option allows you to specify the file extensions which are inspected by stylelint. By default, `**/*.{css,less,scss,sss}` files are included.

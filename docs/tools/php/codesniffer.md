@@ -65,7 +65,7 @@ You can use several options to fine-tune PHP\_CodeSniffer to your project:
 | [`encoding`](#encoding) | `string` | Set file encoding. |
 | [`ignore`](#ignore) | `string` | Excludes files or directories from analysis. |
 
-#### `version`
+### `version`
 
 This option controls which major version of PHP\_CodeSniffer is used. The default value is `3`.
 
@@ -77,13 +77,13 @@ linter:
     version: 2
 ```
 
-#### `dir`
+### `dir`
 
 This option controls directories Sider inspects. The default value is dependent on the frameworks PHP\_CodeSniffer supports. If you are not using any frameworks or are using a framework PHP\_CodeSniffer does not support, `./` is used.
 
 If you would like to exclude specific directories, you can specify them in a custom ruleset file.
 
-#### `standard`
+### `standard`
 
 This option controls coding standard of your project. If you leave this value empty, Sider tries to detect the standard automatically.
 
@@ -98,14 +98,14 @@ The installed coding standards are MySource, PEAR, PSR1, PSR2, Squiz, Zend, Symf
 
 You can also define your own standard, and enter the path to the config file here.
 
-#### `extensions`
+### `extensions`
 
 This option controls extensions of files Sider inspects. The default value is `php`.
 
-#### `encoding`
+### `encoding`
 
 This option controls file encoding.
 
-#### `ignore`
+### `ignore`
 
 A comma-separated list of patterns to ignore files and directories by.
