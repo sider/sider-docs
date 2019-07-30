@@ -31,9 +31,14 @@ If you need more customization, use standard ESLint config files. For instance, 
 
 ## Default Configuration
 
-Sider provides a recommended configuration for ESLint. The configuration is used when you haven't added any ESLint configurations in your `sider.yml` and don't have the default config files, `.eslintrc`, `.eslintrc.yml`, `.eslintrc.yaml`, or `.eslintrc.json` in your repository.
+Sider prepares the following configuration to default. The configuration is used when you haven't added any ESLint configurations in your `sider.yml` and don't have the default config files, `.eslintrc`, `.eslintrc.yml`, `.eslintrc.yaml`, or `.eslintrc.json` in your repository.
 
-* [Sider recommended settings for ESLint](https://github.com/actcat/sideci_config/blob/master/javascript/eslint/eslintrc)
+```yaml
+extends: 'eslint:recommended'
+rules:
+  no-undef: off
+  no-unused-vars: off
+```
 
 ## Configuration via `sider.yml`
 
