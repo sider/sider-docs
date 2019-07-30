@@ -71,7 +71,7 @@ You can use several options to make analysis fitter for your project.
 
 For details of the options, check following items.
 
-### `npm_install`
+#### `npm_install`
 
 This option controls `npm` command invocation. Using this option, you can install dependencies before analysis.
 
@@ -85,7 +85,7 @@ This option controls `npm` command invocation. Using this option, you can instal
 
 If your `package.json` contains a dependency which cannot be installed in the Sider container, `npm install` fails. The analysis will continue, but the results may be inaccurate. In this case, try using the `development` or `production` options, or set the dependency as an `optionalDependency`.
 
-### `dir`
+#### `dir`
 
 This option controls name of directory to pass to `eslint`. The default value is `.`. Declare directory to analyze like this:
 
