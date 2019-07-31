@@ -27,9 +27,28 @@ The latest versions of Python 2 or Python 3 can be used.
 
 Sider provides a default configuration for Flake8. If your repository does not include `.flake8`, `setup.cfg` or `tox.ini`, our default configuration will be used.
 
-Our default configuration is available here:
+Our default configuration is here:
 
-* [Sider's configuration for Flake8](https://github.com/actcat/sideci_config/blob/master/python/flake8/sideci_config.ini)
+```ini
+[flake8]
+ignore =
+  # Ignore all warnings
+  W,
+  # Ignore all indentation rules
+  E1,
+  # Ignore all whitespace rules
+  E2,
+  # Ignore all blank line rules
+  E3,
+  # Ignore all import rules
+  E4,
+  # Ignore backslash style rule
+  E502,
+  # Ignore oneline statement rules
+  E70,
+
+max-line-length = 200
+```
 
 ## Configuration via `sider.yml`
 

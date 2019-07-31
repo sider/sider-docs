@@ -45,9 +45,38 @@ linter:
 
 ## Default Configuration
 
-If you leave the `rule` option undefined in `sider.yml`, Sider runs PHPMD with our recommended settings. The recommended settings are available in our GitHub repository:
+If you leave the `rule` option undefined in `sider.yml`, Sider runs PHPMD with the following configuration to default:
 
-* [Sider recommended settings for PHPMD](https://github.com/actcat/sideci_config/blob/master/php/phpmd/sideci_config.xml)
+```xml
+<?xml version="1.0"?>
+<ruleset name="Sider Recommended ruleset"
+         xmlns="http://pmd.sf.net/ruleset/1.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://pmd.sf.net/ruleset/1.0.0
+                     http://pmd.sf.net/ruleset_xml_schema.xsd"
+         xsi:noNamespaceSchemaLocation="
+                     http://pmd.sf.net/ruleset_xml_schema.xsd">
+  <description>
+    This ruleset is recommended by Sider.
+    It contains only generic rules in all projects.
+  </description>
+
+  <rule ref="rulesets/codesize.xml">
+    <exclude name="NPathComplexity"></exclude>
+  </rule>
+  <rule ref="rulesets/controversial.xml">
+    <exclude name="CamelCaseClassName"></exclude>
+    <exclude name="CamelCasePropertyName"></exclude>
+    <exclude name="CamelCaseMethodName"></exclude>
+    <exclude name="CamelCaseParameterName"></exclude>
+    <exclude name="CamelCaseVariableName"></exclude>
+  </rule>
+  <rule ref="rulesets/design.xml" />
+  <rule ref="rulesets/unusedcode.xml">
+    <exclude name="UnusedFormalParameter"></exclude>
+  </rule>
+</ruleset>
+```
 
 ## Configuration via `sider.yml`
 

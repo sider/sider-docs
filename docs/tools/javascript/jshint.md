@@ -19,9 +19,29 @@ To customize the configuration, use the standard `.jshintrc` or `.jshintignore` 
 
 ## Default Configuration
 
-Sider uses its default configuration where there is no custom configuration preset:
+Sider uses the default configuration where there is no custom configuration preset. The configuration is here:
 
-* [Sider's configuration for jshintrc](https://github.com/actcat/sideci_config/blob/master/javascript/jshint/sideci_jshintrc)
+```json5
+{
+  // Relaxes
+  "asi": true,
+  "sub": true,
+  "eqnull": true,
+
+  // Environments
+  "jquery": true,
+  "browser": true,
+
+  "esversion": 2015
+}
+```
+
+In addition, we uses `.jshintignore` to default with following setting:
+
+```
+public/js/**/*.js
+**/*.min.js
+```
 
 ## Configuration via `sider.yml`
 

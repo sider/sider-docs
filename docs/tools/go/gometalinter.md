@@ -33,9 +33,29 @@ If `glide.yaml` contains a dependency to a library in a private repository, plea
 
 ## Default Configuration
 
-If your `sider.yml` does not contain `config` option, Sider will use the default configuration. The default configuration is available in our repository.
+If your `sider.yml` does not contain the [`config`](#config) option, Sider will use the default configuration as follows:
 
-* [Sider's configuration for Go Meta Linter](https://github.com/actcat/sideci_config/blob/master/go/gometalinter/gometalinter.json)
+```json
+{
+  "Linters": {
+    "gosec": "gosec -fmt=csv -exclude=G103,G104,G201,G202,G204,G301,G302 {path}/*.go:^(?P<path>.*?\\.go),(?P<line>\\d+),(?P<message>[^,]+,[^,]+,[^,]+)"
+  },
+  "Disable": [
+    "aligncheck",
+    "structcheck",
+    "varcheck",
+    "dupl",
+    "errcheck",
+    "goimports",
+    "golint",
+    "gotype",
+    "lll",
+    "misspell",
+    "vetshadow"
+  ],
+  "Cyclo": 15
+}
+```
 
 ## Configuration via `sider.yml`
 
