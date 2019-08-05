@@ -34,6 +34,13 @@
       },
       {
         "type": "subcategory",
+        "label": "Kotlin",
+        "ids": [
+          "tools/kotlin/ktlint"
+        ]
+      },
+      {
+        "type": "subcategory",
         "label": "JavaScript and Flavors",
         "ids": [
           "tools/javascript/eslint",

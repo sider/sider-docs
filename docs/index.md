@@ -51,6 +51,14 @@ This section has documents about analysis tools which Sider supports. We have an
   * [JavaSee](./tools/java/javasee.md)
 </details>
 
+### Kotlin
+
+<details open>
+  <summary>1 tool is available.</summary>
+
+  * [ktlint](./tools/kotlin/ktlint.md)
+</details>
+
 ### JavaScript and Flavors
 
 <details open>
