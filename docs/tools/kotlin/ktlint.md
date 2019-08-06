@@ -9,9 +9,10 @@ hide_title: true
 
 | Supported Version | Language | Web Site |
 | ----------------- | -------- | -------- |
-| 0.34.2 [1] | Kotlin | [https://github.com/pinterest/ktlint](https://github.com/pinterest/ktlint) |
+| 0.34.2 [1][2] | Kotlin | [https://github.com/pinterest/ktlint](https://github.com/pinterest/ktlint) |
 
 - [1] You can use Gradle to install any version of ktlint, but the version may not compatible with Sider.
+- [2] You can use Maven to install any version of ktlint, but the version may not compatible with Sider.
 
 ## Getting Started
 
@@ -48,6 +49,29 @@ Essentially, it executes the following command.
 
 ```
 $ ./gradlew -q [task]
+```
+
+The `format` option tells Sider which format is generated from the gradle task.
+Sider supports the default `checkstyle`, `json`, and `plain` formats.
+
+### Using Maven integration
+
+If you have set up the Maven integration for ktlint, you can use it.
+
+```yaml
+linter:
+  ktlint:
+    maven:
+      goal: verify
+      format: checkstyle
+      output: target/ktlint.xml
+```
+
+Sider runs `mvn` in the repository with specified _goal_, and use the output.
+Essentially, it executes the following command.
+
+```
+$ mvn [goal]
 ```
 
 The `format` option tells Sider which format is generated from the gradle task.
@@ -124,3 +148,31 @@ The `plain` format does not print _rule id_ which is used to identify issues in 
 
 The path to the file which contains ktlint output.
 A string, defaults to empty which tells sider to read the output from Gradle stdout.
+
+### `maven`
+
+```yaml
+linter:
+  ktlint:
+    maven:
+      goal: verify
+      format: checkstyle
+      output: target/ktlint.xml
+```
+
+### `maven.task` (required)
+
+Name of the goal for ktlint execution.
+
+### `maven.format` (required)
+
+The format of the output from the _task_.
+One of the `plain`, `json`, and `checkstyle`
+
+We recommend using `json` or `checkstyle` for Sider integration.
+The `plain` format does not print _rule id_ which is used to identify issues in Sider.
+
+### `maven.output` (required)
+
+The path to the file which contains ktlint output.
+Should be a string.
