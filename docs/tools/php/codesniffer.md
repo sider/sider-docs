@@ -9,7 +9,7 @@ hide_title: true
 
 | Supported Version | Language | Web Site |
 | ----------------- | -------- | -------- |
-| 2.9.1, 3.4.2 | PHP 7.3.6 | [https://pear.php.net/package/PHP\_CodeSniffer](https://pear.php.net/package/PHP_CodeSniffer) |
+| 3.4.2 | PHP 7.3.6 | [https://pear.php.net/package/PHP\_CodeSniffer](https://pear.php.net/package/PHP_CodeSniffer) |
 
 ## Getting Started
 
@@ -58,7 +58,7 @@ You can use several options to fine-tune PHP\_CodeSniffer to your project:
 
 | Name | Type | Description |
 | ---- | ---- | ----------- |
-| [`version`](#version) | `string`,<br />`integer` | Using PHP\_CodeSniffer version 2 or 3. |
+| [`version`](#version) | `string`,<br />`integer` | Declare PHP\_CodeSniffer version explicitly. |
 | [`dir`](#dir) | `string` | Set targets to analyze. |
 | [`standard`](#standard) | `string` | Set coding standard or your config file when analyzing. |
 | [`extensions`](#extensions) | `string` | Set extensions to analyze. |
@@ -68,14 +68,7 @@ You can use several options to fine-tune PHP\_CodeSniffer to your project:
 #### `version`
 
 This option controls which major version of PHP\_CodeSniffer is used. The default value is `3`.
-
-If you wish to use PHP\_CodeSniffer 2.9.x, set this option to `2`:
-
-```yaml
-linter:
-  code_sniffer:
-    version: 2
-```
+Sider has stopped supporting v2 of PHP\_CodeSniffer. Therfore, if you set `2` in this option, Sider will execute v3.
 
 #### `dir`
 
