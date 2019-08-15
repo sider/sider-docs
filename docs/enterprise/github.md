@@ -16,7 +16,7 @@ Note that we assume your Sider Enterprise is running on `https://sider.example.c
 
 Create a new OAuth app on your GitHub Enterprise. Read the [Creating an OAuth App](https://developer.github.com/apps/building-oauth-apps/creating-an-oauth-app/) guide for details.
 
-The new OAuth app should have the following properties. 
+The new OAuth app should have the following properties.
 
 * Application name: `Sider`
 * Homepage URL: `https://sider.example.com`
@@ -43,7 +43,8 @@ The new GitHub app should have the following properties.
   * Pull requests: `Read & Write`
   * Commit statuses: `Read & Write`
   * Organization members: `Read-only`
-  * Leave other permissions `No access`
+* User permissions: Setup the permissions as the following.
+  * Emails: `Read-only`
 * Subscribe to events: Check the following events to subscribe them.
   * `Member`
   * `Organization`
@@ -52,6 +53,9 @@ The new GitHub app should have the following properties.
   * `Pull request review comment`
   * `Repository`
 * Where can this GitHub App be installed?: `Any account`
+
+Note that you don't have to set other permissions on "Permissions" and "User permissions" sections.
+In other words, you can leave them `No access`.
 
 Generate a private key, and download the PEM file. Sider Enterprise requires a base64 encoded PEM file content.
 
