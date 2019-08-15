@@ -186,6 +186,7 @@ You can also use regular expressions as the `exclude` pattern:
 branches:
   exclude:
     - /^release-.*$/
+    - /^dependabot/
 ```
 
-In the above example, all branches such as `release-20190304` are ignored.
+In the above example, all branches such as `release-20190304` or `dependabot/bundler/aws-partitions-1.202.0` are ignored.
