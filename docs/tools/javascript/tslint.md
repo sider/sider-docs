@@ -7,9 +7,9 @@ hide_title: true
 
 # TSLint
 
-| Supported Version | Language | Web Site |
+| Supported Version | Language | Website |
 | ----------------- | -------- | -------- |
-| Optional (default to 5.18.0) | JavaScript(Node.js 11.5.0) | [https://palantir.github.io/tslint/](https://palantir.github.io/tslint/) |
+| Optional (default to 5.18.0) | JavaScript (Node.js 12.7.0) | https://palantir.github.io/tslint |
 
 ## Getting Started
 
@@ -114,4 +114,3 @@ The option is deprecated in version 5.8.0 of TSLint. TSLint no longer does type 
 #### `glob`
 
 This option controls files that TSLint inspects. By default, `.ts` and `.tsx` files are inspected.
-

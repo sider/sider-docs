@@ -7,9 +7,9 @@ hide_title: true
 
 # ESLint
 
-| Supported Version | Language | Web Site |
+| Supported Version | Language | Website |
 | ----------------- | -------- | -------- |
-| Optional (default to 5.16.0) | JavaScript(Node.js 11.5.0) | [https://eslint.org](https://eslint.org) |
+| Optional (default to 5.16.0) | JavaScript (Node.js 12.7.0) | https://eslint.org |
 
 ## Getting Started
 
@@ -163,4 +163,3 @@ If your repository does not contain a `package.json` or have `npm_install:` set 
 1. Read `eslintrc` \(or equivalent\) and find plugins, parsers, and configurations to install
 2. Try installing the `@latest` of the libraries and their peer dependencies
 3. Install `eslint@latest` if `eslint` is not yet installed
-

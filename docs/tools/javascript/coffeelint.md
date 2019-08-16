@@ -7,9 +7,9 @@ hide_title: true
 
 # CoffeLint
 
-| Supported Version | Language | Web Site |
+| Supported Version | Language | Website |
 | ----------------- | -------- | -------- |
-| 1.16.0 | JavaScript(Node.js 11.5.0) | https://github.com/clutchski/coffeelint |
+| 1.16.0 | JavaScript (Node.js 12.7.0) | https://github.com/clutchski/coffeelint |
 
 ## Getting Started
 
@@ -50,4 +50,3 @@ By using this option, you can install coffeelint and dependencies before analysi
 #### `file`
 
 This option controls the configuration file. If you have a `coffeelint.json` file, put the path to the file here. This option is not required.
-
