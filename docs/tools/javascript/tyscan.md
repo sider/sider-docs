@@ -7,9 +7,9 @@ hide_title: true
 
 # TyScan
 
-| Supported Version | Language | Web Site |
+| Supported Version | Language | Website |
 | ----------------- | -------- | -------- |
-| Optional (default to 0.2.1) | JavaScript(Node.js 11.5.0) | [https://github.com/sider/tyscan](https://github.com/sider/tyscan) |
+| Optional (default to 0.2.1) | JavaScript (Node.js 12.7.0) | https://github.com/sider/tyscan |
 
 ## Getting Started
 

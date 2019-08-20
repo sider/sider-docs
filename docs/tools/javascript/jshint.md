@@ -7,9 +7,9 @@ hide_title: true
 
 # JSHint
 
-| Supported Version | Language | Web Site |
+| Supported Version | Language | Website |
 | ----------------- | -------- | -------- |
-| 2.10.2 | JavaScript(Node.js 11.5.0) | [https://jshint.com/](https://jshint.com/) |
+| 2.10.2 | JavaScript (Node.js 12.7.0) | https://jshint.com |
 
 ## Getting Started
 
@@ -68,4 +68,3 @@ The directory where the analysis is performed. It is passed as an argument to JS
 #### `config`
 
 This option allows you to use your own configuration file for JSHint. If you have a `.jshintrc` file, use this option.
-
