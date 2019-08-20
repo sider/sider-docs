@@ -79,7 +79,7 @@ This option allows you to specify a configuration file for stylelint. If you hav
 
 #### `syntax`
 
-This option allows you to control the non-standard syntaxes analyzed by PostCSS. You can specify `scss`, `sass`, `less` or `sugarss`. By default, non-standard syntaxes such as `.scss`, `.sass`,`.less` and `.sss` files are detected.
+This option allows you to control the non-standard syntaxes analyzed by PostCSS. You can specify `scss`, `sass`, `less` or `sugarss`. By default, non-standard syntaxes such as `.scss`, `.sass`, `.less` and `.sss` files are detected.
 
 #### `ignore-path`
 
@@ -99,4 +99,4 @@ This option allows you to ignore warnings and only report errors.
 
 #### `glob`
 
-This option allows you to specify the file extensions which are inspected by stylelint. By default, `**/*.{css,less,scss,sss}` files are included.
+This option allows you to specify the file extensions which are inspected by stylelint. By default, `**/*.{css,less,sass,scss,sss}` files are included.
