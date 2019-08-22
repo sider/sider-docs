@@ -7,7 +7,7 @@ hide_title: true
 
 # SwiftLint
 
-| Supported Version | Language | Web Site |
+| Supported Version | Language | Website |
 | ----------------- | -------- | -------- |
 | 0.34.0 | Swift 4.2.1 | [https://github.com/realm/SwiftLint](https://github.com/realm/SwiftLint) |
 

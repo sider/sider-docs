@@ -7,7 +7,7 @@ hide_title: true
 
 # Checkstyle
 
-| Supported Version | Language | Web Site |
+| Supported Version | Language | Website |
 | ----------------- | -------- | -------- |
 | 8.23 | Java 8 | [http://checkstyle.sourceforge.net/](http://checkstyle.sourceforge.net/) |
 

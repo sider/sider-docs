@@ -7,7 +7,7 @@ hide_title: true
 
 # Phinder
 
-| Supported Version | Language | Web Site |
+| Supported Version | Language | Website |
 | ----------------- | -------- | -------- |
 | 0.9.2 | PHP 7.3.6 | [https://github.com/sider/phinder](https://github.com/sider/phinder) |
 

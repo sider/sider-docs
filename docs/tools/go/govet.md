@@ -7,7 +7,7 @@ hide_title: true
 
 # go vet
 
-| Language | Web Site |
+| Language | Website |
 | -------- | -------- |
 | Go 1.8 | [https://golang.org/cmd/vet/](https://golang.org/cmd/vet/) |
 

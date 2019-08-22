@@ -7,7 +7,7 @@ hide_title: true
 
 # Rails Best Practices
 
-| Version Constraints | Language | Web Site |
+| Version Constraints | Language | Website |
 | ----------------- | -------- | -------- |
 | >= 1.19.1, < 2.0 (default to 1.19.4) | Ruby 2.5.1 | [https://rails-bestpractices.com/](https://rails-bestpractices.com/) |
 

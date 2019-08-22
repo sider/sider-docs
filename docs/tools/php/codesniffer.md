@@ -7,7 +7,7 @@ hide_title: true
 
 # PHP_CodeSniffer
 
-| Supported Version | Language | Web Site |
+| Supported Version | Language | Website |
 | ----------------- | -------- | -------- |
 | 3.4.2 | PHP 7.3.6 | [https://pear.php.net/package/PHP\_CodeSniffer](https://pear.php.net/package/PHP_CodeSniffer) |
 
