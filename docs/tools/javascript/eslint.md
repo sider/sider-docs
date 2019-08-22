@@ -7,34 +7,47 @@ hide_title: true
 
 # ESLint
 
-| Supported Version | Language | Website |
-| ----------------- | -------- | -------- |
-| Optional (default to 5.16.0) | JavaScript (Node.js 12.7.0) | https://eslint.org |
+| Supported Version           | Language   | Runtime        | Website            |
+| --------------------------- | ---------- | -------------- | ------------------ |
+| 3.19.0+ (default to 5.16.0) | JavaScript | Node.js 12.7.0 | https://eslint.org |
 
 ## Getting Started
 
-To start using ESLint in Sider, declare it as a dependency in your `package.json`.
+To start using ESLint, enable it in your [repository settings](../../getting-started/repository-settings.md).
+After enabled, Sider will automatically analyze your JavaScript files with the default version and [default configuration](#default-configuration). Or if you already have configured ESLint, Sider will install your dependencies and analyze with your configuration.
 
-```bash
-$ npm install eslint -D
+But if you want to customize more ESLint with some plugins or shareable configurations, install ESLint first:
+
+```shell
+$ npm install eslint --save-dev
 ```
 
-Add `sider.yml` to your repository:
+For example if you are using React, you may need the ESLint plugin for React:
+
+```shell
+$ npm install eslint-plugin-react --save-dev
+```
+
+Next, you may have to create your `.eslintrc.*` file(s) and configure ESLint with them.
+For more details, see [the ESLint documentation](https://eslint.org/docs/user-guide/getting-started).
+
+Then, if you need more customization, you can do it by adding a `sider.yml` file to your repository. For example, if you want to analyze React files in a `frontend/` directory, you may configure your `sider.yml` as follows:
 
 ```yaml
 linter:
   eslint:
-    npm_install: true
+    dir: "frontend/"
+    ext: ".js,.jsx"
 ```
 
-If you need more customization, use standard ESLint config files. For instance, use `.eslintrc` to customize rules, and `.eslintignore` to specify files to ignore during analysis.
+For more details, see the following sections.
 
 ## Default Configuration
 
-Sider prepares the following configuration to default. The configuration is used when you haven't added any ESLint configurations in your `sider.yml` and don't have the default config files, `.eslintrc`, `.eslintrc.yml`, `.eslintrc.yaml`, or `.eslintrc.json` in your repository.
+Sider prepares the following configuration by default. The configuration is used when you have no ESLint configurations in your repository or `sider.yml`.
 
 ```yaml
-extends: 'eslint:recommended'
+extends: "eslint:recommended"
 rules:
   no-undef: off
   no-unused-vars: off
@@ -42,57 +55,40 @@ rules:
 
 ## Configuration via `sider.yml`
 
-Put settings for ESLint under `eslint`:
+Here is an example for ESLint:
 
 ```yaml
 linter:
   eslint:
-    npm_install: true
     dir: frontend/app
-    config: '.myeslintrc'
-    ext: '.js,.jsx,.es6'
-    ignore-path: .gitignore
+    config: .my_eslintrc
+    ext: ".js,.jsx,.es6"
+    ignore-path: .my_eslintignore
     no-ignore: true
-    ignore-pattern: /src/vendor/*
-    global: require,exports:true welcome.js
+    ignore-pattern: "/src/vendor/*"
+    global: "require,exports:true"
     quiet: true
 ```
 
-### Options
+You can use the following options to make analysis fitter for your project.
 
-You can use several options to make analysis fitter for your project.
+| Name                                | Type                      | Default | Description                                                                                                        |
+| ----------------------------------- | ------------------------- | ------- | ------------------------------------------------------------------------------------------------------------------ |
+| `npm_install`                       | -                         | -       | See [here](../../getting-started/custom-configuration.md#npm_install-option).                                      |
+| [`dir`](#dir)                       | `string`, `array<string>` | `.`     | Directories to analyze.                                                                                            |
+| [`config`](#config)                 | `string`                  | -       | [`--config`](https://eslint.org/docs/user-guide/command-line-interface#-c---config) option of ESLint.              |
+| [`ext`](#ext)                       | `string`                  | `.js`   | [`--ext`](https://eslint.org/docs/user-guide/command-line-interface#--ext) option of ESLint.                       |
+| [`ignore-path`](#ignore-path)       | `string`                  | -       | [`--ignore-path`](https://eslint.org/docs/user-guide/command-line-interface#--ignore-path) option of ESLint.       |
+| [`no-ignore`](#no-ignore)           | `boolean`                 | `false` | [`--no-ignore`](https://eslint.org/docs/user-guide/command-line-interface#--no-ignore) option of ESLint.           |
+| [`ignore-pattern`](#ignore-pattern) | `string`, `array<string>` | -       | [`--ignore-pattern`](https://eslint.org/docs/user-guide/command-line-interface#--ignore-pattern) option of ESLint. |
+| [`global`](#global)                 | `string`                  | -       | [`--global`](https://eslint.org/docs/user-guide/command-line-interface#--global) option of ESLint.                 |
+| [`quiet`](#quiet)                   | `boolean`                 | `false` | [`--quiet`](https://eslint.org/docs/user-guide/command-line-interface#--quiet) option of ESLint.                   |
 
-| Name | Type | Description |
-| ---- | ---- | ----------- |
-| [`npm_install`](#npm_install) | `boolean`,<br />`string` | Resolve dependencies when analyzing with `npm`. |
-| [`dir`](#dir) | `string`,<br />`array<string>` | Set files or directories name to analyze. |
-| [`config`](#config) | `string` | Set configuration file for ESLint. |
-| [`ext`](#ext) | `string` | Specify file extensions inspected by ESLint. |
-| [`ignore-path`](#ignore-path) | `string` | Set ignore file as necessary to exclude files from analysis. |
-| [`ignore-pattern`](#ignore-pattern) | `string`,<br />`array<string>` | Set ignore patterns to exclude files from analysis. |
-| [`no-ignore`](#no-ignore) | `boolean` | If `true`, disable excluded files from ignore settings of ESLint. |
-| [`global`](#global) | `string` | Define global variables with this option. |
-| [`quiet`](#quiet) | `boolean` | If `true`, ESLint reports only error. |
+For details of the options, check the following sections and [the ESLint documentation](https://eslint.org/docs/user-guide/command-line-interface#options).
 
-For details of the options, check following items.
+### `dir`
 
-#### `npm_install`
-
-This option controls `npm` command invocation. Using this option, you can install dependencies before analysis.
-
-| Value | Execution Command |
-| :---- | :---------------- |
-| `true` | `npm install --ignore-scripts` |
-| `false` | None. |
-| `development` | `npm install --only=development --ignore-scripts` |
-| `production` | `npm install --only=production --ignore-scripts` |
-| Other values | Sider analysis fails. |
-
-If your `package.json` contains a dependency which cannot be installed in the Sider container, `npm install` fails. The analysis will continue, but the results may be inaccurate. In this case, try using the `development` or `production` options, or set the dependency as an `optionalDependency`.
-
-#### `dir`
-
-This option controls name of directory to pass to `eslint`. The default value is `.`. Declare directory to analyze like this:
+This option allows you to specify a directory to analyze. For example:
 
 ```yaml
 linter:
@@ -100,7 +96,7 @@ linter:
     dir: frontend/src
 ```
 
-If you would like to analyze multiple directories with Sider, you can set them like this:
+Also, you can specify multiple directories or glob patterns:
 
 ```yaml
 linter:
@@ -108,58 +104,33 @@ linter:
     dir:
       - frontend/src
       - app/assets/javascripts
-      - public/assets/javascripts
+      - "**/__tests__/**"
 ```
 
-#### `config`
+### `config`
 
-This option allows you specify an additional configuration file. ESLint uses your `.eslintrc{.yaml,.yml,.json}` in the root directory of your project by default, so you don't need to use this option if you have used one of the default filenames. If your ESLint config file has a different name, or is not in the root directory, you should use this option:
+This option allows you to specify an additional configuration file.
 
-```yaml
-linter:
-  eslint:
-    options:
-      config: lint_yml/.eslintrc
-```
+### `ext`
 
-#### `ext`
+This option allows you to specify file extensions to analyze.
 
-This option controls file extensions. By default, only `.js` files are inspected.
+### `ignore-path`
 
-#### `ignore-path`
+This option allows you to exclude files from analysis by your ignore file.
 
-This option allows you to exclude files from analysis. By default ESLint detects and uses `.eslintrc` even if you don't use this option. If you'd like to use other ignore files, such as `.gitignore`, put them in this option.
+### `no-ignore`
 
-#### `no-ignore`
+This option allows you to disable the use of ignore files or patterns.
 
-This option controls use of ignore files or patterns to disable.
+### `ignore-pattern`
 
-#### `ignore-pattern`
+This option allows you to ignore files by patterns.
 
-This option allows you to ignore files by pattern. It must be a string or an array.
+### `global`
 
-#### `global`
+This option allows you to define global variables. It requires a comma-separated string.
 
-This option controls definition of global variables. It requires a comma-separated string.
+### `quiet`
 
-Please see here to learn more about ESLint's command line interface: [ESLint - Command Line Interface](https://eslint.org/docs/user-guide/command-line-interface).
-
-#### `quiet`
-
-This option controls warnings. When `true`, ESLint will only report errors (and ignore warnings).
-
-## Troubleshooting
-
-### What if our repo does not have `package.json`?
-
-> We generally recommend using `npm install` to install dependencies. This standard way allows us to handle your dependencies correctly. This way, we'll never install an ESLint version different from the one you want to use.
->
-> However, we also try to install dependencies even if `package.json` cannot be found in your repository. This mechanism is for backward compatibility. It is unstable and unreliable, and we are no longer actively supporting it.
->
-> Put `package.json` in your repository and set  `npm_install: true`. This is stable and future-proof.
-
-If your repository does not contain a `package.json` or have `npm_install:` set to `true`, Sider tries to install required npm packages as the following:
-
-1. Read `eslintrc` \(or equivalent\) and find plugins, parsers, and configurations to install
-2. Try installing the `@latest` of the libraries and their peer dependencies
-3. Install `eslint@latest` if `eslint` is not yet installed
+This option allows you to suppress warnings. When `true`, only errors are reported.

@@ -7,93 +7,94 @@ hide_title: true
 
 # TSLint
 
-| Supported Version | Language | Website |
-| ----------------- | -------- | -------- |
-| Optional (default to 5.18.0) | JavaScript (Node.js 12.7.0) | https://palantir.github.io/tslint |
+| Supported Version          | Language   | Runtime        | Website                           |
+| -------------------------- | ---------- | -------------- | --------------------------------- |
+| 5.0.0+ (default to 5.18.0) | TypeScript | Node.js 12.7.0 | https://palantir.github.io/tslint |
 
 ## Getting Started
 
-To start using TSLint in Sider, declare it as a dependency in `package.json` in your repository.
+To start using TSLint, enable it in your [repository settings](../../getting-started/repository-settings.md).
+After enabled, Sider will automatically analyze your TypeScript files with the default version and [default configuration](#default-configuration). Or if you already have configured TSLint, Sider will install your dependencies and analyze with your configuration.
 
-```sh
-$ npm install tslint -D
+But if you have no configuration yet and need more customization, install TSLint first:
+
+```shell
+$ npm install tslint --save-dev
 ```
 
-If you need customization, use the standard TSLint config file. Create a `tslint.json` file in the root directory of your repository.
+Next, create the configuration file (`tslint.json`):
+
+```shell
+$ npx tslint --init
+```
+
+Then, edit the configuration file as you want. For more details about the configuration, please see [the TSLint documentation](https://palantir.github.io/tslint/usage/configuration).
+
+## Default Configuration
+
+Sider prepares the following configuration by default. Sider uses the configuration when you have no configurations.
+
+```json
+{
+  "defaultSeverity": "error",
+  "extends": ["tslint:recommended"],
+  "jsRules": {},
+  "rules": {},
+  "rulesDirectory": []
+}
+```
 
 ## Configuration via `sider.yml`
 
-Here is an example setting for TSLint under `tslint`:
+Here is an example for TSLint:
 
 ```yaml
 linter:
   tslint:
-    npm_install: true
-    config: 'lint_yml/tslint.json'
-    exclude: 'node_modules/**'
-    project: 'tsconfig.json'
-    rules-dir: 'your_custom_rule'
-    glob: '**/*.ts{,x}'
+    config: my_tslint.json
+    exclude: "vendor/**"
+    project: frontend/tsconfig.json
+    rules-dir: your_custom_rules/
+    glob: "path/to/**/*.ts"
 ```
 
-### Options
+You can use the following options to make analysis fitter for your project.
 
-You can use several options to make analysis fitter for your project.
+| Name                        | Type                      | Default           | Description                                                                        |
+| --------------------------- | ------------------------- | ----------------- | ---------------------------------------------------------------------------------- |
+| `npm_install`               | -                         | -                 | See [here](../../getting-started/custom-configuration.md#npm_install-option).      |
+| [`config`](#config)         | `string`                  | -                 | [`--config`](https://palantir.github.io/tslint/usage/cli) option of TSLint.        |
+| [`exclude`](#exclude)       | `string`, `array<string>` | `node_modules/**` | [`--exclude`](https://palantir.github.io/tslint/usage/cli) option of TSLint.       |
+| [`project`](#project)       | `string`                  | -                 | [`--project`](https://palantir.github.io/tslint/usage/cli) option of TSLint.       |
+| [`rules-dir`](#rules-dir)   | `string`, `array<string>` | -                 | [`--rules-dir`](https://palantir.github.io/tslint/usage/cli) option of TSLint.     |
+| [`glob`](#glob)             | `string`                  | `**/*.ts{,x}`     | A glob pattern to analyze.                                                         |
+| [`type-check`](#type-check) | `boolean`                 | `false`           | **[DEPRECATED]** If you use TSLint 5.8.0+ and set `true`, your analysis will fail. |
 
-| Name | Type | Description |
-| ---- | ---- | ----------- |
-| [`npm_install`](#npm_install) | `boolean`,<br />`string` | Resolve dependencies when analyzing with `npm`. |
-| [`config`](#config) | `string` | Set configuration file for TSLint. |
-| [`exclude`](#exclude) | `string`,<br />`array<string>`| Specify file and/or directory patterns to exclude from analysis. |
-| [`project`](#project) | `string` | Set your TypeScript project file; `tsconfig.json`. |
-| [`rules-dir`](#rules-dir) | `string`, <br />`array<string>` | Specify a directory which is custom rules that TSLint inspects. |
-| [`type-check`](#type-check) | `boolean` | [Deprecate] If you use TSLint 5.8.0+ and set `true`, Sider's analysis will be failed. |
-| [`glob`](#glob) | `string` | Specify glob patterns to analyze. |
+For details of the options, check the following sections.
 
-For details of the options, check following items.
+### `config`
 
-#### `npm_install`
+This option allows you to specify your configuration file except for the default one.
 
-This option controls `npm` command invocation. By using this option, you can install dependencies to your program.
+### `exclude`
 
-| Value | Execution Command |
-| :---- | :---------------- |
-| `true` | `npm install --ignore-scripts` |
-| `false` | None |
-| `development` | `npm install --only=development --ignore-scripts` |
-| `production` | `npm install --only=production --ignore-scripts` |
-| Other values | Sider analysis fails. |
-
-If your `package.json` contains a dependency which cannot be installed in the Sider container, `npm install` fails. The analysis will continue but the results may be inaccurate. In this case, try using the `development` or `production` options, or use the `optionalDependency` setting.
-
-#### `config`
-
-This option controls which configuration file TSLint uses. If you have a `tslint.json` file, use this option.
-
-#### `exclude`
-
-This option controls which files TSLint excludes from linting. The default value is `node_modules/**`.
-
-If you want to exclude multiple files/directories, declare them as a sequence:
+This option allows you to exclude files from analysis. A glob pattern is available also. If you want to exclude multiple files or directories, declare them as a sequence as follows:
 
 ```yaml
 linter:
   tslint:
     exclude:
-      - 'node_modules/**'
-      - '.git/**'
-      - 'cache/**'
+      - "node_modules/**"
+      - "cache/**"
 ```
 
-#### `project`
+### `project`
 
-This option controls project file. If you have `tsconfig.json` file, declare it in this directive.
+This option allows you to specify a TypeScript project file or directory.
 
-#### `rules-dir`
+### `rules-dir`
 
-This option controls customized rules that TSLint inspects.
-
-If you want to set multiple custom rules, declare them as follow:
+This option allows you to specify your own rules. If you want to use multiple rules, declare them as follows:
 
 ```yaml
 linter:
@@ -103,14 +104,14 @@ linter:
       - rules/AnotherCustomRule
 ```
 
-Note that you need to use TSLint after version 5.12.0 to set `rules-dir` option as an array.
+> Note that you need to use TSLint since version **5.12.0** to set the `rules-dir` option as an array.
 
-#### `type-check`
+### `glob`
+
+This option allows you to specify files to analyze.
+
+### `type-check`
 
 This option controls whether to enable type checking when running TSLint. If you want type checking, set this to `true`.
 
-The option is deprecated in version 5.8.0 of TSLint. TSLint no longer does type checking. If you would like to know about the change, see [https://github.com/palantir/tslint/pull/3322](https://github.com/palantir/tslint/pull/3322).
-
-#### `glob`
-
-This option controls files that TSLint inspects. By default, `.ts` and `.tsx` files are inspected.
+> Note that the option is **deprecated** since TSLint version **5.8.0**. TSLint no longer have done type checking since it. For more details about the change, see [the pull request](https://github.com/palantir/tslint/pull/3322).
