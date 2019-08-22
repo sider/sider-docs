@@ -22,7 +22,7 @@ linter:
 
   eslint:
     root_dir: 'frontend'
-    npm_install: true
+    npm_install: false
     config: 'frontend/.eslintrc'
     ext: 'js,jsx'
 
@@ -140,6 +140,40 @@ linter:
 | `ref` | `string` | Ref name. |
 
 If you would like to install a gem located in a private git repository, see [private dependencies guide](../advanced-settings/private-dependencies.md) and configure SSH key.
+
+## `npm_install` option
+
+For npm-published analyzers such as [ESLint](../tools/javascript/eslint.md) or [stylelint](../tools/css/stylelint.md), you can use the `npm_install` option to configure the behavior of npm dependencies installation. This option has the following values:
+
+| Value            | Description |
+| ---------------- | ----------- |
+| `true` (default) | Install dependencies via [npm](https://docs.npmjs.com/) or [Yarn](https://yarnpkg.com). |
+| `false`          | Do not install any dependencies. |
+| `"production"`   | Install only dependencies for production. |
+| `"development"`  | Install only dependencies for development. |
+| Others           | Fail analysis. |
+
+For example:
+
+```yaml
+linter:
+  eslint:
+    npm_install: "development"
+  stylelint:
+    npm_install: false
+```
+
+When the `npm_install` option is except for `false`, Sider will try as follows:
+
+1. Check if `package.json` exists. If not present, Sider uses the default version of the analyzers.
+2. If `package.json` and `yarn.lock` exist, Sider runs the [`yarn install`](https://yarnpkg.com/lang/en/docs/cli/install/) command.
+3. If `package.json` and `package-lock.json` exist, Sider runs the [`npm ci`](https://docs.npmjs.com/cli/ci) command.
+4. If `package.json` exists but none of `yarn.lock` and `package-lock.json` exist, Sider runs the [`npm install`](https://docs.npmjs.com/cli/install) command.
+5. Checks if the analyzer is installed in the `node_modules` directory.
+6. If installed, Sider uses the installed version.
+7. If not installed (for any reason), Sider uses the pre-installed default version.
+
+On the other hand, when the `npm_install` option is `false`, Sider will skip these installation steps and analyze with the pre-installed default version.
 
 ## `ignore` option
 

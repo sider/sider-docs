@@ -45,6 +45,14 @@
       },
       {
         "type": "subcategory",
+        "label": "CSS",
+        "ids": [
+          "tools/css/stylelint",
+          "tools/css/scss-lint"
+        ]
+      },
+      {
+        "type": "subcategory",
         "label": "PHP",
         "ids": [
           "tools/php/phinder",
@@ -64,14 +72,6 @@
         "label": "Swift",
         "ids": [
           "tools/swift/swiftlint"
-        ]
-      },
-      {
-        "type": "subcategory",
-        "label": "CSS",
-        "ids": [
-          "tools/css/stylelint",
-          "tools/css/scss-lint"
         ]
       },
       {

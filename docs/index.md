@@ -64,6 +64,16 @@ This section has documents about analysis tools which Sider supports. We have an
 
 </details>
 
+### CSS
+
+<details open>
+  <summary>2 tools are available.</summary>
+
+  * [stylelint](./tools/css/stylelint.md)
+  * [SCSS-Lint](./tools/css/scss-lint.md)
+
+</details>
+
 ### PHP
 
 <details open>
@@ -90,16 +100,6 @@ This section has documents about analysis tools which Sider supports. We have an
   <summary>1 tool is available.</summary>
 
   * [SwiftLint](./tools/swift/swiftlint.md)
-
-</details>
-
-### CSS
-
-<details open>
-  <summary>2 tools are available.</summary>
-
-  * [stylelint](./tools/css/stylelint.md)
-  * [SCSS-Lint](./tools/css/scss-lint.md)
 
 </details>
 
@@ -142,7 +142,7 @@ This section covers advanced features outside of the basic setup of Sider.
 
 ## Billing and Plans
 
-This section covers questions about billing, invoices, and plans. 
+This section covers questions about billing, invoices, and plans.
 
 * [Billing and Plans](./billing-and-plans.md)
 
