@@ -1,3 +1,9 @@
+[build]
+
+publish = "website/build/sider-docs"
+
+command = "cd website && yarn install && yarn run build"
+
 [[redirects]]
 from = "/tools"
 to = "/introduction#analysis-tools"
