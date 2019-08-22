@@ -7,7 +7,7 @@ hide_title: true
 
 # RuboCop
 
-| Version Constraints | Language | Web Site |
+| Version Constraints | Language | Website |
 | ----------------- | -------- | -------- |
 | >= 0.35.0 (default to 0.74.0) | Ruby 2.5.1 | [https://github.com/rubocop-hq/rubocop](https://github.com/rubocop-hq/rubocop) |
 

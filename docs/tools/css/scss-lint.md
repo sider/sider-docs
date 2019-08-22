@@ -7,7 +7,7 @@ hide_title: true
 
 # SCSS-Lint
 
-| Supported Version | Language | Web Site |
+| Supported Version | Language | Website |
 | ----------------- | -------- | -------- |
 | 0.57.1 | Sass 3.6.0 / Ruby 2.5.1| [https://github.com/sds/scss-lint](https://github.com/sds/scss-lint) |
 

@@ -7,7 +7,7 @@ hide_title: true
 
 # PHPMD
 
-| Supported Version | Language | Web Site |
+| Supported Version | Language | Website |
 | ----------------- | -------- | -------- |
 | 2.6.1 | PHP 7.3.6 | [https://phpmd.org/](https://phpmd.org/) |
 

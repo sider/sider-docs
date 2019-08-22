@@ -7,7 +7,7 @@ hide_title: true
 
 # Go Meta Linter
 
-| Supported Version | Language | Web Site |
+| Supported Version | Language | Website |
 | ----------------- | -------- | -------- |
 | 2.0.11 | Go 1.8 | [https://github.com/alecthomas/gometalinter](https://github.com/alecthomas/gometalinter) |
 

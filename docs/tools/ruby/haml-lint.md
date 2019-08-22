@@ -7,7 +7,7 @@ hide_title: true
 
 # HAML-Lint
 
-| Version Constraints | Language | Web Site |
+| Version Constraints | Language | Website |
 | ----------------- | -------- | -------- |
 | >= 0.26.0 (default to 0.32.0) | Ruby 2.5.1 | [https://github.com/sds/haml-lint](https://github.com/sds/haml-lint) |
 

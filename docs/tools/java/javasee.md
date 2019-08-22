@@ -7,7 +7,7 @@ hide_title: true
 
 # JavaSee
 
-| Supported Version | Language | Web Site |
+| Supported Version | Language | Website |
 | ----------------- | -------- | -------- |
 | 0.1.1 | Java 11 | [https://github.com/sider/JavaSee](https://github.com/sider/JavaSee) |
 

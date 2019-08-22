@@ -7,7 +7,7 @@ hide_title: true
 
 # Goodcheck
 
-| Version Constraints | Language | Web Site |
+| Version Constraints | Language | Website |
 | ----------------- | -------- | -------- |
 | >= 1.0.0, < 3.0 (default to 2.4.0) | Others(Regexp) | [https://github.com/sider/goodcheck](https://github.com/sider/goodcheck) |
 

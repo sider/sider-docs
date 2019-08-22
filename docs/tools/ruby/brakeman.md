@@ -7,7 +7,7 @@ hide_title: true
 
 # Brakeman
 
-| Version Constraints | Language | Web Site |
+| Version Constraints | Language | Website |
 | ----------------- | -------- | -------- |
 | >= 4.0.0, < 4.4.0 (default to 4.3.1) | Ruby 2.5.1 | [https://brakemanscanner.org/](https://brakemanscanner.org/) |
 

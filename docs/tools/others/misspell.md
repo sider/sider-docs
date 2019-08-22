@@ -7,7 +7,7 @@ hide_title: true
 
 # Misspell
 
-| Supported Version | Language | Web Site |
+| Supported Version | Language | Website |
 | ----------------- | -------- | -------- |
 | 0.3.4 | Others(Spell Checking) | [https://github.com/client9/misspell](https://github.com/client9/misspell) |
 

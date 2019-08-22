@@ -7,7 +7,7 @@ hide_title: true
 
 # Flake8
 
-| Supported Version | Language | Web Site |
+| Supported Version | Language | Website |
 | ----------------- | -------- | -------- |
 | 3.7.7 | Python 2.7.16, 3.7.3 | [http://flake8.pycqa.org/en/latest/](http://flake8.pycqa.org/en/latest/) |
 

@@ -7,7 +7,7 @@ hide_title: true
 
 # Golint
 
-| Language | Web Site |
+| Language | Website |
 | -------- | -------- |
 | Go 1.8 | [https://github.com/golang/lint](https://github.com/golang/lint) |
 
