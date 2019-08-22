@@ -25,7 +25,7 @@ Then, create your `coffeelint.json` file and edit it.
 
 ## Configuration via `sider.yml`
 
-Here are an example settings for CoffeeLint:
+Here is an example for CoffeeLint:
 
 ```yaml
 linter:

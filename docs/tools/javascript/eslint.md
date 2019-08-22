@@ -55,7 +55,7 @@ rules:
 
 ## Configuration via `sider.yml`
 
-Here are an example settings for ESLint:
+Here is an example for ESLint:
 
 ```yaml
 linter:

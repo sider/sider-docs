@@ -46,7 +46,7 @@ Sider prepares the following configuration by default. Sider uses the configurat
 
 ## Configuration via `sider.yml`
 
-Here are an example settings for TSLint:
+Here is an example for TSLint:
 
 ```yaml
 linter:

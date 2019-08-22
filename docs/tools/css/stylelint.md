@@ -39,7 +39,7 @@ Also, Sider ignores `*.min.css` files by default.
 
 ## Configuration via `sider.yml`
 
-Here are an example settings for stylelint:
+Here is an example for stylelint:
 
 ```yaml
 linter:
