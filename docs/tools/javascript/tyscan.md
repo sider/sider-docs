@@ -7,9 +7,9 @@ hide_title: true
 
 # TyScan
 
-| Supported Version | Language | Website |
-| ----------------- | -------- | -------- |
-| Optional (default to 0.2.1) | JavaScript (Node.js 12.7.0) | https://github.com/sider/tyscan |
+| Supported Version           | Language   | Runtime        | Website                         |
+| --------------------------- | ---------- | -------------- | ------------------------------- |
+| Optional (default to 0.2.1) | TypeScript | Node.js 12.7.0 | https://github.com/sider/tyscan |
 
 ## Getting Started
 
@@ -23,7 +23,7 @@ Sider executes `npm install` automatically when running TyScan, therefore, if yo
 
 ```yaml
 linter:
-  tyscan
+  tyscan:
     npm_install: false
 ```
 
