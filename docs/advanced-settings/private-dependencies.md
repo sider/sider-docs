@@ -15,7 +15,7 @@ We support using SSH to access a private repository during an analysis session.
 
 ![Generate SSH private key](../assets/ssh-key-generate-key.png)
 
-When you click the “Generate Key” button, Sider generates a 4096 bit RSA key used in analysis sessions automatically.
+When you click the **"Generate Key"** button, Sider generates a 4096 bit RSA key used in analysis sessions automatically.
 
 > We strongly recommend against adding secret keys to public repositories. Their analysis results are publicly accessible, and your secret keys might get exposed.
 
@@ -31,24 +31,23 @@ After generating, you can download the SSH public key used in analysis sessions 
 > which is hosted on GitHub.
 > You should configure following the steps:
 >
-> 1. Access the repository settings page of A on Sider
-> 2. Click "Generate Key"
-> 3. Click "Download Public Key"
-> 4. Access the repository settings page of B on GitHub
-> 5. Click "Deploy keys"
-> 6. Click "Add deploy key"
-> 7. Copy the downloaded public key and paste it in "Key" input form
-> 8. Click "Add key"
+> 1. Access the repository settings page of A on Sider.
+> 2. Click **"Generate Key"**.
+> 3. Click **"Download Public Key"**.
+> 4. Access the repository settings page of B on GitHub.
+> 5. Click **"Deploy keys"**.
+> 6. Click **"Add deploy key"**.
+> 7. Copy the downloaded public key and paste it in **"Key"** input form.
+> 8. Click **"Add key"**.
 
 ## Using SSH
 
 Currently, only a few analysis tools use an SSH configuration.
 
-* All Ruby analyzers (bundle install)
-* [ESLint](../tools/javascript/eslint.md) (npm install)
-* [TSLint](../tools/javascript/tslint.md) (npm install)
-* [CoffeeLint](../tools/javascript/coffeelint.md) (npm install)
-* [stylelint](../tools/css/stylelint.md) (npm install)
+* All Ruby analyzers (Bundler)
+* [ESLint](../tools/javascript/eslint.md) (npm)
+* [TSLint](../tools/javascript/tslint.md) (npm)
+* [CoffeeLint](../tools/javascript/coffeelint.md) (npm)
+* [stylelint](../tools/css/stylelint.md) (npm)
 
-Other tools do not use SSH so adding an SSH key for such tools are not needed.
-
+Other tools do not use SSH, so adding an SSH key for such tools are not needed.
