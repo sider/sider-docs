@@ -27,14 +27,13 @@ After generating, you can download the SSH public key used in analysis sessions 
 
 > The SSH public key is supposed to be configured in another repository.
 >
-> For example, think about the case your repository A depends on another private repository B,
-> which is hosted on GitHub.
+> For example, think about the case your repository *my-app* depends on another private repository *my-lib*, which is hosted on GitHub.
 > You should configure following the steps:
 >
-> 1. Access the repository settings page of A on Sider.
+> 1. Access the repository settings page of *my-app* on Sider.
 > 2. Click **"Generate Key"**.
 > 3. Click **"Download Public Key"**.
-> 4. Access the repository settings page of B on GitHub.
+> 4. Access the repository settings page of *my-lib* on GitHub.
 > 5. Click **"Deploy keys"**.
 > 6. Click **"Add deploy key"**.
 > 7. Copy the downloaded public key and paste it in **"Key"** input form.
