@@ -22,14 +22,13 @@ But if you want to customize more ESLint with some plugins or shareable configur
 $ npm install eslint --save-dev
 ```
 
-For example if you are using React, you may need the ESLint plugin for React:
+Next, you may have to create your `.eslintrc.*` file(s) and configure ESLint with them. We recommend running `eslint --init`. It can ask you some questions and configure the settings for you automatically:
 
 ```shell
-$ npm install eslint-plugin-react --save-dev
+$ npx eslint --init
 ```
 
-Next, you may have to create your `.eslintrc.*` file(s) and configure ESLint with them.
-For more details, see [the ESLint documentation](https://eslint.org/docs/user-guide/getting-started).
+For more details about the configuration, see [the ESLint documentation](https://eslint.org/docs/user-guide/getting-started).
 
 Then, if you need more customization, you can do it by adding a `sider.yml` file to your repository. For example, if you want to analyze React files in a `frontend/` directory, you may configure your `sider.yml` as follows:
 
