@@ -11,7 +11,7 @@ hide_title: true
 | ----------------- | -------- | ------------------------------- |
 | 1.89              | C/C++    | http://cppcheck.sourceforge.net |
 
-> This is **BETA**. Note that the behavior may be changed in the future.
+> This is **BETA**. The behavior of this tool might change.
 
 Cppcheck is a static analysis tool for C/C++ code. It aims to detect bugs, undefined behaviors, and dangerous coding constructs.
 
