@@ -19,8 +19,6 @@ Cppcheck is a static analysis tool for C/C++ code. It aims to detect bugs, undef
 
 To start using Cppcheck, enable it in your [repository settings](../../getting-started/repository-settings.md).
 
-Or if you want to use Cppcheck on your local machine, you can easily install it via some package managers like `apt-get` or `brew`.
-
 For more details, see the command-line help or the [online manual](http://cppcheck.sourceforge.net/manual.pdf).
 
 ```shell
