@@ -85,6 +85,13 @@
       },
       {
         "type": "subcategory",
+        "label": "C/C++",
+        "ids": [
+          "tools/cplusplus/cppcheck"
+        ]
+      },
+      {
+        "type": "subcategory",
         "label": "Others",
         "ids": [
           "tools/others/goodcheck",
