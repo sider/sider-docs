@@ -11,7 +11,7 @@ hide_title: true
 | ----------------- | -------- | -------- |
 | 0.57.1 | Sass 3.6.0 / Ruby 2.5.1| https://github.com/sds/scss-lint |
 
-> **DEPRECATED**: Sider will end of support for SCSS-Lint because SCSS-Lint will stop its maintenance. We recommend [stylelint](https://stylelint.io) and [stylelint-scss](https://github.com/kristerkari/stylelint-scss) as an alternative.
+> **DEPRECATED**: Sider will no longer support SCSS-Lint because SCSS-Lint will stop its maintenance. We recommend [stylelint](https://stylelint.io) and [stylelint-scss](https://github.com/kristerkari/stylelint-scss) as an alternative.
 > For more details, see the [announce](https://github.com/sds/scss-lint#notice-consider-other-tools-before-adopting-scss-lint).
 
 ## Getting Started
