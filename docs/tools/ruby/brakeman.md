@@ -9,7 +9,7 @@ hide_title: true
 
 | Version Constraints | Language | Website |
 | ----------------- | -------- | -------- |
-| >= 4.0.0, < 4.4.0 (default to 4.3.1) | Ruby 2.5.1 | [https://brakemanscanner.org/](https://brakemanscanner.org/) |
+| >= 4.0.0, < 4.4.0 (default to 4.3.1) | Ruby 2.5.5 | [https://brakemanscanner.org/](https://brakemanscanner.org/) |
 
 ## Configuration via `sider.yml`
 

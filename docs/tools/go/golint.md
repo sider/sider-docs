@@ -9,7 +9,7 @@ hide_title: true
 
 | Language | Website |
 | -------- | -------- |
-| Go 1.8 | [https://github.com/golang/lint](https://github.com/golang/lint) |
+| Go 1.12.7 | [https://github.com/golang/lint](https://github.com/golang/lint) |
 
 ## Getting Started
 

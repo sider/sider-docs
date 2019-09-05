@@ -9,7 +9,7 @@ hide_title: true
 
 | Version Constraints | Language | Website |
 | ----------------- | -------- | -------- |
-| >= 1.19.1, < 2.0 (default to 1.19.4) | Ruby 2.5.1 | [https://rails-bestpractices.com/](https://rails-bestpractices.com/) |
+| >= 1.19.1, < 2.0 (default to 1.19.4) | Ruby 2.5.5 | [https://rails-bestpractices.com/](https://rails-bestpractices.com/) |
 
 ## Configuration via `sider.yml`
 
