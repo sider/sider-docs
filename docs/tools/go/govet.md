@@ -9,7 +9,7 @@ hide_title: true
 
 | Language | Website |
 | -------- | -------- |
-| Go 1.8 | [https://golang.org/cmd/vet/](https://golang.org/cmd/vet/) |
+| Go 1.12.7 | [https://golang.org/cmd/vet/](https://golang.org/cmd/vet/) |
 
 ## Getting Started
 

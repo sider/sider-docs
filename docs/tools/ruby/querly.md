@@ -9,7 +9,7 @@ hide_title: true
 
 | Version Constraints | Language | Website |
 | ----------------- | -------- | -------- |
-| >= 0.5.0 (default to 1.0.0) | Ruby 2.5.1 | [https://github.com/soutaro/querly](https://github.com/soutaro/querly) |
+| >= 0.5.0 (default to 1.0.0) | Ruby 2.5.5 | [https://github.com/soutaro/querly](https://github.com/soutaro/querly) |
 
 ## Getting Started
 
