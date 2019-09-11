@@ -9,7 +9,7 @@ hide_title: true
 
 | Supported Version          | Language   | Runtime        | Website                           |
 | -------------------------- | ---------- | -------------- | --------------------------------- |
-| 5.0.0+ (default to 5.18.0) | TypeScript | Node.js 12.7.0 | https://palantir.github.io/tslint |
+| 5.0.0+ (default to 5.18.0) | TypeScript | Node.js 12.10.0 | https://palantir.github.io/tslint |
 
 ## Getting Started
 
