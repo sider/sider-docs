@@ -9,7 +9,7 @@ hide_title: true
 
 | Supported Version | Language | Website |
 | ----------------- | -------- | -------- |
-| 2.6.1 | PHP 7.3.8 | [https://phpmd.org/](https://phpmd.org/) |
+| 2.6.1 | PHP 7.3.9 | [https://phpmd.org/](https://phpmd.org/) |
 
 ## Getting Started
 

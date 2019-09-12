@@ -9,7 +9,7 @@ hide_title: true
 
 | Supported Version           | Language   | Runtime        | Website                         |
 | --------------------------- | ---------- | -------------- | ------------------------------- |
-| Optional (default to 0.2.1) | TypeScript | Node.js 12.7.0 | https://github.com/sider/tyscan |
+| Optional (default to 0.2.1) | TypeScript | Node.js 12.10.0 | https://github.com/sider/tyscan |
 
 ## Getting Started
 
