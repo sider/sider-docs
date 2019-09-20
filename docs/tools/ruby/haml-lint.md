@@ -9,7 +9,7 @@ hide_title: true
 
 | Version Constraints | Language | Website |
 | ----------------- | -------- | -------- |
-| >= 0.26.0 (default to 0.32.0) | [HAML](http://haml.info/) (Ruby 2.5.5) | [https://github.com/sds/haml-lint](https://github.com/sds/haml-lint) |
+| 0.26.0+ (default to 0.32.0) | [HAML](http://haml.info) (Ruby 2.6.4) | https://github.com/sds/haml-lint |
 
 ## Configuration via `sider.yml`
 
