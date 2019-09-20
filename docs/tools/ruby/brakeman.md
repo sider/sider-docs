@@ -17,7 +17,7 @@ Here are some example settings for Brakeman in `sider.yml`, under `brakeman`:
 
 ```yaml
 linter:
-  querly:
+  brakeman:
     gems:
       - name: "brakeman"
       - version: "4.3.0"
