@@ -7,12 +7,11 @@ hide_title: true
 
 # ktlint
 
-| Supported Version | Language | Web Site |
-| ----------------- | -------- | -------- |
-| 0.34.2 [1][2] | Kotlin | [https://github.com/pinterest/ktlint](https://github.com/pinterest/ktlint) |
+| Supported Version | Language             | Website                  |
+| ----------------- | -------------------- | ------------------------ |
+| 0.34.2 [¹]        | Kotlin (Java 12.0.1) | https://ktlint.github.io |
 
-- [1] You can use Gradle to install any version of ktlint, but the version may not compatible with Sider.
-- [2] You can use Maven to install any version of ktlint, but the version may not compatible with Sider.
+¹ You can use Gradle or Maven to install any version of ktlint, but note that the version may not compatible with Sider.
 
 ## Getting Started
 
@@ -22,7 +21,7 @@ To start using ktlint, enable it in [Repository Settings](../../getting-started/
 
 You can use ktlint CLI without any configuration, but we recommend to make a configuration.
 
-Put `cli` key in `sider.yml` to customize the execution of ktlint CLI.
+Put the `cli` key in `sider.yml` to customize the execution of ktlint CLI.
 
 ```yaml
 linter:
@@ -41,18 +40,20 @@ linter:
   ktlint:
     gradle:
       task: ktlint
-      format: checkstyle
+      reporter: checkstyle
 ```
 
-Sider runs `./gradlew` in the repository with specified _task_, and use the output as ktlint result.
+Sider runs `./gradlew` in the repository with the specified `task`, and use the output as ktlint result.
 Essentially, it executes the following command.
 
-```
-$ ./gradlew -q [task]
+```shell
+$ ./gradlew <task>
 ```
 
-The `format` option tells Sider which format is generated from the gradle task.
-Sider supports the default `checkstyle`, `json`, and `plain` formats.
+The `reporter` option tells Sider which reporter is used by the Gradle task.
+Sider supports the default `checkstyle`, `json`, and `plain` reporters.
+
+The option is available also with the Maven integration below.
 
 ### Using Maven integration
 
@@ -62,28 +63,42 @@ If you have set up the Maven integration for ktlint, you can use it.
 linter:
   ktlint:
     maven:
-      goal: verify
-      format: checkstyle
+      goal: "antrun:run@ktlint"
+      reporter: checkstyle
       output: target/ktlint.xml
 ```
 
-Sider runs `mvn` in the repository with specified _goal_, and use the output.
+Sider runs `mvn` in the repository with the specified `goal`, and use the output.
 Essentially, it executes the following command.
 
+```shell
+$ mvn <goal>
 ```
-$ mvn [goal]
-```
-
-The `format` option tells Sider which format is generated from the gradle task.
-Sider supports the default `checkstyle`, `json`, and `plain` formats.
 
 ## Configuration
 
-You can customize JavaSee analysis using `sider.yml`.
+You can customize your ktlint analysis using `sider.yml`.
+The configuration for ktlint accepts one of the `cli`, `gradle`, and `maven` keys.
 
-The configuration for ktlint accepts one of `cli` and `gradle` keys.
+| Name                                       | Type                                | Default      | Description                                                                                  |
+| ------------------------------------------ | ----------------------------------- | ------------ | -------------------------------------------------------------------------------------------- |
+| [`cli`](#cli)                              | `map`                               | -            | Settings for CLI execution.                                                                  |
+| [`cli.patterns`](#clipatterns)             | `string`, `array<string>`           | `[]`         | File patterns to analyze.                                                                    |
+| [`cli.ruleset`](#cliruleset)               | `string`, `array<string>`           | `[]`         | Ruleset URLs.                                                                                |
+| [`cli.disabled_rules`](#clidisabled_rules) | `string`, `array<string>`           | `[]`         | Whether disable rules or not.                                                                |
+| [`cli.experimental`](#cliexperimental)     | `boolean`                           | `false`      | [`--experimental`](https://github.com/pinterest/ktlint#experimental-rules) option of ktlint. |
+| [`gradle`](#gradle)                        | `map`                               | -            | Settings for Gradle execution.                                                               |
+| [`gradle.task`](#gradletask)               | `string`                            | _(required)_ | Task name of Gradle.                                                                         |
+| [`gradle.reporter`](#gradlereporter)       | `"checkstyle"`, `"json"`, `"plain"` | _(required)_ | Reporter name.                                                                               |
+| [`gradle.output`](#gradleoutput)           | `string`                            | _-_          | Output file path.                                                                            |
+| [`maven`](#maven)                          | `map`                               | -            | Settings for Maven execution.                                                                |
+| [`maven.goal`](#mavengoal)                 | `string`                            | _(required)_ | Goal name of Maven.                                                                          |
+| [`maven.reporter`](#mavenreporter)         | `"checkstyle"`, `"json"`, `"plain"` | _(required)_ | Reporter name. Same as [`gradle.reporter`](#gradlereporter).                                 |
+| [`maven.output`](#mavenoutput)             | `string`                            | _(required)_ | Output file path.                                                                            |
 
 ### `cli`
+
+For example:
 
 ```yaml
 linter:
@@ -93,33 +108,28 @@ linter:
         - "src/**/*.kt"
         - "!src/**/*Test.kt"
       ruleset:
-        - https://example.com/rule.jar
+        - "https://example.com/custom/ruleset.jar"
       disabled_rules:
-        - no-wildcard-imports
+        - "no-wildcard-imports"
       experimental: true
 ```
 
 ### `cli.patterns`
 
-Patterns to specify the files to be analyzed by ktlint.
-A string or a sequence of strings.
-
-If you don't specify `patterns`, ktlint analyzes all of the kotlin files in the repository.
+Pattern(s) to specify the files to be analyzed by ktlint.
+If you omit the option, Sider analyzes all Kotlin files in your repository.
 
 ### `cli.ruleset`
 
-URL to ktlint ruleset.
-A string or a sequence of strings, defaults to empty.
+URL(s) to ktlint ruleset(s).
 
 ### `cli.disabled_rules`
 
-List of the name of the rules you want to disable.
-A string or a sequence of strings, defaults to empty.
+Name(s) of rule(s) which you want to disable.
 
 ### `cli.experimental`
 
-`true` or `false` to specify whether enable the `--experimental` option or not.
-Defaults to `false`.
+Whether enable the `--experimental` option or not.
 
 ### `gradle`
 
@@ -128,51 +138,51 @@ linter:
   ktlint:
     gradle:
       task: ktlint
-      format: checkstyle
+      reporter: checkstyle
       output: build/reports/ktlint/ktlintMainSourceSetCheck.xml
 ```
 
-### `gradle.task` (required)
+For more details about the Gradle settings, see the [official documentation](https://ktlint.github.io/#gradle).
 
-Name of the task to execute ktlint.
+### `gradle.task`
 
-### `gradle.format` (required)
+A name of the Gradle task to execute ktlint.
 
-The format of the output from the _task_.
-One of the `plain`, `json`, and `checkstyle`
+### `gradle.reporter`
 
-We recommend using `json` or `checkstyle` for Sider integration.
-The `plain` format does not print _rule id_ which is used to identify issues in Sider.
+A reporter name of the output from the `task`.
+
+We recommend using the `json` or `checkstyle` reporter for Sider integration.
+Because the `plain` reporter does not print any _rule ID_ which is used to identify issues in Sider.
 
 ### `gradle.output`
 
-The path to the file which contains ktlint output.
-A string, defaults to empty which tells sider to read the output from Gradle stdout.
+A path to a file which contains ktlint output.
+If you omit the option, Sider reads the output from Gradle stdout.
 
 ### `maven`
+
+For example:
 
 ```yaml
 linter:
   ktlint:
     maven:
-      goal: verify
-      format: checkstyle
+      goal: "antrun:run@ktlint"
+      reporter: checkstyle
       output: target/ktlint.xml
 ```
 
-### `maven.task` (required)
+For more details about the Maven settings, see the [official documentation](https://ktlint.github.io/#maven).
 
-Name of the goal for ktlint execution.
+### `maven.goal`
 
-### `maven.format` (required)
+A name of the Maven goal to execute ktlint.
 
-The format of the output from the _task_.
-One of the `plain`, `json`, and `checkstyle`
+### `maven.reporter`
 
-We recommend using `json` or `checkstyle` for Sider integration.
-The `plain` format does not print _rule id_ which is used to identify issues in Sider.
+A reporter name of the output from the `goal`. For details, see [`gradle.reporter`](#gradlereporter).
 
-### `maven.output` (required)
+### `maven.output`
 
-The path to the file which contains ktlint output.
-Should be a string.
+A path to a file which contains ktlint output.
