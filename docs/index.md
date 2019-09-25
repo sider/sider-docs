@@ -21,7 +21,8 @@ This section has documents about how to use Sider.
 * [Dashboard Overview](./getting-started/dashboard.md)
 * [Custom Analysis Configuration](./getting-started/custom-configuration.md)
 * [Working with Issues](./getting-started/working-with-issues.md)
-* [Permission](./getting-started/permissions.md)
+* [Permissions](./getting-started/permissions.md)
+* [Skip Analyzing](./getting-started/skip-analyzing.md)
 
 ## Analysis Tools
 
