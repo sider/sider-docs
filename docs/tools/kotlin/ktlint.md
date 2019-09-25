@@ -7,11 +7,15 @@ hide_title: true
 
 # ktlint
 
+> This is **BETA**. The behavior of this tool might change.
+
 | Supported Version | Language             | Website                  |
 | ----------------- | -------------------- | ------------------------ |
 | 0.34.2 [¹]        | Kotlin (Java 12.0.1) | https://ktlint.github.io |
 
 ¹ You can use Gradle or Maven to install any version of ktlint, but note that the version may not compatible with Sider.
+
+**ktlint** is a linter with built-in formatter for [Kotlin](https://kotlinlang.org) programming language.
 
 ## Getting Started
 
