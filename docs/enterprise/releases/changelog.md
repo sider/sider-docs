@@ -11,9 +11,73 @@ hide_title: true
 
 | Application Name | Tag              |
 | ---------------- | ---------------- |
-| sideci           | release-201904.0 |
-| catpost          | release-201904.0 |
-| setaria          | release-201904.0 |
+| sideci           | release-201909.0 |
+| catpost          | release-201909.0 |
+| setaria          | release-201909.0 |
+
+## release-201909
+
+### Caution
+
+You have to set the following new environment variables to update to this release.
+See the following *Update Procedure* section.
+
+* ENCRYPTION_SERVICE_KEY
+* ENCRYPTION_SERVICE_SALT
+
+### Features
+
+* Analysis Tools Updates
+    - Include ktlint and Cppcheck supports
+    - All tools are published on [Docker Hub](https://hub.docker.com/u/sider)
+    - See the [CHANGELOG](https://github.com/sider/runners/blob/fc4c1ea771b1d187ab1e8453033999d22b7f82a4/CHANGELOG.md#030) for more details
+
+### Fixes
+
+* Bug fixes & UI design improvements
+
+### Update Procedure
+
+1. Download application images.
+2. Stop applications.
+3. Update release tags on `docker-compose.yml`.
+    * Replace older release tags with `migration-for-201909`
+4. Set the environment variable `ENCRYPTION_SERVICE_KEY` and `ENCRYPTION_SERVICE_SALT` in **every** service
+    * In other words, you have to set them in `sideci.env`, `catpost.env`, and `setaria.env` files
+    * `ENCRYPTION_SERVICE_KEY` should be random string
+    * `ENCRYPTION_SERVICE_SALT` must be 32 byte of random string
+4. Run the following "Commands 1" to apply the database changes
+5. Update release tags on `docker-compose.yml`.
+    * Replace older release tags with `release-201909.0`
+6. Run the following "Commands 2" to apply the database changes
+7. Start applications.
+
+Commands 1:
+
+```
+docker-compose run --rm sideci_web bundle exec rails db:migrate VERSION=20190716022318
+docker-compose run --rm sideci_web bundle exec rails r script/migrate/20190723_copy_encrypted_attributes_to_new_attributes.rb
+
+docker-compose run --rm catpost_web bundle exec rails db:migrate VERSION=20190725081720
+docker-compose run --rm catpost_web bundle exec rails r script/migrate/20190725_copy_url_to_url2.rb
+
+docker-compose run --rm setaria_web bundle exec rails db:migrate VERSION=20190712075148
+docker-compose run --rm setaria_web bundle exec rails r script/migrate/20190712_copy_ssh_key_to_ssh_key2.rb
+```
+
+Commands 2:
+
+```
+docker-compose run --rm sideci_web bundle exec rails db:migrate
+docker-compose run --rm catpost_web bundle exec rails db:migrate
+docker-compose run --rm setaria_web bundle exec rails db:migrate
+```
+
+The following environment variables are no longer required after running the above commands:
+
+* `GITHUB_OAUTH_HEAD_ENCRYPTION_KEY`
+* `URL_ENCRYPTION_KEY`
+* `SSH_KEY_ENCRYPTION_KEY`
 
 ## release-201904
 
