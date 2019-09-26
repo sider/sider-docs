@@ -187,5 +187,4 @@ Read the following enterprise documents for Sider Enterprise setup.
 * [Scaling Guide](./enterprise/scaling.md)
 * [Configuration Index](./enterprise/config.md)
 * [Health Check Guide](./enterprise/healthcheck.md)
-* [Testing for Sider running](./enterprise/testing/guide.md)
 * [Release Notes](./enterprise/releases/changelog.md)

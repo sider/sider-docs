@@ -133,7 +133,6 @@
       "enterprise/scaling",
       "enterprise/config",
       "enterprise/healthcheck",
-      "enterprise/testing/guide",
       {
         "type": "subcategory",
         "label": "Releases",

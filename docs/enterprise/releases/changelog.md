@@ -102,7 +102,7 @@ From this release, SSH key generation on the repository page settings is limited
 
 ### Update Procedure
 
-See [Update Guide](../../enterprise/updating.md).
+See [Update Guide](../updating.md).
 
 ## release-201903
 
@@ -126,7 +126,7 @@ In other words, pull request authors must sign up Sider Enterprise if they want 
 
 ### Update Procedure
 
-See [Update Guide](../../enterprise/updating.md).
+See [Update Guide](../updating.md).
 
 ## release-201902
 
@@ -144,7 +144,7 @@ See [Update Guide](../../enterprise/updating.md).
 
 ### Update Procedure
 
-See [Update Guide](../../enterprise/quick-start/update.md).
+See [Update Guide](../updating.md).
 
 #### catpost: `ACTION_MAILER_DEFAULT_FROM_EMAIL` is required <!-- https://github.com/sider/catpost/pull/275 -->
 
@@ -198,12 +198,12 @@ Follow the below steps:
 
 This release requires you to configure additional settings.
 
-First, follow the [guide](../../enterprise/quick-start/setup.md#creating-a-new-github-app-for-sider) to create a GitHub App on your GitHub Enterprise.
+First, follow the [guide](../quickstart.md#creating-a-new-github-app-for-sider) to create a GitHub App on your GitHub Enterprise.
 
 Secondly, set the environment variable `ACTION_MAILER_DEFAULT_FROM_EMAIL` in `sideci.env`, `catpost.env`, and `setaria.env` file.
-For example, you can set it `support@example.com`. This email address is used when sending system error. See [here](../../enterprise/quick-start/setup.md).
+For example, you can set it `support@example.com`. This email address is used when sending system error. See [here](../quickstart.md).
 
-After that, update Sider Enterprise as usual (See [here](../../enterprise/quick-start/update.md)).
+After that, update Sider Enterprise as usual (See [here](../updating.md)).
 
 ## release-2018121001
 
@@ -220,7 +220,7 @@ After that, update Sider Enterprise as usual (See [here](../../enterprise/quick-
 
 ### Update Procedure
 
-See [Update Guide](../../enterprise/quick-start/update.md).
+See [Update Guide](../updating.md).
 
 ## release-2018111201
 
@@ -236,7 +236,7 @@ See [Update Guide](../../enterprise/quick-start/update.md).
 
 ### Update Procedure
 
-See [Update Guide](../../enterprise/quick-start/update.md).
+See [Update Guide](../updating.md).
 
 And you MUST run this command:
 
@@ -259,7 +259,7 @@ $ docker-compose run --rm sideci_web bundle exec rails r script/migrate/20181105
 
 ### Update Procedure
 
-See [Update Guide](../../enterprise/quick-start/update.md).
+See [Update Guide](../updating.md).
 
 ## release-2018091101
 
@@ -273,7 +273,7 @@ See [Update Guide](../../enterprise/quick-start/update.md).
 
 ### Update Procedure
 
-See [Update Guide](../../enterprise/quick-start/update.md).
+See [Update Guide](../updating.md).
 
 ## release-2018081501
 Main changes are as follows.
@@ -288,7 +288,7 @@ Main changes are as follows.
 * Fix failure to rendering analysis results page and newsfeed pages when pull requests which had been opened since several month ago remained on Sider.
 
 ### Update Procedure
-For updating, see also [Update Guide](../../enterprise/quick-start/update.md).
+For updating, see also [Update Guide](../updating.md).
 
 1. Download the application image of `sideci`.
 2. Stop applications.
@@ -337,7 +337,7 @@ If you have enabled `Required` for `ci/sideci` as "Require status checks" on rep
 ![Commit Status Context](../../assets/commit-status-context.png)
 
 ### Update Procedure
-For updating, see also [Update Guide](../../enterprise/quick-start/update.md).
+For updating, see also [Update Guide](../updating.md).
 
 1. Download application images.
 2. Stop applications.
