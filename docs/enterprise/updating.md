@@ -4,7 +4,7 @@ title: Sider Enterprise Updating Guide
 sidebar_label: Updating Guide
 ---
 
-Sider Enterprise releases new versions every month. We strongly recommend keeping your Sider Enterprise installation up to date.
+Sider Enterprise releases new versions every three months. We strongly recommend keeping your Sider Enterprise installation up to date.
 
 ## New release announcements
 

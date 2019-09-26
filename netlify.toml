@@ -14,16 +14,20 @@ to = "/enterprise/releases/changelog"
 
 [[redirects]]
 from = "/on-premises/quick-start"
-to = "/enterprise/quick-start/setup"
+to = "/enterprise/quickstart"
 
 [[redirects]]
 from = "/on-premises/quick-start/*"
 to = "/enterprise/quick-start/:splat"
 
 [[redirects]]
-from = "/on-premises/testing"
-to = "/enterprise/testing/guide"
-
-[[redirects]]
 from = "/on-premises/releases*"
 to = "/enterprise/releases/changelog:splat"
+
+[[redirects]]
+from = "/enterprise/quick-start/setup"
+to = "/enterprise/quickstart"
+
+[[redirects]]
+from = "/enterprise/quick-start/update"
+to = "/enterprise/updating"
