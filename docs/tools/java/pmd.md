@@ -9,7 +9,7 @@ hide_title: true
 
 | Supported Version | Language    | Website               |
 | ----------------- | ----------- | --------------------- |
-| 6.17.0            | Java 12.0.1 | https://pmd.github.io |
+| 6.18.0            | Java 12.0.1 | https://pmd.github.io |
 
 ## Getting Started
 
@@ -51,6 +51,7 @@ The default value contains the 4 rulesets below:
 - [`category/java/errorprone.xml`](https://github.com/pmd/pmd/blob/master/docs/pages/pmd/rules/java/errorprone.md)
 - [`category/java/multithreading.xml`](https://github.com/pmd/pmd/blob/master/docs/pages/pmd/rules/java/multithreading.md)
 - [`category/java/performance.xml`](https://github.com/pmd/pmd/blob/master/docs/pages/pmd/rules/java/performance.md)
+- [`category/java/security.xml`](https://github.com/pmd/pmd/blob/master/docs/pages/pmd/rules/java/security.md)
 
 You can also specify the rulesets file in your repository.
 

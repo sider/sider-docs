@@ -7,9 +7,9 @@ hide_title: true
 
 # Checkstyle
 
-| Supported Version | Language | Website |
-| ----------------- | -------- | -------- |
-| 8.23 | Java 12.0.1 | [http://checkstyle.sourceforge.net/](http://checkstyle.sourceforge.net/) |
+| Supported Version | Language    | Website                           |
+| ----------------- | ----------- | --------------------------------- |
+| 8.25              | Java 12.0.1 | http://checkstyle.sourceforge.net |
 
 ## Getting Started
 
@@ -17,7 +17,7 @@ To start using Checkstyle, enable it in [Repository Settings](../../getting-star
 
 ## Configuration
 
-You can customize Checkstyle analysis using `sider.yml`.
+You can customize Checkstyle analysis using `sider.yml`. For example:
 
 ```yaml
 linter:
@@ -27,48 +27,53 @@ linter:
     exclude:
       - vendor
       - pattern: foo
+      - string: foo
     ignore:
       - warning
       - info
+    properties: checkstyle.properties
 ```
+
+| Name                        | Type                                       | Default  | Description                        |
+| --------------------------- | ------------------------------------------ | -------- | ---------------------------------- |
+| [`config`](#config)         | `string`                                   | `google` | Coding standard name or file path. |
+| [`dir`](#dir)               | `string`, `array<string>`                  | `.`      | Directory to analyze.              |
+| [`exclude`](#exclude)       | `string`, `array<string>`, `array<object>` | -        | Excluded directory.                |
+| [`ignore`](#ignore)         | `array<string>`                            | -        | Ignored severities.                |
+| [`properties`](#properties) | `string`                                   | -        | Properties file.                   |
 
 ### `config`
 
-This option allows you to declare the coding standard you want to follow. The default value is `google`.
+This option allows you to declare the coding standard you want to follow.
 
 Supported values are:
 
-* `google` \(for `/google_checks.xml`\)
-* `sun` \(for `/sun_checks.xml`\)
-* Path to your configuration file
+- [`google`](https://checkstyle.sourceforge.io/google_style.html) (for `/google_checks.xml`)
+- [`sun`](https://checkstyle.sourceforge.io/sun_style.html) (for `/sun_checks.xml`)
+- Path to your configuration file
 
 When you write `google` or `sun`, config files distributed from Checkstyle are used.
 
 ### `dir`
 
-This option allows you to specify the directories you want to check in your repository. The default value is `.`.
-
-You can write a string or a sequence of strings.
+This option allows you to specify the directories you want to check in your repository.
 
 ### `exclude`
 
 This option allows you to specify `-e` and `-x` command line options passed to the `checkstyle` command.
 
-* If `exclude` is a string, the `-e` option will be used.
-* If it's an object with a `string` key, \(`{ string: vendor }`\), the `-e` option will be used.
-* If it's as object with a `pattern` key, \(`{ pattern: vendor }`\), the `-x` option will be used.
+- If `exclude` is a string, the `-e` option will be used.
+- If including object(s) with a `string` key (e.g. `{ string: vendor }`), the `-e` option will be used.
+- If including object(s) with a `pattern` key (e.g. `{ pattern: vendor }`), the `-x` option will be used.
 
-The default value is empty \(nothing will be excluded\).
+By default, nothing will be excluded.
 
 ### `ignore`
 
 This option allows you to ignore issues based on their severity. Write the list of severities you want to ignore.
 
-The default value is empty \(nothing will be ignored\).
+By default, nothing will be ignored.
 
 ### `properties`
 
 This option allows you to specify the properties file passed to `checkstyle`. The value will be passed to Checkstyle's `-p` option.
-
-There is no default value.
-

@@ -7,9 +7,9 @@ hide_title: true
 
 # go vet
 
-| Language | Website |
-| -------- | -------- |
-| Go 1.12.7 | [https://golang.org/cmd/vet/](https://golang.org/cmd/vet/) |
+| Language  | Website                    |
+| --------- | -------------------------- |
+| Go 1.13.1 | https://golang.org/cmd/vet |
 
 ## Getting Started
 
@@ -18,4 +18,3 @@ To start using go vet, enable it in repository setting.
 ## Configuration
 
 There is no configuration available.
-

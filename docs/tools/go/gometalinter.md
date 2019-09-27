@@ -7,9 +7,9 @@ hide_title: true
 
 # Go Meta Linter
 
-| Supported Version | Language | Website |
-| ----------------- | -------- | -------- |
-| 2.0.11 | Go 1.12.7 | https://github.com/alecthomas/gometalinter |
+| Supported Version | Language  | Website                                    |
+| ----------------- | --------- | ------------------------------------------ |
+| 2.0.11            | Go 1.13.1 | https://github.com/alecthomas/gometalinter |
 
 > **DEPRECATED**: Sider will no longer support Go Meta Linter because Go Meta Linter has been archived since April 7, 2019.
 > For more details, see the [readme](https://github.com/alecthomas/gometalinter#readme).
@@ -26,8 +26,7 @@ Sider tries to download dependencies if your project contains `glide.yaml`. This
 
 If `glide.yaml` contains a dependency to a library in a private repository, please add the SSH key necessary to clone it.
 
-* [Use other private repositories for analysis](../../advanced-settings/private-dependencies.md)
-
+- [Use other private repositories for analysis](../../advanced-settings/private-dependencies.md)
 
 > Note that need to set `import_path` option in `sider.yml` when you would like to run `glide install` on analysis.
 > See [here](#import_path) for details.
@@ -68,13 +67,13 @@ linter:
     import_path: github.com/your-org-name/your-repo-name
     options:
       config: config/settings.json
-      exclude: 'REGEXP'
-      include: 'REGEXP'
+      exclude: "REGEXP"
+      include: "REGEXP"
       skip: vendor/github.com/
       cyclo-over: 10
       min-confidence: .80
       dupl-threshold: 50
-      severity: 'error'
+      severity: "error"
       vendor: true
       tests: true
       errors: true
@@ -141,19 +140,19 @@ This option allows you to manage whether to show only errors.
 
 This option allows you to manage whether to run only fast linters. If you declare true in this option, the following faster linters willl run:
 
-* dupl
-* gosec
-* goconst
-* gocyclo
-* gofmt
-* goimports
-* golint
-* gotype
-* ineffassign
-* lll
-* misspell
-* vet
-* vetshadow
+- dupl
+- gosec
+- goconst
+- gocyclo
+- gofmt
+- goimports
+- golint
+- gotype
+- ineffassign
+- lll
+- misspell
+- vet
+- vetshadow
 
 #### `disable-all`
 
@@ -166,4 +165,3 @@ This option allows you to enable linters previously disabled. Set linters as a l
 #### `disable`
 
 This option allows you to disable linters previously enabled. Set linters as a lint in this option.
-

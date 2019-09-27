@@ -7,21 +7,20 @@ hide_title: true
 
 # Phinder
 
-| Supported Version | Language | Website |
-| ----------------- | -------- | -------- |
-| 0.9.2 | PHP 7.3.9 | [https://github.com/sider/phinder](https://github.com/sider/phinder) |
+| Supported Version | Language   | Website                          |
+| ----------------- | ---------- | -------------------------------- |
+| 0.9.2             | PHP 7.3.10 | https://github.com/sider/phinder |
 
 ## Getting Started
 
-To start using Phinder, enable it in [Repository Settings](../../getting-started/repository-settings.md) and put a `phinder.yml` config file in your repository. Visit the project page on GitHub to see a sample `phinder.yml`:
-
-* [Phinder sample](https://github.com/sider/phinder/tree/master/sample)
+To start using Phinder, enable it in [Repository Settings](../../getting-started/repository-settings.md) and put a `phinder.yml` config file in your repository.
+Visit the project page on GitHub to see a [sample `phinder.yml`](https://github.com/sider/phinder/blob/master/sample/phinder.yml):
 
 <div class="Video">
- <iframe class="Video__iframe" src="https://www.youtube.com/embed/ErHtinxR3ns" frameborder="0" allowfullscreen></iframe>
+  <iframe class="Video__iframe" src="https://www.youtube.com/embed/ErHtinxR3ns" frameborder="0" allowfullscreen></iframe>
 </div>
 
-## Sample Configuration
+## Configuration
 
 Here's a sample Phinder configuration in `sider.yml`:
 
@@ -32,12 +31,10 @@ linter:
     php: src
 ```
 
-## Options
-
-| Name | Type | Description |
-| ---- | ---- | ----------- |
+| Name            | Type     | Description                                                    |
+| --------------- | -------- | -------------------------------------------------------------- |
 | [`rule`](#rule) | `string` | Specify your configuration file or directory name for Phinder. |
-| [`php`](#php) | `string` | Specify file name or directory name to analyze. |
+| [`php`](#php)   | `string` | Specify file name or directory name to analyze.                |
 
 ### `rule`
 
@@ -58,4 +55,4 @@ This option allows you to specify the path of your project to analyze. If this i
 linter:
   phinder:
     php: src # Phinder will analyze '.php' files in '/src' directory.
- ```
+```

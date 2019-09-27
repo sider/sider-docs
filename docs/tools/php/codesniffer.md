@@ -7,13 +7,13 @@ hide_title: true
 
 # PHP_CodeSniffer
 
-| Supported Version | Language | Website |
-| ----------------- | -------- | -------- |
-| 3.4.2 | PHP 7.3.9 | [https://pear.php.net/package/PHP\_CodeSniffer](https://pear.php.net/package/PHP_CodeSniffer) |
+| Supported Version | Language   | Website                                      |
+| ----------------- | ---------- | -------------------------------------------- |
+| 3.4.2             | PHP 7.3.10 | https://pear.php.net/package/PHP_CodeSniffer |
 
 ## Getting Started
 
-To start using PHP\_CodeSniffer, enable it in [Repository Settings](../../getting-started/repository-settings.md). To configure the coding standard you want to follow, add `sider.yml` in your repository and set the `standard` option:
+To start using PHP_CodeSniffer, enable it in [Repository Settings](../../getting-started/repository-settings.md). To configure the coding standard you want to follow, add `sider.yml` in your repository and set the `standard` option:
 
 ```yaml
 linter:
@@ -33,14 +33,14 @@ Sider tries to detect the most suitable standard and target directory for your p
 
 The following standards are detected automatically:
 
-* `CakePHP`
-* `Symfony`
+- `CakePHP`
+- `Symfony`
 
 Autodetection is based on file names and directory structure. If autodetection fails, you can specify a standard in `sider.yml`.
 
 ## Configuration via `sider.yml`
 
-Example setting for PHP\_CodeSniffer under `code_sniffer`:
+Example setting for PHP_CodeSniffer under `code_sniffer`:
 
 ```yaml
 linter:
@@ -52,37 +52,35 @@ linter:
     ignore: app/Vendor
 ```
 
-### Options
+You can use several options to fine-tune PHP_CodeSniffer to your project:
 
-You can use several options to fine-tune PHP\_CodeSniffer to your project:
+| Name                        | Type                | Description                                             |
+| --------------------------- | ------------------- | ------------------------------------------------------- |
+| [`version`](#version)       | `string`, `integer` | Declare PHP_CodeSniffer version explicitly.             |
+| [`dir`](#dir)               | `string`            | Set targets to analyze.                                 |
+| [`standard`](#standard)     | `string`            | Set coding standard or your config file when analyzing. |
+| [`extensions`](#extensions) | `string`            | Set extensions to analyze.                              |
+| [`encoding`](#encoding)     | `string`            | Set file encoding.                                      |
+| [`ignore`](#ignore)         | `string`            | Excludes files or directories from analysis.            |
 
-| Name | Type | Description |
-| ---- | ---- | ----------- |
-| [`version`](#version) | `string`,<br />`integer` | Declare PHP\_CodeSniffer version explicitly. |
-| [`dir`](#dir) | `string` | Set targets to analyze. |
-| [`standard`](#standard) | `string` | Set coding standard or your config file when analyzing. |
-| [`extensions`](#extensions) | `string` | Set extensions to analyze. |
-| [`encoding`](#encoding) | `string` | Set file encoding. |
-| [`ignore`](#ignore) | `string` | Excludes files or directories from analysis. |
+### `version`
 
-#### `version`
+This option controls which major version of PHP_CodeSniffer is used. The default value is `3`.
+Sider has stopped supporting v2 of PHP_CodeSniffer. Therfore, if you set `2` in this option, Sider will execute v3.
 
-This option controls which major version of PHP\_CodeSniffer is used. The default value is `3`.
-Sider has stopped supporting v2 of PHP\_CodeSniffer. Therfore, if you set `2` in this option, Sider will execute v3.
+### `dir`
 
-#### `dir`
-
-This option controls directories Sider inspects. The default value is dependent on the frameworks PHP\_CodeSniffer supports. If you are not using any frameworks or are using a framework PHP\_CodeSniffer does not support, `./` is used.
+This option controls directories Sider inspects. The default value is dependent on the frameworks PHP_CodeSniffer supports. If you are not using any frameworks or are using a framework PHP_CodeSniffer does not support, `./` is used.
 
 If you would like to exclude specific directories, you can specify them in a custom ruleset file.
 
-#### `standard`
+### `standard`
 
 This option controls coding standard of your project. If you leave this value empty, Sider tries to detect the standard automatically.
 
 `PSR2` is used when auto detection fails.
 
-You can use any standards the PHP\_CodeSniffer supports:
+You can use any standards the PHP_CodeSniffer supports:
 
 ```bash
 $ phpcs3 -i
@@ -91,14 +89,14 @@ The installed coding standards are MySource, PEAR, PSR1, PSR2, Squiz, Zend, Symf
 
 You can also define your own standard, and enter the path to the config file here.
 
-#### `extensions`
+### `extensions`
 
 This option controls extensions of files Sider inspects. The default value is `php`.
 
-#### `encoding`
+### `encoding`
 
 This option controls file encoding.
 
-#### `ignore`
+### `ignore`
 
 A comma-separated list of patterns to ignore files and directories by.

@@ -7,9 +7,9 @@ hide_title: true
 
 # ESLint
 
-| Supported Version           | Language   | Runtime        | Website            |
-| --------------------------- | ---------- | -------------- | ------------------ |
-| 3.19.0+ (default to 5.16.0) | JavaScript | Node.js 12.10.0 | https://eslint.org |
+| Supported Version          | Language   | Runtime         | Website            |
+| -------------------------- | ---------- | --------------- | ------------------ |
+| 3.19.0+ (default to 6.5.1) | JavaScript | Node.js 12.10.0 | https://eslint.org |
 
 ## Getting Started
 
