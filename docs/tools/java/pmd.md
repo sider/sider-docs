@@ -7,9 +7,9 @@ hide_title: true
 
 # PMD
 
-| Supported Version | Language | Website |
-| ----------------- | -------- | -------- |
-| 6.17.0 | Java 12.0.1 | [https://pmd.github.io](https://pmd.github.io) |
+| Supported Version | Language    | Website               |
+| ----------------- | ----------- | --------------------- |
+| 6.17.0            | Java 12.0.1 | https://pmd.github.io |
 
 ## Getting Started
 
@@ -25,33 +25,39 @@ linter:
     dir: src
     rulesets:
       - category/java/errorprone.xml
-      - foo.xml
+      - path/to/custom-ruleset.xml
     encoding: Shift_JIS
     min_priority: 3
 ```
 
+| Name                            | Type                      | Default         | Description                                                                                            |
+| ------------------------------- | ------------------------- | --------------- | ------------------------------------------------------------------------------------------------------ |
+| [`dir`](#dir)                   | `string`                  | `.`             | Directory to analyze.                                                                                  |
+| [`rulesets`](#rulesets)         | `string`, `array<string>` | (see below)     | [`-rulesets`](https://pmd.github.io/pmd/pmd_userdocs_cli_reference.html#options) option of PMD.        |
+| [`encoding`](#encoding)         | `string`                  | (PMD's default) | [`-encoding`](https://pmd.github.io/pmd/pmd_userdocs_cli_reference.html#options) option of PMD.        |
+| [`min_priority`](#min_priority) | `number`                  | (PMD's default) | [`-minimumpriority`](https://pmd.github.io/pmd/pmd_userdocs_cli_reference.html#options) option of PMD. |
+
 ### `dir`
 
-This option allows you to specify the directory to analyze. The default value is `.`.
+This option allows you to specify the directory to analyze.
 
 ### `rulesets`
 
-This option allows you to enable and disable rulesets. The value will be passed to PMD's `-rulesets` option. The value should be a sequence of strings.
+This option allows you to use your custom rulesets.
 
-The default value contains the 4 rulesets:
+The default value contains the 4 rulesets below:
 
-* category/java/bestpractices.xml
-* category/java/errorprone.xml
-* category/java/multithreading.xml
-* category/java/performance.xml
+- [`category/java/bestpractices.xml`](https://github.com/pmd/pmd/blob/master/docs/pages/pmd/rules/java/bestpractices.md)
+- [`category/java/errorprone.xml`](https://github.com/pmd/pmd/blob/master/docs/pages/pmd/rules/java/errorprone.md)
+- [`category/java/multithreading.xml`](https://github.com/pmd/pmd/blob/master/docs/pages/pmd/rules/java/multithreading.md)
+- [`category/java/performance.xml`](https://github.com/pmd/pmd/blob/master/docs/pages/pmd/rules/java/performance.md)
 
 You can also specify the rulesets file in your repository.
 
 ### `encoding`
 
-This option allows you to specify the encoding of the Java source code. The value will be passed to PMD's `-encoding` option of PMD. The default is `UTF-8`.
+This option allows you to specify the encoding of the Java source code.
 
 ### `min_priority`
 
-This option specifies PMD's `-minimumpriority` option. There is no default value.
-
+This option allows you to specify the rule priority threshold.
