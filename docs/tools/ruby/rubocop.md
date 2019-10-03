@@ -7,9 +7,9 @@ hide_title: true
 
 # RuboCop
 
-| Version Constraints | Language | Website |
-| ----------------- | -------- | -------- |
-| 0.35.0+ (default to 0.74.0) | Ruby 2.5.6 | https://docs.rubocop.org |
+| Version Constraints         | Language   | Website                  |
+| --------------------------- | ---------- | ------------------------ |
+| 0.35.0+ (default to 0.75.0) | Ruby 2.5.6 | https://docs.rubocop.org |
 
 ## Configuration via `sider.yml`
 
@@ -27,13 +27,13 @@ linter:
 
 ### Options
 
-| Name | Type | Description |
-| ---- | ---- | ----------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#root_dir-option) | `string` | Directory in which the analyzer runs. |
-| [`gems`](../../getting-started/custom-configuration.md#gems-option) | `array<string, object>` | Definition of gems to be installed. |
-| `config` | `string` | A file path passed as `--config` option. |
-| [`rails`](#rails) | `boolean` | Add `--rails` flag. |
-| [`safe`](#safe) | `boolean` | Add `--safe` flag. Default: `false` |
+| Name                                                                        | Type                    | Description                              |
+| --------------------------------------------------------------------------- | ----------------------- | ---------------------------------------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#root_dir-option) | `string`                | Directory in which the analyzer runs.    |
+| [`gems`](../../getting-started/custom-configuration.md#gems-option)         | `array<string, object>` | Definition of gems to be installed.      |
+| `config`                                                                    | `string`                | A file path passed as `--config` option. |
+| [`rails`](#rails)                                                           | `boolean`               | Add `--rails` flag.                      |
+| [`safe`](#safe)                                                             | `boolean`               | Add `--safe` flag. Default: `false`      |
 
 #### `rails`
 

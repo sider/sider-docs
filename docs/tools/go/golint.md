@@ -7,9 +7,9 @@ hide_title: true
 
 # Golint
 
-| Language | Website |
-| -------- | -------- |
-| Go 1.12.7 | [https://github.com/golang/lint](https://github.com/golang/lint) |
+| Language  | Website                        |
+| --------- | ------------------------------ |
+| Go 1.13.1 | https://github.com/golang/lint |
 
 ## Getting Started
 
@@ -18,4 +18,3 @@ To start using Golint, enable Golint in repository setting.
 ## Configuration
 
 There is no configuration available.
-

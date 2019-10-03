@@ -7,9 +7,9 @@ hide_title: true
 
 # stylelint
 
-| Supported Version          | Language                    | Runtime        | Website              |
-| -------------------------- | --------------------------- | -------------- | -------------------- |
-| 8.3.0+ (default to 10.1.0) | CSS and flavors (e.g. Sass) | Node.js 12.10.0 | https://stylelint.io |
+| Supported Version          | Language                    | Runtime         | Website              |
+| -------------------------- | --------------------------- | --------------- | -------------------- |
+| 8.3.0+ (default to 11.0.0) | CSS and flavors (e.g. Sass) | Node.js 12.10.0 | https://stylelint.io |
 
 ## Getting Started
 

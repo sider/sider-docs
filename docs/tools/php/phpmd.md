@@ -7,9 +7,9 @@ hide_title: true
 
 # PHPMD
 
-| Supported Version | Language | Website |
-| ----------------- | -------- | -------- |
-| 2.6.1 | PHP 7.3.9 | [https://phpmd.org/](https://phpmd.org/) |
+| Supported Version | Language   | Website           |
+| ----------------- | ---------- | ----------------- |
+| 2.6.1             | PHP 7.3.10 | https://phpmd.org |
 
 ## Getting Started
 
@@ -95,35 +95,33 @@ linter:
     strict: true
 ```
 
-### Options
-
 You can use several options to fine-tune PHPMD to your project:
 
-| Name | Type | Description |
-| ---- | ---- | ----------- |
-| [`target`](#target) | `array<string>` | Set target files or directories to analyze. |
-| [`rule`](#rule) | `string` | Specify coding rules or your own rule set file. |
-| [`minimumpriority`](#minimumpriority) | `integer` | Set the priority threshold which PHPMD ignores.  |
-| [`suffixes`](#suffixes) | `string` | Set extensions of filenames for analysis. |
-| [`exclude`](#exclude) | `string` | Set files or directories to exclude from analysis. |
-| [`strict`](#strict) | `boolean` | If `true`, PHPMD will report `@SuppressWarnings` nodes. |
+| Name                                  | Type            | Description                                             |
+| ------------------------------------- | --------------- | ------------------------------------------------------- |
+| [`target`](#target)                   | `array<string>` | Set target files or directories to analyze.             |
+| [`rule`](#rule)                       | `string`        | Specify coding rules or your own rule set file.         |
+| [`minimumpriority`](#minimumpriority) | `integer`       | Set the priority threshold which PHPMD ignores.         |
+| [`suffixes`](#suffixes)               | `string`        | Set extensions of filenames for analysis.               |
+| [`exclude`](#exclude)                 | `string`        | Set files or directories to exclude from analysis.      |
+| [`strict`](#strict)                   | `boolean`       | If `true`, PHPMD will report `@SuppressWarnings` nodes. |
 
-#### `target`
+### `target`
 
 This option controls target paths to inspect. This is an optional setting that you do not need to specify if you don't have any performance issues.
 
-#### `rule`
+### `rule`
 
 This option controls `--rule` command line option that is passed to `phpmd`. You can specify a comma-separated list of rule names, or an array of rule names.
 
 The valid rule names are:
 
-* `cleancode`
-* `codesize`
-* `controversial`
-* `design`
-* `naming`
-* `unusedcode`
+- `cleancode`
+- `codesize`
+- `controversial`
+- `design`
+- `naming`
+- `unusedcode`
 
 You can also specify a rule set file name:
 
@@ -135,19 +133,18 @@ linter:
 
 For more information about PHPMD rulesets, see [PHPMD - PHP Mess Detector: Documentation\#Rules](https://phpmd.org/rules/index.html).
 
-#### `minimumpriority`
+### `minimumpriority`
 
 This option controls the rule priority threshold. Rules below the priority you declare will be ignored.
 
-#### `suffixes`
+### `suffixes`
 
 This option controls valid filename extensions. Use a comma-separated list to inspect multiple file extensions, e.g. `php,phtml`.
 
-#### `exclude`
+### `exclude`
 
 This option controls directories to exclude from analysis objects. Use a comma-separated list to ignore multiple directories, e.g. `app/logs/,web/bundles/`.
 
-#### `strict`
+### `strict`
 
 This option controls whether to report nodes that have the `@SuppressWarnings` annotation. The default is `false`. To learn more about `@SuppressWarnings`, see [PHPMD Suppressing Warnings](https://phpmd.org/documentation/suppress-warnings.html).
-
