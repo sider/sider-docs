@@ -25,6 +25,8 @@ See the following *Update Procedure* section.
 * ENCRYPTION_SERVICE_KEY
 * ENCRYPTION_SERVICE_SALT
 
+Also, Sider requires Redis (>4.x) since this release, so please update the Redis server.
+
 ### Features
 
 * Analysis Tools Updates
