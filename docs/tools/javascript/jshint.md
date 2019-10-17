@@ -7,9 +7,9 @@ hide_title: true
 
 # JSHint
 
-| Supported Version | Language | Website |
-| ----------------- | -------- | -------- |
-| 2.10.2 | JavaScript (Node.js 12.10.0) | https://jshint.com |
+| Supported Version | Language   | Runtime         | Website            |
+| ----------------- | ---------- | --------------- | ------------------ |
+| 2.10.2            | JavaScript | Node.js 12.12.0 | https://jshint.com |
 
 ## Getting Started
 
