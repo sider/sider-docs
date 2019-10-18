@@ -28,7 +28,7 @@ Here is a configuration example via [`sider.yml`](../../getting-started/custom-c
 ```yaml
 linter:
   shellcheck:
-    target: "src"
+    target: "src/**/*.{sh,bash}"
     include: "SC2104,SC2105"
     exclude: "SC1000,SC1118"
     enable: "all"
