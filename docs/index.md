@@ -132,6 +132,15 @@ This section has documents about analysis tools which Sider supports. We have an
 
 </details>
 
+### Shell script
+
+<details open>
+  <summary>1 tool is available.</summary>
+
+  * [ShellCheck](./tools/shellscript/shellcheck.md)
+
+</details>
+
 ### Others
 
 <details open>
