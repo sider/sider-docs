@@ -9,7 +9,7 @@ hide_title: true
 
 | Supported Version | Language | Website |
 | ----------------- | -------- | -------- |
-| 0.1.1 | Java 12.0.1 | [https://github.com/sider/JavaSee](https://github.com/sider/JavaSee) |
+| 0.1.2 | Java 12.0.1 | [https://github.com/sider/JavaSee](https://github.com/sider/JavaSee) |
 
 ## Getting Started
 
