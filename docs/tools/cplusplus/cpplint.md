@@ -13,7 +13,7 @@ hide_title: true
 
 > This is **BETA**. The behavior of this tool might change.
 
-Cpplint is a static analysis tool to C/C++ files for style issues.
+Cpplint is a static analysis tool to check C/C++ files for style issues.
 
 ## Getting Started
 
