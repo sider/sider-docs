@@ -95,7 +95,8 @@
         "type": "subcategory",
         "label": "C/C++",
         "ids": [
-          "tools/cplusplus/cppcheck"
+          "tools/cplusplus/cppcheck",
+          "tools/cplusplus/cpplint"
         ]
       },
       {
