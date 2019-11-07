@@ -148,6 +148,9 @@
           "enterprise/releases/changelog"
         ]
       }
+    ],
+    "News": [
+      "news/2019"
     ]
   }
 }
