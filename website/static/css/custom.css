@@ -16,7 +16,7 @@
 .VideoLink {
 	/* Docusaurus needs a wrapper element. */
 }
-  
+
 .VideoLink__link {
   display: flex;
   color: currentColor;
@@ -24,7 +24,7 @@
   border-radius: .25rem;
   position: relative;
 }
-  
+
 .VideoLink__link:hover,
 .VideoLink__link:focus {
   text-decoration: none;
@@ -43,13 +43,13 @@
   top: 2.75rem;
   left: 5.75rem;
 }
-  
+
 .VideoLink__thumb {
   max-height: 8rem;
   margin-right: 2rem;
   border: 1px solid var(--light-grey);
 }
-  
+
 .VideoLink__duration {
   color: #6e6e6e;
 }
@@ -118,6 +118,11 @@ article h1 {
 .nav-footer .sitemap .nav-home {
   padding: 0;
   width: 100px;
+}
+
+article time {
+  color: var(--dark-grey);
+  font-size: 0.9em;
 }
 
 /* media queries */
