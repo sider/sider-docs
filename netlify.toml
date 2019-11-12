@@ -10,7 +10,7 @@ to = "/introduction#analysis-tools"
 
 [[redirects]]
 from = "/on-premises"
-to = "/enterprise/releases/changelog"
+to = "/enterprise/releases"
 
 [[redirects]]
 from = "/on-premises/quick-start"
@@ -19,10 +19,6 @@ to = "/enterprise/quickstart"
 [[redirects]]
 from = "/on-premises/quick-start/*"
 to = "/enterprise/quick-start/:splat"
-
-[[redirects]]
-from = "/on-premises/releases*"
-to = "/enterprise/releases/changelog:splat"
 
 [[redirects]]
 from = "/enterprise/quick-start/setup"

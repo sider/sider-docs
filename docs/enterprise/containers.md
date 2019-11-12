@@ -15,7 +15,7 @@ We use `docker` command in this guide and drop any unnecessary options to shorte
 
 ## Releases and update
 
-The images have tags to specify the release of Sider Enterprise. The tag looks like `201902.1`, year, month, and release number. The latest release is found at [the releases page](./releases/changelog.md).
+The images have tags to specify the release of Sider Enterprise. The tag looks like `201902.1`, year, month, and release number. The latest release is found at [the releases page](./releases/index.md).
 
 We strongly recommend using the latest versions of the images. Sider Enterprise team releases new versions monthly, usually in the middle of the month. Please find the new release notification, and follow the update instructions.
 
