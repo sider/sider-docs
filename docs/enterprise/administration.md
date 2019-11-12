@@ -31,15 +31,3 @@ Note that the `sider_admin` user should have an account on the Sider Enterprise 
 ## Managing license files
 
 Sider team provides a license file to your team to manage the license. You can upload the license file from the `/admin` page. You can also review the current license from the page.
-
-## Configuring batch tasks
-
-Sider has tasks which should be executed to keep operations stable.
-Set crontab to run the following commands every day.
-
-```
-$ docker-compose run sideci_web bundle exec rake onprem:batch:daily
-$ docker-compose run catpost_web bundle exec rake onprem:batch:daily
-```
-
-We recommend executing these commands when there is less analysis because these commands update database records for all users and all repositories.
