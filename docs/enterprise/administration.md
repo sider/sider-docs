@@ -12,9 +12,9 @@ Sider Enterprise has `admin` flag on users. With the flag, the user account is t
 
 The _admin_ users have a privilege to access the `/admin` page. The `admin` page allows to do the following operations.
 
-* To review all of the users, repositories, organization, and analyses.
-* To make another user _admin_.
-* To upload the license file and review the license.
+- To review all of the users, repositories, organization, and analyses.
+- To make another user _admin_.
+- To upload the license file and review the license.
 
 ### Managing admin users from the command line
 
@@ -32,3 +32,14 @@ Note that the `sider_admin` user should have an account on the Sider Enterprise 
 
 Sider team provides a license file to your team to manage the license. You can upload the license file from the `/admin` page. You can also review the current license from the page.
 
+## Configuring batch tasks
+
+Sider has tasks which should be executed to keep operations stable.
+Set crontab to run the following commands every day.
+
+```
+$ docker-compose run sideci_web bundle exec rake onprem:batch:daily
+$ docker-compose run catpost_web bundle exec rake onprem:batch:daily
+```
+
+We recommend executing these commands when there is less analysis because these commands update database records for all users and all repositories.
