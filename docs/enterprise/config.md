@@ -338,7 +338,7 @@ Bugsnag On-Premises session endpoint.
 ### RUNNERS_TRACES_S3_BUCKET_NAME
 
 This environment variable is to be specified as a Minio bucket name.
-**Runners** upload analyses results to the bucket on Minio.
+**Runners** upload analysis results to the bucket on Minio.
 If you use Minio or other S3 compatible storage services,
 this bucket should be isolated from other buckets,
 especially the bucket used by **catpost**.
