@@ -10,7 +10,7 @@ Sider Enterprise releases new versions every three months. We strongly recommend
 
 We announce the releases of new versions of Sider Enterprise online. We also show the release related documentation on this site, so that you can read the changes included in the update and guide to updating.
 
-- [Release Notes](./releases/changelog.md)
+- [Release Notes](./releases/index.md)
 
 The release notes may explain the extra steps included in each release. You may need to run some update scripts during the updating steps.
 
