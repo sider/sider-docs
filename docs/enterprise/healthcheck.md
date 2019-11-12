@@ -13,7 +13,3 @@ When you want to use load balancers for Sider Enterprise, you may need to config
 ## Health checking catpost
 
 `catpost_web` container provides `/health_check` endpoint for health checks. It always returns a `200` response, so that you can test if the component is up and receiving HTTP requests.
-
-## Health checking setaria
-
-`setaria_web` container provides `/health_check` endpoint for health checks. It always returns a `200` response, so that you can test if the component is up and receiving HTTP requests.
