@@ -4,7 +4,8 @@ title: Sider Enterprise Scaling Guide
 sidebar_label: Scaling Guide
 ---
 
-As your development team grows, the number of analysis increases. You will eventually have a performance issue on Sider Enterprise.
+As your development team grows, the number of analysis increases.
+You will eventually have a performance issue on Sider Enterprise.
 
 In this guide, we explain five strategies to scale your Sider Enterprise.
 
@@ -16,15 +17,15 @@ In this guide, we explain five strategies to scale your Sider Enterprise.
 
 ## Choosing the strategies
 
-No matter how you are running your Sider Enterprise, running more containers (strategy #1) should be the first option. Analysis performance mainly depends on the number of containers for `setaria_worker`. Running more `setaria_worker` would improve the analysis performance.
+No matter how you are running your Sider Enterprise, running more containers (strategy #1) should be the first option. Analysis performance mainly depends on the number of containers for analyses.
 
 When you cannot run more containers on your computer, upgrading the hardware can be the next option if your budget allows (#2).
 
-If you are already using the most performant computer available, scaling out to computer instances is the only option. You have two choices here, #3 and #4: running another Sider Enterprise instance or scaling out each Sider Enterprise component. 
+If you are already using the most performant computer available, scaling out to computer instances is the only option. You have two choices here, #3 and #4: running another Sider Enterprise instance or scaling out each Sider Enterprise component.
 
 Scaling out Sider Enterprise instances is easier. You set up another computer to run Sider Enterprise and a load balancer. The advantage of this strategy is its simplicity. The disadvantage is its ineffectiveness.
 
-Scaling out Sider Enterprise components is more flexible and effective. If you detect that the `setaria_worker` is the bottleneck,  set up another computer to run `setaria_worker`. This is more effective because 100% of the added computer resource is used to run `setaria_worker`. However, the setup can be really complicated. While the Sider SaaS team is managing this, we do not recommend it for Sider Enterprise users.
+Scaling out Sider Enterprise components is more flexible and effective. If you detect that the analyses are the bottleneck, scale up the Docker host to run more runners. This is more effective because 100% of the added computer resource is used to perform analyses.
 
 We also provide some options to improve concurrency within containers (#5).
 
@@ -35,7 +36,7 @@ Running more containers will improve the concurrency. Having more _worker_ conta
 When you are using Docker Compose, just give a `--scale` option.
 
 ```
-$ docker-compose up --scale setaria_worker=10 --scale sideci_worker=3 --scale catpost_worker=2
+$ docker-compose up--scale sideci_worker=3 --scale catpost_worker=2
 ```
 
 If you want to run more _web_ containers with Docker Compose, their port mappings may cause an issue. You might have to set up a reverse proxy to distribute incoming connections to the containers. In this case, improving concurrency within _web_ containers (#5) should be the best option.
@@ -71,8 +72,7 @@ Under the assumptions, you can set up another computer to run Sider Enterprise c
     | sideci_worker  |    |                |  +---------------+
     | catpost_web    |    |                |          ^
     | catpost_worker |    |                |          |
-    | setaria_web    |    |                |          |
-    | setaria_worker |    |                |       Developers
+    | runners        |    |                |      Developers
     +----------------+    |                |
                           |                |
            +-- Computer2 ---+              |
@@ -80,8 +80,7 @@ Under the assumptions, you can set up another computer to run Sider Enterprise c
            | sideci_worker  |
            | catpost_web    |
            | catpost_worker |
-           | setaria_web    |
-           | setaria_worker |
+           | runners        |
            +----------------+
 ```
 
@@ -91,7 +90,8 @@ End-user access and webhooks from GitHub Enterprise come to the load balancer an
 
 This is the most complex and sophisticated strategy. Sider SaaS is running on this setup.
 
-In this context, you should manage three web applications for Sider Enterprise; `sideci`, `catpost`, and `setaria`. Each of the web applications should have its own endpoint, load balancer, database.
+In this context, you should manage three web applications for Sider Enterprise; `sideci` and `catpost`.
+Each of the web applications should have its own endpoint, load balancer, database.
 
 If you want to try this setup, please contact the technical support and product development team at Sider.
 
@@ -103,16 +103,11 @@ We provide two options to control concurrency within containers.
 
 `RAILS_MAX_THREADS` is the number of threads of the web and worker processes. The default is `5`. This option is available for _web_ and `sideci_worker` containers.
 
-
-
-| - | WEB_CONCURRENCY | RAILS_MAX_THREADS | Default Concurrency in Container |
-|-|-|-|-|
-| sideci_web | 2 | 5 | 10 |
-| sideci_worker | Unsupported | 5 | 5 |
-| catpost_web | 2 | 5 | 10 |
-| catpost_worker | Unsupported | Unsupported | 1 (non-configurable) |
-| setaria_web | 2 | 5 | 10 |
-| setaria_worker | Unsupported | Unsupported | 1 (non-configurable) |
+| -              | WEB_CONCURRENCY | RAILS_MAX_THREADS | Default Concurrency in Container |
+| :------------- | :-------------- | :---------------- | :------------------------------- |
+| sideci_web     | 2               | 5                 | 10                               |
+| sideci_worker  | Unsupported     | 5                 | 5                                |
+| catpost_web    | 2               | 5                 | 10                               |
+| catpost_worker | Unsupported     | Unsupported       | 1 (non-configurable)             |
 
 You can adjust the values of `WEB_CONCURRENCY` and `RAILS_MAX_THREADS` for _web_ containers. For _worker_ containers, running more containers is easier and more effective.
-

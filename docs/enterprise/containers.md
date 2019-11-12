@@ -113,3 +113,10 @@ $ docker run 480130971618.dkr.ecr.us-east-1.amazonaws.com/catpost_onprem:TAG bun
 ```
 
 Set up `cron` job or anything else to run the batch job every day. We recommend running the batch job during after hours, when no one is actively using Sider for performance reasons.
+
+## Runners - invoked by `sideci_worker`
+
+`sideci_worker` creates containers that perform analyses, we call them **Runners**.
+Runners are important for Sider because they are responsible for analyzing your source code.
+Performance issues would be caused by runners because they heavily use computer resources,
+so consider [Scaling](./scaling.md) if such problems happen.
