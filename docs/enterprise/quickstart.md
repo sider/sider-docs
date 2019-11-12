@@ -257,9 +257,17 @@ When all configurations are completed, you will see the Sider pages with the URL
 
 The Sider build is complete if the check behaviors pass!
 
-## Settings for Batch Tasks
+## Configuring batch tasks
 
-See [here](./administration.md#configuring-batch-tasks) to configure batch tasks.
+Sider has tasks which should be executed to keep operations stable.
+Set crontab to run the following commands every day.
+
+```
+$ docker-compose run sideci_web bundle exec rake onprem:batch:daily
+$ docker-compose run catpost_web bundle exec rake onprem:batch:daily
+```
+
+We recommend executing these commands when there is less analysis because these commands update database records for all users and all repositories.
 
 ## Set Administrators
 

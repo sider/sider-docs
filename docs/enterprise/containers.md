@@ -6,9 +6,8 @@ sidebar_label: Containers Guide
 
 Sider Enterprise is distributed as a set of the following Docker images.
 
-* `quay.io/actcat/sideci`
-* `quay.io/actcat/catpost`
-* `quay.io/actcat/setaria`
+- `480130971618.dkr.ecr.us-east-1.amazonaws.com/sideci_onprem`
+- `480130971618.dkr.ecr.us-east-1.amazonaws.com/catpost_onprem`
 
 In this guide, we explain how you can start containers using the images.
 
@@ -20,24 +19,30 @@ The images have tags to specify the release of Sider Enterprise. The tag looks l
 
 We strongly recommend using the latest versions of the images. Sider Enterprise team releases new versions monthly, usually in the middle of the month. Please find the new release notification, and follow the update instructions.
 
-## Authentication
+## Pulling images
 
-The Docker images are private so that only the Sider Enterprise customers and the developer team can download the images. We provide the credentials, account name and password. Use `docker login` command to set up authentication.
+The Docker images are private so that only the Sider Enterprise customers and the developer team can download the images. We provide the credentials, AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY. Run the following command to pull images.
 
+```shell-session
+$ docker run --rm \
+    -v /var/run/docker.sock:/var/run/docker.sock \
+    -e AWS_ACCESS_KEY_ID=AWS_ACCESS_KEY_ID \
+    -e AWS_SECRET_ACCESS_KEY=AWS_SECRET_ACCESS_KEY \
+    sider/ecr-image-puller IMAGE_NAME
 ```
-$ docker login -u=$account -p=$password quay.io
-```
 
-## Running `sideci`
+`IMAGE_NAME` is like `480130971618.dkr.ecr.us-east-1.amazonaws.com/sideci_onprem:release-201911.0`.
 
-`sideci` image is used to run two containers, `sideci_web` and `sideci_worker`.
+## Running `sideci_onprem`
+
+`sideci_onprem` image is used to run two containers, `sideci_web` and `sideci_worker`.
 
 ### Running the web server
 
 The `sideci_web` runs with `puma` command. Use the following command to run `sideci_web`.
 
 ```
-$ docker run sideci:TAG bundle exec puma
+$ docker run 480130971618.dkr.ecr.us-east-1.amazonaws.com/sideci_onprem:TAG bundle exec puma
 ```
 
 `sideci_web` listens TCP port 3000 to receive HTTP requests from end-users.
@@ -47,31 +52,31 @@ $ docker run sideci:TAG bundle exec puma
 The `sideci_worker` runs with `sidekiq` command. Use the following command to run `sideci_worker`.
 
 ```
-$ docker run sideci:TAG bundle exec sidekiq -C ./config/sidekiq.yml
+$ docker run 480130971618.dkr.ecr.us-east-1.amazonaws.com/sideci_onprem:TAG bundle exec sidekiq -C ./config/sidekiq.yml
 ```
 
 `sideci_worker` does not listen on any port, and the process does not receive any HTTP request.
 
 ### Running batch jobs
 
-`sideci` has daily batch jobs, which runs with `rake` command. Use the following command to run daily batch jobs.
+`sideci_onprem` has daily batch jobs, which runs with `rake` command. Use the following command to run daily batch jobs.
 
 ```
-$ docker run sideci:TAG bundle exec rake onprem:batch:daily
+$ docker run 480130971618.dkr.ecr.us-east-1.amazonaws.com/sideci_onprem:TAG bundle exec rake onprem:batch:daily
 ```
 
 Set up `cron` job or anything else to run the batch job every day. We recommend running the batch job during after hours, when no one is actively using Sider for performance reasons.
 
-## Running `catpost`
+## Running `catpost_onprem`
 
-`catpost` image is used to run two containers, `catpost_web` and `catpost_worker`.
+`catpost_onprem` image is used to run two containers, `catpost_web`, `catpost_worker` and `catpost_scheduler`.
 
 ### Running the web server
 
-The `catpost_web` runs with `puma` command. Use the following command to run `sideci_web`.
+The `catpost_web` runs with `puma` command. Use the following command to run `catpost_web`.
 
 ```
-$ docker run catpost:TAG bundle exec puma
+$ docker run 480130971618.dkr.ecr.us-east-1.amazonaws.com/catpost_onprem:TAG bundle exec puma
 ```
 
 `catpost_web` listens on TCP port 3000 to receive HTTP requests from `sideci` containers.
@@ -81,7 +86,7 @@ $ docker run catpost:TAG bundle exec puma
 The `catpost_worker` runs with `rake` command. Use the following command to run `catpost_worker`.
 
 ```
-$ docker run catpost:TAG bundle exec rake environment resque:work
+$ docker run 480130971618.dkr.ecr.us-east-1.amazonaws.com/catpost_onprem:TAG bundle exec rake environment resque:work
 ```
 
 `catpost_worker` does not listen on any port.
@@ -94,60 +99,17 @@ You need only one scheduler in the whole system of Sider Enterprise, but you can
 The `catpost_scheduler` runes with `rake` command. Use the following command to run `catpost_scheduler`.
 
 ```
-$ docker run catpost:TAG bundle exec rake environment resque:scheduler
+$ docker run 480130971618.dkr.ecr.us-east-1.amazonaws.com/catpost_onprem:TAG bundle exec rake environment resque:scheduler
 ```
 
 `catpost_scheduler` does not listen on any port.
 
 ### Running batch jobs
 
-`catpost` has daily batch jobs, which runs with `rake` command. Use the following command to run daily batch jobs.
+`catpost_onprem` has daily batch jobs, which runs with `rake` command. Use the following command to run daily batch jobs.
 
 ```
-$ docker run catpost:TAG bundle exec rake onprem:batch:daily
-```
-
-Set up `cron` job or anything else to run the batch job every day. We recommend running the batch job during after hours, when no one is actively using Sider for performance reasons.
-
-## Running `setaria`
-
-`setaria` image is used to run two containers, `setaria_web` and `setaria_worker`.
-
-The extra configuration required for `setaria` is to allow the containers to access the docker daemon which is used to run the container. `setaria` is the process used to run the analysis session and it uses `docker run` command (equivalent API calls exactly) for that.
-
-### Running the web server
-
-The `setaria_web` runs with `puma` command. Use the following command to run `setaria_web`.
-
-```
-$ docker run -v /var/run/docker.sock:/var/run/docker.sock:ro \ 
-             setaria:TAG \
-             bundle exec puma
-```
-
-`setaria_web` listens on TCP port 3000 to receive HTTP requests from `sideci` containers.
-
-### Running the job worker
-
-The `setaria_worker` runs with `resque` command. Use the following command to run `setaria_worker`.
-
-```
-$ docker run -v /var/run/docker.sock:/var/run/docker.sock:ro \ 
-             setaria:TAG \
-             bundle exec rake resque:work
-```
-
-`setaria_worker` does not listen on any port.
-
-### Running batch jobs
-
-`setaria` has daily batch jobs, which runs with `rake` command. Use the following command to run daily batch jobs.
-
-```
-$ docker run -v /var/run/docker.sock:/var/run/docker.sock:ro \
-             setaria:TAG \
-             bundle exec rake onprem:batch:daily
+$ docker run 480130971618.dkr.ecr.us-east-1.amazonaws.com/catpost_onprem:TAG bundle exec rake onprem:batch:daily
 ```
 
 Set up `cron` job or anything else to run the batch job every day. We recommend running the batch job during after hours, when no one is actively using Sider for performance reasons.
-
