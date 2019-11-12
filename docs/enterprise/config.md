@@ -385,6 +385,11 @@ The value is assumed to be configured on [Storage Configuration](./storage.md)
 `aws_secret_access_key` is used by **runners** to access Minio server.
 The value is assumed to be configured on [Storage Configuration](./storage.md)
 
+#### network_mode
+
+`network_mode` is equivalent to the `--network` option of `docker run`.
+See [Network settings](https://docs.docker.com/engine/reference/run/#network-settings) for more details.
+
 # catpost Configuration
 
 ## General Configuration

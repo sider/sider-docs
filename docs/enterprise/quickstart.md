@@ -133,8 +133,11 @@ GITHUB_ENDPOINT={{FIXME}}
 ENCRYPTION_SERVICE_KEY=xYSuh7UoBzdFaE69zCsXAV7ZAfcGOiem
 ENCRYPTION_SERVICE_SALT=ZYUfy34DCCHw67gQdOnDm393KeVyzUL8
 RUNNERS_TRACES_S3_BUCKET_NAME=runner-traces
-DOCKER_RUNNERS_CONFIG={"docker_host_url":"unix:///var/run/docker.sock","s3_endpoint":"http://minio:9000","aws_access_key_id":"access-key","aws_secret_access_key":"secret-key"}
+DOCKER_RUNNERS_CONFIG={"docker_host_url":"unix:///var/run/docker.sock","s3_endpoint":"http://minio:9000","aws_access_key_id":"access-key","aws_secret_access_key":"secret-key","network_mode":"PROJECT_default"}
 ```
+
+Don't forget to replace **PROJECT** of `PROJECT_default` with the directory name in which the docker-compose.yml exists.
+For example, `"network_mode":"sider-enterprise_default"` is a correct network_mode if docker-compose.yml is in the `/home/user/sider-enterprise` directory. You can confirm the network name with the command `docker network ls`.
 
 ```:catpost.env
 RAILS_ENV=onprem
@@ -169,7 +172,7 @@ Create `docker-compose.yml` to run Sider applications. `sideci.env` and `catpost
 version: "3"
 services:
   sideci_web: &sideci_web
-    image: quay.io/actcat/sideci:release-201911.0
+    image: 480130971618.dkr.ecr.us-east-1.amazonaws.com/sideci_onprem:release-201911.5
     env_file:
       - ./env/sideci
     command: ["bundle", "exec", "puma"]
@@ -178,6 +181,7 @@ services:
     depends_on:
       - mysql
       - redis
+      - minio
   sideci_worker:
     <<: *sideci_web
     command: ["bundle", "exec", "sidekiq", "-C", "./config/sidekiq.yml"]
@@ -185,7 +189,7 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:ro
   catpost_web: &catpost_web
-    image: quay.io/actcat/catpost:release-201911.0
+    image: 480130971618.dkr.ecr.us-east-1.amazonaws.com/catpost_onprem:release-201911.5
     env_file:
       - ./env/catpost
     command: ["bundle", "exec", "puma"]
@@ -206,16 +210,16 @@ services:
   mysql:
     image: mysql:5.7
     environment:
-      - MYSQL_ALLOW_EMPTY_PASSWORD=true
+      MYSQL_ALLOW_EMPTY_PASSWORD: "true"
   redis:
     image: redis:5
-    command: redis-server --bind 0.0.0.0
+    command: ["redis-server", "--bind", "0.0.0.0"]
   minio:
     image: minio/minio:RELEASE.2019-10-12T01-39-57Z
     command: ["server", "/data"]
     environment:
-      - MINIO_ACCESS_KEY=access-key
-      - MINIO_SECRET_KEY=secret-key
+      MINIO_ACCESS_KEY: access-key
+      MINIO_SECRET_KEY: secret-key
     ports:
       - "9000"
     volumes:

@@ -31,7 +31,7 @@ $ docker run --rm \
     sider/ecr-image-puller IMAGE_NAME
 ```
 
-`IMAGE_NAME` is like `480130971618.dkr.ecr.us-east-1.amazonaws.com/sideci_onprem:release-201911.0`.
+`IMAGE_NAME` is like `480130971618.dkr.ecr.us-east-1.amazonaws.com/sideci_onprem:release-201911.5`.
 
 ## Running `sideci_onprem`
 
