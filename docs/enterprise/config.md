@@ -11,8 +11,8 @@ hide_title: true
 
 You can see the detail of the configuration at Sider GitHub page and Ruby net/http library documents.
 
-* https://github.com/sider/configure
-* https://docs.ruby-lang.org/en/trunk/Net/SMTP.html
+- https://github.com/sider/configure
+- https://docs.ruby-lang.org/en/trunk/Net/SMTP.html
 
 Sider sends emails for operation and error reporting.
 While you can skip email configuration, we strongly recommend to set up email for production environment.
@@ -22,6 +22,7 @@ While you can skip email configuration, we strongly recommend to set up email fo
 SMTP server address.
 
 #### Example
+
     ACTION_MAILER_SMTP_ADDRESS=smtp.example.com
 
 ### `ACTION_MAILER_DEFAULT_FROM_EMAIL`
@@ -29,6 +30,7 @@ SMTP server address.
 From address of emails sent from Sider.
 
 #### Example
+
     ACTION_MAILER_DEFAULT_FROM_EMAIL=sider@example.com
 
 ### `ACTION_MAILER_SMTP_PORT` (Optional)
@@ -53,11 +55,9 @@ Domain name for HELO command.
 
 ### `ACTION_MAILER_SMTP_ENABLE_STARTSSL_AUTO` (Optional)
 
-
 #### Example
+
     ACTION_MAILER_SMTP_ENABLE_STARTSSL_AUTO=no
-
-
 
 # sideci Configuration
 
@@ -68,6 +68,7 @@ Domain name for HELO command.
 URL to allow end users to access Sider.
 
 #### Example
+
     BASE_URL=https://sider.example.com
 
 ### `EXCEPTION_NOTIFIER_RECIPIENT_EMAILS`
@@ -75,6 +76,7 @@ URL to allow end users to access Sider.
 Comma-separated list of recipients for error reporting emails.
 
 #### Example
+
     EXCEPTION_NOTIFIER_RECIPIENT_EMAILS=foo@example.com,bar@example.com
 
 ### `SECRET_KEY_BASE`
@@ -83,29 +85,31 @@ Secret for encryption required by Rails.
 
 ### `RAILS_ENV`
 
-The *environment* for Rails framework.
+The _environment_ for Rails framework.
 You cannot change the value from `onprem`.
 
 #### Example
+
     RAILS_ENV=onprem
 
 ### `RESTRICT_SIGN_UP` (Optional)
 
-|Introduced|Deprecated|
-|----------|----------|
-|201902|-|
+| Introduced | Deprecated |
+| ---------- | ---------- |
+| 201902     | -          |
 
 Set `true` to this to disable _self sign up_ to Sider.
 If self sign up is disabled, administrator should register each user account.
 
 #### Example
+
     RESTRICT_SIGN_UP=true
 
 ### `SIDECI_TIMEZONE` (Optional)
 
-|Introduced|Deprecated|
-|----------|----------|
-|201903|-|
+| Introduced | Deprecated |
+| ---------- | ---------- |
+| 201903     | -          |
 
 Set the timezone used for admin console.
 This does not affect the time formats for Sider Enterprise end users.
@@ -115,32 +119,34 @@ See the reference manual for available options.
 - https://api.rubyonrails.org/classes/ActiveSupport/TimeZone.html
 
 #### Example
+
     SIDECI_TIMEZONE=Asia/Tokyo
 
 ### `ENCRYPTION_SERVICE_KEY`
 
-|Introduced|Deprecated|
-|----------|----------|
-|201908|-|
+| Introduced | Deprecated |
+| ---------- | ---------- |
+| 201908     | -          |
 
 Random string to encrypt secret data.
 You cannot change this value once you set up.
 
 #### Example
+
     ENCRYPTION_SERVICE_KEY=aQ8NSFFTrDjdYydClJKFOrLKgR6UzjvL
 
 ### `ENCRYPTION_SERVICE_SALT`
 
-|Introduced|Deprecated|
-|----------|----------|
-|201908|-|
+| Introduced | Deprecated |
+| ---------- | ---------- |
+| 201908     | -          |
 
 32 bytes of random string to use for ENCRYPTION_SERVICE_KEY as a salt.
 You cannot change this value once you set up.
 
 #### Example
-    ENCRYPTION_SERVICE_SALT=q1eRUq0DqBgdEbKDvAvSNFBih6qyNrT5
 
+    ENCRYPTION_SERVICE_SALT=q1eRUq0DqBgdEbKDvAvSNFBih6qyNrT5
 
 ## Database Configuration
 
@@ -148,39 +154,39 @@ Database configuration of sideci is given through this environment variable.
 Sider supports MySQL 5.7 and assumes `mysql2` driver.
 It will look like `mysql2://sider:topsecret@mysql:3306/sideci`.
 
-* The username and password must be given if your server requires authentication.
-* You can choose arbitrary database name but the database should be dedicated for sideci.
+- The username and password must be given if your server requires authentication.
+- You can choose arbitrary database name but the database should be dedicated for sideci.
 
 Read the database configuration guide for the details.
 
-* https://help.sider.review/onprem/database
+- https://help.sider.review/onprem/database
 
 ### `DATABASE_URL`
 
 URL to connect database.
 
 #### Example
-    DATABASE_URL=mysql2://sider:topsecret@mysql:3306/sideci
 
+    DATABASE_URL=mysql2://sider:topsecret@mysql:3306/sideci
 
 ## Redis Configuration
 
 Redis configuration of sideci is given through this environment variable.
 It will look like `redis://redis:7372/0`.
 
-* You should specify path (0 in the example above) which is dedicated to sideci.
+- You should specify path (0 in the example above) which is dedicated to sideci.
 
 Read the IANA documentation for the details.
 
-* http://www.iana.org/assignments/uri-schemes/prov/redis
+- http://www.iana.org/assignments/uri-schemes/prov/redis
 
 ### `REDIS_URL`
 
 URL to connect Redis.
 
 #### Example
-    REDIS_URL=redis://redis:7372/0
 
+    REDIS_URL=redis://redis:7372/0
 
 ## Catpost Configuration
 
@@ -189,26 +195,12 @@ URL to connect Redis.
 URL which points to catpost endpoint.
 
 #### Example
+
     CATPOST_BASE_URL=https://catpost.example.com:3000
 
 ### `CATPOST_SECRET`
 
 Random string used to authorize requests to catpost.
-
-
-## Setaria Configuration
-
-### `SETARIA_BASE_URL`
-
-URL which points to setaria endpoint.
-
-#### Example
-    SETARIA_BASE_URL=https://setaria.example.com:3000
-
-### `SETARIA_SECRET`
-
-Random string used to authorize requests to setaria.
-
 
 ## GitHub Enterprise Configuration
 
@@ -223,6 +215,7 @@ URL which points to GitHub Enterprise web page.
 Example: https://github.example.com
 
 #### Example
+
     GITHUB_ENDPOINT=https://github.example.com
 
 ### `GITHUB_API_ENDPOINT`
@@ -231,6 +224,7 @@ URL which points to GitHub Enterprise API endpoint.
 Example: https://github.example.com/api/v3/
 
 #### Example
+
     GITHUB_API_ENDPOINT=https://github.example.com/api/v3
 
 ### `GITHUB_CLIENT_ID`
@@ -252,13 +246,14 @@ You can find the name in the `Public link` of the GitHub App.
 When the `Public link` is `https://github.example.com/apps/sider-enterprise`, the name is `sider-enterprise`.
 
 #### Example
+
     GITHUB_APP_NAME=sider-enterprise
 
 ### `GITHUB_APP_PRIVATE_KEY`
 
 Base64 encoded private key of the GitHub App.
 Generate and download the key from GitHub Enterprise and use `base64` command like:
-  $ base64 downloaded-private-key.pem
+\$ base64 downloaded-private-key.pem
 
 ### `GITHUB_APP_OAUTH2_CLIENT_ID`
 
@@ -271,7 +266,6 @@ Client secret of the GitHub App.
 ### `GITHUB_APP_WEBHOOK_SECRET`
 
 Webhook secret of the GitHub App.
-
 
 ## Live Update Configuration
 
@@ -304,13 +298,12 @@ Pusher API configuration.
 
 ### `FRONTEND_POLLING_INTERVAL` (Optional)
 
-|Introduced|Deprecated|
-|----------|----------|
-|201904|-|
+| Introduced | Deprecated |
+| ---------- | ---------- |
+| 201904     | -          |
 
 Polling interval in seconds.
 The default value is 30, which means each browser calls Ajax requests every 30 seconds.
-
 
 ## Integration Configuration
 
@@ -326,21 +319,71 @@ Bugsnag API key.
 
 ### `BUGSNAG_ENDPOINT` (Optional)
 
-|Introduced|Deprecated|
-|----------|----------|
-|201902|-|
+| Introduced | Deprecated |
+| ---------- | ---------- |
+| 201902     | -          |
 
 Bugsnag On-Premises endpoint.
 
 ### `BUGSNAG_SESSION_ENDPOINT` (Optional)
 
-|Introduced|Deprecated|
-|----------|----------|
-|201902|-|
+| Introduced | Deprecated |
+| ---------- | ---------- |
+| 201902     | -          |
 
 Bugsnag On-Premises session endpoint.
 
+## Runners Configuration
 
+### RUNNERS_TRACES_S3_BUCKET_NAME
+
+This environment variable is to be specified as a Minio bucket name.
+**Runners** upload analyses results to the bucket on Minio.
+If you use Minio or other S3 compatible storage services,
+this bucket should be isolated from other buckets,
+especially the bucket used by **catpost**.
+
+| Introduced | Deprecated |
+| :--------- | :--------- |
+| 201911     | -          |
+
+### DOCKER_RUNNERS_CONFIG
+
+Sider expects `DOCKER_RUNNERS_CONFIG` to be JSON string.
+The structure of this must be like this:
+
+```json
+{
+  "docker_host_url": "unix:///var/run/docker.sock",
+  "s3_endpoint": "http://localhost:9000",
+  "aws_access_key_id": "key",
+  "aws_secret_access_key": "password"
+}
+```
+
+| Introduced | Deprecated |
+| :--------- | :--------- |
+| 201911     | -          |
+
+#### docker_host_url
+
+`docker_host_url` specifies the Docker host endpoint.
+If you set up with the remote Docker host,
+use TCP endpoint like `tcp://docker.example.com:5422`.
+
+#### s3_endpoint
+
+`s3_endpoint` is the URL of Minio. See [Storage Configuration](./storage.md) to configure Minio.
+
+#### aws_access_key_id
+
+`aws_access_key_id` is used by **runners** to access Minio server.
+The value is assumed to be configured on [Storage Configuration](./storage.md)
+
+#### aws_secret_access_key
+
+`aws_secret_access_key` is used by **runners** to access Minio server.
+The value is assumed to be configured on [Storage Configuration](./storage.md)
 
 # catpost Configuration
 
@@ -359,6 +402,7 @@ Random string to authenticate API access.
 Path to put git repository cache.
 
 #### Example
+
     GIT_REPOS_DIR=/repos
 
 ### `EXCEPTION_NOTIFIER_RECIPIENT_EMAILS`
@@ -366,14 +410,16 @@ Path to put git repository cache.
 Comma-separated list of recipients for error reporting emails.
 
 #### Example
+
     EXCEPTION_NOTIFIER_RECIPIENT_EMAILS=foo@example.com,bar@example.com
 
 ### `RAILS_ENV`
 
-The *environment* for Rails framework.
+The _environment_ for Rails framework.
 You cannot change the value from `onprem`.
 
 #### Example
+
     RAILS_ENV=onprem
 
 ### `TERM_CHILD`
@@ -382,6 +428,7 @@ An option for Resque.
 You cannot change the value.
 
 #### Example
+
     TERM_CHILD=1
 
 ### `QUEUE`
@@ -390,32 +437,34 @@ An option for Resque.
 You cannot change the value.
 
 #### Example
+
     QUEUE=*
 
 ### `ENCRYPTION_SERVICE_KEY`
 
-|Introduced|Deprecated|
-|----------|----------|
-|201908|-|
+| Introduced | Deprecated |
+| ---------- | ---------- |
+| 201908     | -          |
 
 Random string to encrypt secret data.
 You cannot change this value once you set up.
 
 #### Example
+
     ENCRYPTION_SERVICE_KEY=IppyCqZsWGu6Px1A2qQAoIdkr4J6h8S0
 
 ### `ENCRYPTION_SERVICE_SALT`
 
-|Introduced|Deprecated|
-|----------|----------|
-|201908|-|
+| Introduced | Deprecated |
+| ---------- | ---------- |
+| 201908     | -          |
 
 32 bytes of random string to use for ENCRYPTION_SERVICE_KEY as a salt.
 You cannot change this value once you set up.
 
 #### Example
-    ENCRYPTION_SERVICE_SALT=EaDFh02Df7TzbfDUUBXn6bIdaISc5ou1
 
+    ENCRYPTION_SERVICE_SALT=EaDFh02Df7TzbfDUUBXn6bIdaISc5ou1
 
 ## Database Configuration
 
@@ -423,39 +472,39 @@ Database configuration of sideci is given through this environment variable.
 Sider supports MySQL 5.7 and assumes `mysql2` driver.
 It will look like `mysql2://sider:topsecret@mysql:3306/catpost`.
 
-* The username and password must be given if your server requires authentication.
-* You can choose arbitrary database name but the database should be dedicated for catpost.
+- The username and password must be given if your server requires authentication.
+- You can choose arbitrary database name but the database should be dedicated for catpost.
 
 Read the database configuration guide for the details.
 
-* https://help.sider.review/onprem/database
+- https://help.sider.review/onprem/database
 
 ### `DATABASE_URL`
 
 URL to connect database.
 
 #### Example
-    DATABASE_URL=mysql2://sider:topsecret@mysql:3306/catpost
 
+    DATABASE_URL=mysql2://sider:topsecret@mysql:3306/catpost
 
 ## Redis Configuration
 
 Redis configuration of sideci is given through this environment variable.
 It will look like `redis://redis:7372/1`.
 
-* You should specify path (1 in the example above) which is dedicated to catpost.
+- You should specify path (1 in the example above) which is dedicated to catpost.
 
 Read the IANA documentation for the details.
 
-* http://www.iana.org/assignments/uri-schemes/prov/redis
+- http://www.iana.org/assignments/uri-schemes/prov/redis
 
 ### `REDIS_URL`
 
 URL to connect Redis.
 
 #### Example
-    REDIS_URL=redis://redis:7372/1
 
+    REDIS_URL=redis://redis:7372/1
 
 ## Encryption Configuration
 
@@ -466,7 +515,6 @@ Random string to make archive encrypted.
 ### `ARCHIVE_NAME_SECRET`
 
 Random string to make archive name more unpredictable.
-
 
 ## Object Storage Configuration
 
@@ -482,6 +530,7 @@ Minio endpoint, something like `http://object_storage:9000`.
 Remove the configuration if you use AWS S3.
 
 #### Example
+
     S3_ENDPOINT=http://minio:9000
 
 ### `S3_BUCKET_NAME`
@@ -491,6 +540,7 @@ Sider automatically creates the bucket if it doesn't exist on Minio.
 Specify the name of an existing bucket if you use AWS S3.
 
 #### Example
+
     S3_BUCKET_NAME=sider-example
 
 ### `S3_REGION_NAME`
@@ -500,6 +550,7 @@ If you are using Minio, you can use any region name.
 Specify correct region name if you use AWS S3.
 
 #### Example
+
     S3_REGION_NAME=us-east-1
 
 ### `AWS_ACCESS_KEY_ID`
@@ -512,7 +563,6 @@ If you use AWS S3, you can authorize using IAM role and remove this configuratio
 Authorization for object storage.
 If you use AWS S3, you can authorize using IAM role and remove this configuration.
 
-
 ## Integration Configuration
 
 You can optionally setup Loggly and Bugsnag integration.
@@ -527,179 +577,16 @@ Bugsnag API key.
 
 ### `BUGSNAG_ENDPOINT` (Optional)
 
-|Introduced|Deprecated|
-|----------|----------|
-|201902|-|
+| Introduced | Deprecated |
+| ---------- | ---------- |
+| 201902     | -          |
 
 Bugsnag On-Premises endpoint.
 
 ### `BUGSNAG_SESSION_ENDPOINT` (Optional)
 
-|Introduced|Deprecated|
-|----------|----------|
-|201902|-|
-
-Bugsnag On-Premises session endpoint.
-
-
-
-# setaria Configuration
-
-## General Configuration
-
-### `SECRET_KEY_BASE`
-
-Secret for encryption required by Rails.
-
-### `API_SECRET`
-
-Random string to authenticate API access from sideci.
-
-### `EXCEPTION_NOTIFIER_RECIPIENT_EMAILS`
-
-Comma-separated list of recipients for error reporting emails.
-
-### `RAILS_ENV`
-
-The *environment* for Rails framework.
-You cannot change the value from `onprem`.
-
-#### Example
-    RAILS_ENV=onprem
-
-### `TERM_CHILD`
-
-An option for Resque.
-You cannot change the value.
-
-#### Example
-    TERM_CHILD=1
-
-### `QUEUE`
-
-An option for Resque.
-You cannot change the value.
-
-#### Example
-    QUEUE=*
-
-### `RUNNER_USE_DEFAULT_NETWORK` (Optional)
-
-|Introduced|Deprecated|
-|----------|----------|
-|201902|-|
-
-Specify any value if you want to run the analyzers in `default` network of Docker.
-
-#### Example
-    RUNNER_USE_DEFAULT_NETWORK=1
-
-### `ENCRYPTION_SERVICE_KEY`
-
-|Introduced|Deprecated|
-|----------|----------|
-|201908|-|
-
-Random string to encrypt secret data.
-You cannot change this value once you set up.
-
-#### Example
-    ENCRYPTION_SERVICE_KEY=oFToypGCAekqPaPyK0P9vqty94nVuyNo
-
-### `ENCRYPTION_SERVICE_SALT`
-
-|Introduced|Deprecated|
-|----------|----------|
-|201908|-|
-
-32 bytes of random string to use for ENCRYPTION_SERVICE_KEY as a salt.
-You cannot change this value once you set up.
-
-#### Example
-    ENCRYPTION_SERVICE_SALT=anglwu4rgRrHkhBcdmPUOr7Nn7j8Wbyy
-
-
-## Database Configuration
-
-Database configuration of setaria is given through this environment variable.
-Sider supports MySQL 5.7 and assumes `mysql2` driver.
-It will look like `mysql2://sider:topsecret@mysql:3306/setaria`.
-
-* The username and password must be given if your server requires authentication.
-* You can choose arbitrary database name but the database should be dedicated for sideci.
-
-Read the database configuration guide for the details.
-
-* https://help.sider.review/onprem/database
-
-### `DATABASE_URL`
-
-URL to connect database.
-
-#### Example
-    DATABASE_URL=mysql2://sider:topsecret@mysql:3306/setaria
-
-
-## Redis Configuration
-
-Redis configuration of sideci is given through this environment variable.
-It will look like `redis://redis:7372/2`.
-
-* You should specify path (2 in the example above) which is dedicated to setaria.
-
-Read the IANA documentation for the details.
-
-* http://www.iana.org/assignments/uri-schemes/prov/redis
-
-### `REDIS_URL`
-
-URL to connect Redis.
-
-#### Example
-    REDIS_URL=redis://redis:7372/2
-
-
-## Docker Configuration
-
-setaria needs to authenticate to Quay docker image repository.
-Sider provides the login name and password to access Quay repositories.
-
-### `QUAY_ROBOT_NAME`
-
-Quay account name.
-
-#### Example
-    QUAY_ROBOT_NAME=actcat+example
-
-### `QUAY_ROBOT_PASSWORD`
-
-Quay account password.
-
-
-## Integration Configuration
-
-You can optionally setup Loggly and Bugsnag integration.
-
-### `LOGGLY_URL` (Optional)
-
-Loggly URL for debugging.
-
-### `BUGSNAG_API_KEY` (Optional)
-
-Bugsnag API key.
-
-### `BUGSNAG_ENDPOINT` (Optional)
-
-|Introduced|Deprecated|
-|----------|----------|
-|201902|-|
-
-Bugsnag On-Premises endpoint.
-
-### `BUGSNAG_SESSION_ENDPOINT` (Optional)
-
-|Introduced|Deprecated|
-|----------|----------|
-|201902|-|
+| Introduced | Deprecated |
+| ---------- | ---------- |
+| 201902     | -          |
 
 Bugsnag On-Premises session endpoint.
