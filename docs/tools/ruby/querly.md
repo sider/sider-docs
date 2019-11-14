@@ -7,9 +7,9 @@ hide_title: true
 
 # Querly
 
-| Version Constraints | Language | Website |
-| ----------------- | -------- | -------- |
-| 0.5.0+ (default to 1.0.0) | Ruby 2.6.4 | https://github.com/soutaro/querly |
+| Supported Version         | Language   | Website                           |
+| ------------------------- | ---------- | --------------------------------- |
+| 0.5.0+ (default to 1.0.0) | Ruby 2.6.5 | https://github.com/soutaro/querly |
 
 ## Getting Started
 
@@ -18,9 +18,9 @@ and put a `querly.yaml` config in your repository's root directory.
 
 Visit the Querly project page for more information about writing rules:
 
-* [Configuration](https://github.com/soutaro/querly/blob/master/manual/configuration.md)
-* [Examples](https://github.com/soutaro/querly/blob/master/manual/examples.md)
-* [Patterns](https://github.com/soutaro/querly/blob/master/manual/patterns.md)
+- [Configuration](https://github.com/soutaro/querly/blob/master/manual/configuration.md)
+- [Examples](https://github.com/soutaro/querly/blob/master/manual/examples.md)
+- [Patterns](https://github.com/soutaro/querly/blob/master/manual/patterns.md)
 
 <div class="Video">
  <iframe class="Video__iframe" src="https://www.youtube.com/embed/WtHmNuWJzPA" frameborder="0" allowfullscreen></iframe>
@@ -39,9 +39,8 @@ linter:
 
 ## Options
 
-| Name | Type | Description |
-| ---- | ---- | ----------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#root_dir-option) | `string` | Directory in which the analyzer runs. |
+| Name                                                                | Type                    | Description                         |
+| ------------------------------------------------------------------- | ----------------------- | ----------------------------------- |
 | [`gems`](../../getting-started/custom-configuration.md#gems-option) | `array<string, object>` | Definition of gems to be installed. |
 
 ## Analyzing view templates

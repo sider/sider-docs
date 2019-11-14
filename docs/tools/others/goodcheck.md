@@ -7,9 +7,9 @@ hide_title: true
 
 # Goodcheck
 
-| Version Constraints | Language | Website |
-| ----------------- | -------- | -------- |
-| >= 1.0.0, < 3.0 (default to 2.4.0) | Others(Regexp) | [https://github.com/sider/goodcheck](https://github.com/sider/goodcheck) |
+| Supported Version         | Language        | Website                            |
+| ------------------------- | --------------- | ---------------------------------- |
+| 1.0.0+ (default to 2.4.3) | Others (Regexp) | https://github.com/sider/goodcheck |
 
 ## Getting Started
 
@@ -36,9 +36,7 @@ linter:
 
 ### Options
 
-| Name | Type | Description |
-| ---- | ---- | ----------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#root_dir-option) | `string` | Directory in which the analyzer runs. |
-| [`gems`](../../getting-started/custom-configuration.md#gems-option) | `array<string, object>` | Definition of gems to be installed. |
-| `config` | `string` | A file path passed as `--config` option. |
-| `target` | `string`<br />`array<string>` | Files or directories which are analyzed. |
+| Name     | Type                      | Description                              |
+| -------- | ------------------------- | ---------------------------------------- |
+| `config` | `string`                  | A file path passed as `--config` option. |
+| `target` | `string`, `array<string>` | Files or directories which are analyzed. |

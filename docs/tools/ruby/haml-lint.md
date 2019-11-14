@@ -7,9 +7,9 @@ hide_title: true
 
 # HAML-Lint
 
-| Version Constraints | Language | Website |
-| ----------------- | -------- | -------- |
-| 0.26.0+ (default to 0.33.0) | [HAML](http://haml.info) (Ruby 2.6.4) | https://github.com/sds/haml-lint |
+| Version                     | Language                              | Website                          |
+| --------------------------- | ------------------------------------- | -------------------------------- |
+| 0.26.0+ (default to 0.34.0) | [HAML](http://haml.info) (Ruby 2.6.5) | https://github.com/sds/haml-lint |
 
 ## Configuration via `sider.yml`
 
@@ -27,25 +27,24 @@ linter:
       - MultilinePipe
     exclude_linter:
       - TagName
-    config: '.rubocop_haml.yml'
-    file: '**/*haml'
+    config: ".rubocop_haml.yml"
+    file: "**/*haml"
     exclude:
-      - 'app/views/layouts/application.html.haml'
+      - "app/views/layouts/application.html.haml"
 ```
 
 ### Options
 
 You can use several options to fine-tune HAML-Lint to your project.
 
-| Name | Type | Description |
-| ---- | ---- | ----------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#root_dir-option) | `string` | Directory in which the analyzer runs. |
-| [`gems`](../../getting-started/custom-configuration.md#gems-option) | `array<string, object>` | Definition of gems to be installed. |
-| `include_linter` | `string`<br />`array<string>` | Rule names passed as `--include-linter` option. |
-| `exclude_linter` | `string`<br />`array<string>` | Rule names passed as `--exclude-linter` option. |
-| `config` | `string` | A file path passed as `--config` option. |
-| `file` | `string` | Files which are analyzed. default to `.`. |
-| `exclude` | `string`<br />`array<string>` | Files passed as `--exclude` option. |
+| Name                                                                | Type                      | Default | Description                                     |
+| ------------------------------------------------------------------- | ------------------------- | ------- | ----------------------------------------------- |
+| [`gems`](../../getting-started/custom-configuration.md#gems-option) | `array<string, object>`   | -       | Definition of gems to be installed.             |
+| `include_linter`                                                    | `string`, `array<string>` | -       | Rule names passed as `--include-linter` option. |
+| `exclude_linter`                                                    | `string`, `array<string>` | -       | Rule names passed as `--exclude-linter` option. |
+| `config`                                                            | `string`                  | -       | A file path passed as `--config` option.        |
+| `file`                                                              | `string`                  | `.`     | Files to analyze. Glob is available.            |
+| `exclude`                                                           | `string`, `array<string>` | -       | Files passed as `--exclude` option.             |
 
 ### Installing RuboCop plugins and configuration gems
 

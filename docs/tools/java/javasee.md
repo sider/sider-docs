@@ -7,9 +7,9 @@ hide_title: true
 
 # JavaSee
 
-| Supported Version | Language | Website |
-| ----------------- | -------- | -------- |
-| 0.1.2 | Java 12.0.1 | [https://github.com/sider/JavaSee](https://github.com/sider/JavaSee) |
+| Supported Version | Language    | Website                          |
+| ----------------- | ----------- | -------------------------------- |
+| 0.1.3             | Java 12.0.1 | https://github.com/sider/JavaSee |
 
 ## Getting Started
 
@@ -22,21 +22,25 @@ You can customize JavaSee analysis using `sider.yml`.
 ```yaml
 linter:
   javasee:
-    config: javasee.yml
+    config: my_javasee.yml
     dir:
       - src
       - test
 ```
 
+| Name                | Type                      | Default | Description             |
+| ------------------- | ------------------------- | ------- | ----------------------- |
+| [`config`](#config) | `string`                  | -       | Config file path.       |
+| [`dir`](#dir)       | `string`, `array<string>` | -       | Directories to analyze. |
+
 ### `config`
 
 This option allows you to specify the configuration file of JavaSee.
-The default value is `javasee.yml`, which is the default config file name of JavaSee.
+If you omit it, the JavaSee default `javasee.yml` will be used.
 
 ### `dir`
 
 This option allows you to specify the directories you want to check in your repository.
-The default value is `.`.
+If you omit it, all the Java files in your repository will be analyzed.
 
 You can write a string or a sequence of strings.
-

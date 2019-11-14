@@ -7,9 +7,9 @@ hide_title: true
 
 # RuboCop
 
-| Version Constraints         | Language   | Website                  |
+| Supported Version           | Language   | Website                  |
 | --------------------------- | ---------- | ------------------------ |
-| 0.35.0+ (default to 0.75.0) | Ruby 2.5.6 | https://docs.rubocop.org |
+| 0.35.0+ (default to 0.76.0) | Ruby 2.5.6 | https://docs.rubocop.org |
 
 > **DEPRECATED**: Sider will drop the support of RuboCop 0.60.0 and older versions soon. Please consider upgrading to **0.61.0** and newer.
 
@@ -23,21 +23,23 @@ linter:
     gems:
       - "rubocop-rspec"
     config: "config/.rubocop.yml"
-    rails: false
     safe: true
 ```
 
-### Options
+You can use the following options to make analysis fitter for your project.
 
-| Name                                                                        | Type                    | Description                              |
-| --------------------------------------------------------------------------- | ----------------------- | ---------------------------------------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#root_dir-option) | `string`                | Directory in which the analyzer runs.    |
-| [`gems`](../../getting-started/custom-configuration.md#gems-option)         | `array<string, object>` | Definition of gems to be installed.      |
-| `config`                                                                    | `string`                | A file path passed as `--config` option. |
-| [`rails`](#rails)                                                           | `boolean`               | Add `--rails` flag.                      |
-| [`safe`](#safe)                                                             | `boolean`               | Add `--safe` flag. Default: `false`      |
+| Name                                                                | Type                    | Default | Description                              |
+| ------------------------------------------------------------------- | ----------------------- | ------- | ---------------------------------------- |
+| [`gems`](../../getting-started/custom-configuration.md#gems-option) | `array<string, object>` | -       | Definition of gems to be installed.      |
+| [`config`](#config)                                                 | `string`                | -       | A file path passed as `--config` option. |
+| [`rails`](#rails)                                                   | `boolean`               | -       | **[DEPRECATED]** Add `--rails` flag.     |
+| [`safe`](#safe)                                                     | `boolean`               | `false` | Add `--safe` flag.                       |
 
-#### `rails`
+### `config`
+
+This option allows you to specify your configuration file. If you omit it, the RuboCop default one will be used.
+
+### `rails`
 
 > The option is ignored after the version `0.72.0`. Please use the [`rubocop-rails`](https://github.com/rubocop-hq/rubocop-rails) plugin instead.
 
@@ -51,7 +53,7 @@ linter:
     rails: false
 ```
 
-#### `safe`
+### `safe`
 
 This option controls to cops RuboCop inspects. If `true`, RuboCop will inspect cops which have been set `Safe: true` and `Enabled: true` in `.rubocop.yml`.
 

@@ -9,7 +9,7 @@ hide_title: true
 
 | Supported Version | Language    | Website                           |
 | ----------------- | ----------- | --------------------------------- |
-| 8.25              | Java 12.0.1 | http://checkstyle.sourceforge.net |
+| 8.26              | Java 12.0.1 | http://checkstyle.sourceforge.net |
 
 ## Getting Started
 

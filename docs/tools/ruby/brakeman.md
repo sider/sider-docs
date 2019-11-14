@@ -7,9 +7,9 @@ hide_title: true
 
 # Brakeman
 
-| Version Constraints | Language | Website |
-| ----------------- | -------- | -------- |
-| >= 4.0.0, < 4.4.0 (default to 4.3.1) | Ruby 2.6.4 | https://brakemanscanner.org |
+| Supported Version                    | Language   | Website                     |
+| ------------------------------------ | ---------- | --------------------------- |
+| >= 4.0.0, < 4.4.0 (default to 4.3.1) | Ruby 2.6.5 | https://brakemanscanner.org |
 
 ## Configuration via `sider.yml`
 
@@ -20,12 +20,11 @@ linter:
   brakeman:
     gems:
       - name: "brakeman"
-      - version: "4.3.0"
+        version: "4.3.0"
 ```
 
 ## Options
 
-| Name | Type | Description |
-| ---- | ---- | ----------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#root_dir-option) | `string` | Directory in which the analyzer runs. |
+| Name                                                                | Type                    | Description                         |
+| ------------------------------------------------------------------- | ----------------------- | ----------------------------------- |
 | [`gems`](../../getting-started/custom-configuration.md#gems-option) | `array<string, object>` | Definition of gems to be installed. |

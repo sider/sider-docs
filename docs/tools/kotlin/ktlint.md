@@ -11,7 +11,7 @@ hide_title: true
 
 | Supported Version | Language             | Website                  |
 | ----------------- | -------------------- | ------------------------ |
-| 0.34.2 [¹]        | Kotlin (Java 12.0.1) | https://ktlint.github.io |
+| 0.35.0 [¹]        | Kotlin (Java 12.0.1) | https://ktlint.github.io |
 
 ¹ You can use Gradle or Maven to install any version of ktlint, but note that the version may not compatible with Sider.
 
