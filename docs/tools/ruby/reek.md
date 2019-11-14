@@ -7,9 +7,9 @@ hide_title: true
 
 # Reek
 
-| Version Constraints | Language | Website |
-| ----------------- | -------- | -------- |
-| 4.4.0+ (default to 5.4.0) | Ruby 2.6.4 | https://github.com/troessner/reek |
+| Supported Version         | Language   | Website                           |
+| ------------------------- | ---------- | --------------------------------- |
+| 4.4.0+ (default to 5.4.0) | Ruby 2.6.5 | https://github.com/troessner/reek |
 
 ## Configuration via `sider.yml`
 
@@ -25,11 +25,9 @@ linter:
 
 ### Options
 
-| Name | Type | Description |
-| ---- | ---- | ----------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#root_dir-option) | `string` | Directory in which the analyzer runs. |
+| Name                                                                | Type                    | Description                         |
+| ------------------------------------------------------------------- | ----------------------- | ----------------------------------- |
 | [`gems`](../../getting-started/custom-configuration.md#gems-option) | `array<string, object>` | Definition of gems to be installed. |
-
 
 ## Default Configuration
 
@@ -68,7 +66,7 @@ detectors:
     exclude: []
     max_allowed_nesting: 5
     ignore_iterators:
-    - tap
+      - tap
   ModuleInitialize:
     enabled: true
     exclude: []

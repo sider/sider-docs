@@ -9,7 +9,7 @@ hide_title: true
 
 | Supported Version          | Language   | Runtime         | Website            |
 | -------------------------- | ---------- | --------------- | ------------------ |
-| 3.19.0+ (default to 6.5.1) | JavaScript | Node.js 12.13.0 | https://eslint.org |
+| 3.19.0+ (default to 6.6.0) | JavaScript | Node.js 12.13.0 | https://eslint.org |
 
 ## Getting Started
 

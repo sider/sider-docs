@@ -9,7 +9,7 @@ hide_title: true
 
 | Supported Version          | Language                    | Runtime         | Website              |
 | -------------------------- | --------------------------- | --------------- | -------------------- |
-| 8.3.0+ (default to 11.0.0) | CSS and flavors (e.g. Sass) | Node.js 12.13.0 | https://stylelint.io |
+| 8.3.0+ (default to 11.1.1) | CSS and flavors (e.g. Sass) | Node.js 12.13.0 | https://stylelint.io |
 
 ## Getting Started
 

@@ -7,9 +7,9 @@ hide_title: true
 
 # Rails Best Practices
 
-| Version Constraints | Language | Website |
-| ----------------- | -------- | -------- |
-| 1.19.1+ (default to 1.19.4) | Ruby 2.6.4 | https://rails-bestpractices.com |
+| Supported Version           | Language   | Website                         |
+| --------------------------- | ---------- | ------------------------------- |
+| 1.19.1+ (default to 1.19.4) | Ruby 2.6.5 | https://rails-bestpractices.com |
 
 ## Configuration via `sider.yml`
 
@@ -30,17 +30,16 @@ linter:
 
 ### Options
 
-| Name | Type | Description |
-| ---- | ---- | ----------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#root_dir-option) | `string` | Directory in which the analyzer runs. |
-| [`gems`](../../getting-started/custom-configuration.md#gems-option) | `array<string, object>` | Definition of gems to be installed. |
-| `vendor` | `boolean` | Add `--vendor` flag. Default: `true` |
-| `spec` | `boolean` | Add `--spec` flag. Default: `false` |
-| `test` | `boolean` | Add `--test` flag. Default: `false` |
-| `features` | `boolean` | Add `--features` flag. Default: `false` |
-| `exclude` | `string` | Patterns passed as `--exclude` option. |
-| `only` | `string` | Patterns passed as `--only` option. |
-| `config` | `string` | Configuration file location passed as `--config`. |
+| Name                                                                | Type                    | Default | Description                                       |
+| ------------------------------------------------------------------- | ----------------------- | ------- | ------------------------------------------------- |
+| [`gems`](../../getting-started/custom-configuration.md#gems-option) | `array<string, object>` | -       | Definition of gems to be installed.               |
+| `vendor`                                                            | `boolean`               | `false` | Add `--vendor` flag.                              |
+| `spec`                                                              | `boolean`               | `false` | Add `--spec` flag                                 |
+| `test`                                                              | `boolean`               | `false` | Add `--test` flag                                 |
+| `features`                                                          | `boolean`               | `false` | Add `--features` flag                             |
+| `exclude`                                                           | `string`                | -       | Patterns passed as `--exclude` option.            |
+| `only`                                                              | `string`                | -       | Patterns passed as `--only` option.               |
+| `config`                                                            | `string`                | -       | Configuration file location passed as `--config`. |
 
 ## Analyzing view templates
 
@@ -66,46 +65,46 @@ linter:
 Sider uses the following configuration for Rails Best Practices if there is no configuration file in your repository:
 
 ```yaml
-# AddModelVirtualAttributeCheck: { }
-AlwaysAddDbIndexCheck: { }
-# CheckSaveReturnValueCheck: { }
-# CheckDestroyReturnValueCheck: { }
-DefaultScopeIsEvilCheck: { }
-DryBundlerInCapistranoCheck: { }
-#HashSyntaxCheck: { }
-# IsolateSeedDataCheck: { }
-# KeepFindersOnTheirOwnModelCheck: { }
-# LawOfDemeterCheck: { }
-#LongLineCheck: { max_line_length: 80 }
-MoveCodeIntoControllerCheck: { }
+# AddModelVirtualAttributeCheck: {}
+AlwaysAddDbIndexCheck: {}
+# CheckSaveReturnValueCheck: {}
+# CheckDestroyReturnValueCheck: {}
+DefaultScopeIsEvilCheck: {}
+DryBundlerInCapistranoCheck: {}
+# HashSyntaxCheck: {}
+# IsolateSeedDataCheck: {}
+# KeepFindersOnTheirOwnModelCheck: {}
+# LawOfDemeterCheck: {}
+# LongLineCheck: { max_line_length: 80 }
+MoveCodeIntoControllerCheck: {}
 MoveCodeIntoHelperCheck: { array_count: 3 }
 MoveCodeIntoModelCheck: { use_count: 2 }
-# MoveFinderToNamedScopeCheck: { }
+# MoveFinderToNamedScopeCheck: {}
 # MoveModelLogicIntoModelCheck: { use_count: 4 }
 # NeedlessDeepNestingCheck: { nested_count: 2 }
-NotRescueExceptionCheck: { }
-NotUseDefaultRouteCheck: { }
-# NotUseTimeAgoInWordsCheck: { }
+NotRescueExceptionCheck: {}
+NotUseDefaultRouteCheck: {}
+# NotUseTimeAgoInWordsCheck: {}
 OveruseRouteCustomizationsCheck: { customize_count: 3 }
-ProtectMassAssignmentCheck: { }
-RemoveEmptyHelpersCheck: { }
-#RemoveTabCheck: { }
-# RemoveTrailingWhitespaceCheck: { }
+ProtectMassAssignmentCheck: {}
+RemoveEmptyHelpersCheck: {}
+# RemoveTabCheck: {}
+# RemoveTrailingWhitespaceCheck: {}
 # RemoveUnusedMethodsInControllersCheck: { except_methods: [] }
 # RemoveUnusedMethodsInHelpersCheck: { except_methods: [] }
 # RemoveUnusedMethodsInModelsCheck: { except_methods: [] }
 ReplaceComplexCreationWithFactoryMethodCheck: { attribute_assignment_count: 2 }
-# ReplaceInstanceVariableWithLocalVariableCheck: { }
-RestrictAutoGeneratedRoutesCheck: { }
-# SimplifyRenderInControllersCheck: { }
-# SimplifyRenderInViewsCheck: { }
-#UseBeforeFilterCheck: { customize_count: 2 }
-UseModelAssociationCheck: { }
-UseMultipartAlternativeAsContentTypeOfEmailCheck: { }
-#UseParenthesesInMethodDefCheck: { }
-UseObserverCheck: { }
-# UseQueryAttributeCheck: { }
-# UseSayWithTimeInMigrationsCheck: { }
-UseScopeAccessCheck: { }
-UseTurboSprocketsRails3Check: { }
+# ReplaceInstanceVariableWithLocalVariableCheck: {}
+RestrictAutoGeneratedRoutesCheck: {}
+# SimplifyRenderInControllersCheck: {}
+# SimplifyRenderInViewsCheck: {}
+# UseBeforeFilterCheck: { customize_count: 2 }
+UseModelAssociationCheck: {}
+UseMultipartAlternativeAsContentTypeOfEmailCheck: {}
+# UseParenthesesInMethodDefCheck: {}
+UseObserverCheck: {}
+# UseQueryAttributeCheck: {}
+# UseSayWithTimeInMigrationsCheck: {}
+UseScopeAccessCheck: {}
+UseTurboSprocketsRails3Check: {}
 ```
