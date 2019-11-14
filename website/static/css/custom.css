@@ -120,9 +120,10 @@ article h1 {
   width: 100px;
 }
 
-article time {
+.news-date {
   color: var(--dark-grey);
   font-size: 0.9em;
+  font-style: italic;
 }
 
 /* media queries */
