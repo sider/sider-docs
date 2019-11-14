@@ -28,10 +28,10 @@ linter:
       - test
 ```
 
-| Name                | Type                      | Default | Description             |
-| ------------------- | ------------------------- | ------- | ----------------------- |
-| [`config`](#config) | `string`                  | -       | Config file path.       |
-| [`dir`](#dir)       | `string`, `array<string>` | -       | Directories to analyze. |
+| Name                | Type                 | Default | Description             |
+| ------------------- | -------------------- | ------- | ----------------------- |
+| [`config`](#config) | `string`             | -       | Config file path.       |
+| [`dir`](#dir)       | `string`, `string[]` | -       | Directories to analyze. |
 
 ### `config`
 

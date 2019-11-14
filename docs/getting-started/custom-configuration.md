@@ -18,17 +18,17 @@ First, add a file named `sider.yml` in your project's root directory.
 ```yaml
 linter:
   rubocop:
-    config: 'lint_yml/.myrubocop.yml'
+    config: "lint_yml/.myrubocop.yml"
 
   eslint:
-    root_dir: 'frontend'
+    root_dir: "frontend"
     npm_install: false
-    config: 'frontend/.eslintrc'
-    ext: 'js,jsx'
+    config: "frontend/.eslintrc"
+    ext: "js,jsx"
 
   stylelint:
-    root_dir: 'app/assets/stylesheets'
-    glob: '**/*.{css,scss}'
+    root_dir: "app/assets/stylesheets"
+    glob: "**/*.{css,scss}"
 ```
 
 The options you can specify in `sider.yml` are grouped into two categories:
@@ -44,17 +44,21 @@ You can use `sider.yml` to configure each analyzer's vendor-supplied settings. S
 
 ## `root_dir` option
 
+_Type:_ `string`
+
 This is a common option available to all analyzers. This option specifies a directory in your repository from which Sider should run the analyzer in. For example, if you have all your JavaScript files in the `./frontend` directory, you could configure `sider.yml` like this:
 
 ```yaml
 linter:
   eslint:
-    root_dir: 'frontend'
+    root_dir: "frontend"
 ```
 
 Sider will run ESLint analysis in `./frontend` directory.
 
 ## `gems` option
+
+_Type:_ `string[]`, `hash[]`
 
 Some analyzers written in Ruby can be customized with third-party [gems](https://rubygems.org/). With Sider, you can use [Bundler](https://bundler.io/) to install any gem. The following is an example of installing RuboCop plugins or configuration gems:
 
@@ -62,8 +66,8 @@ Some analyzers written in Ruby can be customized with third-party [gems](https:/
 linter:
   rubocop:
     gems:
-      - name: 'meowcop'
-        version: '1.17.0'
+      - name: "meowcop"
+        version: "1.17.0"
 ```
 
 You can also set the version of the analyzer you want to use. However, the version must meet Sider's constraints. Please refer to each analyzer page.
@@ -72,8 +76,8 @@ You can also set the version of the analyzer you want to use. However, the versi
 linter:
   rubocop:
     gems:
-      - name: 'rubocop'
-        version: '0.66.0'
+      - name: "rubocop"
+        version: "0.66.0"
 ```
 
 ### Understanding the analyzer version
@@ -94,7 +98,7 @@ If you want to additionally install a specific gem written in `Gemfile.lock`, yo
 linter:
   rubocop:
     gems:
-      - 'rubocop-rspec'
+      - "rubocop-rspec"
 ```
 
 If the gem is not found in `Gemfile.lock`, the latest version is installed.
@@ -132,26 +136,28 @@ linter:
 
 `git` option has options below:
 
-| Name | Type | Description |
-| ---- | ---- | ----------- |
-| `repo` | `string` | Git repository location. The repository can be accessed via HTTP(S)/SSH protocols. |
-| `branch` | `string` | Branch name. |
-| `tag` | `string` | Tag name. |
-| `ref` | `string` | Ref name. |
+| Name     | Type     | Description                                                                        |
+| -------- | -------- | ---------------------------------------------------------------------------------- |
+| `repo`   | `string` | Git repository location. The repository can be accessed via HTTP(S)/SSH protocols. |
+| `branch` | `string` | Branch name.                                                                       |
+| `tag`    | `string` | Tag name.                                                                          |
+| `ref`    | `string` | Ref name.                                                                          |
 
 If you would like to install a gem located in a private git repository, see [private dependencies guide](../advanced-settings/private-dependencies.md) and configure SSH key.
 
 ## `npm_install` option
 
+_Type:_ `boolean`, `string`
+
 For npm-published analyzers such as [ESLint](../tools/javascript/eslint.md) or [stylelint](../tools/css/stylelint.md), you can use the `npm_install` option to configure the behavior of npm dependencies installation. This option has the following values:
 
-| Value            | Description |
-| ---------------- | ----------- |
+| Value            | Description                                                                             |
+| ---------------- | --------------------------------------------------------------------------------------- |
 | `true` (default) | Install dependencies via [npm](https://docs.npmjs.com/) or [Yarn](https://yarnpkg.com). |
-| `false`          | Do not install any dependencies. |
-| `"production"`   | Install only dependencies for production. |
-| `"development"`  | Install only dependencies for development. |
-| Others           | Fail analysis. |
+| `false`          | Do not install any dependencies.                                                        |
+| `"production"`   | Install only dependencies for production.                                               |
+| `"development"`  | Install only dependencies for development.                                              |
+| Others           | Fail analysis.                                                                          |
 
 For example:
 
@@ -177,13 +183,13 @@ On the other hand, when the `npm_install` option is `false`, Sider will skip the
 
 ## `ignore` option
 
+_Type:_ `string[]`
+
 This option allows you to ignore specific files. It helps to improve the analysis execution time and the analysis stability.
 
 In order to use this option, add it to `sider.yml` like this:
 
 ```yaml
-linter:
-  # Some linter settings...
 ignore:
   - ".pdf"
   - ".mp4"
@@ -192,14 +198,14 @@ ignore:
 
 ## `branches` option
 
+_Type:_ `string[]`
+
 This option allows you to exclude branches from the analysis. If there are branches that are unnecessary for your team to analyze, use the `branches` option.
 When setting this option, Sider will not analyze the branch specified in this option.
 
 In order to use this option, add it to `sider.yml` like this:
 
 ```yaml
-linter:
-  # Some linter settings...
 branches:
   exclude:
     - master

@@ -87,9 +87,9 @@ The configuration for ktlint accepts one of the `cli`, `gradle`, and `maven` key
 | Name                                       | Type                                | Default      | Description                                                                                  |
 | ------------------------------------------ | ----------------------------------- | ------------ | -------------------------------------------------------------------------------------------- |
 | [`cli`](#cli)                              | `map`                               | -            | Settings for CLI execution.                                                                  |
-| [`cli.patterns`](#clipatterns)             | `string`, `array<string>`           | `[]`         | File patterns to analyze.                                                                    |
-| [`cli.ruleset`](#cliruleset)               | `string`, `array<string>`           | `[]`         | Ruleset URLs.                                                                                |
-| [`cli.disabled_rules`](#clidisabled_rules) | `string`, `array<string>`           | `[]`         | Whether disable rules or not.                                                                |
+| [`cli.patterns`](#clipatterns)             | `string`, `string[]`                | `[]`         | File patterns to analyze.                                                                    |
+| [`cli.ruleset`](#cliruleset)               | `string`, `string[]`                | `[]`         | Ruleset URLs.                                                                                |
+| [`cli.disabled_rules`](#clidisabled_rules) | `string`, `string[]`                | `[]`         | Whether disable rules or not.                                                                |
 | [`cli.experimental`](#cliexperimental)     | `boolean`                           | `false`      | [`--experimental`](https://github.com/pinterest/ktlint#experimental-rules) option of ktlint. |
 | [`gradle`](#gradle)                        | `map`                               | -            | Settings for Gradle execution.                                                               |
 | [`gradle.task`](#gradletask)               | `string`                            | _(required)_ | Task name of Gradle.                                                                         |

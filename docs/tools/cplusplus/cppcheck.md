@@ -42,14 +42,14 @@ linter:
 
 You can use the following options to fine-tune Cppcheck to your project.
 
-| Name                    | Type                      | Default | Description                      |
-| ----------------------- | ------------------------- | ------- | -------------------------------- |
-| [`target`](#target)     | `string`, `array<string>` | `.`     | Files or directories to analyze. |
-| [`ignore`](#ignore)     | `string`, `array<string>` | -       | `-i` option of Cppcheck.         |
-| [`enable`](#enable)     | `string`                  | -       | `--enable` option of Cppcheck.   |
-| [`std`](#std)           | `string`                  | -       | `--std` option of Cppcheck.      |
-| [`project`](#project)   | `string`                  | -       | `--project` option of Cppcheck.  |
-| [`language`](#language) | `string`                  | -       | `--language` option of Cppcheck. |
+| Name                    | Type                 | Default | Description                      |
+| ----------------------- | -------------------- | ------- | -------------------------------- |
+| [`target`](#target)     | `string`, `string[]` | `.`     | Files or directories to analyze. |
+| [`ignore`](#ignore)     | `string`, `string[]` | -       | `-i` option of Cppcheck.         |
+| [`enable`](#enable)     | `string`             | -       | `--enable` option of Cppcheck.   |
+| [`std`](#std)           | `string`             | -       | `--std` option of Cppcheck.      |
+| [`project`](#project)   | `string`             | -       | `--project` option of Cppcheck.  |
+| [`language`](#language) | `string`             | -       | `--language` option of Cppcheck. |
 
 ### `target`
 
