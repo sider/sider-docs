@@ -37,14 +37,14 @@ linter:
 
 You can use several options to fine-tune HAML-Lint to your project.
 
-| Name                                                                | Type                      | Default | Description                                     |
-| ------------------------------------------------------------------- | ------------------------- | ------- | ----------------------------------------------- |
-| [`gems`](../../getting-started/custom-configuration.md#gems-option) | `array<string, object>`   | -       | Definition of gems to be installed.             |
-| `include_linter`                                                    | `string`, `array<string>` | -       | Rule names passed as `--include-linter` option. |
-| `exclude_linter`                                                    | `string`, `array<string>` | -       | Rule names passed as `--exclude-linter` option. |
-| `config`                                                            | `string`                  | -       | A file path passed as `--config` option.        |
-| `file`                                                              | `string`                  | `.`     | Files to analyze. Glob is available.            |
-| `exclude`                                                           | `string`, `array<string>` | -       | Files passed as `--exclude` option.             |
+| Name                                                                | Type                 | Default | Description                                     |
+| ------------------------------------------------------------------- | -------------------- | ------- | ----------------------------------------------- |
+| [`gems`](../../getting-started/custom-configuration.md#gems-option) | `string[]`, `hash[]` | -       | Definition of gems to be installed.             |
+| `include_linter`                                                    | `string`, `string[]` | -       | Rule names passed as `--include-linter` option. |
+| `exclude_linter`                                                    | `string`, `string[]` | -       | Rule names passed as `--exclude-linter` option. |
+| `config`                                                            | `string`             | -       | A file path passed as `--config` option.        |
+| `file`                                                              | `string`             | `.`     | Files to analyze. Glob is available.            |
+| `exclude`                                                           | `string`, `string[]` | -       | Files passed as `--exclude` option.             |
 
 ### Installing RuboCop plugins and configuration gems
 

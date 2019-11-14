@@ -7,9 +7,9 @@ hide_title: true
 
 # Misspell
 
-| Supported Version | Language | Website |
-| ----------------- | -------- | -------- |
-| 0.3.4 | Others(Spell Checking) | [https://github.com/client9/misspell](https://github.com/client9/misspell) |
+| Supported Version | Language               | Website                                                                    |
+| ----------------- | ---------------------- | -------------------------------------------------------------------------- |
+| 0.3.4             | Others(Spell Checking) | [https://github.com/client9/misspell](https://github.com/client9/misspell) |
 
 ## Getting Started
 
@@ -24,7 +24,7 @@ linter:
   misspell:
     exclude:
       - vendor
-      - '**/*.min.js'
+      - "**/*.min.js"
       - exclude_file.rb
     targets:
       - target_directory
@@ -38,12 +38,12 @@ linter:
 
 You can use several options to more comfortable analysis to your project.
 
-| Name | Type | Description |
-| ---- | ---- | ----------- |
-| [`exclude`](#exclude) | `array<string>` | Set exclude files or directories from analysis. |
-| [`targets`](#targets) | `array<string>` | Set targets for analysis. |
-| [`locale`](#locale) | `string` | Check spelling with British English or American English. |
-| [`ignore`](#ignore) | `string` | Set words to ignore from analysis. |
+| Name                  | Type       | Description                                              |
+| --------------------- | ---------- | -------------------------------------------------------- |
+| [`exclude`](#exclude) | `string[]` | Set exclude files or directories from analysis.          |
+| [`targets`](#targets) | `string[]` | Set targets for analysis.                                |
+| [`locale`](#locale)   | `string`   | Check spelling with British English or American English. |
+| [`ignore`](#ignore)   | `string`   | Set words to ignore from analysis.                       |
 
 Details of options are in below.
 
@@ -63,4 +63,3 @@ By default, you will not be corrected for words that have different spelling in 
 #### `ignore`
 
 This option allows you to ignore certain words when checking. If you list words in this option, the listed words will not be checked. If you want to declare multiple words in this option, you need to list each of them, separating each with a comma.
-

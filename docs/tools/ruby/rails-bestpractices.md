@@ -30,16 +30,16 @@ linter:
 
 ### Options
 
-| Name                                                                | Type                    | Default | Description                                       |
-| ------------------------------------------------------------------- | ----------------------- | ------- | ------------------------------------------------- |
-| [`gems`](../../getting-started/custom-configuration.md#gems-option) | `array<string, object>` | -       | Definition of gems to be installed.               |
-| `vendor`                                                            | `boolean`               | `false` | Add `--vendor` flag.                              |
-| `spec`                                                              | `boolean`               | `false` | Add `--spec` flag                                 |
-| `test`                                                              | `boolean`               | `false` | Add `--test` flag                                 |
-| `features`                                                          | `boolean`               | `false` | Add `--features` flag                             |
-| `exclude`                                                           | `string`                | -       | Patterns passed as `--exclude` option.            |
-| `only`                                                              | `string`                | -       | Patterns passed as `--only` option.               |
-| `config`                                                            | `string`                | -       | Configuration file location passed as `--config`. |
+| Name                                                                | Type                 | Default | Description                                       |
+| ------------------------------------------------------------------- | -------------------- | ------- | ------------------------------------------------- |
+| [`gems`](../../getting-started/custom-configuration.md#gems-option) | `string[]`, `hash[]` | -       | Definition of gems to be installed.               |
+| `vendor`                                                            | `boolean`            | `false` | Add `--vendor` flag.                              |
+| `spec`                                                              | `boolean`            | `false` | Add `--spec` flag                                 |
+| `test`                                                              | `boolean`            | `false` | Add `--test` flag                                 |
+| `features`                                                          | `boolean`            | `false` | Add `--features` flag                             |
+| `exclude`                                                           | `string`             | -       | Patterns passed as `--exclude` option.            |
+| `only`                                                              | `string`             | -       | Patterns passed as `--only` option.               |
+| `config`                                                            | `string`             | -       | Configuration file location passed as `--config`. |
 
 ## Analyzing view templates
 

@@ -25,6 +25,6 @@ linter:
 
 ## Options
 
-| Name                                                                | Type                    | Description                         |
-| ------------------------------------------------------------------- | ----------------------- | ----------------------------------- |
-| [`gems`](../../getting-started/custom-configuration.md#gems-option) | `array<string, object>` | Definition of gems to be installed. |
+| Name                                                                | Type                 | Description                         |
+| ------------------------------------------------------------------- | -------------------- | ----------------------------------- |
+| [`gems`](../../getting-started/custom-configuration.md#gems-option) | `string[]`, `hash[]` | Definition of gems to be installed. |

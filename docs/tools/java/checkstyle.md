@@ -34,13 +34,13 @@ linter:
     properties: checkstyle.properties
 ```
 
-| Name                        | Type                                       | Default  | Description                        |
-| --------------------------- | ------------------------------------------ | -------- | ---------------------------------- |
-| [`config`](#config)         | `string`                                   | `google` | Coding standard name or file path. |
-| [`dir`](#dir)               | `string`, `array<string>`                  | `.`      | Directory to analyze.              |
-| [`exclude`](#exclude)       | `string`, `array<string>`, `array<object>` | -        | Excluded directory.                |
-| [`ignore`](#ignore)         | `array<string>`                            | -        | Ignored severities.                |
-| [`properties`](#properties) | `string`                                   | -        | Properties file.                   |
+| Name                        | Type                           | Default  | Description                        |
+| --------------------------- | ------------------------------ | -------- | ---------------------------------- |
+| [`config`](#config)         | `string`                       | `google` | Coding standard name or file path. |
+| [`dir`](#dir)               | `string`, `string[]`           | `.`      | Directory to analyze.              |
+| [`exclude`](#exclude)       | `string`, `string[]`, `hash[]` | -        | Excluded directory.                |
+| [`ignore`](#ignore)         | `string[]`                     | -        | Ignored severities.                |
+| [`properties`](#properties) | `string`                       | -        | Properties file.                   |
 
 ### `config`
 

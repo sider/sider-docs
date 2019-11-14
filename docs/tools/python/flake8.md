@@ -68,10 +68,10 @@ linter:
 
 You can use several options to fine-tune Flake8 to your project.
 
-| Name                  | Type                      | Description                                                            |
-| --------------------- | ------------------------- | ---------------------------------------------------------------------- |
-| [`version`](#version) | `integer`                 | Specify Python version.                                                |
-| [`plugins`](#plugins) | `string`, `array<string>` | Set Flake8 plugins. It also allows to specify these plugins' versions. |
+| Name                  | Type                 | Description                                                            |
+| --------------------- | -------------------- | ---------------------------------------------------------------------- |
+| [`version`](#version) | `integer`            | Specify Python version.                                                |
+| [`plugins`](#plugins) | `string`, `string[]` | Set Flake8 plugins. It also allows to specify these plugins' versions. |
 
 #### `version`
 

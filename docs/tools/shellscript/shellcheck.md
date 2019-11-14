@@ -39,15 +39,15 @@ linter:
 
 You can use the following options to fine-tune ShellCheck to your project.
 
-| Name                    | Type                             | Default       | Description                        |
-| ----------------------- | -------------------------------- | ------------- | ---------------------------------- |
-| [`target`](#target)     | `string`, `array<string,object>` | _(See below)_ | Files to analyze.                  |
-| [`include`](#include)   | `string`, `array<string>`        | -             | `--include` option of ShellCheck.  |
-| [`exclude`](#exclude)   | `string`, `array<string>`        | -             | `--exclude` option of ShellCheck.  |
-| [`enable`](#enable)     | `string`, `array<string>`        | -             | `--enable` option of ShellCheck.   |
-| [`shell`](#shell)       | `string`                         | -             | `--shell` option of ShellCheck.    |
-| [`severity`](#severity) | `string`                         | -             | `--severity` option of ShellCheck. |
-| [`norc`](#norc)         | `boolean`                        | `false`       | `--norc` option of ShellCheck.     |
+| Name                    | Type                           | Default       | Description                        |
+| ----------------------- | ------------------------------ | ------------- | ---------------------------------- |
+| [`target`](#target)     | `string`, `string[]`, `hash[]` | _(See below)_ | Files to analyze.                  |
+| [`include`](#include)   | `string`, `string[]`           | -             | `--include` option of ShellCheck.  |
+| [`exclude`](#exclude)   | `string`, `string[]`           | -             | `--exclude` option of ShellCheck.  |
+| [`enable`](#enable)     | `string`, `string[]`           | -             | `--enable` option of ShellCheck.   |
+| [`shell`](#shell)       | `string`                       | -             | `--shell` option of ShellCheck.    |
+| [`severity`](#severity) | `string`                       | -             | `--severity` option of ShellCheck. |
+| [`norc`](#norc)         | `boolean`                      | `false`       | `--norc` option of ShellCheck.     |
 
 ### `target`
 

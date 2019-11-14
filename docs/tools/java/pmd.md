@@ -30,12 +30,12 @@ linter:
     min_priority: 3
 ```
 
-| Name                            | Type                      | Default         | Description                                                                                            |
-| ------------------------------- | ------------------------- | --------------- | ------------------------------------------------------------------------------------------------------ |
-| [`dir`](#dir)                   | `string`                  | `.`             | Directory to analyze.                                                                                  |
-| [`rulesets`](#rulesets)         | `string`, `array<string>` | (see below)     | [`-rulesets`](https://pmd.github.io/pmd/pmd_userdocs_cli_reference.html#options) option of PMD.        |
-| [`encoding`](#encoding)         | `string`                  | (PMD's default) | [`-encoding`](https://pmd.github.io/pmd/pmd_userdocs_cli_reference.html#options) option of PMD.        |
-| [`min_priority`](#min_priority) | `number`                  | (PMD's default) | [`-minimumpriority`](https://pmd.github.io/pmd/pmd_userdocs_cli_reference.html#options) option of PMD. |
+| Name                            | Type                 | Default         | Description                                                                                            |
+| ------------------------------- | -------------------- | --------------- | ------------------------------------------------------------------------------------------------------ |
+| [`dir`](#dir)                   | `string`             | `.`             | Directory to analyze.                                                                                  |
+| [`rulesets`](#rulesets)         | `string`, `string[]` | (see below)     | [`-rulesets`](https://pmd.github.io/pmd/pmd_userdocs_cli_reference.html#options) option of PMD.        |
+| [`encoding`](#encoding)         | `string`             | (PMD's default) | [`-encoding`](https://pmd.github.io/pmd/pmd_userdocs_cli_reference.html#options) option of PMD.        |
+| [`min_priority`](#min_priority) | `number`             | (PMD's default) | [`-minimumpriority`](https://pmd.github.io/pmd/pmd_userdocs_cli_reference.html#options) option of PMD. |
 
 ### `dir`
 
