@@ -30,16 +30,17 @@ linter:
 
 ### Options
 
-| Name                                                                | Type                 | Default | Description                                       |
-| ------------------------------------------------------------------- | -------------------- | ------- | ------------------------------------------------- |
-| [`gems`](../../getting-started/custom-configuration.md#gems-option) | `string[]`, `hash[]` | -       | Definition of gems to be installed.               |
-| `vendor`                                                            | `boolean`            | `false` | Add `--vendor` flag.                              |
-| `spec`                                                              | `boolean`            | `false` | Add `--spec` flag                                 |
-| `test`                                                              | `boolean`            | `false` | Add `--test` flag                                 |
-| `features`                                                          | `boolean`            | `false` | Add `--features` flag                             |
-| `exclude`                                                           | `string`             | -       | Patterns passed as `--exclude` option.            |
-| `only`                                                              | `string`             | -       | Patterns passed as `--only` option.               |
-| `config`                                                            | `string`             | -       | Configuration file location passed as `--config`. |
+| Name                                                                        | Type                 | Default | Description                                       |
+| --------------------------------------------------------------------------- | -------------------- | ------- | ------------------------------------------------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#root_dir-option) | `string`             | -       | A root directory.                                 |
+| [`gems`](../../getting-started/custom-configuration.md#gems-option)         | `string[]`, `hash[]` | -       | Gems to install.                                  |
+| `vendor`                                                                    | `boolean`            | `false` | Add `--vendor` flag.                              |
+| `spec`                                                                      | `boolean`            | `false` | Add `--spec` flag                                 |
+| `test`                                                                      | `boolean`            | `false` | Add `--test` flag                                 |
+| `features`                                                                  | `boolean`            | `false` | Add `--features` flag                             |
+| `exclude`                                                                   | `string`             | -       | Patterns passed as `--exclude` option.            |
+| `only`                                                                      | `string`             | -       | Patterns passed as `--only` option.               |
+| `config`                                                                    | `string`             | -       | Configuration file location passed as `--config`. |
 
 ## Analyzing view templates
 

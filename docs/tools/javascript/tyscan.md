@@ -32,12 +32,13 @@ linter:
 
 You can use the following options to make analysis fitter for your project.
 
-| Name                    | Type       | Default         | Description                                                                   |
-| ----------------------- | ---------- | --------------- | ----------------------------------------------------------------------------- |
-| `npm_install`           | -          | -               | See [here](../../getting-started/custom-configuration.md#npm_install-option). |
-| [`config`](#config)     | `string`   | `tyscan.yml`    | Set configuration file for TyScan.                                            |
-| [`tsconfig`](#tsconfig) | `string`   | `tsconfig.json` | Set your TypeScript project file.                                             |
-| [`paths`](#paths)       | `string[]` | -               | Specify paths to analyze.                                                     |
+| Name                                                                              | Type                | Default         | Description                        |
+| --------------------------------------------------------------------------------- | ------------------- | --------------- | ---------------------------------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#root_dir-option)       | `string`            | -               | A root directory.                  |
+| [`npm_install`](../../getting-started/custom-configuration.md#npm_install-option) | `boolean`, `string` | -               | A behavior of npm installation.    |
+| [`config`](#config)                                                               | `string`            | `tyscan.yml`    | Set configuration file for TyScan. |
+| [`tsconfig`](#tsconfig)                                                           | `string`            | `tsconfig.json` | Set your TypeScript project file.  |
+| [`paths`](#paths)                                                                 | `string[]`          | -               | Specify paths to analyze.          |
 
 ### `config`
 

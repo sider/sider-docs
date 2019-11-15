@@ -28,12 +28,13 @@ linter:
 
 You can use the following options to make analysis fitter for your project.
 
-| Name                                                                | Type                 | Default | Description                              |
-| ------------------------------------------------------------------- | -------------------- | ------- | ---------------------------------------- |
-| [`gems`](../../getting-started/custom-configuration.md#gems-option) | `string[]`, `hash[]` | -       | Definition of gems to be installed.      |
-| [`config`](#config)                                                 | `string`             | -       | A file path passed as `--config` option. |
-| [`rails`](#rails)                                                   | `boolean`            | -       | **[DEPRECATED]** Add `--rails` flag.     |
-| [`safe`](#safe)                                                     | `boolean`            | `false` | Add `--safe` flag.                       |
+| Name                                                                        | Type                 | Default | Description                              |
+| --------------------------------------------------------------------------- | -------------------- | ------- | ---------------------------------------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#root_dir-option) | `string`             | -       | A root directory.                        |
+| [`gems`](../../getting-started/custom-configuration.md#gems-option)         | `string[]`, `hash[]` | -       | Gems to install.                         |
+| [`config`](#config)                                                         | `string`             | -       | A file path passed as `--config` option. |
+| [`rails`](#rails)                                                           | `boolean`            | -       | **[DEPRECATED]** Add `--rails` flag.     |
+| [`safe`](#safe)                                                             | `boolean`            | `false` | Add `--safe` flag.                       |
 
 ### `config`
 

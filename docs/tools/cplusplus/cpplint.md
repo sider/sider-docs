@@ -42,14 +42,15 @@ linter:
 
 You can use the following options to fine-tune cpplint to your project.
 
-| Name                        | Type                 | Default | Description                       |
-| --------------------------- | -------------------- | ------- | --------------------------------- |
-| [`target`](#target)         | `string`, `string[]` | `.`     | Files or directories to analyze.  |
-| [`extensions`](#extensions) | `string`             | -       | `--extensions` option of cpplint. |
-| [`headers`](#headers)       | `string`             | -       | `--headers` option of cpplint.    |
-| [`filter`](#filter)         | `string`             | -       | `--filter` option of cpplint.     |
-| [`linelength`](#linelength) | `string`             | -       | `--linelength` option of cpplint. |
-| [`exclude`](#exclude)       | `string`             | -       | `--exclude` option of cpplint.    |
+| Name                                                                        | Type                 | Default | Description                       |
+| --------------------------------------------------------------------------- | -------------------- | ------- | --------------------------------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#root_dir-option) | `string`             | -       | A root directory.                 |
+| [`target`](#target)                                                         | `string`, `string[]` | `.`     | Files or directories to analyze.  |
+| [`extensions`](#extensions)                                                 | `string`             | -       | `--extensions` option of cpplint. |
+| [`headers`](#headers)                                                       | `string`             | -       | `--headers` option of cpplint.    |
+| [`filter`](#filter)                                                         | `string`             | -       | `--filter` option of cpplint.     |
+| [`linelength`](#linelength)                                                 | `string`             | -       | `--linelength` option of cpplint. |
+| [`exclude`](#exclude)                                                       | `string`             | -       | `--exclude` option of cpplint.    |
 
 ### `target`
 
