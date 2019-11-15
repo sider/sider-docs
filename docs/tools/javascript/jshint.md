@@ -24,15 +24,15 @@ Sider uses the default configuration where there is no custom configuration pres
 ```json5
 {
   // Relaxes
-  "asi": true,
-  "sub": true,
-  "eqnull": true,
+  asi: true,
+  sub: true,
+  eqnull: true,
 
   // Environments
-  "jquery": true,
-  "browser": true,
+  jquery: true,
+  browser: true,
 
-  "esversion": 2015
+  esversion: 2015
 }
 ```
 
@@ -56,10 +56,11 @@ linter:
 
 You can use sereral options to make analysis fitter for your project.
 
-| Name | Type | Description |
-| ---- | ---- | ----------- |
-| [`dir`](#dir) | `string` | Set directory name as analysis target. |
-| [`config`](#config) | `string` | Set configuration file for JSHint. |
+| Name                                                                        | Type     | Default | Description                            |
+| --------------------------------------------------------------------------- | -------- | ------- | -------------------------------------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#root_dir-option) | `string` | -       | A root directory.                      |
+| [`dir`](#dir)                                                               | `string` | -       | Set directory name as analysis target. |
+| [`config`](#config)                                                         | `string` | -       | Set configuration file for JSHint.     |
 
 #### `dir`
 
@@ -67,4 +68,4 @@ The directory where the analysis is performed. It is passed as an argument to JS
 
 #### `config`
 
-This option allows you to use your own configuration file for JSHint. If you have a `.jshintrc` file, use this option.
+This option allows you to use your own configuration file for JSHint. If you have your own `.jshintrc` file, use this option.

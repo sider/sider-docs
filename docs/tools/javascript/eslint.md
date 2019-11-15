@@ -71,17 +71,18 @@ linter:
 
 You can use the following options to make analysis fitter for your project.
 
-| Name                                | Type                 | Default | Description                                                                                                        |
-| ----------------------------------- | -------------------- | ------- | ------------------------------------------------------------------------------------------------------------------ |
-| `npm_install`                       | -                    | -       | See [here](../../getting-started/custom-configuration.md#npm_install-option).                                      |
-| [`dir`](#dir)                       | `string`, `string[]` | `.`     | Directories to analyze.                                                                                            |
-| [`config`](#config)                 | `string`             | -       | [`--config`](https://eslint.org/docs/user-guide/command-line-interface#-c---config) option of ESLint.              |
-| [`ext`](#ext)                       | `string`             | `.js`   | [`--ext`](https://eslint.org/docs/user-guide/command-line-interface#--ext) option of ESLint.                       |
-| [`ignore-path`](#ignore-path)       | `string`             | -       | [`--ignore-path`](https://eslint.org/docs/user-guide/command-line-interface#--ignore-path) option of ESLint.       |
-| [`no-ignore`](#no-ignore)           | `boolean`            | `false` | [`--no-ignore`](https://eslint.org/docs/user-guide/command-line-interface#--no-ignore) option of ESLint.           |
-| [`ignore-pattern`](#ignore-pattern) | `string`, `string[]` | -       | [`--ignore-pattern`](https://eslint.org/docs/user-guide/command-line-interface#--ignore-pattern) option of ESLint. |
-| [`global`](#global)                 | `string`             | -       | [`--global`](https://eslint.org/docs/user-guide/command-line-interface#--global) option of ESLint.                 |
-| [`quiet`](#quiet)                   | `boolean`            | `false` | [`--quiet`](https://eslint.org/docs/user-guide/command-line-interface#--quiet) option of ESLint.                   |
+| Name                                                                              | Type                 | Default | Description                                                                                                        |
+| --------------------------------------------------------------------------------- | -------------------- | ------- | ------------------------------------------------------------------------------------------------------------------ |
+| [`root_dir`](../../getting-started/custom-configuration.md#root_dir-option)       | `string`             | -       | A root directory.                                                                                                  |
+| [`npm_install`](../../getting-started/custom-configuration.md#npm_install-option) | `boolean`, `string`  | -       | A behavior of npm installation.                                                                                    |
+| [`dir`](#dir)                                                                     | `string`, `string[]` | `.`     | Directories to analyze.                                                                                            |
+| [`config`](#config)                                                               | `string`             | -       | [`--config`](https://eslint.org/docs/user-guide/command-line-interface#-c---config) option of ESLint.              |
+| [`ext`](#ext)                                                                     | `string`             | `.js`   | [`--ext`](https://eslint.org/docs/user-guide/command-line-interface#--ext) option of ESLint.                       |
+| [`ignore-path`](#ignore-path)                                                     | `string`             | -       | [`--ignore-path`](https://eslint.org/docs/user-guide/command-line-interface#--ignore-path) option of ESLint.       |
+| [`no-ignore`](#no-ignore)                                                         | `boolean`            | `false` | [`--no-ignore`](https://eslint.org/docs/user-guide/command-line-interface#--no-ignore) option of ESLint.           |
+| [`ignore-pattern`](#ignore-pattern)                                               | `string`, `string[]` | -       | [`--ignore-pattern`](https://eslint.org/docs/user-guide/command-line-interface#--ignore-pattern) option of ESLint. |
+| [`global`](#global)                                                               | `string`             | -       | [`--global`](https://eslint.org/docs/user-guide/command-line-interface#--global) option of ESLint.                 |
+| [`quiet`](#quiet)                                                                 | `boolean`            | `false` | [`--quiet`](https://eslint.org/docs/user-guide/command-line-interface#--quiet) option of ESLint.                   |
 
 For details of the options, check the following sections and [the ESLint documentation](https://eslint.org/docs/user-guide/command-line-interface#options).
 

@@ -56,16 +56,17 @@ linter:
 
 You can use the following options to fine-tune stylelint to your project.
 
-| Name                                                    | Type      | Default                         | Description                                                                                                          |
-| ------------------------------------------------------- | --------- | ------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| `npm_install`                                           | -         | -                               | See [here](../../getting-started/custom-configuration.md#npm_install-option).                                        |
-| [`config`](#config)                                     | `string`  | -                               | [`--config`](https://stylelint.io/user-guide/node-api#configfile) option of stylelint.                               |
-| [`syntax`](#syntax)                                     | `string`  | -                               | [`--syntax`](https://stylelint.io/user-guide/node-api#syntax) option of stylelint.                                   |
-| [`ignore-path`](#ignore-path)                           | `string`  | -                               | [`--ignore-path`](https://stylelint.io/user-guide/node-api#ignorepath) option of stylelint.                          |
-| [`ignore-disables`](#ignore-disables)                   | `boolean` | `false`                         | [`--ignore-disables`](https://stylelint.io/user-guide/node-api#ignoredisables) option of stylelint.                  |
-| [`report-needless-disables`](#report-needless-disables) | `boolean` | `false`                         | [`--report-needless-disables`](https://stylelint.io/user-guide/node-api#reportneedlessdisables) option of stylelint. |
-| [`quiet`](#quiet)                                       | `boolean` | `false`                         | [`--quiet`](https://stylelint.io/user-guide/node-api#quiet) option of stylelint.                                     |
-| [`glob`](#glob)                                         | `string`  | `**/*.{css,less,sass,scss,sss}` | A glob pattern to analyze.                                                                                           |
+| Name                                                                              | Type                | Default                         | Description                                                                                                          |
+| --------------------------------------------------------------------------------- | ------------------- | ------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#root_dir-option)       | `string`            | -                               | A root directory.                                                                                                    |
+| [`npm_install`](../../getting-started/custom-configuration.md#npm_install-option) | `boolean`, `string` | -                               | A behavior of npm installation.                                                                                      |
+| [`config`](#config)                                                               | `string`            | -                               | [`--config`](https://stylelint.io/user-guide/node-api#configfile) option of stylelint.                               |
+| [`syntax`](#syntax)                                                               | `string`            | -                               | [`--syntax`](https://stylelint.io/user-guide/node-api#syntax) option of stylelint.                                   |
+| [`ignore-path`](#ignore-path)                                                     | `string`            | -                               | [`--ignore-path`](https://stylelint.io/user-guide/node-api#ignorepath) option of stylelint.                          |
+| [`ignore-disables`](#ignore-disables)                                             | `boolean`           | `false`                         | [`--ignore-disables`](https://stylelint.io/user-guide/node-api#ignoredisables) option of stylelint.                  |
+| [`report-needless-disables`](#report-needless-disables)                           | `boolean`           | `false`                         | [`--report-needless-disables`](https://stylelint.io/user-guide/node-api#reportneedlessdisables) option of stylelint. |
+| [`quiet`](#quiet)                                                                 | `boolean`           | `false`                         | [`--quiet`](https://stylelint.io/user-guide/node-api#quiet) option of stylelint.                                     |
+| [`glob`](#glob)                                                                   | `string`            | `**/*.{css,less,sass,scss,sss}` | A glob pattern to analyze.                                                                                           |
 
 ### `config`
 

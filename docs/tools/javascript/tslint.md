@@ -60,15 +60,16 @@ linter:
 
 You can use the following options to make analysis fitter for your project.
 
-| Name                        | Type                 | Default           | Description                                                                        |
-| --------------------------- | -------------------- | ----------------- | ---------------------------------------------------------------------------------- |
-| `npm_install`               | -                    | -                 | See [here](../../getting-started/custom-configuration.md#npm_install-option).      |
-| [`config`](#config)         | `string`             | -                 | [`--config`](https://palantir.github.io/tslint/usage/cli) option of TSLint.        |
-| [`exclude`](#exclude)       | `string`, `string[]` | `node_modules/**` | [`--exclude`](https://palantir.github.io/tslint/usage/cli) option of TSLint.       |
-| [`project`](#project)       | `string`             | -                 | [`--project`](https://palantir.github.io/tslint/usage/cli) option of TSLint.       |
-| [`rules-dir`](#rules-dir)   | `string`, `string[]` | -                 | [`--rules-dir`](https://palantir.github.io/tslint/usage/cli) option of TSLint.     |
-| [`glob`](#glob)             | `string`             | `**/*.ts{,x}`     | A glob pattern to analyze.                                                         |
-| [`type-check`](#type-check) | `boolean`            | `false`           | **[DEPRECATED]** If you use TSLint 5.8.0+ and set `true`, your analysis will fail. |
+| Name                                                                              | Type                 | Default           | Description                                                                        |
+| --------------------------------------------------------------------------------- | -------------------- | ----------------- | ---------------------------------------------------------------------------------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#root_dir-option)       | `string`             | -                 | A root directory.                                                                  |
+| [`npm_install`](../../getting-started/custom-configuration.md#npm_install-option) | `boolean`, `string`  | -                 | A behavior of npm installation.                                                    |
+| [`config`](#config)                                                               | `string`             | -                 | [`--config`](https://palantir.github.io/tslint/usage/cli) option of TSLint.        |
+| [`exclude`](#exclude)                                                             | `string`, `string[]` | `node_modules/**` | [`--exclude`](https://palantir.github.io/tslint/usage/cli) option of TSLint.       |
+| [`project`](#project)                                                             | `string`             | -                 | [`--project`](https://palantir.github.io/tslint/usage/cli) option of TSLint.       |
+| [`rules-dir`](#rules-dir)                                                         | `string`, `string[]` | -                 | [`--rules-dir`](https://palantir.github.io/tslint/usage/cli) option of TSLint.     |
+| [`glob`](#glob)                                                                   | `string`             | `**/*.ts{,x}`     | A glob pattern to analyze.                                                         |
+| [`type-check`](#type-check)                                                       | `boolean`            | `false`           | **[DEPRECATED]** If you use TSLint 5.8.0+ and set `true`, your analysis will fail. |
 
 For details of the options, check the following sections.
 

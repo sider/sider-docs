@@ -98,15 +98,16 @@ linter:
 
 You can use several options to fine-tune PHPMD to your project:
 
-| Name                                    | Type                 | Default | Description                                             |
-| --------------------------------------- | -------------------- | ------- | ------------------------------------------------------- |
-| [`target`](#target)                     | `string`, `string[]` | `.`     | Set target files or directories to analyze.             |
-| [`rule`](#rule)                         | `string`             | -       | Specify coding rules or your own rule set file.         |
-| [`minimumpriority`](#minimumpriority)   | `integer`            | -       | Set the priority threshold which PHPMD ignores.         |
-| [`suffixes`](#suffixes)                 | `string`             | `php`   | Set extensions of filenames for analysis.               |
-| [`exclude`](#exclude)                   | `string`             | -       | Set files or directories to exclude from analysis.      |
-| [`strict`](#strict)                     | `boolean`            | `false` | If `true`, PHPMD will report `@SuppressWarnings` nodes. |
-| [`custom_rule_path`](#custom_rule_path) | `string[]`           | `[]`    | File path(s) writing your custom rule(s).               |
+| Name                                                                        | Type                 | Default | Description                                             |
+| --------------------------------------------------------------------------- | -------------------- | ------- | ------------------------------------------------------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#root_dir-option) | `string`             | -       | A root directory.                                       |
+| [`target`](#target)                                                         | `string`, `string[]` | `.`     | Set target files or directories to analyze.             |
+| [`rule`](#rule)                                                             | `string`             | -       | Specify coding rules or your own rule set file.         |
+| [`minimumpriority`](#minimumpriority)                                       | `integer`            | -       | Set the priority threshold which PHPMD ignores.         |
+| [`suffixes`](#suffixes)                                                     | `string`             | `php`   | Set extensions of filenames for analysis.               |
+| [`exclude`](#exclude)                                                       | `string`             | -       | Set files or directories to exclude from analysis.      |
+| [`strict`](#strict)                                                         | `boolean`            | `false` | If `true`, PHPMD will report `@SuppressWarnings` nodes. |
+| [`custom_rule_path`](#custom_rule_path)                                     | `string[]`           | `[]`    | File path(s) writing your custom rule(s).               |
 
 ### `target`
 

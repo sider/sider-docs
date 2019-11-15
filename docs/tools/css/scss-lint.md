@@ -28,14 +28,13 @@ linter:
     config: lint_yml/.scss-lint.yml
 ```
 
-### Options
-
 You can use several options to fine-tune SCSS-Lint to your project:
 
-| Name                | Type     | Description                               |
-| ------------------- | -------- | ----------------------------------------- |
-| [`config`](#config) | `string` | Specify configuration file for SCSS-Lint. |
+| Name                                                                        | Type     | Default | Description                         |
+| --------------------------------------------------------------------------- | -------- | ------- | ----------------------------------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#root_dir-option) | `string` | -       | A root directory.                   |
+| [`config`](#config)                                                         | `string` | -       | A configuration file for SCSS-Lint. |
 
-#### `config`
+### `config`
 
-This option allows you specify a configuration file. If you have a `.scss-lint.yml` file, use this option. You can use SCSS-Lint without this option.
+This option allows you specify a configuration file. If you have your own `.scss-lint.yml` file, use this option. You can use SCSS-Lint without this option.

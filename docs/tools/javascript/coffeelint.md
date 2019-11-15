@@ -7,8 +7,8 @@ hide_title: true
 
 # CoffeeLint
 
-| Supported Version           | Language     | Runtime        | Website                                 |
-| --------------------------- | ------------ | -------------- | --------------------------------------- |
+| Supported Version           | Language     | Runtime         | Website                                 |
+| --------------------------- | ------------ | --------------- | --------------------------------------- |
 | 1.16.0+ (default to 1.16.0) | CoffeeScript | Node.js 12.13.0 | https://github.com/clutchski/coffeelint |
 
 ## Getting Started
@@ -35,10 +35,11 @@ linter:
 
 You can use the following options to make analysis fitter for your project.
 
-| Name            | Type     | Default | Description                                                                   |
-| --------------- | -------- | ------- | ----------------------------------------------------------------------------- |
-| `npm_install`   | -        | -       | See [here](../../getting-started/custom-configuration.md#npm_install-option). |
-| [`file`](#file) | `string` | -       | Set your configuration file.                                                  |
+| Name                                                                              | Type                | Default | Description                     |
+| --------------------------------------------------------------------------------- | ------------------- | ------- | ------------------------------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#root_dir-option)       | `string`            | -       | A root directory.               |
+| [`npm_install`](../../getting-started/custom-configuration.md#npm_install-option) | `boolean`, `string` | -       | A behavior of npm installation. |
+| [`file`](#file)                                                                   | `string`            | -       | Set your configuration file.    |
 
 ### `file`
 

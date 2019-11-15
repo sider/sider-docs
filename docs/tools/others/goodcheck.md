@@ -36,7 +36,8 @@ linter:
 
 ### Options
 
-| Name     | Type                 | Description                              |
-| -------- | -------------------- | ---------------------------------------- |
-| `config` | `string`             | A file path passed as `--config` option. |
-| `target` | `string`, `string[]` | Files or directories which are analyzed. |
+| Name                                                                        | Type                 | Default | Description                              |
+| --------------------------------------------------------------------------- | -------------------- | ------- | ---------------------------------------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#root_dir-option) | `string`             | -       | A root directory.                        |
+| `config`                                                                    | `string`             | -       | A file path passed as `--config` option. |
+| `target`                                                                    | `string`, `string[]` | -       | Files or directories which are analyzed. |

@@ -25,6 +25,7 @@ linter:
 
 ## Options
 
-| Name                                                                | Type                 | Description                         |
-| ------------------------------------------------------------------- | -------------------- | ----------------------------------- |
-| [`gems`](../../getting-started/custom-configuration.md#gems-option) | `string[]`, `hash[]` | Definition of gems to be installed. |
+| Name                                                                        | Type                 | Default | Description       |
+| --------------------------------------------------------------------------- | -------------------- | ------- | ----------------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#root_dir-option) | `string`             | -       | A root directory. |
+| [`gems`](../../getting-started/custom-configuration.md#gems-option)         | `string[]`, `hash[]` | -       | Gems to install.  |

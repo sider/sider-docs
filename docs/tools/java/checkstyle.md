@@ -34,13 +34,14 @@ linter:
     properties: checkstyle.properties
 ```
 
-| Name                        | Type                           | Default  | Description                        |
-| --------------------------- | ------------------------------ | -------- | ---------------------------------- |
-| [`config`](#config)         | `string`                       | `google` | Coding standard name or file path. |
-| [`dir`](#dir)               | `string`, `string[]`           | `.`      | Directory to analyze.              |
-| [`exclude`](#exclude)       | `string`, `string[]`, `hash[]` | -        | Excluded directory.                |
-| [`ignore`](#ignore)         | `string[]`                     | -        | Ignored severities.                |
-| [`properties`](#properties) | `string`                       | -        | Properties file.                   |
+| Name                                                                        | Type                           | Default  | Description                        |
+| --------------------------------------------------------------------------- | ------------------------------ | -------- | ---------------------------------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#root_dir-option) | `string`                       | -        | A root directory.                  |
+| [`config`](#config)                                                         | `string`                       | `google` | Coding standard name or file path. |
+| [`dir`](#dir)                                                               | `string`, `string[]`           | `.`      | Directory to analyze.              |
+| [`exclude`](#exclude)                                                       | `string`, `string[]`, `hash[]` | -        | Excluded directory.                |
+| [`ignore`](#ignore)                                                         | `string[]`                     | -        | Ignored severities.                |
+| [`properties`](#properties)                                                 | `string`                       | -        | Properties file.                   |
 
 ### `config`
 
