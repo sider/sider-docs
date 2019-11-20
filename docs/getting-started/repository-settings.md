@@ -51,6 +51,14 @@ Sider will refresh your repository's information when the "Begin sync" button is
 
 This section allows you to enable Test Mode. If `ON`, Sider will send only success as a commit status.
 
+## Notifications
+
+![Test mode](../assets/project-notifications.png)
+
+This section allows you to enable or disable notifications via GitHub comments or emails.
+
+If you enable **"On analysis failures"**, Sider will notify analysis failures due to invalid settings or linter's behavior.
+
 ## Admin-only Settings
 
 > You must have admin permissions to see this section.
