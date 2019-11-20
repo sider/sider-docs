@@ -6,9 +6,10 @@ rules:
 
       `sideci.yml` is supported for the backward compatibility, but Sider recognizes `sider.yml` more preferentially.
       Please use `sider.yml` in the documentation.
-    example:
-      - before: sideci.yml
-        after: sider.yml
+    fail:
+      - sideci.yml
+    pass:
+      - sider.yml
 
 import:
   - https://raw.githubusercontent.com/sider/goodcheck-rules/master/rules/typo.yml
