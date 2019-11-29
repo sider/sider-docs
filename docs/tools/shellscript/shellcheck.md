@@ -11,8 +11,6 @@ hide_title: true
 | ----------------- | ------------ | -------------------------- |
 | 0.7.0             | Shell script | https://www.shellcheck.net |
 
-> This is **BETA**. The behavior of this tool might change.
-
 ShellCheck is a static analysis tool for shell scripts. It gives warnings and suggestions.
 
 ## Getting Started
