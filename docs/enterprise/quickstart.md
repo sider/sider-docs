@@ -106,7 +106,7 @@ $ docker run --rm \
     sider/ecr-image-puller IMAGE_NAME
 ```
 
-Note that Sider consists of two Docker images, which are `sideci_onprem` and `catpost_onprem`.
+Note that Sider consists of two Docker images, which are `480130971618.dkr.ecr.us-east-1.amazonaws.com/sideci_onprem` and `480130971618.dkr.ecr.us-east-1.amazonaws.com/catpost_onprem`.
 
 #### Prepare env files
 
