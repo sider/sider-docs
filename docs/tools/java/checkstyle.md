@@ -7,9 +7,9 @@ hide_title: true
 
 # Checkstyle
 
-| Supported Version | Language    | Website                           |
-| ----------------- | ----------- | --------------------------------- |
-| 8.26              | Java 12.0.1 | http://checkstyle.sourceforge.net |
+| Supported Version | Language    | Website                |
+| ----------------- | ----------- | ---------------------- |
+| 8.27              | Java 12.0.1 | https://checkstyle.org |
 
 ## Getting Started
 

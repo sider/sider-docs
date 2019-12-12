@@ -9,7 +9,7 @@ hide_title: true
 
 | Language  | Website                    |
 | --------- | -------------------------- |
-| Go 1.13.4 | https://golang.org/cmd/vet |
+| Go 1.13.5 | https://golang.org/cmd/vet |
 
 ## Getting Started
 

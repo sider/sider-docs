@@ -9,7 +9,7 @@ hide_title: true
 
 | Supported Version | Language    | Website               |
 | ----------------- | ----------- | --------------------- |
-| 6.19.0            | Java 12.0.1 | https://pmd.github.io |
+| 6.20.0            | Java 12.0.1 | https://pmd.github.io |
 
 ## Getting Started
 
@@ -45,16 +45,25 @@ This option allows you to specify the directory to analyze.
 ### `rulesets`
 
 This option allows you to use your custom rulesets.
+By default, the following rulesets are included:
 
-The default value contains the 4 rulesets below:
+- [`category/java/bestpractices.xml`](https://github.com/pmd/pmd/blob/master/pmd-java/src/main/resources/category/java/bestpractices.xml)
+- [`category/java/design.xml`](https://github.com/pmd/pmd/blob/master/pmd-java/src/main/resources/category/java/design.xml)
+- [`category/java/errorprone.xml`](https://github.com/pmd/pmd/blob/master/pmd-java/src/main/resources/category/java/errorprone.xml)
+- [`category/java/multithreading.xml`](https://github.com/pmd/pmd/blob/master/pmd-java/src/main/resources/category/java/multithreading.xml)
+- [`category/java/performance.xml`](https://github.com/pmd/pmd/blob/master/pmd-java/src/main/resources/category/java/performance.xml)
+- [`category/java/security.xml`](https://github.com/pmd/pmd/blob/master/pmd-java/src/main/resources/category/java/security.xml)
 
-- [`category/java/bestpractices.xml`](https://github.com/pmd/pmd/blob/master/docs/pages/pmd/rules/java/bestpractices.md)
-- [`category/java/errorprone.xml`](https://github.com/pmd/pmd/blob/master/docs/pages/pmd/rules/java/errorprone.md)
-- [`category/java/multithreading.xml`](https://github.com/pmd/pmd/blob/master/docs/pages/pmd/rules/java/multithreading.md)
-- [`category/java/performance.xml`](https://github.com/pmd/pmd/blob/master/docs/pages/pmd/rules/java/performance.md)
-- [`category/java/security.xml`](https://github.com/pmd/pmd/blob/master/docs/pages/pmd/rules/java/security.md)
+You can also specify the rulesets file in your repository as follow.
 
-You can also specify the rulesets file in your repository.
+```yaml
+linter:
+  pmd_java:
+    rulesets:
+      - your_pmd_custom_rules.xml
+```
+
+Please see the [PMD documentation](https://pmd.github.io/pmd/pmd_userdocs_making_rulesets.html) for the customization details.
 
 ### `encoding`
 
