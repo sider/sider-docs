@@ -3,7 +3,7 @@
     "lint": "remark . --frail"
   },
   "devDependencies": {
-    "@arkweid/lefthook": "^0.6.6",
+    "@arkweid/lefthook": "^0.6.7",
     "prettier": "^1.19.1",
     "remark-cli": "^7.0.1",
     "remark-validate-links": "^9.0.1"
