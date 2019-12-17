@@ -7,9 +7,9 @@ hide_title: true
 
 # PHPMD
 
-| Supported Version | Language   | Website           |
-| ----------------- | ---------- | ----------------- |
-| 2.7.0             | PHP 7.3.12 | https://phpmd.org |
+| Supported Version | Language  | Website           |
+| ----------------- | --------- | ----------------- |
+| 2.7.0             | PHP 7.4.0 | https://phpmd.org |
 
 ## Getting Started
 

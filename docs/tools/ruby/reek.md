@@ -9,7 +9,7 @@ hide_title: true
 
 | Supported Version         | Language   | Website                           |
 | ------------------------- | ---------- | --------------------------------- |
-| 4.4.0+ (default to 5.4.0) | Ruby 2.6.5 | https://github.com/troessner/reek |
+| 4.4.0+ (default to 5.5.0) | Ruby 2.6.5 | https://github.com/troessner/reek |
 
 ## Configuration via `sider.yml`
 
