@@ -9,7 +9,7 @@ hide_title: true
 
 | Supported Version           | Language   | Website                  |
 | --------------------------- | ---------- | ------------------------ |
-| 0.61.0+ (default to 0.77.0) | Ruby 2.5.7 | https://docs.rubocop.org |
+| 0.61.0+ (default to 0.78.0) | Ruby 2.5.7 | https://docs.rubocop.org |
 
 > **DEPRECATED**: Sider will drop the support of RuboCop 0.60.0 and older versions soon. Please upgrade to **0.61.0** and newer.
 
