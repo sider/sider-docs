@@ -142,6 +142,15 @@ This section has documents about analysis tools which Sider supports. We have an
 
 </details>
 
+### Dockerfile
+
+<details open>
+  <summary>1 tool is available.</summary>
+
+- [hadolint](./tools/dockerfile/hadolint.md)
+
+</details>
+
 ### Others
 
 <details open>
