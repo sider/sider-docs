@@ -10,8 +10,8 @@ hide_title: true
 > This is **BETA**. The behavior of this tool might change.
 
 | Supported Version | Language             | Website                  |
-| ----------------- | -------------------- | ------------------------ |
-| 0.35.0 [¹]        | Kotlin (Java 12.0.1) | https://ktlint.github.io |
+| :---------------- | :------------------- | :----------------------- |
+| 0.36.0 [¹]        | Kotlin (Java 12.0.2) | https://ktlint.github.io |
 
 ¹ You can use Gradle or Maven to install any version of ktlint, but note that the version may not compatible with Sider.
 

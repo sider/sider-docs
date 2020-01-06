@@ -8,8 +8,8 @@ hide_title: true
 # Checkstyle
 
 | Supported Version | Language    | Website                |
-| ----------------- | ----------- | ---------------------- |
-| 8.27              | Java 12.0.1 | https://checkstyle.org |
+| :---------------- | :---------- | :--------------------- |
+| 8.28              | Java 12.0.2 | https://checkstyle.org |
 
 ## Getting Started
 
