@@ -8,8 +8,8 @@ hide_title: true
 # ESLint
 
 | Supported Version         | Language   | Runtime         | Website            |
-| ------------------------- | ---------- | --------------- | ------------------ |
-| 5.0.0+ (default to 6.7.2) | JavaScript | Node.js 12.13.1 | https://eslint.org |
+| :------------------------ | :--------- | :-------------- | :----------------- |
+| 5.0.0+ (default to 6.8.0) | JavaScript | Node.js 12.14.0 | https://eslint.org |
 
 > **DEPRECATED**: Sider will drop the support of ESLint 4.19.1 and older versions soon. Please upgrade to **5.0.0** and newer.
 

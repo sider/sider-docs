@@ -9,7 +9,7 @@ hide_title: true
 
 | Supported Version | Language  | Website                                      |
 | ----------------- | --------- | -------------------------------------------- |
-| 3.5.2             | PHP 7.4.0 | https://pear.php.net/package/PHP_CodeSniffer |
+| 3.5.3             | PHP 7.4.1 | https://pear.php.net/package/PHP_CodeSniffer |
 
 ## Getting Started
 
