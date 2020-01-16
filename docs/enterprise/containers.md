@@ -2,7 +2,10 @@
 id: containers
 title: Sider Enterprise Containers Guide
 sidebar_label: Containers Guide
+hide_title: true
 ---
+
+# Sider Enterprise Containers Guide
 
 Sider Enterprise is distributed as a set of the following Docker images.
 
@@ -37,9 +40,9 @@ $ docker run --rm \
 
 `sideci_onprem` image is used to run two containers, `sideci_web` and `sideci_worker`.
 
-### Running the web server
+---
 
-The `sideci_web` runs with `puma` command. Use the following command to run `sideci_web`.
+The `sideci_web` runs the web server with `puma` command. Use the following command to run `sideci_web`.
 
 ```
 $ docker run 480130971618.dkr.ecr.us-east-1.amazonaws.com/sideci_onprem:TAG bundle exec puma
@@ -47,9 +50,9 @@ $ docker run 480130971618.dkr.ecr.us-east-1.amazonaws.com/sideci_onprem:TAG bund
 
 `sideci_web` listens TCP port 3000 to receive HTTP requests from end-users.
 
-### Running the job worker
+---
 
-The `sideci_worker` runs with `sidekiq` command. Use the following command to run `sideci_worker`.
+The `sideci_worker` runs the job worker with `sidekiq` command. Use the following command to run `sideci_worker`.
 
 ```
 $ docker run 480130971618.dkr.ecr.us-east-1.amazonaws.com/sideci_onprem:TAG bundle exec sidekiq -C ./config/sidekiq.yml
@@ -57,7 +60,7 @@ $ docker run 480130971618.dkr.ecr.us-east-1.amazonaws.com/sideci_onprem:TAG bund
 
 `sideci_worker` does not listen on any port, and the process does not receive any HTTP request.
 
-### Running batch jobs
+---
 
 `sideci_onprem` has daily batch jobs, which runs with `rake` command. Use the following command to run daily batch jobs.
 
@@ -71,9 +74,9 @@ Set up `cron` job or anything else to run the batch job every day. We recommend 
 
 `catpost_onprem` image is used to run two containers, `catpost_web`, `catpost_worker` and `catpost_scheduler`.
 
-### Running the web server
+---
 
-The `catpost_web` runs with `puma` command. Use the following command to run `catpost_web`.
+The `catpost_web` runs the web server with `puma` command. Use the following command to run `catpost_web`.
 
 ```
 $ docker run 480130971618.dkr.ecr.us-east-1.amazonaws.com/catpost_onprem:TAG bundle exec puma
@@ -81,9 +84,9 @@ $ docker run 480130971618.dkr.ecr.us-east-1.amazonaws.com/catpost_onprem:TAG bun
 
 `catpost_web` listens on TCP port 3000 to receive HTTP requests from `sideci` containers.
 
-### Running the job worker
+---
 
-The `catpost_worker` runs with `rake` command. Use the following command to run `catpost_worker`.
+The `catpost_worker` runs the job worker with `rake` command. Use the following command to run `catpost_worker`.
 
 ```
 $ docker run 480130971618.dkr.ecr.us-east-1.amazonaws.com/catpost_onprem:TAG bundle exec rake environment resque:work
@@ -91,12 +94,12 @@ $ docker run 480130971618.dkr.ecr.us-east-1.amazonaws.com/catpost_onprem:TAG bun
 
 `catpost_worker` does not listen on any port.
 
-### Running the job scheduler
+---
 
-This scheduler container does not require much processor power.
+This `catpost` job scheduler container does not require much processor power.
 You need only one scheduler in the whole system of Sider Enterprise, but you can run multiple scheduler containers for redundancy.
 
-The `catpost_scheduler` runes with `rake` command. Use the following command to run `catpost_scheduler`.
+The `catpost_scheduler` runs with `rake` command. Use the following command to run `catpost_scheduler`.
 
 ```
 $ docker run 480130971618.dkr.ecr.us-east-1.amazonaws.com/catpost_onprem:TAG bundle exec rake environment resque:scheduler
@@ -104,7 +107,7 @@ $ docker run 480130971618.dkr.ecr.us-east-1.amazonaws.com/catpost_onprem:TAG bun
 
 `catpost_scheduler` does not listen on any port.
 
-### Running batch jobs
+---
 
 `catpost_onprem` has daily batch jobs, which runs with `rake` command. Use the following command to run daily batch jobs.
 

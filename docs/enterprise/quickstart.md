@@ -2,7 +2,10 @@
 id: quickstart
 title: Sider Enterprise Quickstart Guide
 sidebar_label: Quickstart
+hide_title: true
 ---
+
+# Sider Enterprise Quickstart Guide
 
 This page introduces how to quickly get started with Sider.
 If you want to run Sider more robust way, please read [Sider Enterprise Outline](./outline.md).
@@ -93,7 +96,7 @@ The instruction of installation are here:
 - [Docker](https://docs.docker.com/install/)
 - [Docker Compose](https://docs.docker.com/compose/install/)
 
-#### Download Application Images
+### Download Application Images
 
 You have to fetch Docker images to run Sider.
 After you receives your credential information, which are `YOUR_KEY`, `YOUR_SECRET` and `IMAGE_NAME`, run the following command:
@@ -108,7 +111,7 @@ $ docker run --rm \
 
 Note that Sider consists of two Docker images, which are `480130971618.dkr.ecr.us-east-1.amazonaws.com/sideci_onprem` and `480130971618.dkr.ecr.us-east-1.amazonaws.com/catpost_onprem`.
 
-#### Prepare env files
+### Prepare env files
 
 All components of Sider require environment variables. This quick guide assumes that Sider run with Docker Compose, so `env_file`s are required.
 
@@ -164,7 +167,7 @@ AWS_SECRET_ACCESS_KEY=secret-key
 You have to replace `FIXME` with GitHub parameters above this page.
 See [Sider Enterprise Configuration](./config.md) fore more details.
 
-#### Prepare docker-compose.yml
+### Prepare docker-compose.yml
 
 Create `docker-compose.yml` to run Sider applications. `sideci.env` and `catpost.env` are the files mentioned above.
 

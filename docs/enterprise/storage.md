@@ -2,7 +2,10 @@
 id: storage
 title: Sider Enterprise Object Storage Guide
 sidebar_label: Object Storage Guide
+hide_title: true
 ---
+
+# Sider Enterprise Object Storage Guide
 
 Sider Enterprise requires setting up an _object storage_.
 The repository manager (`catpost`) uploads your source code archive, and the analysis runner (`runners`) downloads the archive.

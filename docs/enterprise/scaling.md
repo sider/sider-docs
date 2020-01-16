@@ -2,7 +2,10 @@
 id: scaling
 title: Sider Enterprise Scaling Guide
 sidebar_label: Scaling Guide
+hide_title: true
 ---
+
+# Sider Enterprise Scaling Guide
 
 As your development team grows, the number of analysis increases.
 You will eventually have a performance issue on Sider Enterprise.

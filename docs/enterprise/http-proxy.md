@@ -2,7 +2,10 @@
 id: http-proxy
 title: Configure Sider Enterprise to use a proxy server
 sidebar_label: HTTP proxy configuration
+hide_title: true
 ---
+
+# Configure Sider Enterprise to use a proxy server
 
 If you have to provision Sider Enterprise within a proxy environment,
 the HTTP proxy configurations are required for Sider Enterprise.

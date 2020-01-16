@@ -2,7 +2,10 @@
 id: database
 title: Sider Enterprise Database Guide
 sidebar_label: Database Guide
+hide_title: true
 ---
+
+# Sider Enterprise Database Guide
 
 This document explains how to configure Sider database connections. Sider requires MySQL as a database server. You have to set up two databases because each of Sider’s components, `sideci` and `catpost` needs a dedicated database.
 

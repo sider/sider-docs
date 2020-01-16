@@ -2,7 +2,10 @@
 id: healthcheck
 title: Sider Enterprise Health Check Guide
 sidebar_label: Health Check Guide
+hide_title: true
 ---
+
+# Sider Enterprise Health Check Guide
 
 When you want to use load balancers for Sider Enterprise, you may need to configure _health checks_. Sider components provide health check endpoints to make sure the web containers are running normally.
 
