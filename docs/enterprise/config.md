@@ -407,6 +407,22 @@ If you set the `s3_endpoint` paraemter, this parameter is required.
 `network_mode` is equivalent to the `--network` option of `docker run`.
 See [Network settings](https://docs.docker.com/engine/reference/run/#network-settings) for more details.
 
+#### http_proxy
+
+If your Sider Enterprise is within a proxy environment, you need to set `https_proxy` for your proxy server.
+
+#### https_proxy
+
+If your Sider Enterprise is within a proxy environment, you need to set `https_proxy` for your proxy server.
+
+#### no_proxy
+
+If you set the `http_proxy` and `https_proxy` parameters above, the `no_proxy` parameter may also have to be set.
+For example, `s3_endpoint` is set with `http://minio:9000`, then `no_proxy` should be set with `minio`
+if Runners should access to Minio without a proxy server.
+
+See [here](./http-proxy.md) for more details about a proxy environment.
+
 # catpost Configuration
 
 ## General Configuration

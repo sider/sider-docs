@@ -129,6 +129,16 @@
     "Billing and Plans": ["billing-and-plans"],
     "Troubleshooting": ["troubleshooting"],
     "Enterprise": [
+      {
+        "type": "subcategory",
+        "label": "Releases",
+        "ids": [
+          "enterprise/releases/index",
+          "enterprise/releases/202001",
+          "enterprise/releases/201911",
+          "enterprise/releases/2018010801-201909.0"
+        ]
+      },
       "enterprise/outline",
       "enterprise/quickstart",
       "enterprise/resources",
@@ -141,16 +151,7 @@
       "enterprise/scaling",
       "enterprise/config",
       "enterprise/healthcheck",
-      {
-        "type": "subcategory",
-        "label": "Releases",
-        "ids": [
-          "enterprise/releases/index",
-          "enterprise/releases/202001",
-          "enterprise/releases/201911",
-          "enterprise/releases/2018010801-201909.0"
-        ]
-      }
+      "enterprise/http-proxy"
     ],
     "News": [
       "news/2020",
