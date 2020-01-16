@@ -2,7 +2,10 @@
 id: tips
 title: Custom Rules Tips & Tricks
 sidebar_label: Tips & Tricks
+hide_title: true
 ---
+
+# Custom Rules Tips & Tricks
 
 ## Sharing Your Rules among Repositories
 
@@ -11,7 +14,7 @@ sidebar_label: Tips & Tricks
 Goodcheck has a feature to load rule definitions from a URL. You can put the GitHub `Raw` URL in the `goodcheck.yml` to share your rules.
 
 1. Make a repository to share your rules.
-2. Check in a *rules* file in the repository.
+2. Check in a _rules_ file in the repository.
 3. Copy the `Raw` content URL.
 4. Put the URL in the `goodcheck.yml`
 
@@ -22,7 +25,7 @@ import:
   - "https://raw.githubusercontent.com/acmecorp/rules/master/goodcheck.yml"
 ```
 
-You can put a *personal access token* in the URL to share your private content. Let the URL have a username and password (the GitHub username and a personal access token.) The URL itself will be a credential. Make sure to keep the rule file secret in this case.
+You can put a _personal access token_ in the URL to share your private content. Let the URL have a username and password (the GitHub username and a personal access token.) The URL itself will be a credential. Make sure to keep the rule file secret in this case.
 
 ### Sharing Querly rules
 
@@ -31,7 +34,6 @@ When you are using Querly, you can publish your rules as a RubyGem.
 - https://github.com/soutaro/querly#requiring-rules
 
 We are working to improve Querly to make it possible to share rules without making a gem.
-
 
 ## Custom Rule Patterns
 
@@ -48,8 +50,8 @@ Generally, Sider helps your teammates find out what they don't know exists. They
 
 You often see this pattern of rules. It's easy to find the examples.
 
-- Read the maintenance operation manual *when you* want scheduled maintenance for database migration.
-- Change the `DEFAULT_ARTICLES_ROWS` value in frontend code *when you* change `DEFAULT_ARTICLES_COUNT` value in backend code.
+- Read the maintenance operation manual _when you_ want scheduled maintenance for database migration.
+- Change the `DEFAULT_ARTICLES_ROWS` value in frontend code _when you_ change `DEFAULT_ARTICLES_COUNT` value in backend code.
 
 You may already have good documentation for these frequent operations. Sider helps you tell your teammate when they should read them. Do you remember how many times you’ve explained the same thing to new members?
 
@@ -61,9 +63,9 @@ You sometimes find an improvement in the way to do something. You define a new A
 
 This problem can be solved using Sider. Add a rule to tell developers your improvement.
 
-- Use `@ellipsis` Sass mixin *instead of* directly defining `text-overflow: ellipsis;`.
-- Try using `#with_octokit` helper method *instead of* `User#octokit`.
-- Fix `DeleteAccountService` implementation *instead of* defining an association on `Account` model with `dependent: :delete_all`.
+- Use `@ellipsis` Sass mixin _instead of_ directly defining `text-overflow: ellipsis;`.
+- Try using `#with_octokit` helper method _instead of_ `User#octokit`.
+- Fix `DeleteAccountService` implementation _instead of_ defining an association on `Account` model with `dependent: :delete_all`.
 
 These rules can make your code base more consistent at API usage levels.
 

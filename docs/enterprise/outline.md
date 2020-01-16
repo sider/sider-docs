@@ -2,7 +2,10 @@
 id: outline
 title: Sider Enterprise Outline
 sidebar_label: Outline
+hide_title: true
 ---
+
+# Sider Enterprise Outline
 
 Sider Enterprise allows you to run Sider on your infrastructure. This allows Sider Enterprise to satisfy higher security and performance requirements than the SaaS version of Sider.
 
@@ -37,7 +40,7 @@ Sider requires the following services:
 
 `sideci` also sends requests to catpost to checkout to your source code.
 
-#### Required software
+Required software:
 
 - MySQL 5.7.x (MySQL8 may work, but is not tested)
 - Redis (We are using 5.0)
@@ -47,7 +50,7 @@ Sider requires the following services:
 
 `catpost` is a Git repository proxy. It checks out the source code, manages the cache of the repository, and calculates diffs between revisions.
 
-#### Required software
+Required software:
 
 - MySQL 5.7.x (MySQL8 may work, but is not tested)
 - Redis (We are using 5.0)

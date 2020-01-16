@@ -2,7 +2,10 @@
 id: administration
 title: Sider Enterprise Administration Guide
 sidebar_label: Administration Guide
+hide_title: true
 ---
+
+# Sider Enterprise Administration Guide
 
 This guide explains some of the administrative operations of Sider Enterprise.
 
