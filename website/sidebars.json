@@ -108,6 +108,13 @@
       },
       {
         "type": "subcategory",
+        "label": "Dockerfile",
+        "ids": [
+          "tools/dockerfile/hadolint"
+        ]
+      },
+      {
+        "type": "subcategory",
         "label": "Others",
         "ids": [
           "tools/others/goodcheck",
