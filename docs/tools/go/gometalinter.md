@@ -138,7 +138,7 @@ This option allows you to manage whether to show only errors.
 
 #### `fast`
 
-This option allows you to manage whether to run only fast linters. If you declare true in this option, the following faster linters willl run:
+This option allows you to manage whether to run only fast linters. If you declare true in this option, the following faster linters will run:
 
 - dupl
 - gosec
