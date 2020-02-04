@@ -7,11 +7,11 @@ hide_title: true
 
 # Flake8
 
-| Supported Version | Language             | Website                 |
-| ----------------- | -------------------- | ----------------------- |
-| 3.7.9             | Python 2.7.16, 3.7.4 | http://flake8.pycqa.org |
+| Supported Version | Language     | Website                 |
+| ----------------- | ------------ | ----------------------- |
+| 3.7.9             | Python 3.7.4 | http://flake8.pycqa.org |
 
-> **DEPRECATED**: Sider will drop the support of Python 2. So, the `version` option of `sider.yml` and the detection of Python version via `.python-version` features are going to be unavailable near the future.
+> **DEPRECATED**: Sider will drop the support of Python 2, which will [be retired by April 2020](https://www.python.org/psf/press-release/pr20191220/). So, the `version` option of `sider.yml` and the detection of Python version via `.python-version` features are going to be unavailable near the future.
 
 ## Getting Started
 
@@ -59,7 +59,6 @@ Here are example settings for Flake8 under `flake8`:
 ```yaml
 linter:
   flake8:
-    version: 2
     plugins:
       - flake8-bandit
       - flake8-builtins==1.4.1
