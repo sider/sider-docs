@@ -10,21 +10,6 @@ hide_title: true
 This page introduces how to quickly get started with Sider.
 If you want to run Sider more robust way, please read [Sider Enterprise Outline](./outline.md).
 
-## Creating an OAuth App for Sider
-
-First of all, create a new OAuth app on GitHub Enterprise; check "[Creating an OAuth App](https://developer.github.com/apps/building-oauth-apps/creating-an-oauth-app/)" as necessary.
-Fill in each field to match your specifications:
-
-- **Application name**: `Sider`
-- **Homepage URL**: `https://[your-web-service-domain]/` (e.g. `https://sider.review/`)
-- **Application description**: (optional)
-- **Authorization callback URL**: `https://[your-web-service-domain]/users/auth/github`
-
-After successful registration, store the **Client ID** and **Client Secret** with the environment variables below:
-
-- **Client ID**: `GITHUB_CLIENT_ID`
-- **Client Secret**: `GITHUB_CLIENT_SECRET`
-
 ## Creating a new GitHub App for Sider
 
 You must also create a new GitHub App for Sider. Follow these steps:
@@ -129,8 +114,6 @@ GITHUB_APP_PRIVATE_KEY={{FIXME}}
 GITHUB_APP_OAUTH2_CLIENT_ID={{FIXME}}
 GITHUB_APP_OAUTH2_CLIENT_SECRET={{FIXME}}
 GITHUB_APP_WEBHOOK_SECRET={{FIXME}}
-GITHUB_CLIENT_ID={{FIXME}}
-GITHUB_CLIENT_SECRET={{FIXME}}
 GITHUB_API_ENDPOINT={{FIXME}}
 GITHUB_ENDPOINT={{FIXME}}
 ENCRYPTION_SERVICE_KEY=xYSuh7UoBzdFaE69zCsXAV7ZAfcGOiem

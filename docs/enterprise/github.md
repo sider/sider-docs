@@ -7,26 +7,14 @@ hide_title: true
 
 # Sider Enterprise GitHub Setup
 
-Sider Enterprise is integrated with GitHub. It requires two GitHub integrations, an OAuth app and a GitHub app. You need to register the two apps on your GitHub Enterprise.
+Sider Enterprise is integrated with GitHub. It requires a GitHub App integration, and you need to register it on your GitHub Enterprise.
 
-The OAuth app is used to authenticate end uses. When you sign in to Sider Enterprise, the OAuth app is used. The GitHub app is used to access your GitHub repositories; checking out the source code, getting notified about pull requests, and sending commit statuses.
+The GitHub App is used to authenticate end-users and to access your GitHub repositories;
+checking out the source code, getting notified about pull requests, and sending commit statuses.
 
-Register the two apps on GitHub Enterprise, and let your Sider Enterprise know the credentials of the two apps to be integrated with GitHub Enterprise.
+Register the GitHub App on your GitHub Enterprise, and let your Sider Enterprise know the credentials of the app to be integrated with GitHub Enterprise.
 
 Note that we assume your Sider Enterprise is running on `https://sider.example.com` in this guide, and you should replace the hostname with the actual name.
-
-## Registering an OAuth app
-
-Create a new OAuth app on your GitHub Enterprise. Read the [Creating an OAuth App](https://developer.github.com/apps/building-oauth-apps/creating-an-oauth-app/) guide for details.
-
-The new OAuth app should have the following properties.
-
-- Application name: `Sider`
-- Homepage URL: `https://sider.example.com`
-- Application description: (optional)
-- Authorization callback URL: `https://sider.example.com/users/auth/github`
-
-After the registration, configure your Sider Enterprise with `Client ID` and `Client Secret`. You should put the values in `GITHUB_CLIENT_ID` and `GITHUB_CLIENT_SECRET` environment variables for `sideci`.
 
 ## Registering a GitHub app
 
