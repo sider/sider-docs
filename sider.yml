@@ -1,0 +1,5 @@
+linter:
+  eslint:
+    npm_install: false
+  stylelint:
+    npm_install: false
