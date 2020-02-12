@@ -9,7 +9,7 @@ hide_title: true
 
 | Supported Version | Language  | Website                                    |
 | ----------------- | --------- | ------------------------------------------ |
-| 2.0.11            | Go 1.13.5 | https://github.com/alecthomas/gometalinter |
+| 2.0.11            | Go 1.13.7 | https://github.com/alecthomas/gometalinter |
 
 > **DEPRECATED**: Sider will no longer support Go Meta Linter because Go Meta Linter has been archived since April 7, 2019.
 > For more details, see the [readme](https://github.com/alecthomas/gometalinter#readme).

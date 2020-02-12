@@ -9,7 +9,7 @@ hide_title: true
 
 | Supported Version           | Language     | Runtime         | Website                                 |
 | --------------------------- | ------------ | --------------- | --------------------------------------- |
-| 1.16.0+ (default to 1.16.0) | CoffeeScript | Node.js 12.14.0 | https://github.com/clutchski/coffeelint |
+| 1.16.0+ (default to 1.16.0) | CoffeeScript | Node.js 12.14.1 | https://github.com/clutchski/coffeelint |
 
 ## Getting Started
 
