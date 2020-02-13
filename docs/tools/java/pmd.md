@@ -9,7 +9,7 @@ hide_title: true
 
 | Supported Version | Language    | Website               |
 | ----------------- | ----------- | --------------------- |
-| 6.20.0            | Java 12.0.2 | https://pmd.github.io |
+| 6.21.0            | Java 12.0.2 | https://pmd.github.io |
 
 ## Getting Started
 

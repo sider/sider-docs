@@ -9,7 +9,7 @@ hide_title: true
 
 | Supported Version | Language    | Website                |
 | :---------------- | :---------- | :--------------------- |
-| 8.28              | Java 12.0.2 | https://checkstyle.org |
+| 8.29              | Java 12.0.2 | https://checkstyle.org |
 
 ## Getting Started
 
