@@ -18,7 +18,7 @@ Sider requires MySQL 5.7. You cannot use MySQL 5.6 or older. MySQL 8.0 may work,
 Sider components assume the following.
 
 - The user account which is used to connect to the database can create a database.
-- `max_allowed_packet` is big enough for performance. (We recommend setting the value larger than 20 MB.)
+- `max_allowed_packet` is big enough for performance. (We recommend setting the value larger than 128 MB.)
 
 ## Database Load
 
