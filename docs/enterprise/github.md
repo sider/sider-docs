@@ -16,11 +16,11 @@ Register the GitHub App on your GitHub Enterprise, and let your Sider Enterprise
 
 Note that we assume your Sider Enterprise is running on `https://sider.example.com` in this guide, and you should replace the hostname with the actual name.
 
-## Registering a GitHub app
+## Registering a GitHub App
 
-Create a new GitHub app on your GitHub Enterprise. Read the [Creating a GitHub App](https://developer.github.com/apps/building-github-apps/creating-a-github-app/) for details.
+Create a new GitHub App on your GitHub Enterprise. Read the [Creating a GitHub App](https://developer.github.com/apps/building-github-apps/creating-a-github-app/) for details.
 
-The new GitHub app should have the following properties.
+The new GitHub App should have the following properties.
 
 - GitHub App name: `Sider`
 - Homepage URL: `https://sider.example.com`
@@ -53,7 +53,7 @@ Generate a private key, and download the PEM file. Sider Enterprise requires a b
 After the registration, configure your Sider Enterprise as the following:
 
 - `GITHUB_APP_ID`: The ID.
-- `GITHUB_APP_NAME`: `sider` (look for the URL of the generated GitHub app.)
+- `GITHUB_APP_NAME`: `sider` (look for the URL of the generated GitHub App.)
 - `GITHUB_APP_PRIVATE_KEY`: Base64 encoded private key content.
   - `$ base64 /path/to/PEM` on macOS
   - `$ base64 -w0 /path/to/PEM` on Linux
