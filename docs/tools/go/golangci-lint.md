@@ -9,7 +9,7 @@ hide_title: true
 
 | Supported Version | Language  | Website                                    |
 | ----------------- | --------- | ------------------------------------------ |
-| 1.23.1            | Go 1.13.5 | https://github.com/golangci/golangci-lint  |
+| 1.23.6            | Go 1.13.5 | https://github.com/golangci/golangci-lint  |
 
 ## Getting Started
 
@@ -19,11 +19,13 @@ To customize GolangCI-Lint, write your configuration, put it in your repository,
 
 ## Default Configuration
 
-In addition to [enabled by default linters](https://github.com/golangci/golangci-lint/tree/v1.23.1#enabled-by-default-linter), Sider enables some linters as follows:
+In addition to [enabled by default linters](https://github.com/golangci/golangci-lint/tree/v1.23.6#enabled-by-default-linter), Sider enables some linters as follows:
 
 ```list
   - gocyclo
   - bodyclose
+  - stylecheck
+  - gocritic(diagnostic|performance|style)
 ```
 
 ## Configuration
@@ -88,19 +90,20 @@ linter:
 
 ### `config`
 
-This option allows you to control a configuration file. If you have settings file for GolangCI-Lint, put it in this option.
+This option allows you to control a configuration file. If you have settings file for GolangCI-Lint, put the path of that in this option.
 
 #### `disable`
 
-This option allows you to disable already enabled linters. Set linters as a list in this option.
+This option allows you to disable defaultly enabled linters. Set linters as a list in this option.
 
 #### `disable-all`
 
-This option allows you to decide whether to disable all linters.
+This option allows you to decide whether to disable all linters. This option cannot be used with `disable` option.
 
 #### `enable`
 
 This option allows you to enable linters which are not defaultly enabled. Set linters as a list in this option.
+To specify `disable` and `enable` to the same linter is prohibited.
 
 #### `fast`
 This option allows you to manage whether to run only fast linters. If you declare true in this option, the following faster linters will run:
@@ -150,7 +153,7 @@ This option allows you to manage whether to run only fast linters. If you declar
 This option allows you not to read config file.
 
 #### `presets`
-This option allows yout to enable presets (bugs|complexity|format|performance|style|unused) of linters. This option implies option --disable-all
+This option allows yout to enable presets (bugs|complexity|format|performance|style|unused) of linters. This option implies option `--disable-all`
 
 #### `skip-dirs`
 This option allows you to specify the directories to skip.
