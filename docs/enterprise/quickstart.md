@@ -12,66 +12,7 @@ If you want to run Sider more robust way, please read [Sider Enterprise Outline]
 
 ## Creating a new GitHub App for Sider
 
-You must also create a new GitHub App for Sider. Follow these steps:
-
-1. Go to `https://[your-github-enterprise-domain]/organizations/[your-organization-name]/settings/apps/new`
-
-   - `[your-organization-name]` is an arbitrary organization name. You can see your organizations on:
-     `https://[your-github-enterprise-domain]/settings/organizations`
-
-2. Fill out the **Register new GitHub App** form by specifying the following:
-   - **GitHub App name**: `Sider`
-     - Store the value in lowercase as an environment variable `GITHUB_APP_NAME`
-   - **Homepage URL**: `https://[your-web-service-domain]/` (e.g. `https://sider.example.com/`)
-   - **User authorization callback URL**: `https://[your-web-service-domain]/users/auth/github_app_oauth2/callback`
-   - **Setup URL**: `https://[your-web-service-domain]/gh/setup`
-   - **Webhook URL**: `https://[your-web-service-domain]/webhooks/github`
-   - **Webhook secret**: Arbitrary secret characters
-     - For example, you can get it by running `tr -dc '[:alnum:]' < /dev/urandom | head -c32` on your terminal.
-     - Store the value as an environment variable `GITHUB_APP_WEBHOOK_SECRET`
-
-![Register GitHub App](../assets/GitHubApp-Register.png)
-
-3. Set up the application's **Permissions** like below:
-
-   | Permission name      | Access       |
-   | -------------------- | ------------ |
-   | Repository contents  | Read-only    |
-   | Repository metadata  | Read-only    |
-   | Pull requests        | Read & Write |
-   | Commit statuses      | Read & Write |
-   | Organization members | Read-only    |
-
-![GitHub App Permissions](../assets/GitHubApp-Permissions.png)
-
-4. Enable the following events on **Subscribe to events**:
-   - **Member**
-   - **Organization**
-   - **Pull request**
-   - **Pull request review**
-   - **Pull request review comment**
-   - **Repository**
-
-![GitHub App Events](../assets/GitHubApp-SubscribeToEvents.png)
-
-5. Choose **Any account** on **Where can this GitHub App be installed?**
-
-![GitHub App Installable scope](../assets/GitHubApp-WhereCanThisGitHubAppBeInstalled.png)
-
-6. Click **Create GitHub App**
-
-   - After the success of the registration, keep the parameters as environment variables:
-     - **ID** as `GITHUB_APP_ID`
-     - **Client ID** as `GITHUB_APP_OAUTH2_CLIENT_ID`
-     - **Client secret** as `GITHUB_APP_OAUTH2_CLIENT_SECRET`
-
-7. Click **Generate private key**
-
-   - Then your browser downloads PEM file
-
-8. Encode the PEM file with Base64 and keep the value as an environment variable `GITHUB_APP_PRIVATE_KEY`
-   - Run `base64 /path/to/PEM` if your OS is macOS
-   - Run `base64 -w0 /path/to/PEM` if your OS is Linux
+Please follow the [guide](./github.md#registering-a-github-app) to create a new GitHub App for Sider.
 
 ## Install Docker and Docker Compose
 
