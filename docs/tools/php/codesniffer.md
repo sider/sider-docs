@@ -19,8 +19,7 @@ To start using PHP_CodeSniffer, enable it in [Repository Settings](../../getting
 linter:
   code_sniffer:
     dir: app/
-    options:
-      standard: CakePHP
+    standard: CakePHP
 ```
 
 ## Default Configuration
