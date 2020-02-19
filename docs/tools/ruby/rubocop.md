@@ -9,7 +9,7 @@ hide_title: true
 
 | Supported Version           | Language   | Website                  |
 | --------------------------- | ---------- | ------------------------ |
-| 0.61.0+ (default to 0.79.0) | Ruby 2.6.5 | https://docs.rubocop.org |
+| 0.61.0+ (default to 0.80.0) | Ruby 2.6.5 | https://docs.rubocop.org |
 
 ## Configuration via `sider.yml`
 
