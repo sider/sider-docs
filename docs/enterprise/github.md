@@ -16,6 +16,10 @@ Register the GitHub App on your GitHub Enterprise, and let your Sider Enterprise
 
 Note that we assume your Sider Enterprise is running on `https://sider.example.com` in this guide, and you should replace the hostname with the actual name.
 
+> **NOTE** Sider Enterprise is only compatible with the supported versions of GitHub Enterprise.
+> Visit [this](https://help.github.com/en/enterprise/) page and see the link to the article of your GitHub Enterprise version.
+> You can find out your version is still supported or not.
+
 ## Registering a GitHub App
 
 Create a new GitHub App on your GitHub Enterprise. Read the [Creating a GitHub App](https://developer.github.com/apps/building-github-apps/creating-a-github-app/) for details.
