@@ -187,7 +187,7 @@ _Type:_ `string[]`
 
 This option allows you to ignore specific files. It helps to improve the analysis execution time and the analysis stability.
 
-In order to use this option, add it to `sider.yml` like this:
+In order to use this option, add it as a top-level in `sider.yml` like this:
 
 ```yaml
 ignore:
@@ -196,14 +196,14 @@ ignore:
   - "images/**"
 ```
 
-## `branches` option
+## `branches.exclude` option
 
 _Type:_ `string[]`
 
 This option allows you to exclude branches from the analysis. If there are branches that are unnecessary for your team to analyze, use the `branches` option.
 When setting this option, Sider will not analyze the branch specified in this option.
 
-In order to use this option, add it to `sider.yml` like this:
+In order to use this option, add it as a top-level in `sider.yml` like this:
 
 ```yaml
 branches:
