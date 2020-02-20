@@ -294,11 +294,7 @@ The default value is `30`, which means each browser calls Ajax requests every 30
 
 ## Integration Configuration
 
-You can optionally setup Loggly and Bugsnag integration.
-
-### `LOGGLY_URL` (Optional)
-
-Loggly URL for debugging.
+You can optionally setup the following integrations.
 
 ### `BUGSNAG_API_KEY` (Optional)
 
@@ -584,11 +580,7 @@ If you use AWS S3, you can authorize using IAM role and remove this configuratio
 
 ---
 
-You can optionally setup Loggly and Bugsnag integration.
-
-### `LOGGLY_URL` (Optional, for `catpost`)
-
-Loggly URL for debugging.
+You can optionally setup the following integrations.
 
 ### `BUGSNAG_API_KEY` (Optional, for `catpost`)
 
