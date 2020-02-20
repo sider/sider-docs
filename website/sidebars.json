@@ -88,7 +88,8 @@
         "ids": [
           "tools/go/govet",
           "tools/go/golint",
-          "tools/go/gometalinter"
+          "tools/go/gometalinter",
+          "tools/go/golangci-lint"
         ]
       },
       {

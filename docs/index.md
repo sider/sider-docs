@@ -120,6 +120,7 @@ This section has documents about analysis tools which Sider supports. We have an
 - [go vet](./tools/go/govet.md)
 - [Golint](./tools/go/golint.md)
 - [Go Meta Linter](./tools/go/gometalinter.md)
+- [GolangCI-Lint](./tools/go/golangci-lint.md)
 
 </details>
 
