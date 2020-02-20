@@ -1,5 +1,5 @@
 ---
-id: GolangCI-Lint
+id: golangci-lint
 title: GolangCI-Lint
 sidebar_label: GolangCI-Lint
 hide_title: true
@@ -7,26 +7,22 @@ hide_title: true
 
 # GolangCI-Lint
 
-| Supported Version | Language  | Website                                    |
-| ----------------- | --------- | ------------------------------------------ |
-| 1.23.6            | Go 1.13.5 | https://github.com/golangci/golangci-lint  |
+| Supported Version | Language  | Website                                   |
+| ----------------- | --------- | ----------------------------------------- |
+| 1.23.6            | Go 1.13.7 | https://github.com/golangci/golangci-lint |
+
+> This is **not published yet**.
+
+GolangCI-Lint is a linter to aggregate multiple linters and a successor to [Go Meta Linter](gometalinter.md) which is deprecated.
 
 ## Getting Started
 
-To start using GolangCI-Lint, enable it in repository setting.
-
-To customize GolangCI-Lint, write your configuration, put it in your repository, and set up `sider.yml`.
+To start using GolangCI-Lint, enable it in your [repository settings](../../getting-started/repository-settings.md).
 
 ## Default Configuration
 
-In addition to [enabled by default linters](https://github.com/golangci/golangci-lint/tree/v1.23.6#enabled-by-default-linter), Sider enables some linters as follows:
-
-```list
-  - gocyclo
-  - bodyclose
-  - stylecheck
-  - gocritic(diagnostic|performance|style)
-```
+In addition to [enabled by default linters](https://github.com/golangci/golangci-lint#enabled-by-default-linters), Sider enables some useful linters.
+See the [default configuration file](https://github.com/sider/runners/blob/master/images/golangci_lint/sider_golangci.yml) for details.
 
 ## Configuration
 
@@ -59,22 +55,22 @@ linter:
 
 You can use the following options to fine-tune GolangCI-Lint to your project.
 
-| Name                                                                        | Type                 | Default      | Description                                        |
-| --------------------------------------------------------------------------- | -------------------- | ------------ | ---------------------------------------------------|
-| [`root_dir`](../../getting-started/custom-configuration.md#root_dir-option) | `string`             |      -       | A root directory.                                  |
-| [`target`](#target)                                                         | `string`, `string[]` |   `./...`    | Paths to analyze.                                  |
-| [`config`](#config)                                                         | `string`             |      -       | File paths for config file.                        |
-| [`disable`](#disable)                                                       | `string`, `string[]` |      -       | `--disable` option of GolangCI-Lint.               |
-| [`disable-all`](#disable-all)                                               | `boolean`            |    false     | `--disable-all` option of GolangCI-Lint.           |
-| [`enable`](#enable)                                                         | `string`             |      -       | `--enable` option of GolangCI-Lint.                |
-| [`fast`](#fast)                                                             | `string`, `string[]` |      -       | `--fast` option of GolangCI-Lint.                  |
-| [`no-config`](#no-config)                                                   | `boolean`            |    false     | `--no-config` option of GolangCI-Lint.             |
-| [`presets`](#presets)                                                       | `string`, `string[]` |      -       | `--presets` option of GolangCI-Lint.               |
-| [`skip-dirs`](#skip-dirs)                                                   | `string`, `string[]` |      -       | `--skip-dirs` option of GolangCI-Lint.             |
-| [`skip-dirs-use-default`](#skip-dirs-use-default)                           | `boolean`            |     true     | `--skip-dirs-use-default` option of GolangCI-Lint. |
-| [`skip-files`](#skip-files)                                                 | `string` ,`string[]` |      -       | `--skip-files` option of GolangCI-Lint.            |
-| [`tests`](#tests)                                                           | `boolean`            |     true     | `--tests` option of GolangCI-Lint.                 |
-| [`uniq-by-line`](#uniq-by-line)                                             | `boolean`            |     true     | `--uniq-by-line` option of GolangCI-Lint.          |
+| Name                                                                        | Type                 | Default | Description                                        |
+| --------------------------------------------------------------------------- | -------------------- | ------- | -------------------------------------------------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#root_dir-option) | `string`             | -       | A root directory.                                  |
+| [`target`](#target)                                                         | `string`, `string[]` | `./...` | Paths to analyze.                                  |
+| [`config`](#config)                                                         | `string`             | -       | File paths for config file.                        |
+| [`disable`](#disable)                                                       | `string`, `string[]` | -       | `--disable` option of GolangCI-Lint.               |
+| [`disable-all`](#disable-all)                                               | `boolean`            | `false` | `--disable-all` option of GolangCI-Lint.           |
+| [`enable`](#enable)                                                         | `string`             | -       | `--enable` option of GolangCI-Lint.                |
+| [`fast`](#fast)                                                             | `string`, `string[]` | -       | `--fast` option of GolangCI-Lint.                  |
+| [`no-config`](#no-config)                                                   | `boolean`            | `false` | `--no-config` option of GolangCI-Lint.             |
+| [`presets`](#presets)                                                       | `string`, `string[]` | -       | `--presets` option of GolangCI-Lint.               |
+| [`skip-dirs`](#skip-dirs)                                                   | `string`, `string[]` | -       | `--skip-dirs` option of GolangCI-Lint.             |
+| [`skip-dirs-use-default`](#skip-dirs-use-default)                           | `boolean`            | `true`  | `--skip-dirs-use-default` option of GolangCI-Lint. |
+| [`skip-files`](#skip-files)                                                 | `string` ,`string[]` | -       | `--skip-files` option of GolangCI-Lint.            |
+| [`tests`](#tests)                                                           | `boolean`            | `true`  | `--tests` option of GolangCI-Lint.                 |
+| [`uniq-by-line`](#uniq-by-line)                                             | `boolean`            | `true`  | `--uniq-by-line` option of GolangCI-Lint.          |
 
 ### `target`
 
@@ -92,86 +88,47 @@ linter:
 
 This option allows you to control a configuration file. If you have settings file for GolangCI-Lint, put the path of that in this option.
 
-#### `disable`
+### `disable`
 
 This option allows you to disable defaultly enabled linters. Set linters as a list in this option.
 
-#### `disable-all`
+### `disable-all`
 
 This option allows you to decide whether to disable all linters. This option cannot be used with `disable` option.
 
-#### `enable`
+### `enable`
 
 This option allows you to enable linters which are not defaultly enabled. Set linters as a list in this option.
 To specify `disable` and `enable` to the same linter is prohibited.
 
-#### `fast`
-This option allows you to manage whether to run only fast linters. If you declare true in this option, the following faster linters will run:
+### `fast`
 
-- deadcode
-- errcheck
-- gosimple
-- govet
-- ineffassign
-- staticcheck
-- structcheck
-- typecheck
-- varcheck
-- bodyclose
-- depguard
-- dogsled
-- dupl
-- funlen
-- gochecknoglobals
-- gochecknoinits
-- gocognit
-- goconst
-- gocritic
-- gocyclo
-- godox
-- gofmt
-- goimports
-- golint
-- gomnd
-- goprintffuncname
-- gosec
-- interfacer
-- lll
-- maligned
-- misspell
-- nakedret
-- prealloc
-- rowserrcheck
-- scopelint
-- stylecheck
-- unconvert
-- unparam
-- whitespace
-- wsl
+This option allows you to manage whether to run only fast linters. If you declare `true` in this option, the faster linters will run. (see the official document about fast linters)
 
-#### `no-config`
+### `no-config`
+
 This option allows you not to read config file.
 
-#### `presets`
-This option allows yout to enable presets (bugs|complexity|format|performance|style|unused) of linters. This option implies option `--disable-all`
+### `presets`
 
-#### `skip-dirs`
+This option allows you to enable presets (bugs|complexity|format|performance|style|unused) of linters. This option implies option `--disable-all`
+
+### `skip-dirs`
+
 This option allows you to specify the directories to skip.
 
-#### `skip-dirs-use-default`
-This option allows you to use or not use default excluded directories.
-- (^|/)vendor($|/)
-- (^|/)third_party($|/)
-- (^|/)testdata($|/)
-- (^|/)examples($|/)
-- (^|/)Godeps($|/)
-- (^|/)builtin($|/)
+### `skip-dirs-use-default`
 
-#### `skip-files`
+This option allows you to use or not use default excluded directories.
+
+### `skip-files`
+
 This option allows you to specify the files to skip.
 
-#### `tests`
+### `tests`
+
 This option allows you to decide whether to analyze test files. If you would like to include test files, set `true` in this option.
 
-#### `uniq-by-line`
+### `uniq-by-line`
+
 This option allows you to show multiple linters per line. If you would like to show multiple linters per line, set `false` in this option.
