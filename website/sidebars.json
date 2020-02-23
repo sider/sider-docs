@@ -102,6 +102,13 @@
       },
       {
         "type": "subcategory",
+        "label": "C#",
+        "ids": [
+          "tools/csharp/fxcop_analyzers"
+        ]
+      },
+      {
+        "type": "subcategory",
         "label": "Shell script",
         "ids": [
           "tools/shellscript/shellcheck"
