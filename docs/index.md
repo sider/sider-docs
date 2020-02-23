@@ -134,6 +134,15 @@ This section has documents about analysis tools which Sider supports. We have an
 
 </details>
 
+### C#
+
+<details open>
+  <summary>1 tool is available.</summary>
+
+- [FxCop Analyzers](./tools/csharp/fxcop_analyzers.md)
+
+</details>
+
 ### Shell script
 
 <details open>
