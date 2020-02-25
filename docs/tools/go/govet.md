@@ -11,6 +11,8 @@ hide_title: true
 | --------- | -------------------------- |
 | Go 1.13.7 | https://golang.org/cmd/vet |
 
+> **DEPRECATED**: Sider will drop the support of go vet by March 31, 2020. We recommend [GolangCI-Lint](https://github.com/golangci/golangci-lint) as an alternative.
+
 ## Getting Started
 
 To start using go vet, enable it in repository setting.
