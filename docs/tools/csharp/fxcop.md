@@ -9,4 +9,11 @@ hide_title: true
 
 > This is **not published yet**.
 
-TBD
+| Supported Version | Language             | Website                  |
+| :---------------- | :------------------- | :----------------------- |
+| 2.9.8             | C#                   | [dotnet/roslyn-analyzers](https://github.com/dotnet/roslyn-analyzers#microsoftcodeanalysisfxcopanalyzers) |
+
+**FxCop** is a static analysis tool for [.NET  platform](https://dotnet.microsoft.com/). It supports both of C# and Visual Basic .NET
+
+
+**FxCop** is a static analysis tool for [.NET compiler platform ("Roslyn")](https://github.com/dotnet/roslyn)
