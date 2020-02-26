@@ -104,7 +104,7 @@
         "type": "subcategory",
         "label": "C#",
         "ids": [
-          "tools/csharp/fxcop_analyzers"
+          "tools/csharp/fxcop"
         ]
       },
       {
