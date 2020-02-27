@@ -30,7 +30,7 @@ Here is a configuration example via [`sider.yml`](../../getting-started/custom-c
 
 ```yaml
 linter:
-  golangci-lint:
+  golangci_lint:
     target: dir/...
     config: golangci.yml
     disable:
@@ -78,7 +78,7 @@ This option allows you to specify files or directories to analyze. If you specif
 
 ```Yaml
 linter:
-  golangci-lint:
+  golangci_lint:
     target:
       - "dir1"
       - "dir2/..."
