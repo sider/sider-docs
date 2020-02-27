@@ -43,7 +43,6 @@ linter:
       includes: []
       input: 
         - "src/"
-      language-version: null
 ```
 
 ### Using Gradle integration
@@ -105,7 +104,6 @@ The configuration for detekt accepts one of the `cli`, `gradle`, and `maven` key
 | [`cli.excludes`](#cliexcludes)                                              | `string`, `string[]`              | `[]`                      | Exclude paths. (Globing patterns)                                                              |
 | [`cli.includes`](#cliincludes)                                              | `string`, `string[]`              | `[]`                      | Include paths. (Globing patterns)                                                              |
 | [`cli.input`](#cliinput)                                                    | `string`, `string[]`              | current working directory | Input paths.                                                                                   |
-| [`cli.language-version`](#clilanguage-version)                              | `1.0`, `1.1`, `1.2`, `1.3`, `1.4` | latest stable             | Kotlin language version.                                                                       |
 | [`gradle`](#gradle)                                                         | `hash`                            | -                         | Settings for Gradle execution.                                                                 |
 | [`gradle.task`](#gradletask)                                                | `string`                          | _(required)_              | Task name of Gradle.                                                                           |
 | [`gradle.report_id`](#gradlereport_id)                                      | `"xml"`, `"txt"`, `"html"`        | _(required)_              | Report id.                                                                                     |
@@ -135,7 +133,6 @@ linter:
       includes: []
       input: 
         - "src/"
-      language-version: null
 ```
 
 For more details about the CLI options, see the [official documentation](https://arturbosch.github.io/detekt/cli.html).
@@ -168,10 +165,6 @@ Globing patterns describing paths to include in the analysis.
 
 Input paths to analyze.
 
-### `cli.language-version`
-
-Compatibility mode for Kotlin language version.
-
 ### `gradle`
 
 ```yaml
@@ -192,6 +185,9 @@ A name of the Gradle task to execute detekt.
 ### `gradle.report_id`
 
 A reporter name of the output from the `task`.
+
+We recommend using the `xml` or `html` reporter for Sider integration.
+Because you can receive clearer messages than the `txt`.
 
 ### `gradle.report_path`
 
