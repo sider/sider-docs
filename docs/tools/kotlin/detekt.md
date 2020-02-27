@@ -66,7 +66,7 @@ $ ./gradlew <task>
 ```
 
 The `report_id` option tells Sider which reporter is used by the Gradle task.
-Sider supports the default `xml`, `html`, and `txt` reporters.
+Sider supports the default `xml` and `txt` reporters.
 
 ### Using Maven integration
 
@@ -77,8 +77,8 @@ linter:
   detekt:
     maven: 
       goal: "antrun:run@detekt"
-      report_id: html
-      report_path: reports/detekt.html
+      report_id: xml
+      report_path: reports/detekt.xml
 ```
 
 Sider runs `mvn` in the repository with the specified `goal`, and use the output.
@@ -93,25 +93,25 @@ $ mvn <goal>
 You can customize your detekt analysis using `sider.yml`.
 The configuration for detekt accepts one of the `cli`, `gradle`, and `maven` keys.
 
-| Name                                                                        | Type                              | Default                   | Description                                                                                    |
-| --------------------------------------------------------------------------- | --------------------------------- | ------------------------- | ---------------------------------------------------------------------------------------------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#root_dir-option) | `string`                          | -                         | A root directory.                                                                              |
-| [`cli`](#cli)                                                               | `hash`                            | -                         | Settings for CLI execution.                                                                    |
-| [`cli.baseline`](#clibaseline)                                              | `string`                          | -                         | Baseline file path.                                                                            |
-| [`cli.config`](#cliconfig)                                                  | `string`, `string[]`              | `[]`                      | Config file paths.                                                                             |
-| [`cli.config-resource`](#cliconfig-resource)                                | `string`, `string[]`              | `[]`                      | Config resource paths.                                                                         |
-| [`cli.disable-default-rulesets`](#clidisable-default-rulesets)              | `boolean`                         | `false`                   | [`--disable-default-rulesets`](https://arturbosch.github.io/detekt/cli.html) option of detekt. |
-| [`cli.excludes`](#cliexcludes)                                              | `string`, `string[]`              | `[]`                      | Exclude paths. (Globing patterns)                                                              |
-| [`cli.includes`](#cliincludes)                                              | `string`, `string[]`              | `[]`                      | Include paths. (Globing patterns)                                                              |
-| [`cli.input`](#cliinput)                                                    | `string`, `string[]`              | current working directory | Input paths.                                                                                   |
-| [`gradle`](#gradle)                                                         | `hash`                            | -                         | Settings for Gradle execution.                                                                 |
-| [`gradle.task`](#gradletask)                                                | `string`                          | _(required)_              | Task name of Gradle.                                                                           |
-| [`gradle.report_id`](#gradlereport_id)                                      | `"xml"`, `"txt"`, `"html"`        | _(required)_              | Report id.                                                                                     |
-| [`gradle.report_path`](#gradlereport_path)                                  | `string`                          | _(required)_              | Report file path.                                                                              |
-| [`maven`](#maven)                                                           | `hash`                            | -                         | Settings for Maven execution.                                                                  |
-| [`maven.goal`](#mavengoal)                                                | `string`                          | _(required)_              | Goal name of Maven.                                                                            |
-| [`maven.report_id`](#mavenreport_id)                                        | `"xml"`, `"txt"`, `"html"`        | _(required)_              | Report id. Same as [`gradle.report_id`](#gradlereport_id).                                     |
-| [`maven.report_path`](#mavenreport_path)                                    | `string`                          | _(required)_              | Report file path.                                                                              |
+| Name                                                                        | Type                 | Default                   | Description                                                                                    |
+| --------------------------------------------------------------------------- | -------------------- | ------------------------- | ---------------------------------------------------------------------------------------------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#root_dir-option) | `string`             | -                         | A root directory.                                                                              |
+| [`cli`](#cli)                                                               | `hash`               | -                         | Settings for CLI execution.                                                                    |
+| [`cli.baseline`](#clibaseline)                                              | `string`             | -                         | Baseline file path.                                                                            |
+| [`cli.config`](#cliconfig)                                                  | `string`, `string[]` | `[]`                      | Config file paths.                                                                             |
+| [`cli.config-resource`](#cliconfig-resource)                                | `string`, `string[]` | `[]`                      | Config resource paths.                                                                         |
+| [`cli.disable-default-rulesets`](#clidisable-default-rulesets)              | `boolean`            | `false`                   | [`--disable-default-rulesets`](https://arturbosch.github.io/detekt/cli.html) option of detekt. |
+| [`cli.excludes`](#cliexcludes)                                              | `string`, `string[]` | `[]`                      | Exclude paths. (Globing patterns)                                                              |
+| [`cli.includes`](#cliincludes)                                              | `string`, `string[]` | `[]`                      | Include paths. (Globing patterns)                                                              |
+| [`cli.input`](#cliinput)                                                    | `string`, `string[]` | current working directory | Input paths.                                                                                   |
+| [`gradle`](#gradle)                                                         | `hash`               | -                         | Settings for Gradle execution.                                                                 |
+| [`gradle.task`](#gradletask)                                                | `string`             | _(required)_              | Task name of Gradle.                                                                           |
+| [`gradle.report_id`](#gradlereport_id)                                      | `"xml"`, `"txt"`     | _(required)_              | Report id.                                                                                     |
+| [`gradle.report_path`](#gradlereport_path)                                  | `string`             | _(required)_              | Report file path.                                                                              |
+| [`maven`](#maven)                                                           | `hash`               | -                         | Settings for Maven execution.                                                                  |
+| [`maven.goal`](#mavengoal)                                                  | `string`             | _(required)_              | Goal name of Maven.                                                                            |
+| [`maven.report_id`](#mavenreport_id)                                        | `"xml"`, `"txt"`     | _(required)_              | Report id. Same as [`gradle.report_id`](#gradlereport_id).                                     |
+| [`maven.report_path`](#mavenreport_path)                                    | `string`             | _(required)_              | Report file path.                                                                              |
 
 ### `cli`
 
@@ -172,8 +172,8 @@ linter:
   detekt:
     gradle:
       task: detekt
-      report_id: txt
-      report_path: build/reports/detekt.txt
+      report_id: xml
+      report_path: build/reports/detekt.xml
 ```
 
 For more details about the Gradle settings, see the [official documentation](https://arturbosch.github.io/detekt/groovydsl.html).
@@ -186,7 +186,7 @@ A name of the Gradle task to execute detekt.
 
 A reporter name of the output from the `task`.
 
-We recommend using the `xml` or `html` reporter for Sider integration.
+We recommend using the `xml` reporter for Sider integration.
 Because you can receive clearer messages than the `txt`.
 
 ### `gradle.report_path`
@@ -202,8 +202,8 @@ linter:
   detekt:
     maven: 
       goal: "antrun:run@detekt"
-      report_id: html
-      report_path: reports/detekt.html
+      report_id: xml
+      report_path: reports/detekt.xml
 ```
 
 For more details about the Maven settings, see the [official documentation](https://arturbosch.github.io/detekt/mavenanttask.html).
