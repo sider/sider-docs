@@ -11,7 +11,7 @@ hide_title: true
 
 | Supported Version | Language             | Website                              |
 | :---------------- | :------------------- | :----------------------------------- |
-| 1.5.1 [¹]         | Kotlin (Java 12.0.2) | https://github.com/arturbosch/detekt |
+| 1.6.0 [¹]         | Kotlin (Java 12.0.2) | https://github.com/arturbosch/detekt |
 
 ¹ You can use Gradle or Maven to install any version of detekt, but note that the version may not compatible with Sider.
 
