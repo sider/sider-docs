@@ -76,16 +76,16 @@ If you have set up the Maven integration for detekt, you can use it.
 linter:
   detekt:
     maven: 
-      phase: "antrun:run@detekt"
+      goal: "antrun:run@detekt"
       report_id: html
       report_path: reports/detekt.html
 ```
 
-Sider runs `mvn` in the repository with the specified `phase`, and use the output.
+Sider runs `mvn` in the repository with the specified `goal`, and use the output.
 Essentially, it executes the following command.
 
 ```shell
-$ mvn <phase>
+$ mvn <goal>
 ```
 
 ## Configuration
@@ -109,7 +109,7 @@ The configuration for detekt accepts one of the `cli`, `gradle`, and `maven` key
 | [`gradle.report_id`](#gradlereport_id)                                      | `"xml"`, `"txt"`, `"html"`        | _(required)_              | Report id.                                                                                     |
 | [`gradle.report_path`](#gradlereport_path)                                  | `string`                          | _(required)_              | Report file path.                                                                              |
 | [`maven`](#maven)                                                           | `hash`                            | -                         | Settings for Maven execution.                                                                  |
-| [`maven.phase`](#mavenphase)                                                | `string`                          | _(required)_              | Goal name of Maven.                                                                            |
+| [`maven.goal`](#mavengoal)                                                | `string`                          | _(required)_              | Goal name of Maven.                                                                            |
 | [`maven.report_id`](#mavenreport_id)                                        | `"xml"`, `"txt"`, `"html"`        | _(required)_              | Report id. Same as [`gradle.report_id`](#gradlereport_id).                                     |
 | [`maven.report_path`](#mavenreport_path)                                    | `string`                          | _(required)_              | Report file path.                                                                              |
 
@@ -201,20 +201,20 @@ For example:
 linter:
   detekt:
     maven: 
-      phase: "antrun:run@detekt"
+      goal: "antrun:run@detekt"
       report_id: html
       report_path: reports/detekt.html
 ```
 
 For more details about the Maven settings, see the [official documentation](https://arturbosch.github.io/detekt/mavenanttask.html).
 
-### `maven.phase`
+### `maven.goal`
 
-A name of the Maven phase to execute detekt.
+A name of the Maven goal to execute detekt.
 
 ### `maven.report_id`
 
-A reporter name of the output from the `phase`. Same as [`gradle.report_id`](#gradlereport_id).
+A reporter name of the output from the `goal`. Same as [`gradle.report_id`](#gradlereport_id).
 
 ### `maven.report_path`
 
