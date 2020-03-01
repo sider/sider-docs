@@ -937,10 +937,10 @@ remark-lint-heading-increment@^1.0.3:
     unist-util-generated "^1.1.0"
     unist-util-visit "^1.1.1"
 
-remark-lint-no-dead-urls@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/remark-lint-no-dead-urls/-/remark-lint-no-dead-urls-1.0.1.tgz#c7c2be0eeef6e25ed29d76fac23726fc957b76f3"
-  integrity sha512-g/WKrM971Lwa7LAilF9HeWzBMVCKJCmV+j8ZHz3kSRVVq/SXogzB9x/p8t5rz1KCUf37G4TPM9Oh5+7sSbRADw==
+remark-lint-no-dead-urls@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/remark-lint-no-dead-urls/-/remark-lint-no-dead-urls-1.0.2.tgz#707e96d296e2ce9269832a879853780cce282b57"
+  integrity sha512-YfTrZB3D5SMyoasvq9zMLXHnh/DD6/wOqpCEmzHRz/GL8Ps3SwvaTODGT48er7HoSUylX3t2BeCZw+ib3o1cDg==
   dependencies:
     check-links "^1.1.8"
     is-online "^8.2.1"

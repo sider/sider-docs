@@ -10,7 +10,7 @@
     "remark-lint": "^6.0.5",
     "remark-lint-first-heading-level": "^1.1.4",
     "remark-lint-heading-increment": "^1.0.3",
-    "remark-lint-no-dead-urls": "^1.0.1",
+    "remark-lint-no-dead-urls": "^1.0.2",
     "remark-lint-no-duplicate-headings": "^1.0.4",
     "remark-lint-no-empty-url": "^1.0.5",
     "remark-validate-links": "^9.2.0"
