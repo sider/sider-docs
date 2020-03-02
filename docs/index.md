@@ -58,6 +58,7 @@ This section has documents about analysis tools which Sider supports. We have an
   <summary>1 tool is available.</summary>
 
 - [ktlint](./tools/kotlin/ktlint.md)
+- [detekt](./tools/kotlin/detekt.md)
   </details>
 
 ### JavaScript and Flavors

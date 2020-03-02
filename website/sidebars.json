@@ -37,7 +37,8 @@
         "type": "subcategory",
         "label": "Kotlin",
         "ids": [
-          "tools/kotlin/ktlint"
+          "tools/kotlin/ktlint",
+          "tools/kotlin/detekt"
         ]
       },
       {
