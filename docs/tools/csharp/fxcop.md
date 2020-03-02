@@ -17,10 +17,10 @@ hide_title: true
 
 ## Limitations for beta version
 This is a beta release. We have several limitation for analysis.
-* We only support for projects with .NET Core.
+* We support only projects with .NET Core.
   * No support for mono, Unity, .NET Framework, and so on.
-* We only support projects using [MSBuild](https://docs.microsoft.com/en-us/visualstudio/msbuild/msbuild) as its build management system.
-  * When you use Visual Studio to develop, it's ok in almost case.
+* We support only projects using [MSBuild](https://docs.microsoft.com/en-us/visualstudio/msbuild/msbuild) as its build management system.
+  * When you use Visual Studio to develop, it's ok in almost cases.
   * No support for other build system.(e.g. [Cake](https://cakebuild.net/), [Nuke](https://nuke.build/), GNU Make, etc..) 
 * We ignore custom ruleset (*.ruleset) file.
 
@@ -37,7 +37,7 @@ Here are example settings for FxCop under `fxcop`:
 ```yaml
 linter:
   fxcop:
-     root_dir: src/
+    root_dir: src/
 ```
 
 | Name                                                                        | Type     | Default | Description       |
