@@ -186,13 +186,14 @@ On the other hand, when the `npm_install` option is `false`, Sider will skip the
 _Type:_ `string[]`
 
 This option allows you to ignore specific files. It helps to improve the analysis execution time and the analysis stability.
+The format of each `ignore` item follows [gitignore(5)](https://git-scm.com/docs/gitignore).
 
 In order to use this option, add it as a top-level in `sider.yml` like this:
 
 ```yaml
 ignore:
-  - ".pdf"
-  - ".mp4"
+  - "*.pdf"
+  - "*.mp4"
   - "images/**"
 ```
 
