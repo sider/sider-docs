@@ -30,7 +30,7 @@ This is a beta release. We have several limitations for analysis.
 
 To start using FxCop, enable it in [Repository Settings](../../getting-started/repository-settings.md).
 
-If you put your project configration file (\*.csproj) not in project root dir, you have to set `root_dir` parameter in `sider.yml` file.
+If you put your project configration file (`*.csproj`) not in project root dir, you have to set `root_dir` parameter in `sider.yml` file.
 
 ## Configuration via `sider.yml`
 
