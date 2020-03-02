@@ -50,13 +50,13 @@ You can customize your detekt analysis using `sider.yml`.
 | --------------------------------------------------------------------------- | -------------------- | ------------------------- | ---------------------------------------------------------------------------------------------- |
 | [`root_dir`](../../getting-started/custom-configuration.md#root_dir-option) | `string`             | -                         | A root directory.                                                                              |
 | `detekt`                                                                    | `hash`               | -                         | Settings for detekt execution.                                                                 |
-| [`detekt.baseline`](#detektbaseline)                                        | `string`             | -                         | Baseline file path.                                                                            |
-| [`detekt.config`](#detektconfig)                                            | `string`, `string[]` | `[]`                      | Config file paths.                                                                             |
-| [`detekt.config-resource`](#detektconfig-resource)                          | `string`, `string[]` | `[]`                      | Config resource paths.                                                                         |
-| [`detekt.disable-default-rulesets`](#detektdisable-default-rulesets)        | `boolean`            | `false`                   | [`--disable-default-rulesets`](https://arturbosch.github.io/detekt/cli.html) option of detekt. |
-| [`detekt.excludes`](#detektexcludes)                                        | `string`, `string[]` | `[]`                      | Exclude paths. (Globing patterns)                                                              |
-| [`detekt.includes`](#detektincludes)                                        | `string`, `string[]` | `[]`                      | Include paths. (Globing patterns)                                                              |
-| [`detekt.input`](#detektinput)                                              | `string`, `string[]` | current working directory | Input paths.                                                                                   |
+| [`baseline`](#baseline)                                        　　　　　　　　| `string`             | -                         | Baseline file path.                                                                            |
+| [`config`](#config)                                            　　　　　　　　| `string`, `string[]` | `[]`                      | Config file paths.                                                                             |
+| [`config-resource`](#config-resource)                          　　　　　　　　| `string`, `string[]` | `[]`                      | Config resource paths.                                                                         |
+| [`disable-default-rulesets`](#disable-default-rulesets)        　　　　　　　　| `boolean`            | `false`                   | [`--disable-default-rulesets`](https://arturbosch.github.io/detekt/cli.html) option of detekt. |
+| [`excludes`](#excludes)                                        　　　　　　　　| `string`, `string[]` | `[]`                      | Exclude paths. (Globing patterns)                                                              |
+| [`includes`](#includes)                                        　　　　　　　　| `string`, `string[]` | `[]`                      | Include paths. (Globing patterns)                                                              |
+| [`input`](#input)                                              　　　　　　　　| `string`, `string[]` | current working directory | Input paths.                                                                                   |
 
 For example:
 
@@ -79,30 +79,30 @@ linter:
 
 For more details about the options, see the [official documentation](https://arturbosch.github.io/detekt/cli.html).
 
-### `detekt.baseline`
+### `baseline`
 
 If a baseline xml file is passed in, only new code smells not in the baseline are printed in the console.
 
-### `detekt.config`
+### `config`
 
 Path to the config file (path/to/config.yml).
 
-### `detekt.config-resource`
+### `config-resource`
 
 Path to the config resource.
 
-### `detekt.disable-default-rulesets`
+### `disable-default-rulesets`
 
 Whether enable the `--disable-default-rulesets` option or not.
 
-### `detekt.excludes`
+### `excludes`
 
 Globing patterns describing paths to exclude from the analysis.
 
-### `detekt.includes`
+### `includes`
 
 Globing patterns describing paths to include in the analysis.
 
-### `detekt.input`
+### `input`
 
 Input paths to analyze.
