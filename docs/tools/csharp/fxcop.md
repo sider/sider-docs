@@ -24,7 +24,7 @@ This is a beta release. We have several limitations for analysis.
 - We support only projects using [MSBuild](https://docs.microsoft.com/en-us/visualstudio/msbuild/msbuild) as its build management system.
   - When you use Visual Studio to develop, it's ok in almost cases.
   - No support for other build systems.(e.g. [Cake](https://cakebuild.net/), [Nuke](https://nuke.build/), GNU Make, etc..)
-- We ignore custom ruleset (`\*.ruleset`) file.
+- We ignore custom ruleset (`*.ruleset`) file.
 
 ## Getting Started
 
