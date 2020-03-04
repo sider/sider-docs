@@ -7,11 +7,11 @@ hide_title: true
 
 # detekt
 
-> This is **BETA**. The behavior of this tool might change.
-
 | Supported Version | Language             | Website                              |
 | :---------------- | :------------------- | :----------------------------------- |
 | 1.6.0             | Kotlin (Java 12.0.2) | https://github.com/arturbosch/detekt |
+
+> This is **not published yet**.
 
 **detekt** is a linter which code smell analysis for your [Kotlin](https://kotlinlang.org) projects. 
 
