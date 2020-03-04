@@ -9,9 +9,9 @@ hide_title: true
 
 > This is **not published yet**.
 
-| Supported Version | Language | Website                                                                                                   |
-| :---------------- | :------- | :-------------------------------------------------------------------------------------------------------- |
-| 2.9.8             | C#       | [dotnet/roslyn-analyzers](https://github.com/dotnet/roslyn-analyzers#microsoftcodeanalysisfxcopanalyzers) |
+| Supported Version | Language | Website                                                                    |
+| :---------------- | :------- | :------------------------------------------------------------------------- |
+| 2.9.8             | C#       | https://docs.microsoft.com/en-us/visualstudio/code-quality/fxcop-analyzers |
 
 **FxCop** is a static analysis tool for [.NET platform](https://dotnet.microsoft.com/). It supports both of C# and Visual Basic .NET. However, Sider supports C# project only now.
 
