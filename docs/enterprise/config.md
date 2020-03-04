@@ -388,6 +388,7 @@ If you set the `s3_endpoint` paraemter, this parameter is required.
 #### `network_mode`
 
 `network_mode` is equivalent to the `--network` option of `docker run`.
+This is required because **runners** and Minio server must run on the same network and interact with each other.
 See [Network settings](https://docs.docker.com/engine/reference/run/#network-settings) for more details.
 
 #### `http_proxy`
