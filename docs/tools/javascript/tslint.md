@@ -1,11 +1,14 @@
 ---
 id: tslint
 title: TSLint
-sidebar_label: TSLint
+sidebar_label: TSLint (deprecated)
 hide_title: true
 ---
 
 # TSLint
+
+> **DEPRECATED**: TSLint has been deprecated and it recommends migrating to [TypeScript ESLint](https://github.com/typescript-eslint/typescript-eslint).
+> See the [discussion](https://github.com/palantir/tslint/issues/4534) for more details.
 
 | Supported Version         | Language   | Runtime         | Website                           |
 | ------------------------- | ---------- | --------------- | --------------------------------- |

@@ -26,12 +26,9 @@ This section has documents about how to use Sider.
 
 ## Analysis Tools
 
-This section has documents about analysis tools which Sider supports. We have analysis options to fit your project. Sider supports 20+ tools for 8 languages.
+This section has documents about analysis tools which Sider supports. We have analysis options to fit your project. Sider supports 30+ tools for 10+ languages.
 
 ### Ruby
-
-<details open>
-  <summary>6 tools are available.</summary>
 
 - [RuboCop](./tools/ruby/rubocop.md)
 - [Reek](./tools/ruby/reek.md)
@@ -40,137 +37,72 @@ This section has documents about analysis tools which Sider supports. We have an
 - [Brakeman](./tools/ruby/brakeman.md)
 - [HAML-Lint](./tools/ruby/haml-lint.md)
 
-</details>
-
 ### Java
-
-<details open>
-  <summary>3 tools are available.</summary>
 
 - [Checkstyle](./tools/java/checkstyle.md)
 - [PMD](./tools/java/pmd.md)
 - [JavaSee](./tools/java/javasee.md)
-  </details>
 
 ### Kotlin
 
-<details open>
-  <summary>1 tool is available.</summary>
-
 - [ktlint](./tools/kotlin/ktlint.md)
 - [detekt](./tools/kotlin/detekt.md)
-  </details>
 
 ### JavaScript and Flavors
 
-<details open>
-  <summary>5 tools are available.</summary>
-
 - [ESLint](./tools/javascript/eslint.md)
 - [JSHint](./tools/javascript/jshint.md)
-- [TSLint](./tools/javascript/tslint.md)
 - [TyScan](./tools/javascript/tyscan.md)
 - [CoffeeLint](./tools/javascript/coffeelint.md)
-
-</details>
+- [TSLint](./tools/javascript/tslint.md)
 
 ### CSS
-
-<details open>
-  <summary>2 tools are available.</summary>
 
 - [stylelint](./tools/css/stylelint.md)
 - [SCSS-Lint](./tools/css/scss-lint.md)
 
-</details>
-
 ### PHP
 
-<details open>
-  <summary>3 tools are available.</summary>
-
-- [Phinder](./tools/php/phinder.md)
-- [PHPMD](./tools/php/phpmd.md)
 - [PHP_CodeSniffer](./tools/php/codesniffer.md)
-
-</details>
+- [PHPMD](./tools/php/phpmd.md)
+- [Phinder](./tools/php/phinder.md)
 
 ### Python
 
-<details open>
-  <summary>1 tool is available.</summary>
-
 - [Flake8](./tools/python/flake8.md)
-
-</details>
 
 ### Swift
 
-<details open>
-  <summary>1 tool is available.</summary>
-
 - [SwiftLint](./tools/swift/swiftlint.md)
-
-</details>
 
 ### Go
 
-<details open>
-  <summary>3 tools are available.</summary>
-
+- [GolangCI-Lint](./tools/go/golangci-lint.md)
 - [go vet](./tools/go/govet.md)
 - [Golint](./tools/go/golint.md)
 - [Go Meta Linter](./tools/go/gometalinter.md)
-- [GolangCI-Lint](./tools/go/golangci-lint.md)
-
-</details>
 
 ### C/C++
-
-<details open>
-  <summary>1 tool is available.</summary>
 
 - [Cppcheck](./tools/cplusplus/cppcheck.md)
 - [cpplint](./tools/cplusplus/cpplint.md)
 
-</details>
-
-### C#
-
-<details open>
-  <summary>1 tool is available.</summary>
+### C
 
 - [FxCop](./tools/csharp/fxcop.md)
 
-</details>
-
 ### Shell script
-
-<details open>
-  <summary>1 tool is available.</summary>
 
 - [ShellCheck](./tools/shellscript/shellcheck.md)
 
-</details>
-
 ### Dockerfile
-
-<details open>
-  <summary>1 tool is available.</summary>
 
 - [hadolint](./tools/dockerfile/hadolint.md)
 
-</details>
-
 ### Others
-
-<details open>
-  <summary>2 tools are available.</summary>
 
 - [Goodcheck](./tools/others/goodcheck.md)
 - [Misspell](./tools/others/misspell.md)
-
-</details>
 
 ## Custom Rules
 

@@ -1,17 +1,17 @@
 ---
 id: gometalinter
 title: Go Meta Linter
-sidebar_label: Go Meta Linter
+sidebar_label: Go Meta Linter (deprecated)
 hide_title: true
 ---
 
 # Go Meta Linter
 
+> **DEPRECATED**: Sider will drop the support of Go Meta Linter by **April 30, 2020**. We recommend [GolangCI-Lint](golangci-lint.md) as an alternative.
+
 | Supported Version | Language  | Website                                    |
 | ----------------- | --------- | ------------------------------------------ |
 | 2.0.11            | Go 1.13.7 | https://github.com/alecthomas/gometalinter |
-
-> **DEPRECATED**: Sider will drop the support of Go Meta Linter by **April 30, 2020**. We recommend [GolangCI-Lint](golangci-lint.md) as an alternative.
 
 For more details, see the [readme](https://github.com/alecthomas/gometalinter#readme).
 

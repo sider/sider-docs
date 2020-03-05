@@ -1,19 +1,19 @@
 ---
 id: golangci-lint
 title: GolangCI-Lint
-sidebar_label: GolangCI-Lint
+sidebar_label: GolangCI-Lint (beta)
 hide_title: true
 ---
 
 # GolangCI-Lint
 
+> This is **BETA**. The behavior of this tool might change.
+
 | Supported Version | Language  | Website                                   |
 | ----------------- | --------- | ----------------------------------------- |
 | 1.23.6            | Go 1.13.7 | https://github.com/golangci/golangci-lint |
 
-> This is **not published yet**.
-
-GolangCI-Lint is a linter to aggregate multiple linters and a successor to [Go Meta Linter](gometalinter.md) which is deprecated.
+**GolangCI-Lint** is a linter to aggregate multiple linters and a successor to [Go Meta Linter](gometalinter.md) which is deprecated.
 
 ## Getting Started
 

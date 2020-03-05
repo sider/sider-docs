@@ -1,17 +1,17 @@
 ---
 id: cppcheck
 title: Cppcheck
-sidebar_label: Cppcheck
+sidebar_label: Cppcheck (beta)
 hide_title: true
 ---
 
 # Cppcheck
 
+> This is **BETA**. The behavior of this tool might change.
+
 | Supported Version | Language | Website                         |
 | :---------------- | :------- | :------------------------------ |
 | 1.90              | C/C++    | http://cppcheck.sourceforge.net |
-
-> This is **BETA**. The behavior of this tool might change.
 
 Cppcheck is a static analysis tool for C/C++ code. It aims to detect bugs, undefined behaviors, and dangerous coding constructs.
 

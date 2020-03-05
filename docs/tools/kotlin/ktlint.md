@@ -1,7 +1,7 @@
 ---
 id: ktlint
 title: ktlint
-sidebar_label: ktlint
+sidebar_label: ktlint (beta)
 hide_title: true
 ---
 
