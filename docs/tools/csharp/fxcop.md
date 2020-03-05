@@ -1,13 +1,13 @@
 ---
 id: fxcop
 title: FxCop
-sidebar_label: FxCop
+sidebar_label: FxCop (beta)
 hide_title: true
 ---
 
 # FxCop
 
-> This is **not published yet**.
+> This is **BETA**. The behavior of this tool might change.
 
 | Supported Version | Language | Website                                                                    |
 | :---------------- | :------- | :------------------------------------------------------------------------- |

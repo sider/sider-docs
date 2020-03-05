@@ -1,17 +1,17 @@
 ---
 id: cpplint
 title: cpplint
-sidebar_label: cpplint
+sidebar_label: cpplint (beta)
 hide_title: true
 ---
 
 # cpplint
 
+> This is **BETA**. The behavior of this tool might change.
+
 | Supported Version | Language | Website                            |
 | ----------------- | -------- | ---------------------------------- |
 | 1.4.4             | C/C++    | https://github.com/cpplint/cpplint |
-
-> This is **BETA**. The behavior of this tool might change.
 
 Cpplint is a static analysis tool to check C/C++ files for style issues.
 

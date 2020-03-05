@@ -1,17 +1,17 @@
 ---
 id: hadolint
 title: hadolint
-sidebar_label: hadolint
+sidebar_label: hadolint (beta)
 hide_title: true
 ---
 
 # hadolint
 
-| Supported Version | Language    | Website                             |
-| ----------------- | ----------- | ----------------------------------- |
-| 1.17.4            | Dockerfile  | https://github.com/hadolint/hadolint|
-
 > This is **BETA**. The behavior of this tool might change.
+
+| Supported Version | Language   | Website                              |
+| ----------------- | ---------- | ------------------------------------ |
+| 1.17.4            | Dockerfile | https://github.com/hadolint/hadolint |
 
 hadolint is a Dockerfile linter that helps you build best practice Docker images.
 
@@ -40,13 +40,13 @@ linter:
 
 You can use the following options to fine-tune hadolint to your project.
 
-| Name                                                                        | Type                 | Default      | Description                        |
-| --------------------------------------------------------------------------- | -------------------- | ------------ | ---------------------------------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#root_dir-option) | `string`             |      -       | A root directory.                  |
-| [`target`](#target)                                                         | `string`, `string[]` | `**/Dockerfile{,.*}` | File paths to analyze.  |
-| [`ignore`](#ignore)                                                         | `string`, `string[]` |      -       | `--ignore` option of hadolint.     |
-| [`trusted-registry`](#trusted-registry)                                     | `string`, `string[]` |      -       | `--trusted-registry` option of hadolint.     |
-| [`config`](#config)                                                         | `string`             |      -       | `--config` option of hadolint.     |
+| Name                                                                        | Type                 | Default              | Description                              |
+| --------------------------------------------------------------------------- | -------------------- | -------------------- | ---------------------------------------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#root_dir-option) | `string`             | -                    | A root directory.                        |
+| [`target`](#target)                                                         | `string`, `string[]` | `**/Dockerfile{,.*}` | File paths to analyze.                   |
+| [`ignore`](#ignore)                                                         | `string`, `string[]` | -                    | `--ignore` option of hadolint.           |
+| [`trusted-registry`](#trusted-registry)                                     | `string`, `string[]` | -                    | `--trusted-registry` option of hadolint. |
+| [`config`](#config)                                                         | `string`             | -                    | `--config` option of hadolint.           |
 
 ### `target`
 
@@ -71,6 +71,7 @@ linter:
       - "DL3002"
       - "DL3003"
 ```
+
 ### `trusted-registry`
 
 This option can warn you when images from untrusted repositories are being used in Dockerfiles. If you specify some trusted repositories, configure as follow:
@@ -81,6 +82,7 @@ linter:
     trusted-registry:
       - "my-company.com:500"
 ```
+
 ### `config`
 
 This option allow you to specify configuration file in yaml format like this [example](https://github.com/hadolint/hadolint#configure). If you specify path to configuration file, configure as follow:

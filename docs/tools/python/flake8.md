@@ -11,8 +11,6 @@ hide_title: true
 | ----------------- | ------------ | ----------------------- |
 | 3.7.9             | Python 3.7.4 | http://flake8.pycqa.org |
 
-> **DEPRECATED**: Sider will drop the support of Python 2, which will [be retired by April 2020](https://www.python.org/psf/press-release/pr20191220/). So, the `version` option of `sider.yml` and the detection of Python version via `.python-version` features are going to be unavailable near the future.
-
 ## Getting Started
 
 To start using Flake8, enable it in [Repository Settings](../../getting-started/repository-settings.md).
@@ -24,6 +22,8 @@ To customize Flake8, put a `.flake8` file in your repository.
 If your repository contains a `.python-version` file, the Python version is Sider will use the version specified in that file. You can also specify a Python version via `sider.yml`. The default is Python 3.
 
 The latest versions of Python 2 or Python 3 can be used.
+
+> **DEPRECATED**: Sider will drop the support of Python 2, which will [be retired by April 2020](https://www.python.org/psf/press-release/pr20191220/). So, the `version` option of `sider.yml` and the detection of Python version via `.python-version` features are going to be unavailable near the future.
 
 ## Default Configuration
 

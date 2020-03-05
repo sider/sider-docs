@@ -47,9 +47,9 @@
         "ids": [
           "tools/javascript/eslint",
           "tools/javascript/jshint",
-          "tools/javascript/tslint",
           "tools/javascript/tyscan",
-          "tools/javascript/coffeelint"
+          "tools/javascript/coffeelint",
+          "tools/javascript/tslint"
         ]
       },
       {
@@ -64,9 +64,9 @@
         "type": "subcategory",
         "label": "PHP",
         "ids": [
-          "tools/php/phinder",
+          "tools/php/codesniffer",
           "tools/php/phpmd",
-          "tools/php/codesniffer"
+          "tools/php/phinder"
         ]
       },
       {
@@ -87,10 +87,10 @@
         "type": "subcategory",
         "label": "Go",
         "ids": [
+          "tools/go/golangci-lint",
           "tools/go/govet",
           "tools/go/golint",
-          "tools/go/gometalinter",
-          "tools/go/golangci-lint"
+          "tools/go/gometalinter"
         ]
       },
       {
