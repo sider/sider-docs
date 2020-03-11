@@ -124,6 +124,13 @@
       },
       {
         "type": "subcategory",
+        "label": "Markdown",
+        "ids": [
+          "tools/markdown/remark-lint"
+        ]
+      },
+      {
+        "type": "subcategory",
         "label": "Others",
         "ids": [
           "tools/others/goodcheck",
