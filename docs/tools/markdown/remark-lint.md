@@ -9,9 +9,9 @@ hide_title: true
 
 > (Not yet released) This is **BETA**. The behavior of this tool might change.
 
-| Supported Version | Language | Runtime         | Website                                 |
-| :---------------- | :------- | :-------------- | :-------------------------------------- |
-| 6.0.4             | Markdown | Node.js 12.16.1 | https://github.com/remarkjs/remark-lint |
+| Supported Version         | Language | Runtime         | Website                                 |
+| :------------------------ | :------- | :-------------- | :-------------------------------------- |
+| 6.0.0+ (default to 6.0.5) | Markdown | Node.js 12.16.1 | https://github.com/remarkjs/remark-lint |
 
 **remark-lint** is a pluggable linter for Markdown. It includes many rules to enforce consistency and detect possible mistakes.
 
