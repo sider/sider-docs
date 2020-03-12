@@ -107,13 +107,27 @@ linter:
 
 ### `rc-path`
 
-TODO
+This option allows you to specify a [remark-lint configuration file](#configuration-files-for-remark-lint).
+
+For example:
+
+```yaml
+linter:
+  remark-lint:
+    rc-path: config/.my-remarklintrc.yml
+```
 
 ### `ignore-path`
 
-TODO
+This option allows you to specify a remark-lint ignore file. See also the [`ignore`](#ignore) option.
 
-See also the ["configuration files"](#configuration-files-for-remark-lint) section.
+For example:
+
+```yaml
+linter:
+  remark-lint:
+    ignore-path: .gitignore
+```
 
 ### `use`
 
