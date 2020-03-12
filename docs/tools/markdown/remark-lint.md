@@ -51,11 +51,11 @@ linter:
   remark_lint:
     target: docs/
     ext: md,markdown
-    rc-path: my-remarkrc.yml
-    ignore-path: my-remarkignore
+    rc-path: config/.remarkrc
+    ignore-path: config/.remarkignore
     use:
-      - plugin1
-      - plugin2
+      - remark-lint-file-extension
+      - remark-lint-no-heading-punctuation
 ```
 
 You can use the following options to fine-tune remark-lint to your project:
@@ -83,46 +83,45 @@ linter:
   remark-lint:
     target:
       - docs/
-      - manual/
+      - manual/**/doc-*.md
 ```
-
-See also the [`ext`](#ext) option.
 
 ### `ext`
 
-This option allows you to specify file extensions to analyze. In many cases, you may use it along with the [`target`](#target) option.
+This option allows you to specify file extensions to analyze, and the value should be comma-separated.
+By default, remark-lint tries to find all markdown files as possible, so you may not usually need to use this option.
 
-For example:
+For example, if you want to analysis only `*.md` and `*.mdown` files, you need to set the option as follow:
 
 ```yaml
 linter:
   remark-lint:
-    target: docs/
     ext: md,mdown
 ```
 
 ### `rc-path`
 
-This option allows you to specify a [remark-lint configuration file](#configuration-files-for-remark-lint).
+This option allows you to specify a [`.remarkrc` file](#configuration-files-for-remark-lint).
 
 For example:
 
 ```yaml
 linter:
   remark-lint:
-    rc-path: config/.my-remarklintrc.yml
+    rc-path: config/.remarkrc
 ```
 
 ### `ignore-path`
 
-This option allows you to specify a [remark-lint ignore file](https://github.com/unifiedjs/unified-engine/blob/master/doc/ignore.md).
+This option allows you to specify a [`.remarkignore` file](https://github.com/unifiedjs/unified-engine/blob/master/doc/ignore.md).
+By default, remark-lint automatically finds a ignore file in a project, so you may not usually need to use this option.
 
 For example:
 
 ```yaml
 linter:
   remark-lint:
-    ignore-path: .gitignore
+    ignore-path: config/.remarkignore
 ```
 
 ### `use`
@@ -151,5 +150,5 @@ plugins:
   - ["remark-lint-list-item-indent", false]
 ```
 
-Note that remark-lint rules are implemented as a remark plugin.
-If you want to configure presets or rules for remark-lint, you need to specify them to `plugins` as the example above.
+Note that all the remark-lint presets and rules are implemented as a [remark](https://remark.js.org) plugin.
+If you want to configure some presets or rules for remark-lint, you need to specify them to `plugins` as the example above.
