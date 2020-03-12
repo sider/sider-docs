@@ -19,8 +19,7 @@ hide_title: true
 
 To start using remark-lint, enable it in your [repository settings](../../getting-started/repository-settings.md).
 
-Sider enables some useful rules by default, so you can get started out of the box.
-For more details about the default rules, see the [remark-preset-lint-sider](https://github.com/sider/remark-preset-lint-sider) package.
+Sider enables [some useful rules](https://github.com/sider/remark-preset-lint-sider) by default, so you can get started out of the box.
 
 In addition, you can use some rules or plugins as you want. If doing so, you need to install remark-lint on your repository via npm, for example:
 
