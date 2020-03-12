@@ -135,8 +135,8 @@ For example:
 linter:
   remark_lint:
     use:
-      - "remark-preset-lint-recommended"
-      - "remark-lint-list-item-indent:false"
+      - remark-lint-file-extension
+      - remark-lint-no-heading-punctuation
 ```
 
 ## Configuration files for remark-lint
