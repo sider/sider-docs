@@ -56,8 +56,6 @@ linter:
     use:
       - plugin1
       - plugin2
-    config: false
-    ignore: false
 ```
 
 You can use the following options to fine-tune remark-lint to your project:
@@ -71,8 +69,6 @@ You can use the following options to fine-tune remark-lint to your project:
 | [`rc-path`](#rc-path)                                                             | `string`             | -       | `--rc-path` option of remark-lint.     |
 | [`ignore-path`](#ignore-path)                                                     | `string`             | -       | `--ignore-path` option of remark-lint. |
 | [`use`](#use)                                                                     | `string`, `string[]` | -       | `--use` option of remark-lint.         |
-| [`config`](#config)                                                               | `boolean`            | `true`  | `--config` option of remark-lint.      |
-| [`ignore`](#ignore)                                                               | `boolean`            | `true`  | `--ignore` option of remark-lint.      |
 
 For more details about the CLI options of remark-lint, see the [document](https://github.com/remarkjs/remark/tree/master/packages/remark-cli#cli).
 
@@ -119,7 +115,7 @@ linter:
 
 ### `ignore-path`
 
-This option allows you to specify a remark-lint ignore file. See also the [`ignore`](#ignore) option.
+This option allows you to specify a [remark-lint ignore file](https://github.com/unifiedjs/unified-engine/blob/master/doc/ignore.md).
 
 For example:
 
@@ -131,7 +127,7 @@ linter:
 
 ### `use`
 
-This option allows you to specify plugins.
+This option allows you to specify plugins. See also the ["configuration files"](#configuration-files-for-remark-lint) section.
 
 For example:
 
@@ -142,16 +138,6 @@ linter:
       - "remark-preset-lint-recommended"
       - "remark-lint-list-item-indent:false"
 ```
-
-See also the ["configuration files"](#configuration-files-for-remark-lint) section.
-
-### `config`
-
-This option allows you to specify whether to use [configuration files](#configuration-files-for-remark-lint).
-
-### `ignore`
-
-This option allows you to specify whether to use [`.remarkignore` files](https://github.com/unifiedjs/unified-engine/blob/master/doc/ignore.md).
 
 ## Configuration files for remark-lint
 
