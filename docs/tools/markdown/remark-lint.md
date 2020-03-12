@@ -54,9 +54,6 @@ linter:
     ext: md,markdown
     rc-path: my-remarkrc.yml
     ignore-path: my-remarkignore
-    setting:
-      - "alpha:true"
-      - "num:1"
     use:
       - plugin1
       - plugin2
@@ -74,7 +71,6 @@ You can use the following options to fine-tune remark-lint to your project:
 | [`ext`](#ext)                                                                     | `string`             | -       | `--ext` option of remark-lint.         |
 | [`rc-path`](#rc-path)                                                             | `string`             | -       | `--rc-path` option of remark-lint.     |
 | [`ignore-path`](#ignore-path)                                                     | `string`             | -       | `--ignore-path` option of remark-lint. |
-| [`setting`](#setting)                                                             | `string`, `string[]` | -       | `--setting` option of remark-lint.     |
 | [`use`](#use)                                                                     | `string`, `string[]` | -       | `--use` option of remark-lint.         |
 | [`config`](#config)                                                               | `boolean`            | `true`  | `--config` option of remark-lint.      |
 | [`ignore`](#ignore)                                                               | `boolean`            | `true`  | `--ignore` option of remark-lint.      |
@@ -118,25 +114,11 @@ TODO
 
 TODO
 
-### `setting`
-
-This option allows you to configure a parser and compiler for remark-lint.
-
-For example:
-
-```yaml
-linter:
-  remark_lint:
-    setting:
-      - "position:false"
-      - "echo-foxtrot:-2"
-```
-
 See also the ["configuration files"](#configuration-files-for-remark-lint) section.
 
 ### `use`
 
-This option allows you to specify plugins. You can use the same syntax as the [`setting`](#setting) option.
+This option allows you to specify plugins.
 
 For example:
 
@@ -162,21 +144,13 @@ This option allows you to specify whether to use [`.remarkignore` files](https:/
 
 remark-lint has [own mechanism to use configuration files](https://github.com/unifiedjs/unified-engine/blob/master/doc/configure.md) such as `.remarkrc`, `.remarkrc.yml`, or `package.json`.
 
-For example, you can configure plugins and settings via the following `.remarkrc.yml` file:
+For example, you can configure plugins via the following `.remarkrc.yml` file:
 
 ```yaml
 plugins:
   - remark-preset-lint-recommended
   - ["remark-lint-list-item-indent", false]
-
-settings:
-  verbose: true
-  quote: "'"
-  quoteSmart: true
-  preferUnquoted: true
 ```
-
-In most cases, using these files may be easier than using the [`setting`](#setting) and [`use`](#use) options.
 
 Note that remark-lint rules are implemented as a remark plugin.
 If you want to configure presets or rules for remark-lint, you need to specify them to `plugins` as the example above.
