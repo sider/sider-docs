@@ -24,7 +24,7 @@ Sider enables some useful rules by default, so you can get started out of the bo
 In addition, you can use some rules or plugins as you want. If doing so, you need to install remark-lint on your repository via npm, for example:
 
 ```shell-session
-$ npm install --save-dev remark-cli remark-preset-lint-recommended
+$ npm install --save-dev remark-cli remark-lint remark-preset-lint-recommended
 ```
 
 then, configure remark-lint via a configuration file like `package.json`, for example:
@@ -50,7 +50,7 @@ Here is a configuration example via [`sider.yml`](../../getting-started/custom-c
 linter:
   remark_lint:
     target: docs/
-    ext: ["md", "markdown"]
+    ext: md,markdown
     rc-path: my-remarkrc.yml
     ignore-path: my-remarkignore
     setting:
@@ -65,18 +65,18 @@ linter:
 
 You can use the following options to fine-tune remark-lint to your project:
 
-| Name                                                                              | Type                 | Default              | Description                            |
-| --------------------------------------------------------------------------------- | -------------------- | -------------------- | -------------------------------------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#root_dir-option)       | `string`             | -                    | A root directory.                      |
-| [`npm_install`](../../getting-started/custom-configuration.md#npm_install-option) | `boolean`, `string`  | -                    | A behavior of npm installation.        |
-| [`target`](#target)                                                               | `string`, `string[]` | `.`                  | Files or directories to analyze.       |
-| [`ext`](#ext)                                                                     | `string`, `string[]` | `["md", "markdown"]` | `--ext` option of remark-lint.         |
-| [`rc-path`](#rc-path)                                                             | `string`             | -                    | `--rc-path` option of remark-lint.     |
-| [`ignore-path`](#ignore-path)                                                     | `string`             | -                    | `--ignore-path` option of remark-lint. |
-| [`setting`](#setting)                                                             | `string`, `string[]` | -                    | `--setting` option of remark-lint.     |
-| [`use`](#use)                                                                     | `string`, `string[]` | -                    | `--use` option of remark-lint.         |
-| [`config`](#config)                                                               | `boolean`            | `true`               | `--config` option of remark-lint.      |
-| [`ignore`](#ignore)                                                               | `boolean`            | `true`               | `--ignore` option of remark-lint.      |
+| Name                                                                              | Type                 | Default | Description                            |
+| --------------------------------------------------------------------------------- | -------------------- | ------- | -------------------------------------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#root_dir-option)       | `string`             | -       | A root directory.                      |
+| [`npm_install`](../../getting-started/custom-configuration.md#npm_install-option) | `boolean`, `string`  | -       | A behavior of npm installation.        |
+| [`target`](#target)                                                               | `string`, `string[]` | `.`     | Files or directories to analyze.       |
+| [`ext`](#ext)                                                                     | `string`             | -       | `--ext` option of remark-lint.         |
+| [`rc-path`](#rc-path)                                                             | `string`             | -       | `--rc-path` option of remark-lint.     |
+| [`ignore-path`](#ignore-path)                                                     | `string`             | -       | `--ignore-path` option of remark-lint. |
+| [`setting`](#setting)                                                             | `string`, `string[]` | -       | `--setting` option of remark-lint.     |
+| [`use`](#use)                                                                     | `string`, `string[]` | -       | `--use` option of remark-lint.         |
+| [`config`](#config)                                                               | `boolean`            | `true`  | `--config` option of remark-lint.      |
+| [`ignore`](#ignore)                                                               | `boolean`            | `true`  | `--ignore` option of remark-lint.      |
 
 For more details about the CLI options of remark-lint, see the [document](https://github.com/remarkjs/remark/tree/master/packages/remark-cli#cli).
 
@@ -91,7 +91,7 @@ linter:
   remark-lint:
     target:
       - docs/
-      - **/manual/**
+      - manual/
 ```
 
 See also the [`ext`](#ext) option.
@@ -106,7 +106,7 @@ For example:
 linter:
   remark-lint:
     target: docs/
-    ext: ["md", "mkdown", "MD"]
+    ext: md,mdown
 ```
 
 ### `rc-path`
