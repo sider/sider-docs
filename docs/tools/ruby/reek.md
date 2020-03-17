@@ -11,9 +11,12 @@ hide_title: true
 | ------------------------- | ---------- | --------------------------------- |
 | 4.4.0+ (default to 5.6.0) | Ruby 2.6.5 | https://github.com/troessner/reek |
 
+**Reek** is a tool to detect any "Code Smells" in Ruby classes, modules and methods.
+See the [document](https://github.com/troessner/reek#readme) for more details.
+
 ## Configuration via `sider.yml`
 
-Here are some example settings for Reek in `sider.yml`, under `reek`:
+Here is an example configuration for Reek via `sider.yml`:
 
 ```yaml
 linter:
@@ -21,116 +24,33 @@ linter:
     gems:
       - name: "reek"
         version: "5.2.0"
+    target:
+      - lib/
+      - test/
+    config: config/.reek.yml
 ```
 
-### Options
+You can use the following options to make analysis fitter for your project.
 
-| Name                                                                        | Type                 | Default | Description       |
-| --------------------------------------------------------------------------- | -------------------- | ------- | ----------------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#root_dir-option) | `string`             | -       | A root directory. |
-| [`gems`](../../getting-started/custom-configuration.md#gems-option)         | `string[]`, `hash[]` | -       | Gems to install.  |
+| Name                                                                        | Type                 | Default | Description                      |
+| --------------------------------------------------------------------------- | -------------------- | ------- | -------------------------------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#root_dir-option) | `string`             | -       | A root directory.                |
+| [`gems`](../../getting-started/custom-configuration.md#gems-option)         | `string[]`, `hash[]` | -       | Gems to install.                 |
+| [`target`](#target)                                                         | `string`, `string[]` | `.`     | Files or directories to analyze. |
+| [`config`](#config)                                                         | `string`             | -       | `--config` option of Reek.       |
+
+### `target`
+
+This option allows you to specify files or directories to analyze.
+
+### `config`
+
+This option allows you to specify your configuration file.
+If omitted, Reek tries to automatically find a configuration file in your repository.
 
 ## Default Configuration
 
 When there are no configuration files in your repository, Sider uses the following configuration by default:
 
-```yaml
----
-detectors:
-  ### enabled rules
-  TooManyInstanceVariables:
-    enabled: true
-    exclude: []
-    max_instance_variables: 50
-  TooManyMethods:
-    enabled: true
-    exclude: []
-    max_methods: 30
-  TooManyStatements:
-    enabled: true
-    exclude: []
-    max_statements: 80
-  TooManyConstants:
-    enabled: true
-    exclude: []
-    max_constants: 50
-  LongParameterList:
-    enabled: true
-    exclude: []
-    max_params: 8
-  LongYieldList:
-    enabled: true
-    exclude: []
-    max_params: 8
-  NestedIterators:
-    enabled: true
-    exclude: []
-    max_allowed_nesting: 5
-    ignore_iterators:
-      - tap
-  ModuleInitialize:
-    enabled: true
-    exclude: []
-  SubclassedFromCoreClass:
-    enabled: true
-    exclude: []
-
-  ### disabled rules
-  Attribute:
-    enabled: false
-    exclude: []
-  BooleanParameter:
-    enabled: false
-    exclude: []
-  ClassVariable:
-    enabled: false
-    exclude: []
-  ControlParameter:
-    enabled: false
-    exclude: []
-  DataClump:
-    enabled: false
-    exclude: []
-  DuplicateMethodCall:
-    enabled: false
-    exclude: []
-  FeatureEnvy:
-    enabled: false
-    exclude: []
-  InstanceVariableAssumption:
-    enabled: false
-    exclude: []
-  IrresponsibleModule:
-    enabled: false
-    exclude: []
-  ManualDispatch:
-    enabled: false
-    exclude: []
-  NilCheck:
-    enabled: false
-    exclude: []
-  MissingSafeMethod:
-    enabled: false
-    exclude: []
-  RepeatedConditional:
-    enabled: false
-    exclude: []
-  UncommunicativeMethodName:
-    enabled: false
-    exclude: []
-  UncommunicativeModuleName:
-    enabled: false
-    exclude: []
-  UncommunicativeParameterName:
-    enabled: false
-    exclude: []
-  UncommunicativeVariableName:
-    enabled: false
-    exclude: []
-  UnusedParameters:
-    enabled: false
-    exclude: []
-  UtilityFunction:
-    enabled: false
-    exclude: []
-```
+- [For the Reek v4](https://github.com/sider/runners/blob/master/images/reek/v4.reek.yml)
+- [For the Reek v5](https://github.com/sider/runners/blob/master/images/reek/v5.reek.yml)
