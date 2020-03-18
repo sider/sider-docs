@@ -51,25 +51,19 @@ linter:
     standard: phpcs.xml
     extensions: php,inc,lib
     encoding: utf-8
-    ignore: app/Vendor
+    ignore: app/vendor
 ```
 
 You can use several options to fine-tune PHP_CodeSniffer to your project:
 
-| Name                                                                        | Type                | Default | Description                                             |
-| --------------------------------------------------------------------------- | ------------------- | ------- | ------------------------------------------------------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#root_dir-option) | `string`            | -       | A root directory.                                       |
-| [`version`](#version)                                                       | `string`, `integer` | `3`     | Declare PHP_CodeSniffer version explicitly.             |
-| [`dir`](#dir)                                                               | `string`            | `.`     | Set targets to analyze.                                 |
-| [`standard`](#standard)                                                     | `string`            | `PSR2`  | Set coding standard or your config file when analyzing. |
-| [`extensions`](#extensions)                                                 | `string`            | `php`   | Set extensions to analyze.                              |
-| [`encoding`](#encoding)                                                     | `string`            | -       | Set file encoding.                                      |
-| [`ignore`](#ignore)                                                         | `string`            | -       | Excludes files or directories from analysis.            |
-
-### `version`
-
-This option controls which major version of PHP_CodeSniffer is used.
-Sider has stopped supporting v2 of PHP_CodeSniffer. Therfore, if you set `2` in this option, Sider will execute v3.
+| Name                                                                        | Type     | Default | Description                                             |
+| --------------------------------------------------------------------------- | -------- | ------- | ------------------------------------------------------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#root_dir-option) | `string` | -       | A root directory.                                       |
+| [`dir`](#dir)                                                               | `string` | `.`     | Set targets to analyze.                                 |
+| [`standard`](#standard)                                                     | `string` | `PSR2`  | Set coding standard or your config file when analyzing. |
+| [`extensions`](#extensions)                                                 | `string` | `php`   | Set extensions to analyze.                              |
+| [`encoding`](#encoding)                                                     | `string` | -       | Set file encoding.                                      |
+| [`ignore`](#ignore)                                                         | `string` | -       | Excludes files or directories from analysis.            |
 
 ### `dir`
 
