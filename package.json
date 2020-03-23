@@ -23,9 +23,7 @@
       "lint-heading-increment",
       [
         "lint-no-dead-urls",
-        {
-          "skipLocalhost": true
-        }
+        false
       ],
       "lint-no-duplicate-headings",
       "lint-no-empty-url",
