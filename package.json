@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "lint": "remark . --frail --quiet"
+    "lint": "remark . --frail --quiet",
+    "lint:no-dead-urls": "npm run lint -- --use lint-no-dead-urls"
   },
   "devDependencies": {
     "@arkweid/lefthook": "^0.7.1",
