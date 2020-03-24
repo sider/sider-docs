@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "lint": "remark . --frail --quiet"
+    "lint": "remark . --quiet"
   },
   "devDependencies": {
     "@arkweid/lefthook": "^0.7.1",
@@ -14,22 +14,5 @@
     "remark-lint-no-duplicate-headings": "^1.0.4",
     "remark-lint-no-empty-url": "^1.0.5",
     "remark-validate-links": "^9.2.0"
-  },
-  "remarkConfig": {
-    "plugins": [
-      "frontmatter",
-      "lint",
-      "lint-first-heading-level",
-      "lint-heading-increment",
-      [
-        "lint-no-dead-urls",
-        {
-          "skipLocalhost": true
-        }
-      ],
-      "lint-no-duplicate-headings",
-      "lint-no-empty-url",
-      "validate-links"
-    ]
   }
 }
