@@ -1,0 +1,8 @@
+plugins:
+  - remark-frontmatter
+  - [remark-lint-first-heading-level, [error]]
+  - [remark-lint-heading-increment, [error]]
+  - [remark-lint-no-dead-urls, { skipLocalhost: true }]
+  - [remark-lint-no-duplicate-headings, [error]]
+  - [remark-lint-no-empty-url, [error]]
+  - [remark-validate-links, [error]]
