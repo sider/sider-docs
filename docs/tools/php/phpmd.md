@@ -11,69 +11,28 @@ hide_title: true
 | :---------------- | :-------- | :---------------- |
 | 2.8.2             | PHP 7.4.3 | https://phpmd.org |
 
+**PHPMD** is an analysis tool focused on detecting code smells and possible errors in source code.
+
 ## Getting Started
 
 To start using PHPMD, enable it in [Repository Settings](../../getting-started/repository-settings.md).
-
 You can use `sider.yml` to configure PHPMD.
-
-## Using Your Configuration File
-
-If you have your own `ruleset.xml` for your project, you can add it under the `rule` option in `sider.yml`.
-
-```yaml
-linter:
-  phpmd:
-    rule: ruleset.xml
-```
 
 ## Performance Issues
 
-PHPMD does not run fast, and sometimes analysis sessions time out.
+PHPMD sometimes raises analysis timeout with a larger codebase.
 
-To mitigate this, Sider deletes files that are not changed in the pull request. This is done automatically done, and cannot be disabled.
+To mitigate this, Sider deletes files that are not changed in the pull request.
+This behavior is automatically done and cannot be disabled.
 
-If it still times out, you can limit the target of PHPMD analysis by using the `target` option:
+If PHPMD still raises timeout, you can reduce target files of PHPMD analysis by using the [`target`](#target) option:
 
 ```yaml
 linter:
   phpmd:
     target:
       - index.php
-      - wp-content
-```
-
-## Default Configuration
-
-If you leave the `rule` option undefined in `sider.yml`, Sider runs PHPMD with the following configuration to default:
-
-```xml
-<?xml version="1.0"?>
-<ruleset name="Sider Recommended ruleset"
-         xmlns="http://pmd.sf.net/ruleset/1.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://pmd.sf.net/ruleset/1.0.0 http://pmd.sf.net/ruleset_xml_schema.xsd"
-         xsi:noNamespaceSchemaLocation="http://pmd.sf.net/ruleset_xml_schema.xsd">
-  <description>
-    This ruleset is recommended by Sider.
-    It contains only generic rules in all projects.
-  </description>
-
-  <rule ref="rulesets/codesize.xml">
-    <exclude name="NPathComplexity" />
-  </rule>
-  <rule ref="rulesets/controversial.xml">
-    <exclude name="CamelCaseClassName" />
-    <exclude name="CamelCasePropertyName" />
-    <exclude name="CamelCaseMethodName" />
-    <exclude name="CamelCaseParameterName" />
-    <exclude name="CamelCaseVariableName" />
-  </rule>
-  <rule ref="rulesets/design.xml" />
-  <rule ref="rulesets/unusedcode.xml">
-    <exclude name="UnusedFormalParameter" />
-  </rule>
-</ruleset>
+      - wp-content/
 ```
 
 ## Configuration via `sider.yml`
@@ -102,7 +61,7 @@ You can use several options to fine-tune PHPMD to your project:
 | --------------------------------------------------------------------------- | -------------------- | ------- | ------------------------------------------------------- |
 | [`root_dir`](../../getting-started/custom-configuration.md#root_dir-option) | `string`             | -       | A root directory.                                       |
 | [`target`](#target)                                                         | `string`, `string[]` | `.`     | Set target files or directories to analyze.             |
-| [`rule`](#rule)                                                             | `string`             | -       | Specify coding rules or your own rule set file.         |
+| [`rule`](#rule)                                                             | `string`             | -       | Specify rulesets or your own ruleset file.              |
 | [`minimumpriority`](#minimumpriority)                                       | `integer`            | -       | Set the priority threshold which PHPMD ignores.         |
 | [`suffixes`](#suffixes)                                                     | `string`             | `php`   | Set extensions of filenames for analysis.               |
 | [`exclude`](#exclude)                                                       | `string`             | -       | Set files or directories to exclude from analysis.      |
@@ -111,13 +70,19 @@ You can use several options to fine-tune PHPMD to your project:
 
 ### `target`
 
-This option controls target paths to inspect. This is an optional setting that you do not need to specify if you don't have any performance issues.
+This option controls target paths to inspect. This is an optional setting that you do not need to specify if you don't have any [performance issues](#performance-issues).
 
 ### `rule`
 
-This option controls `--rule` command line option that is passed to `phpmd`. You can specify a comma-separated list of rule names, or an array of rule names.
+This option controls ruleset(s) that is passed to `phpmd`. You can specify a comma-separated list of ruleset names:
 
-The valid rule names are:
+```yaml
+linter:
+  phpmd:
+    rule: cleancode,design,unusedcode
+```
+
+The valid names are:
 
 - `cleancode`
 - `codesize`
@@ -126,13 +91,15 @@ The valid rule names are:
 - `naming`
 - `unusedcode`
 
-You can also specify a rule set file name:
+You can also specify a ruleset file:
 
 ```yaml
 linter:
   phpmd:
-    rule: ruleset.xml
+    rule: path/to/your-ruleset.xml
 ```
+
+If you omit this option, Sider analyzes by using the [default configuration](https://github.com/sider/runners/blob/master/images/phpmd/sider_config.xml).
 
 For more information about PHPMD rulesets, see the [PHPMD rule documentation](https://phpmd.org/rules/index.html).
 
@@ -142,8 +109,7 @@ This option controls the rule priority threshold. Rules below the priority you d
 
 ### `suffixes`
 
-This option controls valid filename extensions.
-Use a comma-separated list to inspect multiple file extensions, e.g. `php,phtml`.
+This option controls valid file extensions. Use a comma-separated list to inspect multiple file extensions, e.g. `php,phtml`.
 
 ### `exclude`
 
