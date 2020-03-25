@@ -11,7 +11,7 @@ hide_title: true
 
 | Supported Version | Language | Website                            |
 | ----------------- | -------- | ---------------------------------- |
-| 1.4.4             | C/C++    | https://github.com/cpplint/cpplint |
+| 1.4.5             | C/C++    | https://github.com/cpplint/cpplint |
 
 Cpplint is a static analysis tool to check C/C++ files for style issues.
 

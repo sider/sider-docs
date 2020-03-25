@@ -11,9 +11,9 @@ hide_title: true
 
 | Supported Version | Language   | Website                              |
 | ----------------- | ---------- | ------------------------------------ |
-| 1.17.4            | Dockerfile | https://github.com/hadolint/hadolint |
+| 1.17.5            | Dockerfile | https://github.com/hadolint/hadolint |
 
-hadolint is a Dockerfile linter that helps you build best practice Docker images.
+hadolint is a [Dockerfile](https://docs.docker.com/engine/reference/builder) linter that helps you build best practice Docker images.
 
 ## Getting Started
 

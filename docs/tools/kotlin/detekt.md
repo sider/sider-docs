@@ -11,7 +11,7 @@ hide_title: true
 
 | Supported Version | Language             | Website                              |
 | :---------------- | :------------------- | :----------------------------------- |
-| 1.6.0             | Kotlin (Java 12.0.2) | https://github.com/arturbosch/detekt |
+| 1.7.0             | Kotlin (Java 12.0.2) | https://github.com/arturbosch/detekt |
 
 **detekt** is a linter which code smell analysis for your [Kotlin](https://kotlinlang.org) projects.
 
