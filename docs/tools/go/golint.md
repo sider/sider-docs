@@ -11,7 +11,7 @@ hide_title: true
 
 | Language  | Website                        |
 | --------- | ------------------------------ |
-| Go 1.14.0 | https://github.com/golang/lint |
+| Go 1.14.1 | https://github.com/golang/lint |
 
 ## Getting Started
 
