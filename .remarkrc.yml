@@ -1,8 +1,12 @@
 plugins:
-  - remark-frontmatter
-  - [remark-lint-first-heading-level, [error]]
-  - [remark-lint-heading-increment, [error]]
-  - [remark-lint-no-dead-urls, { skipLocalhost: true }]
-  - [remark-lint-no-duplicate-headings, [error]]
-  - [remark-lint-no-empty-url, [error]]
-  - [remark-validate-links, [error]]
+  remark-frontmatter: true
+
+  # Lint rules
+  remark-lint-first-heading-level: ["error"]
+  remark-lint-heading-increment: ["error"]
+  remark-lint-no-dead-urls: ["warn", { skipLocalhost: true }]
+  remark-lint-no-duplicate-headings: ["error"]
+  remark-lint-no-empty-url: ["error"]
+
+  # NOTE: This is *not* a lint rule and does not have a severity.
+  remark-validate-links: { root: ".", repository: "sider/sider-docs" }
