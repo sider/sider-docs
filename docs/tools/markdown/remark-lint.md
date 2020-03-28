@@ -80,7 +80,7 @@ For example:
 
 ```yaml
 linter:
-  remark-lint:
+  remark_lint:
     target:
       - docs/
       - manual/**/doc-*.md
@@ -95,7 +95,7 @@ For example, if you want to analysis only `*.md` and `*.mdown` files, you need t
 
 ```yaml
 linter:
-  remark-lint:
+  remark_lint:
     ext: md,mdown
 ```
 
@@ -107,7 +107,7 @@ For example:
 
 ```yaml
 linter:
-  remark-lint:
+  remark_lint:
     rc-path: config/.remarkrc
 ```
 
@@ -120,7 +120,7 @@ For example:
 
 ```yaml
 linter:
-  remark-lint:
+  remark_lint:
     ignore-path: config/.remarkignore
 ```
 
