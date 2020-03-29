@@ -959,10 +959,10 @@ remark-lint-no-duplicate-headings@^1.0.5:
     unist-util-stringify-position "^2.0.0"
     unist-util-visit "^1.1.1"
 
-remark-lint-no-empty-url@^1.0.5:
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/remark-lint-no-empty-url/-/remark-lint-no-empty-url-1.0.5.tgz#d7cf0a05dd1acfbdb9ed566e33af37b25989ed7f"
-  integrity sha512-oaOMvWkyOTdvjZzQ6FVTnw4ufrEYjNBWFzWY0hxSg1AjCvIBegxxwQmcJHe97pr8vwPWs9IEm9JlmFLkrpfhTw==
+remark-lint-no-empty-url@^1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/remark-lint-no-empty-url/-/remark-lint-no-empty-url-1.0.6.tgz#8ce8357269775d9f65ffb71a329bff15dfe120c0"
+  integrity sha512-a8ixUAxLecMZ991cmNU9TFW6uUhVd+b7g6ZM/hulfyHd2egGaEgYigOEwmXjBFVGUnbpGLTZvNA4M2NlE1nZng==
   dependencies:
     unified-lint-rule "^1.0.0"
     unist-util-generated "^1.1.0"
