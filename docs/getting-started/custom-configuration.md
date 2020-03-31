@@ -169,7 +169,7 @@ linter:
     npm_install: false
 ```
 
-When the `npm_install` option is except for `false`, Sider will try as follows:
+When the `npm_install` option is not `false`, Sider will try as follows:
 
 1. Check if `package.json` exists. If not present, Sider uses the default version of the analyzers.
 2. If `package.json` and `yarn.lock` exist, Sider runs the [`yarn install`](https://yarnpkg.com/lang/en/docs/cli/install/) command.
@@ -178,8 +178,10 @@ When the `npm_install` option is except for `false`, Sider will try as follows:
 5. Checks if the analyzer is installed in the `node_modules` directory.
 6. If installed, Sider uses the installed version.
 7. If not installed (for any reason), Sider uses the pre-installed default version.
+   - In this case, Sider shows warnings.
 
-On the other hand, when the `npm_install` option is `false`, Sider will skip these installation steps and analyze with the pre-installed default version.
+When the option is `false`, Sider will skip these installation steps and analyze with the pre-installed default version.
+You might want to set the option to `false` if you don't configure analyzer and don't want to see warnings.
 
 ## `ignore` option
 
