@@ -7,6 +7,7 @@ hide_title: true
 
 # Release Notes
 
+- [April 2020](./202004.md)
 - [February 2020](./202002.md)
 - [January 2020](./202001.md)
 - [November 2019](./201911.md)
