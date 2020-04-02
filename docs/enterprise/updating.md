@@ -43,6 +43,13 @@ $ docker run 480130971618.dkr.ecr.us-east-1.amazonaws.com/sideci_onprem:NEW_TAG 
 $ docker run 480130971618.dkr.ecr.us-east-1.amazonaws.com/catpost_onprem:NEW_TAG bundle exec rake db:migrate
 ```
 
+If you use Docker Compose, run the commands below; the service names `sideci_worker` and `catpost_worker` are from the [quickstart](./quickstart.md).
+
+```
+$ docker-compose run sideci_worker bundle exec rails db:migrate
+$ docker-compose run catpost_worker bundle exec rails db:migrate
+```
+
 The release may contain extra update scripts. Read the release note and run the scripts.
 
 After updating the databases, you can start the new version of Sider Enterprise containers.
