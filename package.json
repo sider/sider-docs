@@ -11,7 +11,7 @@
     "remark-lint-first-heading-level": "^2.0.0",
     "remark-lint-heading-increment": "^1.0.4",
     "remark-lint-no-dead-urls": "^1.0.2",
-    "remark-lint-no-duplicate-headings": "^1.0.5",
+    "remark-lint-no-duplicate-headings": "^2.0.0",
     "remark-lint-no-empty-url": "^1.0.6",
     "remark-validate-links": "^10.0.0"
   }
