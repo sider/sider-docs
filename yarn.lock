@@ -1050,14 +1050,14 @@ remark-lint-no-duplicate-headings@^2.0.0:
     unist-util-stringify-position "^2.0.0"
     unist-util-visit "^2.0.0"
 
-remark-lint-no-empty-url@^1.0.6:
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/remark-lint-no-empty-url/-/remark-lint-no-empty-url-1.0.6.tgz#8ce8357269775d9f65ffb71a329bff15dfe120c0"
-  integrity sha512-a8ixUAxLecMZ991cmNU9TFW6uUhVd+b7g6ZM/hulfyHd2egGaEgYigOEwmXjBFVGUnbpGLTZvNA4M2NlE1nZng==
+remark-lint-no-empty-url@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/remark-lint-no-empty-url/-/remark-lint-no-empty-url-2.0.0.tgz#86ee33f420fed566c8ed3aefc70caa5cfa559723"
+  integrity sha512-RPmAv7bpgMKjGU6ecGaQ0zRHOt1qi+KF4uls3D//1X1RzGLCYuUEPBllKSWuxcm/z+YkHBDIM6WwTxJtf3MkQA==
   dependencies:
     unified-lint-rule "^1.0.0"
     unist-util-generated "^1.1.0"
-    unist-util-visit "^1.4.0"
+    unist-util-visit "^2.0.0"
 
 remark-lint@^7.0.0:
   version "7.0.0"
@@ -1414,7 +1414,7 @@ unist-util-visit-parents@^3.0.0:
     "@types/unist" "^2.0.0"
     unist-util-is "^4.0.0"
 
-unist-util-visit@^1.1.1, unist-util-visit@^1.4.0:
+unist-util-visit@^1.1.1:
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/unist-util-visit/-/unist-util-visit-1.4.1.tgz#4724aaa8486e6ee6e26d7ff3c8685960d560b1e3"
   integrity sha512-AvGNk7Bb//EmJZyhtRUnNMEpId/AZ5Ph/KUpTI09WHQuDZHKovQ1oEv3mfmKpWKtoMzyMC4GLBm1Zy5k12fjIw==
