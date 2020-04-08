@@ -1038,17 +1038,17 @@ remark-lint-no-dead-urls@^1.0.2:
     unified-lint-rule "^1.0.4"
     unist-util-visit "^2.0.1"
 
-remark-lint-no-duplicate-headings@^1.0.5:
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/remark-lint-no-duplicate-headings/-/remark-lint-no-duplicate-headings-1.0.5.tgz#c65f65f254df4a6d5ccfff6f370141bbe142aa21"
-  integrity sha512-4GKPxhKpN797V/6Jg1K4Zwqq+PhsjC633+wQMrZcTvOJfY+Rq1i7sNJ9lJVZnsDAlZJI56VqZCKnPJmS2br87g==
+remark-lint-no-duplicate-headings@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/remark-lint-no-duplicate-headings/-/remark-lint-no-duplicate-headings-2.0.0.tgz#ac0efd190b9b522b62030da71c1d31c1a7cfd6d9"
+  integrity sha512-xiPZ0mGAzZXGivU0VaXmKbhxIRmRUeCzOGVSzyVKX36GJ7UKZJPgTonT9eGYTe1HogSk8C+Dof3RaahC6yOPoA==
   dependencies:
     mdast-util-to-string "^1.0.2"
     unified-lint-rule "^1.0.0"
     unist-util-generated "^1.1.0"
     unist-util-position "^3.0.0"
     unist-util-stringify-position "^2.0.0"
-    unist-util-visit "^1.1.1"
+    unist-util-visit "^2.0.0"
 
 remark-lint-no-empty-url@^1.0.6:
   version "1.0.6"
