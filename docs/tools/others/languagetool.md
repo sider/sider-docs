@@ -61,10 +61,10 @@ linter:
       - UPPERCASE_SENTENCE_START
     enable:
       - EN_A_VS_AN
-    enabled_only: true
-    disable_categories:
+    enabledonly: true
+    disablecategories:
       - CASING
-    enable_categories:
+    enablecategories:
       - MISC
 ```
 
@@ -80,9 +80,9 @@ You can customize the analysis via the following options:
 | [`encoding`](#encoding)                                                     | `string`   | `UTF-8`                            | A target file encoding.           |
 | [`disable`](#disable)                                                       | `string[]` | `[]`                               | Disabled rules.                   |
 | [`enable`](#enable)                                                         | `string[]` | `[]`                               | Enabled rules.                    |
-| [`enabled_only`](#enabled_only)                                             | `boolean`  | `false`                            | Whether using only enabled rules. |
-| [`disable_categories`](#disable_categories)                                 | `string[]` | `[]`                               | Disabled rule categories.         |
-| [`enable_categories`](#enable_categories)                                   | `string[]` | `[]`                               | Enabled rule categories.          |
+| [`enabledonly`](#enabledonly)                                               | `boolean`  | `false`                            | Whether using only enabled rules. |
+| [`disablecategories`](#disablecategories)                                   | `string[]` | `[]`                               | Disabled rule categories.         |
+| [`enablecategories`](#enablecategories)                                     | `string[]` | `[]`                               | Enabled rule categories.          |
 
 ### `target`
 
@@ -124,7 +124,7 @@ This option allows you to disable any rules, e.g. `EN_QUOTES` or `UPPERCASE_SENT
 ### `enable`
 
 This option allows you to enable any rules, e.g. `EN_QUOTES` or `UPPERCASE_SENTENCE_START`.
-It is useful to use together with the [`enabled_only`](#enabled_only) option.
+It is useful to use together with the [`enabledonly`](#enabledonly) option.
 
 In the example below, only `EN_QUOTES` and `UPPERCASE_SENTENCE_START` rules are used for your analysis.
 
@@ -134,29 +134,29 @@ linter:
     enable:
       - EN_QUOTES
       - UPPERCASE_SENTENCE_START
-    enabled_only: true
+    enabledonly: true
 ```
 
-### `enabled_only`
+### `enabledonly`
 
 This option allows you to enable only the specified rules.
 
-### `disable_categories`
+### `disablecategories`
 
 This option allows you to disable any rule categories, e.g. `CASING` or `TYPOS`.
 
-### `enable_categories`
+### `enablecategories`
 
 This option allows you to enable any rule categories, e.g. `CASING` or `TYPOS`.
-It is useful to use together with the [`enabled_only`](#enabled_only) option.
+It is useful to use together with the [`enabledonly`](#enabledonly) option.
 
 In the example below, only `CASING` and `TYPOS` categories are used for your analysis.
 
 ```yaml
 linter:
   languagetool:
-    enable_categories:
+    enablecategories:
       - CASING
       - TYPOS
-    enabled_only: true
+    enabledonly: true
 ```
