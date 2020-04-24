@@ -24,28 +24,10 @@ To start using GolangCI-Lint, enable it in your [repository settings](../../gett
 In addition to [enabled by default linters](https://github.com/golangci/golangci-lint#enabled-by-default-linters), Sider enables some useful linters.
 See the [default configuration file](https://github.com/sider/runners/blob/master/images/golangci_lint/sider_golangci.yml) for details.
 
-## Migration from go vet and Golint
+### Migration from Govet and Golint
 
-Sider has deprecated [go vet](./govet.md) and [Golint](./golint.md) and instead recommended GolangCI-Lint.
-So, if you want to continue using them, please configure your `sider.yml` as follows.
-
-For go vet, it is **enabled** by default. If you don't want, you need to disable it:
-
-```yaml
-linter:
-  golangci_lint:
-    disable:
-      - govet
-```
-
-For Golint, it is **disabled** by default. If you want, you need to enable it:
-
-```yaml
-linter:
-  golangci_lint:
-    enable:
-      - golint
-```
+Sider has deprecated [Govet](./govet.md) and [Golint](./golint.md) and instead recommended GolangCI-Lint.
+If you want to continue using them, all you have to do is enable GolangCI-Lint. They are enabled by default.
 
 ## Configuration
 
