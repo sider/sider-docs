@@ -26,7 +26,7 @@ Sider Enterprise provides a command to make a user an _admin_. The command is us
 To make a user with `sider_admin` GitHub login, run the following command.
 
 ```
-$ docker run quay.io/actcat/sideci bundle exec rake admin:promote[sider_admin]
+$ docker run 480130971618.dkr.ecr.us-east-1.amazonaws.com/sideci_onprem:TAG bundle exec rake admin:promote[sider_admin]
 ```
 
 Note that the `sider_admin` user should have an account on the Sider Enterprise beforehand.
