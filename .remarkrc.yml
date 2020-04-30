@@ -7,6 +7,7 @@ plugins:
   remark-lint-no-dead-urls: ["warn", { skipLocalhost: true }]
   remark-lint-no-duplicate-headings: ["error"]
   remark-lint-no-empty-url: ["error"]
+  "@mapbox/remark-lint-link-text": ["warn"]
 
   # NOTE: This is *not* a lint rule and does not have a severity.
   remark-validate-links: { root: ".", repository: "sider/sider-docs" }

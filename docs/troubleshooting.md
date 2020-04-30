@@ -18,7 +18,7 @@ This may be because Sider does not have access to your organization on GitHub. Y
 ## I cannot find my repositories when trying to add a repository to Sider
 
 If your organization has migrated to GitHub Apps, you must include your repositories in the "Repository access" section on GitHub.
-Visit [this page](https://github.com/apps/sider/installations/new) and select your organization. From there, you can configure repository access for your organization.
+Visit the [Sider installation page](https://github.com/apps/sider/installations/new) and select your organization. From there, you can configure repository access for your organization.
 
 ![Add a new organization](./assets/repository-access-on-github.png)
 
