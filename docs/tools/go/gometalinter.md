@@ -29,8 +29,7 @@ If `glide.yaml` contains a dependency to a library in a private repository, plea
 
 - [Use other private repositories for analysis](../../advanced-settings/private-dependencies.md)
 
-> Note that need to set `import_path` option in `sider.yml` when you would like to run `glide install` on analysis.
-> See [here](#import_path) for details.
+> Note that need to set the [`import_path`](#import_path) option in `sider.yml` when you would like to run `glide install` on analysis.
 
 ## Default Configuration
 

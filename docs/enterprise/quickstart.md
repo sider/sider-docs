@@ -202,4 +202,4 @@ We recommend executing these commands when there is less analysis because these 
 
 ## Set Administrators
 
-See [here](./administration.md#admin-users) to create admin users.
+See the [administration document](./administration.md#admin-users) to create admin users.

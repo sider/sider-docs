@@ -405,7 +405,7 @@ If you set the `http_proxy` and `https_proxy` parameters above, the `no_proxy` p
 For example, `s3_endpoint` is set with `http://minio:9000`, then `no_proxy` should be set with `minio`
 if Runners should access to Minio without a proxy server.
 
-See [here](./http-proxy.md) for more details about a proxy environment.
+See the [proxy configuration](./http-proxy.md) for more details.
 
 ## `catpost` Configuration
 
