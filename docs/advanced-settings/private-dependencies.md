@@ -27,13 +27,13 @@ After generating, you can download the SSH public key used in analysis sessions 
 
 > The SSH public key is supposed to be configured in another repository.
 >
-> For example, think about the case your repository *my-app* depends on another private repository *my-lib*, which is hosted on GitHub.
+> For example, think about the case your repository _my-app_ depends on another private repository _my-lib_, which is hosted on GitHub.
 > You should configure following the steps:
 >
-> 1. Access the repository settings page of *my-app* on Sider.
+> 1. Access the repository settings page of _my-app_ on Sider.
 > 2. Click **"Generate Key"**.
 > 3. Click **"Download Public Key"**.
-> 4. Access the repository settings page of *my-lib* on GitHub.
+> 4. Access the repository settings page of _my-lib_ on GitHub.
 > 5. Click **"Deploy keys"**.
 > 6. Click **"Add deploy key"**.
 > 7. Copy the downloaded public key and paste it in **"Key"** input form.
@@ -43,10 +43,10 @@ After generating, you can download the SSH public key used in analysis sessions 
 
 Currently, only a few analysis tools use an SSH configuration.
 
-* All Ruby analyzers (Bundler)
-* [ESLint](../tools/javascript/eslint.md) (npm)
-* [TSLint](../tools/javascript/tslint.md) (npm)
-* [CoffeeLint](../tools/javascript/coffeelint.md) (npm)
-* [stylelint](../tools/css/stylelint.md) (npm)
+- All Ruby analyzers (Bundler)
+- [ESLint](../tools/javascript/eslint.md) (npm)
+- [TSLint](../tools/javascript/tslint.md) (npm)
+- [CoffeeLint](../tools/javascript/coffeelint.md) (npm)
+- [stylelint](../tools/css/stylelint.md) (npm)
 
 Other tools do not use SSH, so adding an SSH key for such tools are not needed.

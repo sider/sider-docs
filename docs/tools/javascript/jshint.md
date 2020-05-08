@@ -32,7 +32,7 @@ Sider uses the default configuration where there is no custom configuration pres
   jquery: true,
   browser: true,
 
-  esversion: 2015
+  esversion: 2015,
 }
 ```
 

@@ -17,36 +17,37 @@ The Dashboard page gives an overview of the latest pull requests, last active re
 
 ## Latest Analysed Pull Requests
 
-List issue cards containing the latest pull request passed into Sider. 
+List issue cards containing the latest pull request passed into Sider.
 
 ### Issue Cards
+
 Contain information about a pull request and links to its analysis page.
 
 ![Issue cards](../assets/issue-cards.png)
 
 **Icon:**
 
-* **II** - Pull request is being analyzed
+- **II** - Pull request is being analyzed
+- **✓** - No issues with the pull request
+- **×** - Pull request has issues
 
-* **✓** - No issues with the pull request
-
-* **×** - Pull request has issues
-      
 **Repository information:**
 
-* Organization and repository
-* Pull request number
-* Title of Pull Request
+- Organization and repository
+- Pull request number
+- Title of Pull Request
 
 **Pull request status:**
-* Open
-* Merged
+
+- Open
+- Merged
 
 **Time:**
 
-* When the pull request was analyzed, relative to the current time.
+- When the pull request was analyzed, relative to the current time.
 
 ## Last Active Repositories
+
 Links to the last active repositories.
 
 ![Screenshot of Last Active Repositories](../assets/last-active-repo.png)
@@ -62,7 +63,7 @@ Repository pages contain a history of pull request issue cards related to the re
 ![Screenshot of My Organizations](../assets/my-organizations.png)
 The **+Add** button adds additional organizations to the Sider account.
 
-Organizations link to organizations connected to the Sider Account. 
+Organizations link to organizations connected to the Sider Account.
 
 ## Organization Page
 

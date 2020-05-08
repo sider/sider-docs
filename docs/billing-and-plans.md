@@ -11,9 +11,9 @@ hide_title: true
 
 Sider's plan depends on the number of users who are assigned seats. The seat-assigned users can check analysis results, close/reopen issues, post comments to the pull requests.
 
-| Price | Public Repositories | Private Repositories |
-| :---- | :-----------------: | :------------------: |
-| $12 USD/month(or ¥1,500 JPY/month) per seat | Unlimited | Unlimited |
+| Price                                         | Public Repositories | Private Repositories |
+| :-------------------------------------------- | :-----------------: | :------------------: |
+| \$12 USD/month (or ¥1,500 JPY/month) per seat |      Unlimited      |      Unlimited       |
 
 You can upgrade the plan and increase/decrease seats in the organization settings page.
 
@@ -50,6 +50,7 @@ You must have the owner role for the organization to see or edit the invoice.
 ## Q&A
 
 ### How to assign seats?
+
 You can assign seats for your teammates on the organization settings page. After buying seats, assign them to the teammates.
 
 ![Assign seats for users](./assets/assign_seats_for_users.png)
@@ -57,10 +58,11 @@ You can assign seats for your teammates on the organization settings page. After
 Click "Assign seat" with users that you would like to assign seats to use Sider.
 
 ### Where can I change plan?
+
 You can change your plan in the organization settings page within [sider.review](https://sider.review/).
 
 On this page, click `Update` and select the number of seats. Then you can check the billing preview. After click `Update` in the preview, your plan will be updated. Please note that you must be an admin role for your organization in order to change plans.
 
 ### We need invoices with the address of our company.
-You can add your address to the invoice. Click "Add additional information" link in the invoice details page; then you will see the text area. In the area, you can write the address or other information.
 
+You can add your address to the invoice. Click "Add additional information" link in the invoice details page; then you will see the text area. In the area, you can write the address or other information.

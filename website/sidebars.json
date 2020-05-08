@@ -27,19 +27,12 @@
       {
         "type": "subcategory",
         "label": "Java",
-        "ids": [
-          "tools/java/checkstyle",
-          "tools/java/pmd",
-          "tools/java/javasee"
-        ]
+        "ids": ["tools/java/checkstyle", "tools/java/pmd", "tools/java/javasee"]
       },
       {
         "type": "subcategory",
         "label": "Kotlin",
-        "ids": [
-          "tools/kotlin/ktlint",
-          "tools/kotlin/detekt"
-        ]
+        "ids": ["tools/kotlin/ktlint", "tools/kotlin/detekt"]
       },
       {
         "type": "subcategory",
@@ -55,33 +48,22 @@
       {
         "type": "subcategory",
         "label": "CSS",
-        "ids": [
-          "tools/css/stylelint",
-          "tools/css/scss-lint"
-        ]
+        "ids": ["tools/css/stylelint", "tools/css/scss-lint"]
       },
       {
         "type": "subcategory",
         "label": "PHP",
-        "ids": [
-          "tools/php/codesniffer",
-          "tools/php/phpmd",
-          "tools/php/phinder"
-        ]
+        "ids": ["tools/php/codesniffer", "tools/php/phpmd", "tools/php/phinder"]
       },
       {
         "type": "subcategory",
         "label": "Python",
-        "ids": [
-          "tools/python/flake8"
-        ]
+        "ids": ["tools/python/flake8"]
       },
       {
         "type": "subcategory",
         "label": "Swift",
-        "ids": [
-          "tools/swift/swiftlint"
-        ]
+        "ids": ["tools/swift/swiftlint"]
       },
       {
         "type": "subcategory",
@@ -96,46 +78,32 @@
       {
         "type": "subcategory",
         "label": "C/C++",
-        "ids": [
-          "tools/cplusplus/cppcheck",
-          "tools/cplusplus/cpplint"
-        ]
+        "ids": ["tools/cplusplus/cppcheck", "tools/cplusplus/cpplint"]
       },
       {
         "type": "subcategory",
         "label": "C#",
-        "ids": [
-          "tools/csharp/fxcop"
-        ]
+        "ids": ["tools/csharp/fxcop"]
       },
       {
         "type": "subcategory",
         "label": "Shell script",
-        "ids": [
-          "tools/shellscript/shellcheck"
-        ]
+        "ids": ["tools/shellscript/shellcheck"]
       },
       {
         "type": "subcategory",
         "label": "Dockerfile",
-        "ids": [
-          "tools/dockerfile/hadolint"
-        ]
+        "ids": ["tools/dockerfile/hadolint"]
       },
       {
         "type": "subcategory",
         "label": "Markdown",
-        "ids": [
-          "tools/markdown/remark-lint"
-        ]
+        "ids": ["tools/markdown/remark-lint"]
       },
       {
         "type": "subcategory",
         "label": "Others",
-        "ids": [
-          "tools/others/goodcheck",
-          "tools/others/misspell"
-        ]
+        "ids": ["tools/others/goodcheck", "tools/others/misspell"]
       }
     ],
     "Custom Rules": [
@@ -178,9 +146,6 @@
       "enterprise/healthcheck",
       "enterprise/http-proxy"
     ],
-    "News": [
-      "news/2020",
-      "news/2019"
-    ]
+    "News": ["news/2020", "news/2019"]
   }
 }
