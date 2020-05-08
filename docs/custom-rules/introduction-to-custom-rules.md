@@ -9,7 +9,7 @@ hide_title: true
 
 ## What are Custom Rules?
 
-Custom rules are sets of code patterns and messages used by Sider’s supported static code analyzers. You write custom rules to enforce your projects guidelines and share code-base knowledge. If the rules match a pattern in the code, they report a message. 
+Custom rules are sets of code patterns and messages used by Sider’s supported static code analyzers. You write custom rules to enforce your projects guidelines and share code-base knowledge. If the rules match a pattern in the code, they report a message.
 
 ## Why it matters?
 
@@ -17,7 +17,7 @@ Sharing code-base knowledge has many benefits to help improve projects, but shar
 
 ## What are the tools?
 
-Sider currently supports 3 tools to analyze against custom rules. 
+Sider currently supports 3 tools to analyze against custom rules.
 
 - [Goodcheck](#goodcheck) for general text source code.
 - [Querly](#querly) for Ruby.
@@ -25,8 +25,8 @@ Sider currently supports 3 tools to analyze against custom rules.
 
 ### Goodcheck
 
-Goodcheck is a tool that takes custom rules and matches the pattern with code. The rule’s patterns are defined with regular expressions which allow it to work across all or specific text source code. 
- 
+Goodcheck is a tool that takes custom rules and matches the pattern with code. The rule’s patterns are defined with regular expressions which allow it to work across all or specific text source code.
+
 In this example, we look at maintaining consistent wording. When a user sees both “Sign in” and “Log in” within your web application, it may cause confusion or detract from the user experience.
 
 ```yaml
@@ -37,7 +37,7 @@ rules:
         case_sensitive: false
       - token: Log out
         case_sensitive: false
-    glob: 
+    glob:
       - "**/*.html.erb"
       - "**/*.yml"
     message: |
@@ -76,8 +76,7 @@ rules:
         after: "user.oauth_token(filtered: true)"
 ```
 
-With this rule, Querly would analyze Ruby source code files for any Ruby expression that includes the `oauth_token` method and checks if there is `filtered: true` as an argument. If there isn’t, then a message will notify developers of the `filtered` option. 
-
+With this rule, Querly would analyze Ruby source code files for any Ruby expression that includes the `oauth_token` method and checks if there is `filtered: true` as an argument. If there isn’t, then a message will notify developers of the `filtered` option.
 
 ### Phinder
 
@@ -86,9 +85,9 @@ Phinder is a tool that understands PHP syntax. It can take complex PHP patterns 
 Assume your service had an outage because of a `PostCategory::import_records(associations)` call. The method implements bulk insertion of given rows into a table. It is faster than inserting the rows one by one but may result in a deadlock, which is what caused the service outage. You can put links to the issue reports to help the developer to understand what they have to do to make the function call safe.
 
 ```yaml
-- id: com.example.app.article 
-  pattern: "_::import_records(_)" 
-  message: | 
+- id: com.example.app.article
+  pattern: "_::import_records(_)"
+  message: |
     `import_records(associations)` may block DB access 
 
     Read the following reports and double check the method call does not block DB access. 

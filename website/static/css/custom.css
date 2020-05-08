@@ -1,27 +1,27 @@
 /* your custom css */
 
 .Video {
-	position: relative;
-	padding-top: 56.25%;
+  position: relative;
+  padding-top: 56.25%;
 }
 
 .Video__iframe {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .VideoLink {
-	/* Docusaurus needs a wrapper element. */
+  /* Docusaurus needs a wrapper element. */
 }
 
 .VideoLink__link {
   display: flex;
   color: currentColor;
-  padding: .5rem;
-  border-radius: .25rem;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
   position: relative;
 }
 
@@ -33,7 +33,7 @@
 
 .VideoLink__link:hover::after,
 .VideoLink__link:focus::after {
-  content: '';
+  content: "";
   display: block;
   width: 4rem;
   height: 4rem;
@@ -62,12 +62,12 @@ summary {
 /* color settings */
 
 body {
-  --orange: #C75140;
+  --orange: #c75140;
   --dark-grey: #475466;
-  --light-grey: #E1E8F2;
-  --white-grey: #F7FAFF;
-  --black: #2E3B4D;
-  --white: #FFFFFF;
+  --light-grey: #e1e8f2;
+  --white-grey: #f7faff;
+  --black: #2e3b4d;
+  --white: #ffffff;
 
   color: var(--black);
 }

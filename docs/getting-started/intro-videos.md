@@ -134,5 +134,3 @@ Start using Sider and custom rules with the help of these introductory videos. T
     </div>
   </a>
 </div>
-
-

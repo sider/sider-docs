@@ -87,7 +87,11 @@ This section has documents about analysis tools which Sider supports. We have an
 - [Cppcheck](./tools/cplusplus/cppcheck.md)
 - [cpplint](./tools/cplusplus/cpplint.md)
 
-### C
+<!-- prettier-ignore-start -->
+
+### C\#
+
+<!-- prettier-ignore-end -->
 
 - [FxCop](./tools/csharp/fxcop.md)
 

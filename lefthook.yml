@@ -2,8 +2,8 @@ pre-commit:
   parallel: false
   commands:
     prettier:
-      glob: "*.md"
+      glob: "*.{md,js,json,css,yml}"
       run: npx prettier --write {staged_files} && git add {staged_files}
     lint:
       glob: "*.md"
-      run: npx remark --frail {staged_files}
+      run: npx remark {staged_files}

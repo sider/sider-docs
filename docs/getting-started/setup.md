@@ -41,18 +41,18 @@ Select whether you'd like to choose your project's stack and use Test Mode.
 
 Select languages or frameworks that you're using in your project. The checked tools will be used during code analysis. Here's the full list of available tools:
 
-| Language / Framework | Tools |
-| :------------------- | :---- |
-| Ruby | RuboCop, Reek |
-| Ruby on Rails | RuboCop, Reek, Brakeman, Rails Best Practices, JSHint, stylelint, CoffeeLint |
-| PHP | PHPMD |
-| JavaScript | JSHint |
-| CSS | stylelint |
-| Java | PMD, Checkstyle |
-| Python | Flake8 |
-| Go | Golint, govet |
-| Swift | SwiftLint |
-| TypeScript | TSLint |
+| Language / Framework | Tools                                                                        |
+| :------------------- | :--------------------------------------------------------------------------- |
+| Ruby                 | RuboCop, Reek                                                                |
+| Ruby on Rails        | RuboCop, Reek, Brakeman, Rails Best Practices, JSHint, stylelint, CoffeeLint |
+| PHP                  | PHPMD                                                                        |
+| JavaScript           | JSHint                                                                       |
+| CSS                  | stylelint                                                                    |
+| Java                 | PMD, Checkstyle                                                              |
+| Python               | Flake8                                                                       |
+| Go                   | Golint, govet                                                                |
+| Swift                | SwiftLint                                                                    |
+| TypeScript           | TSLint                                                                       |
 
 For more details, see Analysis Tools documentation from left sidebar.
 
