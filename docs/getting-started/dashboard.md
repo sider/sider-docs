@@ -28,9 +28,7 @@ Contain information about a pull request and links to its analysis page.
 **Icon:**
 
 - **II** - Pull request is being analyzed
-
 - **✓** - No issues with the pull request
-
 - **×** - Pull request has issues
 
 **Repository information:**
