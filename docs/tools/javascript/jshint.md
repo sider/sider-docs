@@ -19,29 +19,9 @@ To customize the configuration, use the standard `.jshintrc` or `.jshintignore` 
 
 ## Default Configuration
 
-Sider uses the default configuration where there is no custom configuration preset. The configuration is here:
+Sider uses the [default configuration](https://github.com/sider/runners/blob/master/images/jshint/sider_jshintrc) of `.jshintrc` when there is no custom configuration preset.
 
-```json5
-{
-  // Relaxes
-  asi: true,
-  sub: true,
-  eqnull: true,
-
-  // Environments
-  jquery: true,
-  browser: true,
-
-  esversion: 2015,
-}
-```
-
-In addition, we uses `.jshintignore` to default with following setting:
-
-```
-public/js/**/*.js
-**/*.min.js
-```
+In addition, Sider uses the [default configuration](https://github.com/sider/runners/blob/master/images/jshint/sider_jshintignore) of `.jshintignore`.
 
 ## Configuration via `sider.yml`
 
