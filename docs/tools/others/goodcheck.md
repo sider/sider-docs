@@ -11,6 +11,9 @@ hide_title: true
 | ------------------------- | --------------- | ---------------------------------- |
 | 1.0.0+ (default to 2.5.0) | Others (Regexp) | https://sider.github.io/goodcheck/ |
 
+**Goodcheck** is a regex-based customizable linter, which has no rules by default.
+Users can add and manage project-specific rules to their YAML files.
+
 ## Getting Started
 
 To start using Goodcheck, put config file `goodcheck.yml` in your repository.
@@ -21,9 +24,9 @@ Visit [its project page](https://github.com/sider/goodcheck#goodcheckyml) for mo
  <iframe class="Video__iframe" src="https://www.youtube.com/embed/8Zpm2gguE1M" frameborder="0" allowfullscreen></iframe>
 </div>
 
-## Configuration via `sider.yml`
+## Configuration
 
-Here are example settings for Goodcheck under `goodcheck`:
+Here is an example configuration via `sider.yml`:
 
 ```yaml
 linter:
@@ -34,10 +37,16 @@ linter:
       - app
 ```
 
-### Options
+| Name                                                                        | Type                 | Default |
+| --------------------------------------------------------------------------- | -------------------- | ------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#root_dir-option) | `string`             | -       |
+| [`config`](#config)                                                         | `string`             | -       |
+| [`target`](#target)                                                         | `string`, `string[]` | -       |
 
-| Name                                                                        | Type                 | Default | Description                              |
-| --------------------------------------------------------------------------- | -------------------- | ------- | ---------------------------------------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#root_dir-option) | `string`             | -       | A root directory.                        |
-| `config`                                                                    | `string`             | -       | A file path passed as `--config` option. |
-| `target`                                                                    | `string`, `string[]` | -       | Files or directories which are analyzed. |
+### `config`
+
+This option allows you to specify a configuration file path for Goodcheck.
+
+### `target`
+
+This option allows you to specify files or directories to analyze.
