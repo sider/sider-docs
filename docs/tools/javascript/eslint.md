@@ -11,6 +11,9 @@ hide_title: true
 | :------------------------ | :--------- | :-------------- | :----------------- |
 | 5.0.0+ (default to 6.8.0) | JavaScript | Node.js 12.16.1 | https://eslint.org |
 
+**ESLint** is a static analysis tool for JavaScript and its flavors (e.g. TypeScript, JSX, Vue).
+It can find problems, style violations, or security issues, etc. in your code, and have so many plugins.
+
 ## Getting Started
 
 To start using ESLint, enable it in your [repository settings](../../getting-started/repository-settings.md).
@@ -41,9 +44,10 @@ linter:
 
 For more details, see the following sections.
 
-## Default Configuration
+## Default Configuration for ESLint
 
-Sider prepares the following configuration by default. The configuration is used when you have no ESLint configurations in your repository or `sider.yml`.
+Sider prepares the following ESLint configuration by default.
+The configuration is used when you have no ESLint configurations in your repository or `sider.yml`.
 
 ```yaml
 extends: "eslint:recommended"
@@ -52,9 +56,9 @@ rules:
   no-unused-vars: off
 ```
 
-## Configuration via `sider.yml`
+## Configuration
 
-Here is an example for ESLint:
+You can use the following options of `sider.yml` to make analysis fitter for your project. For example:
 
 ```yaml
 linter:
@@ -69,34 +73,22 @@ linter:
     quiet: true
 ```
 
-You can use the following options to make analysis fitter for your project.
-
-| Name                                                                              | Type                 | Default | Description                                                                                                        |
-| --------------------------------------------------------------------------------- | -------------------- | ------- | ------------------------------------------------------------------------------------------------------------------ |
-| [`root_dir`](../../getting-started/custom-configuration.md#root_dir-option)       | `string`             | -       | A root directory.                                                                                                  |
-| [`npm_install`](../../getting-started/custom-configuration.md#npm_install-option) | `boolean`, `string`  | -       | A behavior of npm installation.                                                                                    |
-| [`dir`](#dir)                                                                     | `string`, `string[]` | `.`     | Directories to analyze.                                                                                            |
-| [`config`](#config)                                                               | `string`             | -       | [`--config`](https://eslint.org/docs/user-guide/command-line-interface#-c---config) option of ESLint.              |
-| [`ext`](#ext)                                                                     | `string`             | `.js`   | [`--ext`](https://eslint.org/docs/user-guide/command-line-interface#--ext) option of ESLint.                       |
-| [`ignore-path`](#ignore-path)                                                     | `string`             | -       | [`--ignore-path`](https://eslint.org/docs/user-guide/command-line-interface#--ignore-path) option of ESLint.       |
-| [`no-ignore`](#no-ignore)                                                         | `boolean`            | `false` | [`--no-ignore`](https://eslint.org/docs/user-guide/command-line-interface#--no-ignore) option of ESLint.           |
-| [`ignore-pattern`](#ignore-pattern)                                               | `string`, `string[]` | -       | [`--ignore-pattern`](https://eslint.org/docs/user-guide/command-line-interface#--ignore-pattern) option of ESLint. |
-| [`global`](#global)                                                               | `string`             | -       | [`--global`](https://eslint.org/docs/user-guide/command-line-interface#--global) option of ESLint.                 |
-| [`quiet`](#quiet)                                                                 | `boolean`            | `false` | [`--quiet`](https://eslint.org/docs/user-guide/command-line-interface#--quiet) option of ESLint.                   |
-
-For details of the options, check the following sections and [the ESLint documentation](https://eslint.org/docs/user-guide/command-line-interface#options).
+| Name                                                                              | Type                 | Default |
+| --------------------------------------------------------------------------------- | -------------------- | ------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#root_dir-option)       | `string`             | -       |
+| [`npm_install`](../../getting-started/custom-configuration.md#npm_install-option) | `boolean`, `string`  | -       |
+| [`dir`](#dir)                                                                     | `string`, `string[]` | `.`     |
+| [`config`](#config)                                                               | `string`             | -       |
+| [`ext`](#ext)                                                                     | `string`             | `.js`   |
+| [`ignore-path`](#ignore-path)                                                     | `string`             | -       |
+| [`no-ignore`](#no-ignore)                                                         | `boolean`            | `false` |
+| [`ignore-pattern`](#ignore-pattern)                                               | `string`, `string[]` | -       |
+| [`global`](#global)                                                               | `string`             | -       |
+| [`quiet`](#quiet)                                                                 | `boolean`            | `false` |
 
 ### `dir`
 
-This option allows you to specify a directory to analyze. For example:
-
-```yaml
-linter:
-  eslint:
-    dir: frontend/src
-```
-
-Also, you can specify multiple directories or glob patterns:
+This option allows you to specify one or more directories to analyze. For example:
 
 ```yaml
 linter:
@@ -110,27 +102,34 @@ linter:
 ### `config`
 
 This option allows you to specify an additional configuration file.
+See also the [`--config`](https://eslint.org/docs/user-guide/command-line-interface#c-config) option.
 
 ### `ext`
 
 This option allows you to specify file extensions to analyze.
+See also the [`--ext`](https://eslint.org/docs/user-guide/command-line-interface#ext) option.
 
 ### `ignore-path`
 
 This option allows you to exclude files from analysis by your ignore file.
+See also the [`--ignore-path`](https://eslint.org/docs/user-guide/command-line-interface#ignore-path) option.
 
 ### `no-ignore`
 
 This option allows you to disable the use of ignore files or patterns.
+See also the [`--no-ignore`](https://eslint.org/docs/user-guide/command-line-interface#no-ignore) option.
 
 ### `ignore-pattern`
 
 This option allows you to ignore files by patterns.
+See also the [`--ignore-pattern`](https://eslint.org/docs/user-guide/command-line-interface#ignore-pattern) option.
 
 ### `global`
 
 This option allows you to define global variables. It requires a comma-separated string.
+See also the [`--global`](https://eslint.org/docs/user-guide/command-line-interface#global) option.
 
 ### `quiet`
 
 This option allows you to suppress warnings. When `true`, only errors are reported.
+See also the [`--quiet`](https://eslint.org/docs/user-guide/command-line-interface#quiet) option.
