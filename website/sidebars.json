@@ -103,7 +103,11 @@
       {
         "type": "subcategory",
         "label": "Others",
-        "ids": ["tools/others/goodcheck", "tools/others/misspell"]
+        "ids": [
+          "tools/others/goodcheck",
+          "tools/others/misspell",
+          "tools/others/languagetool"
+        ]
       }
     ],
     "Custom Rules": [
