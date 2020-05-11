@@ -13,7 +13,7 @@ hide_title: true
 | ----------------- | -------- | ---------------------------------- |
 | 1.4.5             | C/C++    | https://github.com/cpplint/cpplint |
 
-Cpplint is a static analysis tool to check C/C++ files for style issues.
+**cpplint** is a static analysis tool to check C/C++ files for style issues.
 
 ## Getting Started
 
@@ -42,15 +42,15 @@ linter:
 
 You can use the following options to fine-tune cpplint to your project.
 
-| Name                                                                        | Type                 | Default | Description                       |
-| --------------------------------------------------------------------------- | -------------------- | ------- | --------------------------------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#root_dir-option) | `string`             | -       | A root directory.                 |
-| [`target`](#target)                                                         | `string`, `string[]` | `.`     | Files or directories to analyze.  |
-| [`extensions`](#extensions)                                                 | `string`             | -       | `--extensions` option of cpplint. |
-| [`headers`](#headers)                                                       | `string`             | -       | `--headers` option of cpplint.    |
-| [`filter`](#filter)                                                         | `string`             | -       | `--filter` option of cpplint.     |
-| [`linelength`](#linelength)                                                 | `string`             | -       | `--linelength` option of cpplint. |
-| [`exclude`](#exclude)                                                       | `string`             | -       | `--exclude` option of cpplint.    |
+| Name                                                                        | Type                 | Default |
+| --------------------------------------------------------------------------- | -------------------- | ------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#root_dir-option) | `string`             | -       |
+| [`target`](#target)                                                         | `string`, `string[]` | `.`     |
+| [`extensions`](#extensions)                                                 | `string`             | -       |
+| [`headers`](#headers)                                                       | `string`             | -       |
+| [`filter`](#filter)                                                         | `string`             | -       |
+| [`linelength`](#linelength)                                                 | `string`             | -       |
+| [`exclude`](#exclude)                                                       | `string`             | -       |
 
 ### `target`
 
@@ -66,11 +66,11 @@ linter:
 
 ### `extensions`
 
-This option allows you to specify a comma-separated list of file extensions to analyze. For example `c++,cpp,cc,hh`.
+This option allows you to specify a comma-separated list of file extensions to analyze. For example, `c++,cpp,cc,hh`.
 
 ### `headers`
 
-This option allows you to specify a comma-separated list of header file extensions to analyze. For example `hpp,hxx`.
+This option allows you to specify a comma-separated list of header file extensions to analyze. For example, `hpp,hxx`.
 The values are automatically added to the [`extensions`](#extensions) list.
 
 ### `filter`
