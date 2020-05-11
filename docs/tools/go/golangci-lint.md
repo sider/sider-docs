@@ -73,7 +73,7 @@ You can use the following options to fine-tune GolangCI-Lint to your project.
 | [`presets`](#presets)                                                       | `string`, `string[]` | -       |
 | [`skip-dirs`](#skip-dirs)                                                   | `string`, `string[]` | -       |
 | [`skip-dirs-use-default`](#skip-dirs-use-default)                           | `boolean`            | `true`  |
-| [`skip-files`](#skip-files)                                                 | `string` ,`string[]` | -       |
+| [`skip-files`](#skip-files)                                                 | `string`, `string[]` | -       |
 | [`tests`](#tests)                                                           | `boolean`            | `true`  |
 | [`uniq-by-line`](#uniq-by-line)                                             | `boolean`            | `true`  |
 
