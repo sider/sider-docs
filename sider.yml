@@ -3,3 +3,5 @@ linter:
     npm_install: false
   stylelint:
     npm_install: false
+  languagetool:
+    ext: [.md]
