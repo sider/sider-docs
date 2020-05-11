@@ -8,3 +8,5 @@ linter:
     disable:
       - DOUBLE_PUNCTUATION
       - WORD_CONTAINS_UNDERSCORE
+      - DASH_RULE
+      - WHITESPACE_RULE
