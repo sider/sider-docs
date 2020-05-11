@@ -25,9 +25,9 @@ This is a beta release. We have several limitations for analysis.
 
 To start using FxCop, enable it in your [repository settings](../../getting-started/repository-settings.md).
 
-## Configuration via `sider.yml`
+## Configuration
 
-Here are example settings for FxCop under `fxcop`:
+Here is an example configuration via `sider.yml`:
 
 ```yaml
 linter:
@@ -35,6 +35,6 @@ linter:
     root_dir: src/
 ```
 
-| Name                                                                        | Type     | Default | Description       |
-| --------------------------------------------------------------------------- | -------- | ------- | ----------------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#root_dir-option) | `string` | -       | A root directory. |
+| Name                                                                        | Type     | Default |
+| --------------------------------------------------------------------------- | -------- | ------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#root_dir-option) | `string` | -       |
