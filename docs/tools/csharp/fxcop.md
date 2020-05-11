@@ -19,18 +19,11 @@ hide_title: true
 
 This is a beta release. We have several limitations for analysis.
 
-- We support only projects with .NET Core.
-  - No support for mono, Unity, .NET Framework, and so on.
-- We support only projects using [MSBuild](https://docs.microsoft.com/en-us/visualstudio/msbuild/msbuild) as its build management system.
-  - When you use Visual Studio to develop, it's ok in almost cases.
-  - No support for other build systems.(e.g. [Cake](https://cakebuild.net/), [Nuke](https://nuke.build/), GNU Make, etc..)
-- We ignore custom ruleset (`*.ruleset`) file.
+- Currently the rule set file (`*.ruleset`) is not supported. Sider uses the full set of analyzers available.
 
 ## Getting Started
 
 To start using FxCop, enable it in [Repository Settings](../../getting-started/repository-settings.md).
-
-If you put your project configration file (`*.csproj`) not in project root dir, you have to set `root_dir` parameter in `sider.yml` file.
 
 ## Configuration via `sider.yml`
 
