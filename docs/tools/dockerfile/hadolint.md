@@ -40,13 +40,13 @@ linter:
 
 You can use the following options to fine-tune hadolint to your project.
 
-| Name                                                                        | Type                 | Default              | Description                              |
-| --------------------------------------------------------------------------- | -------------------- | -------------------- | ---------------------------------------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#root_dir-option) | `string`             | -                    | A root directory.                        |
-| [`target`](#target)                                                         | `string`, `string[]` | `**/Dockerfile{,.*}` | File paths to analyze.                   |
-| [`ignore`](#ignore)                                                         | `string`, `string[]` | -                    | `--ignore` option of hadolint.           |
-| [`trusted-registry`](#trusted-registry)                                     | `string`, `string[]` | -                    | `--trusted-registry` option of hadolint. |
-| [`config`](#config)                                                         | `string`             | -                    | `--config` option of hadolint.           |
+| Name                                                                        | Type                 | Default              |
+| --------------------------------------------------------------------------- | -------------------- | -------------------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#root_dir-option) | `string`             | -                    |
+| [`target`](#target)                                                         | `string`, `string[]` | `**/Dockerfile{,.*}` |
+| [`ignore`](#ignore)                                                         | `string`, `string[]` | -                    |
+| [`trusted-registry`](#trusted-registry)                                     | `string`, `string[]` | -                    |
+| [`config`](#config)                                                         | `string`             | -                    |
 
 ### `target`
 
@@ -72,6 +72,8 @@ linter:
       - "DL3003"
 ```
 
+See also the `--ignore` option.
+
 ### `trusted-registry`
 
 This option can warn you when images from untrusted repositories are being used in Dockerfiles. If you specify some trusted repositories, configure as follow:
@@ -83,6 +85,8 @@ linter:
       - "my-company.com:500"
 ```
 
+See also the `--trusted-registry` option.
+
 ### `config`
 
 This option allow you to specify configuration file in yaml format like this [example](https://github.com/hadolint/hadolint#configure). If you specify path to configuration file, configure as follow:
@@ -92,3 +96,5 @@ linter:
   hadolint:
     config: custom-hadolint.yml
 ```
+
+See also the `--config` option.
