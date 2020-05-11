@@ -11,9 +11,12 @@ hide_title: true
 | ----------------- | --------- | -------------------------------------------- |
 | 3.5.4             | PHP 7.4.4 | https://pear.php.net/package/PHP_CodeSniffer |
 
+**PHP_CodeSniffer** is a style checker to enforce a defined set of PHP coding standards.
+
 ## Getting Started
 
-To start using PHP_CodeSniffer, enable it in [Repository Settings](../../getting-started/repository-settings.md). To configure the coding standard you want to follow, add `sider.yml` in your repository and set the `standard` option:
+To start using PHP_CodeSniffer, enable it in [repository settings](../../getting-started/repository-settings.md).
+To configure the coding standard you want to follow, add `sider.yml` in your repository and set the `standard` option:
 
 ```yaml
 linter:
@@ -56,14 +59,14 @@ linter:
 
 You can use several options to fine-tune PHP_CodeSniffer to your project:
 
-| Name                                                                        | Type     | Default | Description                                             |
-| --------------------------------------------------------------------------- | -------- | ------- | ------------------------------------------------------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#root_dir-option) | `string` | -       | A root directory.                                       |
-| [`dir`](#dir)                                                               | `string` | `.`     | Set targets to analyze.                                 |
-| [`standard`](#standard)                                                     | `string` | `PSR2`  | Set coding standard or your config file when analyzing. |
-| [`extensions`](#extensions)                                                 | `string` | `php`   | Set extensions to analyze.                              |
-| [`encoding`](#encoding)                                                     | `string` | -       | Set file encoding.                                      |
-| [`ignore`](#ignore)                                                         | `string` | -       | Excludes files or directories from analysis.            |
+| Name                                                                        | Type     | Default |
+| --------------------------------------------------------------------------- | -------- | ------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#root_dir-option) | `string` | -       |
+| [`dir`](#dir)                                                               | `string` | `.`     |
+| [`standard`](#standard)                                                     | `string` | `PSR2`  |
+| [`extensions`](#extensions)                                                 | `string` | `php`   |
+| [`encoding`](#encoding)                                                     | `string` | -       |
+| [`ignore`](#ignore)                                                         | `string` | -       |
 
 ### `dir`
 
