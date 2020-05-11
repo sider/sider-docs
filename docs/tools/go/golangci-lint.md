@@ -65,11 +65,11 @@ You can use the following options to fine-tune GolangCI-Lint to your project.
 | [`root_dir`](../../getting-started/custom-configuration.md#root_dir-option) | `string`             | -       |
 | [`target`](#target)                                                         | `string`, `string[]` | `./...` |
 | [`config`](#config)                                                         | `string`             | -       |
+| [`no-config`](#no-config)                                                   | `boolean`            | `false` |
 | [`disable`](#disable)                                                       | `string`, `string[]` | -       |
 | [`disable-all`](#disable-all)                                               | `boolean`            | `false` |
 | [`enable`](#enable)                                                         | `string`             | -       |
 | [`fast`](#fast)                                                             | `string`, `string[]` | -       |
-| [`no-config`](#no-config)                                                   | `boolean`            | `false` |
 | [`presets`](#presets)                                                       | `string`, `string[]` | -       |
 | [`skip-dirs`](#skip-dirs)                                                   | `string`, `string[]` | -       |
 | [`skip-dirs-use-default`](#skip-dirs-use-default)                           | `boolean`            | `true`  |
