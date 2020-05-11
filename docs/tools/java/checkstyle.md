@@ -15,7 +15,7 @@ hide_title: true
 
 ## Getting Started
 
-To start using Checkstyle, enable it in [repository settings](../../getting-started/repository-settings.md).
+To start using Checkstyle, enable it in your [repository settings](../../getting-started/repository-settings.md).
 
 ## Configuration
 

@@ -15,7 +15,7 @@ hide_title: true
 
 ## Getting Started
 
-To start using PHP_CodeSniffer, enable it in [repository settings](../../getting-started/repository-settings.md).
+To start using PHP_CodeSniffer, enable it in your [repository settings](../../getting-started/repository-settings.md).
 To configure the coding standard you want to follow, add `sider.yml` in your repository and set the `standard` option:
 
 ```yaml

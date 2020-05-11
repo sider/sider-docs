@@ -13,7 +13,7 @@ hide_title: true
 
 ## Getting Started
 
-To start using PMD, enable it in [Repository Settings](../../getting-started/repository-settings.md).
+To start using PMD, enable it in your [repository settings](../../getting-started/repository-settings.md).
 
 ## Configuration
 

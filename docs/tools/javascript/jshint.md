@@ -13,7 +13,7 @@ hide_title: true
 
 ## Getting Started
 
-To start using JSHint, enable it in [Repository Settings](../../getting-started/repository-settings.md).
+To start using JSHint, enable it in your [repository settings](../../getting-started/repository-settings.md).
 
 To customize the configuration, use the standard `.jshintrc` or `.jshintignore` files. Configuration via `jshintConfig` in `package.json` is also supported.
 

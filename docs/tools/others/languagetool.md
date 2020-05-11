@@ -18,7 +18,7 @@ It finds many mistakes like grammar errors, misspells, and so on.
 
 ## Getting Started
 
-To start using LanguageTool, enable it in [Repository Settings](../../getting-started/repository-settings.md).
+To start using LanguageTool, enable it in your [repository settings](../../getting-started/repository-settings.md).
 
 ## Limitation
 

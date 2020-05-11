@@ -15,7 +15,7 @@ hide_title: true
 
 ## Getting Started
 
-To start using PHPMD, enable it in [Repository Settings](../../getting-started/repository-settings.md).
+To start using PHPMD, enable it in your [repository settings](../../getting-started/repository-settings.md).
 You can use `sider.yml` to configure PHPMD.
 
 ## Performance Issues
