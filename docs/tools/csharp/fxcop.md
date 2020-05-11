@@ -23,7 +23,7 @@ This is a beta release. We have several limitations for analysis.
 
 ## Getting Started
 
-To start using FxCop, enable it in [Repository Settings](../../getting-started/repository-settings.md).
+To start using FxCop, enable it in your [repository settings](../../getting-started/repository-settings.md).
 
 ## Configuration via `sider.yml`
 

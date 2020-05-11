@@ -17,7 +17,7 @@ hide_title: true
 
 ## Getting Started
 
-To start using detekt, enable it in [Repository Settings](../../getting-started/repository-settings.md), and put a configuration in `sider.yml`.
+To start using detekt, enable it in your [repository settings](../../getting-started/repository-settings.md), and put a configuration in `sider.yml`.
 
 ### Using detekt
 

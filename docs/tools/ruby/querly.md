@@ -13,7 +13,7 @@ hide_title: true
 
 ## Getting Started
 
-To start using Querly, enable it in [Repository Settings](../../getting-started/repository-settings.md),
+To start using Querly, enable it in your [repository settings](../../getting-started/repository-settings.md),
 and put a `querly.yaml` config in your repository's root directory.
 
 Visit the Querly project page for more information about writing rules:

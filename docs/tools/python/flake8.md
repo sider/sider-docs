@@ -13,7 +13,7 @@ hide_title: true
 
 ## Getting Started
 
-To start using Flake8, enable it in [Repository Settings](../../getting-started/repository-settings.md).
+To start using Flake8, enable it in your [repository settings](../../getting-started/repository-settings.md).
 
 To customize Flake8, put a `.flake8` file in your repository.
 

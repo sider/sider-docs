@@ -13,7 +13,7 @@ hide_title: true
 
 ## Getting Started
 
-To start using SwiftLint, enable it in [Repository Settings](../../getting-started/repository-settings.md).
+To start using SwiftLint, enable it in your [repository settings](../../getting-started/repository-settings.md).
 
 To customize SwiftLint, put a `.swiftlint.yml` file in your repository.
 

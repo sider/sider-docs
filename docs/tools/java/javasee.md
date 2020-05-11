@@ -13,7 +13,7 @@ hide_title: true
 
 ## Getting Started
 
-To start using JavaSee, enable it in [Repository Settings](../../getting-started/repository-settings.md) and put a configuration file `javasee.yml` in the repository.
+To start using JavaSee, enable it in your [repository settings](../../getting-started/repository-settings.md) and put a configuration file `javasee.yml` in the repository.
 
 ## Configuration
 
