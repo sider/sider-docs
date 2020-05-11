@@ -11,9 +11,11 @@ hide_title: true
 | :---------------- | :---------- | :--------------------- |
 | 8.30              | Java 12.0.2 | https://checkstyle.org |
 
+**Checkstyle** is a style checker for Java code and aims to enforce a coding standard.
+
 ## Getting Started
 
-To start using Checkstyle, enable it in [Repository Settings](../../getting-started/repository-settings.md).
+To start using Checkstyle, enable it in [repository settings](../../getting-started/repository-settings.md).
 
 ## Configuration
 
@@ -34,14 +36,14 @@ linter:
     properties: checkstyle.properties
 ```
 
-| Name                                                                        | Type                           | Default  | Description                        |
-| --------------------------------------------------------------------------- | ------------------------------ | -------- | ---------------------------------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#root_dir-option) | `string`                       | -        | A root directory.                  |
-| [`config`](#config)                                                         | `string`                       | `google` | Coding standard name or file path. |
-| [`dir`](#dir)                                                               | `string`, `string[]`           | `.`      | Directory to analyze.              |
-| [`exclude`](#exclude)                                                       | `string`, `string[]`, `hash[]` | -        | Excluded directory.                |
-| [`ignore`](#ignore)                                                         | `string[]`                     | -        | Ignored severities.                |
-| [`properties`](#properties)                                                 | `string`                       | -        | Properties file.                   |
+| Name                                                                        | Type                           | Default  |
+| --------------------------------------------------------------------------- | ------------------------------ | -------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#root_dir-option) | `string`                       | -        |
+| [`config`](#config)                                                         | `string`                       | `google` |
+| [`dir`](#dir)                                                               | `string`, `string[]`           | `.`      |
+| [`exclude`](#exclude)                                                       | `string`, `string[]`, `hash[]` | -        |
+| [`ignore`](#ignore)                                                         | `string[]`                     | -        |
+| [`properties`](#properties)                                                 | `string`                       | -        |
 
 ### `config`
 
@@ -49,8 +51,8 @@ This option allows you to declare the coding standard you want to follow.
 
 Supported values are:
 
-- [`google`](https://checkstyle.sourceforge.io/google_style.html) (for `/google_checks.xml`)
-- [`sun`](https://checkstyle.sourceforge.io/sun_style.html) (for `/sun_checks.xml`)
+- [`google`](https://checkstyle.org/google_style.html) (for `/google_checks.xml`)
+- [`sun`](https://checkstyle.org/sun_style.html) (for `/sun_checks.xml`)
 - Path to your configuration file
 
 When you write `google` or `sun`, config files distributed from Checkstyle are used.
