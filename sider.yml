@@ -5,3 +5,6 @@ linter:
     npm_install: false
   languagetool:
     ext: [.md]
+    disable:
+      - DOUBLE_PUNCTUATION
+      - WORD_CONTAINS_UNDERSCORE
