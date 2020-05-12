@@ -46,16 +46,16 @@ linter:
 
 You can customize your detekt analysis using `sider.yml`.
 
-| Name                                                                        | Type                 | Default |
-| --------------------------------------------------------------------------- | -------------------- | ------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#root_dir-option) | `string`             | -       |
-| [`baseline`](#baseline)                                                     | `string`             | -       |
-| [`config`](#config)                                                         | `string`, `string[]` | `[]`    |
-| [`config-resource`](#config-resource)                                       | `string`, `string[]` | `[]`    |
-| [`disable-default-rulesets`](#disable-default-rulesets)                     | `boolean`            | `false` |
-| [`excludes`](#excludes)                                                     | `string`, `string[]` | `[]`    |
-| [`includes`](#includes)                                                     | `string`, `string[]` | `[]`    |
-| [`input`](#input)                                                           | `string`, `string[]` | `.`     |
+| Name                                                                                  | Type                 | Default |
+| ------------------------------------------------------------------------------------- | -------------------- | ------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`             | -       |
+| [`baseline`](#baseline)                                                               | `string`             | -       |
+| [`config`](#config)                                                                   | `string`, `string[]` | `[]`    |
+| [`config-resource`](#config-resource)                                                 | `string`, `string[]` | `[]`    |
+| [`disable-default-rulesets`](#disable-default-rulesets)                               | `boolean`            | `false` |
+| [`excludes`](#excludes)                                                               | `string`, `string[]` | `[]`    |
+| [`includes`](#includes)                                                               | `string`, `string[]` | `[]`    |
+| [`input`](#input)                                                                     | `string`, `string[]` | `.`     |
 
 For more details about the options, see the [official documentation](https://arturbosch.github.io/detekt/cli.html).
 

@@ -31,11 +31,11 @@ linter:
     php: src
 ```
 
-| Name                                                                        | Type     | Default | Description                                                    |
-| --------------------------------------------------------------------------- | -------- | ------- | -------------------------------------------------------------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#root_dir-option) | `string` | -       | A root directory.                                              |
-| [`rule`](#rule)                                                             | `string` | -       | Specify your configuration file or directory name for Phinder. |
-| [`php`](#php)                                                               | `string` | -       | Specify file name or directory name to analyze.                |
+| Name                                                                                  | Type     | Default | Description                                                    |
+| ------------------------------------------------------------------------------------- | -------- | ------- | -------------------------------------------------------------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string` | -       | A root directory.                                              |
+| [`rule`](#rule)                                                                       | `string` | -       | Specify your configuration file or directory name for Phinder. |
+| [`php`](#php)                                                                         | `string` | -       | Specify file name or directory name to analyze.                |
 
 ### `rule`
 

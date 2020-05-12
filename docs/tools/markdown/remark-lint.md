@@ -60,15 +60,15 @@ linter:
 
 You can use the following options to fine-tune remark-lint to your project:
 
-| Name                                                                              | Type                 | Default | Description                            |
-| --------------------------------------------------------------------------------- | -------------------- | ------- | -------------------------------------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#root_dir-option)       | `string`             | -       | A root directory.                      |
-| [`npm_install`](../../getting-started/custom-configuration.md#npm_install-option) | `boolean`, `string`  | -       | A behavior of npm installation.        |
-| [`target`](#target)                                                               | `string`, `string[]` | `.`     | Files or directories to analyze.       |
-| [`ext`](#ext)                                                                     | `string`             | -       | `--ext` option of remark-lint.         |
-| [`rc-path`](#rc-path)                                                             | `string`             | -       | `--rc-path` option of remark-lint.     |
-| [`ignore-path`](#ignore-path)                                                     | `string`             | -       | `--ignore-path` option of remark-lint. |
-| [`use`](#use)                                                                     | `string`, `string[]` | -       | `--use` option of remark-lint.         |
+| Name                                                                                        | Type                 | Default | Description                            |
+| ------------------------------------------------------------------------------------------- | -------------------- | ------- | -------------------------------------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir)       | `string`             | -       | A root directory.                      |
+| [`npm_install`](../../getting-started/custom-configuration.md#linteranalyzer_idnpm_install) | `boolean`, `string`  | -       | A behavior of npm installation.        |
+| [`target`](#target)                                                                         | `string`, `string[]` | `.`     | Files or directories to analyze.       |
+| [`ext`](#ext)                                                                               | `string`             | -       | `--ext` option of remark-lint.         |
+| [`rc-path`](#rc-path)                                                                       | `string`             | -       | `--rc-path` option of remark-lint.     |
+| [`ignore-path`](#ignore-path)                                                               | `string`             | -       | `--ignore-path` option of remark-lint. |
+| [`use`](#use)                                                                               | `string`, `string[]` | -       | `--use` option of remark-lint.         |
 
 For more details about the CLI options of remark-lint, see the [document](https://github.com/remarkjs/remark/tree/master/packages/remark-cli#cli).
 

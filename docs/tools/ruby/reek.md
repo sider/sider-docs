@@ -32,12 +32,12 @@ linter:
 
 You can use the following options to make analysis fitter for your project.
 
-| Name                                                                        | Type                 | Default | Description                      |
-| --------------------------------------------------------------------------- | -------------------- | ------- | -------------------------------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#root_dir-option) | `string`             | -       | A root directory.                |
-| [`gems`](../../getting-started/custom-configuration.md#gems-option)         | `string[]`, `hash[]` | -       | Gems to install.                 |
-| [`target`](#target)                                                         | `string`, `string[]` | `.`     | Files or directories to analyze. |
-| [`config`](#config)                                                         | `string`             | -       | `--config` option of Reek.       |
+| Name                                                                                  | Type                 | Default | Description                      |
+| ------------------------------------------------------------------------------------- | -------------------- | ------- | -------------------------------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`             | -       | A root directory.                |
+| [`gems`](../../getting-started/custom-configuration.md#linteranalyzer_idgems)         | `string[]`, `hash[]` | -       | Gems to install.                 |
+| [`target`](#target)                                                                   | `string`, `string[]` | `.`     | Files or directories to analyze. |
+| [`config`](#config)                                                                   | `string`             | -       | `--config` option of Reek.       |
 
 ### `target`
 

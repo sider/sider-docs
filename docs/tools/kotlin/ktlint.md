@@ -84,22 +84,22 @@ $ mvn <goal>
 You can customize your ktlint analysis using `sider.yml`.
 The configuration for ktlint accepts one of the `cli`, `gradle`, and `maven` keys.
 
-| Name                                                                        | Type                                | Default      | Description                                                                                  |
-| --------------------------------------------------------------------------- | ----------------------------------- | ------------ | -------------------------------------------------------------------------------------------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#root_dir-option) | `string`                            | -            | A root directory.                                                                            |
-| [`cli`](#cli)                                                               | `hash`                              | -            | Settings for CLI execution.                                                                  |
-| [`cli.patterns`](#clipatterns)                                              | `string`, `string[]`                | `[]`         | File patterns to analyze.                                                                    |
-| [`cli.ruleset`](#cliruleset)                                                | `string`, `string[]`                | `[]`         | Ruleset URLs.                                                                                |
-| [`cli.disabled_rules`](#clidisabled_rules)                                  | `string`, `string[]`                | `[]`         | Whether disable rules or not.                                                                |
-| [`cli.experimental`](#cliexperimental)                                      | `boolean`                           | `false`      | [`--experimental`](https://github.com/pinterest/ktlint#experimental-rules) option of ktlint. |
-| [`gradle`](#gradle)                                                         | `hash`                              | -            | Settings for Gradle execution.                                                               |
-| [`gradle.task`](#gradletask)                                                | `string`                            | _(required)_ | Task name of Gradle.                                                                         |
-| [`gradle.reporter`](#gradlereporter)                                        | `"checkstyle"`, `"json"`, `"plain"` | _(required)_ | Reporter name.                                                                               |
-| [`gradle.output`](#gradleoutput)                                            | `string`                            | -            | Output file path.                                                                            |
-| [`maven`](#maven)                                                           | `hash`                              | -            | Settings for Maven execution.                                                                |
-| [`maven.goal`](#mavengoal)                                                  | `string`                            | _(required)_ | Goal name of Maven.                                                                          |
-| [`maven.reporter`](#mavenreporter)                                          | `"checkstyle"`, `"json"`, `"plain"` | _(required)_ | Reporter name. Same as [`gradle.reporter`](#gradlereporter).                                 |
-| [`maven.output`](#mavenoutput)                                              | `string`                            | _(required)_ | Output file path.                                                                            |
+| Name                                                                                  | Type                                | Default      | Description                                                                                  |
+| ------------------------------------------------------------------------------------- | ----------------------------------- | ------------ | -------------------------------------------------------------------------------------------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`                            | -            | A root directory.                                                                            |
+| [`cli`](#cli)                                                                         | `hash`                              | -            | Settings for CLI execution.                                                                  |
+| [`cli.patterns`](#clipatterns)                                                        | `string`, `string[]`                | `[]`         | File patterns to analyze.                                                                    |
+| [`cli.ruleset`](#cliruleset)                                                          | `string`, `string[]`                | `[]`         | Ruleset URLs.                                                                                |
+| [`cli.disabled_rules`](#clidisabled_rules)                                            | `string`, `string[]`                | `[]`         | Whether disable rules or not.                                                                |
+| [`cli.experimental`](#cliexperimental)                                                | `boolean`                           | `false`      | [`--experimental`](https://github.com/pinterest/ktlint#experimental-rules) option of ktlint. |
+| [`gradle`](#gradle)                                                                   | `hash`                              | -            | Settings for Gradle execution.                                                               |
+| [`gradle.task`](#gradletask)                                                          | `string`                            | _(required)_ | Task name of Gradle.                                                                         |
+| [`gradle.reporter`](#gradlereporter)                                                  | `"checkstyle"`, `"json"`, `"plain"` | _(required)_ | Reporter name.                                                                               |
+| [`gradle.output`](#gradleoutput)                                                      | `string`                            | -            | Output file path.                                                                            |
+| [`maven`](#maven)                                                                     | `hash`                              | -            | Settings for Maven execution.                                                                |
+| [`maven.goal`](#mavengoal)                                                            | `string`                            | _(required)_ | Goal name of Maven.                                                                          |
+| [`maven.reporter`](#mavenreporter)                                                    | `"checkstyle"`, `"json"`, `"plain"` | _(required)_ | Reporter name. Same as [`gradle.reporter`](#gradlereporter).                                 |
+| [`maven.output`](#mavenoutput)                                                        | `string`                            | _(required)_ | Output file path.                                                                            |
 
 ### `cli`
 

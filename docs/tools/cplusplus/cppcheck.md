@@ -42,15 +42,15 @@ linter:
 
 You can use the following options to fine-tune Cppcheck to your project.
 
-| Name                                                                        | Type                 | Default |
-| --------------------------------------------------------------------------- | -------------------- | ------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#root_dir-option) | `string`             | -       |
-| [`target`](#target)                                                         | `string`, `string[]` | `.`     |
-| [`ignore`](#ignore)                                                         | `string`, `string[]` | -       |
-| [`enable`](#enable)                                                         | `string`             | -       |
-| [`std`](#std)                                                               | `string`             | -       |
-| [`project`](#project)                                                       | `string`             | -       |
-| [`language`](#language)                                                     | `string`             | -       |
+| Name                                                                                  | Type                 | Default |
+| ------------------------------------------------------------------------------------- | -------------------- | ------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`             | -       |
+| [`target`](#target)                                                                   | `string`, `string[]` | `.`     |
+| [`ignore`](#ignore)                                                                   | `string`, `string[]` | -       |
+| [`enable`](#enable)                                                                   | `string`             | -       |
+| [`std`](#std)                                                                         | `string`             | -       |
+| [`project`](#project)                                                                 | `string`             | -       |
+| [`language`](#language)                                                               | `string`             | -       |
 
 ### `target`
 

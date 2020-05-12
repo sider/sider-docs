@@ -28,11 +28,11 @@ linter:
       - test
 ```
 
-| Name                                                                        | Type                 | Default | Description             |
-| --------------------------------------------------------------------------- | -------------------- | ------- | ----------------------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#root_dir-option) | `string`             | -       | A root directory.       |
-| [`config`](#config)                                                         | `string`             | -       | Config file path.       |
-| [`dir`](#dir)                                                               | `string`, `string[]` | -       | Directories to analyze. |
+| Name                                                                                  | Type                 | Default | Description             |
+| ------------------------------------------------------------------------------------- | -------------------- | ------- | ----------------------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`             | -       | A root directory.       |
+| [`config`](#config)                                                                   | `string`             | -       | Config file path.       |
+| [`dir`](#dir)                                                                         | `string`, `string[]` | -       | Directories to analyze. |
 
 ### `config`
 

@@ -11,9 +11,9 @@ You don't need to do any special configuration for Sider to start analyzing your
 
 > `sideci.yml` is still supported for the backward compatibility, but Sider recognizes `sider.yml` if both exist.
 
-## Configuration via `sider.yml`
+## Configuration file
 
-First, add a file named `sider.yml` in your project's root directory.
+Add a file named `sider.yml` in your project's root directory. Here is an example:
 
 ```yaml
 linter:
@@ -31,18 +31,22 @@ linter:
     glob: "**/*.{css,scss}"
 ```
 
-The options you can specify in `sider.yml` are grouped into two categories:
+The options you can specify in `sider.yml` are grouped into the following categories:
 
-1. Analyzer specific options
-2. Common options available to all analyzers
+1. Analyzer specific options (`linter.<analyzer_id>.*`)
+2. Analysis options (e.g. `ignore`)
 
-Currently, `root_dir` is the only common option.
+### Analyzer specific options
 
-## Analysis tool specific configuration
+You can use `sider.yml` to configure each analyzer's vendor-supplied settings.
+Sider also provides extra options for some analyzers that configure how Sider runs the analyzer (for example, some tools might need to run `npm install` before beginning analysis).
+See each analyzer's documentation for more details about available options.
 
-You can use `sider.yml` to configure each analyzer's vendor-supplied settings. Sider also provides extra options for some analyzers that configure how Sider runs the analyzer (for example, some tools might need to run `npm install` before beginning analysis). The tools documentation has more information about which options are available for each tool.
+---
 
-## `root_dir` option
+The following sections describe the available options.
+
+## `linter.<analyzer_id>.root_dir`
 
 _Type:_ `string`
 
@@ -56,7 +60,7 @@ linter:
 
 Sider will run ESLint analysis in `./frontend` directory.
 
-## `gems` option
+## `linter.<analyzer_id>.gems`
 
 _Type:_ `string[]`, `hash[]`
 
@@ -90,7 +94,7 @@ Sider decides the analyzer version in the following order:
 
 However, if the version written in `Gemfile.lock` does not satisfy our constraints, that version is skipped.
 
-### Install gems from Gemfile.lock
+### Install gems from `Gemfile.lock`
 
 If you want to additionally install a specific gem written in `Gemfile.lock`, you can omit the `version` as follows:
 
@@ -116,7 +120,7 @@ linter:
         source: "https://gems.mycompany.com"
 ```
 
-### Install gems from git repositories
+### Install gems from Git repository
 
 You can also install a gem in a git repository. Please note that the git option cannot be specified with version or source.
 
@@ -145,7 +149,7 @@ linter:
 
 If you would like to install a gem located in a private git repository, see [private dependencies guide](../advanced-settings/private-dependencies.md) and configure SSH key.
 
-## `npm_install` option
+## `linter.<analyzer_id>.npm_install`
 
 _Type:_ `boolean`, `string`
 
@@ -183,7 +187,7 @@ When the `npm_install` option is not `false`, Sider will try as follows:
 When the option is `false`, Sider will skip these installation steps and analyze with the pre-installed default version.
 You might want to set the option to `false` if you don't configure analyzer and don't want to see warnings.
 
-## `ignore` option
+## `ignore`
 
 _Type:_ `string[]`
 
@@ -199,7 +203,7 @@ ignore:
   - "images/**"
 ```
 
-## `branches.exclude` option
+## `branches.exclude`
 
 _Type:_ `string[]`
 

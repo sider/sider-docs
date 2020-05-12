@@ -37,16 +37,16 @@ linter:
 
 You can use the following options to fine-tune ShellCheck to your project.
 
-| Name                                                                        | Type                           | Default       | Description                        |
-| --------------------------------------------------------------------------- | ------------------------------ | ------------- | ---------------------------------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#root_dir-option) | `string`                       | -             | A root directory.                  |
-| [`target`](#target)                                                         | `string`, `string[]`, `hash[]` | _(See below)_ | Files to analyze.                  |
-| [`include`](#include)                                                       | `string`, `string[]`           | -             | `--include` option of ShellCheck.  |
-| [`exclude`](#exclude)                                                       | `string`, `string[]`           | -             | `--exclude` option of ShellCheck.  |
-| [`enable`](#enable)                                                         | `string`, `string[]`           | -             | `--enable` option of ShellCheck.   |
-| [`shell`](#shell)                                                           | `string`                       | -             | `--shell` option of ShellCheck.    |
-| [`severity`](#severity)                                                     | `string`                       | -             | `--severity` option of ShellCheck. |
-| [`norc`](#norc)                                                             | `boolean`                      | `false`       | `--norc` option of ShellCheck.     |
+| Name                                                                                  | Type                           | Default       | Description                        |
+| ------------------------------------------------------------------------------------- | ------------------------------ | ------------- | ---------------------------------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`                       | -             | A root directory.                  |
+| [`target`](#target)                                                                   | `string`, `string[]`, `hash[]` | _(See below)_ | Files to analyze.                  |
+| [`include`](#include)                                                                 | `string`, `string[]`           | -             | `--include` option of ShellCheck.  |
+| [`exclude`](#exclude)                                                                 | `string`, `string[]`           | -             | `--exclude` option of ShellCheck.  |
+| [`enable`](#enable)                                                                   | `string`, `string[]`           | -             | `--enable` option of ShellCheck.   |
+| [`shell`](#shell)                                                                     | `string`                       | -             | `--shell` option of ShellCheck.    |
+| [`severity`](#severity)                                                               | `string`                       | -             | `--severity` option of ShellCheck. |
+| [`norc`](#norc)                                                                       | `boolean`                      | `false`       | `--norc` option of ShellCheck.     |
 
 ### `target`
 

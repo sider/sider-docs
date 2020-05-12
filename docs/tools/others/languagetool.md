@@ -70,19 +70,19 @@ linter:
 
 You can customize the analysis via the following options:
 
-| Name                                                                        | Type       | Default                            | Description                       |
-| --------------------------------------------------------------------------- | ---------- | ---------------------------------- | --------------------------------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#root_dir-option) | `string`   | -                                  | A root directory.                 |
-| [`target`](#target)                                                         | `string`   | `.`                                | A directory to be analyzed.       |
-| [`ext`](#ext)                                                               | `string[]` | `[".txt"]`                         | File extensions to be analyzed.   |
-| [`exclude`](#exclude)                                                       | `string[]` | `["**/{requirements,robots}.txt"]` | Glob patterns to be excluded.     |
-| [`language`](#language)                                                     | `string`   | `en-US`                            | A target language.                |
-| [`encoding`](#encoding)                                                     | `string`   | `UTF-8`                            | A target file encoding.           |
-| [`disable`](#disable)                                                       | `string[]` | `[]`                               | Disabled rules.                   |
-| [`enable`](#enable)                                                         | `string[]` | `[]`                               | Enabled rules.                    |
-| [`enabledonly`](#enabledonly)                                               | `boolean`  | `false`                            | Whether using only enabled rules. |
-| [`disablecategories`](#disablecategories)                                   | `string[]` | `[]`                               | Disabled rule categories.         |
-| [`enablecategories`](#enablecategories)                                     | `string[]` | `[]`                               | Enabled rule categories.          |
+| Name                                                                                  | Type       | Default                            | Description                       |
+| ------------------------------------------------------------------------------------- | ---------- | ---------------------------------- | --------------------------------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`   | -                                  | A root directory.                 |
+| [`target`](#target)                                                                   | `string`   | `.`                                | A directory to be analyzed.       |
+| [`ext`](#ext)                                                                         | `string[]` | `[".txt"]`                         | File extensions to be analyzed.   |
+| [`exclude`](#exclude)                                                                 | `string[]` | `["**/{requirements,robots}.txt"]` | Glob patterns to be excluded.     |
+| [`language`](#language)                                                               | `string`   | `en-US`                            | A target language.                |
+| [`encoding`](#encoding)                                                               | `string`   | `UTF-8`                            | A target file encoding.           |
+| [`disable`](#disable)                                                                 | `string[]` | `[]`                               | Disabled rules.                   |
+| [`enable`](#enable)                                                                   | `string[]` | `[]`                               | Enabled rules.                    |
+| [`enabledonly`](#enabledonly)                                                         | `boolean`  | `false`                            | Whether using only enabled rules. |
+| [`disablecategories`](#disablecategories)                                             | `string[]` | `[]`                               | Disabled rule categories.         |
+| [`enablecategories`](#enablecategories)                                               | `string[]` | `[]`                               | Enabled rule categories.          |
 
 ### `target`
 

@@ -35,6 +35,6 @@ linter:
     root_dir: src/
 ```
 
-| Name                                                                        | Type     | Default |
-| --------------------------------------------------------------------------- | -------- | ------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#root_dir-option) | `string` | -       |
+| Name                                                                                  | Type     | Default |
+| ------------------------------------------------------------------------------------- | -------- | ------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string` | -       |

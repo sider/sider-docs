@@ -42,15 +42,15 @@ linter:
 
 You can use the following options to fine-tune cpplint to your project.
 
-| Name                                                                        | Type                 | Default |
-| --------------------------------------------------------------------------- | -------------------- | ------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#root_dir-option) | `string`             | -       |
-| [`target`](#target)                                                         | `string`, `string[]` | `.`     |
-| [`extensions`](#extensions)                                                 | `string`             | -       |
-| [`headers`](#headers)                                                       | `string`             | -       |
-| [`filter`](#filter)                                                         | `string`             | -       |
-| [`linelength`](#linelength)                                                 | `string`             | -       |
-| [`exclude`](#exclude)                                                       | `string`             | -       |
+| Name                                                                                  | Type                 | Default |
+| ------------------------------------------------------------------------------------- | -------------------- | ------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`             | -       |
+| [`target`](#target)                                                                   | `string`, `string[]` | `.`     |
+| [`extensions`](#extensions)                                                           | `string`             | -       |
+| [`headers`](#headers)                                                                 | `string`             | -       |
+| [`filter`](#filter)                                                                   | `string`             | -       |
+| [`linelength`](#linelength)                                                           | `string`             | -       |
+| [`exclude`](#exclude)                                                                 | `string`             | -       |
 
 ### `target`
 
