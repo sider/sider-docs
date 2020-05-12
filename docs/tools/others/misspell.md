@@ -11,13 +11,15 @@ hide_title: true
 | ----------------- | ----------------------- | ----------------------------------- |
 | 0.3.4             | Others (Spell checking) | https://github.com/client9/misspell |
 
+**Misspell** is a spell checker to correct commonly misspelled English.
+
 ## Getting Started
 
-To start using Misspell, enable it in repository settings page on [sider.review](https://sider.review/).
+To start using Misspell, enable it in your [repository settings](../../getting-started/repository-settings.md).
 
-## Configuration via `sider.yml`
+## Configuration
 
-Here are example settings for Misspell under `misspell`:
+Here is a configuration example via `sider.yml`:
 
 ```yaml
 linter:
@@ -36,33 +38,34 @@ linter:
 
 You can use several options to more comfortable analysis to your project.
 
-| Name                                                                                  | Type           | Default | Description                                              |
-| ------------------------------------------------------------------------------------- | -------------- | ------- | -------------------------------------------------------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`       | -       | A root directory.                                        |
-| [`exclude`](#exclude)                                                                 | `string[]`     | -       | Set exclude files or directories from analysis.          |
-| [`target`](#target)                                                                   | `string[]`     | -       | Set targets for analysis.                                |
-| [`locale`](#locale)                                                                   | `"US"`, `"UK"` | -       | Check spelling with British English or American English. |
-| [`ignore`](#ignore)                                                                   | `string`       | -       | Set words to ignore from analysis.                       |
-
-Details of options are in below.
-
-### `exclude`
-
-This option allows you to exclude files or directories from analysis targets of Misspell. You can use glob to specify files or directories which you would like to exclude. You need to set values of the option as a list.
+| Name                                                                                  | Type           | Default |
+| ------------------------------------------------------------------------------------- | -------------- | ------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`       | -       |
+| [`target`](#target)                                                                   | `string[]`     | `.`     |
+| [`exclude`](#exclude)                                                                 | `string[]`     | `[]`    |
+| [`locale`](#locale)                                                                   | `"US"`, `"UK"` | -       |
+| [`ignore`](#ignore)                                                                   | `string`       | -       |
 
 ### `target`
 
-This option allows you to specify files or directories which Misspell analyzes. You need to set values of the option as a list.
+This option allows you to specify files or directories to analyze.
 
 > **DEPRECATED**: `targets` option has been deprecated. Use `target` instead.
 
+### `exclude`
+
+This option allows you to exclude files or directories from your analysis. Glob is also available.
+
 ### `locale`
 
-This option allows you to choose a spelling feature which is depended on locales. You can select either `UK` or `US`.
-If you would like to check your English based on American English, write `US`.
-By default, you will not be corrected for words that have different spelling in British English and American English, for example colour(color), centre(center), etc.
+This option allows you to choose a spelling feature which is depended on locales. You can select:
+
+- `US` - American English
+- `UK` - British English
+
+If the option is omitted, some words which have different spelling between the locales above will _not_ be detected.
+For example, `color` and `colour`, `center` and `centre`, etc.
 
 ### `ignore`
 
-This option allows you to ignore certain words when checking. If you list words in this option, the listed words will not be checked.
-If you want to declare multiple words in this option, you need to list each of them, separating each with a comma.
+This option allows you to ignore certain words when checking. This value should be a comma-separated list.
