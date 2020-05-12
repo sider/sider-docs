@@ -63,7 +63,7 @@ This option allows you to choose a spelling feature which is depended on locales
 - `US` - American English
 - `UK` - British English
 
-If the option is omitted, words, which have different spelling in British English and American English, will _not_ be detected.
+If the option is omitted, some words which have different spelling between the locales above will _not_ be detected.
 For example, `color` and `colour`, `center` and `centre`, etc.
 
 ### `ignore`
