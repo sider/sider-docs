@@ -26,7 +26,7 @@ linter:
       - vendor
       - "**/*.min.js"
       - exclude_file.rb
-    targets:
+    target:
       - target_directory
       - another_target_directory/foo.rb
       - bar.rb
@@ -40,7 +40,7 @@ You can use several options to more comfortable analysis to your project.
 | ------------------------------------------------------------------------------------- | -------------- | ------- | -------------------------------------------------------- |
 | [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`       | -       | A root directory.                                        |
 | [`exclude`](#exclude)                                                                 | `string[]`     | -       | Set exclude files or directories from analysis.          |
-| [`targets`](#targets)                                                                 | `string[]`     | -       | Set targets for analysis.                                |
+| [`target`](#target)                                                                   | `string[]`     | -       | Set targets for analysis.                                |
 | [`locale`](#locale)                                                                   | `"US"`, `"UK"` | -       | Check spelling with British English or American English. |
 | [`ignore`](#ignore)                                                                   | `string`       | -       | Set words to ignore from analysis.                       |
 
@@ -50,9 +50,11 @@ Details of options are in below.
 
 This option allows you to exclude files or directories from analysis targets of Misspell. You can use glob to specify files or directories which you would like to exclude. You need to set values of the option as a list.
 
-### `targets`
+### `target`
 
 This option allows you to specify files or directories which Misspell analyzes. You need to set values of the option as a list.
+
+> **DEPRECATED**: `targets` option has been deprecated. Use `target` instead.
 
 ### `locale`
 
