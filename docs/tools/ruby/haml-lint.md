@@ -38,15 +38,15 @@ linter:
 
 You can use several options to fine-tune HAML-Lint to your project.
 
-| Name                                                                        | Type                 | Default |
-| --------------------------------------------------------------------------- | -------------------- | ------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#root_dir-option) | `string`             | -       |
-| [`gems`](../../getting-started/custom-configuration.md#gems-option)         | `string[]`, `hash[]` | -       |
-| [`file`](#file)                                                             | `string`             | `.`     |
-| [`include_linter`](#include_linter)                                         | `string`, `string[]` | -       |
-| [`exclude_linter`](#exclude_linter)                                         | `string`, `string[]` | -       |
-| [`config`](#config)                                                         | `string`             | -       |
-| [`exclude`](#exclude)                                                       | `string`, `string[]` | -       |
+| Name                                                                                  | Type                 | Default |
+| ------------------------------------------------------------------------------------- | -------------------- | ------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`             | -       |
+| [`gems`](../../getting-started/custom-configuration.md#linteranalyzer_idgems)         | `string[]`, `hash[]` | -       |
+| [`file`](#file)                                                                       | `string`             | `.`     |
+| [`include_linter`](#include_linter)                                                   | `string`, `string[]` | -       |
+| [`exclude_linter`](#exclude_linter)                                                   | `string`, `string[]` | -       |
+| [`config`](#config)                                                                   | `string`             | -       |
+| [`exclude`](#exclude)                                                                 | `string`, `string[]` | -       |
 
 ### `file`
 

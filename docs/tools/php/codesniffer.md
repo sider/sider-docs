@@ -59,14 +59,14 @@ linter:
 
 You can use several options to fine-tune PHP_CodeSniffer to your project:
 
-| Name                                                                        | Type     | Default |
-| --------------------------------------------------------------------------- | -------- | ------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#root_dir-option) | `string` | -       |
-| [`dir`](#dir)                                                               | `string` | `.`     |
-| [`standard`](#standard)                                                     | `string` | `PSR2`  |
-| [`extensions`](#extensions)                                                 | `string` | `php`   |
-| [`encoding`](#encoding)                                                     | `string` | -       |
-| [`ignore`](#ignore)                                                         | `string` | -       |
+| Name                                                                                  | Type     | Default |
+| ------------------------------------------------------------------------------------- | -------- | ------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string` | -       |
+| [`dir`](#dir)                                                                         | `string` | `.`     |
+| [`standard`](#standard)                                                               | `string` | `PSR2`  |
+| [`extensions`](#extensions)                                                           | `string` | `php`   |
+| [`encoding`](#encoding)                                                               | `string` | -       |
+| [`ignore`](#ignore)                                                                   | `string` | -       |
 
 ### `dir`
 

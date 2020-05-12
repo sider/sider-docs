@@ -37,11 +37,11 @@ linter:
       - app
 ```
 
-| Name                                                                        | Type                 | Default |
-| --------------------------------------------------------------------------- | -------------------- | ------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#root_dir-option) | `string`             | -       |
-| [`config`](#config)                                                         | `string`             | -       |
-| [`target`](#target)                                                         | `string`, `string[]` | -       |
+| Name                                                                                  | Type                 | Default |
+| ------------------------------------------------------------------------------------- | -------------------- | ------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`             | -       |
+| [`config`](#config)                                                                   | `string`             | -       |
+| [`target`](#target)                                                                   | `string`, `string[]` | -       |
 
 ### `config`
 

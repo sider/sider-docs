@@ -36,14 +36,14 @@ linter:
     properties: checkstyle.properties
 ```
 
-| Name                                                                        | Type                           | Default  |
-| --------------------------------------------------------------------------- | ------------------------------ | -------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#root_dir-option) | `string`                       | -        |
-| [`config`](#config)                                                         | `string`                       | `google` |
-| [`dir`](#dir)                                                               | `string`, `string[]`           | `.`      |
-| [`exclude`](#exclude)                                                       | `string`, `string[]`, `hash[]` | -        |
-| [`ignore`](#ignore)                                                         | `string[]`                     | -        |
-| [`properties`](#properties)                                                 | `string`                       | -        |
+| Name                                                                                  | Type                           | Default  |
+| ------------------------------------------------------------------------------------- | ------------------------------ | -------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`                       | -        |
+| [`config`](#config)                                                                   | `string`                       | `google` |
+| [`dir`](#dir)                                                                         | `string`, `string[]`           | `.`      |
+| [`exclude`](#exclude)                                                                 | `string`, `string[]`, `hash[]` | -        |
+| [`ignore`](#ignore)                                                                   | `string[]`                     | -        |
+| [`properties`](#properties)                                                           | `string`                       | -        |
 
 ### `config`
 

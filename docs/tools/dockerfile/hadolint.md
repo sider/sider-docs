@@ -40,13 +40,13 @@ linter:
 
 You can use the following options to fine-tune hadolint to your project.
 
-| Name                                                                        | Type                 | Default              |
-| --------------------------------------------------------------------------- | -------------------- | -------------------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#root_dir-option) | `string`             | -                    |
-| [`target`](#target)                                                         | `string`, `string[]` | `**/Dockerfile{,.*}` |
-| [`ignore`](#ignore)                                                         | `string`, `string[]` | -                    |
-| [`trusted-registry`](#trusted-registry)                                     | `string`, `string[]` | -                    |
-| [`config`](#config)                                                         | `string`             | -                    |
+| Name                                                                                  | Type                 | Default              |
+| ------------------------------------------------------------------------------------- | -------------------- | -------------------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`             | -                    |
+| [`target`](#target)                                                                   | `string`, `string[]` | `**/Dockerfile{,.*}` |
+| [`ignore`](#ignore)                                                                   | `string`, `string[]` | -                    |
+| [`trusted-registry`](#trusted-registry)                                               | `string`, `string[]` | -                    |
+| [`config`](#config)                                                                   | `string`             | -                    |
 
 ### `target`
 

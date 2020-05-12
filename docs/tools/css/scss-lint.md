@@ -30,10 +30,10 @@ linter:
 
 You can use several options to fine-tune SCSS-Lint to your project:
 
-| Name                                                                        | Type     | Default | Description                         |
-| --------------------------------------------------------------------------- | -------- | ------- | ----------------------------------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#root_dir-option) | `string` | -       | A root directory.                   |
-| [`config`](#config)                                                         | `string` | -       | A configuration file for SCSS-Lint. |
+| Name                                                                                  | Type     | Default | Description                         |
+| ------------------------------------------------------------------------------------- | -------- | ------- | ----------------------------------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string` | -       | A root directory.                   |
+| [`config`](#config)                                                                   | `string` | -       | A configuration file for SCSS-Lint. |
 
 ### `config`
 

@@ -37,11 +37,11 @@ linter:
 
 You can use the following options to make analysis fitter for your project.
 
-| Name                                                                              | Type                | Default |
-| --------------------------------------------------------------------------------- | ------------------- | ------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#root_dir-option)       | `string`            | -       |
-| [`npm_install`](../../getting-started/custom-configuration.md#npm_install-option) | `boolean`, `string` | -       |
-| [`file`](#file)                                                                   | `string`            | -       |
+| Name                                                                                        | Type                | Default |
+| ------------------------------------------------------------------------------------------- | ------------------- | ------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir)       | `string`            | -       |
+| [`npm_install`](../../getting-started/custom-configuration.md#linteranalyzer_idnpm_install) | `boolean`, `string` | -       |
+| [`file`](#file)                                                                             | `string`            | -       |
 
 ### `file`
 

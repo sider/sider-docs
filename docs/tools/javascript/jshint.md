@@ -36,11 +36,11 @@ linter:
 
 You can use sereral options to make analysis fitter for your project.
 
-| Name                                                                        | Type     | Default | Description                            |
-| --------------------------------------------------------------------------- | -------- | ------- | -------------------------------------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#root_dir-option) | `string` | -       | A root directory.                      |
-| [`dir`](#dir)                                                               | `string` | -       | Set directory name as analysis target. |
-| [`config`](#config)                                                         | `string` | -       | Set configuration file for JSHint.     |
+| Name                                                                                  | Type     | Default | Description                            |
+| ------------------------------------------------------------------------------------- | -------- | ------- | -------------------------------------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string` | -       | A root directory.                      |
+| [`dir`](#dir)                                                                         | `string` | -       | Set directory name as analysis target. |
+| [`config`](#config)                                                                   | `string` | -       | Set configuration file for JSHint.     |
 
 #### `dir`
 

@@ -33,14 +33,14 @@ linter:
 
 You can use several options to fine-tune SwiftLint to your project.
 
-| Name                                                                        | Type      | Default | Description                                                                              |
-| --------------------------------------------------------------------------- | --------- | ------- | ---------------------------------------------------------------------------------------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#root_dir-option) | `string`  | -       | A root directory.                                                                        |
-| [`ignore_warnings`](#ignore_warnings)                                       | `boolean` | `false` | If `true`, Sider will not report `severity: "warnings"` issues.                          |
-| [`path`](#path)                                                             | `string`  | -       | Set a file or directory path to analyze.                                                 |
-| [`config`](#config)                                                         | `string`  | -       | Set a configuration file for SwiftLint.                                                  |
-| [`lenient`](#lenient)                                                       | `boolean` | `false` | If `true`, downgrade serious violations to warnings and make warning threshold disabled. |
-| [`enable-all-rules`](#enable-all-rules)                                     | `boolean` | `false` | If `true`, SwiftLint will run with all rules.                                            |
+| Name                                                                                  | Type      | Default | Description                                                                              |
+| ------------------------------------------------------------------------------------- | --------- | ------- | ---------------------------------------------------------------------------------------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`  | -       | A root directory.                                                                        |
+| [`ignore_warnings`](#ignore_warnings)                                                 | `boolean` | `false` | If `true`, Sider will not report `severity: "warnings"` issues.                          |
+| [`path`](#path)                                                                       | `string`  | -       | Set a file or directory path to analyze.                                                 |
+| [`config`](#config)                                                                   | `string`  | -       | Set a configuration file for SwiftLint.                                                  |
+| [`lenient`](#lenient)                                                                 | `boolean` | `false` | If `true`, downgrade serious violations to warnings and make warning threshold disabled. |
+| [`enable-all-rules`](#enable-all-rules)                                               | `boolean` | `false` | If `true`, SwiftLint will run with all rules.                                            |
 
 ### `ignore_warnings`
 

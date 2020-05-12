@@ -60,22 +60,22 @@ linter:
 
 You can use the following options to fine-tune GolangCI-Lint to your project.
 
-| Name                                                                        | Type                 | Default |
-| --------------------------------------------------------------------------- | -------------------- | ------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#root_dir-option) | `string`             | -       |
-| [`target`](#target)                                                         | `string`, `string[]` | `./...` |
-| [`config`](#config)                                                         | `string`             | -       |
-| [`no-config`](#no-config)                                                   | `boolean`            | `false` |
-| [`disable`](#disable)                                                       | `string`, `string[]` | -       |
-| [`disable-all`](#disable-all)                                               | `boolean`            | `false` |
-| [`enable`](#enable)                                                         | `string`             | -       |
-| [`fast`](#fast)                                                             | `string`, `string[]` | -       |
-| [`presets`](#presets)                                                       | `string`, `string[]` | -       |
-| [`skip-dirs`](#skip-dirs)                                                   | `string`, `string[]` | -       |
-| [`skip-dirs-use-default`](#skip-dirs-use-default)                           | `boolean`            | `true`  |
-| [`skip-files`](#skip-files)                                                 | `string`, `string[]` | -       |
-| [`tests`](#tests)                                                           | `boolean`            | `true`  |
-| [`uniq-by-line`](#uniq-by-line)                                             | `boolean`            | `true`  |
+| Name                                                                                  | Type                 | Default |
+| ------------------------------------------------------------------------------------- | -------------------- | ------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`             | -       |
+| [`target`](#target)                                                                   | `string`, `string[]` | `./...` |
+| [`config`](#config)                                                                   | `string`             | -       |
+| [`no-config`](#no-config)                                                             | `boolean`            | `false` |
+| [`disable`](#disable)                                                                 | `string`, `string[]` | -       |
+| [`disable-all`](#disable-all)                                                         | `boolean`            | `false` |
+| [`enable`](#enable)                                                                   | `string`             | -       |
+| [`fast`](#fast)                                                                       | `string`, `string[]` | -       |
+| [`presets`](#presets)                                                                 | `string`, `string[]` | -       |
+| [`skip-dirs`](#skip-dirs)                                                             | `string`, `string[]` | -       |
+| [`skip-dirs-use-default`](#skip-dirs-use-default)                                     | `boolean`            | `true`  |
+| [`skip-files`](#skip-files)                                                           | `string`, `string[]` | -       |
+| [`tests`](#tests)                                                                     | `boolean`            | `true`  |
+| [`uniq-by-line`](#uniq-by-line)                                                       | `boolean`            | `true`  |
 
 ### `target`
 

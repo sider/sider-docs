@@ -30,17 +30,17 @@ linter:
 
 ### Options
 
-| Name                                                                        | Type                 | Default | Description                                       |
-| --------------------------------------------------------------------------- | -------------------- | ------- | ------------------------------------------------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#root_dir-option) | `string`             | -       | A root directory.                                 |
-| [`gems`](../../getting-started/custom-configuration.md#gems-option)         | `string[]`, `hash[]` | -       | Gems to install.                                  |
-| `vendor`                                                                    | `boolean`            | `false` | Add `--vendor` flag.                              |
-| `spec`                                                                      | `boolean`            | `false` | Add `--spec` flag                                 |
-| `test`                                                                      | `boolean`            | `false` | Add `--test` flag                                 |
-| `features`                                                                  | `boolean`            | `false` | Add `--features` flag                             |
-| `exclude`                                                                   | `string`             | -       | Patterns passed as `--exclude` option.            |
-| `only`                                                                      | `string`             | -       | Patterns passed as `--only` option.               |
-| `config`                                                                    | `string`             | -       | Configuration file location passed as `--config`. |
+| Name                                                                                  | Type                 | Default | Description                                       |
+| ------------------------------------------------------------------------------------- | -------------------- | ------- | ------------------------------------------------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`             | -       | A root directory.                                 |
+| [`gems`](../../getting-started/custom-configuration.md#linteranalyzer_idgems)         | `string[]`, `hash[]` | -       | Gems to install.                                  |
+| `vendor`                                                                              | `boolean`            | `false` | Add `--vendor` flag.                              |
+| `spec`                                                                                | `boolean`            | `false` | Add `--spec` flag                                 |
+| `test`                                                                                | `boolean`            | `false` | Add `--test` flag                                 |
+| `features`                                                                            | `boolean`            | `false` | Add `--features` flag                             |
+| `exclude`                                                                             | `string`             | -       | Patterns passed as `--exclude` option.            |
+| `only`                                                                                | `string`             | -       | Patterns passed as `--only` option.               |
+| `config`                                                                              | `string`             | -       | Configuration file location passed as `--config`. |
 
 ## Analyzing view templates
 
@@ -51,7 +51,7 @@ Rails Best Practices supports some template engines. Sider finds the following g
 - [sass](https://github.com/sass/ruby-sass)
 - [sassc](https://github.com/sass/sassc-ruby)
 
-These gems will not be installed when the `gems` option is specified. We encourage you to explicitly specify gems in the [`gems` option](../../getting-started/custom-configuration.md#gems-option) in `sider.yml` as follows:
+These gems will not be installed when the `gems` option is specified. We encourage you to explicitly specify gems in the [`gems` option](../../getting-started/custom-configuration.md#linteranalyzer_idgems) in `sider.yml` as follows:
 
 ```yaml
 linter:

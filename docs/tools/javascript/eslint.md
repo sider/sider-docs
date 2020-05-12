@@ -17,7 +17,7 @@ It can find problems, style violations, or security issues, etc. in your code, a
 ## Getting Started
 
 To start using ESLint, enable it in your [repository settings](../../getting-started/repository-settings.md).
-After enabled, Sider will automatically analyze your JavaScript files with the default version and [default configuration](#default-configuration). Or if you already have configured ESLint, Sider will install your dependencies and analyze with your configuration.
+After enabled, Sider will automatically analyze your JavaScript files with the default version and [default configuration](#default-configuration-for-eslint). Or if you already have configured ESLint, Sider will install your dependencies and analyze with your configuration.
 
 But if you want to customize more ESLint with some plugins or shareable configurations, install ESLint first:
 
@@ -73,18 +73,18 @@ linter:
     quiet: true
 ```
 
-| Name                                                                              | Type                 | Default |
-| --------------------------------------------------------------------------------- | -------------------- | ------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#root_dir-option)       | `string`             | -       |
-| [`npm_install`](../../getting-started/custom-configuration.md#npm_install-option) | `boolean`, `string`  | -       |
-| [`dir`](#dir)                                                                     | `string`, `string[]` | `.`     |
-| [`config`](#config)                                                               | `string`             | -       |
-| [`ext`](#ext)                                                                     | `string`             | `.js`   |
-| [`ignore-path`](#ignore-path)                                                     | `string`             | -       |
-| [`no-ignore`](#no-ignore)                                                         | `boolean`            | `false` |
-| [`ignore-pattern`](#ignore-pattern)                                               | `string`, `string[]` | -       |
-| [`global`](#global)                                                               | `string`             | -       |
-| [`quiet`](#quiet)                                                                 | `boolean`            | `false` |
+| Name                                                                                        | Type                 | Default |
+| ------------------------------------------------------------------------------------------- | -------------------- | ------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir)       | `string`             | -       |
+| [`npm_install`](../../getting-started/custom-configuration.md#linteranalyzer_idnpm_install) | `boolean`, `string`  | -       |
+| [`dir`](#dir)                                                                               | `string`, `string[]` | `.`     |
+| [`config`](#config)                                                                         | `string`             | -       |
+| [`ext`](#ext)                                                                               | `string`             | `.js`   |
+| [`ignore-path`](#ignore-path)                                                               | `string`             | -       |
+| [`no-ignore`](#no-ignore)                                                                   | `boolean`            | `false` |
+| [`ignore-pattern`](#ignore-pattern)                                                         | `string`, `string[]` | -       |
+| [`global`](#global)                                                                         | `string`             | -       |
+| [`quiet`](#quiet)                                                                           | `boolean`            | `false` |
 
 ### `dir`
 

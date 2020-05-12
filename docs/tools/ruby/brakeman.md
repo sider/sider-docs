@@ -25,7 +25,7 @@ linter:
 
 ## Options
 
-| Name                                                                        | Type                 | Default | Description       |
-| --------------------------------------------------------------------------- | -------------------- | ------- | ----------------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#root_dir-option) | `string`             | -       | A root directory. |
-| [`gems`](../../getting-started/custom-configuration.md#gems-option)         | `string[]`, `hash[]` | -       | Gems to install.  |
+| Name                                                                                  | Type                 | Default | Description       |
+| ------------------------------------------------------------------------------------- | -------------------- | ------- | ----------------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`             | -       | A root directory. |
+| [`gems`](../../getting-started/custom-configuration.md#linteranalyzer_idgems)         | `string[]`, `hash[]` | -       | Gems to install.  |

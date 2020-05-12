@@ -36,13 +36,13 @@ linter:
 
 You can use several options to more comfortable analysis to your project.
 
-| Name                                                                        | Type           | Default | Description                                              |
-| --------------------------------------------------------------------------- | -------------- | ------- | -------------------------------------------------------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#root_dir-option) | `string`       | -       | A root directory.                                        |
-| [`exclude`](#exclude)                                                       | `string[]`     | -       | Set exclude files or directories from analysis.          |
-| [`targets`](#targets)                                                       | `string[]`     | -       | Set targets for analysis.                                |
-| [`locale`](#locale)                                                         | `"US"`, `"UK"` | -       | Check spelling with British English or American English. |
-| [`ignore`](#ignore)                                                         | `string`       | -       | Set words to ignore from analysis.                       |
+| Name                                                                                  | Type           | Default | Description                                              |
+| ------------------------------------------------------------------------------------- | -------------- | ------- | -------------------------------------------------------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`       | -       | A root directory.                                        |
+| [`exclude`](#exclude)                                                                 | `string[]`     | -       | Set exclude files or directories from analysis.          |
+| [`targets`](#targets)                                                                 | `string[]`     | -       | Set targets for analysis.                                |
+| [`locale`](#locale)                                                                   | `"US"`, `"UK"` | -       | Check spelling with British English or American English. |
+| [`ignore`](#ignore)                                                                   | `string`       | -       | Set words to ignore from analysis.                       |
 
 Details of options are in below.
 

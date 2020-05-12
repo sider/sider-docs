@@ -39,10 +39,10 @@ linter:
 
 ## Options
 
-| Name                                                                        | Type                 | Default | Description       |
-| --------------------------------------------------------------------------- | -------------------- | ------- | ----------------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#root_dir-option) | `string`             | -       | A root directory. |
-| [`gems`](../../getting-started/custom-configuration.md#gems-option)         | `string[]`, `hash[]` | -       | Gems to install.  |
+| Name                                                                                  | Type                 | Default | Description       |
+| ------------------------------------------------------------------------------------- | -------------------- | ------- | ----------------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`             | -       | A root directory. |
+| [`gems`](../../getting-started/custom-configuration.md#linteranalyzer_idgems)         | `string[]`, `hash[]` | -       | Gems to install.  |
 
 ## Analyzing view templates
 
@@ -52,4 +52,4 @@ Sider finds the following gems in `Gemfile.lock` and installs them automatically
 - [slim](https://github.com/slim-template/slim)
 - [haml](https://github.com/haml/haml)
 
-These gems are not installed automatically when the `gems` option is specified. We encourage you to explicitly specify gems in the [`gems` option](../../getting-started/custom-configuration.md#gems-option) in `sider.yml`.
+These gems are not installed automatically when the `gems` option is specified. We encourage you to explicitly specify gems in the [`gems` option](../../getting-started/custom-configuration.md#linteranalyzer_idgems) in `sider.yml`.

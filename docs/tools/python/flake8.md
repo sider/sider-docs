@@ -48,11 +48,11 @@ linter:
 
 You can use several options to fine-tune Flake8 to your project.
 
-| Name                                                                        | Type                 | Default |
-| --------------------------------------------------------------------------- | -------------------- | ------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#root_dir-option) | `string`             | -       |
-| [`version`](#version)                                                       | `integer`            | `3`     |
-| [`plugins`](#plugins)                                                       | `string`, `string[]` | -       |
+| Name                                                                                  | Type                 | Default |
+| ------------------------------------------------------------------------------------- | -------------------- | ------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`             | -       |
+| [`version`](#version)                                                                 | `integer`            | `3`     |
+| [`plugins`](#plugins)                                                                 | `string`, `string[]` | -       |
 
 ### `version`
 
