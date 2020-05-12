@@ -11,13 +11,15 @@ hide_title: true
 | ----------------- | ----------- | -------------------------------- |
 | 0.1.3             | Java 12.0.2 | https://github.com/sider/JavaSee |
 
+**JavaSee** is a customizable linter for Java code. It has no rules and you can define your own rules in your YAML file.
+
 ## Getting Started
 
-To start using JavaSee, enable it in your [repository settings](../../getting-started/repository-settings.md) and put a configuration file `javasee.yml` in the repository.
+To start using JavaSee, enable it in your [repository settings](../../getting-started/repository-settings.md) and put a configuration file `javasee.yml` in your repository.
 
 ## Configuration
 
-You can customize JavaSee analysis using `sider.yml`.
+You can customize JavaSee analysis using `sider.yml`. For example:
 
 ```yaml
 linter:
@@ -28,20 +30,18 @@ linter:
       - test
 ```
 
-| Name                                                                                  | Type                 | Default | Description             |
-| ------------------------------------------------------------------------------------- | -------------------- | ------- | ----------------------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`             | -       | A root directory.       |
-| [`config`](#config)                                                                   | `string`             | -       | Config file path.       |
-| [`dir`](#dir)                                                                         | `string`, `string[]` | -       | Directories to analyze. |
+| Name                                                                                  | Type                 | Default |
+| ------------------------------------------------------------------------------------- | -------------------- | ------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`             | -       |
+| [`config`](#config)                                                                   | `string`             | -       |
+| [`dir`](#dir)                                                                         | `string`, `string[]` | -       |
 
 ### `config`
 
-This option allows you to specify the configuration file of JavaSee.
-If you omit it, the JavaSee default `javasee.yml` will be used.
+This option allows you to specify your configuration file path for JavaSee.
+If omitted, the default `javasee.yml` will be used.
 
 ### `dir`
 
-This option allows you to specify the directories you want to check in your repository.
-If you omit it, all the Java files in your repository will be analyzed.
-
-You can write a string or a sequence of strings.
+This option allows you to specify directories to analyze.
+If omitted, all the Java files in your repository will be analyzed.
