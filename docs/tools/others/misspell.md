@@ -58,7 +58,7 @@ This option allows you to exclude files or directories from your analysis. Glob 
 
 ### `locale`
 
-This option allows you to choose a spelling feature which is depended on locales. You can select
+This option allows you to choose a spelling feature which is depended on locales. You can select:
 
 - `US` - American English
 - `UK` - British English
