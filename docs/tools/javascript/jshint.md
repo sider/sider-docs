@@ -11,19 +11,23 @@ hide_title: true
 | ----------------- | ---------- | --------------- | ------------------ |
 | 2.11.0            | JavaScript | Node.js 12.16.1 | https://jshint.com |
 
+**JSHint** is a static analysis tool to detect errors and potential problems in JavaScript code.
+
 ## Getting Started
 
 To start using JSHint, enable it in your [repository settings](../../getting-started/repository-settings.md).
 
 To customize the configuration, use the standard `.jshintrc` or `.jshintignore` files. Configuration via `jshintConfig` in `package.json` is also supported.
 
-## Default Configuration
+## Default Configuration for JSHint
 
 Sider uses the [default configuration](https://github.com/sider/runners/blob/master/images/jshint/sider_jshintrc) of `.jshintrc` when there is no custom configuration preset.
 
 In addition, Sider uses the [default configuration](https://github.com/sider/runners/blob/master/images/jshint/sider_jshintignore) of `.jshintignore`.
 
-## Configuration via `sider.yml`
+## Configuration
+
+Here is a configuration example via `sider.yml`:
 
 ```yaml
 linter:
@@ -32,20 +36,18 @@ linter:
     config: lint_yml/.jshintrc
 ```
 
-### Options
-
 You can use sereral options to make analysis fitter for your project.
 
-| Name                                                                                  | Type     | Default | Description                            |
-| ------------------------------------------------------------------------------------- | -------- | ------- | -------------------------------------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string` | -       | A root directory.                      |
-| [`dir`](#dir)                                                                         | `string` | -       | Set directory name as analysis target. |
-| [`config`](#config)                                                                   | `string` | -       | Set configuration file for JSHint.     |
+| Name                                                                                  | Type     | Default |
+| ------------------------------------------------------------------------------------- | -------- | ------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string` | -       |
+| [`dir`](#dir)                                                                         | `string` | `.`     |
+| [`config`](#config)                                                                   | `string` | -       |
 
-#### `dir`
+### `dir`
 
-The directory where the analysis is performed. It is passed as an argument to JSHint.
+This option allows you to specify a directory to analyze.
 
-#### `config`
+### `config`
 
-This option allows you to use your own configuration file for JSHint. If you have your own `.jshintrc` file, use this option.
+This option allows you to use your own configuration file for JSHint.
