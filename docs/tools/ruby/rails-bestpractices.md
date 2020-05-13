@@ -13,6 +13,10 @@ hide_title: true
 
 **Rails Best Practices** (abbr. RBP) is a code metric tool to check the quality of Rails code.
 
+## Getting Started
+
+To start using Rails Best Practices, enable it in your [repository settings](../../getting-started/repository-settings.md).
+
 ## Configuration
 
 Here is an example configuration via `sider.yml`:

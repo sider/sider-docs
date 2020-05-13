@@ -13,6 +13,10 @@ hide_title: true
 
 **Reek** is a static analysis tool to detect any "Code Smells" in Ruby classes, modules and methods.
 
+## Getting Started
+
+To start using Reek, enable it in your [repository settings](../../getting-started/repository-settings.md).
+
 ## Configuration
 
 Here is an example configuration via `sider.yml`:
