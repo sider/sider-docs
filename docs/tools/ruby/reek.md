@@ -11,12 +11,11 @@ hide_title: true
 | ------------------------- | ---------- | --------------------------------- |
 | 4.4.0+ (default to 5.6.0) | Ruby 2.6.5 | https://github.com/troessner/reek |
 
-**Reek** is a tool to detect any "Code Smells" in Ruby classes, modules and methods.
-See the [document](https://github.com/troessner/reek#readme) for more details.
+**Reek** is a static analysis tool to detect any "Code Smells" in Ruby classes, modules and methods.
 
-## Configuration via `sider.yml`
+## Configuration
 
-Here is an example configuration for Reek via `sider.yml`:
+Here is an example configuration via `sider.yml`:
 
 ```yaml
 linter:
@@ -32,12 +31,12 @@ linter:
 
 You can use the following options to make analysis fitter for your project.
 
-| Name                                                                                  | Type                 | Default | Description                      |
-| ------------------------------------------------------------------------------------- | -------------------- | ------- | -------------------------------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`             | -       | A root directory.                |
-| [`gems`](../../getting-started/custom-configuration.md#linteranalyzer_idgems)         | `string[]`, `hash[]` | -       | Gems to install.                 |
-| [`target`](#target)                                                                   | `string`, `string[]` | `.`     | Files or directories to analyze. |
-| [`config`](#config)                                                                   | `string`             | -       | `--config` option of Reek.       |
+| Name                                                                                  | Type                 | Default |
+| ------------------------------------------------------------------------------------- | -------------------- | ------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`             | -       |
+| [`gems`](../../getting-started/custom-configuration.md#linteranalyzer_idgems)         | `string[]`, `hash[]` | -       |
+| [`target`](#target)                                                                   | `string`, `string[]` | `.`     |
+| [`config`](#config)                                                                   | `string`             | -       |
 
 ### `target`
 
