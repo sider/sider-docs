@@ -12,15 +12,17 @@ hide_title: true
 
 | Supported Version | Language                      | Website                          |
 | ----------------- | ----------------------------- | -------------------------------- |
-| 0.59.0            | [Sass](https://sass-lang.com) | https://github.com/sds/scss-lint |
+| 0.59.0            | [SCSS](https://sass-lang.com) | https://github.com/sds/scss-lint |
+
+**SCSS-Lint** is a linter to help keep your SCSS files clean and readable.
 
 ## Getting Started
 
 To start using SCSS-Lint, enable it in your [repository settings](../../getting-started/repository-settings.md).
 
-## Configuration via `sider.yml`
+## Configuration
 
-Here are example settings for SCSS-Lint:
+Here is an example configuration via `sider.yml`:
 
 ```yaml
 linter:
@@ -30,11 +32,11 @@ linter:
 
 You can use several options to fine-tune SCSS-Lint to your project:
 
-| Name                                                                                  | Type     | Default | Description                         |
-| ------------------------------------------------------------------------------------- | -------- | ------- | ----------------------------------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string` | -       | A root directory.                   |
-| [`config`](#config)                                                                   | `string` | -       | A configuration file for SCSS-Lint. |
+| Name                                                                                  | Type     | Default |
+| ------------------------------------------------------------------------------------- | -------- | ------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string` | -       |
+| [`config`](#config)                                                                   | `string` | -       |
 
 ### `config`
 
-This option allows you specify a configuration file. If you have your own `.scss-lint.yml` file, use this option. You can use SCSS-Lint without this option.
+This option allows you specify a configuration file you want.
