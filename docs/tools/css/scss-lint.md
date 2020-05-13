@@ -39,4 +39,4 @@ You can use several options to fine-tune SCSS-Lint to your project:
 
 ### `config`
 
-This option allows you specify a configuration file you want.
+This option allows you to specify a configuration file you want.
