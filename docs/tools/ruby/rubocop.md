@@ -11,59 +11,59 @@ hide_title: true
 | --------------------------- | ---------- | ------------------------ |
 | 0.61.0+ (default to 0.80.1) | Ruby 2.6.5 | https://docs.rubocop.org |
 
-## Configuration via `sider.yml`
+**RuboCop** is a pluggable static code analyzer and code formatter for Ruby.
+It has been community-driven developed and has many rules and plugins including third-party's ones.
 
-Example settings for RuboCop under `rubocop`:
+## Getting Started
+
+To start using RuboCop, enable it in your [repository settings](../../getting-started/repository-settings.md).
+
+If you want to customize RuboCop, run the following command in your project' root directory:
+
+```console
+$ rubocop --init
+```
+
+See also the [user guide](https://docs.rubocop.org/en/stable/basic_usage/) for details.
+
+## Default Configuration for RuboCop
+
+Sider performs analysis according to our recommended configuration if `.rubocop.yml` does not exist in your repository. The configuration comes from [MeowCop](https://github.com/sider/meowcop) gem.
+
+## Configuration
+
+Here is an example configuration via `sider.yml`:
 
 ```yaml
 linter:
   rubocop:
     gems:
-      - "rubocop-rspec"
-    config: "config/.rubocop.yml"
+      - rubocop-rspec
+    config: config/.rubocop.yml
     safe: true
 ```
 
 You can use the following options to make analysis fitter for your project.
 
-| Name                                                                                  | Type                 | Default | Description                              |
-| ------------------------------------------------------------------------------------- | -------------------- | ------- | ---------------------------------------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`             | -       | A root directory.                        |
-| [`gems`](../../getting-started/custom-configuration.md#linteranalyzer_idgems)         | `string[]`, `hash[]` | -       | Gems to install.                         |
-| [`config`](#config)                                                                   | `string`             | -       | A file path passed as `--config` option. |
-| [`rails`](#rails)                                                                     | `boolean`            | -       | **[DEPRECATED]** Add `--rails` flag.     |
-| [`safe`](#safe)                                                                       | `boolean`            | `false` | Add `--safe` flag.                       |
+| Name                                                                                  | Type                 | Default |
+| ------------------------------------------------------------------------------------- | -------------------- | ------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`             | -       |
+| [`gems`](../../getting-started/custom-configuration.md#linteranalyzer_idgems)         | `string[]`, `hash[]` | -       |
+| [`config`](#config)                                                                   | `string`             | -       |
+| [`safe`](#safe)                                                                       | `boolean`            | `false` |
 
 ### `config`
 
-This option allows you to specify your configuration file. If you omit it, the RuboCop default one will be used.
-
-### `rails`
-
-> The option is ignored after the version `0.72.0`. Please use the [`rubocop-rails`](https://github.com/rubocop-hq/rubocop-rails) plugin instead.
-
-This option controls whether to run Rails Cops. If it is omitted, Sider automatically determines whether to run Rails Cops or not.
-
-This option is used for the case that you do not wish Sider to run Rails Cops even though your project is a Ruby on Rails project.
-
-```yaml
-linter:
-  rubocop:
-    rails: false
-```
+This option allows you to specify your configuration file. If omitted, the RuboCop default configuration is used.
 
 ### `safe`
 
-This option controls to cops RuboCop inspects. If `true`, RuboCop will inspect cops which have been set `Safe: true` and `Enabled: true` in `.rubocop.yml`.
+This option allows you to select whether running only [safe cops](https://docs.rubocop.org/en/stable/auto_correct/#safe-auto-correct) or not.
+If confirming whether a cop is _safe_ or not, see the [cops' document](https://docs.rubocop.org/en/stable/cops/).
 
-> When you use this option, RuboCop version must be after `0.60.0`.
+### `rails`
 
-### Installing RuboCop plugins and configuration gems
+> **DEPRECATED**: The option is ignored when using the version `0.72.0` or later, and will be removed in the future.
+> Use [`rubocop-rails`](https://github.com/rubocop-hq/rubocop-rails) instead.
 
-Sider automatically finds and installs gems likely to be related to RuboCop from `Gemfile.lock`, but this behavior only works for backward compatibility. Therefore, this is skipped if you specify the `gems` option.
-
-We encourage you to explicitly specify gems in the [`gems` option](../../getting-started/custom-configuration.md#linteranalyzer_idgems) in `sider.yml`.
-
-## Default Configuration
-
-Sider performs analysis according to our recommended configuration if `.rubocop.yml` does not exist in your repository. The configuration comes from [MeowCop](https://github.com/sider/meowcop) gem.
+This option allows you to select whether using Rails cops or not. If omitted, Sider automatically determines it.
