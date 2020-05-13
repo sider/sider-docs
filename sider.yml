@@ -11,3 +11,4 @@ linter:
       - DASH_RULE
       - WHITESPACE_RULE
       - MORFOLOGIK_RULE_EN_US
+      - EN_QUOTES
