@@ -11,6 +11,8 @@ hide_title: true
 | ----------------- | --------- | -------------------------------- |
 | 0.9.2             | PHP 7.4.4 | https://github.com/sider/phinder |
 
+**Phinder** is a static analysis tool that aims to make your custom rules via your YAML file.
+
 ## Getting Started
 
 To start using Phinder, enable it in your [repository settings](../../getting-started/repository-settings.md) and put a `phinder.yml` config file in your repository.
@@ -31,16 +33,17 @@ linter:
     php: src
 ```
 
-| Name                                                                                  | Type     | Default | Description                                                    |
-| ------------------------------------------------------------------------------------- | -------- | ------- | -------------------------------------------------------------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string` | -       | A root directory.                                              |
-| [`rule`](#rule)                                                                       | `string` | -       | Specify your configuration file or directory name for Phinder. |
-| [`php`](#php)                                                                         | `string` | -       | Specify file name or directory name to analyze.                |
+| Name                                                                                  | Type     | Default |
+| ------------------------------------------------------------------------------------- | -------- | ------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string` | -       |
+| [`rule`](#rule)                                                                       | `string` | -       |
+| [`php`](#php)                                                                         | `string` | -       |
 
 ### `rule`
 
-This option allows you to specify file or directory name where your Phinder ruleset is located.
-If you set file name, Phinder will use the file for analysis instead of `phinder.yml`. If this is a directory name, Phinder will analyze your project with all `yml` files under the directory.
+This option allows you to specify a file or directory where your Phinder ruleset is located.
+If you set a file, Phinder will use the file as a configuration instead of `phinder.yml`.
+If a directory, Phinder will use all the `.yml` files under the directory as a configuration.
 
 ```yaml
 linter:
@@ -50,7 +53,9 @@ linter:
 
 ### `php`
 
-This option allows you to specify the path of your project to analyze. If this is a file name, Phinder will analyze merely the file. If it's a directory, Phinder will analyze all `.php` files under the directory.
+This option allows you to specify a path to your project to analyze.
+If it is a file, Phinder will analyze merely the file.
+If a directory, Phinder will analyze all the `.php` files under the directory.
 
 ```yaml
 linter:
