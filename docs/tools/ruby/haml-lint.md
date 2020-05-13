@@ -14,9 +14,18 @@ hide_title: true
 **HAML-Lint** is a static analysis tool to help keep your HAML files clean and readable.
 In addition to HAML-specific style and lint checks, it can check them by integrated RuboCop rules.
 
-## Configuration via `sider.yml`
+## Getting Started
 
-Example settings for HAML-Lint under `haml_lint`:
+To start using HAML-Lint, enable it in your [repository settings](../../getting-started/repository-settings.md).
+
+## Default Configuration for RuboCop
+
+If a `.rubocop.yml` file does not exist in your repository, Sider uses the [default configuration](https://github.com/sider/runners/blob/master/images/haml_lint/default_rubocop.yml)
+including the [MeowCop](https://github.com/sider/meowcop) gem.
+
+## Configuration
+
+Here is an example configuration via `sider.yml`:
 
 ```yaml
 linter:
@@ -71,7 +80,3 @@ See also the [`--config`](https://github.com/sds/haml-lint#command-line-flags) o
 
 This option allows you to exclude files from being analyzed.
 See also the [`--exclude`](https://github.com/sds/haml-lint#command-line-flags) option.
-
-## Default Configuration
-
-Sider performs analysis according to our recommended configuration if `.rubocop.yml` does not exist in your repository. The configuration comes from [MeowCop](https://github.com/sider/meowcop) gem.
