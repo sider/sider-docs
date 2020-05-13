@@ -11,6 +11,9 @@ hide_title: true
 | ------------------------- | ---------- | --------------------------------- |
 | 0.5.0+ (default to 1.0.0) | Ruby 2.6.5 | https://github.com/soutaro/querly |
 
+**Querly** is a customizable and pattern-based analysis tool for Ruby.
+You can easily write your own rule for your project via the YAML configuration file.
+
 ## Getting Started
 
 To start using Querly, enable it in your [repository settings](../../getting-started/repository-settings.md),
@@ -26,9 +29,9 @@ Visit the Querly project page for more information about writing rules:
  <iframe class="Video__iframe" src="https://www.youtube.com/embed/WtHmNuWJzPA" frameborder="0" allowfullscreen></iframe>
 </div>
 
-## Configuration via `sider.yml`
+## Configuration
 
-Here are some example settings for Querly in `sider.yml`, under `querly`:
+Here is an example configuration via `sider.yml`:
 
 ```yaml
 linter:
@@ -37,14 +40,12 @@ linter:
       - "slim"
 ```
 
-## Options
+| Name                                                                                  | Type                 | Default |
+| ------------------------------------------------------------------------------------- | -------------------- | ------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`             | -       |
+| [`gems`](../../getting-started/custom-configuration.md#linteranalyzer_idgems)         | `string[]`, `hash[]` | -       |
 
-| Name                                                                                  | Type                 | Default | Description       |
-| ------------------------------------------------------------------------------------- | -------------------- | ------- | ----------------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`             | -       | A root directory. |
-| [`gems`](../../getting-started/custom-configuration.md#linteranalyzer_idgems)         | `string[]`, `hash[]` | -       | Gems to install.  |
-
-## Analyzing view templates
+## Analyzing View Templates
 
 Querly has a mechanism called [preprocessor](https://github.com/soutaro/querly/blob/master/manual/configuration.md#preprocessor) for analyzing templates which contain Ruby code.
 Sider finds the following gems in `Gemfile.lock` and installs them automatically for backward compatibility:
@@ -52,4 +53,4 @@ Sider finds the following gems in `Gemfile.lock` and installs them automatically
 - [slim](https://github.com/slim-template/slim)
 - [haml](https://github.com/haml/haml)
 
-These gems are not installed automatically when the `gems` option is specified. We encourage you to explicitly specify gems in the [`gems` option](../../getting-started/custom-configuration.md#linteranalyzer_idgems) in `sider.yml`.
+Note that these gems are not installed automatically when the `gems` option is specified.
