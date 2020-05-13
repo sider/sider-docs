@@ -28,7 +28,8 @@ See also the [user guide](https://docs.rubocop.org/en/stable/basic_usage/) for d
 
 ## Default Configuration for RuboCop
 
-Sider performs analysis according to our recommended configuration if `.rubocop.yml` does not exist in your repository. The configuration comes from [MeowCop](https://github.com/sider/meowcop) gem.
+If a `.rubocop.yml` file does not exist in your repository, Sider uses the [default configuration](https://github.com/sider/runners/blob/master/images/rubocop/default_rubocop.yml)
+including the [MeowCop](https://github.com/sider/meowcop) gem.
 
 ## Configuration
 
