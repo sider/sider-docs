@@ -28,7 +28,7 @@ and put and configure your `sider.yml` to select one way from the followings:
 
 ### Using CLI
 
-You can use the ktlint CLI without any configuration, but we recommend to make a configuration.
+You can use the ktlint CLI without any configuration, but we recommend making a configuration.
 
 For example:
 
@@ -53,7 +53,7 @@ linter:
 ```
 
 Sider runs `./gradlew` in the repository with the specified `task` and uses the output result.
-Essentially, it is equivalent to running the following command:
+Essentially, it is equivalent to run the following command:
 
 ```console
 $ ./gradlew <task>
@@ -78,7 +78,7 @@ linter:
 ```
 
 Sider runs `mvn` in the repository with the specified `goal` and uses the output result.
-Essentially, it is equivalent to running the following command:
+Essentially, it is equivalent to run the following command:
 
 ```console
 $ mvn <goal>
