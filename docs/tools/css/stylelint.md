@@ -71,7 +71,7 @@ See also the [official document](https://stylelint.io/user-guide/usage/options) 
 
 ### `glob`
 
-This option allows you to specify a files or directories to analyze. Glob patterns are available.
+This option allows you to specify files or directories to analyze. Glob patterns are available.
 
 ### `config`
 
@@ -90,7 +90,7 @@ See also the [`--ignore-path`](https://stylelint.io/user-guide/usage/options#ign
 
 ### `ignore-disables`
 
-This option allows you to ignore all the disable comments, e.g. `/* stylelint-disable block-no-empty */`.
+This option allows you to ignore all the disable-comments, e.g. `/* stylelint-disable block-no-empty */`.
 See also the [`--ignore-disables`](https://stylelint.io/user-guide/usage/options#ignoredisables) option.
 
 ### `report-needless-disables`
