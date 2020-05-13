@@ -11,12 +11,11 @@ hide_title: true
 | :---------------- | :-------- | :---------------- |
 | 2.8.2             | PHP 7.4.4 | https://phpmd.org |
 
-**PHPMD** is an analysis tool focused on detecting code smells and possible errors in source code.
+**PHPMD** is a static analysis tool focused on detecting code smells and possible errors in your PHP code.
 
 ## Getting Started
 
 To start using PHPMD, enable it in your [repository settings](../../getting-started/repository-settings.md).
-You can use `sider.yml` to configure PHPMD.
 
 ## Performance Issues
 
@@ -35,9 +34,9 @@ linter:
       - wp-content/
 ```
 
-## Configuration via `sider.yml`
+## Configuration
 
-Here is are some example settings for PHPMD in `sider.yml`:
+Here is an example configuration via `sider.yml`:
 
 ```yaml
 linter:
@@ -45,10 +44,10 @@ linter:
     target:
       - index.php
       - wp-content
-    rule: codesize,unusedcode
+    rule: codesize,unusedcode,my_custom_ruleset.xml
     minimumpriority: 3
     suffixes: php,phtml
-    exclude: app/Vendor/
+    exclude: "app/vendor/,test/*.php"
     strict: true
     custom_rule_path:
       - Custom_PHPMD_Rule.php
@@ -57,32 +56,35 @@ linter:
 
 You can use several options to fine-tune PHPMD to your project:
 
-| Name                                                                                  | Type                 | Default | Description                                             |
-| ------------------------------------------------------------------------------------- | -------------------- | ------- | ------------------------------------------------------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`             | -       | A root directory.                                       |
-| [`target`](#target)                                                                   | `string`, `string[]` | `.`     | Set target files or directories to analyze.             |
-| [`rule`](#rule)                                                                       | `string`             | -       | Specify rulesets or your own ruleset file.              |
-| [`minimumpriority`](#minimumpriority)                                                 | `integer`            | -       | Set the priority threshold which PHPMD ignores.         |
-| [`suffixes`](#suffixes)                                                               | `string`             | `php`   | Set extensions of filenames for analysis.               |
-| [`exclude`](#exclude)                                                                 | `string`             | -       | Set files or directories to exclude from analysis.      |
-| [`strict`](#strict)                                                                   | `boolean`            | `false` | If `true`, PHPMD will report `@SuppressWarnings` nodes. |
-| [`custom_rule_path`](#custom_rule_path)                                               | `string[]`           | `[]`    | File path(s) writing your custom rule(s).               |
+| Name                                                                                  | Type                 | Default |
+| ------------------------------------------------------------------------------------- | -------------------- | ------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`             | -       |
+| [`target`](#target)                                                                   | `string`, `string[]` | `.`     |
+| [`rule`](#rule)                                                                       | `string`             | -       |
+| [`minimumpriority`](#minimumpriority)                                                 | `integer`            | -       |
+| [`suffixes`](#suffixes)                                                               | `string`             | `php`   |
+| [`exclude`](#exclude)                                                                 | `string`             | -       |
+| [`strict`](#strict)                                                                   | `boolean`            | `false` |
+| [`custom_rule_path`](#custom_rule_path)                                               | `string[]`           | `[]`    |
+
+See also the [PHPMD document](https://phpmd.org/documentation/index.html) for details.
 
 ### `target`
 
-This option controls target paths to inspect. This is an optional setting that you do not need to specify if you don't have any [performance issues](#performance-issues).
+This option allows you to specify files or directories to analyze.
 
 ### `rule`
 
-This option controls ruleset(s) that is passed to `phpmd`. You can specify a comma-separated list of ruleset names:
+This option allows you to specify the predefined rulesets.
+The value is a comma-separated list of the ruleset names or your custom ruleset file paths. For example:
 
 ```yaml
 linter:
   phpmd:
-    rule: cleancode,design,unusedcode
+    rule: cleancode,design,path/to/your-ruleset.xml
 ```
 
-The valid names are:
+Here are the available rulesets:
 
 - `cleancode`
 - `codesize`
@@ -91,44 +93,37 @@ The valid names are:
 - `naming`
 - `unusedcode`
 
-You can also specify a ruleset file:
+If omitted, Sider uses the [default configuration](https://github.com/sider/runners/blob/master/images/phpmd/sider_config.xml).
 
-```yaml
-linter:
-  phpmd:
-    rule: path/to/your-ruleset.xml
-```
-
-If you omit this option, Sider analyzes by using the [default configuration](https://github.com/sider/runners/blob/master/images/phpmd/sider_config.xml).
-
-For more information about PHPMD rulesets, see the [PHPMD rule documentation](https://phpmd.org/rules/index.html).
+If you want to learn more, see the [PHPMD ruleset document](https://phpmd.org/rules/index.html).
 
 ### `minimumpriority`
 
-This option controls the rule priority threshold. Rules below the priority you declare will be ignored.
+This option allows you to specify the rule priority threshold.
+Rules with lower priority than the specified value will not be reported.
 
 ### `suffixes`
 
-This option controls valid file extensions. Use a comma-separated list to inspect multiple file extensions, e.g. `php,phtml`.
+This option allows you to specify file extensions to analyze.
+Use a comma-separated list for multiple values, e.g. `php,phtml`.
 
 ### `exclude`
 
-This option controls directories to exclude from analysis objects.
-Use a comma-separated list to ignore multiple directories, e.g. `app/logs/,web/bundles/`.
+This option allows you to specify directories to exclude from analysis objects.
+You can use asterisk patterns and use a comma-separated list for multiple values, e.g. `src/foo/*.php,*src/foo/*`.
 
 ### `strict`
 
-This option controls whether to report nodes that have the `@SuppressWarnings` annotation.
-To learn more about `@SuppressWarnings`, see the [PHPMD documentation](https://phpmd.org/documentation/suppress-warnings.html).
+This option allows you to specify whether reports nodes that have the [`@SuppressWarnings` annotation](https://phpmd.org/documentation/suppress-warnings.html) or not.
 
 ### `custom_rule_path`
 
-This option controls file path(s) where you write your own custom rule(s). You can use also _glob_ format.
-You will need to use it along with the [`rule`](#rule) option. For example:
-
-Your `sider.yml`:
+This option allows you to specify your own [custom rule PHP file](https://phpmd.org/documentation/writing-a-phpmd-rule.html) paths.
+_Glob_ pattern is also available.
+You need to use it along with the [`rule`](#rule) option. For example:
 
 ```yaml
+# sider.yml
 linter:
   phpmd:
     rule: custom_ruleset.xml
@@ -137,9 +132,8 @@ linter:
       - custom/phpmd/rules/**/*.php
 ```
 
-Your `custom_ruleset.xml`:
-
 ```xml
+<!-- custom_ruleset.xml -->
 <?xml version="1.0" encoding="utf-8"?>
 <ruleset name="Your Custom Ruleset">
   <rule name="SomeYourCustomRule"
@@ -150,5 +144,3 @@ Your `custom_ruleset.xml`:
   </rule>
 </ruleset>
 ```
-
-To learn about writing a custom rule, see the [PHPMD documentation](https://phpmd.org/documentation/writing-a-phpmd-rule.html).
