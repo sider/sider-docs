@@ -11,101 +11,77 @@ hide_title: true
 | --------------------------- | ---------- | ------------------------------- |
 | 1.19.1+ (default to 1.19.4) | Ruby 2.6.5 | https://rails-bestpractices.com |
 
-## Configuration via `sider.yml`
+**Rails Best Practices** (abbr. RBP) is a code metric tool to check the quality of Rails code.
 
-Here are some example settings for Rails Best Practices in `sider.yml`, under `rails_best_practices`:
+## Configuration
+
+Here is an example configuration via `sider.yml`:
 
 ```yaml
 linter:
   rails_best_practices:
     gems:
       - "slim"
+    config: .rails_best_practices.yml
     vendor: false
     spec: true
     test: true
     features: true
-    exclude: examples
-    config: .rails_best_practices.yml
+    exclude: db/migrate,vendor
+    only: app,config
 ```
 
-### Options
+| Name                                                                                  | Type                 | Default |
+| ------------------------------------------------------------------------------------- | -------------------- | ------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`             | -       |
+| [`gems`](../../getting-started/custom-configuration.md#linteranalyzer_idgems)         | `string[]`, `hash[]` | -       |
+| [`config`](#config)                                                                   | `string`             | -       |
+| [`vendor`](#vendor)                                                                   | `boolean`            | `true`  |
+| [`spec`](#spec)                                                                       | `boolean`            | `false` |
+| [`test`](#test)                                                                       | `boolean`            | `false` |
+| [`features`](#features)                                                               | `boolean`            | `false` |
+| [`exclude`](#exclude)                                                                 | `string`             | -       |
+| [`only`](#only)                                                                       | `string`             | -       |
 
-| Name                                                                                  | Type                 | Default | Description                                       |
-| ------------------------------------------------------------------------------------- | -------------------- | ------- | ------------------------------------------------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`             | -       | A root directory.                                 |
-| [`gems`](../../getting-started/custom-configuration.md#linteranalyzer_idgems)         | `string[]`, `hash[]` | -       | Gems to install.                                  |
-| `vendor`                                                                              | `boolean`            | `false` | Add `--vendor` flag.                              |
-| `spec`                                                                                | `boolean`            | `false` | Add `--spec` flag                                 |
-| `test`                                                                                | `boolean`            | `false` | Add `--test` flag                                 |
-| `features`                                                                            | `boolean`            | `false` | Add `--features` flag                             |
-| `exclude`                                                                             | `string`             | -       | Patterns passed as `--exclude` option.            |
-| `only`                                                                                | `string`             | -       | Patterns passed as `--only` option.               |
-| `config`                                                                              | `string`             | -       | Configuration file location passed as `--config`. |
+### `config`
 
-## Analyzing view templates
+This option allows you to specify a configuration file path you want.
 
-Rails Best Practices supports some template engines. Sider finds the following gems in `Gemfile.lock` and installs them automatically for backward compatibility:
+If the option is omitted and the `config/rails_best_practices.yml` file (RBP's default) in your repository does not exist,
+Sider uses the [default configuration](https://github.com/sider/runners/blob/master/images/rails_best_practices/sider_rails_best_practices.yml).
+
+### `vendor`
+
+This option allows you to include `vendor/` directory or not.
+
+### `spec`
+
+This option allows you to include `spec/` directory or not.
+
+### `test`
+
+This option allows you to include `test/` directory or not.
+
+### `features`
+
+This option allows you to include `features/` directory or not.
+
+### `exclude`
+
+This option allows you to exclude files or directories from the analysis. The value should be a comma-separated list.
+
+### `only`
+
+This option allows you to limit only to files or directories you want. The value should be a comma-separated list.
+
+## Analyzing View Templates
+
+Rails Best Practices supports some template engines.
+When Sider finds the following gems in your `Gemfile.lock`, it installs them automatically for backward compatibility:
 
 - [slim](https://github.com/slim-template/slim)
 - [haml](https://github.com/haml/haml)
 - [sass](https://github.com/sass/ruby-sass)
 - [sassc](https://github.com/sass/sassc-ruby)
 
-These gems will not be installed when the `gems` option is specified. We encourage you to explicitly specify gems in the [`gems` option](../../getting-started/custom-configuration.md#linteranalyzer_idgems) in `sider.yml` as follows:
-
-```yaml
-linter:
-  rails_best_practices:
-    gems:
-      - "slim"
-      - "sassc"
-```
-
-## Default Configuration
-
-Sider uses the following configuration for Rails Best Practices if there is no configuration file in your repository:
-
-```yaml
-# AddModelVirtualAttributeCheck: {}
-AlwaysAddDbIndexCheck: {}
-# CheckSaveReturnValueCheck: {}
-# CheckDestroyReturnValueCheck: {}
-DefaultScopeIsEvilCheck: {}
-DryBundlerInCapistranoCheck: {}
-# HashSyntaxCheck: {}
-# IsolateSeedDataCheck: {}
-# KeepFindersOnTheirOwnModelCheck: {}
-# LawOfDemeterCheck: {}
-# LongLineCheck: { max_line_length: 80 }
-MoveCodeIntoControllerCheck: {}
-MoveCodeIntoHelperCheck: { array_count: 3 }
-MoveCodeIntoModelCheck: { use_count: 2 }
-# MoveFinderToNamedScopeCheck: {}
-# MoveModelLogicIntoModelCheck: { use_count: 4 }
-# NeedlessDeepNestingCheck: { nested_count: 2 }
-NotRescueExceptionCheck: {}
-NotUseDefaultRouteCheck: {}
-# NotUseTimeAgoInWordsCheck: {}
-OveruseRouteCustomizationsCheck: { customize_count: 3 }
-ProtectMassAssignmentCheck: {}
-RemoveEmptyHelpersCheck: {}
-# RemoveTabCheck: {}
-# RemoveTrailingWhitespaceCheck: {}
-# RemoveUnusedMethodsInControllersCheck: { except_methods: [] }
-# RemoveUnusedMethodsInHelpersCheck: { except_methods: [] }
-# RemoveUnusedMethodsInModelsCheck: { except_methods: [] }
-ReplaceComplexCreationWithFactoryMethodCheck: { attribute_assignment_count: 2 }
-# ReplaceInstanceVariableWithLocalVariableCheck: {}
-RestrictAutoGeneratedRoutesCheck: {}
-# SimplifyRenderInControllersCheck: {}
-# SimplifyRenderInViewsCheck: {}
-# UseBeforeFilterCheck: { customize_count: 2 }
-UseModelAssociationCheck: {}
-UseMultipartAlternativeAsContentTypeOfEmailCheck: {}
-# UseParenthesesInMethodDefCheck: {}
-UseObserverCheck: {}
-# UseQueryAttributeCheck: {}
-# UseSayWithTimeInMigrationsCheck: {}
-UseScopeAccessCheck: {}
-UseTurboSprocketsRails3Check: {}
-```
+Note that these gems are not be installed when the `gems` option is specified.
