@@ -11,7 +11,7 @@ hide_title: true
 | ----------------- | ------------ | -------------------------- |
 | 0.7.0             | Shell script | https://www.shellcheck.net |
 
-ShellCheck is a static analysis tool for shell scripts. It gives warnings and suggestions.
+ShellCheck is a static analysis tool to find bugs in shell script code. It gives warnings and suggestions.
 
 ## Getting Started
 
@@ -27,30 +27,30 @@ Here is a configuration example via [`sider.yml`](../../getting-started/custom-c
 linter:
   shellcheck:
     target: "src/**/*.{sh,bash}"
-    include: "SC2104,SC2105"
-    exclude: "SC1000,SC1118"
-    enable: "all"
-    shell: "bash"
-    severity: "error"
+    include: [SC2104, SC2105]
+    exclude: [SC1000, SC1118]
+    enable: all
+    shell: bash
+    severity: error
     norc: true
 ```
 
 You can use the following options to fine-tune ShellCheck to your project.
 
-| Name                                                                                  | Type                           | Default       | Description                        |
-| ------------------------------------------------------------------------------------- | ------------------------------ | ------------- | ---------------------------------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`                       | -             | A root directory.                  |
-| [`target`](#target)                                                                   | `string`, `string[]`, `hash[]` | _(See below)_ | Files to analyze.                  |
-| [`include`](#include)                                                                 | `string`, `string[]`           | -             | `--include` option of ShellCheck.  |
-| [`exclude`](#exclude)                                                                 | `string`, `string[]`           | -             | `--exclude` option of ShellCheck.  |
-| [`enable`](#enable)                                                                   | `string`, `string[]`           | -             | `--enable` option of ShellCheck.   |
-| [`shell`](#shell)                                                                     | `string`                       | -             | `--shell` option of ShellCheck.    |
-| [`severity`](#severity)                                                               | `string`                       | -             | `--severity` option of ShellCheck. |
-| [`norc`](#norc)                                                                       | `boolean`                      | `false`       | `--norc` option of ShellCheck.     |
+| Name                                                                                  | Type                           | Default       |
+| ------------------------------------------------------------------------------------- | ------------------------------ | ------------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`                       | -             |
+| [`target`](#target)                                                                   | `string`, `string[]`, `hash[]` | _(See below)_ |
+| [`include`](#include)                                                                 | `string`, `string[]`           | -             |
+| [`exclude`](#exclude)                                                                 | `string`, `string[]`           | -             |
+| [`enable`](#enable)                                                                   | `string`, `string[]`           | -             |
+| [`shell`](#shell)                                                                     | `string`                       | -             |
+| [`severity`](#severity)                                                               | `string`                       | -             |
+| [`norc`](#norc)                                                                       | `boolean`                      | `false`       |
 
 ### `target`
 
-This option allows you to specify files to analyze via ShellCheck. You can specify multiple targets or glob formats.
+This option allows you to specify files to analyze. Glob patterns are also available.
 
 The default value is:
 
@@ -62,9 +62,9 @@ linter:
       - shebang: true
 ```
 
-`shebang: true` is a special form. if enabling this form, Sider will analyze files including a [shebang](<https://en.wikipedia.org/wiki/Shebang_(Unix)>) like `#!/bin/sh` even if they do not have a file extension like `.sh`.
+`shebang: true` is a special form. if enabling this form, Sider analyzes files including a [shebang](<https://en.wikipedia.org/wiki/Shebang_(Unix)>) like `#!/bin/sh` even if they do not have a file extension like `.sh`.
 
-For example, if you have a file named `hello` including the following content, Sider will analyze it.
+For example, if you have a file named `hello` including the following content, Sider analyzes it.
 
 ```sh
 #!/bin/sh
@@ -84,75 +84,47 @@ linter:
 
 ### `include`
 
-This option allows you to explicitly include only the specified codes of ShellCheck.
-This can be a comma-separated list or have multiple values.
-
-For example:
-
-```yaml
-linter:
-  shellcheck:
-    include: "SC2104,SC2105"
-```
-
-Or
-
-```yaml
-linter:
-  shellcheck:
-    include:
-      - "SC2104"
-      - "SC2105"
-```
+This option allows you to include only rules you want, e.g. `SC2104` or `SC2105`.
 
 ### `exclude`
 
-This option allows you to explicitly exclude the specified codes of ShellCheck.
-This can be a comma-separated list or have multiple values like the [`include`](#include) option.
+This option allows you to exclude rules you want, e.g. `SC2104` or `SC2105`.
 
 ### `enable`
 
-This option allows you to enable optional checks. The special name `all` enables all of them.
+This option allows you to enable the predefined optional checks.
+The special name `all` enables all of them.
 
 For example:
 
 ```yaml
 linter:
   shellcheck:
-    enable: "all"
+    enable: all
 ```
 
-You can see a list of all optional checks via `shellcheck --list-optional` command.
+You can see a list of all the optional checks via `shellcheck --list-optional` command.
 Here is an example to enable some optional checks:
 
 ```yaml
 linter:
   shellcheck:
     enable:
-      - "add-default-case"
-      - "avoid-nullary-conditions"
-```
-
-You can use also a comma-separated list:
-
-```yaml
-linter:
-  shellcheck:
-    enable: "add-default-case,avoid-nullary-conditions"
+      - add-default-case
+      - avoid-nullary-conditions
 ```
 
 ### `shell`
 
 This option allows you to specify a shell dialect. Valid values are `sh`, `bash`, `dash`, and `ksh`.
-If you omit this option, ShellCheck will deduce it automatically.
+If omitted, Sider deduces it automatically.
 
 ### `severity`
 
 This option allows you to specify a minimum severity of errors to consider.
 Valid values in order of severity are `error`, `warning`, `info`, and `style`.
-If you omit this option, Sider will use a ShellCheck's default one.
+If omitted, Sider uses the ShellCheck's default one.
 
 ### `norc`
 
-This option allows you not to try to look for ShellCheck's configuration files.
-For more details about the configuration file, see the ShellCheck's [manual](https://github.com/koalaman/shellcheck/blob/master/shellcheck.1.md#rc-files).
+This option allows you to select whether looking for [ShellCheck's configuration files](https://github.com/koalaman/shellcheck/blob/master/shellcheck.1.md#rc-files).
