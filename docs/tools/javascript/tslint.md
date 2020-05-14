@@ -14,6 +14,9 @@ hide_title: true
 | ------------------------- | ---------- | --------------- | --------------------------------- |
 | 5.0.0+ (default to 6.0.0) | TypeScript | Node.js 12.16.1 | https://palantir.github.io/tslint |
 
+**TSLint** is an extensible static analysis tool for TypeScript.
+It checks your code for readability, maintainability, and functionality errors.
+
 ## Getting Started
 
 To start using TSLint, enable it in your [repository settings](../../getting-started/repository-settings.md).
@@ -33,7 +36,7 @@ $ npx tslint --init
 
 Then, edit the configuration file as you want. For more details about the configuration, please see [the TSLint documentation](https://palantir.github.io/tslint/usage/configuration).
 
-## Default Configuration
+## Default Configuration for TSLint
 
 Sider prepares the following configuration by default. Sider uses the configuration when you have no configurations.
 
@@ -47,50 +50,44 @@ Sider prepares the following configuration by default. Sider uses the configurat
 }
 ```
 
-## Configuration via `sider.yml`
+## Configuration
 
-Here is an example for TSLint:
+Here is an example configuration via `sider.yml`:
 
 ```yaml
 linter:
   tslint:
+    glob: "path/to/**/*.ts"
     config: my_tslint.json
     exclude: "vendor/**"
     project: frontend/tsconfig.json
     rules-dir: your_custom_rules/
-    glob: "path/to/**/*.ts"
 ```
 
 You can use the following options to make analysis fitter for your project.
 
-| Name                                                                                        | Type                 | Default           | Description                                                                        |
-| ------------------------------------------------------------------------------------------- | -------------------- | ----------------- | ---------------------------------------------------------------------------------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir)       | `string`             | -                 | A root directory.                                                                  |
-| [`npm_install`](../../getting-started/custom-configuration.md#linteranalyzer_idnpm_install) | `boolean`, `string`  | -                 | A behavior of npm installation.                                                    |
-| [`config`](#config)                                                                         | `string`             | -                 | [`--config`](https://palantir.github.io/tslint/usage/cli) option of TSLint.        |
-| [`exclude`](#exclude)                                                                       | `string`, `string[]` | `node_modules/**` | [`--exclude`](https://palantir.github.io/tslint/usage/cli) option of TSLint.       |
-| [`project`](#project)                                                                       | `string`             | -                 | [`--project`](https://palantir.github.io/tslint/usage/cli) option of TSLint.       |
-| [`rules-dir`](#rules-dir)                                                                   | `string`, `string[]` | -                 | [`--rules-dir`](https://palantir.github.io/tslint/usage/cli) option of TSLint.     |
-| [`glob`](#glob)                                                                             | `string`             | `**/*.ts{,x}`     | A glob pattern to analyze.                                                         |
-| [`type-check`](#type-check)                                                                 | `boolean`            | `false`           | **[DEPRECATED]** If you use TSLint 5.8.0+ and set `true`, your analysis will fail. |
+| Name                                                                                        | Type                 | Default           |
+| ------------------------------------------------------------------------------------------- | -------------------- | ----------------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir)       | `string`             | -                 |
+| [`npm_install`](../../getting-started/custom-configuration.md#linteranalyzer_idnpm_install) | `boolean`, `string`  | -                 |
+| [`glob`](#glob)                                                                             | `string`             | `**/*.ts{,x}`     |
+| [`config`](#config)                                                                         | `string`             | -                 |
+| [`exclude`](#exclude)                                                                       | `string`, `string[]` | `node_modules/**` |
+| [`project`](#project)                                                                       | `string`             | -                 |
+| [`rules-dir`](#rules-dir)                                                                   | `string`, `string[]` | -                 |
+| [`type-check`](#type-check)                                                                 | `boolean`            | `false`           |
 
-For details of the options, check the following sections.
+### `glob`
+
+This option allows you to specify files to analyze.
 
 ### `config`
 
-This option allows you to specify your configuration file except for the default one.
+This option allows you to specify a configuration file you want.
 
 ### `exclude`
 
-This option allows you to exclude files from analysis. A glob pattern is available also. If you want to exclude multiple files or directories, declare them as a sequence as follows:
-
-```yaml
-linter:
-  tslint:
-    exclude:
-      - "node_modules/**"
-      - "cache/**"
-```
+This option allows you to exclude files from analysis. Glob patterns are also available.
 
 ### `project`
 
@@ -109,10 +106,6 @@ linter:
 ```
 
 > Note that you need to use TSLint since version **5.12.0** to set the `rules-dir` option as an array.
-
-### `glob`
-
-This option allows you to specify files to analyze.
 
 ### `type-check`
 
