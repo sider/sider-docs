@@ -11,7 +11,7 @@ hide_title: true
 
 | Language  | Website                    |
 | --------- | -------------------------- |
-| Go 1.14.1 | https://golang.org/cmd/vet |
+| Go 1.14.2 | https://golang.org/cmd/vet |
 
 ## Getting Started
 

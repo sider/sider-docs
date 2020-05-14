@@ -7,9 +7,9 @@ hide_title: true
 
 # Reek
 
-| Supported Version         | Language   | Website                           |
-| ------------------------- | ---------- | --------------------------------- |
-| 4.4.0+ (default to 5.6.0) | Ruby 2.6.5 | https://github.com/troessner/reek |
+| Supported Version       | Language   | Website                           |
+| ----------------------- | ---------- | --------------------------------- |
+| 4.4.0+ (default: 6.0.0) | Ruby 2.7.1 | https://github.com/troessner/reek |
 
 **Reek** is a static analysis tool to detect any "Code Smells" in Ruby classes, modules and methods.
 
