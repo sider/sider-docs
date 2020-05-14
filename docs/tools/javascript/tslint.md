@@ -38,17 +38,7 @@ Then, edit the configuration file as you want. For more details about the config
 
 ## Default Configuration for TSLint
 
-Sider prepares the following configuration by default. Sider uses the configuration when you have no configurations.
-
-```json
-{
-  "defaultSeverity": "error",
-  "extends": ["tslint:recommended"],
-  "jsRules": {},
-  "rules": {},
-  "rulesDirectory": []
-}
-```
+Sider prepares the [default TSLint configuration](https://github.com/sider/runners/blob/master/images/tslint/default_tslint.json).
 
 ## Configuration
 
