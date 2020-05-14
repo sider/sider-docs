@@ -7,11 +7,11 @@ hide_title: true
 
 # HAML-Lint
 
-| Version                     | Language                              | Website                          |
-| --------------------------- | ------------------------------------- | -------------------------------- |
-| 0.26.0+ (default to 0.35.0) | [HAML](http://haml.info) (Ruby 2.6.5) | https://github.com/sds/haml-lint |
+| Version                   | Language          | Website                          |
+| ------------------------- | ----------------- | -------------------------------- |
+| 0.26.0+ (default: 0.35.0) | HAML (Ruby 2.7.1) | https://github.com/sds/haml-lint |
 
-**HAML-Lint** is a static analysis tool to help keep your HAML files clean and readable.
+**HAML-Lint** is a static analysis tool to help keep your [HAML](https://github.com/haml/haml) files clean and readable.
 In addition to HAML-specific style and lint checks, it can check them by integrated RuboCop rules.
 
 ## Getting Started

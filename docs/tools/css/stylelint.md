@@ -7,9 +7,9 @@ hide_title: true
 
 # stylelint
 
-| Supported Version          | Language                    | Runtime         | Website              |
-| :------------------------- | :-------------------------- | :-------------- | :------------------- |
-| 8.3.0+ (default to 13.2.0) | CSS and flavors (e.g. Sass) | Node.js 12.16.1 | https://stylelint.io |
+| Supported Version        | Language                    | Runtime         | Website              |
+| ------------------------ | --------------------------- | --------------- | -------------------- |
+| 8.3.0+ (default: 13.3.3) | CSS and flavors (e.g. Sass) | Node.js 12.16.3 | https://stylelint.io |
 
 **stylelint** is a pluggable linter to help you avoid errors and enforce conventions for CSS and CSS-like languages.
 It provides many core rules and third-party rules by the community.

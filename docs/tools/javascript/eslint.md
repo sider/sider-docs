@@ -7,9 +7,9 @@ hide_title: true
 
 # ESLint
 
-| Supported Version         | Language   | Runtime         | Website            |
-| :------------------------ | :--------- | :-------------- | :----------------- |
-| 5.0.0+ (default to 6.8.0) | JavaScript | Node.js 12.16.1 | https://eslint.org |
+| Supported Version       | Language   | Runtime         | Website            |
+| ----------------------- | ---------- | --------------- | ------------------ |
+| 5.0.0+ (default: 6.8.0) | JavaScript | Node.js 12.16.3 | https://eslint.org |
 
 **ESLint** is a static analysis tool for JavaScript and its flavors (e.g. TypeScript, JSX, Vue).
 It can find problems, style violations, or security issues, etc. in your code, and have so many plugins.

@@ -10,10 +10,12 @@ hide_title: true
 > This is **BETA**. The behavior of this tool might change.
 
 | Supported Version         | Language | Runtime         | Website                                 |
-| :------------------------ | :------- | :-------------- | :-------------------------------------- |
-| 6.0.0+ (default to 6.0.5) | Markdown | Node.js 12.16.1 | https://github.com/remarkjs/remark-lint |
+| ------------------------- | -------- | --------------- | --------------------------------------- |
+| 7.0.0+ (default: 8.0.0) ¹ | Markdown | Node.js 12.16.3 | https://github.com/remarkjs/remark-lint |
 
 **remark-lint** is a pluggable linter for Markdown. It includes many rules to enforce consistency and detect possible mistakes.
+
+¹ Note that this version is actually [remark-cli](https://github.com/remarkjs/remark/tree/master/packages/remark-cli)'s, not remark-lint's. Sider requires only remark-cli.
 
 ## Getting Started
 

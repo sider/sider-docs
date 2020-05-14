@@ -7,9 +7,9 @@ hide_title: true
 
 # Goodcheck
 
-| Supported Version         | Language        | Website                            |
-| ------------------------- | --------------- | ---------------------------------- |
-| 1.0.0+ (default to 2.5.0) | Others (Regexp) | https://sider.github.io/goodcheck/ |
+| Supported Version       | Language        | Website                            |
+| ----------------------- | --------------- | ---------------------------------- |
+| 1.0.0+ (default: 2.5.1) | Others (Regexp) | https://sider.github.io/goodcheck/ |
 
 **Goodcheck** is a regex-based customizable linter, which has no rules by default.
 Users can add and manage project-specific rules to their YAML files.
