@@ -11,15 +11,22 @@ hide_title: true
 | ------------------------- | ---------- | --------------- | ------------------------------- |
 | 0.2.1+ (default to 0.3.1) | TypeScript | Node.js 12.16.1 | https://github.com/sider/tyscan |
 
+**TyScan** is a static analysis tool for TypeScript to easily make your custom rules via your YAML file.
+
 ## Getting Started
 
-To start using TyScan in Sider, declare it as a dependency in your `package.json`.
+To start using TyScan, enable it in your [repository settings](../../getting-started/repository-settings.md)
+and put a `tyscan.yml` file in your repository.
 
-```shell
+If you want to try it locally, we recommend installing it via npm:
+
+```console
 $ npm install tyscan --save-dev
 ```
 
-## Configuration via `sider.yml`
+## Configuration
+
+Here is a configuration example via `sider.yml`:
 
 ```yaml
 linter:
@@ -32,28 +39,28 @@ linter:
 
 You can use the following options to make analysis fitter for your project.
 
-| Name                                                                                        | Type                | Default         | Description                        |
-| ------------------------------------------------------------------------------------------- | ------------------- | --------------- | ---------------------------------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir)       | `string`            | -               | A root directory.                  |
-| [`npm_install`](../../getting-started/custom-configuration.md#linteranalyzer_idnpm_install) | `boolean`, `string` | -               | A behavior of npm installation.    |
-| [`config`](#config)                                                                         | `string`            | `tyscan.yml`    | Set configuration file for TyScan. |
-| [`tsconfig`](#tsconfig)                                                                     | `string`            | `tsconfig.json` | Set your TypeScript project file.  |
-| [`paths`](#paths)                                                                           | `string[]`          | -               | Specify paths to analyze.          |
+| Name                                                                                        | Type                | Default         |
+| ------------------------------------------------------------------------------------------- | ------------------- | --------------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir)       | `string`            | -               |
+| [`npm_install`](../../getting-started/custom-configuration.md#linteranalyzer_idnpm_install) | `boolean`, `string` | -               |
+| [`config`](#config)                                                                         | `string`            | `tyscan.yml`    |
+| [`tsconfig`](#tsconfig)                                                                     | `string`            | `tsconfig.json` |
+| [`paths`](#paths)                                                                           | `string[]`          | -               |
 
 ### `config`
 
-This option allows you to specify the file or directory where your TyScan ruleset is located.
+This option allows you to specify a file or directory where your TyScan ruleset is located.
 
 ```yaml
 linter:
   tyscan:
-    config: rules.yml # TyScan will use `rules.yml` instead of `tyscan.yml` as the ruleset.
+    config: rules.yml # TyScan uses `rules.yml` instead of `tyscan.yml` as the ruleset.
 ```
 
 ### `tsconfig`
 
-This option allows you to set the TypeScript project file.
+This option allows you to set your TypeScript project file.
 
 ### `paths`
 
-This option allows you to specify the file paths to analyze with TyScan.
+This option allows you to specify files or directories to analyze.
