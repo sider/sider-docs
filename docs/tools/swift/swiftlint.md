@@ -9,56 +9,58 @@ hide_title: true
 
 | Supported Version | Language    | Website                            |
 | ----------------- | ----------- | ---------------------------------- |
-| 0.39.1            | Swift 5.1.5 | https://github.com/realm/SwiftLint |
+| 0.39.1            | Swift 5.1.5 | https://realm.github.io/SwiftLint/ |
+
+**SwiftLint** is a static analysis tool for Swift. It checks style and conventions, reports code metrics, and so on.
 
 ## Getting Started
 
 To start using SwiftLint, enable it in your [repository settings](../../getting-started/repository-settings.md).
 
-To customize SwiftLint, put a `.swiftlint.yml` file in your repository.
+If you want to customize SwiftLint, put a [`.swiftlint.yml`](https://github.com/realm/SwiftLint#configuration) file in your repository.
 
-## Configuration via `sider.yml`
+## Configuration
 
-Here are example settings for SwiftLint under `swiftlint`:
+Here is an example configuration via `sider.yml`:
 
 ```yaml
 linter:
   swiftlint:
-    ignore_warnings: true
     path: Source/
     config: lint_yml/.swiftlint.yml
+    ignore_warnings: true
     lenient: true
     enable-all-rules: true
 ```
 
 You can use several options to fine-tune SwiftLint to your project.
 
-| Name                                                                                  | Type      | Default | Description                                                                              |
-| ------------------------------------------------------------------------------------- | --------- | ------- | ---------------------------------------------------------------------------------------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`  | -       | A root directory.                                                                        |
-| [`ignore_warnings`](#ignore_warnings)                                                 | `boolean` | `false` | If `true`, Sider will not report `severity: "warnings"` issues.                          |
-| [`path`](#path)                                                                       | `string`  | -       | Set a file or directory path to analyze.                                                 |
-| [`config`](#config)                                                                   | `string`  | -       | Set a configuration file for SwiftLint.                                                  |
-| [`lenient`](#lenient)                                                                 | `boolean` | `false` | If `true`, downgrade serious violations to warnings and make warning threshold disabled. |
-| [`enable-all-rules`](#enable-all-rules)                                               | `boolean` | `false` | If `true`, SwiftLint will run with all rules.                                            |
-
-### `ignore_warnings`
-
-This option allows you to ignore issues that are `severity: "warnings"`.
+| Name                                                                                  | Type      | Default |
+| ------------------------------------------------------------------------------------- | --------- | ------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`  | -       |
+| [`path`](#path)                                                                       | `string`  | -       |
+| [`config`](#config)                                                                   | `string`  | -       |
+| [`ignore_warnings`](#ignore_warnings)                                                 | `boolean` | `false` |
+| [`lenient`](#lenient)                                                                 | `boolean` | `false` |
+| [`enable-all-rules`](#enable-all-rules)                                               | `boolean` | `false` |
 
 ### `path`
 
-This option allows you to specify a path (file or directory) that gets analyzed.
+This option allows you to specify a file or directory to analyze.
 
 ### `config`
 
-This option allows you to specify a configuration file when running SwiftLint.
-If you have a configuration file that is different from the SwiftLint's default one, use this option.
+This option allows you to specify a SwiftLint configuration file you want.
+If omitted, the SwiftLint's default one is used.
+
+### `ignore_warnings`
+
+This option allows you to ignore warning issues.
 
 ### `lenient`
 
-Lenient mode downgrades serious violations to warnings, and ignores warnings.
+This option allows you to downgrade serious violations to warnings.
 
 ### `enable-all-rules`
 
-This option runs SwiftLint with all rules, including opt-in and disabled ones. `whitelist_rules` will be ignored.
+This option allows you to enable all the rules, even opt-in and disabled ones.
