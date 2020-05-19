@@ -11,7 +11,7 @@ hide_title: true
 
 | Supported Version | Language  | Website                                    |
 | ----------------- | --------- | ------------------------------------------ |
-| 2.0.11            | Go 1.14.2 | https://github.com/alecthomas/gometalinter |
+| 2.0.11            | Go 1.14.3 | https://github.com/alecthomas/gometalinter |
 
 For more details, see the [readme](https://github.com/alecthomas/gometalinter#readme).
 
