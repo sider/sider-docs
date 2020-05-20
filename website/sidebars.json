@@ -129,6 +129,7 @@
         "label": "Releases",
         "ids": [
           "enterprise/releases/index",
+          "enterprise/releases/202005",
           "enterprise/releases/202004",
           "enterprise/releases/202002",
           "enterprise/releases/202001",
