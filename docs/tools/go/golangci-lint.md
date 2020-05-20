@@ -9,9 +9,9 @@ hide_title: true
 
 > This is **BETA**. The behavior of this tool might change.
 
-| Supported Version | Language  | Website                                   |
-| ----------------- | --------- | ----------------------------------------- |
-| 1.27.0            | Go 1.14.3 | https://github.com/golangci/golangci-lint |
+| Supported Version | Language  | Website                   |
+| ----------------- | --------- | ------------------------- |
+| 1.27.0            | Go 1.14.3 | https://golangci-lint.run |
 
 **GolangCI-Lint** is a linter to aggregate multiple linters and a successor to [Go Meta Linter](gometalinter.md) which is deprecated.
 
