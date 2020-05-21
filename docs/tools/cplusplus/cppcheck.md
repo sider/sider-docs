@@ -38,6 +38,7 @@ linter:
     std: "c99"
     project: "your_project.sln"
     language: "c++"
+    addon: "cert"
 ```
 
 You can use the following options to fine-tune Cppcheck to your project.
@@ -129,7 +130,7 @@ See also the `--language` option via the command-line help.
 
 ### `addon`
 
-This option allows you to set the Addons. For example:
+This option allows you to set the [predefined addons](https://github.com/danmar/cppcheck/tree/master/addons). For example:
 
 ```yaml
 linter:
@@ -140,5 +141,3 @@ linter:
 ```
 
 The available values are `cert`, `misra`, `y2038`, and `threadsafety`.
-
-See also [Cppcheck addons](https://github.com/danmar/cppcheck/tree/master/addons).
