@@ -15,8 +15,18 @@ hide_title: true
 
 ## Getting Started
 
-To start using Golint, enable Golint in repository setting.
+To start using Golint, enable it in your [repository settings](../../getting-started/repository-settings.md).
 
 ## Configuration
 
-There is no configuration available.
+Here is a configuration example via [`sider.yml`](../../getting-started/custom-configuration.md):
+
+```yaml
+linter:
+  golint:
+    root_dir: src/
+```
+
+| Name                                                                                  | Type     | Default |
+| ------------------------------------------------------------------------------------- | -------- | ------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string` | -       |
