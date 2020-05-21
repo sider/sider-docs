@@ -29,14 +29,55 @@ linter:
   stylelint:
     root_dir: "app/assets/stylesheets"
     glob: "**/*.{css,scss}"
+
+ignore:
+  - "images/**"
 ```
 
 The options you can specify in `sider.yml` are grouped into the following categories:
 
-1. Analyzer specific options (`linter.<analyzer_id>.*`)
-2. Analysis options (e.g. `ignore`)
+1. Analyzer-specific options (under `linter`)
+   - [`linter.brakeman`](../tools/ruby/brakeman.md)
+   - [`linter.checkstyle`](../tools/java/checkstyle.md)
+   - [`linter.code_sniffer`](../tools/php/codesniffer.md)
+   - [`linter.coffeelint`](../tools/javascript/coffeelint.md)
+   - [`linter.cppcheck`](../tools/cplusplus/cppcheck.md)
+   - [`linter.cpplint`](../tools/cplusplus/cpplint.md)
+   - [`linter.detekt`](../tools/kotlin/detekt.md)
+   - [`linter.eslint`](../tools/javascript/eslint.md)
+   - [`linter.flake8`](../tools/python/flake8.md)
+   - [`linter.fxcop`](../tools/csharp/fxcop.md)
+   - [`linter.go_vet`](../tools/go/govet.md)
+   - [`linter.golangci_lint`](../tools/go/golangci-lint.md)
+   - [`linter.golint`](../tools/go/golint.md)
+   - [`linter.gometalinter`](../tools/go/gometalinter.md)
+   - [`linter.goodcheck`](../tools/others/goodcheck.md)
+   - [`linter.hadolint`](../tools/dockerfile/hadolint.md)
+   - [`linter.haml_lint`](../tools/ruby/haml-lint.md)
+   - [`linter.javasee`](../tools/java/javasee.md)
+   - [`linter.jshint`](../tools/javascript/jshint.md)
+   - [`linter.ktlint`](../tools/kotlin/ktlint.md)
+   - [`linter.languagetool`](../tools/others/languagetool.md)
+   - [`linter.misspell`](../tools/others/misspell.md)
+   - [`linter.phinder`](../tools/php/phinder.md)
+   - [`linter.phpmd`](../tools/php/phpmd.md)
+   - [`linter.pmd_java`](../tools/java/pmd.md)
+   - [`linter.querly`](../tools/ruby/querly.md)
+   - [`linter.rails_best_practices`](../tools/ruby/rails-bestpractices.md)
+   - [`linter.reek`](../tools/ruby/reek.md)
+   - [`linter.remark_lint`](../tools/markdown/remark-lint.md)
+   - [`linter.rubocop`](../tools/ruby/rubocop.md)
+   - [`linter.scss_lint`](../tools/css/scss-lint.md)
+   - [`linter.shellcheck`](../tools/shellscript/shellcheck.md)
+   - [`linter.stylelint`](../tools/css/stylelint.md)
+   - [`linter.swiftlint`](../tools/swift/swiftlint.md)
+   - [`linter.tslint`](../tools/javascript/tslint.md)
+   - [`linter.tyscan`](../tools/javascript/tyscan.md)
+2. Non analyzer-specific options
+   - [`ignore`](#ignore)
+   - [`branches.exclude`](#branchesexclude)
 
-### Analyzer specific options
+### Analyzer-specific options
 
 You can use `sider.yml` to configure each analyzer's vendor-supplied settings.
 Sider also provides extra options for some analyzers that configure how Sider runs the analyzer (for example, some tools might need to run `npm install` before beginning analysis).
