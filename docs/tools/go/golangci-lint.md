@@ -1,13 +1,11 @@
 ---
 id: golangci-lint
 title: GolangCI-Lint
-sidebar_label: GolangCI-Lint (beta)
+sidebar_label: GolangCI-Lint
 hide_title: true
 ---
 
 # GolangCI-Lint
-
-> This is **BETA**. The behavior of this tool might change.
 
 | Supported Version | Language  | Website                   |
 | ----------------- | --------- | ------------------------- |
