@@ -11,7 +11,7 @@ hide_title: true
 
 | Supported Version | Language | Website                            |
 | ----------------- | -------- | ---------------------------------- |
-| 1.90              | C/C++    | https://github.com/danmar/cppcheck |
+| 2.0               | C/C++    | https://github.com/danmar/cppcheck |
 
 **Cppcheck** is a static analysis tool for C/C++ code. It aims to detect bugs, undefined behaviors, and dangerous coding constructs.
 
@@ -130,7 +130,7 @@ See also the `--language` option via the command-line help.
 
 ### `addon`
 
-This option allows you to set the [predefined addons](https://github.com/danmar/cppcheck/tree/master/addons). For example:
+This option allows you to set the [predefined addons](https://github.com/danmar/cppcheck/tree/master/addons#readme). For example:
 
 ```yaml
 linter:
