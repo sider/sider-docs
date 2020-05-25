@@ -3,7 +3,7 @@
     "lint": "remark . --quiet"
   },
   "devDependencies": {
-    "@arkweid/lefthook": "^0.7.1",
+    "@arkweid/lefthook": "^0.7.2",
     "@mapbox/remark-lint-link-text": "^0.4.5",
     "prettier": "^2.0.5",
     "remark-cli": "^8.0.0",
