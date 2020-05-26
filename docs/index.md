@@ -112,6 +112,7 @@ This section has documents about analysis tools which Sider supports. We have an
 - [Goodcheck](./tools/others/goodcheck.md)
 - [Misspell](./tools/others/misspell.md)
 - [LanguageTool](./tools/others/languagetool.md)
+- [PMD CPD](./tools/others/pmd_cpd.md)
 
 ## Custom Rules
 

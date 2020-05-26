@@ -61,6 +61,7 @@ The options you can specify in `sider.yml` are grouped into the following catego
    - [`linter.misspell`](../tools/others/misspell.md)
    - [`linter.phinder`](../tools/php/phinder.md)
    - [`linter.phpmd`](../tools/php/phpmd.md)
+   - [`linter.pmd_cpd`](../tools/others/pmd_cpd.md)
    - [`linter.pmd_java`](../tools/java/pmd.md)
    - [`linter.querly`](../tools/ruby/querly.md)
    - [`linter.rails_best_practices`](../tools/ruby/rails-bestpractices.md)
