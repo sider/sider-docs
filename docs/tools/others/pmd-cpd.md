@@ -1,5 +1,5 @@
 ---
-id: pmd_cpd
+id: pmd-cpd
 title: PMD CPD
 sidebar_label: PMD CPD
 hide_title: true

@@ -107,7 +107,7 @@
           "tools/others/goodcheck",
           "tools/others/misspell",
           "tools/others/languagetool",
-          "tools/others/pmd_cpd"
+          "tools/others/pmd-cpd"
         ]
       }
     ],
