@@ -24,7 +24,19 @@ You can customize the analysis via `sider.yml`:
 ```yaml
 linter:
   pmd_cpd:
-    TBD: TBD
+    minimum-tokens: 70
+    files: src
+    language: c
+    encoding: UTF-8
+    skip-duplicate-files: true
+    non-recursive: true
+    skip-lexical-errors: true
+    ignore-annotations: true
+    ignore-identifiers: true
+    ignore-literals: true
+    ignore-usings: true
+    no-skip-blocks: true
+    skip-blocks-pattern: '#ifdef TEST|#endif'
 ```
 
 | Name                                                                                  | Type                 | Default         |
@@ -51,7 +63,7 @@ The minimum token length which should be reported as a duplicate.
 
 ### `files`
 
-This option allows you to specify a list of files and directories to analyze:
+This option allows you to specify a list of files and directories to analyze, e.g.:
 
 ```yaml
 linter:
@@ -65,7 +77,7 @@ linter:
 
 ### `language`
 
-You can specify the language: e.g., c, cpp, cs, java, jsp, php, ruby, fortran. For the list of supported language, please visit [this page](https://pmd.github.io/pmd-6.23.0/pmd_userdocs_cpd.html#supported-languages).
+You can specify the language: e.g., c, cpp, cs, java, jsp, php, ruby, fortran. For the list of supported languages, please visit [this page](https://pmd.github.io/pmd-6.23.0/pmd_userdocs_cpd.html#supported-languages).
 
 ### `encoding`
 
@@ -113,7 +125,7 @@ If you want to ignore `using` directives, set this option to `true`.
 
 If you do not want to skip code blocks matched by the `skip-blocks-pattern` option, set this option to `true`.
 
-### skip-blocks-pattern
+### `skip-blocks-pattern`
 
 **C/C++ only**
 
