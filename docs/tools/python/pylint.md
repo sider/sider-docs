@@ -1,11 +1,13 @@
 ---
 id: pylint
 title: Pylint
-sidebar_label: Pylint
+sidebar_label: Pylint (beta)
 hide_title: true
 ---
 
 # Pylint
+
+> This is **BETA**. The behavior of this tool might change.
 
 | Supported Version | Language     | Website                         |
 | ----------------- | ------------ | ------------------------------- |
@@ -19,6 +21,12 @@ To start using Pylint, enable it in your [repository settings](../../getting-sta
 
 To customize Pylint, put a `.pylintrc` file in your repository.
 
+If you don't have `.pylintrc` file, you can make it by executing the command below.
+
+```bash
+pylint --generate-rcfile > .pylintrc
+```
+
 ## Configuration
 
 You can customize the analysis via `sider.yml`:
@@ -26,6 +34,9 @@ You can customize the analysis via `sider.yml`:
 ```yaml
 linter:
   pylint:
+    target:
+      - ./folder/bad1.py
+      - ./folder/bad2.py
     rcfile: ./folder/.pylintrc
     errors-only: true
     ignore:
@@ -35,22 +46,10 @@ linter:
 
 | Name                                                                                  | Type                 | Default    |
 | ------------------------------------------------------------------------------------- | -------------------- | ---------- |
-| [`rcfile`](#rcfile)                                                                   | `string`             | -          |
 | [`target`](#target)                                                                   | `string`, `string[]` | `**/*.{py}`|
+| [`rcfile`](#rcfile)                                                                   | `string`             | -          |
 | [`errors-only`](#errors-only)                                                         | `boolean`            | -          |
 | [`ignore`](#ignore)                                                                   | `string`, `string[]` | -          |
-
-### `rcfile`
-
-This option allows you to specify a configuration file you want.
-
-See also the [`--rcfile`](http://pylint.pycqa.org/en/latest/user_guide/run.html?highlight=rcfile#command-line-options) option.
-
-```yaml
-linter:
-  pylint:
-    rcfile: ./folder/.pylintrc
-```
 
 ### `target`
 
@@ -64,9 +63,21 @@ linter:
       - ./folder/bad2.py
 ```
 
+### `rcfile`
+
+This option allows you to specify a configuration file you want.
+
+See also the [`--rcfile`](http://pylint.pycqa.org/en/latest/user_guide/run.html?highlight=rcfile#command-line-options) option.
+
+```yaml
+linter:
+  pylint:
+    rcfile: ./folder/.pylintrc
+```
+
 ### `errors-only`
 
-This option allows you to show only pylint error messags.
+This option allows you to show only Pylint's error messages.
 
 ```yaml
 linter:
