@@ -58,7 +58,7 @@
       {
         "type": "subcategory",
         "label": "Python",
-        "ids": ["tools/python/flake8"]
+        "ids": ["tools/python/flake8", "tools/python/pylint"]
       },
       {
         "type": "subcategory",

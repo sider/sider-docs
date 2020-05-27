@@ -46,6 +46,7 @@ The options you can specify in `sider.yml` are grouped into the following catego
    - [`linter.detekt`](../tools/kotlin/detekt.md)
    - [`linter.eslint`](../tools/javascript/eslint.md)
    - [`linter.flake8`](../tools/python/flake8.md)
+   - [`linter.pylint`](../tools/python/pylint.md)
    - [`linter.fxcop`](../tools/csharp/fxcop.md)
    - [`linter.go_vet`](../tools/go/govet.md)
    - [`linter.golangci_lint`](../tools/go/golangci-lint.md)
