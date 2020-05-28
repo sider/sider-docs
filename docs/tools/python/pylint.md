@@ -52,7 +52,8 @@ linter:
 
 ### `target`
 
-This option allows you to specify files or directories to analyze via Pylint. If you specify multiple targets, configure as follows:
+This option allows you to specify files or directories to analyze via Pylint. Glob format is also available.
+If you specify multiple targets, configure as follows:
 
 ```yaml
 linter:
