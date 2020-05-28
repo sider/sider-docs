@@ -9,9 +9,9 @@ hide_title: true
 
 > This is **BETA**. The behavior of this tool might change.
 
-| Supported Version | Language     | Website                              |
-| ----------------- | ------------ | ------------------------------------ |
-| 2.5.2             | Python 3.8.2 | https://pylint.pycqa.org/en/stable/  |
+| Supported Version | Language     | Website                             |
+| ----------------- | ------------ | ----------------------------------- |
+| 2.5.2             | Python 3.8.2 | https://pylint.pycqa.org/en/stable/ |
 
 **Pylint** is a Python static code analysis tool which looks for programming errors, helps to enforce a coding standard, sniffs for code smells and offers simple refactoring suggestions.
 
@@ -35,8 +35,7 @@ You can customize the analysis via `sider.yml`:
 linter:
   pylint:
     target:
-      - ./folder/bad1.py
-      - ./folder/bad2.py
+      - "./**/*test.py"
     rcfile: ./folder/.pylintrc
     errors-only: true
     ignore:
@@ -44,12 +43,12 @@ linter:
       - bad2.py
 ```
 
-| Name                                                                                  | Type                 | Default    |
-| ------------------------------------------------------------------------------------- | -------------------- | ---------- |
-| [`target`](#target)                                                                   | `string`, `string[]` | `**/*.{py}`|
-| [`rcfile`](#rcfile)                                                                   | `string`             | -          |
-| [`errors-only`](#errors-only)                                                         | `boolean`            | -          |
-| [`ignore`](#ignore)                                                                   | `string`, `string[]` | -          |
+| Name                          | Type                 | Default     |
+| ----------------------------- | -------------------- | ----------- |
+| [`target`](#target)           | `string`, `string[]` | `**/*.{py}` |
+| [`rcfile`](#rcfile)           | `string`             | -           |
+| [`errors-only`](#errors-only) | `boolean`            | -           |
+| [`ignore`](#ignore)           | `string`, `string[]` | -           |
 
 ### `target`
 
@@ -59,15 +58,12 @@ This option allows you to specify files or directories to analyze via Pylint. If
 linter:
   pylint:
     target:
-      - ./folder/bad1.py
-      - ./folder/bad2.py
+      - "./**/*test.py"
 ```
 
 ### `rcfile`
 
 This option allows you to specify a configuration file you want.
-
-See also the [`--rcfile`](http://pylint.pycqa.org/en/latest/user_guide/run.html?highlight=rcfile#command-line-options) option.
 
 ```yaml
 linter:
