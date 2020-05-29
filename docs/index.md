@@ -70,6 +70,7 @@ This section has documents about analysis tools which Sider supports. We have an
 ### Python
 
 - [Flake8](./tools/python/flake8.md)
+- [Pylint](./tools/python/pylint.md)
 
 ### Swift
 
