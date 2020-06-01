@@ -142,7 +142,7 @@ linter:
 
 The available values are `cert`, `misra`, `y2038`, and `threadsafety`.
 
-You can also specify a json file containing [the configuration of addons](http://cppcheck.sourceforge.net/manual.html#running-addons). For example:
+You can also specify a json file containing [the configuration of addons](https://github.com/danmar/cppcheck/blob/master/man/manual.md#running-addons). For example:
 
 ```yaml
 linter:
