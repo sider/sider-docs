@@ -141,3 +141,25 @@ linter:
 ```
 
 The available values are `cert`, `misra`, `y2038`, and `threadsafety`.
+
+You can also specify a json file containing [the configuration of addons](http://cppcheck.sourceforge.net/manual.html#running-addons). For example specify the file path to the json file:
+
+```yaml
+linter:
+  cppcheck:
+    addon:
+      - config/misra.json
+```
+
+Note that the file path should be relative to the root directory where the sider.yml is located or the `root_dir` directory if it is specified.
+
+The `config/misra.json` file goes like this:
+
+```json
+{
+  "script": "misra",
+  "args": [
+    "--rule-texts=config/misra_rules.txt"
+  ]
+}
+```
