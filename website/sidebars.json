@@ -68,12 +68,7 @@
       {
         "type": "subcategory",
         "label": "Go",
-        "ids": [
-          "tools/go/golangci-lint",
-          "tools/go/govet",
-          "tools/go/golint",
-          "tools/go/gometalinter"
-        ]
+        "ids": ["tools/go/golangci-lint"]
       },
       {
         "type": "subcategory",

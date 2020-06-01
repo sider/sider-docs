@@ -7,7 +7,7 @@ hide_title: true
 
 # go vet
 
-> **DEPRECATED**: Sider will drop the support of go vet by **May 31, 2020**. We recommend [GolangCI-Lint](golangci-lint.md) as an alternative.
+> **DEPRECATED**: Sider dropped the support of go vet on **May 31, 2020**. We recommend [GolangCI-Lint](golangci-lint.md) instead.
 
 | Language  | Website                    |
 | --------- | -------------------------- |

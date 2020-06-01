@@ -79,9 +79,6 @@ This section has documents about analysis tools which Sider supports. We have an
 ### Go
 
 - [GolangCI-Lint](./tools/go/golangci-lint.md)
-- [go vet](./tools/go/govet.md)
-- [Golint](./tools/go/golint.md)
-- [Go Meta Linter](./tools/go/gometalinter.md)
 
 ### C/C++
 
