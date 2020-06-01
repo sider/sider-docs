@@ -151,7 +151,7 @@ linter:
       - config/misra.json
 ```
 
-Note that the file path should be relative to the root directory where the sider.yml is located or the `root_dir` directory if it is specified.
+Note that the file path should be relative to the root directory where the `sider.yml` is located or the `root_dir` directory if it is specified.
 
 The `config/misra.json` file goes like this:
 
