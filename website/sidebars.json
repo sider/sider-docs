@@ -19,7 +19,7 @@
           "tools/ruby/rubocop",
           "tools/ruby/reek",
           "tools/ruby/querly",
-          "tools/ruby/rails-bestpractices",
+          "tools/ruby/rails-best-practices",
           "tools/ruby/brakeman",
           "tools/ruby/haml-lint"
         ]
@@ -53,7 +53,11 @@
       {
         "type": "subcategory",
         "label": "PHP",
-        "ids": ["tools/php/codesniffer", "tools/php/phpmd", "tools/php/phinder"]
+        "ids": [
+          "tools/php/code-sniffer",
+          "tools/php/phpmd",
+          "tools/php/phinder"
+        ]
       },
       {
         "type": "subcategory",

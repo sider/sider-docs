@@ -1,5 +1,5 @@
 ---
-id: rails-bestpractices
+id: rails-best-practices
 title: Rails Best Practices
 sidebar_label: Rails Best Practices
 hide_title: true

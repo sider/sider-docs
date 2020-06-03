@@ -27,3 +27,11 @@ to = "/enterprise/quickstart"
 [[redirects]]
 from = "/enterprise/quick-start/update"
 to = "/enterprise/updating"
+
+[[redirects]]
+from = "/tools/php/codesniffer"
+to = "/tools/php/code-sniffer"
+
+[[redirects]]
+from = "/tools/ruby/rails-bestpractices"
+to = "/tools/ruby/rails-best-practices"
