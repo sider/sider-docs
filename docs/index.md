@@ -33,7 +33,7 @@ This section has documents about analysis tools which Sider supports. We have an
 - [RuboCop](./tools/ruby/rubocop.md)
 - [Reek](./tools/ruby/reek.md)
 - [Querly](./tools/ruby/querly.md)
-- [Rails Best Practices](./tools/ruby/rails-bestpractices.md)
+- [Rails Best Practices](./tools/ruby/rails-best-practices.md)
 - [Brakeman](./tools/ruby/brakeman.md)
 - [HAML-Lint](./tools/ruby/haml-lint.md)
 
@@ -63,7 +63,7 @@ This section has documents about analysis tools which Sider supports. We have an
 
 ### PHP
 
-- [PHP_CodeSniffer](./tools/php/codesniffer.md)
+- [PHP_CodeSniffer](./tools/php/code-sniffer.md)
 - [PHPMD](./tools/php/phpmd.md)
 - [Phinder](./tools/php/phinder.md)
 

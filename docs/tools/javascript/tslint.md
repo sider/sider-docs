@@ -20,7 +20,7 @@ It checks your code for readability, maintainability, and functionality errors.
 ## Getting Started
 
 To start using TSLint, enable it in your [repository settings](../../getting-started/repository-settings.md).
-After enabled, Sider will automatically analyze your TypeScript files with the default version and [default configuration](#default-configuration). Or if you already have configured TSLint, Sider will install your dependencies and analyze with your configuration.
+After enabled, Sider will automatically analyze your TypeScript files with the default version and [default configuration](#default-configuration-for-tslint). Or if you already have configured TSLint, Sider will install your dependencies and analyze with your configuration.
 
 But if you have no configuration yet and need more customization, install TSLint first:
 
