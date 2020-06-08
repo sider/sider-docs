@@ -78,7 +78,7 @@ linter:
 
 ### `language`
 
-This option allow you to specify a language you want to analyze. Here are available:
+This option allows you to specify a language you want to analyze. Here are available:
 
 - `apex`
 - `cpp`
