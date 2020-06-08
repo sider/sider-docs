@@ -7,7 +7,7 @@ hide_title: true
 
 # Go Meta Linter
 
-> **DEPRECATED**: Sider will drop the support of Go Meta Linter by **May 31, 2020**. We recommend [GolangCI-Lint](golangci-lint.md) as an alternative.
+> **DEPRECATED**: Sider dropped the support of Go Meta Linter on **May 31, 2020**. We recommend [GolangCI-Lint](golangci-lint.md) instead.
 
 | Supported Version | Language  | Website                                    |
 | ----------------- | --------- | ------------------------------------------ |
