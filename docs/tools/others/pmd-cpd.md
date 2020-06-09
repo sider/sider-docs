@@ -11,7 +11,7 @@ hide_title: true
 
 | Supported Version | Language    | Website               |
 | ----------------- | ----------- | --------------------- |
-| 6.23.0            | (see below) | https://pmd.github.io |
+| 6.24.0            | (see below) | https://pmd.github.io |
 
 **PMD CPD** is the copy-paste detector shipped with PMD. CPD works with Java, JSP, C/C++, C#, Go, Kotlin, Ruby, Swift and [many more languages](https://pmd.github.io/pmd/pmd_userdocs_cpd.html#supported-languages).
 
@@ -103,6 +103,7 @@ This option allows you to specify a language you want to analyze. Here are avail
 - `scala`
 - `swift`
 - `vf`
+- `xml`
 
 See also the [PMD CPD document](https://pmd.github.io/pmd/pmd_userdocs_cpd.html#supported-languages).
 
