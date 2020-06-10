@@ -54,7 +54,7 @@ You can use the following options to fine-tune Cppcheck to your project.
 | [`project`](#project)                                                                 | `string`             | -       |
 | [`language`](#language)                                                               | `string`             | -       |
 | [`addon`](#addon)                                                                     | `string`, `string[]` | -       |
-| [`bug-hunting`](#bug-hunting)                                                         | `boolean`            | -       |
+| [`bug-hunting`](#bug-hunting)                                                         | `boolean`            | `false` |
 
 ### `target`
 
