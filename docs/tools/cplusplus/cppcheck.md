@@ -39,6 +39,7 @@ linter:
     project: "your_project.sln"
     language: "c++"
     addon: "cert"
+    bug-hunting: true
 ```
 
 You can use the following options to fine-tune Cppcheck to your project.
@@ -53,6 +54,7 @@ You can use the following options to fine-tune Cppcheck to your project.
 | [`project`](#project)                                                                 | `string`             | -       |
 | [`language`](#language)                                                               | `string`             | -       |
 | [`addon`](#addon)                                                                     | `string`, `string[]` | -       |
+| [`bug-hunting`](#bug-hunting)                                                         | `boolean`            | `false` |
 
 ### `target`
 
@@ -163,3 +165,7 @@ The `config/misra.json` file goes like this:
   ]
 }
 ```
+
+### `bug-hunting`
+
+This option allows you to enable Bug hunting. There is a new "soundy" analysis introduced in Cppcheck-2.0. You can read more about this analysis in the [Cppcheck manual](https://github.com/danmar/cppcheck/blob/master/man/manual.md#bug-hunting).
