@@ -115,7 +115,7 @@ Here are available:
 - `vf`
 - `xml`
 
-The default languages are marked by `*`.
+The default languages marked with `*` are used if you omit the option.
 
 See also the [PMD CPD document](https://pmd.github.io/pmd/pmd_userdocs_cpd.html#supported-languages).
 
