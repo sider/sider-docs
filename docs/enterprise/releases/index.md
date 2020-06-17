@@ -1,11 +1,11 @@
 ---
 id: index
-title: Summary
-sidebar_label: Summary
+title: Sider Enterprise Releases
+sidebar_label: Overview
 hide_title: true
 ---
 
-# Release Notes
+# Sider Enterprise Releases
 
 - [May 2020](./202005.md)
 - [April 2020](./202004.md)

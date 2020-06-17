@@ -9,12 +9,20 @@ from = "/tools"
 to = "/introduction#analysis-tools"
 
 [[redirects]]
+from = "/tools/php/codesniffer"
+to = "/tools/php/code-sniffer"
+
+[[redirects]]
+from = "/tools/ruby/rails-bestpractices"
+to = "/tools/ruby/rails-best-practices"
+
+[[redirects]]
 from = "/on-premises"
 to = "/enterprise/releases"
 
 [[redirects]]
 from = "/on-premises/quick-start"
-to = "/enterprise/quickstart"
+to = "/enterprise/example-deployments/single-node-with-docker-compose"
 
 [[redirects]]
 from = "/on-premises/quick-start/*"
@@ -22,16 +30,44 @@ to = "/enterprise/quick-start/:splat"
 
 [[redirects]]
 from = "/enterprise/quick-start/setup"
-to = "/enterprise/quickstart"
+to = "/enterprise/example-deployments/single-node-with-docker-compose"
+
+[[redirects]]
+from = "/enterprise/quickstart"
+to = "/enterprise/example-deployments/single-node-with-docker-compose"
 
 [[redirects]]
 from = "/enterprise/quick-start/update"
 to = "/enterprise/updating"
 
 [[redirects]]
-from = "/tools/php/codesniffer"
-to = "/tools/php/code-sniffer"
+from = "/enterprise/outline"
+to = "/enterprise"
 
 [[redirects]]
-from = "/tools/ruby/rails-bestpractices"
-to = "/tools/ruby/rails-best-practices"
+from = "/enterprise/administration"
+to = "/enterprise/operation"
+
+[[redirects]]
+from = "/enterprise/http-proxy"
+to = "/enterprise/config#http-proxy"
+
+[[redirects]]
+from = "/enterprise/database"
+to = "/enterprise/mysql"
+
+[[redirects]]
+from = "/enterprise/healthcheck"
+to = "/enterprise/operation"
+
+[[redirects]]
+from = "/enterprise/storage"
+to = "/enterprise/minio"
+
+[[redirects]]
+from = "/enterprise/resources"
+to = "/enterprise/system-overview"
+
+[[redirects]]
+from = "/enterprise/scaling"
+to = "/enterprise/clustering"
