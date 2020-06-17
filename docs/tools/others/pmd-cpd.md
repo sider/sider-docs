@@ -46,7 +46,7 @@ linter:
 | [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`             | -               |
 | [`minimum-tokens`](#minimum-tokens)                                                   | `number`             | `100`           |
 | [`files`](#files)                                                                     | `string`, `string[]` | `.`             |
-| [`language`](#language)                                                               | `string`, `string[]` | (See [`language`](#language)) |
+| [`language`](#language)                                                               | `string`, `string[]` | (See below)     |
 | [`encoding`](#encoding)                                                               | `string`             | (PMD's default) |
 | [`skip-duplicate-files`](#skip-duplicate-files)                                       | `boolean`            | `false`         |
 | [`non-recursive`](#non-recursive)                                                     | `boolean`            | `false`         |
