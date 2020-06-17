@@ -78,7 +78,7 @@ linter:
 
 ### `language`
 
-This option allows you to specify a list of languages you want to analyze, e.g.:
+This option allows you to specify one or more languages you want to analyze, e.g.:
 
 ```yaml
 linter:
