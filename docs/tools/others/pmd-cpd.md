@@ -11,7 +11,7 @@ hide_title: true
 
 | Supported Version | Language    | Website               |
 | ----------------- | ----------- | --------------------- |
-| 6.23.0            | (see below) | https://pmd.github.io |
+| 6.24.0            | (see below) | https://pmd.github.io |
 
 **PMD CPD** is the copy-paste detector shipped with PMD. CPD works with Java, JSP, C/C++, C#, Go, Kotlin, Ruby, Swift and [many more languages](https://pmd.github.io/pmd/pmd_userdocs_cpd.html#supported-languages).
 
@@ -91,27 +91,27 @@ linter:
 Here are available:
 
 - `apex`
-- `cpp` *
-- `cs` *
+- `cpp` \*
+- `cs` \*
 - `dart`
-- `ecmascript` *
+- `ecmascript` \*
 - `fortran`
-- `go` *
+- `go` \*
 - `groovy`
-- `java` *
+- `java` \*
 - `jsp`
-- `kotlin` *
+- `kotlin` \*
 - `lua`
 - `matlab`
 - `modelica`
 - `objectivec`
 - `perl`
-- `php` *
+- `php` \*
 - `plsql`
-- `python` *
-- `ruby` *
+- `python` \*
+- `ruby` \*
 - `scala`
-- `swift` *
+- `swift` \*
 - `vf`
 - `xml`
 
