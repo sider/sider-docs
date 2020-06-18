@@ -11,7 +11,7 @@ hide_title: true
 
 | Supported Version | Language | Website                            |
 | ----------------- | -------- | ---------------------------------- |
-| 2.0               | C/C++    | https://github.com/danmar/cppcheck |
+| 2.1               | C/C++    | https://github.com/danmar/cppcheck |
 
 **Cppcheck** is a static analysis tool for C/C++ code. It aims to detect bugs, undefined behaviors, and dangerous coding constructs.
 
@@ -160,9 +160,7 @@ The `config/misra.json` file goes like this:
 ```json
 {
   "script": "misra",
-  "args": [
-    "--rule-texts=config/misra_rules.txt"
-  ]
+  "args": ["--rule-texts=config/misra_rules.txt"]
 }
 ```
 
