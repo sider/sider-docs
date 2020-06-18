@@ -11,7 +11,7 @@ hide_title: true
 
 | Supported Version | Language    | Website               |
 | ----------------- | ----------- | --------------------- |
-| 6.23.0            | (see below) | https://pmd.github.io |
+| 6.24.0            | (see below) | https://pmd.github.io |
 
 **PMD CPD** is the copy-paste detector shipped with PMD. CPD works with Java, JSP, C/C++, C#, Go, Kotlin, Ruby, Swift and [many more languages](https://pmd.github.io/pmd/pmd_userdocs_cpd.html#supported-languages).
 
@@ -28,7 +28,7 @@ linter:
   pmd_cpd:
     minimum-tokens: 70
     files: src
-    language: c
+    language: cpp
     encoding: UTF-8
     skip-duplicate-files: true
     non-recursive: true
@@ -46,7 +46,7 @@ linter:
 | [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`             | -               |
 | [`minimum-tokens`](#minimum-tokens)                                                   | `number`             | `100`           |
 | [`files`](#files)                                                                     | `string`, `string[]` | `.`             |
-| [`language`](#language)                                                               | `string`             | `java`          |
+| [`language`](#language)                                                               | `string`, `string[]` | (See below)     |
 | [`encoding`](#encoding)                                                               | `string`             | (PMD's default) |
 | [`skip-duplicate-files`](#skip-duplicate-files)                                       | `boolean`            | `false`         |
 | [`non-recursive`](#non-recursive)                                                     | `boolean`            | `false`         |
@@ -78,31 +78,44 @@ linter:
 
 ### `language`
 
-This option allows you to specify a language you want to analyze. Here are available:
+This option allows you to specify one or more languages you want to analyze, e.g.:
+
+```yaml
+linter:
+  pmd_cpd:
+    language: cpp
+    # or
+    # language: [cpp, java, python]
+```
+
+Here are available:
 
 - `apex`
-- `cpp`
-- `cs`
+- `cpp` \*
+- `cs` \*
 - `dart`
-- `ecmascript`
+- `ecmascript` \*
 - `fortran`
-- `go`
+- `go` \*
 - `groovy`
-- `java`
+- `java` \*
 - `jsp`
-- `kotlin`
+- `kotlin` \*
 - `lua`
 - `matlab`
 - `modelica`
 - `objectivec`
 - `perl`
-- `php`
+- `php` \*
 - `plsql`
-- `python`
-- `ruby`
+- `python` \*
+- `ruby` \*
 - `scala`
-- `swift`
+- `swift` \*
 - `vf`
+- `xml`
+
+The default languages marked with `*` are used if you omit the option.
 
 See also the [PMD CPD document](https://pmd.github.io/pmd/pmd_userdocs_cpd.html#supported-languages).
 
