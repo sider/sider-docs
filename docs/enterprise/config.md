@@ -91,7 +91,7 @@ sideci, which is a core component of Sider Enterprise, will invoke Runners to pe
 
 - `AWS_REGION_FOR_SIDER` - (Optional, but required for Amazon S3) AWS region name, such as "us-east-1." If you want to use an Amazon S3 bucket for Runners traces, you **MUST** specify this environment variable. The default value is `us-east-1`.
 
-- `DOCKER_RUNNERS_CONFIG` - (Required) The JSON string to specify how to access to Runners and Minio.The structure of this must be like this:
+- `DOCKER_RUNNERS_CONFIG` - (Required) The JSON string to specify how to access to Runners and Minio. The structure of this must be like this:
 
   ```json
   {
@@ -125,7 +125,7 @@ Sider Enterprise supports sending emails. You can get error notifications via Em
 
 - `ACTION_MAILER_SMTP_ADDRESS` - (Optional) The SMTP server address. e.g., `smtp.example.com`.
 
-- `ACTION_MAILER_DEFAULT_FROM_EMAIL` - (Optional) The from address of emails sent from Sider. e.g., `sider@example.com`.
+- `ACTION_MAILER_DEFAULT_FROM_EMAIL` - (Optional) The FROM address of emails sent from Sider. e.g., `sider@example.com`.
 
 - `ACTION_MAILER_SMTP_PORT` - (Optional) The SMTP server port number. The default value is `25`. e.g., `125`.
 
@@ -157,7 +157,7 @@ If you leave the PUSHER\_\* variables empty, Pusher will be disabled, and Sider 
 
 - `PUSHER_CLUSTER` - (Optional) The Pusher cluster.
 
-- `FRONTEND_POLLING_INTERVAL` - (Optional) The polling interval in seconds. The default value is `30`, which means each browser calls Ajax requests every 30 seconds. e.g.,`60`.
+- `FRONTEND_POLLING_INTERVAL` - (Optional) The polling interval in seconds. The default value is `30`, which means each browser calls Ajax requests every 30 seconds. e.g., `60`.
 
 ## Configuring cron jobs
 
