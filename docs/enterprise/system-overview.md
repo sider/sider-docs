@@ -38,7 +38,7 @@ The processes of sideci are divided into two types of roles: web and worker. You
 
 We recommend that you put the load balancer in front of sideci web. sideci web is an application server and is not good at handling many HTTP requests. Moreover, you can secure connections between sideci web and end-users as long as you set up your load balancer to listen for HTTPS.
 
-Runners, on the other hand, are the collection of "runner" and analyze users' source code. They will fetch users' source code from GitHub Enterprise Server and may try to access the internet because some runners require the dependencies resolution. After the analysis, each runner will upload its result to Minio. Runners are invoked via Docker API by sideci, and they are not daemon processes unlike sideci.
+Runners, on the other hand, are the collection of "runner" and perform analyses for users' source code. They will fetch users' source code from GitHub Enterprise Server and may try to access the internet because some runners require the dependency resolution. After the analysis, each runner will upload its result to Minio. Runners are invoked via Docker API by sideci, and they are not daemon processes, unlike sideci.
 
 ## Requirements
 

@@ -58,7 +58,7 @@ All Sider Enterprise services do not store persistent data within their containe
 
 Sider Enterprise administrators can do the followings on the `/admin` page:
 
-- To review all of the users, repositories, organization, and analyses
+- To review all the users, repositories, organizations, and analyses
 - To make other users administrators
 
 In order to make users administrators, run the following command:

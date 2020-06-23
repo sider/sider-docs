@@ -43,7 +43,7 @@ minio server --address :9001 /data
 
 ## Automatically Delete Old Traces
 
-As stated above, objects on Minio will grow and hugely consumes disk space. if you allow the deletion of old traces, you can configure the Minio server to automatically delete old objects. After installing Sider Enterprise and configuring environment variables, run the following command. In this case, objects on Minio older than 180 days will be deleted.
+As stated above, objects on Minio will grow and hugely consumes disk space. If you allow the deletion of old traces, you can configure the Minio server to automatically delete old objects. After installing Sider Enterprise and configuring environment variables, run the following command. In this case, objects on Minio older than 180 days will be deleted.
 
 ```console
 docker run \
