@@ -7,6 +7,7 @@ hide_title: true
 
 # Sider Enterprise Releases
 
+- [June 2020](./202006.md)
 - [May 2020](./202005.md)
 - [April 2020](./202004.md)
 - [February 2020](./202002.md)
