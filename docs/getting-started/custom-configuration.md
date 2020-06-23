@@ -240,6 +240,7 @@ In order to use this option, add it as a top-level in `sider.yml` like this:
 ignore:
   - "*.pdf"
   - "*.mp4"
+  - "*.min.*"
   - "images/**"
 ```
 
