@@ -11,7 +11,7 @@ You can get to know hot to set up [Minio](https://min.io/) for Sider Enterprise.
 
 ## Requirements
 
-The version of Minio must be [`RELEASE.2019-08-14T20-37-41Z`](https://github.com/minio/minio/releases/tag/RELEASE.2019-08-14T20-37-41Z) or higher. Also, Sider Enterprise largely uploads objects on Minio, so you should prepare enough storage space for Minio. At least, 100GiB storage would be required.
+The version of Minio must be [`RELEASE.2019-08-14T20-37-41Z`](https://github.com/minio/minio/releases/tag/RELEASE.2019-08-14T20-37-41Z) or higher. Also, Sider Enterprise largely uploads objects on Minio, so you should prepare enough storage space for Minio. At least, 100 GiB storage would be required.
 
 Before integrating Minio with Sider Enterprise, you first have to create a bucket with the name specified with [`RUNNERS_TRACES_S3_BUCKET_NAME`](./config.md).
 

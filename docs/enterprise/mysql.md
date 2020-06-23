@@ -11,7 +11,7 @@ This document explains how to set up MySQL for Sider Enterprise.
 
 ## Requirements
 
-Sider Enterprise requires MySQL 5.7. You cannot use MySQL 5.6 or older. MySQL 8.0 may work, but we do not support the use of this version. Also, the MySQL server should run on a machine that has sufficient storage size and memory space. It depends on the use of customers, but we recommend preparing 8 GiB RAM and 100GiB storage or higher for the dedicated MySQL server.
+Sider Enterprise requires MySQL 5.7. You cannot use MySQL 5.6 or older. MySQL 8.0 may work, but we do not support the use of this version. Also, the MySQL server should run on a machine that has sufficient storage size and memory space. It depends on the use of customers, but we recommend preparing 8 GiB RAM and 100 GiB storage or higher for the dedicated MySQL server.
 
 ## Recommended Parameters
 

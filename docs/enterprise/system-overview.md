@@ -48,7 +48,7 @@ Runners, on the other hand, are the collection of "runner" and analyze users' so
 
 The necessary storage space largely depends on the number of analyses. If your organization has many developers, and they actively change their source code, the required storage space could be huge.
 
-Sider Enterprise mainly consumes the storage space via Docker, MySQL, and Minio, so you may have to care about the disk space for each service. It is assumed that each service should have 100GiB storage size on its own at least, but this is a too rough estimate that we could recommend what is the best storage size.
+Sider Enterprise mainly consumes the storage space via Docker, MySQL, and Minio, so you may have to care about the disk space for each service. It is assumed that each service should have 100 GiB storage size on its own at least, but this is a too rough estimate that we could recommend what is the best storage size.
 
 #### CPU
 
@@ -58,7 +58,7 @@ The number of required CPU cores is dependent on the number of analyses. If you 
 
 #### Memory
 
-At least, you should respectively prepare 1GiB RAM for a single sideci web and 2GiB RAM for a sideci worker. Furthermore, Runners should have 1GiB RAM for each container. It depends on your usage of Sider Enterprise, but we recommend that you should prepare more than 32GiB RAM as the total amount.
+At least, you should respectively prepare 1 GiB RAM for a single sideci web and 2 GiB RAM for a sideci worker. Furthermore, Runners should have 1 GiB RAM for each container. It depends on your usage of Sider Enterprise, but we recommend that you should prepare more than 32 GiB RAM as the total amount.
 
 ### Software Requirements
 
