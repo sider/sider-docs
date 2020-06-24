@@ -22,7 +22,7 @@ to = "/enterprise/releases"
 
 [[redirects]]
 from = "/on-premises/quick-start"
-to = "/enterprise/example-deployments/single-node-with-docker-compose"
+to = "/enterprise/examples/single-node-with-docker-compose"
 
 [[redirects]]
 from = "/on-premises/quick-start/*"
@@ -30,11 +30,11 @@ to = "/enterprise/quick-start/:splat"
 
 [[redirects]]
 from = "/enterprise/quick-start/setup"
-to = "/enterprise/example-deployments/single-node-with-docker-compose"
+to = "/enterprise/examples/single-node-with-docker-compose"
 
 [[redirects]]
 from = "/enterprise/quickstart"
-to = "/enterprise/example-deployments/single-node-with-docker-compose"
+to = "/enterprise/examples/single-node-with-docker-compose"
 
 [[redirects]]
 from = "/enterprise/quick-start/update"

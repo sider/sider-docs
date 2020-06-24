@@ -140,9 +140,7 @@
       {
         "type": "subcategory",
         "label": "Example Deployments",
-        "ids": [
-          "enterprise/example-deployments/single-node-with-docker-compose"
-        ]
+        "ids": ["enterprise/examples/single-node-with-docker-compose"]
       },
       {
         "type": "subcategory",
