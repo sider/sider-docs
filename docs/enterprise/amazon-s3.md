@@ -7,7 +7,7 @@ hide_title: true
 
 # Amazon S3
 
-This describes how to set up Amazon S3 for Sider Enterprise. If you provision Sider Enterprise on AWS, you can use [Amazon S3](https://aws.amazon.com/s3/) instead of MiniO.
+This describes how to set up Amazon S3 for Sider Enterprise. If you provision Sider Enterprise on AWS, you can use [Amazon S3](https://aws.amazon.com/s3/) instead of MinIO.
 
 ## Requirements
 

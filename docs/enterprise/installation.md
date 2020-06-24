@@ -7,12 +7,12 @@ hide_title: true
 
 # Installation
 
-Sider Enterprise runs on Docker, and it requires MySQL, Redis, MiniO, and GitHub Enterprise Server. Also, you should put a load balancer in front of Sider Enterprise. Before the installation of Sider Enterprise, you should first set up these services.
+Sider Enterprise runs on Docker, and it requires MySQL, Redis, MinIO, and GitHub Enterprise Server. Also, you should put a load balancer in front of Sider Enterprise. Before the installation of Sider Enterprise, you should first set up these services.
 
 - [Load Balancer](./load-balancer.md)
 - [MySQL](./mysql.md)
 - [Redis](./redis.md)
-- [MiniO](./minio.md)
+- [MinIO](./minio.md)
 - [GitHub Enterprise Server](./github.md)
 
 ## Get Docker Image
@@ -56,7 +56,7 @@ RUNNERS_TRACES_S3_BUCKET_NAME=runners-traces
 DOCKER_RUNNERS_CONFIG={"docker_host_url":"unix:///var/run/docker.sock","s3_endpoint":"http://minio.example.com:9000","aws_access_key_id":"access-key","aws_secret_access_key":"secret-key","network_mode":"bridge"}
 ```
 
-These parameters depend on MySQL, Redis, MiniO, and GitHub Enterprise Server configurations, so please be careful to **correctly** write the parameters. See [Sider Enterprise Configuration](./config.md)
+These parameters depend on MySQL, Redis, MinIO, and GitHub Enterprise Server configurations, so please be careful to **correctly** write the parameters. See [Sider Enterprise Configuration](./config.md)
 
 ## Run Sider Enterprise
 

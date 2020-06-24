@@ -88,4 +88,4 @@ We recommend you should watch these metrics to notice performance issues and une
 In addition, these metrics for other services should be also monitored because Sider Enterprise heavily uses them.
 
 - Disk storage space on MySQL
-- Disk storage space on MiniO
+- Disk storage space on MinIO
