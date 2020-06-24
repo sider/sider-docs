@@ -24,9 +24,9 @@ System overview of Sider Enterprise. You can get to know the requirements to run
 
 Step-by-step Installation guide for Sider Enterprise.
 
-## [Sider Enterprise Configuration](./config.md)
+## [Configuration](./config.md)
 
-Sider Enterprise Configuration guide for Sider Enterprise. You may have to configure your Sider Enterprise to fit your environment.
+Configuration guide for Sider Enterprise. You may have to configure your Sider Enterprise to fit your environment.
 
 ## [Operation](./operation.md)
 
