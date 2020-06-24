@@ -1,11 +1,11 @@
 ---
 id: updating
-title: Update Guide
-sidebar_label: Update Guide
+title: Update
+sidebar_label: Update
 hide_title: true
 ---
 
-# Update Guide
+# Update
 
 We release Sider Enterprise's new versions continuously. It is recommended that you keep your Sider Enterprise up to date.
 

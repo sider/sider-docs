@@ -1,11 +1,11 @@
 ---
 id: redis
-title: Redis Guide
-sidebar_label: Redis Guide
+title: Redis
+sidebar_label: Redis
 hide_title: true
 ---
 
-# Redis Guide
+# Redis
 
 This document describes how to set up Redis for Sider Enterprise.
 

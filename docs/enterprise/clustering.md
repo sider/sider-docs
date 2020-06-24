@@ -1,11 +1,11 @@
 ---
 id: clustering
-title: Clustering Guide
-sidebar_label: Clustering Guide
+title: Clustering
+sidebar_label: Clustering
 hide_title: true
 ---
 
-# Clustering Guide
+# Clustering
 
 This document describes what you should do when you want to put your Sider Enterprise services across your server nodes.
 

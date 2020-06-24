@@ -1,11 +1,11 @@
 ---
 id: minio
-title: Minio Guide
-sidebar_label: Minio Guide
+title: Minio
+sidebar_label: Minio
 hide_title: true
 ---
 
-# Minio Guide
+# Minio
 
 You can get to know hot to set up [Minio](https://min.io/) for Sider Enterprise.
 

@@ -1,11 +1,11 @@
 ---
 id: operation
-title: Operation Guide
-sidebar_label: Operation Guide
+title: Operation
+sidebar_label: Operation
 hide_title: true
 ---
 
-# Operation Guide
+# Operation
 
 ## Start, Stop, and Restart Sider Enterprise
 
@@ -17,7 +17,7 @@ sideci web is a web application service. You should pass these parameters to you
 
 - COMMAND: `bundle exec puma`
 - Published port: `80:3000` (You can change the value `80` to an arbitrary port number)
-- Environment variables: See [Configuration Guide](./config.md)
+- Environment variables: See [Configuration](./config.md)
 
 This is an example of how to start sideci web.
 
@@ -34,7 +34,7 @@ docker run \
 sideci worker is responsible for processing background jobs. You should pass these parameters to your Docker runtime.
 
 - COMMAND: `bundle exec sidekiq`
-- Environment variables: See [Configuration Guide](./config.md)
+- Environment variables: See [Configuration](./config.md)
 
 This is an example of how to start sideci worker.
 

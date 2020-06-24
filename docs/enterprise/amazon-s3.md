@@ -1,11 +1,11 @@
 ---
 id: amazon-s3
-title: Amazon S3 Guide
-sidebar_label: Amazon S3 Guide
+title: Amazon S3
+sidebar_label: Amazon S3
 hide_title: true
 ---
 
-# Amazon S3 Guide
+# Amazon S3
 
 This describes how to set up Amazon S3 for Sider Enterprise. If you provision Sider Enterprise on AWS, you can use [Amazon S3](https://aws.amazon.com/s3/) instead of Minio.
 

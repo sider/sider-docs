@@ -1,11 +1,11 @@
 ---
 id: github
-title: GitHub Enterprise Server Guide
-sidebar_label: GitHub Enterprise Server Guide
+title: GitHub Enterprise Server
+sidebar_label: GitHub Enterprise Server
 hide_title: true
 ---
 
-# GitHub Enterprise Server Guide
+# GitHub Enterprise Server
 
 This document describes what you should configure on your GitHub Enterprise Server to integrate with Sider Enterprise.
 
@@ -60,4 +60,4 @@ After the GitHub App created, generate a private key, and download the PEM file.
 - `GITHUB_APP_OAUTH2_CLIENT_SECRET`: The client secret.
 - `GITHUB_APP_WEBHOOK_SECRET`: The webhook secret
 
-See [Configuration Guide](./config.md) for more details.
+See [Configuration](./config.md) for more details.

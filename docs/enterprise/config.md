@@ -1,11 +1,11 @@
 ---
 id: config
-title: Configuration Guide
-sidebar_label: Configuration Guide
+title: Configuration
+sidebar_label: Configuration
 hide_title: true
 ---
 
-# Configuration Guide
+# Configuration
 
 Sider Enterprise depends on other services, such as MySQL, so its configuration is important to ensure working well. This document describes the details about Sider Enterprise configurations.
 
@@ -37,7 +37,7 @@ These parameters are not related to other services, like MySQL.
   tr -dc '[:alnum:]' < /dev/urandom | head -c 32
   ```
 
-- `RESTRICT_SIGN_UP` - (Optional) The boolean to control if users can sign up by themselves. If the parameter is `true`, the administrators of Sider Enterprise will have to register users. See [Operation Guide](./operation.md) for registering users.
+- `RESTRICT_SIGN_UP` - (Optional) The boolean to control if users can sign up by themselves. If the parameter is `true`, the administrators of Sider Enterprise will have to register users. See [Operation](./operation.md) for registering users.
 
 - `SIDECI_TIMEZONE` - (Optional) The timezone used for admin console. This does not affect the time formats for Sider Enterprise end-users. See [`ActiveSupport::TimeZone`](https://api.rubyonrails.org/classes/ActiveSupport/TimeZone.html) for more details. e.g., `Asia/Tokyo`.
 
@@ -45,13 +45,13 @@ These parameters are not related to other services, like MySQL.
 
 ## MySQL
 
-Sider Enterprise completely depends on MySQL. You should carefully set up the parameters to accord with the actual MySQL configuration. Read [MySQL Guide](./mysql.md) for how to configure a MySQL server.
+Sider Enterprise completely depends on MySQL. You should carefully set up the parameters to accord with the actual MySQL configuration. Read [MySQL](./mysql.md) for how to configure a MySQL server.
 
 - `DATABASE_URL` - (Required) The URL to connect the MySQL server. The format of this parameter must be `mysql2://USER:PASSWORD@MYSQL_HOST:MYSQL_PORT/DATABASE_NAME?encoding=utf8mb4&connectTimeout=5000`. Note the query parameters `encoding=utf8mb4` and `connectTimeout=5000` should be placed as they are. e.g., `mysql2://sider:topsecret@mysql.example.com:3306/sideci?encoding=utf8mb4&connectTimeout=5000`.
 
 ## Redis
 
-Sider Enterprise uses Redis for page caching and storing background job data, so the parameters in this section are important. See [Redis Guide](./redis.md) to get to know how you should set up a Redis server.
+Sider Enterprise uses Redis for page caching and storing background job data, so the parameters in this section are important. See [Redis](./redis.md) to get to know how you should set up a Redis server.
 
 - `REDIS_URL` - (Required) The URL to connect the Redis server. The format of this parameter must be `redis[s]://USER:PASSWORD@REDIS_HOST:REDIS_PORT/DB_NUMBER`. e.g., `redis://redis.example.com:7372/0`.
 
@@ -63,7 +63,7 @@ You have to configure these parameters to integrate with GitHub Enterprise Serve
 
 - `GITHUB_API_ENDPOINT` - (Required) The URL which points to the GitHub Enterprise API endpoint. Basically, the suffix of this URL must be `/api/v3`. See [Endpoint URLs](https://developer.github.com/enterprise/v3/enterprise-admin/) to learn more about the GitHub Enterprise endpoints. e.g., `https://github.example.com/api/v3`.
 
-- `GITHUB_APP_ID` - (Required) The application ID of the GitHub App. This will be given after setting up your GitHub App. See [GitHub Enterprise Server Guide](./github.md) for registering a GitHub App.
+- `GITHUB_APP_ID` - (Required) The application ID of the GitHub App. This will be given after setting up your GitHub App. See [GitHub Enterprise Server](./github.md) for registering a GitHub App.
 
 - `GITHUB_APP_NAME` - (Required) The application name of the GitHub App. You can find the name in the **Public link** of the GitHub App. For example, when the **Public link** is `https://github.example.com/apps/sider-enterprise`, this parameter should be `sider-enterprise`.
 

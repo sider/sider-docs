@@ -1,11 +1,11 @@
 ---
 id: mysql
-title: MySQL Guide
-sidebar_label: MySQL Guide
+title: MySQL
+sidebar_label: MySQL
 hide_title: true
 ---
 
-# MySQL Guide
+# MySQL
 
 This document explains how to set up MySQL for Sider Enterprise.
 
