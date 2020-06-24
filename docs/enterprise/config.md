@@ -1,7 +1,7 @@
 ---
 id: config
 title: Sider Enterprise Configuration
-sidebar_label: Sider Enterprise Configuration
+sidebar_label: Configuration
 hide_title: true
 ---
 
@@ -141,7 +141,7 @@ Sider Enterprise supports sending emails. You can get error notifications via Em
 
 - `EXCEPTION_NOTIFIER_RECIPIENT_EMAILS` - (Optional) The comma-separated list of recipients for error reporting emails. e.g., `foo@example.com,bar@example.com`.
 
-## Live Update
+## Auto-Refresh Pages
 
 Sider Enterprise can detect events that happened in the server and updates its content automatically. End-users don't have to reload their browser to update their pages. Sider Enterprise uses two mechanisms to implement this: [Pusher](https://pusher.com) and polling.
 
