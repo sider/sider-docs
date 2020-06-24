@@ -22,7 +22,7 @@ System overview of Sider Enterprise. You can get to know the requirements to run
 
 ## [Installation](./installation.md)
 
-Step-by-step Installation guide for Sider Enterprise.
+Step-by-step installation guide for Sider Enterprise.
 
 ## [Configuration](./config.md)
 
