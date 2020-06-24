@@ -56,7 +56,7 @@ RUNNERS_TRACES_S3_BUCKET_NAME=runners-traces
 DOCKER_RUNNERS_CONFIG={"docker_host_url":"unix:///var/run/docker.sock","s3_endpoint":"http://minio.example.com:9000","aws_access_key_id":"access-key","aws_secret_access_key":"secret-key","network_mode":"bridge"}
 ```
 
-These parameters depend on MySQL, Redis, Minio, and GitHub Enterprise Server configurations, so please be careful to **correctly** write the parameters. See [Configuration](./config.md)
+These parameters depend on MySQL, Redis, Minio, and GitHub Enterprise Server configurations, so please be careful to **correctly** write the parameters. See [Sider Enterprise Configuration](./config.md)
 
 ## Run Sider Enterprise
 
@@ -87,6 +87,6 @@ docker run --detach \
 
 ## What's next
 
-- [Configuration](./config.md)
+- [Sider Enterprise Configuration](./config.md)
 - [Operation](./operation.md)
 - [Update](./updating.md)

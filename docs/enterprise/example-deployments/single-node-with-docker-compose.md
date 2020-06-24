@@ -130,6 +130,6 @@ docker-compose --file /etc/sider/docker-compose.yml up --detach --scale sideci_w
 
 ## What's next
 
-- [Configuration](../config.md)
+- [Sider Enterprise Configuration](../config.md)
 - [Operation](../operation.md)
 - [Update](../updating.md)

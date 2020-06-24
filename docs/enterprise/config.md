@@ -1,11 +1,11 @@
 ---
 id: config
-title: Configuration
-sidebar_label: Configuration
+title: Sider Enterprise Configuration
+sidebar_label: Sider Enterprise Configuration
 hide_title: true
 ---
 
-# Configuration
+# Sider Enterprise Configuration
 
 Sider Enterprise depends on other services, such as MySQL, so its configuration is important to ensure working well. This document describes the details about Sider Enterprise configurations.
 

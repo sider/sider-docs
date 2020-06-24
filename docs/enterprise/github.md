@@ -60,4 +60,4 @@ After the GitHub App created, generate a private key, and download the PEM file.
 - `GITHUB_APP_OAUTH2_CLIENT_SECRET`: The client secret.
 - `GITHUB_APP_WEBHOOK_SECRET`: The webhook secret
 
-See [Configuration](./config.md) for more details.
+See [Sider Enterprise Configuration](./config.md) for more details.

@@ -19,7 +19,7 @@ sideci web does not handle HTTPS requests. The load balancer should terminate TL
 
 ## Ports
 
-The load balancer should listen on 80 and 443 ports and forward all requests to sideci web. If you want to make end-users always access via HTTPS, set `true` to `FORCE_SSL`. Learn more [Configuration](./config.md) for `FORCE_SSL`.
+The load balancer should listen on 80 and 443 ports and forward all requests to sideci web. If you want to make end-users always access via HTTPS, set `true` to `FORCE_SSL`. Learn more [Sider Enterprise Configuration](./config.md) for `FORCE_SSL`.
 
 ## HTTP Headers
 
