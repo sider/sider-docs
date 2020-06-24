@@ -50,7 +50,7 @@ Redis guide for Sider Enterprise.
 
 ## [MiniO](./minio.md)
 
-MiniO guide for Sider Enterprise.
+MiniO (compatible with Amazon S3) guide for Sider Enterprise.
 
 ## [Amazon S3](./minio.md)
 
