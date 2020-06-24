@@ -153,7 +153,7 @@ Read the following enterprise documents for Sider Enterprise setup.
 - [Load Balancer](./enterprise/load-balancer.md)
 - [MySQL](./enterprise/mysql.md)
 - [Redis](./enterprise/redis.md)
-- [Minio](./enterprise/minio.md)
+- [MiniO](./enterprise/minio.md)
 - [GitHub Enterprise Server](./enterprise/github.md)
 - [Clustering](./enterprise/clustering.md)
 - [Release Notes](./enterprise/releases/index.md)

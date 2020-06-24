@@ -1,29 +1,29 @@
 ---
 id: minio
-title: Minio
-sidebar_label: Minio
+title: MiniO
+sidebar_label: MiniO
 hide_title: true
 ---
 
-# Minio
+# MiniO
 
-You can get to know hot to set up [Minio](https://min.io/) for Sider Enterprise.
+You can get to know hot to set up [MiniO](https://min.io/) for Sider Enterprise.
 
 ## Requirements
 
-The version of Minio must be [`RELEASE.2019-08-14T20-37-41Z`](https://github.com/minio/minio/releases/tag/RELEASE.2019-08-14T20-37-41Z) or higher. Also, Sider Enterprise largely uploads objects on Minio, so you should prepare enough storage space for Minio. At least, 100 GiB storage would be required.
+The version of MiniO must be [`RELEASE.2019-08-14T20-37-41Z`](https://github.com/minio/minio/releases/tag/RELEASE.2019-08-14T20-37-41Z) or higher. Also, Sider Enterprise largely uploads objects on MiniO, so you should prepare enough storage space for MiniO. At least, 100 GiB storage would be required.
 
-Before integrating Minio with Sider Enterprise, you first have to create a bucket with the name specified with [`RUNNERS_TRACES_S3_BUCKET_NAME`](./config.md).
+Before integrating MiniO with Sider Enterprise, you first have to create a bucket with the name specified with [`RUNNERS_TRACES_S3_BUCKET_NAME`](./config.md).
 
 ## Integration with Sider Enterprise
 
-The parameters within [`DOCKER_RUNNERS_CONFIG`](./config.md) of Sider Enterprise is associated with the Minio server. The relationships are the followings:
+The parameters within [`DOCKER_RUNNERS_CONFIG`](./config.md) of Sider Enterprise is associated with the MiniO server. The relationships are the followings:
 
-- `s3_endpoint` and url - The endpoint of the Minio server
+- `s3_endpoint` and url - The endpoint of the MiniO server
 - `aws_access_key_id` and MINIO_ACCESS_KEY - AWS Access Key ID
 - `aws_secret_access_key` and MINIO_SECRET_KEY - AWS Secret Access Key
 
-For example, if you run the Minio server on the host `minio.example.com` like this:
+For example, if you run the MiniO server on the host `minio.example.com` like this:
 
 ```console
 export MINIO_ACCESS_KEY=minio
@@ -43,7 +43,7 @@ minio server --address :9001 /data
 
 ## Automatically Delete Old Traces
 
-As stated above, objects on Minio will grow and hugely consumes disk space. If you allow the deletion of old traces, you can configure the Minio server to automatically delete old objects. After installing Sider Enterprise and configuring environment variables, run the following command. In this case, objects on Minio older than 180 days will be deleted.
+As stated above, objects on MiniO will grow and hugely consumes disk space. If you allow the deletion of old traces, you can configure the MiniO server to automatically delete old objects. After installing Sider Enterprise and configuring environment variables, run the following command. In this case, objects on MiniO older than 180 days will be deleted.
 
 ```console
 docker run \

@@ -48,9 +48,9 @@ MySQL guide for Sider Enterprise. It describes the requirements and the recommen
 
 Redis guide for Sider Enterprise.
 
-## [Minio](./minio.md)
+## [MiniO](./minio.md)
 
-Minio guide for Sider Enterprise.
+MiniO guide for Sider Enterprise.
 
 ## [Amazon S3](./minio.md)
 
