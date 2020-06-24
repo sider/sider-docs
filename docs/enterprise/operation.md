@@ -11,15 +11,15 @@ hide_title: true
 
 ### How to start services
 
-Sider Enterprise services run as Docker containers, so you can start the services on any platforms which support Docker. Sider Enterprise consists of two types of daemon containers and one type of batch container. The former includes **sideci web** and **sideci worker**, and the latter is Runners.
+Sider Enterprise services run as Docker containers, so you can start the services on any platforms which support Docker. Sider Enterprise consists of two types of daemon containers and one type of batch container. The former includes **sideci-web** and **sideci-worker**, and the latter is Runners.
 
-**sideci web** is a web application service. You should pass these parameters to your Docker runtime.
+**sideci-web** is a web application service. You should pass these parameters to your Docker runtime.
 
 - COMMAND: `bundle exec puma`
 - Published port: `80:3000` (You can change the value `80` to an arbitrary port number)
 - Environment variables: See [Sider Enterprise Configuration](./config.md)
 
-This is an example of how to start **sideci web**.
+This is an example of how to start **sideci-web**.
 
 ```console
 docker run \
@@ -31,12 +31,12 @@ docker run \
   bundle exec puma
 ```
 
-**sideci worker** is responsible for processing background jobs. You should pass these parameters to your Docker runtime.
+**sideci-worker** is responsible for processing background jobs. You should pass these parameters to your Docker runtime.
 
 - COMMAND: `bundle exec sidekiq`
 - Environment variables: See [Sider Enterprise Configuration](./config.md)
 
-This is an example of how to start **sideci worker**.
+This is an example of how to start **sideci-worker**.
 
 ```console
 docker run \
@@ -48,7 +48,7 @@ docker run \
   bundle exec sidekiq
 ```
 
-The containers of Runners will be created by **sideci web** or **sideci worker**, so you don't have to care about running Runners. However, these containers will consume CPU, memory, and the disk storage space, so it's recommended to watch these metrics.
+The containers of Runners will be created by **sideci-web** or **sideci-worker**, so you don't have to care about running Runners. However, these containers will consume CPU, memory, and the disk storage space, so it's recommended to watch these metrics.
 
 ### How to stop and restart services
 

@@ -41,7 +41,7 @@ These parameters are not related to other services, like MySQL.
 
 - `SIDECI_TIMEZONE` - (Optional) The timezone used for admin console. This does not affect the time formats for Sider Enterprise end-users. See [`ActiveSupport::TimeZone`](https://api.rubyonrails.org/classes/ActiveSupport/TimeZone.html) for more details. e.g., `Asia/Tokyo`.
 
-- `FORCE_SSL` - (Optional) The boolean to control if **sideci web** should make end-users always access via HTTPS. The default value is `false`.
+- `FORCE_SSL` - (Optional) The boolean to control if **sideci-web** should make end-users always access via HTTPS. The default value is `false`.
 
 ## MySQL
 

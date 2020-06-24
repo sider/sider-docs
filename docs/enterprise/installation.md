@@ -32,7 +32,7 @@ docker run --rm \
 
 ## Prepare Environment Variables for Sider Enterprise
 
-Sider Enterprise is configured with environment variables. We recommend creating an environment variables file to reuse among [**sideci web** and **sideci worker**](./system-overview.md).
+Sider Enterprise is configured with environment variables. We recommend creating an environment variables file to reuse among [**sideci-web** and **sideci-worker**](./system-overview.md).
 
 This is an example of the environment variables file located in `/etc/sider-env`. Of course, you can put the file anywhere, but make sure this file should be readable only to specific users.
 

@@ -34,9 +34,9 @@ Sider Enterprise itself consists of two components: **sideci** and Runners. Thes
 - Get Runners traces on Minio
 - Store cache and background job data on Redis
 
-The processes of **sideci** are divided into two types of roles: **sideci web** and **sideci worker**. You might have to consider these roles when you try to set up Sider Enterprise as a cluster system. To learn more about clustering, see [Clustering](./clustering.md).
+The processes of **sideci** are divided into two types of roles: **sideci-web** and **sideci-worker**. You might have to consider these roles when you try to set up Sider Enterprise as a cluster system. To learn more about clustering, see [Clustering](./clustering.md).
 
-We recommend that you put the load balancer in front of **sideci web**. **sideci web** is an application server and is not good at handling many HTTP requests. Moreover, you can secure connections between **sideci web** and end-users as long as you set up your load balancer to listen for HTTPS.
+We recommend that you put the load balancer in front of **sideci-web**. **sideci-web** is an application server and is not good at handling many HTTP requests. Moreover, you can secure connections between **sideci-web** and end-users as long as you set up your load balancer to listen for HTTPS.
 
 Runners, on the other hand, are the collection of "runner" and perform analyses for users' source code. They will fetch users' source code from GitHub Enterprise Server and may try to access the internet because some runners require the dependency resolution. After the analysis, each runner will upload its result to Minio. Runners are invoked via Docker API by **sideci**, and they are not daemon processes, unlike **sideci**.
 
@@ -54,11 +54,11 @@ Sider Enterprise mainly consumes the storage space via Docker, MySQL, and Minio,
 
 Sider Enterprise services should run on any [x86_64](https://en.wikipedia.org/wiki/X86-64)-compatible machine.
 
-The number of required CPU cores is dependent on the number of analyses. If you run **sideci web**, **sideci worker**, and Runners on the same host, we recommend you prepare at least 8 cores for the machine. However, 8 cores might be insufficient if your workload is too heavy.
+The number of required CPU cores is dependent on the number of analyses. If you run **sideci-web**, **sideci-worker**, and Runners on the same host, we recommend you prepare at least 8 cores for the machine. However, 8 cores might be insufficient if your workload is too heavy.
 
 #### Memory
 
-At least, you should respectively prepare 1 GiB RAM for a single **sideci web** and 2 GiB RAM for a **sideci worker**. Furthermore, Runners should have 1 GiB RAM for each container. It depends on your usage of Sider Enterprise, but we recommend that you should prepare more than 32 GiB RAM as the total amount.
+At least, you should respectively prepare 1 GiB RAM for a single **sideci-web** and 2 GiB RAM for a **sideci-worker**. Furthermore, Runners should have 1 GiB RAM for each container. It depends on your usage of Sider Enterprise, but we recommend that you should prepare more than 32 GiB RAM as the total amount.
 
 ### Software Requirements
 
