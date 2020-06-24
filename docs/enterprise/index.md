@@ -9,14 +9,14 @@ hide_title: true
 
 Sider Enterprise allows you to run Sider on your infrastructure. This allows Sider Enterprise to satisfy higher security and performance requirements than the SaaS version of Sider.
 
-- You can keep your source code in your network. While SaaS version of Sider offers a high-security environment, keeping your source code in your network can enable even higher security.
+- You can keep your source code in your network. While the SaaS version of Sider offers a high-security environment, keeping your source code in your network can enable even higher security.
 - You can upgrade the hardware for better analysis performance as you need it.
 
-On the other hand, using Sider Enterprise means you have to take care of running the application. You have to set up the hardware and software required to run it and upgrade the programs.
+On the other hand, using Sider Enterprise means you have to manage the system by yourself. You have to set up the hardware and software required to run it and upgrade the programs.
 
 If you are using GitHub Enterprise, Sider Enterprise is the only way to use Sider on your projects.
 
-## [System overview](./system-overview.md)
+## [System Overview](./system-overview.md)
 
 System overview of Sider Enterprise. You can get to know the requirements to run Sider Enterprise on your environment.
 
