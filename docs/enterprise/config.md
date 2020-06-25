@@ -1,604 +1,191 @@
 ---
 id: config
-title: Sider Enterprise Configuration Index
-sidebar_label: Configuration Index
+title: Sider Enterprise Configuration
+sidebar_label: Configuration
 hide_title: true
 ---
 
-# Sider Enterprise Configuration Index
+# Sider Enterprise Configuration
 
-## SMTP Configuration to send email from Sider
+Sider Enterprise depends on other services, such as MySQL, so its configuration is important to ensure working well. This document describes the details about Sider Enterprise configurations.
 
-You can see the detail of the configuration at Sider GitHub page and Ruby net/http library documents.
+> `TAG` on this page is a Docker image tag for Sider Enterprise. Please replace it with the actual value.
 
-- https://github.com/sider/configure
-- https://docs.ruby-lang.org/en/trunk/Net/SMTP.html
+## Core parameters
 
-Sider sends emails for operation and error reporting.
-While you can skip email configuration, we strongly recommend to set up email for production environment.
+These parameters are not related to other services, like MySQL.
 
-### `ACTION_MAILER_SMTP_ADDRESS`
+- `RAILS_ENV` - (Required) The environment for Ruby on Rails framework. You **must** set `onprem` to the parameter.
 
-SMTP server address.
+- `SECRET_KEY_BASE` - (Required) The secret for encryption required by Ruby on Rails. You can get the value running the following command:
 
-Example:
+  ```console
+  docker run --rm 480130971618.dkr.ecr.us-east-1.amazonaws.com/sideci_onprem:TAG bundle exec rails secret
+  ```
 
-    ACTION_MAILER_SMTP_ADDRESS=smtp.example.com
+- `BASE_URL` - (Required) The URL to allow end-users to access Sider. e.g., `https://sider.example.com`.
 
-### `ACTION_MAILER_DEFAULT_FROM_EMAIL`
+- `ENCRYPTION_SERVICE_KEY` - (Required) The random string to encrypt secret data, which can be given by running the following command. Note you cannot change this value once you set up.
 
-From address of emails sent from Sider.
+  ```console
+  tr -dc '[:alnum:]' < /dev/urandom | head -c 32
+  ```
 
-Example:
+- `ENCRYPTION_SERVICE_SALT` - (Required) 32 bytes random string to use for `ENCRYPTION_SERVICE_KEY` as a salt, which can be given by running the following command. Note you cannot change this value once you set up.
 
-    ACTION_MAILER_DEFAULT_FROM_EMAIL=sider@example.com
+  ```console
+  tr -dc '[:alnum:]' < /dev/urandom | head -c 32
+  ```
 
-### `ACTION_MAILER_SMTP_PORT` (Optional)
+- `RESTRICT_SIGN_UP` - (Optional) The boolean to control if users can sign up by themselves. If the parameter is `true`, the administrators of Sider Enterprise will have to register users. See [Operation](./operation.md) for registering users.
 
-SMTP server port number.
+- `SIDECI_TIMEZONE` - (Optional) The timezone used for admin console. This does not affect the time formats for Sider Enterprise end-users. See [`ActiveSupport::TimeZone`](https://api.rubyonrails.org/classes/ActiveSupport/TimeZone.html) for more details. e.g., `Asia/Tokyo`.
 
-### `ACTION_MAILER_SMTP_AUTHENTICATION` (Optional)
+- `FORCE_SSL` - (Optional) The boolean to control if **sideci-web** should make end-users always access via HTTPS. The default value is `false`.
 
-SMTP server authentication method (choose one from: plain, login, and cram_md5).
+## MySQL
 
-### `ACTION_MAILER_SMTP_USER_NAME` (Optional)
+Sider Enterprise completely depends on MySQL. You should carefully set up the parameters to accord with the actual MySQL configuration. Read [MySQL](./mysql.md) for how to configure a MySQL server.
 
-User name for SMTP authentication.
+- `DATABASE_URL` - (Required) The URL to connect the MySQL server. The format of this parameter must be `mysql2://USER:PASSWORD@MYSQL_HOST:MYSQL_PORT/DATABASE_NAME?encoding=utf8mb4&connectTimeout=5000`. Note the query parameters `encoding=utf8mb4` and `connectTimeout=5000` should be placed as they are. e.g., `mysql2://sider:topsecret@mysql.example.com:3306/sideci?encoding=utf8mb4&connectTimeout=5000`.
 
-### `ACTION_MAILER_SMTP_USER_PASSWORD` (Optional)
+## Redis
 
-User password for SMTP authentication.
+Sider Enterprise uses Redis for page caching and storing background job data, so the parameters in this section are important. See [Redis](./redis.md) to get to know how you should set up a Redis server.
 
-### `ACTION_MAILER_SMTP_DOMAIN` (Optional)
+- `REDIS_URL` - (Required) The URL to connect the Redis server. The format of this parameter must be `redis[s]://USER:PASSWORD@REDIS_HOST:REDIS_PORT/DB_NUMBER`. e.g., `redis://redis.example.com:7372/0`.
 
-Domain name for HELO command.
+## GitHub Enterprise Server
 
-### `ACTION_MAILER_SMTP_ENABLE_STARTSSL_AUTO` (Optional)
+You have to configure these parameters to integrate with GitHub Enterprise Server. After setting up your GitHub App, prepare these parameters carefully.
 
-Example:
+- `GITHUB_ENDPOINT` - (Required) The URL which points to the GitHub Enterprise web page. e.g., `https://github.example.com`.
 
-    ACTION_MAILER_SMTP_ENABLE_STARTSSL_AUTO=no
+- `GITHUB_API_ENDPOINT` - (Required) The URL which points to the GitHub Enterprise API endpoint. Basically, the suffix of this URL must be `/api/v3`. See [Endpoint URLs](https://developer.github.com/enterprise/v3/enterprise-admin/) to learn more about the GitHub Enterprise endpoints. e.g., `https://github.example.com/api/v3`.
 
-## `sideci` Configuration
+- `GITHUB_APP_ID` - (Required) The application ID of the GitHub App. This will be given after setting up your GitHub App. See [GitHub Enterprise Server](./github.md) for registering a GitHub App.
 
-### `BASE_URL`
+- `GITHUB_APP_NAME` - (Required) The application name of the GitHub App. You can find the name in the **Public link** of the GitHub App. For example, when the **Public link** is `https://github.example.com/apps/sider-enterprise`, this parameter should be `sider-enterprise`.
 
-URL to allow end users to access Sider.
+- `GITHUB_APP_PRIVATE_KEY` - (Required) The base64 encoded private key of the GitHub App. You can download the private key file from your GitHub App. Note Sider Enterprise requires you to pass the Base64 encoded key; you can get the value running base64(1) like this:
 
-Example:
+  ```console
+  base64 -w0 downloaded-private-key.pem
+  ```
 
-    BASE_URL=https://sider.example.com
+- `GITHUB_APP_OAUTH2_CLIENT_ID` - (Required) The client ID of the GitHub App. This will be given after setting up your GitHub App.
 
-### `EXCEPTION_NOTIFIER_RECIPIENT_EMAILS`
+- `GITHUB_APP_OAUTH2_CLIENT_SECRET` - (Required) The client secret of the GitHub App. This will be given after setting up your GitHub App.
 
-Comma-separated list of recipients for error reporting emails.
+- `GITHUB_APP_WEBHOOK_SECRET` - (Required) The webhook secret of the GitHub App. You must set the same value with the webhook secret of your GitHub App. If you forget the value, you must regenerate and set the value on your GitHub App settings. Note this secret is supposed to be generated by you. For example, you can get the value executing the command:
 
-Example:
+  ```console
+  tr -dc '[:alnum:]' < /dev/urandom | head -c 32
+  ```
 
-    EXCEPTION_NOTIFIER_RECIPIENT_EMAILS=foo@example.com,bar@example.com
+## Runners and MinIO
 
-### `SECRET_KEY_BASE`
+The core component **sideci** will invoke Runners to perform analyses. The parameters in this section control how Sider should invoke Runners, and how the traces generated by Runners should be stored. See [MinIO](./minio.md) for the set up of MinIO.
 
-Secret for encryption required by Rails.
+- `RUNNERS_TRACES_S3_BUCKET_NAME` - (Required) The bucket name for Runners traces. **Runners** upload analysis traces to the bucket on MinIO.
 
-### `RAILS_ENV`
+- `AWS_REGION_FOR_SIDER` - (Optional, but required for Amazon S3) AWS region name, such as "us-east-1." If you want to use an Amazon S3 bucket for Runners traces, you **MUST** specify this environment variable. The default value is `us-east-1`.
 
-The _environment_ for Rails framework.
-You cannot change the value from `onprem`.
+- `DOCKER_RUNNERS_CONFIG` - (Required) The JSON string to specify how to access to Runners and MinIO. The structure of this must be like this:
 
-Example:
+  ```json
+  {
+    "docker_host_url": "unix:///var/run/docker.sock",
+    "s3_endpoint": "http://minio.example.com:9000",
+    "aws_access_key_id": "key",
+    "aws_secret_access_key": "password",
+    "network_mode": "bridge"
+  }
+  ```
 
-    RAILS_ENV=onprem
+  - `docker_host_url` - (Required) The Docker host endpoint. **sideci** will invoke Runners via this URL. e.g., `unix:///var/run/docker.sock`, `tcp://docker.example.com:5422`.
 
-### `RESTRICT_SIGN_UP` (Optional)
+  - `s3_endpoint` - (Optional) The URL of MinIO. **sideci** and Runners will access to the specified endpoint. If you omit the parameter, Sider Enterprise assumes that the traces should be put on Amazon S3 instead of MinIO. e.g., `http://minio.example.com:9000`.
 
-| Introduced | Deprecated |
-| ---------- | ---------- |
-| 201902     | -          |
+  - `aws_access_key_id` - (Required) AWS Access Key ID. This is used by Runners to access MinIO or Amazon S3.
 
-Set `true` to this to disable _self sign up_ to Sider.
-If self sign up is disabled, administrator should register each user account.
+  - `aws_secret_access_key` - (Required) AWS Secret Access Key. This is used by Runners to access MinIO or Amazon S3.
 
-Example:
+  - `network_mode` - (Required) This is equivalent to the `--network` option of `docker run`. If you provision MinIO server on the instance outside of Runners, you should set `bridge` to the parameter. However, you must set the container name or the network name of Docker to make sure Runners can access to MinIO within the same network. Learn more [Network settings](https://docs.docker.com/engine/reference/run/#network-settings) for Docker networking.
 
-    RESTRICT_SIGN_UP=true
+  - `http_proxy` - (Optional) The proxy server domain. You need to set the parameter if your Sider Enterprise is within a proxy environment.
 
-### `SIDECI_TIMEZONE` (Optional)
+  - `https_proxy` - (Optional) The proxy server domain. You need to set the parameter if your Sider Enterprise is within a proxy environment.
 
-| Introduced | Deprecated |
-| ---------- | ---------- |
-| 201903     | -          |
+  - `no_proxy` - (Optional) The list of domains that should be excluded from the proxy targets. If you set the `http_proxy` and `https_proxy` parameters above, the `no_proxy` parameter may also have to be set. For example, `s3_endpoint` is set with `http://minio:9000`, then `no_proxy` should be set with `minio` if Runners should access to MinIO without a proxy server.
 
-Set the timezone used for admin console.
-This does not affect the time formats for Sider Enterprise end users.
-It depends on `ActiveSupport::TimeZone` class.
-See the reference manual for available options.
+## SMTP - Make Sider Enterprise send emails
 
-- https://api.rubyonrails.org/classes/ActiveSupport/TimeZone.html
+Sider Enterprise supports sending emails. You can get error notifications via Emails with these configurations.
 
-Example:
+- `ACTION_MAILER_SMTP_ADDRESS` - (Optional) The SMTP server address. e.g., `smtp.example.com`.
 
-    SIDECI_TIMEZONE=Asia/Tokyo
+- `ACTION_MAILER_DEFAULT_FROM_EMAIL` - (Optional) The FROM address of emails sent from Sider. e.g., `sider@example.com`.
 
-### `ENCRYPTION_SERVICE_KEY`
+- `ACTION_MAILER_SMTP_PORT` - (Optional) The SMTP server port number. The default value is `25`. e.g., `125`.
 
-| Introduced | Deprecated |
-| ---------- | ---------- |
-| 201908     | -          |
+- `ACTION_MAILER_SMTP_AUTHENTICATION` - (Optional) The SMTP server authentication method. The valid value is `plain`, `login`, or `cram_md5`.
 
-Random string to encrypt secret data.
-You cannot change this value once you set up.
+- `ACTION_MAILER_SMTP_USER_NAME` - (Optional) The user name for SMTP authentication.
 
-Example:
+- `ACTION_MAILER_SMTP_USER_PASSWORD` - (Optional) The user password for SMTP authentication.
 
-    ENCRYPTION_SERVICE_KEY=aQ8NSFFTrDjdYydClJKFOrLKgR6UzjvL
+- `ACTION_MAILER_SMTP_DOMAIN` - (Optional) The domain name for HELO command.
 
-### `ENCRYPTION_SERVICE_SALT`
+- `ACTION_MAILER_SMTP_ENABLE_STARTSSL_AUTO` - (Optional) The boolean to control if Sider Enterprise uses STARTTLS. The default value is `true`.
 
-| Introduced | Deprecated |
-| ---------- | ---------- |
-| 201908     | -          |
+- `EXCEPTION_NOTIFIER_RECIPIENT_EMAILS` - (Optional) The comma-separated list of recipients for error reporting emails. e.g., `foo@example.com,bar@example.com`.
 
-32 bytes of random string to use for ENCRYPTION_SERVICE_KEY as a salt.
-You cannot change this value once you set up.
+## Auto-Refresh Pages
 
-Example:
+Sider Enterprise can detect events that happened in the server and updates its content automatically. End-users don't have to reload their browser to update their pages. Sider Enterprise uses two mechanisms to implement this: [Pusher](https://pusher.com) and polling.
 
-    ENCRYPTION_SERVICE_SALT=q1eRUq0DqBgdEbKDvAvSNFBih6qyNrT5
+If you want to use Pusher, sign up to Pusher and set up the PUSHER\_\* variables below.
 
----
+If you leave the PUSHER\_\* variables empty, Pusher will be disabled, and Sider Enterprise will work only with polling. You can configure the polling interval with `FRONTEND_POLLING_INTERVAL`: fine-tune the value for both UI responsiveness and the server load.
 
-Database configuration of `sideci` is given through this environment variable.
-Sider supports MySQL 5.7 and assumes `mysql2` driver.
-It will look like `mysql2://sider:topsecret@mysql:3306/sideci`.
+- `PUSHER_API_ID` - (Optional) The Pusher API ID.
 
-- The username and password must be given if your server requires authentication.
-- You can choose arbitrary database name but the database should be dedicated for `sideci`.
+- `PUSHER_API_KEY` - (Optional) The Pusher API Key.
 
-Read the [database configuration guide](database.md) for the details.
+- `PUSHER_API_SECRET` - (Optional) The Pusher API Secret.
 
-### `DATABASE_URL`
+- `PUSHER_CLUSTER` - (Optional) The Pusher cluster.
 
-URL to connect database.
+- `FRONTEND_POLLING_INTERVAL` - (Optional) The polling interval in seconds. The default value is `30`, which means each browser calls Ajax requests every 30 seconds. e.g., `60`.
 
-Example:
+## Configuring cron jobs
 
-    DATABASE_URL=mysql2://sider:topsecret@mysql:3306/sideci
+Sider Enterprise relies on GitHub Enterprise Server, so you should configure a cron job to synchronize data between them. Also, it is recommended to clean up Docker containers since Runners containers won't be deleted. That's why Sider Enterprise provides a [Rake](https://github.com/ruby/rake) task for the periodic job. For example, you can set this command on each host node.
 
----
+```
+docker run --env-file /etc/sider-env --rm \
+  480130971618.dkr.ecr.us-east-1.amazonaws.com/sideci_onprem:TAG \
+  bundle exec rails onprem:batch:daily
+```
 
-Redis configuration of `sideci` is given through this environment variable.
-It will look like `redis://redis:7372/0`.
+## HTTP Proxy
 
-- You should specify path (0 in the example above) which is dedicated to `sideci`.
+If you have to provision Sider Enterprise within a proxy environment, the HTTP proxy configurations are required. There are two settings to be configured:
 
-Read the [IANA documentation](https://www.iana.org/assignments/uri-schemes/prov/redis) for the details.
+- [Configure the Docker client](https://docs.docker.com/network/proxy/#configure-the-docker-client) if you run Sider on Docker
+- Set `http_proxy`, `https_proxy`, and `no_proxy` in `DOCKER_RUNNERS_CONFIG` (See the above configuration for more details)
 
-### `REDIS_URL`
-
-URL to connect Redis.
-
-Example:
-
-    REDIS_URL=redis://redis:7372/0
-
----
-
-The following items are for `catpost`.
-
-### `CATPOST_BASE_URL`
-
-URL which points to `catpost` endpoint.
-
-Example:
-
-    CATPOST_BASE_URL=https://catpost.example.com:3000
-
-### `CATPOST_SECRET`
-
-Random string used to authorize requests to `catpost`.
-
-## GitHub Enterprise Configuration
-
-Configure access to your GitHub Enterprise.
-
-Sider requires two GitHub integration; OAuth App and GitHub App.
-Visit the GitHub Enterprise, register two applications, and fill the credentials.
-
-### `GITHUB_ENDPOINT`
-
-URL which points to GitHub Enterprise web page.
-
-Example:
-
-    GITHUB_ENDPOINT=https://github.example.com
-
-### `GITHUB_API_ENDPOINT`
-
-URL which points to GitHub Enterprise API endpoint.
-
-Example:
-
-    GITHUB_API_ENDPOINT=https://github.example.com/api/v3
-
-### `GITHUB_APP_ID`
-
-Application ID of the GitHub App.
-
-### `GITHUB_APP_NAME`
-
-Application name of the GitHub App.
-You can find the name in the `Public link` of the GitHub App.
-When the `Public link` is `https://github.example.com/apps/sider-enterprise`, the name is `sider-enterprise`.
-
-Example:
-
-    GITHUB_APP_NAME=sider-enterprise
-
-### `GITHUB_APP_PRIVATE_KEY`
-
-Base64 encoded private key of the GitHub App.
-Generate and download the key from GitHub Enterprise and use `base64` command like:
-
-    $ base64 downloaded-private-key.pem
-
-### `GITHUB_APP_OAUTH2_CLIENT_ID`
-
-Client ID of the GitHub App.
-
-### `GITHUB_APP_OAUTH2_CLIENT_SECRET`
-
-Client secret of the GitHub App.
-
-### `GITHUB_APP_WEBHOOK_SECRET`
-
-Webhook secret of the GitHub App.
-
-## Live Update Configuration
-
-Sider web app can detect events that happened in the server and updates its content automatically.
-Users don't have to reload their browser to update their pages.
-Sider uses two mechanisms to implement this: Pusher and polling.
-
-The Pusher website: https://pusher.com
-
-To configure Pusher, sign up to Pusher and set up the `PUSHER_*` variables.
-
-If you leave the `PUSHER_*` variables empty, Pusher will be disabled, and Sider will work only with polling.
-You can configure the polling interval with `FRONTEND_POLLING_INTERVAL`: fine tune the value for both UI responsiveness and the server load.
-
-### `PUSHER_API_ID` (Optional)
-
-Pusher API configuration.
-
-### `PUSHER_API_KEY` (Optional)
-
-Pusher API configuration.
-
-### `PUSHER_API_SECRET` (Optional)
-
-Pusher API configuration.
-
-### `PUSHER_CLUSTER` (Optional)
-
-Pusher API configuration.
-
-### `FRONTEND_POLLING_INTERVAL` (Optional)
-
-| Introduced | Deprecated |
-| ---------- | ---------- |
-| 201904     | -          |
-
-Polling interval in seconds.
-The default value is `30`, which means each browser calls Ajax requests every 30 seconds.
-
-## Integration Configuration
-
-You can optionally setup the following integrations.
-
-### `BUGSNAG_API_KEY` (Optional)
-
-Bugsnag API key.
-
-### `BUGSNAG_ENDPOINT` (Optional)
-
-| Introduced | Deprecated |
-| ---------- | ---------- |
-| 201902     | -          |
-
-Bugsnag On-Premises endpoint.
-
-### `BUGSNAG_SESSION_ENDPOINT` (Optional)
-
-| Introduced | Deprecated |
-| ---------- | ---------- |
-| 201902     | -          |
-
-Bugsnag On-Premises session endpoint.
-
-## Runners Configuration
-
-### `RUNNERS_TRACES_S3_BUCKET_NAME`
-
-This environment variable is to be specified as a Minio bucket name.
-**Runners** upload analysis results to the bucket on Minio.
-If you use Minio or other S3 compatible storage services,
-this bucket should be isolated from other buckets,
-especially the bucket used by **catpost**.
-
-| Introduced | Deprecated |
-| :--------- | :--------- |
-| 201911     | -          |
-
-### `AWS_REGION_FOR_SIDER` (Optional, but required for AWS S3)
-
-The traces generated by Runners is put on a Minio or an AWS S3 bucket.
-If you want to use an AWS S3 bucket, you must specify this environment variable and set it the actual region name of the bucket.
-
-Note: This is **NOT** relevant to `S3_REGION_NAME` parameter.
-
-| Introduced | Deprecated |
-| :--------- | :--------- |
-| 202002     | -          |
-
-### `DOCKER_RUNNERS_CONFIG`
-
-Sider expects `DOCKER_RUNNERS_CONFIG` to be JSON string.
-The structure of this must be like this:
+This is an example of `~/docker/config.json` file.
 
 ```json
 {
-  "docker_host_url": "unix:///var/run/docker.sock",
-  "s3_endpoint": "http://localhost:9000",
-  "aws_access_key_id": "key",
-  "aws_secret_access_key": "password"
+  "proxies": {
+    "default": {
+      "httpProxy": "http://127.0.0.1:3001",
+      "httpsProxy": "http://127.0.0.1:3001",
+      "noProxy": "minio.example.com"
+    }
+  }
 }
 ```
-
-| Introduced | Deprecated |
-| :--------- | :--------- |
-| 201911     | -          |
-
-#### `docker_host_url`
-
-`docker_host_url` specifies the Docker host endpoint.
-If you set up with the remote Docker host,
-use TCP endpoint like `tcp://docker.example.com:5422`.
-
-#### `s3_endpoint` (Optional)
-
-`s3_endpoint` is the URL of Minio. See [Storage Configuration](./storage.md) to configure Minio.
-
-If you omit the `s3_endpoint` parameter, Sider assumes that the traces should be put on AWS S3 instead of Minio.
-
-#### `aws_access_key_id` (Optional, but required for Minio)
-
-`aws_access_key_id` is used by **runners** to access Minio server.
-The value is assumed to be configured on [Storage Configuration](./storage.md)
-
-If you set the `s3_endpoint` paraemter, this parameter is required.
-
-#### `aws_secret_access_key` (Optional, but required for Minio)
-
-`aws_secret_access_key` is used by **runners** to access Minio server.
-The value is assumed to be configured on [Storage Configuration](./storage.md)
-
-If you set the `s3_endpoint` paraemter, this parameter is required.
-
-#### `network_mode`
-
-`network_mode` is equivalent to the `--network` option of `docker run`.
-This is required because **runners** and Minio server must run on the same network and interact with each other.
-See [Network settings](https://docs.docker.com/engine/reference/run/#network-settings) for more details.
-
-#### `http_proxy`
-
-If your Sider Enterprise is within a proxy environment, you need to set `https_proxy` for your proxy server.
-
-#### `https_proxy`
-
-If your Sider Enterprise is within a proxy environment, you need to set `https_proxy` for your proxy server.
-
-#### `no_proxy`
-
-If you set the `http_proxy` and `https_proxy` parameters above, the `no_proxy` parameter may also have to be set.
-For example, `s3_endpoint` is set with `http://minio:9000`, then `no_proxy` should be set with `minio`
-if Runners should access to Minio without a proxy server.
-
-See the [proxy configuration](./http-proxy.md) for more details.
-
-## `catpost` Configuration
-
-### `SECRET_KEY_BASE` (for `catpost`)
-
-Secret for encryption required by Rails.
-
-### `API_TOKEN`
-
-Random string to authenticate API access.
-
-### `GIT_REPOS_DIR`
-
-Path to put git repository cache.
-
-Example:
-
-    GIT_REPOS_DIR=/repos
-
-### `EXCEPTION_NOTIFIER_RECIPIENT_EMAILS` (for `catpost`)
-
-Comma-separated list of recipients for error reporting emails.
-
-Example:
-
-    EXCEPTION_NOTIFIER_RECIPIENT_EMAILS=foo@example.com,bar@example.com
-
-### `RAILS_ENV` (for `catpost`)
-
-The _environment_ for Rails framework.
-You cannot change the value from `onprem`.
-
-Example:
-
-    RAILS_ENV=onprem
-
-### `TERM_CHILD`
-
-An option for Resque.
-You cannot change the value.
-
-Example:
-
-    TERM_CHILD=1
-
-### `QUEUE`
-
-An option for Resque.
-You cannot change the value.
-
-Example:
-
-    QUEUE=*
-
-### `ENCRYPTION_SERVICE_KEY` (for `catpost`)
-
-| Introduced | Deprecated |
-| ---------- | ---------- |
-| 201908     | -          |
-
-Random string to encrypt secret data.
-You cannot change this value once you set up.
-
-Example:
-
-    ENCRYPTION_SERVICE_KEY=IppyCqZsWGu6Px1A2qQAoIdkr4J6h8S0
-
-### `ENCRYPTION_SERVICE_SALT` (for `catpost`)
-
-| Introduced | Deprecated |
-| ---------- | ---------- |
-| 201908     | -          |
-
-32 bytes of random string to use for ENCRYPTION_SERVICE_KEY as a salt.
-You cannot change this value once you set up.
-
-Example:
-
-    ENCRYPTION_SERVICE_SALT=EaDFh02Df7TzbfDUUBXn6bIdaISc5ou1
-
----
-
-Database configuration of `catpost` is given through this environment variable.
-Sider supports MySQL 5.7 and assumes `mysql2` driver.
-It will look like `mysql2://sider:topsecret@mysql:3306/catpost`.
-
-- The username and password must be given if your server requires authentication.
-- You can choose arbitrary database name but the database should be dedicated for catpost.
-
-Read the [database configuration guide](database.md) for the details.
-
-### `DATABASE_URL` (for `catpost`)
-
-URL to connect database.
-
-Example:
-
-    DATABASE_URL=mysql2://sider:topsecret@mysql:3306/catpost
-
----
-
-Redis configuration of `catpost` is given through this environment variable.
-It will look like `redis://redis:7372/1`.
-
-- You should specify path (1 in the example above) which is dedicated to `catpost`.
-
-### `REDIS_URL` (for `catpost`)
-
-URL to connect Redis.
-
-Example:
-
-    REDIS_URL=redis://redis:7372/1
-
----
-
-The following items are for encryption.
-
-### `ARCHIVE_ENCRYPTION_KEY`
-
-Random string to make archive encrypted.
-
-### `ARCHIVE_NAME_SECRET`
-
-Random string to make archive name more unpredictable.
-
----
-
-Sider supports Minio and AWS S3 for object storage.
-Setup the following variables for Minio.
-
-If you want to use AWS S3, comment out `S3_ENDPOINT` configuration.
-You may also comment out `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` when you use IAM role for authorization.
-
-### `S3_ENDPOINT`
-
-Minio endpoint, something like `http://object_storage:9000`.
-Remove the configuration if you use AWS S3.
-
-Example:
-
-    S3_ENDPOINT=http://minio:9000
-
-### `S3_BUCKET_NAME`
-
-Object storage bucket name.
-Sider automatically creates the bucket if it doesn't exist on Minio.
-Specify the name of an existing bucket if you use AWS S3.
-
-Example:
-
-    S3_BUCKET_NAME=sider-example
-
-### `S3_REGION_NAME`
-
-Object storage region name.
-If you are using Minio, you can use any region name.
-Specify correct region name if you use AWS S3.
-
-Example:
-
-    S3_REGION_NAME=us-east-1
-
-### `AWS_ACCESS_KEY_ID`
-
-Authorization for object storage.
-If you use AWS S3, you can authorize using IAM role and remove this configuration.
-
-### `AWS_SECRET_ACCESS_KEY`
-
-Authorization for object storage.
-If you use AWS S3, you can authorize using IAM role and remove this configuration.
-
----
-
-You can optionally setup the following integrations.
-
-### `BUGSNAG_API_KEY` (Optional, for `catpost`)
-
-Bugsnag API key.
-
-### `BUGSNAG_ENDPOINT` (Optional, for `catpost`)
-
-| Introduced | Deprecated |
-| ---------- | ---------- |
-| 201902     | -          |
-
-Bugsnag On-Premises endpoint.
-
-### `BUGSNAG_SESSION_ENDPOINT` (Optional, for `catpost`)
-
-| Introduced | Deprecated |
-| ---------- | ---------- |
-| 201902     | -          |
-
-Bugsnag On-Premises session endpoint.
