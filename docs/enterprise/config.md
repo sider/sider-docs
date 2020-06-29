@@ -193,17 +193,24 @@ This is an example of `~/docker/config.json` file.
 }
 ```
 
-## Allowlist
+### Domain names you should allow
 
-If Sider Instance can not access the internet, we recommend allowing access to these addresses. Some analysis tools require to need dependency resolution.
+Most Runners try to connect to the internet in order to resolve the dependency for the analyses.
+Consider allowing Runners to access the list of domain names below if you want to use Sider Enterprise fully.
 
-- Git: URL_OF_THE_GIT_SERVER_YOU_MANAGE
-- npm: registry.npmjs.org
-- Maven: repo1.maven.org, repo.maven.apache.org, maven.google.com, jcenter.bintray.com, oss.sonatype.org
-- RubyGems: rubygems.org
-- docker: *.docker.io
-- Go: gopkg.in
-- Python: pypi.org
-- PHP: packagist.org
-- Other: github.com, gitlab.com
-- AWS: 480130971618.dkr.ecr.us-east-1.amazonaws.com (Docker registry maintained by Sider)
+- `registry.npmjs.org`
+- `repo1.maven.org`
+- `repo.maven.apache.org`
+- `maven.google.com`
+- `jcenter.bintray.com`
+- `oss.sonatype.org`
+- `rubygems.org`
+- `*.docker.io`
+- `gopkg.in`
+- `pypi.org`
+- `packagist.org`
+- `github.com`
+- `gitlab.com`
+- `480130971618.dkr.ecr.us-east-1.amazonaws.com`
+
+On top of those, you might have to allow Runners to connect to your Git servers.
