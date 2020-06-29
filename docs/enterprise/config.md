@@ -192,3 +192,19 @@ This is an example of `~/docker/config.json` file.
   }
 }
 ```
+
+## Whitelist
+
+If Sider Instance can not access the internet, we recommend to allow access to these address.  
+Because some analysis require need dependency resolution.
+
+- Git: URL_OF_THE_GIT_SERVER_YOU_MANAGE
+- npm: registry.npmjs.org
+- Maven: repo1.maven.org , repo.maven.apache.org, maven.google.com , jcenter.bintray.com, oss.sonatype.org
+- RubyGems: rubygems.org
+- docker: *.docker.io
+- Go: gopkg.in
+- Python: pypi.org
+- PHP: packagist.org
+- Other: github.com, gitlab.com
+- AWS: 480130971618.dkr.ecr.us-east-1.amazonaws.com (Docker registry maintained by Sider)
