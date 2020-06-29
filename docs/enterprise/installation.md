@@ -73,14 +73,14 @@ After that, you can run the Sider Enterprise services like these commands (See [
 ```console
 docker run --detach \
   --restart=always \
-  --env-file /etc/sider-env \
-  --publish 80:3000 \
+  --env-file=/etc/sider-env \
+  --publish=80:3000 \
   480130971618.dkr.ecr.us-east-1.amazonaws.com/sideci_onprem:TAG \
   bundle exec puma
 docker run --detach \
   --restart=always \
-  --env-file /etc/sider-env \
-  --volume /var/run/docker.sock:/var/run/docker.sock:ro \
+  --env-file=/etc/sider-env \
+  --volume=/var/run/docker.sock:/var/run/docker.sock:ro \
   480130971618.dkr.ecr.us-east-1.amazonaws.com/sideci_onprem:TAG \
   bundle exec sidekiq
 ```
