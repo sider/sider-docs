@@ -195,12 +195,11 @@ This is an example of `~/docker/config.json` file.
 
 ## Allowlist
 
-If Sider Instance can not access the internet, we recommend to allow access to these address.  
-Because some analysis require need dependency resolution.
+If Sider Instance can not access the internet, we recommend allowing access to these addresses. Some analysis tools require to need dependency resolution.
 
 - Git: URL_OF_THE_GIT_SERVER_YOU_MANAGE
 - npm: registry.npmjs.org
-- Maven: repo1.maven.org , repo.maven.apache.org, maven.google.com , jcenter.bintray.com, oss.sonatype.org
+- Maven: repo1.maven.org, repo.maven.apache.org, maven.google.com, jcenter.bintray.com, oss.sonatype.org
 - RubyGems: rubygems.org
 - docker: *.docker.io
 - Go: gopkg.in
