@@ -193,7 +193,7 @@ This is an example of `~/docker/config.json` file.
 }
 ```
 
-## Whitelist
+## Allowlist
 
 If Sider Instance can not access the internet, we recommend to allow access to these address.  
 Because some analysis require need dependency resolution.
