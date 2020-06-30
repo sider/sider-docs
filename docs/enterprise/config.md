@@ -20,7 +20,13 @@ These parameters are not related to other services, like MySQL.
 - `SECRET_KEY_BASE` - (Required) The secret for encryption required by Ruby on Rails. You can get the value running the following command:
 
   ```console
-  docker run --rm 480130971618.dkr.ecr.us-east-1.amazonaws.com/sideci_onprem:TAG bundle exec rails secret
+  python -c 'import secrets; print(secrets.token_hex(64))'
+  ```
+
+  Or, you can get the value via Ruby:
+
+  ```console
+  ruby -r securerandom -e 'puts(SecureRandom.hex(64))'
   ```
 
 - `BASE_URL` - (Required) The URL to allow end-users to access Sider. e.g., `https://sider.example.com`.
