@@ -64,7 +64,7 @@ Sider Enterprise administrators can do the followings on the `/admin` page:
 In order to make users administrators, run the following command:
 
 ```console
-docker run 480130971618.dkr.ecr.us-east-1.amazonaws.com/sideci_onprem:TAG bundle exec rails admin:promote[USERNAME]
+docker run --env-file=ENV_FILE 480130971618.dkr.ecr.us-east-1.amazonaws.com/sideci_onprem:TAG bundle exec rails admin:promote[USERNAME]
 ```
 
 Replace `USERNAME` with a GitHub login name.
@@ -89,3 +89,13 @@ In addition, these metrics for other services should be also monitored because S
 
 - Disk storage space on MySQL
 - Disk storage space on MinIO
+
+## Remove old Docker images
+
+You might want to remove old Docker images related to Sider Enterprise because they consume disk space. This is an example command to do that (replace `RUNNER_VERSION` with the latest Runner version. You can see the version on our [release page](https://help.sider.review/enterprise/releases/)):
+
+```console
+docker image ls --format '{{.Repository}}:{{.Tag}}' | grep  sider/runner_ | grep -v RUNNER_VERSION | xargs docker rmi --force
+```
+
+Also, `docker image prune` will help you to remove dangling images. Learn more [Prune unused Docker objects](https://docs.docker.com/config/pruning/) for pruning images.
