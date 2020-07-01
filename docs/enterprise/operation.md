@@ -95,7 +95,10 @@ In addition, these metrics for other services should be also monitored because S
 You might want to remove old Docker images related to Sider Enterprise because they consume disk space. This is an example command to do that (replace `RUNNER_VERSION` with the latest Runner version. You can see the version on our [release page](https://help.sider.review/enterprise/releases/)):
 
 ```console
-docker image ls --format '{{.Repository}}:{{.Tag}}' | grep  sider/runner_ | grep -v RUNNER_VERSION | xargs docker rmi --force
+docker image ls --format '{{.Repository}}:{{.Tag}}' \
+  | grep  sider/runner_ \
+  | grep -v RUNNER_VERSION \
+  | xargs docker rmi --force
 ```
 
 Also, `docker image prune` will help you to remove dangling images. Learn more [Prune unused Docker objects](https://docs.docker.com/config/pruning/) for pruning images.
