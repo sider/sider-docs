@@ -24,7 +24,7 @@ If you want to customize RuboCop, run the following command in your project' roo
 $ rubocop --init
 ```
 
-See also the [user guide](https://docs.rubocop.org/en/stable/basic_usage/) for details.
+See also the [user guide](https://docs.rubocop.org/rubocop/usage/basic_usage) for details.
 
 ## Default Configuration for RuboCop
 
@@ -59,8 +59,8 @@ This option allows you to specify your configuration file. If omitted, the RuboC
 
 ### `safe`
 
-This option allows you to select whether running only [safe cops](https://docs.rubocop.org/en/stable/auto_correct/#safe-auto-correct) or not.
-If confirming whether a cop is _safe_ or not, see the [cops' document](https://docs.rubocop.org/en/stable/cops/).
+This option allows you to select whether running only [safe cops](https://docs.rubocop.org/rubocop/usage/auto_correct#safe-auto-correct) or not.
+If confirming whether a cop is _safe_ or not, see the [cops' document](https://docs.rubocop.org/rubocop/cops).
 
 ### `rails`
 
