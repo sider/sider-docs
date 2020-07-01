@@ -1,12 +1,13 @@
 plugins:
+  # Preprocessor
   remark-frontmatter: true
 
-  # Lint rules
+  # Preset
+  remark-preset-lint-sider: true
+
+  # Rule
   remark-lint-first-heading-level: ["error"]
-  remark-lint-heading-increment: ["error"]
   remark-lint-no-dead-urls: ["warn", { skipLocalhost: true }]
-  remark-lint-no-duplicate-headings: ["error"]
-  remark-lint-no-empty-url: ["error"]
   "@mapbox/remark-lint-link-text": ["warn"]
   remark-lint-code-block-syntax: ["error"]
 
