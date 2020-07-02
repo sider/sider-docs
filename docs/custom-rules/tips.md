@@ -53,7 +53,7 @@ You often see this pattern of rules. It's easy to find the examples.
 - Read the maintenance operation manual _when you_ want scheduled maintenance for database migration.
 - Change the `DEFAULT_ARTICLES_ROWS` value in frontend code _when you_ change `DEFAULT_ARTICLES_COUNT` value in backend code.
 
-You may already have good documentation for these frequent operations. Sider helps you tell your teammate when they should read them. Do you remember how many times you’ve explained the same thing to new members?
+You may already have good documentation for these frequent operations. Sider helps you tell your teammate when they should read them. Do you remember how many times you've explained the same thing to new members?
 
 These rules can make your team more robust by sharing knowledge about operations.
 

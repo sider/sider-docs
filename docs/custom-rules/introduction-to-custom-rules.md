@@ -9,7 +9,7 @@ hide_title: true
 
 ## What are Custom Rules?
 
-Custom rules are sets of code patterns and messages used by Sider’s supported static code analyzers. You write custom rules to enforce your projects guidelines and share code-base knowledge. If the rules match a pattern in the code, they report a message.
+Custom rules are sets of code patterns and messages used by Sider's supported static code analyzers. You write custom rules to enforce your projects guidelines and share code-base knowledge. If the rules match a pattern in the code, they report a message.
 
 ## Why it matters?
 
@@ -25,7 +25,7 @@ Sider currently supports 3 tools to analyze against custom rules.
 
 ### Goodcheck
 
-Goodcheck is a tool that takes custom rules and matches the pattern with code. The rule’s patterns are defined with regular expressions which allow it to work across all or specific text source code.
+Goodcheck is a tool that takes custom rules and matches the pattern with code. The rule's patterns are defined with regular expressions which allow it to work across all or specific text source code.
 
 In this example, we look at maintaining consistent wording. When a user sees both “Sign in” and “Log in” within your web application, it may cause confusion or detract from the user experience.
 
@@ -76,7 +76,7 @@ rules:
         after: "user.oauth_token(filtered: true)"
 ```
 
-With this rule, Querly would analyze Ruby source code files for any Ruby expression that includes the `oauth_token` method and checks if there is `filtered: true` as an argument. If there isn’t, then a message will notify developers of the `filtered` option.
+With this rule, Querly would analyze Ruby source code files for any Ruby expression that includes the `oauth_token` method and checks if there is `filtered: true` as an argument. If there isn't, then a message will notify developers of the `filtered` option.
 
 ### Phinder
 
@@ -88,11 +88,11 @@ Assume your service had an outage because of a `PostCategory::import_records(ass
 - id: com.example.app.article
   pattern: "_::import_records(_)"
   message: |
-    `import_records(associations)` may block DB access 
+    `import_records(associations)` may block DB access
 
-    Read the following reports and double check the method call does not block DB access. 
+    Read the following reports and double check the method call does not block DB access.
 
-    - https://github.com/example/server/issue/1234 
+    - https://github.com/example/server/issue/1234
     - https://github.com/example/server/issue/1551
 ```
 
