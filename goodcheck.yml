@@ -1,6 +1,7 @@
 rules:
-  - id: review.sider.help.sideci.yml
+  - id: sider.sider-docs.sideci_yml
     pattern: sideci.yml
+    glob: "**/*.md"
     message: |
       Prefer `sider.yml` over `sideci.yml`
 
@@ -10,6 +11,22 @@ rules:
       - sideci.yml
     pass:
       - sider.yml
+
+  - id: sider.sider-docs.master_branch
+    pattern: master
+    glob: "**/*.md"
+    message: |
+      Be careful when using the word `master`.
+
+      GitHub and some projects renamed their default branch from `master` to `main`.
+      If `master` is included in a URL, the URL may return 404 in the future.
+    fail:
+      - https://github.com/rubocop-hq/rubocop/blob/master/CHANGELOG.md
+    pass:
+      - https://github.com/rubocop-hq/rubocop/blob/v0.83.0/CHANGELOG.md
+    justification:
+      - When not using the word `master` as a branch name.
+      - When there is no other suitable word.
 
 import:
   - https://raw.githubusercontent.com/sider/goodcheck-rules/master/rules/typo.yml
