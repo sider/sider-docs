@@ -25,7 +25,7 @@ rules:
     pass:
       - https://github.com/rubocop-hq/rubocop/blob/v0.83.0/CHANGELOG.md
     justification:
-      - When not using the word `master` as a branch name.
+      - When the word `master` is not used as a branch name.
       - When there is no other suitable word.
 
 import:
