@@ -15,13 +15,13 @@ hide_title: true
 
 **remark-lint** is a pluggable linter for Markdown. It includes many rules to enforce consistency and detect possible mistakes.
 
-¹ Note that this version is actually [remark-cli](https://github.com/remarkjs/remark/tree/master/packages/remark-cli)'s, not remark-lint's. Sider requires only remark-cli.
+¹ Note that this version is actually [remark-cli](https://www.npmjs.com/package/remark-cli)'s, not remark-lint's. Sider requires only remark-cli.
 
 ## Getting Started
 
 To start using remark-lint, enable it in your [repository settings](../../getting-started/repository-settings.md).
 
-Sider enables [some useful rules](https://github.com/sider/remark-preset-lint-sider) by default, so you can get started out of the box.
+Sider enables [some useful rules](https://www.npmjs.com/package/remark-preset-lint-sider) by default, so you can get started out of the box.
 
 In addition, you can use some rules or plugins as you want. If doing so, you need to install remark-lint on your repository via npm, for example:
 
@@ -72,7 +72,7 @@ You can use the following options to fine-tune remark-lint to your project:
 | [`ignore-path`](#ignore-path)                                                               | `string`             | -       |
 | [`use`](#use)                                                                               | `string`, `string[]` | -       |
 
-For more details about the CLI options of remark-lint, see the [document](https://github.com/remarkjs/remark/tree/master/packages/remark-cli#cli).
+For more details about the CLI options of remark-lint, see the [document](https://www.npmjs.com/package/remark-cli#cli).
 
 ### `target`
 
@@ -115,7 +115,7 @@ linter:
 
 ### `ignore-path`
 
-This option allows you to specify a [`.remarkignore` file](https://github.com/unifiedjs/unified-engine/blob/master/doc/ignore.md).
+This option allows you to specify a [`.remarkignore` file](https://www.npmjs.com/package/unified-engine#ignoring).
 By default, remark-lint automatically finds a ignore file in a project, so you may not usually need to use this option.
 
 For example:
@@ -142,7 +142,7 @@ linter:
 
 ## Configuration files for remark-lint
 
-remark-lint has [own mechanism to use configuration files](https://github.com/unifiedjs/unified-engine/blob/master/doc/configure.md) such as `.remarkrc`, `.remarkrc.yml`, or `package.json`.
+remark-lint has [own mechanism to use configuration files](https://www.npmjs.com/package/unified-engine#configuration) such as `.remarkrc`, `.remarkrc.yml`, or `package.json`.
 
 For example, you can configure plugins via the following `.remarkrc.yml` file:
 

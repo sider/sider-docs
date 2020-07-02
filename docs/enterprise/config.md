@@ -67,7 +67,7 @@ You have to configure these parameters to integrate with GitHub Enterprise Serve
 
 - `GITHUB_ENDPOINT` - (Required) The URL which points to the GitHub Enterprise web page. e.g., `https://github.example.com`.
 
-- `GITHUB_API_ENDPOINT` - (Required) The URL which points to the GitHub Enterprise API endpoint. Basically, the suffix of this URL must be `/api/v3`. See [Endpoint URLs](https://developer.github.com/enterprise/v3/enterprise-admin/) to learn more about the GitHub Enterprise endpoints. e.g., `https://github.example.com/api/v3`.
+- `GITHUB_API_ENDPOINT` - (Required) The URL which points to the GitHub Enterprise API endpoint. Basically, the suffix of this URL must be `/api/v3`. See [Endpoint URLs](https://docs.github.com/en/enterprise/2.21/user/rest/reference/enterprise-admin) to learn more about the GitHub Enterprise endpoints. e.g., `https://github.example.com/api/v3`.
 
 - `GITHUB_APP_ID` - (Required) The application ID of the GitHub App. This will be given after setting up your GitHub App. See [GitHub Enterprise Server](./github.md) for registering a GitHub App.
 
