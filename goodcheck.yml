@@ -16,7 +16,7 @@ rules:
     pattern: master
     glob: "**/*.md"
     message: |
-      Be careful when using the word `master`.
+      Be careful when using the word `master` as a branch name.
 
       GitHub and some projects renamed their default branch from `master` to `main`.
       If `master` is included in a URL, the URL may return 404 in the future.
