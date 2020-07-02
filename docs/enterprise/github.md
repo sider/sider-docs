@@ -19,7 +19,7 @@ In addition, you must synchronize Time between GitHub Enterprise Server and Side
 
 ## Registering a GitHub App
 
-Create a new GitHub App on your GitHub Enterprise Server. Read the [Creating a GitHub App](https://developer.github.com/enterprise/apps/building-github-apps/creating-a-github-app/) for details.
+Create a new GitHub App on your GitHub Enterprise Server. Read the [Creating a GitHub App](https://docs.github.com/en/enterprise/2.21/user/developers/apps/creating-a-github-app) for details.
 
 The new GitHub App should have the following properties.
 

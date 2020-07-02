@@ -19,7 +19,7 @@ hide_title: true
 
 To start using Cppcheck, enable it in your [repository settings](../../getting-started/repository-settings.md).
 
-For more details, see the command-line help or the [online manual](https://github.com/danmar/cppcheck/blob/master/man/manual.md).
+For more details, see the command-line help or the [online manual](https://github.com/danmar/cppcheck/blob/main/man/manual.md).
 
 ```console
 $ cppcheck --help
@@ -83,7 +83,7 @@ linter:
       - "you/ignore/code/here"
 ```
 
-See also the [`-i`](https://github.com/danmar/cppcheck/blob/master/man/manual.md#excluding-a-file-or-folder-from-checking).
+See also the [`-i`](https://github.com/danmar/cppcheck/blob/main/man/manual.md#excluding-a-file-or-folder-from-checking).
 
 ### `enable`
 
@@ -132,7 +132,7 @@ See also the `--language` option via the command-line help.
 
 ### `addon`
 
-This option allows you to set the [predefined addons](https://github.com/danmar/cppcheck/tree/master/addons#readme). For example:
+This option allows you to set the [predefined addons](https://github.com/danmar/cppcheck/tree/main/addons#readme). For example:
 
 ```yaml
 linter:
@@ -144,7 +144,7 @@ linter:
 
 The available values are `cert`, `misra`, `y2038`, and `threadsafety`.
 
-You can also specify a json file containing [the configuration of addons](https://github.com/danmar/cppcheck/blob/master/man/manual.md#running-addons). For example:
+You can also specify a json file containing [the configuration of addons](https://github.com/danmar/cppcheck/blob/main/man/manual.md#running-addons). For example:
 
 ```yaml
 linter:
@@ -166,4 +166,4 @@ The `config/misra.json` file goes like this:
 
 ### `bug-hunting`
 
-This option allows you to enable Bug hunting. There is a new "soundy" analysis introduced in Cppcheck-2.0. You can read more about this analysis in the [Cppcheck manual](https://github.com/danmar/cppcheck/blob/master/man/manual.md#bug-hunting).
+This option allows you to enable Bug hunting. There is a new "soundy" analysis introduced in Cppcheck-2.0. You can read more about this analysis in the [Cppcheck manual](https://github.com/danmar/cppcheck/blob/main/man/manual.md#bug-hunting).
