@@ -8,7 +8,7 @@
     "prettier": "^2.0.5",
     "remark-cli": "^8.0.0",
     "remark-frontmatter": "^2.0.0",
-    "remark-lint": "^7.0.0",
+    "remark-lint": "^7.0.1",
     "remark-lint-code-block-syntax": "^0.1.0",
     "remark-lint-first-heading-level": "^2.0.0",
     "remark-lint-no-dead-urls": "^1.0.2",
