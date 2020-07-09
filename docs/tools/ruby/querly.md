@@ -17,7 +17,7 @@ You can easily write your own rule for your project via the YAML configuration f
 ## Getting Started
 
 To start using Querly, enable it in your [repository settings](../../getting-started/repository-settings.md),
-and put a `querly.yaml` config in your repository's root directory.
+and put a `querly.yml` config in your repository's root directory.
 
 Visit the Querly project page for more information about writing rules:
 
