@@ -28,6 +28,16 @@ rules:
       - When the word `master` is not used as a branch name.
       - When there is no other suitable word.
 
+  - id: sider.sider-docs.internal_link
+    pattern: help.sider.review
+    glob: "**/*.md"
+    message: |
+      Use a relative path for an internal link
+    fail:
+      - "[a link](https://help.sider.review/getting-started/setup)"
+    pass:
+      - "[a link](../getting-started/setup.md)"
+
 import:
   - https://raw.githubusercontent.com/sider/goodcheck-rules/master/rules/typo.yml
 
