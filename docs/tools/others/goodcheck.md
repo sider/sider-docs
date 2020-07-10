@@ -18,7 +18,10 @@ Users can add and manage project-specific rules to their YAML files.
 
 To start using Goodcheck, put config file `goodcheck.yml` in your repository.
 
-Visit [its project page](https://github.com/sider/goodcheck#goodcheckyml) for more information about writing rules.
+Visit the pages below for more information about writing rules:
+
+- [Goodcheck project page](https://github.com/sider/goodcheck#goodcheckyml)
+- [How to make custom rules](https://help.sider.review/custom-rules/goodcheck)
 
 <div class="Video">
  <iframe class="Video__iframe" src="https://www.youtube.com/embed/8Zpm2gguE1M" frameborder="0" allowfullscreen></iframe>

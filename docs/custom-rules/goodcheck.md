@@ -18,7 +18,8 @@ The rule hash contains the following **required** keys.
 
 - `id`: a string to identify rules.
 - `pattern`: a _pattern_ or a sequence of *pattern*s.
-- `message`: a string to tell writers why the code piece should be revised. (The message is compatible with CommonMark.)
+- `message`: a string to tell writers why the code piece should be revised.
+  - We recommend writing the message in Markdown (CommonMark) so that it is shown correctly on Sider and GitHub. E.g. wrapping an HTML tag with backticks.
 
 The rule hash contains the following _optional_ keys.
 
