@@ -18,7 +18,7 @@ The rule hash contains the following **required** keys.
 
 - `id`: a string to identify rules.
 - `pattern`: a _pattern_ or a sequence of *pattern*s.
-- `message`: a string to tell writers why the code piece should be revised.
+- `message`: a string to tell writers why the code piece should be revised. (The message is compatible with CommonMark.)
 
 The rule hash contains the following _optional_ keys.
 
