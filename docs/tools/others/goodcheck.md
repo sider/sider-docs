@@ -21,7 +21,7 @@ To start using Goodcheck, put config file `goodcheck.yml` in your repository.
 Visit the pages below for more information about writing rules:
 
 - [Goodcheck project page](https://github.com/sider/goodcheck#goodcheckyml)
-- [How to make custom rules](https://help.sider.review/custom-rules/goodcheck)
+- [How to make custom rules](../../custom-rules/goodcheck.md)
 
 <div class="Video">
  <iframe class="Video__iframe" src="https://www.youtube.com/embed/8Zpm2gguE1M" frameborder="0" allowfullscreen></iframe>
