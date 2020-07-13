@@ -37,13 +37,19 @@ Here is an example configuration via `sider.yml`:
 linter:
   querly:
     gems:
-      - "slim"
+      - slim
+    config: .config/querly.yml
 ```
 
 | Name                                                                                  | Type                 | Default |
 | ------------------------------------------------------------------------------------- | -------------------- | ------- |
 | [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`             | -       |
 | [`gems`](../../getting-started/custom-configuration.md#linteranalyzer_idgems)         | `string[]`, `hash[]` | -       |
+| [`config`](#config)                                                                   | `string`             | -       |
+
+### `config`
+
+This option allows you to specify a configuration file path you want to use.
 
 ## Analyzing View Templates
 

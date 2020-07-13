@@ -33,18 +33,20 @@ linter:
       - another_target_directory/foo.rb
       - bar.rb
     locale: UK
-    ignore: center,behavior
+    ignore:
+      - center
+      - behavior
 ```
 
 You can use several options to more comfortable analysis to your project.
 
-| Name                                                                                  | Type           | Default |
-| ------------------------------------------------------------------------------------- | -------------- | ------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`       | -       |
-| [`target`](#target)                                                                   | `string[]`     | `.`     |
-| [`exclude`](#exclude)                                                                 | `string[]`     | `[]`    |
-| [`locale`](#locale)                                                                   | `"US"`, `"UK"` | -       |
-| [`ignore`](#ignore)                                                                   | `string`       | -       |
+| Name                                                                                  | Type                 | Default |
+| ------------------------------------------------------------------------------------- | -------------------- | ------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`             | -       |
+| [`target`](#target)                                                                   | `string[]`           | `.`     |
+| [`exclude`](#exclude)                                                                 | `string[]`           | `[]`    |
+| [`locale`](#locale)                                                                   | `"US"`, `"UK"`       | -       |
+| [`ignore`](#ignore)                                                                   | `string`, `string[]` | -       |
 
 ### `target`
 
@@ -68,4 +70,4 @@ For example, `color` and `colour`, `center` and `centre`, etc.
 
 ### `ignore`
 
-This option allows you to ignore certain words when checking. This value should be a comma-separated list.
+This option allows you to ignore certain words when checking. This value can be a comma-separated list.
