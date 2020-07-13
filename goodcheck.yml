@@ -38,6 +38,20 @@ rules:
     pass:
       - "[a link](../getting-started/setup.md)"
 
+  - id: sider.sider-docs.https_url
+    pattern:
+      regexp: "http://"
+    glob: "**/*.md"
+    message: |
+      Use `https://` instead of `http://` if available
+    justification:
+      - When the URL does not support `https:`
+      - When the URL is used only internally
+    fail:
+      - "http://foo/bar"
+    pass:
+      - "https://foo/bar"
+
 import:
   - https://raw.githubusercontent.com/sider/goodcheck-rules/master/rules/typo.yml
 
