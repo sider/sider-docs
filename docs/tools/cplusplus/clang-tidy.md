@@ -49,7 +49,7 @@ The packages must satisfy the conditions below:
 - Packages only in Debian 10 `buster` are supported.
 - Packages with "lib" prefix and "-dev" suffix in names are available.
 
-You can use several different formats as:
+You can use three different formats as:
 
 ```yaml
 linter:
@@ -72,7 +72,7 @@ Sider treats this option as a compilation option `-I` and passes it to the `clan
 > clang-tidy test.cpp -- -Imyinclude -Ifoo/include -I/usr/include/libfastjson
 ```
 
-You can use several different formats as:
+You can use three different formats as:
 
 ```yaml
 linter:
