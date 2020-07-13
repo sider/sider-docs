@@ -84,6 +84,7 @@ This section has documents about analysis tools which Sider supports. We have an
 
 - [Cppcheck](./tools/cplusplus/cppcheck.md)
 - [cpplint](./tools/cplusplus/cpplint.md)
+- [Clang-Tidy](./tools/cplusplus/clang-tidy.md)
 
 <!-- prettier-ignore-start -->
 

@@ -39,6 +39,7 @@ The options you can specify in `sider.yml` are grouped into the following catego
 1. Analyzer-specific options (under `linter`)
    - [`linter.brakeman`](../tools/ruby/brakeman.md)
    - [`linter.checkstyle`](../tools/java/checkstyle.md)
+   - [`linter.clang_tidy`](../tools/cplusplus/clang-tidy.md)
    - [`linter.code_sniffer`](../tools/php/code-sniffer.md)
    - [`linter.coffeelint`](../tools/javascript/coffeelint.md)
    - [`linter.cppcheck`](../tools/cplusplus/cppcheck.md)

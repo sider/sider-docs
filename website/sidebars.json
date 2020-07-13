@@ -77,7 +77,11 @@
       {
         "type": "subcategory",
         "label": "C/C++",
-        "ids": ["tools/cplusplus/cppcheck", "tools/cplusplus/cpplint"]
+        "ids": [
+          "tools/cplusplus/cppcheck",
+          "tools/cplusplus/cpplint",
+          "tools/cplusplus/clang-tidy"
+        ]
       },
       {
         "type": "subcategory",
