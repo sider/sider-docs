@@ -1,0 +1,102 @@
+---
+id: clang-tidy
+title: Clang-Tidy
+sidebar_label: Clang-Tidy (beta)
+hide_title: true
+---
+
+# Clang-Tidy
+
+> This is **BETA**. The behavior of this tool might change.
+
+| Supported Version | Language | Website                                 |
+| ----------------- | -------- | --------------------------------------- |
+| 10.0.1            | C/C++    | http://clang.llvm.org/extra/clang-tidy/ |
+
+**Clang-Tidy** is a [clang](http://clang.llvm.org/)-based C++ "linter" tool. It diagnoses typical programming errors, like style violations, interface misuse, or bugs that can be deduced via static analysis.
+
+## Getting Started
+
+To start using Clang-Tidy, enable it in your [repository settings](../../getting-started/repository-settings.md).
+
+## Configuration
+
+You can customize the analysis via `sider.yml`:
+
+```yaml
+linter:
+  clang_tidy:
+    apt:
+      - libgdbm-dev
+      - libfastjson-dev
+    include-path:
+      - myinclude
+      - foo/include
+      - /usr/include/libfastjson
+```
+
+| Name                                                                                  | Type                 | Default         |
+| ------------------------------------------------------------------------------------- | -------------------- | --------------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`             | -               |
+| [`apt`](#apt)                                                                         | `string`, `string[]` | -               |
+| [`include-path`](#include-path)                                                       | `string`, `string[]` | (See below)     |
+
+### `apt`
+
+This option allows you to specify a list of development packages your project depends on.
+The packages must satisfy the conditions below:
+
+- Packages only in Debian 10 `buster` are supported.
+- Packages with "lib" prefix and "-dev" suffix in names are available.
+
+You can use several different formats as:
+
+```yaml
+linter:
+  clang_tidy:
+    apt: libgdbm-dev
+    # or
+    # apt: [libgdbm-dev, libfastjson-dev]
+    # or
+    # apt:
+    #   - libgdbm-dev
+    #   - libfastjson-dev
+```
+
+### `include-path`
+
+This option allows you to add directory to include search path.
+Sider treats this option as a compilation option `-I` and passes it to the `clang-tiy` command internally as:
+
+```shell
+> clang-tidy test.cpp -- -Imyinclude -Ifoo/include -I/usr/include/libfastjson
+```
+
+You can use several different formats as:
+
+```yaml
+linter:
+  clang_tidy:
+    include-path: myinclude
+    # or
+    # include-path: [myinclude, foo/include, /usr/include/libfastjson]
+    # or
+    # include-path:
+    #   - myinclude
+    #   - foo/include
+    #   - /usr/include/libfastjson
+```
+
+If you omit this option, Sider searches for header files (*) that are part of your project and applies the directories of found files to the include search path.
+
+\* Header file extension
+- `h`
+- `h++`
+- `hh`
+- `hpp`
+- `hxx`
+- `inc`
+- `inl`
+- `ipp`
+- `tcc`
+- `tpp`
