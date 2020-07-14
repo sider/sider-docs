@@ -35,11 +35,11 @@ linter:
       - /usr/include/libfastjson
 ```
 
-| Name                                                                                  | Type                 | Default         |
-| ------------------------------------------------------------------------------------- | -------------------- | --------------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`             | -               |
-| [`apt`](#apt)                                                                         | `string`, `string[]` | -               |
-| [`include-path`](#include-path)                                                       | `string`, `string[]` | (See below)     |
+| Name                                                                                  | Type                 | Default       |
+| ------------------------------------------------------------------------------------- | -------------------- | ------------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`             | -             |
+| [`apt`](#apt)                                                                         | `string`, `string[]` | `[]`          |
+| [`include-path`](#include-path)                                                       | `string`, `string[]` | _(See below)_ |
 
 ### `apt`
 
