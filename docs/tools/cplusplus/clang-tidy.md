@@ -47,7 +47,7 @@ This option allows you to specify a list of development packages your project de
 The packages must satisfy the conditions below:
 
 - Packages only in Debian 10 `buster` are supported.
-- Packages with "lib" prefix and "-dev" suffix in names are available.
+- Packages with "-dev" suffix in names are available.
 
 You can use three different formats as:
 
