@@ -13,7 +13,7 @@ hide_title: true
 | ----------------- | -------- | --------------------------------------- |
 | 10.0.1            | C/C++    | http://clang.llvm.org/extra/clang-tidy/ |
 
-**Clang-Tidy** is a [clang](http://clang.llvm.org/)-based C++ "linter" tool. It diagnoses typical programming errors, like style violations, interface misuse, or bugs that can be deduced via static analysis.
+**Clang-Tidy** is a [Clang](http://clang.llvm.org/)-based C++ "linter" tool. It diagnoses typical programming errors, like style violations, interface misuse, or bugs that can be deduced via static analysis.
 
 ## Getting Started
 
@@ -66,7 +66,7 @@ linter:
 ### `include-path`
 
 This option allows you to add directory to include search path.
-Sider treats this option as a compilation option `-I` and passes it to the `clang-tiy` command internally as:
+Sider treats this option as a compilation option `-I` and passes it to the `clang-tidy` command internally as:
 
 ```shell
 > clang-tidy test.cpp -- -Imyinclude -Ifoo/include -I/usr/include/libfastjson
