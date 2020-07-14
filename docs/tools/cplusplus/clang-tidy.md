@@ -46,7 +46,7 @@ linter:
 This option allows you to specify a list of development packages your project depends on.
 The packages must satisfy the conditions below:
 
-- Packages only in Debian 10 `buster` are supported.
+- Packages compatible with [our Docker image](https://github.com/sider/devon_rex/blob/master/base/Dockerfile).
 - Packages with "-dev" suffix in names are available.
 
 You can use three different formats as:
