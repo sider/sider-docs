@@ -49,20 +49,6 @@ The packages must satisfy the conditions below:
 - Packages compatible with [our Docker image](https://github.com/sider/devon_rex/blob/master/base/Dockerfile).
 - Packages with "-dev" suffix in names are available.
 
-You can use three different formats as:
-
-```yaml
-linter:
-  clang_tidy:
-    apt: libgdbm-dev
-    # or
-    # apt: [libgdbm-dev, libfastjson-dev]
-    # or
-    # apt:
-    #   - libgdbm-dev
-    #   - libfastjson-dev
-```
-
 ### `include-path`
 
 This option allows you to add directory to include search path.
@@ -70,21 +56,6 @@ Sider treats this option as a compilation option `-I` and passes it to the `clan
 
 ```shell
 > clang-tidy test.cpp -- -Imyinclude -Ifoo/include -I/usr/include/libfastjson
-```
-
-You can use three different formats as:
-
-```yaml
-linter:
-  clang_tidy:
-    include-path: myinclude
-    # or
-    # include-path: [myinclude, foo/include, /usr/include/libfastjson]
-    # or
-    # include-path:
-    #   - myinclude
-    #   - foo/include
-    #   - /usr/include/libfastjson
 ```
 
 If you omit this option, Sider searches for header files (*) that are part of your project and applies the directories of found files to the include search path.
