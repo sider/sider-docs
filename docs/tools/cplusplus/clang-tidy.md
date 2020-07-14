@@ -52,11 +52,11 @@ The packages must satisfy the conditions below:
 
 ### `include-path`
 
-This option allows you to add directory to include search path.
+This option allows you to add directories to include search path.
 Sider treats this option as a compilation option `-I` and passes it to the `clang-tidy` command internally as:
 
-```shell
-> clang-tidy test.cpp -- -Imyinclude -Ifoo/include -I/usr/include/libfastjson
+```console
+$ clang-tidy test.cpp -- -Imyinclude -Ifoo/include -I/usr/include/libfastjson
 ```
 
 If you omit this option, Sider searches for header files that are part of your project and applies the directories of found files to the include search path.
