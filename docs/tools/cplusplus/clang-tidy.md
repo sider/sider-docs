@@ -28,7 +28,7 @@ linter:
   clang_tidy:
     apt:
       - libgdbm-dev
-      - libfastjson-dev
+      - libfastjson-dev=0.99.8-2
     include-path:
       - myinclude
       - foo/include
@@ -48,6 +48,7 @@ The packages must satisfy the conditions below:
 
 - Packages compatible with [our Docker image](https://github.com/sider/devon_rex/blob/master/base/Dockerfile).
 - Packages with "-dev" suffix in names are available.
+- A specific version number can be requested with the `<name>=<version>` format.
 
 ### `include-path`
 
