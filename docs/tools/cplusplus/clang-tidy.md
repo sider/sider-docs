@@ -58,16 +58,4 @@ Sider treats this option as a compilation option `-I` and passes it to the `clan
 > clang-tidy test.cpp -- -Imyinclude -Ifoo/include -I/usr/include/libfastjson
 ```
 
-If you omit this option, Sider searches for header files (*) that are part of your project and applies the directories of found files to the include search path.
-
-\* Header file extension
-- `h`
-- `h++`
-- `hh`
-- `hpp`
-- `hxx`
-- `inc`
-- `inl`
-- `ipp`
-- `tcc`
-- `tpp`
+If you omit this option, Sider searches for header files that are part of your project and applies the directories of found files to the include search path.
