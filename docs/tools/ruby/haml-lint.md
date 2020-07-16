@@ -31,18 +31,18 @@ Here is an example configuration via `sider.yml`:
 linter:
   haml_lint:
     gems:
-      - "rubocop"
-      - "haml"
-    file: "**/*haml"
+      - rubocop
+      - haml
+    target: src
     include_linter:
       - EmptyScript
       - LineLength
       - MultilinePipe
     exclude_linter:
       - TagName
-    config: ".rubocop_haml.yml"
+    config: .rubocop_haml.yml
     exclude:
-      - "app/views/layouts/application.html.haml"
+      - app/views/layouts/application.html.haml
 ```
 
 You can use several options to fine-tune HAML-Lint to your project.
@@ -51,15 +51,19 @@ You can use several options to fine-tune HAML-Lint to your project.
 | ------------------------------------------------------------------------------------- | -------------------- | ------- |
 | [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`             | -       |
 | [`gems`](../../getting-started/custom-configuration.md#linteranalyzer_idgems)         | `string[]`, `hash[]` | -       |
-| [`file`](#file)                                                                       | `string`             | `.`     |
+| [`target`](#target)                                                                   | `string`, `string[]` | `.`     |
 | [`include_linter`](#include_linter)                                                   | `string`, `string[]` | -       |
 | [`exclude_linter`](#exclude_linter)                                                   | `string`, `string[]` | -       |
 | [`config`](#config)                                                                   | `string`             | -       |
 | [`exclude`](#exclude)                                                                 | `string`, `string[]` | -       |
 
-### `file`
+### `target`
 
 This option allows you to specify files or directories you want to analyze. Glob is also available.
+
+### `file`
+
+> **DEPRECATED**: This option is deprecated. Use the [`target`](#target) option instead.
 
 ### `include_linter`
 

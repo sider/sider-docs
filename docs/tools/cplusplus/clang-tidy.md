@@ -7,7 +7,7 @@ hide_title: true
 
 # Clang-Tidy
 
-> **UNPUBLISHED!!!** This is **BETA**. The behavior of this tool might change.
+> This is **BETA**. The behavior of this tool might change.
 
 | Supported Version | Language | Website                                  |
 | ----------------- | -------- | ---------------------------------------- |

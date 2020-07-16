@@ -40,6 +40,8 @@ Here is an example configuration via `sider.yml`:
 ```yaml
 linter:
   flake8:
+    target: src/
+    config: .config/.flake8
     plugins:
       - flake8-bandit
       - flake8-builtins==1.4.1
@@ -51,14 +53,23 @@ You can use several options to fine-tune Flake8 to your project.
 | Name                                                                                  | Type                 | Default |
 | ------------------------------------------------------------------------------------- | -------------------- | ------- |
 | [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`             | -       |
-| [`version`](#version)                                                                 | `integer`            | `3`     |
+| [`target`](#target)                                                                   | `string`, `string[]` | `.`     |
+| [`config`](#config)                                                                   | `string`             | -       |
 | [`plugins`](#plugins)                                                                 | `string`, `string[]` | -       |
+
+### `target`
+
+This option allows you to specify files or directories to analyze.
+
+### `config`
+
+This option allows you to specify a configuration file you want to use.
 
 ### `version`
 
 This option allows you to manage the Python version used when running `flake8`. Python 3 will be used if omitted.
 
-This option is **deprecated** and will be removed in the near future. See this [section](#python-version) for details.
+> **DEPRECATED**: This option is deprecated and will be removed in the near future. See ["Python Version"](#python-version) for details.
 
 ### `plugins`
 

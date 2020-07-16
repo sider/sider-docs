@@ -9,7 +9,7 @@ hide_title: true
 
 | Supported Version       | Language   | Runtime         | Website            |
 | ----------------------- | ---------- | --------------- | ------------------ |
-| 5.0.0+ (default: 7.2.0) | JavaScript | Node.js 12.18.0 | https://eslint.org |
+| 5.0.0+ (default: 7.4.0) | JavaScript | Node.js 12.18.2 | https://eslint.org |
 
 **ESLint** is a static analysis tool for JavaScript and its flavors (e.g. TypeScript, JSX, Vue).
 It can find problems, style violations, or security issues, etc. in your code, and have so many plugins.
@@ -21,13 +21,13 @@ After enabled, Sider will automatically analyze your JavaScript files with the d
 
 But if you want to customize more ESLint with some plugins or shareable configurations, install ESLint first:
 
-```shell
+```console
 $ npm install eslint --save-dev
 ```
 
 Next, you may have to create your `.eslintrc.*` file(s) and configure ESLint with them. We recommend running `eslint --init`. It can ask you some questions and configure the settings for you automatically:
 
-```shell
+```console
 $ npx eslint --init
 ```
 
@@ -38,8 +38,8 @@ Then, if you need more customization, you can do it by adding a `sider.yml` file
 ```yaml
 linter:
   eslint:
-    dir: "frontend/"
-    ext: ".js,.jsx"
+    target: frontend/
+    ext: .js,.jsx
 ```
 
 For more details, see the following sections.
@@ -56,12 +56,12 @@ You can use the following options of `sider.yml` to make analysis fitter for you
 ```yaml
 linter:
   eslint:
-    dir: frontend/app
-    config: .my_eslintrc
-    ext: ".js,.jsx,.es6"
+    target: frontend/app
+    config: .config/.eslintrc.js
+    ext: .js,.jsx,.es6
     ignore-path: .my_eslintignore
-    no-ignore: true
     ignore-pattern: "/src/vendor/*"
+    no-ignore: true
     global: "require,exports:true"
     quiet: true
 ```
@@ -70,27 +70,33 @@ linter:
 | ------------------------------------------------------------------------------------------- | -------------------- | ------- |
 | [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir)       | `string`             | -       |
 | [`npm_install`](../../getting-started/custom-configuration.md#linteranalyzer_idnpm_install) | `boolean`, `string`  | -       |
-| [`dir`](#dir)                                                                               | `string`, `string[]` | `.`     |
+| [`target`](#target)                                                                         | `string`, `string[]` | `.`     |
 | [`config`](#config)                                                                         | `string`             | -       |
 | [`ext`](#ext)                                                                               | `string`             | `.js`   |
 | [`ignore-path`](#ignore-path)                                                               | `string`             | -       |
-| [`no-ignore`](#no-ignore)                                                                   | `boolean`            | `false` |
 | [`ignore-pattern`](#ignore-pattern)                                                         | `string`, `string[]` | -       |
+| [`no-ignore`](#no-ignore)                                                                   | `boolean`            | `false` |
 | [`global`](#global)                                                                         | `string`             | -       |
 | [`quiet`](#quiet)                                                                           | `boolean`            | `false` |
 
-### `dir`
+### `target`
 
-This option allows you to specify one or more directories to analyze. For example:
+This option allows you to specify files or directories to analyze. Glob is available.
+
+For example:
 
 ```yaml
 linter:
   eslint:
-    dir:
+    target:
       - frontend/src
       - app/assets/javascripts
       - "**/__tests__/**"
 ```
+
+### `dir`
+
+> **DEPRECATED**: This option is deprecated. Use the [`target`](#target) option instead.
 
 ### `config`
 
@@ -107,15 +113,15 @@ See also the [`--ext`](https://eslint.org/docs/user-guide/command-line-interface
 This option allows you to exclude files from analysis by your ignore file.
 See also the [`--ignore-path`](https://eslint.org/docs/user-guide/command-line-interface#ignore-path) option.
 
-### `no-ignore`
-
-This option allows you to disable the use of ignore files or patterns.
-See also the [`--no-ignore`](https://eslint.org/docs/user-guide/command-line-interface#no-ignore) option.
-
 ### `ignore-pattern`
 
 This option allows you to ignore files by patterns.
 See also the [`--ignore-pattern`](https://eslint.org/docs/user-guide/command-line-interface#ignore-pattern) option.
+
+### `no-ignore`
+
+This option allows you to disable the use of ignore files or patterns.
+See also the [`--no-ignore`](https://eslint.org/docs/user-guide/command-line-interface#no-ignore) option.
 
 ### `global`
 
