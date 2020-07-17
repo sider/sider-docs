@@ -51,8 +51,8 @@ This option allows you to declare the coding standard you want to follow.
 
 Supported values are:
 
-- [`google`](https://checkstyle.org/google_style.html) (for `/google_checks.xml`)
-- [`sun`](https://checkstyle.org/sun_style.html) (for `/sun_checks.xml`)
+- [`google`](https://checkstyle.org/google_style) (for `/google_checks.xml`)
+- [`sun`](https://checkstyle.org/sun_style) (for `/sun_checks.xml`)
 - Path to your [configuration file](https://checkstyle.org/config)
   - Note that only **core** rules are supported. You **cannot** specify your custom rules or 3rd-party rules.
 
