@@ -37,15 +37,16 @@ You can confirm your invoice on the organization settings page.
 
 You can check payment histories on the page. And also you can view details of invoice.
 
-![Invoice Details](./assets/invoice_details.png)
+![Invoice Details](./assets/invoice-details.png)
 
-The page will tell you details of the invoice. Click "Print this invoice out", then you will get the invoice as PDF to print.
+The page will tell you details of the invoice. Click **"Print out"**, then you will get the invoice as PDF to print.
 
-You can include your company information: company name, postal code, address and so on. Click "Add additional information" button on detailed invoice page, and fill in the information as necessary.
+You can include your company information, e.g. company name, postal code, address and so on.
+Click **"Edit additional information"** on detailed invoice page, and fill in the information as necessary.
 
 ![Company Information](./assets/invoice-company-info.png)
 
-You must have the owner role for the organization to see or edit the invoice.
+You must have the owner role for the organization to edit the invoice.
 
 ## Q&A
 
