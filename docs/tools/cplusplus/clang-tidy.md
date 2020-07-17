@@ -18,7 +18,8 @@ hide_title: true
 ## Getting Started
 
 To start using Clang-Tidy, enable it in your [repository settings](../../getting-started/repository-settings.md).  
-If you want to configure Clang-Tidy, please put the `.clang-tidy` file in the root directory. You can disable/enable Clang-Tidy rules (Checks) via the file.
+If you want to configure Clang-Tidy, please put the `.clang-tidy` file(YAML/JSON) in the root directory. You can disable/enable Clang-Tidy rules (Checks) via the file.  
+Ref: https://clang.llvm.org/extra/clang-tidy/
 
 ## Configuration
 
