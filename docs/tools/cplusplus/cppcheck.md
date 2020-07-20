@@ -38,23 +38,25 @@ linter:
     std: "c99"
     project: "your_project.sln"
     language: "c++"
+    include-path: "myinclude"
     addon: "cert"
     bug-hunting: true
 ```
 
 You can use the following options to fine-tune Cppcheck to your project.
 
-| Name                                                                                  | Type                 | Default |
-| ------------------------------------------------------------------------------------- | -------------------- | ------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`             | -       |
-| [`target`](#target)                                                                   | `string`, `string[]` | `.`     |
-| [`ignore`](#ignore)                                                                   | `string`, `string[]` | -       |
-| [`enable`](#enable)                                                                   | `string`             | -       |
-| [`std`](#std)                                                                         | `string`             | -       |
-| [`project`](#project)                                                                 | `string`             | -       |
-| [`language`](#language)                                                               | `string`             | -       |
-| [`addon`](#addon)                                                                     | `string`, `string[]` | -       |
-| [`bug-hunting`](#bug-hunting)                                                         | `boolean`            | `false` |
+| Name                                                                                  | Type                 | Default       |
+| ------------------------------------------------------------------------------------- | -------------------- | ------------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`             | -             |
+| [`target`](#target)                                                                   | `string`, `string[]` | `.`           |
+| [`ignore`](#ignore)                                                                   | `string`, `string[]` | -             |
+| [`enable`](#enable)                                                                   | `string`             | -             |
+| [`std`](#std)                                                                         | `string`             | -             |
+| [`project`](#project)                                                                 | `string`             | -             |
+| [`language`](#language)                                                               | `string`             | -             |
+| [`include-path`](#include-path)                                                       | `string`, `string[]` | _(See below)_ |
+| [`addon`](#addon)                                                                     | `string`, `string[]` | -             |
+| [`bug-hunting`](#bug-hunting)                                                         | `boolean`            | `false`       |
 
 ### `target`
 
@@ -129,6 +131,10 @@ See also the `--project` option via the command-line help.
 This option allows you to force analyzing code as a given language. The available values are `c` and `c++`.
 
 See also the `--language` option via the command-line help.
+
+### `include-path`
+
+TODO Fill in this section
 
 ### `addon`
 
