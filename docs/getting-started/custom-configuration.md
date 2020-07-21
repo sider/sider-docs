@@ -232,14 +232,14 @@ You might want to set the option to `false` if you don't configure analyzer and 
 
 _Type:_ `string`, `string[]`
 
-Some projects particularly written in C/C++ depend on development packages. Sider can install packages with the `apt` package manager, which is on `Debian` based Linux distributions.
+Development packages provided by the OS environment may be necessary, particularly for projects written in C/C++. Sider lets you install packages with `APT`, which is a package manager for `Debian` based Linux distributions.
 
 The `apt` option allows you to specify a list of development packages your project depends on.
 The packages must satisfy the conditions below:
 
-- Packages compatible with [our Docker image](https://github.com/sider/devon_rex/blob/master/base/Dockerfile).
-- Packages with "-dev" suffix in names are available.
-- A specific version number can be requested with the `<name>=<version>` format.
+- Packages must be compatible with [our Docker image](https://github.com/sider/devon_rex/blob/master/base/Dockerfile).
+- Package names must be suffixed with "-dev".
+- Each package name must be formatted as `<name>` or `<name>=<version>`.
 
 Below is an example of how you install the latest version of `libgdbm-dev` and the specific version (0.99.8-2) of `libfastjson-dev`.
 
@@ -255,7 +255,7 @@ linter:
 
 _Type:_ `string`, `string[]`
 
-Some C/C++ analyzers can handle include paths like any other C/C++ preprocessor. With Sider, the `include-path` option allows you to add directories to include search path.
+Some C/C++ analyzers can handle include paths like C/C++ preprocessors can. With Sider, the `include-path` option allows you to add directories to include search paths.
 
 For example:
 
@@ -268,7 +268,7 @@ linter:
       - /usr/include/libfastjson
 ```
 
-Sider treats this option as a compilation option `-I` and passes it to the `clang-tidy` command internally as:
+Sider treats this option as a compilation option `-I` and passes it as command-line arguments internally. For example, Sider executes [Clang-Tidy](../tools/cplusplus/clang-tidy.md) like this:
 
 ```console
 $ clang-tidy test.cpp -- -Imyinclude -Ifoo/include -I/usr/include/libfastjson
