@@ -228,6 +228,54 @@ When the `npm_install` option is not `false`, Sider will try as follows:
 When the option is `false`, Sider will skip these installation steps and analyze with the pre-installed default version.
 You might want to set the option to `false` if you don't configure analyzer and don't want to see warnings.
 
+## `linter.<analyzer_id>.apt`
+
+_Type:_ `string`, `string[]`
+
+Some projects particularly written in C/C++ depend on development packages. Sider can install packages with the `apt` package manager, which is on `Debian` based Linux distributions.
+
+The `apt` option allows you to specify a list of development packages your project depends on.
+The packages must satisfy the conditions below:
+
+- Packages compatible with [our Docker image](https://github.com/sider/devon_rex/blob/master/base/Dockerfile).
+- Packages with "-dev" suffix in names are available.
+- A specific version number can be requested with the `<name>=<version>` format.
+
+Below is an example of how you install the latest version of `libgdbm-dev` and the specific version (0.99.8-2) of `libfastjson-dev`.
+
+```yaml
+linter:
+  clang_tidy:
+    apt:
+      - libgdbm-dev
+      - libfastjson-dev=0.99.8-2
+```
+
+## `linter.<analyzer_id>.include-path`
+
+_Type:_ `string`, `string[]`
+
+Some C/C++ analyzers can handle include paths like any other C/C++ preprocessor. With Sider, the `include-path` option allows you to add directories to include search path.
+
+For example:
+
+```yaml
+linter:
+  clang_tidy:
+    include-path:
+      - myinclude
+      - foo/include
+      - /usr/include/libfastjson
+```
+
+Sider treats this option as a compilation option `-I` and passes it to the `clang-tidy` command internally as:
+
+```console
+$ clang-tidy test.cpp -- -Imyinclude -Ifoo/include -I/usr/include/libfastjson
+```
+
+If you omit this option, Sider searches for header files that are part of your project and applies the directories of found files to the include search path.
+
 ## `ignore`
 
 _Type:_ `string[]`

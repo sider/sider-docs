@@ -37,28 +37,10 @@ linter:
       - /usr/include/libfastjson
 ```
 
-| Name                                                                                  | Type                 | Default       |
-| ------------------------------------------------------------------------------------- | -------------------- | ------------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`             | -             |
-| [`apt`](#apt)                                                                         | `string`, `string[]` | `[]`          |
-| [`include-path`](#include-path)                                                       | `string`, `string[]` | _(See below)_ |
+| Name                                                                                          | Type                 | Default |
+| --------------------------------------------------------------------------------------------- | -------------------- | ------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir)         | `string`             | -       |
+| [`apt`](../../getting-started/custom-configuration.md#linteranalyzer_idapt)                   | `string`, `string[]` | -       |
+| [`include-path`](../../getting-started/custom-configuration.md#linteranalyzer_idinclude-path) | `string`, `string[]` | _       |
 
-### `apt`
-
-This option allows you to specify a list of development packages your project depends on.
-The packages must satisfy the conditions below:
-
-- Packages compatible with [our Docker image](https://github.com/sider/devon_rex/blob/master/base/Dockerfile).
-- Packages with "-dev" suffix in names are available.
-- A specific version number can be requested with the `<name>=<version>` format.
-
-### `include-path`
-
-This option allows you to add directories to include search path.
-Sider treats this option as a compilation option `-I` and passes it to the `clang-tidy` command internally as:
-
-```console
-$ clang-tidy test.cpp -- -Imyinclude -Ifoo/include -I/usr/include/libfastjson
-```
-
-If you omit this option, Sider searches for header files that are part of your project and applies the directories of found files to the include search path.
+No analyzer-specific options.
