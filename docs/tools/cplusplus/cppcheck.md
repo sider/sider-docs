@@ -48,7 +48,7 @@ You can use the following options to fine-tune Cppcheck to your project.
 | Name                                                                                          | Type                 | Default |
 | --------------------------------------------------------------------------------------------- | -------------------- | ------- |
 | [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir)         | `string`             | -       |
-| [`include-path`](../../getting-started/custom-configuration.md#linteranalyzer_idinclude-path) | `string`, `string[]` | _       |
+| [`include-path`](../../getting-started/custom-configuration.md#linteranalyzer_idinclude-path) | `string`, `string[]` | -       |
 | [`target`](#target)                                                                           | `string`, `string[]` | `.`     |
 | [`ignore`](#ignore)                                                                           | `string`, `string[]` | -       |
 | [`enable`](#enable)                                                                           | `string`             | -       |

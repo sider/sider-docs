@@ -41,6 +41,6 @@ linter:
 | --------------------------------------------------------------------------------------------- | -------------------- | ------- |
 | [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir)         | `string`             | -       |
 | [`apt`](../../getting-started/custom-configuration.md#linteranalyzer_idapt)                   | `string`, `string[]` | -       |
-| [`include-path`](../../getting-started/custom-configuration.md#linteranalyzer_idinclude-path) | `string`, `string[]` | _       |
+| [`include-path`](../../getting-started/custom-configuration.md#linteranalyzer_idinclude-path) | `string`, `string[]` | -       |
 
 No analyzer-specific options.
