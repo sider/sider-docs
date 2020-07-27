@@ -41,9 +41,9 @@ rules:
       - "**/*.html.erb"
       - "**/*.yml"
     message: |
-      Please use “sign in”/“sign out”.
+      Please use "sign in" or "sign out".
 
-      We use “sign in” instead of “log in” and “sign out” instead of “log out”.
+      We use "sign in" instead of "log in" and "sign out" instead of "log out".
       See the wording policy for details.
 
       https://docs.example.com/1840
@@ -55,7 +55,7 @@ rules:
       - "Sign out"
 ```
 
-In this example, Goodcheck will analyze files with `.html`, `.erb` and `.yml` extensions for the pattern “Log in” or “Log out”. If the pattern is found, it would display the message “Please use “sign in”/”sign out".”
+In this example, Goodcheck will analyze files with `.html`, `.erb` and `.yml` extensions for the pattern `Log in` or `Log out`. If the pattern is found, it would display the message: `Please use "sign in" or "sign out".`
 
 ### Querly
 
