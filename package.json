@@ -6,7 +6,7 @@
     "@arkweid/lefthook": "^0.7.2",
     "@mapbox/remark-lint-link-text": "^0.5.0",
     "prettier": "^2.0.5",
-    "remark-cli": "^8.0.0",
+    "remark-cli": "^8.0.1",
     "remark-frontmatter": "^2.0.0",
     "remark-lint": "^7.0.1",
     "remark-lint-code-block-syntax": "^0.1.0",
