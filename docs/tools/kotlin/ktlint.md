@@ -11,7 +11,7 @@ hide_title: true
 
 | Supported Version | Language             | Website                  |
 | ----------------- | -------------------- | ------------------------ |
-| 0.37.2 ¹          | Kotlin (Java 14.0.1) | https://ktlint.github.io |
+| 0.37.2 ¹          | Kotlin (Java 14.0.2) | https://ktlint.github.io |
 
 **ktlint** is a linter with built-in formatter for [Kotlin](https://kotlinlang.org) programming language.
 
