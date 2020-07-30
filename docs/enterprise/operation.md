@@ -71,6 +71,10 @@ Replace `USERNAME` with a GitHub login name.
 
 > The specified `USERNAME` must exist on the Sider database. Make sure the user sign up on Sider in advance.
 
+## Register users on Sider manually
+
+If you configure Sider with `RESTRICT_SIGN_UP`, you will have to create users on Sider manually. Visit the path `/admin/users/new` for the Sider's host, and you will be supposed to input `username` and `locale` for a new user. The specified `username` must exist on your GitHub Enterprise Server.
+
 ## Collect debug logs
 
 Sider Enterprise services write debug logs to the standard output. You can collect the logs via [Docker logging drivers](https://docs.docker.com/config/containers/logging/configure/).
