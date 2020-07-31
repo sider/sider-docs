@@ -46,6 +46,7 @@ The new GitHub App should have the following properties.
   - `Pull request`
   - `Pull request review`
   - `Pull request review comment`
+  - `Push`
   - `Repository`
 - Where can this GitHub App be installed?: `Any account`
 
