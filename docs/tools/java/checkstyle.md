@@ -39,7 +39,7 @@ linter:
 | Name                                                                                  | Type                           | Default  |
 | ------------------------------------------------------------------------------------- | ------------------------------ | -------- |
 | [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`                       | -        |
-| [`jvm_deps`](../../getting-started/custom-configuration.md#linteranalyzer_idjvm_deps) | `string[]`                     | `[]`     |
+| [`jvm_deps`](../../getting-started/custom-configuration.md#linteranalyzer_idjvm_deps) | `string[][]`                   | `[]`     |
 | [`config`](#config)                                                                   | `string`                       | `google` |
 | [`dir`](#dir)                                                                         | `string`, `string[]`           | `.`      |
 | [`exclude`](#exclude)                                                                 | `string`, `string[]`, `hash[]` | -        |
