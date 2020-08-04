@@ -232,7 +232,7 @@ You might want to set the option to `false` if you don't configure analyzer and 
 
 _Type:_ `string[]`
 
-For JVM tools such as Checkstyle or ktlint, this option allows you to load 3rd-party rules or plugins. For example:
+For JVM tools such as Checkstyle or ktlint, this option allows you to load third-party rules or plugins. For example:
 
 ```yaml
 linter:
