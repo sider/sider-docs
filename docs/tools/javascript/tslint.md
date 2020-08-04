@@ -12,7 +12,7 @@ hide_title: true
 
 | Supported Version       | Language   | Runtime         | Website                           |
 | ----------------------- | ---------- | --------------- | --------------------------------- |
-| 5.0.0+ (default: 6.1.2) | TypeScript | Node.js 12.18.2 | https://palantir.github.io/tslint |
+| 5.0.0+ (default: 6.1.3) | TypeScript | Node.js 12.18.3 | https://palantir.github.io/tslint |
 
 **TSLint** is an extensible static analysis tool for TypeScript.
 It checks your code for readability, maintainability, and functionality errors.

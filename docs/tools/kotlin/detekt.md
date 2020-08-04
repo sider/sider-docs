@@ -49,6 +49,7 @@ You can customize your detekt analysis using `sider.yml`.
 | Name                                                                                  | Type                 | Default |
 | ------------------------------------------------------------------------------------- | -------------------- | ------- |
 | [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`             | -       |
+| [`jvm_deps`](../../getting-started/custom-configuration.md#linteranalyzer_idjvm_deps) | `string[]`           | `[]`    |
 | [`baseline`](#baseline)                                                               | `string`             | -       |
 | [`config`](#config)                                                                   | `string`, `string[]` | `[]`    |
 | [`config-resource`](#config-resource)                                                 | `string`, `string[]` | `[]`    |
