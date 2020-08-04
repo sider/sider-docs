@@ -11,7 +11,7 @@ hide_title: true
 
 | Supported Version         | Language | Runtime         | Website                                 |
 | ------------------------- | -------- | --------------- | --------------------------------------- |
-| 7.0.0+ (default: 8.0.1) ¹ | Markdown | Node.js 12.18.2 | https://github.com/remarkjs/remark-lint |
+| 7.0.0+ (default: 8.0.1) ¹ | Markdown | Node.js 12.18.3 | https://github.com/remarkjs/remark-lint |
 
 **remark-lint** is a pluggable linter for Markdown. It includes many rules to enforce consistency and detect possible mistakes.
 
