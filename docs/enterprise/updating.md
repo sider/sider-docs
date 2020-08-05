@@ -11,6 +11,8 @@ We release Sider Enterprise's new versions continuously. It is recommended that 
 
 A release note may include the extra steps you should do to update your Sider Enterprise, so please be careful to read the [release notes](./releases/index.md) before updating it. If you have any questions, don't hesitate to ask us for our help.
 
+> Caveat: You **MUST** update Sider Enterprise versions one by one. Specifically, you cannot update it from `release-202005.0` to `release-202007.0`. You have to update from `release-202005.0` to `release-202006.0` and update from `release-202006.0` to `release-202007.0`.
+
 ## Update steps
 
 You have to do the following operations to update Sider Enterprise.
