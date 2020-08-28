@@ -49,6 +49,8 @@ These parameters are not related to other services, like MySQL.
 
 - `FORCE_SSL` - (Optional) The boolean to control if **sideci-web** should make end-users always access via HTTPS. The default value is `false`.
 
+- `PUMA_PERSISTENT_TIMEOUT` - (Optional) The integer to control Keep-Alive timeout of **sideci-web**. If you place a load balancer in front of **sideci-web** and its idle timeout is huge, you should consider configuring this value. The default value is `75`.
+
 ## MySQL
 
 Sider Enterprise completely depends on MySQL. You should carefully set up the parameters to accord with the actual MySQL configuration. Read [MySQL](./mysql.md) for how to configure a MySQL server.
