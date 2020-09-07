@@ -30,6 +30,9 @@ docker run --rm \
   480130971618.dkr.ecr.us-east-1.amazonaws.com/sideci_onprem:TAG
 ```
 
+> If your organization requires your machine to access via an HTTP proxy server, you should configure Docker to use it.
+> See [Configure Docker to use a proxy server](https://docs.docker.com/network/proxy/) for more details.
+
 ## Prepare Environment Variables for Sider Enterprise
 
 Sider Enterprise is configured with environment variables. We recommend creating an environment variables file to reuse among [**sideci-web** and **sideci-worker**](./system-overview.md).
