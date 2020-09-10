@@ -61,7 +61,7 @@ Configure `/etc/sider/docker-compose.yml` like this:
 version: "3"
 services:
   sideci_web:
-    image: 480130971618.dkr.ecr.us-east-1.amazonaws.com/sideci_onprem:release-202008.0
+    image: 480130971618.dkr.ecr.us-east-1.amazonaws.com/sideci_onprem:release-202009.0
     env_file:
       - /etc/sider/env
     command: ["bundle", "exec", "puma"]
@@ -73,7 +73,7 @@ services:
       - redis
       - minio
   sideci_worker:
-    image: 480130971618.dkr.ecr.us-east-1.amazonaws.com/sideci_onprem:release-202008.0
+    image: 480130971618.dkr.ecr.us-east-1.amazonaws.com/sideci_onprem:release-202009.0
     env_file:
       - /etc/sider/env
     command: ["bundle", "exec", "sidekiq"]
