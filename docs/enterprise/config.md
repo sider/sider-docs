@@ -201,7 +201,7 @@ This is an example of `~/docker/config.json` file.
 }
 ```
 
-Also, you should configure `http_proxy`, `https_proxy`, and `no_proxy` in `DOCKER_RUNNERS_CONFIG` to make sure each runner can access external servers via your HTTP proxy. See also [Runners and Minio](#runners-and-minio) for more details.
+Also, you should configure `http_proxy`, `https_proxy`, and `no_proxy` in `DOCKER_RUNNERS_CONFIG` to make sure each runner can access external servers via your HTTP proxy. See also [Runners and MinIO](#runners-and-minio) for more details.
 
 ### Domain names you should allow
 
