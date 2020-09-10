@@ -121,11 +121,11 @@ The core component **sideci** will invoke Runners to perform analyses. The param
 
   - `network_mode` - (Required) This is equivalent to the `--network` option of `docker run`. If you provision MinIO server on the instance outside of Runners, you should set `bridge` to the parameter. However, you must set the container name or the network name of Docker to make sure Runners can access to MinIO within the same network. Learn more [Network settings](https://docs.docker.com/engine/reference/run/#network-settings) for Docker networking.
 
-  - `http_proxy` - (Optional) The proxy server domain. You need to set the parameter if your Sider Enterprise is within a proxy environment.
+  - `http_proxy` - (Optional) The proxy server domain. You need to set the parameter if your Sider Enterprise is within a proxy environment. See also [HTTP proxy](#http-proxy).
 
-  - `https_proxy` - (Optional) The proxy server domain. You need to set the parameter if your Sider Enterprise is within a proxy environment.
+  - `https_proxy` - (Optional) The proxy server domain. You need to set the parameter if your Sider Enterprise is within a proxy environment. See also [HTTP proxy](#http-proxy).
 
-  - `no_proxy` - (Optional) The list of domains that should be excluded from the proxy targets. If you set the `http_proxy` and `https_proxy` parameters above, the `no_proxy` parameter may also have to be set. For example, `s3_endpoint` is set with `http://minio:9000`, then `no_proxy` should be set with `minio` if Runners should access to MinIO without a proxy server.
+  - `no_proxy` - (Optional) The list of domains that should be excluded from the proxy targets. If you set the `http_proxy` and `https_proxy` parameters above, the `no_proxy` parameter may also have to be set. For example, `s3_endpoint` is set with `http://minio:9000`, then `no_proxy` should be set with `minio` if Runners should access to MinIO without a proxy server. See also [HTTP proxy](#http-proxy).
 
 ## SMTP - Make Sider Enterprise send emails
 
@@ -200,6 +200,8 @@ This is an example of `~/docker/config.json` file.
   }
 }
 ```
+
+Also, you should configure `http_proxy`, `https_proxy`, and `no_proxy` in `DOCKER_RUNNERS_CONFIG` to make sure each runner can access external servers via your HTTP proxy. See also [Runners and MinIO](#runners-and-minio) for more details.
 
 ### Domain names you should allow
 
