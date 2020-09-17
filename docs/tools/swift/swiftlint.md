@@ -50,7 +50,7 @@ This option allows you to specify a file or directory to analyze.
 
 This also allows you to specify a special format `"@path/to/file"` (concatenation of `@` and a file name). You can create a file which contains a list of file names to be analyzed as shown below and pass it to the analyzer with this option.
 
-```
+```text
 test1.swift
 test2.swift
 foo/test3.swift
