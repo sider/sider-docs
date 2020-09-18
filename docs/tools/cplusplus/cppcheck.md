@@ -174,13 +174,13 @@ This option allows you to enable Bug hunting. There is a new "soundy" analysis i
 
 ### `parallel`
 
-This option allows you to run multiple jobs in parallel by using the `-j` option of the `Cppcheck` command. The number of jobs are set to the number of processors on our server where the analyzer is running.
+This option allows you to run multiple jobs in parallel by using the `-j` option of the `Cppcheck` command. The number of jobs is set to the number of processors on our server where the analyzer is running.
 
 Note that there are some limitations due to the behavior of `Cppcheck`.
 
 - The `parallel` option is ignored when the `project` option is specified.
 
-And, the following checks cannot be used when the `parallel` option is set to `true`.
+And, the results of the following checks are affected when the `parallel` option is set to `true`.
 
 - unusedFunction
 - Whole program analysis (ctu=Cross Translation Unit)
