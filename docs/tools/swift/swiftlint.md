@@ -48,7 +48,7 @@ You can use several options to fine-tune SwiftLint to your project.
 
 This option allows you to specify a file or directory to analyze.
 
-This also allows you to specify a special format `"@path/to/file"` (concatenation of `@` and a file name). You can create a file which contains a list of file names to be analyzed and pass it to the analyzer with this option.
+This also allows you to specify a special format `"@path/to/file"` (prefixed with `@`). You can create a file which contains a list of file names to be analyzed and pass it to the analyzer with this option.
 
 For example, when you have the file `config/swiftlint_target.txt` with the following content,
 
