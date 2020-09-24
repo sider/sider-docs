@@ -41,6 +41,7 @@ linter:
     include-path: "myinclude"
     addon: "cert"
     bug-hunting: true
+    parallel: true
 ```
 
 You can use the following options to fine-tune Cppcheck to your project.
@@ -57,6 +58,7 @@ You can use the following options to fine-tune Cppcheck to your project.
 | [`language`](#language)                                                                       | `string`             | -       |
 | [`addon`](#addon)                                                                             | `string`, `string[]` | -       |
 | [`bug-hunting`](#bug-hunting)                                                                 | `boolean`            | `false` |
+| [`parallel`](#parallel)                                                                       | `boolean`            | `false` |
 
 ### `target`
 
@@ -169,3 +171,16 @@ The `config/misra.json` file goes like this:
 ### `bug-hunting`
 
 This option allows you to enable Bug hunting. There is a new "soundy" analysis introduced in Cppcheck-2.0. You can read more about this analysis in the [Cppcheck manual](https://github.com/danmar/cppcheck/blob/main/man/manual.md#bug-hunting).
+
+### `parallel`
+
+This option allows you to run multiple jobs in parallel by using the `-j` option of the `cppcheck` command. The number of jobs is set to the number of processors on our server where the analyzer is running.
+
+Note that there are some limitations due to the behavior of Cppcheck.
+
+- The `parallel` option is ignored when the [`project`](#project) option is specified.
+
+And, the results of the following checks are affected when the `parallel` option is set to `true`.
+
+- unusedFunction
+- Whole program analysis (ctu=Cross Translation Unit)
