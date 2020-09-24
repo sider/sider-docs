@@ -48,6 +48,26 @@ You can use several options to fine-tune SwiftLint to your project.
 
 This option allows you to specify a file or directory to analyze.
 
+This also allows you to specify a special format `"@path/to/file"` (prefixed with `@`). You can create a file which contains a list of file names to be analyzed and pass it to the analyzer with this option.
+
+For example, when you have the file `config/swiftlint_target.txt` with the following content,
+
+```text
+test1.swift
+test2.swift
+foo/test3.swift
+```
+
+then `sider.yml` should be below:
+
+```yaml
+linter:
+  swiftlint:
+    path: "@config/swiftlint_target.txt"
+```
+
+Note that the file path should be relative to the root directory where the `sider.yml` is located or the `root_dir` directory if it is specified.
+
 ### `config`
 
 This option allows you to specify a SwiftLint configuration file you want.
