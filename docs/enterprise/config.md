@@ -51,7 +51,7 @@ These parameters are not related to other services, like MySQL.
 
 - `PUMA_PERSISTENT_TIMEOUT` - (Optional) The integer to control Keep-Alive timeout of **sideci-web**. If you place a load balancer in front of **sideci-web** and its idle timeout is huge, you should consider configuring this value. The default value is `75`.
 
-- `EXTRA_CERTIFICATE` - (Optional) The base64 encoded PEM certificate. Set this parameter if your GitHub Enterprise Server is running with a self-signed certificate or one issued from your own certificate authority.
+- `EXTRA_CERTIFICATE` - (Optional) The base64 encoded PEM certificate. Set this parameter if your GitHub Enterprise Server is running with a self-signed certificate or one issued from your own certificate authority. Sider Enterprise for GitLab has not supported this parameter.
 
 ## MySQL
 
