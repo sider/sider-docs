@@ -9,8 +9,6 @@ hide_title: true
 
 This document describes what you should configure on your GitHub Enterprise Server to integrate with Sider Enterprise.
 
-> IMPORTANT: Make sure your GitHub Enterprise Server is running with a trusted SSL certificate. Sider does not support self-signed certificates for security reasons.
-
 > Note that we assume your Sider Enterprise is running on `https://sider.example.com` on this page, and you should replace the hostname with the actual name.
 
 ## Requirements
