@@ -106,3 +106,7 @@ linter:
       - "src/*.cc"
       - "test/*.cc"
 ```
+
+## Recommended Set of Rules
+
+TODO

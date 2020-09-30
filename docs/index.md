@@ -20,6 +20,7 @@ This section has documents about how to use Sider.
 - [Repository Settings](./getting-started/repository-settings.md)
 - [Dashboard Overview](./getting-started/dashboard.md)
 - [Custom Analysis Configuration](./getting-started/custom-configuration.md)
+- [Recommended Set of Rules](./getting-started/recommended-rules.md)
 - [Working with Issues](./getting-started/working-with-issues.md)
 - [Permissions](./getting-started/permissions.md)
 - [Skip Analyzing](./getting-started/skip-analyzing.md)
