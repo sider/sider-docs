@@ -107,6 +107,6 @@ linter:
       - "test/*.cc"
 ```
 
-## Recommended Set of Rules
+## Recommended Ruleset
 
 TODO
