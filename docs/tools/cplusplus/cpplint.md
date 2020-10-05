@@ -109,4 +109,4 @@ linter:
 
 ## Recommended Ruleset
 
-TODO
+Sider provides our [recommended ruleset](https://github.com/sider/runners/blob/master/images/cpplint/sider_recommended_CPPLINT.cfg) for cpplint. If your repository does not include `CPPLINT.cfg`, the recommended ruleset will be used. For more details, please visit [this page](../../getting-started/recommended-rules.md).
