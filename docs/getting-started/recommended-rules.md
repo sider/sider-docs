@@ -13,9 +13,10 @@ For certain analysis tools listed in [Analysis tools including recommended rules
 
 Sider automatically applies the recommended ruleset for analysis tools listed [below](#analysis-tools-including-recommended-ruleset-obtained-by-the-algorithm) when a configuration file doesn't exist in your repository. Since the recommended rulesets are available on our website, you can modify and place it in your repository as required for correct analysis of your projects.
 
+¹ http://www.doi.ics.keio.ac.jp/research.html
+
+² https://researchmap.jp/read0129611
+
 ## Analysis tools including recommended ruleset obtained by the algorithm
 
 - [cpplint](../tools/cplusplus/cpplint.md#recommended-ruleset)
-
-¹ http://www.doi.ics.keio.ac.jp/research.html
-² https://researchmap.jp/read0129611
