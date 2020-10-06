@@ -18,4 +18,4 @@ Sider automatically applies the recommended ruleset for analysis tools listed [b
 - [cpplint](../tools/cplusplus/cpplint.md#recommended-ruleset)
 
 ¹ http://www.doi.ics.keio.ac.jp/research.html
-² https://porta.nanzan-u.ac.jp/research/view?l=ja&u=103899
+² https://researchmap.jp/read0129611
