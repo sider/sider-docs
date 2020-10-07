@@ -7,7 +7,7 @@ hide_title: true
 
 # Recommended Ruleset
 
-Static analysis with its default configuration typically reports many issues, and some of them don't fit your projects. Most analysis tools have the capability to let users to enable/disable analysis rules for users to avoid such "false positives." But, a huge amount of issues makes it difficult to manually verify all of them. For certain analysis tools listed in [Supported Tools](#supported-tools), Sider provides our recommended ruleset which can reduce false positives.
+Static analysis with its default configuration typically reports many issues, and some of them don't fit your projects. Most analysis tools have the capability to let users enable/disable analysis rules for users to avoid such "false positives." But, a huge amount of issues makes it difficult to manually verify all of them. For certain analysis tools listed in [Supported Tools](#supported-tools), Sider provides our recommended ruleset which can reduce false positives.
 
 ## Ruleset Generation Algorithm
 
