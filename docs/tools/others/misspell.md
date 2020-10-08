@@ -43,7 +43,7 @@ You can use several options to more comfortable analysis to your project.
 | Name                                                                                  | Type                 | Default |
 | ------------------------------------------------------------------------------------- | -------------------- | ------- |
 | [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`             | -       |
-| [`target`](#target)                                                                   | `string[]`           | `.`     |
+| [`target`](#target)                                                                   | `string`, `string[]` | `.`     |
 | [`exclude`](#exclude)                                                                 | `string[]`           | `[]`    |
 | [`locale`](#locale)                                                                   | `"US"`, `"UK"`       | -       |
 | [`ignore`](#ignore)                                                                   | `string`, `string[]` | -       |
