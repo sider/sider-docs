@@ -42,7 +42,7 @@ This is an example of the environment variables file located in `/etc/sider-env`
 ```bash:/etc/sider-env
 RAILS_ENV=onprem
 SECRET_KEY_BASE=topsecret...
-DATABASE_URL=mysql2://mysql.example.com:3306/sideci?encoding=utf8mb4&connectTimeout=5000
+DATABASE_URL=mysql2://mysql.example.com:3306/sideci
 BASE_URL=https://sider.example.com
 REDIS_URL=redis://redis.example.com:6379/0
 GITHUB_APP_ID=1
