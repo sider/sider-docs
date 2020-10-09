@@ -57,7 +57,7 @@ These parameters are not related to other services, like MySQL.
 
 Sider Enterprise completely depends on MySQL. You should carefully set up the parameters to accord with the actual MySQL configuration. Read [MySQL](./mysql.md) for how to configure a MySQL server.
 
-- `DATABASE_URL` - (Required) The URL to connect the MySQL server. The format of this parameter must be `mysql2://USER:PASSWORD@MYSQL_HOST:MYSQL_PORT/DATABASE_NAME?encoding=utf8mb4&connectTimeout=5000`. Note the query parameters `encoding=utf8mb4` and `connectTimeout=5000` should be placed as they are. e.g., `mysql2://sider:topsecret@mysql.example.com:3306/sideci?encoding=utf8mb4&connectTimeout=5000`.
+- `DATABASE_URL` - (Required) The URL to connect the MySQL server. See the [document](./mysql.md#integration-with-sider-enterprise) about the format.
 
 ## Redis
 

@@ -27,14 +27,19 @@ You should configure these parameters to handle any requests from Sider Enterpri
 
 ## Integration with Sider Enterprise
 
-The parameter [`DATABASE_URL`](./config.md) of Sider Enterprise sees these items:
+The [`DATABASE_URL`](./config.md#mysql) of Sider Enterprise is configured as follows:
 
-- USER - MySQL user name to be used when connecting to the server
-- PASSWORD - The password to use when connecting to the server
-- MYSQL_HOST - The host name of the MySQL server
-- MYSQL_PORT - The port number of the MySQL server
-- DATABASE_NAME - The database name for Sider Enterprise
+```
+mysql2://{USER}:{PASSWORD}@{HOST}:{PORT}/{DATABASE_NAME}?{OPTION1}={VALUE1}&{OPTION2}={VALUE2}
+```
 
-When setting up your MySQL server, you will create USER and its PASSWORD first. Sider Enterprise will try to create the specified DATABASE_NAME unless it does not exist, so the USER should have strong privileges. If you don't want to pass such powerful permissions to the USER, create the DATABASE_NAME on your own, and allow the USER to do ALL operations only for the DATABASE_NAME.
+- `USER` - The user name to use when connecting to the MySQL server
+- `PASSWORD` - The password to use when connecting to the MySQL server
+- `HOST` - The host name of the MySQL server
+- `PORT` - The port number of the MySQL server
+- `DATABASE_NAME` - The database name for Sider Enterprise
+- `OPTION1=VALUE1`, `OPTION2=VALUE2`, ... - The query parameters to configure the connection
 
-Also, confirm Sider Enterprise services can access to the MySQL server via the specified MYSQL_HOST and MYSQL_PORT.
+When setting up your MySQL server, you will create `USER` and its `PASSWORD` first. Sider Enterprise will try to create the specified `DATABASE_NAME` unless it does not exist, so the `USER` should have strong privileges. If you don't want to pass such powerful permissions to the `USER`, create the `DATABASE_NAME` on your own, and allow the `USER` to do ALL operations only for the `DATABASE_NAME`.
+
+Also, confirm Sider Enterprise services can access to the MySQL server via the specified `HOST` and `PORT`.
