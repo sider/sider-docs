@@ -129,7 +129,7 @@ The core component **sideci** will invoke Runners to perform analyses. The param
 
   - `no_proxy` - (Optional) The list of domains that should be excluded from the proxy targets. If you set the `http_proxy` and `https_proxy` parameters above, the `no_proxy` parameter may also have to be set. For example, `s3_endpoint` is set with `http://minio:9000`, then `no_proxy` should be set with `minio` if Runners should access to MinIO without a proxy server. See also [HTTP proxy](#http-proxy).
 
-  - `extra_hosts` - (Optional) The list of extra hosts. Use this parameter if you want to add extra lines to `/etc/hosts` in Runners' containers. This parameter is equivalent to the [`--add-host`](https://docs.docker.com/engine/reference/run/#managing-etchosts) option of `docker run`.
+  - `extra_hosts` - (Optional) The list of extra hosts. Use this parameter if you want to add extra lines to `/etc/hosts` in Runners' containers. This parameter is equivalent to the [`--add-host`](https://docs.docker.com/compose/compose-file/#extra_hosts) option of Docker Compose. This parameter should be set as a format of `["hostname:IP"]` if it's specified.
 
 ## SMTP - Make Sider Enterprise send emails
 
