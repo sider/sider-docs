@@ -7,9 +7,9 @@ hide_title: true
 
 # RuboCop
 
-| Supported Version         | Language   | Website             |
-| ------------------------- | ---------- | ------------------- |
-| 0.61.0+ (default: 0.89.1) | Ruby 2.7.2 | https://rubocop.org |
+| Supported Version        | Language   | Website             |
+| ------------------------ | ---------- | ------------------- |
+| 0.61.0+ (default: 1.0.0) | Ruby 2.7.2 | https://rubocop.org |
 
 **RuboCop** is a pluggable static code analyzer and code formatter for Ruby.
 It has been community-driven developed and has many rules and plugins including third-party's ones.
