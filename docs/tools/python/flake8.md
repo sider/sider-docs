@@ -9,7 +9,7 @@ hide_title: true
 
 | Supported Version | Language     | Website                         |
 | ----------------- | ------------ | ------------------------------- |
-| 3.8.3             | Python 3.8.6 | https://gitlab.com/pycqa/flake8 |
+| 3.8.3             | Python 3.8.5 | https://gitlab.com/pycqa/flake8 |
 
 **Flake8** is a linter to check the style and quality of Python code.
 
