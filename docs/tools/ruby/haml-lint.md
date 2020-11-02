@@ -43,6 +43,7 @@ linter:
     config: .rubocop_haml.yml
     exclude:
       - app/views/layouts/application.html.haml
+    parallel: true
 ```
 
 You can use several options to fine-tune HAML-Lint to your project.
@@ -56,6 +57,7 @@ You can use several options to fine-tune HAML-Lint to your project.
 | [`exclude_linter`](#exclude_linter)                                                   | `string`, `string[]` | -       |
 | [`config`](#config)                                                                   | `string`             | -       |
 | [`exclude`](#exclude)                                                                 | `string`, `string[]` | -       |
+| [`parallel`](#parallel)                                                               | `boolean`            | `false` |
 
 ### `target`
 
@@ -84,3 +86,8 @@ See also the [`--config`](https://github.com/sds/haml-lint#command-line-flags) o
 
 This option allows you to exclude files from being analyzed.
 See also the [`--exclude`](https://github.com/sds/haml-lint#command-line-flags) option.
+
+### `parallel`
+
+This option allows you to run linters in parallel.
+See also the [`--parallel`](https://github.com/sds/haml-lint#command-line-flags) option.
