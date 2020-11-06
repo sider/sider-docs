@@ -76,7 +76,7 @@ A pull request's author must sign up to Sider and be assigned a seat by organiza
 Unless the condition is satisfied, an analysis never starts.
 To solve the problem, we recommend you to try the following:
 
-1. Assign a seat to the pull request's author that has signed up to Sider.
+1. Assign a seat to the pull request's author who has signed up to Sider.
 2. Push a new commit to the pull request.
 
 ### Too many changed files in a pull request
