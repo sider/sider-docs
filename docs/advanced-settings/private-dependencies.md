@@ -23,7 +23,7 @@ When you click the **"Generate Key"** button, Sider generates a 4096 bit RSA key
 
 ![Download SSH public key](../assets/ssh-key-download-key.png)
 
-After generating, you can download the SSH public key used in analysis sessions from this page. The key is able to be added as [Deploy Keys](https://developer.github.com/v3/guides/managing-deploy-keys/#deploy-keys) in GitHub.
+After generating, you can download the SSH public key used in analysis sessions from this page. The key is able to be added as [Deploy Keys](https://docs.github.com/en/free-pro-team@latest/developers/overview/managing-deploy-keys#deploy-keys) in GitHub.
 
 > The SSH public key is supposed to be configured in another repository.
 >
