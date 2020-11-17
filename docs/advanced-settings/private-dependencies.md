@@ -16,13 +16,13 @@ Let's check the following steps out.
 
 ## Generate SSH key pair
 
-First of all, you need to generate an SSH key pair on your repository settings on Sider.
+First, you need to generate an SSH key pair on your repository settings on Sider.
 
 Visit **Settings** on your repository, and then click **Keys**.
 
 ![Generate SSH private key](../assets/ssh-key-generate-key.png)
 
-When you click **Generate Key**, Sider automatically generates a 4096-bit RSA key pair used for the private dependencies resolution.
+When you click **Generate Key**, Sider automatically generates a 4096-bit RSA key pair used for the private dependency resolution.
 
 > NOTE: We strongly recommend **against** adding secret keys to public repositories.
 > Their analysis results are publicly accessible, and your secret keys might get exposed.
@@ -73,8 +73,8 @@ When you add the deploy key and start a new analysis, installing the private pac
 
 ### SSH key of machine user
 
-If you have multiple private dependencies, adding a deploy key does not work.
-Because we cannot add the same deploy to multiple repositories on GitHub.
+If you have multiple private dependencies, adding a deploy key does not work
+because we cannot add the same deploy to multiple repositories on GitHub.
 
 In such a case, you need to prepare a [machine user](https://docs.github.com/en/free-pro-team@latest/developers/overview/managing-deploy-keys#machine-users) account
 and attach the public key to the account.
