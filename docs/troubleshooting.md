@@ -83,3 +83,8 @@ To solve the problem, we recommend you to try the following:
 
 The maximum number of changed files in a pull request is **3,000** in Sider.
 An analysis never starts if your changed files exceed the limit.
+
+## Installing dependencies fails
+
+If you are using private dependencies via a package manager (e.g. npm), you need extra steps.
+See ["Private Dependencies"](./advanced-settings/private-dependencies.md) for more details.
