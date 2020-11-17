@@ -74,7 +74,7 @@ When you add the deploy key and start a new analysis, installing the private pac
 ### SSH key of machine user
 
 If you have multiple private dependencies, adding a deploy key does not work
-because we cannot add the same deploy to multiple repositories on GitHub.
+because we cannot add the same deploy key to multiple repositories on GitHub.
 
 In such a case, you need to prepare a [machine user](https://docs.github.com/en/free-pro-team@latest/developers/overview/managing-deploy-keys#machine-users) account
 and attach the public key to the account.
