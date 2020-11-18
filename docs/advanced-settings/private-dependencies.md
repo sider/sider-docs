@@ -92,10 +92,10 @@ Suppose that you have a machine user account named _foobot_ and the following `p
 ```
 
 To install these packages, _foobot_ need to have access to the `foo-company/awesome` and `foo-company/marvelous` repositories.
-Attaching the public key as an SSH key to _foobot_ can realize this.
+When you attach the public SSH key to _foobot_, _foobot_ can access these repositories.
 The steps are as follows:
 
-1. Login to GitHub as the machine user
+1. Sign in to GitHub as the machine user
 2. Visit **Settings** of the machine user
 3. Click **SSH and GPG keys**
 4. Click **New SSH key**
