@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "lint": "remark . --quiet"
+    "lint": "remark . --quiet",
+    "prettier": "prettier --ignore-path=.gitignore ."
   },
   "devDependencies": {
     "@arkweid/lefthook": "^0.7.2",
