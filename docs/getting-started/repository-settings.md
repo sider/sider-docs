@@ -23,6 +23,15 @@ You must have write permission to the repository to change these settings.
 
 This section allows you to enable the analysis tool you would like to use. Tools that are enabled will be run against new pull requests in your repository.
 
+## Branches
+
+![Branches settings](../assets/project-branches.png)
+
+This section allows you to set any auto-analyzed branch that is not combined with a pull request.
+
+When a commit is pushed to a branch you set, analyzing the commit automatically starts.
+You can view all the issues of the whole repository, in contrast with pull request issues.
+
 ## Integrations
 
 ![Slack notification](../assets/project-slack-notification.png)
