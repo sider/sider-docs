@@ -1,6 +1,6 @@
 name: Prettier
 
-on: push
+on: pull_request
 
 jobs:
   check:
