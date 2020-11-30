@@ -29,7 +29,7 @@ This section allows you to enable the analysis tool you would like to use. Tools
 
 This section allows you to set any auto-analyzed branch that is not combined with a pull request.
 
-When a commit is pushed to a branch you set, analyzing the commit automatically starts.
+When a commit is pushed to a branch you set, analysis of the commit automatically starts.
 You can view all the issues of the whole repository, in contrast with pull request issues.
 
 ## Integrations
