@@ -81,10 +81,24 @@ To solve the problem, we recommend you to try the following:
 
 ### Too many changed files in a pull request
 
-The maximum number of changed files in a pull request is **3,000** in Sider.
+The maximum number of changed files in a pull request is **3,000**.
 An analysis never starts if your changed files exceed the limit.
 
 ## Installing dependencies fails
 
 If you are using private dependencies via a package manager (e.g. npm), you need extra steps.
 See ["Private Dependencies"](./advanced-settings/private-dependencies.md) for more details.
+
+## Too many issues detected
+
+The maximum number of issues detected per analysis tool is **50,000**.
+If the maximum value is exceeded, no issues are displayed.
+Here are the recommended ways to prevent such a problem:
+
+- Ignore needless files for analysis via the [`ignore`](./getting-started/custom-configuration.md#ignore) option of `sider.yml`
+- Narrow target files via a tool-specific option of `sider.yml` (e.g. [`linter.eslint.target`](./tools/javascript/eslint.md#target))
+- Ignore needless files via a tool-specific feature (e.g. [`ignorePatterns`](https://eslint.org/docs/user-guide/configuring#ignoring-files-and-directories) of ESLint)
+- Configure `sider.yml` or a analysis tool to fit to your project, e.g.
+  - setting [`linter.code_sniffer.standard`](./tools/php/code-sniffer#standard) of `sider.yml`
+  - adding a tool plugin such as [`eslint-config-prettier`](https://www.npmjs.com/package/eslint-config-prettier)
+  - and so on...
