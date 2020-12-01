@@ -91,8 +91,8 @@ See ["Private Dependencies"](./advanced-settings/private-dependencies.md) for mo
 
 ## Too many issues detected
 
-The maximum number of issues detected per analysis tool is **50,000**.
-If the maximum value is exceeded, no issues are displayed.
+The maximum number of issues is limited to **50,000** per analysis tool.
+If it exceeds the limitation, no issues are displayed.
 Here are the recommended ways to prevent such a problem:
 
 - Ignore needless files for analysis via the [`ignore`](./getting-started/custom-configuration.md#ignore) option of `sider.yml`
