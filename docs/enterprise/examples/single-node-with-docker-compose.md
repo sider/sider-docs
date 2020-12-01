@@ -36,7 +36,7 @@ Create `/etc/sider/env` with content like this, and change the file permission a
 ```bash:/etc/sider/env
 RAILS_ENV=onprem
 SECRET_KEY_BASE=81efee29dbcad46f33f366f8e55e8a4b29d199b4a5f3b82c55dddab5b3107e3cf656d5ab713bdf871a2d4128334933d08bbcee49a0b0cb18d1b54af6866e7b75
-DATABASE_URL=mysql2://mysql:3306/sideci?encoding=utf8mb4&connectTimeout=5000
+DATABASE_URL=mysql2://mysql:3306/sideci
 BASE_URL=https://sider.example.com
 REDIS_URL=redis://redis:6379/0
 GITHUB_APP_ID=1
@@ -61,7 +61,7 @@ Configure `/etc/sider/docker-compose.yml` like this:
 version: "3"
 services:
   sideci_web:
-    image: 480130971618.dkr.ecr.us-east-1.amazonaws.com/sideci_onprem:release-202006.0
+    image: 480130971618.dkr.ecr.us-east-1.amazonaws.com/sideci_onprem:release-202010.0
     env_file:
       - /etc/sider/env
     command: ["bundle", "exec", "puma"]
@@ -73,7 +73,7 @@ services:
       - redis
       - minio
   sideci_worker:
-    image: 480130971618.dkr.ecr.us-east-1.amazonaws.com/sideci_onprem:release-202006.0
+    image: 480130971618.dkr.ecr.us-east-1.amazonaws.com/sideci_onprem:release-202010.0
     env_file:
       - /etc/sider/env
     command: ["bundle", "exec", "sidekiq"]

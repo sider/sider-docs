@@ -71,6 +71,10 @@ Replace `USERNAME` with a GitHub login name.
 
 > The specified `USERNAME` must exist on the Sider database. Make sure the user sign up on Sider in advance.
 
+## Register users on Sider manually
+
+If you configure Sider with `RESTRICT_SIGN_UP`, you will have to create users on Sider manually. Visit the path `/admin/users/new` for the Sider's host, and you will be supposed to input `username` and `locale` for a new user. The specified `username` must exist on your GitHub Enterprise Server.
+
 ## Collect debug logs
 
 Sider Enterprise services write debug logs to the standard output. You can collect the logs via [Docker logging drivers](https://docs.docker.com/config/containers/logging/configure/).
@@ -92,7 +96,7 @@ In addition, these metrics for other services should be also monitored because S
 
 ## Remove old Docker images
 
-You might want to remove old Docker images related to Sider Enterprise because they consume disk space. This is an example command to do that (replace `RUNNER_VERSION` with the latest Runner version. You can see the version on our [release page](https://help.sider.review/enterprise/releases/)):
+You might want to remove old Docker images related to Sider Enterprise because they consume disk space. This is an example command to do that (replace `RUNNER_VERSION` with the latest Runner version. You can see the version on our [release page](./releases/index.md)):
 
 ```console
 docker image ls --format '{{.Repository}}:{{.Tag}}' \

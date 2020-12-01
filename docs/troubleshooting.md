@@ -26,7 +26,7 @@ Visit the [Sider installation page](https://github.com/apps/sider/installations/
 
 Users who can add their repository must have admin permission for the repository. This page helps you to configure your organization registration in Sider.
 
-## I would like to assign seats to my teammates, but could not find them.
+## I would like to assign seats to my teammates, but could not find them
 
 Check whether GitHub users you would like to assign seats for already have accounts for Sider. If they have already signed up, synchronizing with GitHub will make them appear in organization settings page. You can synchronize with GitHub by trying either of following:
 
@@ -66,19 +66,39 @@ linter:
     - "*.mp4"
 ```
 
-## Sider analysis never starts
+## Analysis never starts
 
-It might be because of the following situation:
+It might be because of the following situations:
 
-- The author of the pull request has not been assigned a seat to Sider.
-- Sider is configured as a "Required" status check on GitHub.
+### A pull request's author does not have a seat
 
-![Never Start Analysis](./assets/never-start-analysis.png)
+A pull request's author must sign up to Sider and be assigned a seat by organization admins.
+Unless the condition is satisfied, an analysis never starts.
+To solve the problem, we recommend you to try the following:
 
-In order to solve this problem, we recommend you to try the following:
+1. Assign a seat to the pull request's author who has signed up to Sider.
+2. Push a new commit to the pull request.
 
-1. Assign a seat to the pull request's author.
-   - The author must sign up to Sider.
-2. Add a new commit to the pull request by either of the following ways.
-   - `git commit --amend` and force pushing it.
-   - Push another commit to the pull request.
+### Too many changed files in a pull request
+
+The maximum number of changed files in a pull request is **3,000** in Sider.
+An analysis never starts if your changed files exceed the limit.
+
+## Installing dependencies fails
+
+If you are using private dependencies via a package manager (e.g. npm), you need extra steps.
+See ["Private Dependencies"](./advanced-settings/private-dependencies.md) for more details.
+
+## Too many issues detected
+
+The maximum number of issues is limited to **50,000** per analysis tool.
+If it exceeds the limitation, no issues are displayed.
+Here are the recommended ways to prevent such a problem:
+
+- Ignore needless files for analysis via the [`ignore`](./getting-started/custom-configuration.md#ignore) option of `sider.yml`
+- Narrow target files via a tool-specific option of `sider.yml` (e.g. [`linter.eslint.target`](./tools/javascript/eslint.md#target))
+- Ignore needless files via a tool-specific feature (e.g. [`ignorePatterns`](https://eslint.org/docs/user-guide/configuring#ignoring-files-and-directories) of ESLint)
+- Configure `sider.yml` or an analysis tool to fit your project, e.g.
+  - setting [`linter.code_sniffer.standard`](./tools/php/code-sniffer.md#standard) of `sider.yml`
+  - adding a tool plugin such as [`eslint-config-prettier`](https://www.npmjs.com/package/eslint-config-prettier)
+  - and so on...

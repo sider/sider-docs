@@ -9,7 +9,7 @@ hide_title: true
 
 | Supported Version | Language    | Website                |
 | ----------------- | ----------- | ---------------------- |
-| 8.33              | Java 14.0.1 | https://checkstyle.org |
+| 8.36.2            | Java 14.0.2 | https://checkstyle.org |
 
 **Checkstyle** is a style checker for Java code and aims to enforce a coding standard.
 
@@ -39,6 +39,7 @@ linter:
 | Name                                                                                  | Type                           | Default  |
 | ------------------------------------------------------------------------------------- | ------------------------------ | -------- |
 | [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`                       | -        |
+| [`jvm_deps`](../../getting-started/custom-configuration.md#linteranalyzer_idjvm_deps) | `string[][]`                   | `[]`     |
 | [`config`](#config)                                                                   | `string`                       | `google` |
 | [`dir`](#dir)                                                                         | `string`, `string[]`           | `.`      |
 | [`exclude`](#exclude)                                                                 | `string`, `string[]`, `hash[]` | -        |
@@ -51,9 +52,10 @@ This option allows you to declare the coding standard you want to follow.
 
 Supported values are:
 
-- [`google`](https://checkstyle.org/google_style.html) (for `/google_checks.xml`)
-- [`sun`](https://checkstyle.org/sun_style.html) (for `/sun_checks.xml`)
-- Path to your configuration file
+- [`google`](https://checkstyle.org/google_style) (for `/google_checks.xml`)
+- [`sun`](https://checkstyle.org/sun_style) (for `/sun_checks.xml`)
+- Path to your [configuration file](https://checkstyle.org/config)
+  - Note that only **core** rules are supported. You **cannot** specify your custom rules or 3rd-party rules.
 
 When you write `google` or `sun`, config files distributed from Checkstyle are used.
 

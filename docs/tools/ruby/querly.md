@@ -9,7 +9,7 @@ hide_title: true
 
 | Supported Version       | Language   | Website                           |
 | ----------------------- | ---------- | --------------------------------- |
-| 0.5.0+ (default: 1.1.0) | Ruby 2.7.1 | https://github.com/soutaro/querly |
+| 0.5.0+ (default: 1.1.0) | Ruby 2.7.2 | https://github.com/soutaro/querly |
 
 **Querly** is a customizable and pattern-based analysis tool for Ruby.
 You can easily write your own rule for your project via the YAML configuration file.
@@ -37,13 +37,19 @@ Here is an example configuration via `sider.yml`:
 linter:
   querly:
     gems:
-      - "slim"
+      - slim
+    config: .config/querly.yml
 ```
 
 | Name                                                                                  | Type                 | Default |
 | ------------------------------------------------------------------------------------- | -------------------- | ------- |
 | [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`             | -       |
 | [`gems`](../../getting-started/custom-configuration.md#linteranalyzer_idgems)         | `string[]`, `hash[]` | -       |
+| [`config`](#config)                                                                   | `string`             | -       |
+
+### `config`
+
+This option allows you to specify a configuration file path you want to use.
 
 ## Analyzing View Templates
 

@@ -7,9 +7,9 @@ hide_title: true
 
 # Phinder
 
-| Supported Version | Language  | Website                          |
-| ----------------- | --------- | -------------------------------- |
-| 0.9.2             | PHP 7.4.7 | https://github.com/sider/phinder |
+| Supported Version | Language   | Website                          |
+| ----------------- | ---------- | -------------------------------- |
+| 0.9.2             | PHP 7.4.12 | https://github.com/sider/phinder |
 
 **Phinder** is a static analysis tool that aims to make your custom rules via your YAML file.
 

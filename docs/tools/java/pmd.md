@@ -9,7 +9,7 @@ hide_title: true
 
 | Supported Version | Language    | Website               |
 | ----------------- | ----------- | --------------------- |
-| 6.24.0            | Java 14.0.1 | https://pmd.github.io |
+| 6.29.0            | Java 14.0.2 | https://pmd.github.io |
 
 **PMD** is a static analysis tool to detect issues about code style, security, performance, etc.
 It supports multiple programming languages but Sider supports only Java.
@@ -36,6 +36,7 @@ linter:
 | Name                                                                                  | Type                 | Default         |
 | ------------------------------------------------------------------------------------- | -------------------- | --------------- |
 | [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`             | -               |
+| [`jvm_deps`](../../getting-started/custom-configuration.md#linteranalyzer_idjvm_deps) | `string[][]`         | `[]`            |
 | [`dir`](#dir)                                                                         | `string`             | `.`             |
 | [`rulesets`](#rulesets)                                                               | `string`, `string[]` | (see below)     |
 | [`encoding`](#encoding)                                                               | `string`             | (PMD's default) |

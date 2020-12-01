@@ -20,6 +20,7 @@ This section has documents about how to use Sider.
 - [Repository Settings](./getting-started/repository-settings.md)
 - [Dashboard Overview](./getting-started/dashboard.md)
 - [Custom Analysis Configuration](./getting-started/custom-configuration.md)
+- [Recommended Ruleset](./getting-started/recommended-rules.md)
 - [Working with Issues](./getting-started/working-with-issues.md)
 - [Permissions](./getting-started/permissions.md)
 - [Skip Analyzing](./getting-started/skip-analyzing.md)
@@ -84,6 +85,7 @@ This section has documents about analysis tools which Sider supports. We have an
 
 - [Cppcheck](./tools/cplusplus/cppcheck.md)
 - [cpplint](./tools/cplusplus/cpplint.md)
+- [Clang-Tidy](./tools/cplusplus/clang-tidy.md)
 
 <!-- prettier-ignore-start -->
 

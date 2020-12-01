@@ -9,7 +9,7 @@ hide_title: true
 
 | Version                   | Language          | Website                          |
 | ------------------------- | ----------------- | -------------------------------- |
-| 0.26.0+ (default: 0.35.0) | HAML (Ruby 2.7.1) | https://github.com/sds/haml-lint |
+| 0.26.0+ (default: 0.36.0) | HAML (Ruby 2.7.2) | https://github.com/sds/haml-lint |
 
 **HAML-Lint** is a static analysis tool to help keep your [HAML](https://github.com/haml/haml) files clean and readable.
 In addition to HAML-specific style and lint checks, it can check them by integrated RuboCop rules.
@@ -31,18 +31,19 @@ Here is an example configuration via `sider.yml`:
 linter:
   haml_lint:
     gems:
-      - "rubocop"
-      - "haml"
-    file: "**/*haml"
+      - rubocop
+      - haml
+    target: src
     include_linter:
       - EmptyScript
       - LineLength
       - MultilinePipe
     exclude_linter:
       - TagName
-    config: ".rubocop_haml.yml"
+    config: .rubocop_haml.yml
     exclude:
-      - "app/views/layouts/application.html.haml"
+      - app/views/layouts/application.html.haml
+    parallel: true
 ```
 
 You can use several options to fine-tune HAML-Lint to your project.
@@ -51,15 +52,20 @@ You can use several options to fine-tune HAML-Lint to your project.
 | ------------------------------------------------------------------------------------- | -------------------- | ------- |
 | [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`             | -       |
 | [`gems`](../../getting-started/custom-configuration.md#linteranalyzer_idgems)         | `string[]`, `hash[]` | -       |
-| [`file`](#file)                                                                       | `string`             | `.`     |
+| [`target`](#target)                                                                   | `string`, `string[]` | `.`     |
 | [`include_linter`](#include_linter)                                                   | `string`, `string[]` | -       |
 | [`exclude_linter`](#exclude_linter)                                                   | `string`, `string[]` | -       |
 | [`config`](#config)                                                                   | `string`             | -       |
 | [`exclude`](#exclude)                                                                 | `string`, `string[]` | -       |
+| [`parallel`](#parallel)                                                               | `boolean`            | `false` |
+
+### `target`
+
+This option allows you to specify files or directories you want to analyze. Glob is also available.
 
 ### `file`
 
-This option allows you to specify files or directories you want to analyze. Glob is also available.
+> **DEPRECATED**: This option is deprecated. Use the [`target`](#target) option instead.
 
 ### `include_linter`
 
@@ -80,3 +86,8 @@ See also the [`--config`](https://github.com/sds/haml-lint#command-line-flags) o
 
 This option allows you to exclude files from being analyzed.
 See also the [`--exclude`](https://github.com/sds/haml-lint#command-line-flags) option.
+
+### `parallel`
+
+This option allows you to run linters in parallel.
+See also the [`--parallel`](https://github.com/sds/haml-lint#command-line-flags) option.

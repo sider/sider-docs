@@ -11,7 +11,7 @@ hide_title: true
 
 | Supported Version | Language             | Website                         |
 | ----------------- | -------------------- | ------------------------------- |
-| 1.9.1             | Kotlin (Java 14.0.1) | https://detekt.github.io/detekt |
+| 1.14.2            | Kotlin (Java 14.0.2) | https://detekt.github.io/detekt |
 
 **detekt** is a linter which code smell analysis for your [Kotlin](https://kotlinlang.org) projects.
 
@@ -49,6 +49,7 @@ You can customize your detekt analysis using `sider.yml`.
 | Name                                                                                  | Type                 | Default |
 | ------------------------------------------------------------------------------------- | -------------------- | ------- |
 | [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`             | -       |
+| [`jvm_deps`](../../getting-started/custom-configuration.md#linteranalyzer_idjvm_deps) | `string[][]`         | `[]`    |
 | [`baseline`](#baseline)                                                               | `string`             | -       |
 | [`config`](#config)                                                                   | `string`, `string[]` | `[]`    |
 | [`config-resource`](#config-resource)                                                 | `string`, `string[]` | `[]`    |

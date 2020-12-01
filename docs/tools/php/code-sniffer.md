@@ -7,9 +7,9 @@ hide_title: true
 
 # PHP_CodeSniffer
 
-| Supported Version | Language  | Website                                      |
-| ----------------- | --------- | -------------------------------------------- |
-| 3.5.5             | PHP 7.4.7 | https://pear.php.net/package/PHP_CodeSniffer |
+| Supported Version | Language   | Website                                      |
+| ----------------- | ---------- | -------------------------------------------- |
+| 3.5.8             | PHP 7.4.12 | https://pear.php.net/package/PHP_CodeSniffer |
 
 **PHP_CodeSniffer** is a style checker to enforce a defined set of PHP coding standards.
 
@@ -54,23 +54,25 @@ linter:
     standard: phpcs.xml
     extensions: php,inc,lib
     encoding: utf-8
-    ignore: app/vendor
+    ignore:
+      - app/vendor
+      - test/ignored.php
 ```
 
 You can use several options to fine-tune PHP_CodeSniffer to your project:
 
-| Name                                                                                  | Type     | Default |
-| ------------------------------------------------------------------------------------- | -------- | ------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string` | -       |
-| [`dir`](#dir)                                                                         | `string` | `.`     |
-| [`standard`](#standard)                                                               | `string` | `PSR2`  |
-| [`extensions`](#extensions)                                                           | `string` | `php`   |
-| [`encoding`](#encoding)                                                               | `string` | -       |
-| [`ignore`](#ignore)                                                                   | `string` | -       |
+| Name                                                                                  | Type                 | Default |
+| ------------------------------------------------------------------------------------- | -------------------- | ------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`             | -       |
+| [`dir`](#dir)                                                                         | `string`             | `.`     |
+| [`standard`](#standard)                                                               | `string`             | `PSR2`  |
+| [`extensions`](#extensions)                                                           | `string`, `string[]` | `php`   |
+| [`encoding`](#encoding)                                                               | `string`             | -       |
+| [`ignore`](#ignore)                                                                   | `string`, `string[]` | `[]`    |
 
 ### `dir`
 
-This option controls directories Sider inspects. The default value is dependent on the frameworks PHP_CodeSniffer supports.
+This option controls directories to be analyzed. The default value is dependent on the frameworks PHP_CodeSniffer supports.
 If you are not using any frameworks or are using a framework PHP_CodeSniffer does not support, `.` is used.
 
 If you would like to exclude specific directories, you can specify them in a custom ruleset file.
@@ -78,7 +80,6 @@ If you would like to exclude specific directories, you can specify them in a cus
 ### `standard`
 
 This option controls a coding standard of your project. If you leave this value empty, Sider tries to detect the standard automatically.
-
 `PSR2` is used when auto detection fails.
 
 You can use the following third-party standards in addition to the standards which PHP_CodeSniffer supports natively:
@@ -88,7 +89,7 @@ You can use the following third-party standards in addition to the standards whi
 - [WordPress](https://github.com/WordPress/WordPress-Coding-Standards)
 
 If you want to see the actual standard lists, run the command [`phpcs -i`](https://github.com/squizlabs/PHP_CodeSniffer/wiki/Usage#printing-a-list-of-installed-coding-standards).
-The following output is a standard list which Sider prepares.
+The following output is a standard list that we prepare.
 
 ```shell
 $ phpcs -i
@@ -99,12 +100,14 @@ You can also define your own standard, and enter the path to the config file her
 
 ### `extensions`
 
-This option controls a comma-separated list of extensions of files which Sider inspects.
+This option controls a comma-separated list of file extensions to be analyzed.
+You also can specify an array of extensions.
 
 ### `encoding`
 
-This option controls file encoding.
+This option controls an encoding of files to be analyzed.
 
 ### `ignore`
 
-A comma-separated list of patterns to ignore files and directories by.
+This option controls a comma-separated list of file or directory patterns to be ignored.
+You also can specify an array of patterns.

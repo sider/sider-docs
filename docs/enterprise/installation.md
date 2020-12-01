@@ -30,6 +30,9 @@ docker run --rm \
   480130971618.dkr.ecr.us-east-1.amazonaws.com/sideci_onprem:TAG
 ```
 
+> If your organization requires your machine to access via an HTTP proxy server, you should configure Docker to use it.
+> See [Configure Docker to use a proxy server](https://docs.docker.com/network/proxy/) for more details.
+
 ## Prepare Environment Variables for Sider Enterprise
 
 Sider Enterprise is configured with environment variables. We recommend creating an environment variables file to reuse among [**sideci-web** and **sideci-worker**](./system-overview.md).
@@ -39,7 +42,7 @@ This is an example of the environment variables file located in `/etc/sider-env`
 ```bash:/etc/sider-env
 RAILS_ENV=onprem
 SECRET_KEY_BASE=topsecret...
-DATABASE_URL=mysql2://mysql.example.com:3306/sideci?encoding=utf8mb4&connectTimeout=5000
+DATABASE_URL=mysql2://mysql.example.com:3306/sideci
 BASE_URL=https://sider.example.com
 REDIS_URL=redis://redis.example.com:6379/0
 GITHUB_APP_ID=1

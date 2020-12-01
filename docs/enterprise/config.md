@@ -49,11 +49,15 @@ These parameters are not related to other services, like MySQL.
 
 - `FORCE_SSL` - (Optional) The boolean to control if **sideci-web** should make end-users always access via HTTPS. The default value is `false`.
 
+- `PUMA_PERSISTENT_TIMEOUT` - (Optional) The integer to control Keep-Alive timeout of **sideci-web**. If you place a load balancer in front of **sideci-web** and its idle timeout is huge, you should consider configuring this value. The default value is `75`.
+
+- `EXTRA_CERTIFICATE` - (Optional) The base64 encoded PEM certificate. Set this parameter if your GitHub Enterprise Server is running with a self-signed certificate or one issued from your own certificate authority.
+
 ## MySQL
 
 Sider Enterprise completely depends on MySQL. You should carefully set up the parameters to accord with the actual MySQL configuration. Read [MySQL](./mysql.md) for how to configure a MySQL server.
 
-- `DATABASE_URL` - (Required) The URL to connect the MySQL server. The format of this parameter must be `mysql2://USER:PASSWORD@MYSQL_HOST:MYSQL_PORT/DATABASE_NAME?encoding=utf8mb4&connectTimeout=5000`. Note the query parameters `encoding=utf8mb4` and `connectTimeout=5000` should be placed as they are. e.g., `mysql2://sider:topsecret@mysql.example.com:3306/sideci?encoding=utf8mb4&connectTimeout=5000`.
+- `DATABASE_URL` - (Required) The URL to connect the MySQL server. See the [document](./mysql.md#integration-with-sider-enterprise) about the format.
 
 ## Redis
 
@@ -119,11 +123,13 @@ The core component **sideci** will invoke Runners to perform analyses. The param
 
   - `network_mode` - (Required) This is equivalent to the `--network` option of `docker run`. If you provision MinIO server on the instance outside of Runners, you should set `bridge` to the parameter. However, you must set the container name or the network name of Docker to make sure Runners can access to MinIO within the same network. Learn more [Network settings](https://docs.docker.com/engine/reference/run/#network-settings) for Docker networking.
 
-  - `http_proxy` - (Optional) The proxy server domain. You need to set the parameter if your Sider Enterprise is within a proxy environment.
+  - `http_proxy` - (Optional) The proxy server domain. You need to set the parameter if your Sider Enterprise is within a proxy environment. See also [HTTP proxy](#http-proxy).
 
-  - `https_proxy` - (Optional) The proxy server domain. You need to set the parameter if your Sider Enterprise is within a proxy environment.
+  - `https_proxy` - (Optional) The proxy server domain. You need to set the parameter if your Sider Enterprise is within a proxy environment. See also [HTTP proxy](#http-proxy).
 
-  - `no_proxy` - (Optional) The list of domains that should be excluded from the proxy targets. If you set the `http_proxy` and `https_proxy` parameters above, the `no_proxy` parameter may also have to be set. For example, `s3_endpoint` is set with `http://minio:9000`, then `no_proxy` should be set with `minio` if Runners should access to MinIO without a proxy server.
+  - `no_proxy` - (Optional) The list of domains that should be excluded from the proxy targets. If you set the `http_proxy` and `https_proxy` parameters above, the `no_proxy` parameter may also have to be set. For example, `s3_endpoint` is set with `http://minio:9000`, then `no_proxy` should be set with `minio` if Runners should access to MinIO without a proxy server. See also [HTTP proxy](#http-proxy).
+
+  - `extra_hosts` - (Optional) The list of extra hosts. Use this parameter if you want to add extra lines to `/etc/hosts` in Runners' containers. This parameter is equivalent to the [`extra_hosts`](https://docs.docker.com/compose/compose-file/#extra_hosts) option of Docker Compose. This parameter should be set as a format of `["hostname:IP"]` if it's specified.
 
 ## SMTP - Make Sider Enterprise send emails
 
@@ -198,6 +204,8 @@ This is an example of `~/docker/config.json` file.
   }
 }
 ```
+
+Also, you should configure `http_proxy`, `https_proxy`, and `no_proxy` in `DOCKER_RUNNERS_CONFIG` to make sure each runner can access external servers via your HTTP proxy. See also [Runners and MinIO](#runners-and-minio) for more details.
 
 ### Domain names you should allow
 

@@ -39,6 +39,7 @@ The options you can specify in `sider.yml` are grouped into the following catego
 1. Analyzer-specific options (under `linter`)
    - [`linter.brakeman`](../tools/ruby/brakeman.md)
    - [`linter.checkstyle`](../tools/java/checkstyle.md)
+   - [`linter.clang_tidy`](../tools/cplusplus/clang-tidy.md)
    - [`linter.code_sniffer`](../tools/php/code-sniffer.md)
    - [`linter.coffeelint`](../tools/javascript/coffeelint.md)
    - [`linter.cppcheck`](../tools/cplusplus/cppcheck.md)
@@ -226,6 +227,76 @@ When the `npm_install` option is not `false`, Sider will try as follows:
 
 When the option is `false`, Sider will skip these installation steps and analyze with the pre-installed default version.
 You might want to set the option to `false` if you don't configure analyzer and don't want to see warnings.
+
+## `linter.<analyzer_id>.jvm_deps`
+
+_Type:_ `string[][]`
+
+For JVM tools such as Checkstyle or ktlint, this option allows you to load third-party rules or plugins. For example:
+
+```yaml
+linter:
+  checkstyle:
+    jvm_deps:
+      - [com.github.sevntu-checkstyle, sevntu-checks, 1.37.1]
+```
+
+Each element of a `jvm_deps` array must have 3 properties: `[group, name, version]`.
+These 3 properties follows the Maven repository style, and you can install dependencies registered in Maven repositories:
+
+The currently supported repositories are:
+
+- Maven Central Repository
+- JCenter Maven Repository
+- Google's Maven Repository
+
+## `linter.<analyzer_id>.apt`
+
+_Type:_ `string`, `string[]`
+
+Development packages provided by the OS environment may be necessary, particularly for projects written in C/C++. Sider lets you install packages with `APT`, which is a package manager for `Debian` based Linux distributions.
+
+The `apt` option allows you to specify a list of development packages your project depends on.
+The packages must satisfy the conditions below:
+
+- Packages must be compatible with [our Docker image](https://github.com/sider/devon_rex/blob/master/base/Dockerfile).
+- Package names must be suffixed with "-dev".
+- Each package name must be formatted as `<name>` or `<name>=<version>`.
+
+Below is an example of how you install the latest version of `libgdbm-dev` and the specific version (0.99.8-2) of `libfastjson-dev`.
+
+```yaml
+linter:
+  clang_tidy:
+    apt:
+      - libgdbm-dev
+      - libfastjson-dev=0.99.8-2
+```
+
+## `linter.<analyzer_id>.include-path`
+
+_Type:_ `string`, `string[]`
+
+Some C/C++ analyzers can handle include paths like C/C++ preprocessors can. With Sider, the `include-path` option allows you to add directories to include search paths.
+
+For example:
+
+```yaml
+linter:
+  clang_tidy:
+    include-path:
+      - myinclude
+      - foo/include
+      - /usr/include/libfastjson
+```
+
+Sider treats this option as a compilation option `-I` and passes it as command-line arguments internally. For example, Sider executes [Clang-Tidy](../tools/cplusplus/clang-tidy.md) like this:
+
+```console
+$ clang-tidy test.cpp -- -Imyinclude -Ifoo/include -I/usr/include/libfastjson
+```
+
+If you omit this option, Sider searches for header files that are part of your project and applies the directories of found files to the include search path.
 
 ## `ignore`
 

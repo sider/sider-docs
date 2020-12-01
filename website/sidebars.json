@@ -7,6 +7,7 @@
       "getting-started/dashboard",
       "getting-started/repository-settings",
       "getting-started/custom-configuration",
+      "getting-started/recommended-rules",
       "getting-started/working-with-issues",
       "getting-started/permissions",
       "getting-started/skip-analyzing"
@@ -77,7 +78,11 @@
       {
         "type": "subcategory",
         "label": "C/C++",
-        "ids": ["tools/cplusplus/cppcheck", "tools/cplusplus/cpplint"]
+        "ids": [
+          "tools/cplusplus/cppcheck",
+          "tools/cplusplus/cpplint",
+          "tools/cplusplus/clang-tidy"
+        ]
       },
       {
         "type": "subcategory",
@@ -147,6 +152,10 @@
         "label": "Releases",
         "ids": [
           "enterprise/releases/index",
+          "enterprise/releases/202010",
+          "enterprise/releases/202009",
+          "enterprise/releases/202008",
+          "enterprise/releases/202007",
           "enterprise/releases/202006",
           "enterprise/releases/202005",
           "enterprise/releases/202004",
