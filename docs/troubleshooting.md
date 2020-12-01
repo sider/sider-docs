@@ -98,7 +98,7 @@ Here are the recommended ways to prevent such a problem:
 - Ignore needless files for analysis via the [`ignore`](./getting-started/custom-configuration.md#ignore) option of `sider.yml`
 - Narrow target files via a tool-specific option of `sider.yml` (e.g. [`linter.eslint.target`](./tools/javascript/eslint.md#target))
 - Ignore needless files via a tool-specific feature (e.g. [`ignorePatterns`](https://eslint.org/docs/user-guide/configuring#ignoring-files-and-directories) of ESLint)
-- Configure `sider.yml` or a analysis tool to fit to your project, e.g.
-  - setting [`linter.code_sniffer.standard`](./tools/php/code-sniffer#standard) of `sider.yml`
+- Configure `sider.yml` or an analysis tool to fit your project, e.g.
+  - setting [`linter.code_sniffer.standard`](./tools/php/code-sniffer.md#standard) of `sider.yml`
   - adding a tool plugin such as [`eslint-config-prettier`](https://www.npmjs.com/package/eslint-config-prettier)
   - and so on...
