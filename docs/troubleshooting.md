@@ -81,7 +81,7 @@ To solve the problem, we recommend you to try the following:
 
 ### Too many changed files in a pull request
 
-The maximum number of changed files in a pull request is **3,000**.
+The maximum number of changed files in a pull request is **3,000** in Sider.
 An analysis never starts if your changed files exceed the limit.
 
 ## Installing dependencies fails
