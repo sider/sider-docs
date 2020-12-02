@@ -82,3 +82,28 @@ By default, nothing will be ignored.
 ### `properties`
 
 This option allows you to specify the properties file passed to `checkstyle`. The value will be passed to Checkstyle's `-p` option.
+
+## Localization
+
+Checkstyle supports the localization of output messages. You can see the details on [Checkstyle documentation](https://checkstyle.org/config_system_properties.html#Localisation_Support). Also, you can see the supported languages in [Checkstyle's GitHub](https://github.com/checkstyle/checkstyle/tree/432bafd49ed9d801f44a04ad710cc9372538e588/src/main/resources/com/puppycrawl/tools/checkstyle/checks/sizes).
+
+If you want to use the localization on Sider, you need to do as follows.
+
+1. Create your Checkstyle configuration file, e.g. `your_checkstyle_ruleset.xml`. (it is easy to base an existing file like `google_checks.xml`)
+2. Add the [`localeCountry` and `localeLanguage` properties](https://checkstyle.sourceforge.io/config.html#Checker_Properties) to the configuration file like below:
+
+   ```xml
+   <module name="Checker">
+     <property name="localeCountry" value="JP"/>
+     <property name="localeLanguage" value="ja"/>
+     <!-- ... -->
+   </module>
+   ```
+
+3. Set the [`config`](#config) option in your `sider.yml` like below:
+
+   ```yml
+   linter:
+     checkstyle:
+       config: your_checkstyle_ruleset.xml
+   ```
