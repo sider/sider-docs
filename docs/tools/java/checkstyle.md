@@ -9,7 +9,7 @@ hide_title: true
 
 | Supported Version | Language    | Website                |
 | ----------------- | ----------- | ---------------------- |
-| 8.36.2            | Java 14.0.2 | https://checkstyle.org |
+| 8.36.2            | Java 15.0.1 | https://checkstyle.org |
 
 **Checkstyle** is a style checker for Java code and aims to enforce a coding standard.
 

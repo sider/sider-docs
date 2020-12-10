@@ -11,7 +11,7 @@ hide_title: true
 
 | Supported Version | Language    | Website                  |
 | ----------------- | ----------- | ------------------------ |
-| 5.1               | Java 14.0.2 | https://languagetool.org |
+| 5.1               | Java 15.0.1 | https://languagetool.org |
 
 **LanguageTool** is a proofreading tool for [English, French, German, and other languages](https://languagetool.org/languages).
 It finds many mistakes like grammar errors, misspells, and so on.
