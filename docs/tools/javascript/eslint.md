@@ -9,7 +9,7 @@ hide_title: true
 
 | Supported Version        | Language   | Runtime         | Website            |
 | ------------------------ | ---------- | --------------- | ------------------ |
-| 5.0.0+ (default: 7.14.0) | JavaScript | Node.js 12.19.0 | https://eslint.org |
+| 5.0.0+ (default: 7.14.0) | JavaScript | Node.js 12.20.0 | https://eslint.org |
 
 **ESLint** is a static analysis tool for JavaScript and its flavors (e.g. TypeScript, JSX, Vue).
 It can find problems, style violations, or security issues, etc. in your code, and have so many plugins.
