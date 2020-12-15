@@ -11,7 +11,7 @@ hide_title: true
 
 | Supported Version | Language | Website                            |
 | ----------------- | -------- | ---------------------------------- |
-| 2.1               | C/C++    | https://github.com/danmar/cppcheck |
+| 2.3               | C/C++    | https://github.com/danmar/cppcheck |
 
 **Cppcheck** is a static analysis tool for C/C++ code. It aims to detect bugs, undefined behaviors, and dangerous coding constructs.
 
