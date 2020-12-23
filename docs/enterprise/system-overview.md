@@ -48,7 +48,7 @@ Runners, on the other hand, are the collection of "runner" and perform analyses 
 
 The necessary storage space largely depends on the number of analyses. If your organization has many developers, and they actively change their source code, the required storage space could be huge.
 
-Sider Enterprise mainly consumes the storage space via Docker, MySQL, and MinIO, so you may have to care about the disk space for each service. It is assumed that each service should have 100 GiB storage size on its own at least, but this is a too rough estimate that we could recommend what is the best storage size.
+Sider Enterprise mainly consumes the storage space via Docker, MySQL, and MinIO, so you may have to care about the disk space for each service. It is assumed that each service should have 500 GiB storage size on its own at least, but this is a too rough estimate that we could recommend what is the best storage size.
 
 #### CPU
 
