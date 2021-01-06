@@ -36,7 +36,8 @@ linter:
     plugins:
       - flake8-bandit
       - flake8-builtins==1.4.1
-      - flake8-mypy>=17.3.3
+      - flake8-docstrings>=1.4.0
+      - git+https://github.com/PyCQA/flake8-import-order.git@51e16f33065512afa1a85a20b2c2d3be768f78ea
 ```
 
 You can use several options to fine-tune Flake8 to your project.
@@ -58,5 +59,9 @@ This option allows you to specify a configuration file you want to use.
 
 ### `plugins`
 
-This option allows you to enable Flake8 plugins. You can set arbitrary plugin names and also specify a _minimum_ version number.
-If no version is specified, Sider will install the latest version.
+This option allows you to enable Flake8 plugins. You can set arbitrary plugin names and also specify a version specifier like `==1.3.0`.
+If only a name is specified, the latest version of the plugin will be installed.
+
+Also, you can specify any VCS URL that `pip` supports, like `git+https://git.example.com/MyProject#egg=MyProject`.
+
+See also the [`pip` documentation](https://pip.pypa.io/en/stable/reference/pip_install/) for details about such formats.
