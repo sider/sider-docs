@@ -9,7 +9,7 @@ hide_title: true
 
 You don't need to do any special configuration for Sider to start analyzing your code. However, Sider also offers advanced settings for special cases via the `sider.yml` file.
 
-> `sideci.yml` is still supported for the backward compatibility, but Sider recognizes `sider.yml` if both exist.
+> `sideci.yml` is still supported for the backward compatibility, but it will be unsupported in the future. Please rename it to `sider.yml` as possible.
 
 ## Configuration file
 
