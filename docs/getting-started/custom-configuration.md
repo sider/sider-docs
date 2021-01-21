@@ -7,7 +7,8 @@ hide_title: true
 
 # Custom Analysis Configuration
 
-You don't need to do any special configuration for Sider to start analyzing your code. However, Sider also offers advanced settings for special cases via the `sider.yml` file.
+Usually, you don't need to do any special configuration for Sider to start analyzing your code.
+However, Sider also offers advanced settings for special cases via the configuration file named `sider.yml` (learn more about [YAML](https://yaml.org/)).
 
 > `sideci.yml` is still supported for the backward compatibility, but it will be unsupported in the future. Please rename it to `sider.yml` as possible.
 
@@ -16,6 +17,7 @@ You don't need to do any special configuration for Sider to start analyzing your
 Add a file named `sider.yml` in your project's root directory. Here is an example:
 
 ```yaml
+# This is a YAML file. See <https://yaml.org>.
 linter:
   rubocop:
     config: "lint_yml/.myrubocop.yml"
