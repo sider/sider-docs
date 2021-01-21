@@ -17,7 +17,7 @@ However, Sider also offers advanced settings for special cases via the configura
 Add a file named `sider.yml` in your project's root directory. Here is an example:
 
 ```yaml
-# This is a YAML file. See the spec: <https://yaml.org/>
+# This is a YAML file. See <https://yaml.org>.
 linter:
   rubocop:
     config: "lint_yml/.myrubocop.yml"
