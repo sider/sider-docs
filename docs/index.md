@@ -55,12 +55,10 @@ This section has documents about analysis tools which Sider supports. We have an
 - [JSHint](./tools/javascript/jshint.md)
 - [TyScan](./tools/javascript/tyscan.md)
 - [CoffeeLint](./tools/javascript/coffeelint.md)
-- [TSLint](./tools/javascript/tslint.md)
 
 ### CSS
 
 - [stylelint](./tools/css/stylelint.md)
-- [SCSS-Lint](./tools/css/scss-lint.md)
 
 ### PHP
 
