@@ -7,9 +7,9 @@ hide_title: true
 
 # TyScan
 
-| Supported Version       | Language   | Runtime         | Website                         |
-| ----------------------- | ---------- | --------------- | ------------------------------- |
-| 0.2.1+ (default: 0.3.2) | TypeScript | Node.js 12.20.0 | https://github.com/sider/tyscan |
+| Supported Version       | Language   | Website                         |
+| ----------------------- | ---------- | ------------------------------- |
+| 0.2.1+ (default: 0.3.2) | TypeScript | https://github.com/sider/tyscan |
 
 **TyScan** is a static analysis tool for TypeScript to easily make your custom rules via your YAML file.
 

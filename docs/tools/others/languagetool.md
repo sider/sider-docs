@@ -9,9 +9,9 @@ hide_title: true
 
 > This is **BETA**. The behavior of this tool might change.
 
-| Supported Version | Language    | Website                  |
-| ----------------- | ----------- | ------------------------ |
-| 5.1               | Java 15.0.1 | https://languagetool.org |
+| Supported Version | Language          | Website                  |
+| ----------------- | ----------------- | ------------------------ |
+| 5.1               | Natural languages | https://languagetool.org |
 
 **LanguageTool** is a proofreading tool for [English, French, German, and other languages](https://languagetool.org/languages).
 It finds many mistakes like grammar errors, misspells, and so on.

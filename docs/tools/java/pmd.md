@@ -7,9 +7,9 @@ hide_title: true
 
 # PMD
 
-| Supported Version | Language    | Website               |
-| ----------------- | ----------- | --------------------- |
-| 6.30.0            | Java 15.0.1 | https://pmd.github.io |
+| Supported Version | Language | Website               |
+| ----------------- | -------- | --------------------- |
+| 6.30.0            | Java     | https://pmd.github.io |
 
 **PMD** is a static analysis tool to detect issues about code style, security, performance, etc.
 It supports multiple programming languages but Sider supports only Java.
