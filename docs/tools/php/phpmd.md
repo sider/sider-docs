@@ -7,9 +7,9 @@ hide_title: true
 
 # PHPMD
 
-| Supported Version | Language   | Website           |
-| ----------------- | ---------- | ----------------- |
-| 2.9.1             | PHP 7.4.12 | https://phpmd.org |
+| Supported Version | Language | Website           |
+| ----------------- | -------- | ----------------- |
+| 2.9.1             | PHP      | https://phpmd.org |
 
 **PHPMD** is a static analysis tool focused on detecting code smells and possible errors in your PHP code.
 

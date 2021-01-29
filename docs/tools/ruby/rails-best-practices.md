@@ -7,9 +7,9 @@ hide_title: true
 
 # Rails Best Practices
 
-| Supported Version         | Language   | Website                         |
-| ------------------------- | ---------- | ------------------------------- |
-| 1.19.1+ (default: 1.20.0) | Ruby 2.7.2 | https://rails-bestpractices.com |
+| Supported Version         | Language | Website                         |
+| ------------------------- | -------- | ------------------------------- |
+| 1.19.1+ (default: 1.20.0) | Ruby     | https://rails-bestpractices.com |
 
 **Rails Best Practices** (abbr. RBP) is a code metric tool to check the quality of Rails code.
 

@@ -7,9 +7,9 @@ hide_title: true
 
 # Checkstyle
 
-| Supported Version | Language    | Website                |
-| ----------------- | ----------- | ---------------------- |
-| 8.38              | Java 15.0.1 | https://checkstyle.org |
+| Supported Version | Language | Website                |
+| ----------------- | -------- | ---------------------- |
+| 8.38              | Java     | https://checkstyle.org |
 
 **Checkstyle** is a style checker for Java code and aims to enforce a coding standard.
 

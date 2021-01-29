@@ -9,9 +9,9 @@ hide_title: true
 
 > This is **BETA**. The behavior of this tool might change.
 
-| Supported Version | Language | Website                                  |
-| ----------------- | -------- | ---------------------------------------- |
-| 10.0.1            | C/C++    | https://clang.llvm.org/extra/clang-tidy/ |
+| Supported Version | Language | Website                                 |
+| ----------------- | -------- | --------------------------------------- |
+| 10.0.1            | C/C++    | https://clang.llvm.org/extra/clang-tidy |
 
 **Clang-Tidy** is a [Clang](https://clang.llvm.org/)-based C++ "linter" tool. It diagnoses typical programming errors, like style violations, interface misuse, or bugs that can be deduced via static analysis.
 
