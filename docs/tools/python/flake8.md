@@ -7,9 +7,9 @@ hide_title: true
 
 # Flake8
 
-| Supported Version | Language     | Website                  |
-| ----------------- | ------------ | ------------------------ |
-| 3.8.4             | Python 3.9.1 | https://flake8.pycqa.org |
+| Supported Version | Language | Website                  |
+| ----------------- | -------- | ------------------------ |
+| 3.8.4             | Python   | https://flake8.pycqa.org |
 
 **Flake8** is a linter to check the style and quality of Python code.
 

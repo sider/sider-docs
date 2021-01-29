@@ -9,9 +9,9 @@ hide_title: true
 
 > **DEPRECATED**: Sider dropped the support of Golint on **May 31, 2020**. We recommend [GolangCI-Lint](golangci-lint.md) instead.
 
-| Language  | Website                        |
-| --------- | ------------------------------ |
-| Go 1.14.3 | https://github.com/golang/lint |
+| Language | Website                        |
+| -------- | ------------------------------ |
+| Go       | https://github.com/golang/lint |
 
 ## Getting Started
 

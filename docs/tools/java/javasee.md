@@ -7,9 +7,9 @@ hide_title: true
 
 # JavaSee
 
-| Supported Version | Language    | Website                          |
-| ----------------- | ----------- | -------------------------------- |
-| 0.2.0             | Java 15.0.1 | https://github.com/sider/JavaSee |
+| Supported Version | Language | Website                          |
+| ----------------- | -------- | -------------------------------- |
+| 0.2.0             | Java     | https://github.com/sider/JavaSee |
 
 **JavaSee** is a customizable linter for Java code. It has no rules and you can define your own rules in your YAML file.
 

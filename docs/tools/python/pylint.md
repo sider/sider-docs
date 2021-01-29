@@ -9,9 +9,9 @@ hide_title: true
 
 > This is **BETA**. The behavior of this tool might change.
 
-| Supported Version | Language     | Website                             |
-| ----------------- | ------------ | ----------------------------------- |
-| 2.6.0             | Python 3.9.1 | https://pylint.pycqa.org/en/stable/ |
+| Supported Version | Language | Website                            |
+| ----------------- | -------- | ---------------------------------- |
+| 2.6.0             | Python   | https://pylint.pycqa.org/en/stable |
 
 **Pylint** is a Python static code analysis tool which looks for programming errors, helps to enforce a coding standard, sniffs for code smells and offers simple refactoring suggestions.
 

@@ -7,9 +7,9 @@ hide_title: true
 
 # JSHint
 
-| Supported Version | Language   | Runtime         | Website            |
-| ----------------- | ---------- | --------------- | ------------------ |
-| 2.12.0            | JavaScript | Node.js 12.20.0 | https://jshint.com |
+| Supported Version | Language   | Website            |
+| ----------------- | ---------- | ------------------ |
+| 2.12.0            | JavaScript | https://jshint.com |
 
 **JSHint** is a static analysis tool to detect errors and potential problems in JavaScript code.
 
