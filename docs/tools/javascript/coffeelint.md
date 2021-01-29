@@ -7,8 +7,8 @@ hide_title: true
 
 # CoffeeLint
 
-| Supported Version        | Language     | Website                                 |
-| ------------------------ | ------------ | --------------------------------------- |
+| Supported Version        | Language     | Website                      |
+| ------------------------ | ------------ | ---------------------------- |
 | 1.16.0+ (default: 4.1.2) | CoffeeScript | https://coffeelint.github.io |
 
 **CoffeeLint** is a style checker that helps keep CoffeeScript code clean and consistent.
