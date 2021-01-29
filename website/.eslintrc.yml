@@ -4,3 +4,12 @@ extends:
 
 parserOptions:
   ecmaVersion: 6
+  sourceType: "module"
+
+env:
+  es6: true
+  node: true
+
+rules:
+  # NOTE: Docusaurus components do not have prop types.
+  react/prop-types: "off"
