@@ -28,13 +28,13 @@
     chalk "^2.0.0"
     js-tokens "^4.0.0"
 
-"@mapbox/remark-lint-link-text@^0.5.0":
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/@mapbox/remark-lint-link-text/-/remark-lint-link-text-0.5.0.tgz#842d9ca5a6a4a0a1c0f1b033892564214a379694"
-  integrity sha512-Vnc30qR6AxTag1OkZpSLrBYu7CfCDVNu0xWB9PYjCbwwdoIFgla+zktjrh1hPSUnPe/AObWJZKn5HChePNwCCA==
+"@mapbox/remark-lint-link-text@^0.6.0":
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/@mapbox/remark-lint-link-text/-/remark-lint-link-text-0.6.0.tgz#a0dcf8c14fdf44a95bbf14b7c95b4dff5ea35e2b"
+  integrity sha512-4jnYDkh8gIuIH4hv8u+u9fw1Ss9BG707FS7CDbhkXkIUGVJcdX+dXts3v5ql8ajFWv2Mneg5U+L2gEgLyavCxQ==
   dependencies:
-    unified-lint-rule "^1.0.5"
-    unist-util-visit "^2.0.2"
+    unified-lint-rule "^1.0.6"
+    unist-util-visit "^2.0.3"
 
 "@sindresorhus/is@^0.14.0":
   version "0.14.0"
@@ -1590,7 +1590,7 @@ unified-engine@^8.0.0:
     vfile-reporter "^6.0.0"
     vfile-statistics "^1.1.0"
 
-unified-lint-rule@^1.0.0, unified-lint-rule@^1.0.3, unified-lint-rule@^1.0.4, unified-lint-rule@^1.0.5:
+unified-lint-rule@^1.0.0, unified-lint-rule@^1.0.3, unified-lint-rule@^1.0.4, unified-lint-rule@^1.0.5, unified-lint-rule@^1.0.6:
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/unified-lint-rule/-/unified-lint-rule-1.0.6.tgz#b4ab801ff93c251faa917a8d1c10241af030de84"
   integrity sha512-YPK15YBFwnsVorDFG/u0cVVQN5G2a3V8zv5/N6KN3TCG+ajKtaALcy7u14DCSrJI+gZeyYquFL9cioJXOGXSvg==
@@ -1680,7 +1680,7 @@ unist-util-visit@^1.4.0:
   dependencies:
     unist-util-visit-parents "^2.0.0"
 
-unist-util-visit@^2.0.0, unist-util-visit@^2.0.1, unist-util-visit@^2.0.2:
+unist-util-visit@^2.0.0, unist-util-visit@^2.0.1, unist-util-visit@^2.0.2, unist-util-visit@^2.0.3:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/unist-util-visit/-/unist-util-visit-2.0.3.tgz#c3703893146df47203bb8a9795af47d7b971208c"
   integrity sha512-iJ4/RczbJMkD0712mGktuGpm/U4By4FfDonL7N/9tATGIF4imikjOuagyMY53tnZq3NP6BcmlrHhEKAfGWjh7Q==
