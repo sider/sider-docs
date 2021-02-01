@@ -58,7 +58,7 @@ You can customize your detekt analysis using `sider.yml`.
 | [`includes`](#includes)                                                               | `string`, `string[]` | `[]`    |
 | [`input`](#input)                                                                     | `string`, `string[]` | `.`     |
 
-For more details about the options, see the [official documentation](https://arturbosch.github.io/detekt/cli.html).
+For more details about the options, see the [official documentation](https://detekt.github.io/detekt/cli.html).
 
 ### `baseline`
 
