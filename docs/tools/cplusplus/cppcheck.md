@@ -1,13 +1,11 @@
 ---
 id: cppcheck
 title: Cppcheck
-sidebar_label: Cppcheck (beta)
+sidebar_label: Cppcheck
 hide_title: true
 ---
 
 # Cppcheck
-
-> This is **BETA**. The behavior of this tool might change.
 
 | Supported Version | Language | Website                            |
 | ----------------- | -------- | ---------------------------------- |

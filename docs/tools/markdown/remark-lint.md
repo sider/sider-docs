@@ -1,13 +1,11 @@
 ---
 id: remark-lint
 title: remark-lint
-sidebar_label: remark-lint (beta)
+sidebar_label: remark-lint
 hide_title: true
 ---
 
 # remark-lint
-
-> This is **BETA**. The behavior of this tool might change.
 
 | Supported Version         | Language | Website                                 |
 | ------------------------- | -------- | --------------------------------------- |

@@ -7,9 +7,9 @@ hide_title: true
 
 # Brakeman
 
-| Supported Version        | Language | Website                     |
-| ------------------------ | -------- | --------------------------- |
-| 4.0.0+ (default: 4.10.0) | Ruby     | https://brakemanscanner.org |
+| Supported Version       | Language | Website                     |
+| ----------------------- | -------- | --------------------------- |
+| 4.0.0+ (default: 5.0.0) | Ruby     | https://brakemanscanner.org |
 
 **Brakeman** is a static analysis tool to detect security issues in Ruby on Rails applications.
 
