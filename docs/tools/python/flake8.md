@@ -68,4 +68,4 @@ See also the [`pip` documentation](https://pip.pypa.io/en/stable/reference/pip_i
 
 ## Recommended Ruleset
 
-Sider provides our [recommended ruleset](https://github.com/sider/runners/blob/master/images/flake8/sider_recommended_FLAKE8.ini) for flake8. If your repository does not include `.flake8`, the recommended ruleset will be used. For more details, please visit [Recommended Ruleset](../../getting-started/recommended-rules.md).
+Sider provides our [recommended ruleset](https://github.com/sider/runners/blob/master/images/flake8/sider_recommended_flake8.ini) for flake8. If your repository does not include `.flake8`, the recommended ruleset will be used. For more details, please visit [Recommended Ruleset](../../getting-started/recommended-rules.md).
