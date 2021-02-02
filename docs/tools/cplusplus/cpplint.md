@@ -1,13 +1,11 @@
 ---
 id: cpplint
 title: cpplint
-sidebar_label: cpplint (beta)
+sidebar_label: cpplint
 hide_title: true
 ---
 
 # cpplint
-
-> This is **BETA**. The behavior of this tool might change.
 
 | Supported Version | Language | Website                            |
 | ----------------- | -------- | ---------------------------------- |
