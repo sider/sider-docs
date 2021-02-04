@@ -22,7 +22,8 @@
           "tools/ruby/querly",
           "tools/ruby/rails-best-practices",
           "tools/ruby/brakeman",
-          "tools/ruby/haml-lint"
+          "tools/ruby/haml-lint",
+          "tools/ruby/slim-lint"
         ]
       },
       {

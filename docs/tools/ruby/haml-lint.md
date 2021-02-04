@@ -40,7 +40,7 @@ linter:
       - MultilinePipe
     exclude_linter:
       - TagName
-    config: .rubocop_haml.yml
+    config: my-haml-lint.yml
     exclude:
       - app/views/layouts/application.html.haml
     parallel: true
@@ -81,6 +81,9 @@ See also the [`--exclude-linter`](https://github.com/sds/haml-lint#command-line-
 
 This option allows you to specify your config file path for HAML-Lint.
 See also the [`--config`](https://github.com/sds/haml-lint#command-line-flags) option.
+
+You can usually configure HAML-Lint via a file named `.haml-lint.yml` (automatically loaded).
+See the [HAML-Lint documentation](https://github.com/sds/haml-lint#configuration) about details.
 
 ### `exclude`
 
