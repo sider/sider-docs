@@ -101,7 +101,7 @@ linter:
     root_dir: "frontend/"
 ```
 
-In the configuration above, Sider will run ESLint at the `frontend/` directory (perhaps will load `frontend/.eslintrc.js` or `frontend/package.json` files).
+In the configuration above, Sider will run ESLint at the `frontend/` directory (perhaps will load files such as `frontend/.eslintrc.js` or `frontend/package.json`).
 
 If you omit this option, Sider will use your repository root directory (it will be sufficient in most cases).
 
