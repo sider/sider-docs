@@ -30,13 +30,13 @@ Here is a configuration example via [`sider.yml`](../../getting-started/custom-c
 ```yaml
 linter:
   cppcheck:
+    include-path: "myinclude"
     target: "src"
     ignore: "vendor"
     enable: "all"
     std: "c99"
     project: "your_project.sln"
     language: "c++"
-    include-path: "myinclude"
     addon: "cert"
     bug-hunting: true
     parallel: true
