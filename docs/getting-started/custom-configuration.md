@@ -23,13 +23,13 @@ linter:
     config: "lint_yml/.myrubocop.yml"
 
   eslint:
-    root_dir: "frontend"
+    root_dir: "frontend/"
     npm_install: false
     config: "frontend/.eslintrc"
     ext: "js,jsx"
 
   stylelint:
-    root_dir: "app/assets/stylesheets"
+    root_dir: "app/assets/stylesheets/"
     glob: "**/*.{css,scss}"
 
 ignore:
@@ -93,15 +93,17 @@ The following sections describe the available options.
 
 _Type:_ `string`
 
-This is a common option available to all analyzers. This option specifies a directory in your repository from which Sider should run the analyzer in. For example, if you have all your JavaScript files in the `./frontend` directory, you could configure `sider.yml` like this:
+This is a common option available to all analyzers. This option specifies a directory in your repository from which Sider should run the analyzer in. For example, if you would like to analyze only files in the `frontend/` directory, you could configure `sider.yml` like this:
 
 ```yaml
 linter:
   eslint:
-    root_dir: "frontend"
+    root_dir: "frontend/"
 ```
 
-Sider will run ESLint analysis in `./frontend` directory.
+In the configuration above, Sider will run ESLint at the `frontend/` directory (perhaps will load `frontend/.eslintrc.js` or `frontend/package.json` files).
+
+If you omit this option, Sider will use your repository root directory (it will be sufficient in most cases).
 
 ## `linter.<analyzer_id>.gems`
 
