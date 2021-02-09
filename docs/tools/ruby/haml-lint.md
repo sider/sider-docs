@@ -57,7 +57,7 @@ You can use several options to fine-tune HAML-Lint to your project.
 | [`exclude_linter`](#exclude_linter)                                                   | `string`, `string[]` | -       |
 | [`config`](#config)                                                                   | `string`             | -       |
 | [`exclude`](#exclude)                                                                 | `string`, `string[]` | -       |
-| [`parallel`](#parallel)                                                               | `boolean`            | `false` |
+| [`parallel`](#parallel)                                                               | `boolean`            | `true`  |
 
 ### `target`
 

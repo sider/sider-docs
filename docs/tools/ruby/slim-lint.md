@@ -5,7 +5,7 @@ sidebar_label: Slim-Lint (beta)
 hide_title: true
 ---
 
-# HAML-Lint
+# Slim-Lint
 
 > This is **BETA**. The behavior of this tool might change.
 
