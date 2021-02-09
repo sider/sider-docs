@@ -11,7 +11,7 @@ hide_title: true
 | ------------------------- | ----------- | -------------------------------- |
 | 0.26.0+ (default: 0.37.0) | HAML (Ruby) | https://github.com/sds/haml-lint |
 
-**HAML-Lint** is a static analysis tool to help keep your [HAML](https://github.com/haml/haml) files clean and readable.
+**HAML-Lint** is a static analysis tool to help keep your [HAML](https://haml.info) files clean and readable.
 In addition to HAML-specific style and lint checks, it can check them by integrated RuboCop rules.
 
 ## Getting Started
@@ -92,5 +92,5 @@ See also the [`--exclude`](https://github.com/sds/haml-lint#command-line-flags) 
 
 ### `parallel`
 
-This option allows you to run linters in parallel.
+This option allows you to run linters in parallel (since [0.36.0](https://github.com/sds/haml-lint/releases/tag/v0.36.0)).
 See also the [`--parallel`](https://github.com/sds/haml-lint#command-line-flags) option.
