@@ -20,10 +20,14 @@ In addition to Slim-specific style and lint checks, it can check them by integra
 
 To start using Slim-Lint, enable it in your [repository settings](../../getting-started/repository-settings.md).
 
-## Default Configuration for RuboCop
+## Default Configuration
 
-If a `.rubocop.yml` file does not exist in your repository, Sider uses the [default configuration](https://github.com/sider/runners/blob/master/images/slim_lint/default_rubocop.yml)
-including the [MeowCop](https://github.com/sider/meowcop) gem.
+You can configure Slim-Lint via a file named `.slim-lint.yml`.
+But, if this file does not exist in your repository, Sider uses the [default configuration](https://github.com/sider/runners/blob/master/images/slim_lint/sider_recommended_slim_lint.yml) instead.
+
+Similarly, if a `.rubocop.yml` file does not exist, Sider uses the [default configuration for RuboCop](https://github.com/sider/runners/blob/master/images/slim_lint/default_rubocop.yml).
+
+See also the [Slim-Lint configuration](https://github.com/sds/slim-lint#configuration) for details.
 
 ## Configuration
 
@@ -55,6 +59,4 @@ This option allows you to specify files or directories you want to analyze. Glob
 ### `config`
 
 This option allows you to specify your config file path for Slim-Lint.
-
-You can usually configure Slim-Lint via a file named `.slim-lint.yml` (automatically loaded).
-See the [Slim-Lint documentation](https://github.com/sds/slim-lint#configuration) about details.
+See also ["Default Configuration"](#default-configuration).

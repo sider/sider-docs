@@ -18,10 +18,14 @@ In addition to HAML-specific style and lint checks, it can check them by integra
 
 To start using HAML-Lint, enable it in your [repository settings](../../getting-started/repository-settings.md).
 
-## Default Configuration for RuboCop
+## Default Configuration
 
-If a `.rubocop.yml` file does not exist in your repository, Sider uses the [default configuration](https://github.com/sider/runners/blob/master/images/haml_lint/default_rubocop.yml)
-including the [MeowCop](https://github.com/sider/meowcop) gem.
+You can configure HAML-Lint via a file named `.haml-lint.yml`.
+But, if this file does not exist in your repository, Sider uses the [default configuration](https://github.com/sider/runners/blob/master/images/haml_lint/sider_recommended_haml_lint.yml) instead.
+
+Similarly, if a `.rubocop.yml` file does not exist, Sider uses the [default configuration for RuboCop](https://github.com/sider/runners/blob/master/images/haml_lint/default_rubocop.yml).
+
+See also the [HAML-Lint configuration](https://github.com/sds/haml-lint#configuration) for details.
 
 ## Configuration
 
@@ -80,10 +84,7 @@ See also the [`--exclude-linter`](https://github.com/sds/haml-lint#command-line-
 ### `config`
 
 This option allows you to specify your config file path for HAML-Lint.
-See also the [`--config`](https://github.com/sds/haml-lint#command-line-flags) option.
-
-You can usually configure HAML-Lint via a file named `.haml-lint.yml` (automatically loaded).
-See the [HAML-Lint documentation](https://github.com/sds/haml-lint#configuration) about details.
+See also the [`--config`](https://github.com/sds/haml-lint#command-line-flags) option and ["Default Configuration"](#default-configuration).
 
 ### `exclude`
 
