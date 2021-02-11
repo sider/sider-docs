@@ -1,5 +1,10 @@
 /* your custom css */
 
+/* See https://css-tricks.com/almanac/properties/s/scroll-behavior */
+html {
+  scroll-behavior: smooth;
+}
+
 .Video {
   position: relative;
   padding-top: 56.25%;
