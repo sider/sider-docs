@@ -1,6 +1,5 @@
 /* your custom css */
 
-/* See https://css-tricks.com/almanac/properties/s/scroll-behavior */
 html {
   scroll-behavior: smooth;
 }
