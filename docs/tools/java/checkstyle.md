@@ -59,6 +59,9 @@ Supported values are:
 
 When you write `google` or `sun`, config files distributed from Checkstyle are used.
 
+Sider provides our [recommended ruleset](https://github.com/sider/runners/blob/master/images/cpplint/sider_recommended_checkstyle.xml) for Checkstyle. If you do not specify the option `config`, the recommended ruleset will be used. For more details, please visit [Recommended Ruleset](../../getting-started/recommended-rules.md).
+
+
 ### `dir`
 
 This option allows you to specify the directories you want to check in your repository.
@@ -107,7 +110,3 @@ If you want to use the localization on Sider, you need to do as follows.
      checkstyle:
        config: your_checkstyle_ruleset.xml
    ```
-
-## Recommended Ruleset
-
-Sider provides our [recommended ruleset](https://github.com/sider/runners/blob/master/images/cpplint/sider_recommended_checkstyle.xml) for Checkstyle. If you do not specify the option `config`, the recommended ruleset will be used. For more details, please visit [Recommended Ruleset](../../getting-started/recommended-rules.md).
