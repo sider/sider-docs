@@ -9,7 +9,7 @@ hide_title: true
 
 | Supported Version | Language | Website                   |
 | ----------------- | -------- | ------------------------- |
-| 1.33.0            | Go       | https://golangci-lint.run |
+| 1.36.0            | Go       | https://golangci-lint.run |
 
 **GolangCI-Lint** is a linter to aggregate multiple linters and a successor to [Go Meta Linter](gometalinter.md) which is deprecated.
 
@@ -27,8 +27,7 @@ See the [default configuration file](https://github.com/sider/runners/blob/maste
 
 ### Migration from Govet and Golint
 
-Sider has deprecated [Govet](./govet.md) and [Golint](./golint.md) and instead recommended GolangCI-Lint.
-If you want to continue using them, all you have to do is enable GolangCI-Lint. They are enabled by default.
+Sider has removed [Govet](govet.md) and [Golint](golint.md). Please use GolangCI-Lint instead. These tools are enabled by default.
 
 If you want to run only Govet or Golint as before, edit your configuration file as follows:
 

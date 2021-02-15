@@ -1,19 +1,17 @@
 ---
 id: hadolint
 title: hadolint
-sidebar_label: hadolint (beta)
+sidebar_label: hadolint
 hide_title: true
 ---
 
 # hadolint
 
-> This is **BETA**. The behavior of this tool might change.
-
 | Supported Version | Language   | Website                              |
 | ----------------- | ---------- | ------------------------------------ |
-| 1.19.0            | Dockerfile | https://github.com/hadolint/hadolint |
+| 1.22.1            | Dockerfile | https://github.com/hadolint/hadolint |
 
-hadolint is a [Dockerfile](https://docs.docker.com/engine/reference/builder) linter that helps you build best practice Docker images.
+**hadolint** is a [Dockerfile](https://docs.docker.com/engine/reference/builder) linter that helps you build best practice Docker images.
 
 ## Getting Started
 

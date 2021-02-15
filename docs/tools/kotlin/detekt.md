@@ -11,7 +11,7 @@ hide_title: true
 
 | Supported Version | Language | Website                         |
 | ----------------- | -------- | ------------------------------- |
-| 1.14.2            | Kotlin   | https://detekt.github.io/detekt |
+| 1.15.0            | Kotlin   | https://detekt.github.io/detekt |
 
 **detekt** is a linter which code smell analysis for your [Kotlin](https://kotlinlang.org) projects.
 

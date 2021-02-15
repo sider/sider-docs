@@ -1,13 +1,13 @@
 ---
 id: govet
 title: go vet
-sidebar_label: go vet (deprecated)
+sidebar_label: go vet (removed)
 hide_title: true
 ---
 
 # go vet
 
-> **DEPRECATED**: Sider dropped the support of go vet on **May 31, 2020**. We recommend [GolangCI-Lint](golangci-lint.md) instead.
+> **REMOVED**: Sider has removed the support of go vet on **May 31, 2020**. Please use [GolangCI-Lint](golangci-lint.md) instead.
 
 | Language | Website                    |
 | -------- | -------------------------- |

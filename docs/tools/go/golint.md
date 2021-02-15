@@ -1,13 +1,13 @@
 ---
 id: golint
 title: Golint
-sidebar_label: Golint (deprecated)
+sidebar_label: Golint (removed)
 hide_title: true
 ---
 
 # Golint
 
-> **DEPRECATED**: Sider dropped the support of Golint on **May 31, 2020**. We recommend [GolangCI-Lint](golangci-lint.md) instead.
+> **REMOVED**: Sider has removed the support of Golint on **May 31, 2020**. Please use [GolangCI-Lint](golangci-lint.md) instead.
 
 | Language | Website                        |
 | -------- | ------------------------------ |

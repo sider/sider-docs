@@ -1,5 +1,9 @@
 /* your custom css */
 
+html {
+  scroll-behavior: smooth;
+}
+
 .Video {
   position: relative;
   padding-top: 56.25%;
