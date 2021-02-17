@@ -54,10 +54,12 @@ Supported values are:
 
 - [`google`](https://checkstyle.org/google_style) (for `/google_checks.xml`)
 - [`sun`](https://checkstyle.org/sun_style) (for `/sun_checks.xml`)
+- [`sider`](https://github.com/sider/runners/blob/master/images/cpplint/sider_recommended_checkstyle.xml)
+  - Sider provides our recommended ruleset for Checkstyle. For more details, please visit [Recommended Ruleset](../../getting-started/recommended-rules.md).
 - Path to your [configuration file](https://checkstyle.org/config)
   - Note that only **core** rules are supported. You **cannot** specify your custom rules or 3rd-party rules.
 
-When you write `google` or `sun`, config files distributed from Checkstyle are used.
+When you write `google` or `sun` or `sider`, config files distributed from Checkstyle are used.
 
 ### `dir`
 
