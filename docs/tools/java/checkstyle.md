@@ -59,8 +59,6 @@ Supported values are:
 - Path to your [configuration file](https://checkstyle.org/config)
   - Note that only **core** rules are supported. You **cannot** specify your custom rules or 3rd-party rules.
 
-When you write `sider`, `google`, or `sun`, config files distributed from Checkstyle are used.
-
 ### `dir`
 
 This option allows you to specify the directories you want to check in your repository.
