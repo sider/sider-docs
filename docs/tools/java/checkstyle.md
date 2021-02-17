@@ -52,14 +52,14 @@ This option allows you to declare the coding standard you want to follow.
 
 Supported values are:
 
-- [`google`](https://checkstyle.org/google_style) (for `/google_checks.xml`)
-- [`sun`](https://checkstyle.org/sun_style) (for `/sun_checks.xml`)
 - [`sider`](https://github.com/sider/runners/blob/master/images/cpplint/sider_recommended_checkstyle.xml)
   - Sider provides our recommended ruleset for Checkstyle. For more details, please visit [Recommended Ruleset](../../getting-started/recommended-rules.md).
+- [`google`](https://checkstyle.org/google_style) (for [`/google_checks.xml`](https://github.com/checkstyle/checkstyle/blob/checkstyle-8.40/src/main/resources/google_checks.xml))
+- [`sun`](https://checkstyle.org/sun_style) (for [`/sun_checks.xml`](https://github.com/checkstyle/checkstyle/blob/checkstyle-8.40/src/main/resources/sun_checks.xml))
 - Path to your [configuration file](https://checkstyle.org/config)
   - Note that only **core** rules are supported. You **cannot** specify your custom rules or 3rd-party rules.
 
-When you write `google` or `sun` or `sider`, config files distributed from Checkstyle are used.
+When you write `sider`, `google`, or `sun`, config files distributed from Checkstyle are used.
 
 ### `dir`
 
