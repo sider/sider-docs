@@ -22,5 +22,5 @@ This study has been conducted in collaboration with the following partners:
 
 Sider applies the recommended ruleset to the analysis tools below. Please follow the link for more details.
 
-- [cpplint](../tools/cplusplus/cpplint.md#recommended-ruleset)
 - [Checkstyle](../tools/java/checkstyle.md#config)
+- [cpplint](../tools/cplusplus/cpplint.md#recommended-ruleset)
