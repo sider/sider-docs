@@ -55,5 +55,5 @@ If omitted, Reek tries to automatically find a configuration file in your reposi
 
 When there are no configuration files in your repository, Sider uses the following configuration by default:
 
-- [For the Reek v4](https://github.com/sider/runners/blob/master/images/reek/v4.reek.yml)
-- [For the Reek v5](https://github.com/sider/runners/blob/master/images/reek/v5.reek.yml)
+- [For the Reek v4](https://github.com/sider/runners/blob/HEAD/images/reek/v4.reek.yml)
+- [For the Reek v5](https://github.com/sider/runners/blob/HEAD/images/reek/v5.reek.yml)

@@ -21,9 +21,9 @@ To customize the configuration, use the standard `.jshintrc` or `.jshintignore` 
 
 ## Default Configuration for JSHint
 
-Sider uses the [default configuration](https://github.com/sider/runners/blob/master/images/jshint/sider_jshintrc) of `.jshintrc` when there is no custom configuration preset.
+Sider uses the [default configuration](https://github.com/sider/runners/blob/HEAD/images/jshint/sider_jshintrc) of `.jshintrc` when there is no custom configuration preset.
 
-In addition, Sider uses the [default configuration](https://github.com/sider/runners/blob/master/images/jshint/sider_jshintignore) of `.jshintignore`.
+In addition, Sider uses the [default configuration](https://github.com/sider/runners/blob/HEAD/images/jshint/sider_jshintignore) of `.jshintignore`.
 
 ## Configuration
 

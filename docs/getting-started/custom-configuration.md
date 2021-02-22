@@ -176,7 +176,7 @@ linter:
       - name: "rubocop-mycompany-standard"
         git:
           repo: "https://github.com/mycompany/rubocop-mycompany-standard.git"
-          branch: "master"
+          branch: "main"
       - name: "rubocop-mycompany-extensions"
         git:
           repo: "git@github.com/mycomapny/rubocop-mycompany-extensions.git"
@@ -263,7 +263,7 @@ Development packages provided by the OS environment may be necessary, particular
 The `apt` option allows you to specify a list of development packages your project depends on.
 The packages must satisfy the conditions below:
 
-- Packages must be compatible with [our Docker image](https://github.com/sider/devon_rex/blob/master/base/Dockerfile).
+- Packages must be compatible with [our Docker image](https://github.com/sider/devon_rex/blob/HEAD/base/Dockerfile).
 - Package names must be suffixed with "-dev".
 - Each package name must be formatted as `<name>` or `<name>=<version>`.
 
@@ -331,12 +331,12 @@ In order to use this option, add it as a top-level in `sider.yml` like this:
 ```yaml
 branches:
   exclude:
-    - master
+    - main
     - development
     - another_branch
 ```
 
-With the above setting, Sider will ignore `master`, `development` and `another_branch` branches when these branches(pull requests) are updated or opened. That is, even if these branches have any changes, Sider will not send commit status and not review them.
+With the above setting, Sider will ignore `main`, `development` and `another_branch` branches when these branches (pull requests) are updated or opened. That is, even if these branches have any changes, Sider will not send commit status and not review them.
 
 > If Sider is enabled to make status checks required on GitHub, you cannot merge a branch because Sider will not send the commit status to GitHub.
 > In this case, you need to disable the check status setting on your GitHub repository page.

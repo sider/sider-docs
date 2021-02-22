@@ -46,7 +46,7 @@ For more details, see the following sections.
 
 ## Default Configuration for ESLint
 
-Sider prepares the [default ESLint configuration](https://github.com/sider/runners/blob/master/images/eslint/sider_eslintrc.yml).
+Sider prepares the [default ESLint configuration](https://github.com/sider/runners/blob/HEAD/images/eslint/sider_eslintrc.yml).
 This configuration is used when you have no ESLint configurations or `sider.yml` in your repository.
 
 ## Configuration

@@ -16,7 +16,7 @@ hide_title: true
 ## Getting Started
 
 To start using Phinder, enable it in your [repository settings](../../getting-started/repository-settings.md) and put a `phinder.yml` config file in your repository.
-Visit the project page on GitHub to see a [sample `phinder.yml`](https://github.com/sider/phinder/blob/master/sample/phinder.yml):
+Visit the project page on GitHub to see a [sample `phinder.yml`](https://github.com/sider/phinder/blob/HEAD/sample/phinder.yml):
 
 <div class="Video">
   <iframe class="Video__iframe" src="https://www.youtube.com/embed/ErHtinxR3ns" frameborder="0" allowfullscreen></iframe>

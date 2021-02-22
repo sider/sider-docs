@@ -23,7 +23,7 @@ If you want to customize it, put a [configuration file](https://golangci-lint.ru
 
 In addition to [enabled by default linters](https://golangci-lint.run/usage/linters/#enabled-by-default-linters), Sider enables some useful linters
 if you have no configuration file like `.golangci.yml`.
-See the [default configuration file](https://github.com/sider/runners/blob/master/images/golangci_lint/sider_golangci.yml) for details.
+See the [default configuration file](https://github.com/sider/runners/blob/HEAD/images/golangci_lint/sider_golangci.yml) for details.
 
 ### Migration from Govet and Golint
 
