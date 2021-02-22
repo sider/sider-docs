@@ -52,7 +52,7 @@ This option allows you to declare the coding standard you want to follow.
 
 Supported values are:
 
-- [`sider`](https://github.com/sider/runners/blob/master/images/checkstyle/sider_recommended_checkstyle.xml)
+- [`sider`](https://github.com/sider/runners/blob/HEAD/images/checkstyle/sider_recommended_checkstyle.xml)
   - Sider provides our recommended ruleset for Checkstyle. For more details, please visit [Recommended Ruleset](../../getting-started/recommended-rules.md).
 - [`google`](https://checkstyle.org/google_style) (for [`/google_checks.xml`](https://github.com/checkstyle/checkstyle/blob/checkstyle-8.40/src/main/resources/google_checks.xml))
 - [`sun`](https://checkstyle.org/sun_style) (for [`/sun_checks.xml`](https://github.com/checkstyle/checkstyle/blob/checkstyle-8.40/src/main/resources/sun_checks.xml))

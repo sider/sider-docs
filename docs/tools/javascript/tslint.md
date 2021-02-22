@@ -38,7 +38,7 @@ Then, edit the configuration file as you want. For more details about the config
 
 ## Default Configuration for TSLint
 
-Sider prepares the [default TSLint configuration](https://github.com/sider/runners/blob/master/images/tslint/default_tslint.json).
+Sider prepares the [default TSLint configuration](https://github.com/sider/runners/blob/HEAD/images/tslint/default_tslint.json).
 
 ## Configuration
 

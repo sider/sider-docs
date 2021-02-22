@@ -32,9 +32,9 @@ If you need more customization, use the standard stylelint configuration files. 
 
 ## Default Configuration for stylelint
 
-If you have no custom configurations, Sider uses the [default configuration](https://github.com/sider/runners/blob/master/images/stylelint/sider_recommended_config.yaml).
+If you have no custom configurations, Sider uses the [default configuration](https://github.com/sider/runners/blob/HEAD/images/stylelint/sider_recommended_config.yaml).
 
-In the same way, Sider users the [default ignore file](https://github.com/sider/runners/blob/master/images/stylelint/sider_recommended_stylelintignore) if not exist.
+In the same way, Sider users the [default ignore file](https://github.com/sider/runners/blob/HEAD/images/stylelint/sider_recommended_stylelintignore) if not exist.
 
 ## Configuration
 
