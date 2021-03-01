@@ -54,10 +54,15 @@ Supported values are:
 
 - [`sider`](https://github.com/sider/runners/blob/HEAD/images/checkstyle/sider_recommended_checkstyle.xml)
   - Sider provides our recommended ruleset for Checkstyle. For more details, please visit [Recommended Ruleset](../../getting-started/recommended-rules.md).
-- [`google`](https://checkstyle.org/google_style) (for [`/google_checks.xml`](https://github.com/checkstyle/checkstyle/blob/checkstyle-8.40/src/main/resources/google_checks.xml))
-- [`sun`](https://checkstyle.org/sun_style) (for [`/sun_checks.xml`](https://github.com/checkstyle/checkstyle/blob/checkstyle-8.40/src/main/resources/sun_checks.xml))
-- Path to your [configuration file](https://checkstyle.org/config)
-  - Note that only **core** rules are supported. You **cannot** specify your custom rules or 3rd-party rules.
+- [`google`](https://checkstyle.org/google_style)
+  - alias for [`/google_checks.xml`](https://github.com/checkstyle/checkstyle/blob/HEAD/src/main/resources/google_checks.xml)
+- [`sun`](https://checkstyle.org/sun_style)
+  - alias for [`/sun_checks.xml`](https://github.com/checkstyle/checkstyle/blob/HEAD/src/main/resources/sun_checks.xml)
+- A file path or _resource_ name to your [configuration file](https://checkstyle.org/config). For example:
+  - `./config/my-checkstyle.xml`
+  - `/com/example/checkstyle/custom-ruleset.xml`
+
+See also the [`-c` CLI option](https://checkstyle.org/cmdline.html) of Checkstyle.
 
 ### `dir`
 
