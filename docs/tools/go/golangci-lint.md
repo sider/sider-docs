@@ -73,7 +73,7 @@ You can use the following options to fine-tune GolangCI-Lint to your project.
 | Name                                                                                  | Type                 | Default |
 | ------------------------------------------------------------------------------------- | -------------------- | ------- |
 | [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`             | -       |
-| [`target`](#target)                                                                   | `string`, `string[]` | `./...` |
+| [`target`](#target)                                                                   | `string`, `string[]` | -       |
 | [`config`](#config)                                                                   | `string`             | -       |
 | [`no-config`](#no-config)                                                             | `boolean`            | `false` |
 | [`disable`](#disable)                                                                 | `string`, `string[]` | -       |
