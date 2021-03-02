@@ -9,7 +9,7 @@ hide_title: true
 
 | Supported Version | Language | Website                |
 | ----------------- | -------- | ---------------------- |
-| 8.40              | Java     | https://checkstyle.org |
+| 8.41              | Java     | https://checkstyle.org |
 
 **Checkstyle** is a style checker for Java code and aims to enforce a coding standard.
 
@@ -53,7 +53,7 @@ This option allows you to declare the coding standard you want to follow.
 Supported values are:
 
 - [`sider`](https://github.com/sider/runners/blob/HEAD/images/checkstyle/sider_recommended_checkstyle.xml)
-  - Sider provides our recommended ruleset for Checkstyle. For more details, please visit [Recommended Ruleset](../../getting-started/recommended-rules.md).
+  - Sider provides our [recommended ruleset](../../getting-started/recommended-rules.md) for Checkstyle.
 - [`google`](https://checkstyle.org/google_style)
   - alias for [`/google_checks.xml`](https://github.com/checkstyle/checkstyle/blob/HEAD/src/main/resources/google_checks.xml)
 - [`sun`](https://checkstyle.org/sun_style)
