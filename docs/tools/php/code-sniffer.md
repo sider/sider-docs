@@ -111,3 +111,7 @@ This option allows you to specify an encoding of files to analyze.
 ### `ignore`
 
 This option allows you to specify a list of path patterns to be ignored.
+
+### `parallel`
+
+This option allows you to control if an analysis runs in parallel mode.
