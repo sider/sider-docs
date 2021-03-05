@@ -9,7 +9,7 @@ hide_title: true
 
 | Supported Version | Language | Website               |
 | ----------------- | -------- | --------------------- |
-| 6.31.0            | Java     | https://pmd.github.io |
+| 6.32.0            | Java     | https://pmd.github.io |
 
 **PMD** is a static analysis tool to detect issues about code style, security, performance, etc.
 It supports multiple programming languages but Sider supports only Java.
@@ -52,14 +52,14 @@ This option allows you to specify predefined rulesets or your custom rulesets.
 
 Here are the predefined rulesets:
 
-- [`category/java/bestpractices.xml`](https://github.com/pmd/pmd/blob/master/pmd-java/src/main/resources/category/java/bestpractices.xml)
-- [`category/java/codestyle.xml`](https://github.com/pmd/pmd/blob/master/pmd-java/src/main/resources/category/java/codestyle.xml)
-- [`category/java/design.xml`](https://github.com/pmd/pmd/blob/master/pmd-java/src/main/resources/category/java/design.xml)
-- [`category/java/documentation.xml`](https://github.com/pmd/pmd/blob/master/pmd-java/src/main/resources/category/java/documentation.xml)
-- [`category/java/errorprone.xml`](https://github.com/pmd/pmd/blob/master/pmd-java/src/main/resources/category/java/errorprone.xml)
-- [`category/java/multithreading.xml`](https://github.com/pmd/pmd/blob/master/pmd-java/src/main/resources/category/java/multithreading.xml)
-- [`category/java/performance.xml`](https://github.com/pmd/pmd/blob/master/pmd-java/src/main/resources/category/java/performance.xml)
-- [`category/java/security.xml`](https://github.com/pmd/pmd/blob/master/pmd-java/src/main/resources/category/java/security.xml)
+- [`category/java/bestpractices.xml`](https://github.com/pmd/pmd/blob/HEAD/pmd-java/src/main/resources/category/java/bestpractices.xml)
+- [`category/java/codestyle.xml`](https://github.com/pmd/pmd/blob/HEAD/pmd-java/src/main/resources/category/java/codestyle.xml)
+- [`category/java/design.xml`](https://github.com/pmd/pmd/blob/HEAD/pmd-java/src/main/resources/category/java/design.xml)
+- [`category/java/documentation.xml`](https://github.com/pmd/pmd/blob/HEAD/pmd-java/src/main/resources/category/java/documentation.xml)
+- [`category/java/errorprone.xml`](https://github.com/pmd/pmd/blob/HEAD/pmd-java/src/main/resources/category/java/errorprone.xml)
+- [`category/java/multithreading.xml`](https://github.com/pmd/pmd/blob/HEAD/pmd-java/src/main/resources/category/java/multithreading.xml)
+- [`category/java/performance.xml`](https://github.com/pmd/pmd/blob/HEAD/pmd-java/src/main/resources/category/java/performance.xml)
+- [`category/java/security.xml`](https://github.com/pmd/pmd/blob/HEAD/pmd-java/src/main/resources/category/java/security.xml)
 
 For example, you can specify both:
 
@@ -71,7 +71,7 @@ linter:
       - your_pmd_custom_rules.xml
 ```
 
-If the option is omitted, Sider uses the [default configuration](https://github.com/sider/runners/blob/master/images/pmd_java/default-ruleset.xml).
+If the option is omitted, Sider uses the [default configuration](https://github.com/sider/runners/blob/HEAD/images/pmd_java/default-ruleset.xml).
 
 You can [configure predefined rules](https://pmd.github.io/pmd/pmd_userdocs_configuring_rules.html) and
 [writing your own rules](https://pmd.github.io/pmd/pmd_userdocs_extending_writing_rules_intro.html) via the XML configuration file.

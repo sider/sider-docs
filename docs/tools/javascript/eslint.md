@@ -9,7 +9,7 @@ hide_title: true
 
 | Supported Version        | Language   | Website            |
 | ------------------------ | ---------- | ------------------ |
-| 5.0.0+ (default: 7.19.0) | JavaScript | https://eslint.org |
+| 5.0.0+ (default: 7.21.0) | JavaScript | https://eslint.org |
 
 **ESLint** is a static analysis tool for JavaScript and its flavors (e.g. TypeScript, JSX, Vue).
 It can find problems, style violations, or security issues, etc. in your code, and have so many plugins.
@@ -46,7 +46,7 @@ For more details, see the following sections.
 
 ## Default Configuration for ESLint
 
-Sider prepares the [default ESLint configuration](https://github.com/sider/runners/blob/master/images/eslint/sider_eslintrc.yml).
+Sider prepares the [default ESLint configuration](https://github.com/sider/runners/blob/HEAD/images/eslint/sider_eslintrc.yml).
 This configuration is used when you have no ESLint configurations or `sider.yml` in your repository.
 
 ## Configuration

@@ -9,7 +9,7 @@ hide_title: true
 
 | Supported Version | Language | Website                   |
 | ----------------- | -------- | ------------------------- |
-| 1.36.0            | Go       | https://golangci-lint.run |
+| 1.37.1            | Go       | https://golangci-lint.run |
 
 **GolangCI-Lint** is a linter to aggregate multiple linters and a successor to [Go Meta Linter](gometalinter.md) which is deprecated.
 
@@ -23,7 +23,7 @@ If you want to customize it, put a [configuration file](https://golangci-lint.ru
 
 In addition to [enabled by default linters](https://golangci-lint.run/usage/linters/#enabled-by-default-linters), Sider enables some useful linters
 if you have no configuration file like `.golangci.yml`.
-See the [default configuration file](https://github.com/sider/runners/blob/master/images/golangci_lint/sider_golangci.yml) for details.
+See the [default configuration file](https://github.com/sider/runners/blob/HEAD/images/golangci_lint/sider_golangci.yml) for details.
 
 ### Migration from Govet and Golint
 
@@ -73,7 +73,7 @@ You can use the following options to fine-tune GolangCI-Lint to your project.
 | Name                                                                                  | Type                 | Default |
 | ------------------------------------------------------------------------------------- | -------------------- | ------- |
 | [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`             | -       |
-| [`target`](#target)                                                                   | `string`, `string[]` | `./...` |
+| [`target`](#target)                                                                   | `string`, `string[]` | -       |
 | [`config`](#config)                                                                   | `string`             | -       |
 | [`no-config`](#no-config)                                                             | `boolean`            | `false` |
 | [`disable`](#disable)                                                                 | `string`, `string[]` | -       |

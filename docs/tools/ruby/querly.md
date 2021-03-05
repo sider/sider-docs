@@ -21,9 +21,9 @@ and put a `querly.yml` config in your repository's root directory.
 
 Visit the Querly project page for more information about writing rules:
 
-- [Configuration](https://github.com/soutaro/querly/blob/master/manual/configuration.md)
-- [Examples](https://github.com/soutaro/querly/blob/master/manual/examples.md)
-- [Patterns](https://github.com/soutaro/querly/blob/master/manual/patterns.md)
+- [Configuration](https://github.com/soutaro/querly/blob/HEAD/manual/configuration.md)
+- [Examples](https://github.com/soutaro/querly/blob/HEAD/manual/examples.md)
+- [Patterns](https://github.com/soutaro/querly/blob/HEAD/manual/patterns.md)
 
 <div class="Video">
  <iframe class="Video__iframe" src="https://www.youtube.com/embed/WtHmNuWJzPA" frameborder="0" allowfullscreen></iframe>
@@ -53,7 +53,7 @@ This option allows you to specify a configuration file path you want to use.
 
 ## Analyzing View Templates
 
-Querly has a mechanism called [preprocessor](https://github.com/soutaro/querly/blob/master/manual/configuration.md#preprocessor) for analyzing templates which contain Ruby code.
+Querly has a mechanism called [preprocessor](https://github.com/soutaro/querly/blob/HEAD/manual/configuration.md#preprocessor) for analyzing templates which contain Ruby code.
 Sider finds the following gems in `Gemfile.lock` and installs them automatically for backward compatibility:
 
 - [slim](https://github.com/slim-template/slim)

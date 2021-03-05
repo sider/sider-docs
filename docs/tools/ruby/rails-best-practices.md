@@ -52,7 +52,7 @@ linter:
 This option allows you to specify a configuration file path you want.
 
 If the option is omitted and the `config/rails_best_practices.yml` file (RBP's default) in your repository does not exist,
-Sider uses the [default configuration](https://github.com/sider/runners/blob/master/images/rails_best_practices/sider_rails_best_practices.yml).
+Sider uses the [default configuration](https://github.com/sider/runners/blob/HEAD/images/rails_best_practices/sider_rails_best_practices.yml).
 
 ### `vendor`
 

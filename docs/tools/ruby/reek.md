@@ -49,11 +49,11 @@ This option allows you to specify files or directories to analyze.
 ### `config`
 
 This option allows you to specify your configuration file.
-If omitted, Reek tries to automatically find a configuration file in your repository.
+If omitted, Reek tries to automatically find a configuration file ([`.reek.yml`](https://github.com/troessner/reek#configuration-file)) in your repository.
 
 ## Default Configuration
 
 When there are no configuration files in your repository, Sider uses the following configuration by default:
 
-- [For the Reek v4](https://github.com/sider/runners/blob/master/images/reek/v4.reek.yml)
-- [For the Reek v5](https://github.com/sider/runners/blob/master/images/reek/v5.reek.yml)
+- [For the Reek v4](https://github.com/sider/runners/blob/HEAD/images/reek/v4.reek.yml)
+- [For the Reek v5](https://github.com/sider/runners/blob/HEAD/images/reek/v5.reek.yml)

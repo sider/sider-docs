@@ -11,7 +11,7 @@ hide_title: true
 
 | Supported Version | Language | Website                  |
 | ----------------- | -------- | ------------------------ |
-| 2.6.0             | Python   | https://pylint.pycqa.org |
+| 2.7.2             | Python   | https://pylint.pycqa.org |
 
 **Pylint** is a Python static code analysis tool which looks for programming errors, helps to enforce a coding standard, sniffs for code smells and offers simple refactoring suggestions.
 
