@@ -82,7 +82,8 @@ alias: `dir`
 ### `standard`
 
 This option allows you to specify a coding standard of your project. If you leave this value empty, Sider tries to detect the standard automatically.
-`PSR2` is used when auto detection fails.
+If Our auto detection fails, Sider's [recommended ruleset](https://github.com/sider/runners/blob/HEAD/images/code_sniffer/sider_recommended_code_sniffer.xml) will be used.
+For more details, please visit [Recommended Ruleset](../../getting-started/recommended-rules.md).
 
 You can use the following third-party standards in addition to the standards which PHP_CodeSniffer supports natively:
 
