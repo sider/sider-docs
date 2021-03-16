@@ -83,7 +83,7 @@ alias: `dir`
 ### `standard`
 
 This option allows you to specify a coding standard of your project. If you leave this value empty, Sider tries to detect the standard automatically.
-If Sider's auto detection fails, our recommended ruleset will be used.
+If Sider's auto-detection fails, our recommended ruleset will be used.
 
 You can use the following third-party standards in addition to the standards which PHP_CodeSniffer supports natively:
 
