@@ -107,7 +107,7 @@ This option allows you to specify a list of file extensions to be analyzed.
 
 ### `encoding`
 
-This option allows you to specify an encoding of files to analyze.
+This option allows you to specify an encoding of files to be analyzed.
 
 ### `ignore`
 
