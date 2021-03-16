@@ -28,7 +28,8 @@ linter:
 ## Default Configuration
 
 If you don't specify anything, Sider tries to detect the standard and target directory for your project automatically.
-If it cannot find an appropriate standard, it assumes `PSR2` as its standard and analyzes all PHP files in your repository.
+If it cannot find an appropriate standard, Sider analyzes all PHP files in your repository using our [recommended ruleset](https://github.com/sider/runners/blob/HEAD/images/code_sniffer/sider_recommended_code_sniffer.xml).
+For more details, please visit [Recommended Ruleset](../../getting-started/recommended-rules.md).
 
 ### Standard and Analysis Target
 
@@ -43,44 +44,46 @@ The following standards are detected automatically:
 The auto-detection is based on file names and directory structure in your repository.
 If this auto-detection fails, you can specify a standard in `sider.yml`.
 
-## Configuration via `sider.yml`
+## Configuration
 
-An example setting for PHP_CodeSniffer under `code_sniffer`:
+An example setting for PHP_CodeSniffer under `code_sniffer` in `sider.yml`:
 
 ```yaml
 linter:
   code_sniffer:
-    dir: app/
-    standard: phpcs.xml
-    extensions: php,inc,lib
+    target: [app/, test/]
+    standard: [phpcs.xml, PSR2]
+    extensions: [php, inc, lib]
     encoding: utf-8
     ignore:
       - app/vendor
       - test/ignored.php
+    parallel: true
 ```
 
 You can use several options to fine-tune PHP_CodeSniffer to your project:
 
-| Name                                                                                  | Type                 | Default |
-| ------------------------------------------------------------------------------------- | -------------------- | ------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`             | -       |
-| [`dir`](#dir)                                                                         | `string`             | `.`     |
-| [`standard`](#standard)                                                               | `string`             | `PSR2`  |
-| [`extensions`](#extensions)                                                           | `string`, `string[]` | `php`   |
-| [`encoding`](#encoding)                                                               | `string`             | -       |
-| [`ignore`](#ignore)                                                                   | `string`, `string[]` | `[]`    |
+| Name                                                                                  | Type                 | Default       |
+| ------------------------------------------------------------------------------------- | -------------------- | ------------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`             | -             |
+| [`target`](#target)                                                                   | `string`, `string[]` | `.`           |
+| [`standard`](#standard)                                                               | `string`, `string[]` | _(see below)_ |
+| [`extensions`](#extensions)                                                           | `string`, `string[]` | `php`         |
+| [`encoding`](#encoding)                                                               | `string`             | -             |
+| [`ignore`](#ignore)                                                                   | `string`, `string[]` | `[]`          |
+| [`parallel`](#parallel)                                                               | `boolean`            | `false`       |
 
-### `dir`
+### `target`
 
-This option controls directories to be analyzed. The default value is dependent on the frameworks PHP_CodeSniffer supports.
+This option allows you to specify paths to be analyzed. The default value is dependent on the frameworks PHP_CodeSniffer supports.
 If you are not using any frameworks or are using a framework PHP_CodeSniffer does not support, `.` is used.
 
-If you would like to exclude specific directories, you can specify them in a custom ruleset file.
+alias: `dir`
 
 ### `standard`
 
-This option controls a coding standard of your project. If you leave this value empty, Sider tries to detect the standard automatically.
-`PSR2` is used when auto detection fails.
+This option allows you to specify a coding standard of your project. If you leave this value empty, Sider tries to detect the standard automatically.
+If this auto-detection fails, our [recommended ruleset](#default-configuration) will be used.
 
 You can use the following third-party standards in addition to the standards which PHP_CodeSniffer supports natively:
 
@@ -91,23 +94,25 @@ You can use the following third-party standards in addition to the standards whi
 If you want to see the actual standard lists, run the command [`phpcs -i`](https://github.com/squizlabs/PHP_CodeSniffer/wiki/Usage#printing-a-list-of-installed-coding-standards).
 The following output is a standard list that we prepare.
 
-```shell
+```console
 $ phpcs -i
 The installed coding standards are Zend, PSR12, MySource, Squiz, PSR2, PSR1, PEAR, CakePHP, Symfony, WordPress, WordPress-Extra, WordPress-Docs and WordPress-Core
 ```
 
-You can also define your own standard, and enter the path to the config file here.
+You can also specify your own standard file path: e.g. `standard: your-own-standard.xml`.
 
 ### `extensions`
 
-This option controls a comma-separated list of file extensions to be analyzed.
-You also can specify an array of extensions.
+This option allows you to specify a list of file extensions to be analyzed.
 
 ### `encoding`
 
-This option controls an encoding of files to be analyzed.
+This option allows you to specify an encoding of files to be analyzed.
 
 ### `ignore`
 
-This option controls a comma-separated list of file or directory patterns to be ignored.
-You also can specify an array of patterns.
+This option allows you to specify a list of path patterns to be ignored.
+
+### `parallel`
+
+This option allows you to control if an analysis runs in parallel mode.

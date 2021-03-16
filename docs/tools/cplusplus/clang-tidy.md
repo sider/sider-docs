@@ -11,7 +11,7 @@ hide_title: true
 
 | Supported Version | Language | Website                                 |
 | ----------------- | -------- | --------------------------------------- |
-| 10.0.1            | C/C++    | https://clang.llvm.org/extra/clang-tidy |
+| 11                | C/C++    | https://clang.llvm.org/extra/clang-tidy |
 
 **Clang-Tidy** is a [Clang](https://clang.llvm.org/)-based C++ "linter" tool. It diagnoses typical programming errors, like style violations, interface misuse, or bugs that can be deduced via static analysis.
 

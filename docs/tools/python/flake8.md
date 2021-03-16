@@ -9,7 +9,7 @@ hide_title: true
 
 | Supported Version | Language | Website                  |
 | ----------------- | -------- | ------------------------ |
-| 3.8.4             | Python   | https://flake8.pycqa.org |
+| 3.9.0             | Python   | https://flake8.pycqa.org |
 
 **Flake8** is a linter to check the style and quality of Python code.
 
@@ -21,8 +21,9 @@ To customize Flake8, put a `.flake8` file in your repository.
 
 ## Default Configuration for Flake8
 
-Sider provides a [default configuration](https://github.com/sider/runners/blob/HEAD/images/flake8/sider_config.ini) for Flake8.
-If your repository does not include `.flake8`, `setup.cfg` or `tox.ini`, the default configuration will be used.
+Sider provides our [recommended ruleset](https://github.com/sider/runners/blob/HEAD/images/flake8/sider_recommended_flake8.ini) for Flake8.
+If your repository does not include `.flake8`, `setup.cfg` or `tox.ini`, the recommended ruleset will be used.
+For more details, please visit [Recommended Ruleset](../../getting-started/recommended-rules.md).
 
 ## Configuration
 
@@ -38,6 +39,7 @@ linter:
       - flake8-builtins==1.4.1
       - flake8-docstrings>=1.4.0
       - git+https://github.com/PyCQA/flake8-import-order.git@51e16f33065512afa1a85a20b2c2d3be768f78ea
+    parallel: false
 ```
 
 You can use several options to fine-tune Flake8 to your project.
@@ -48,6 +50,7 @@ You can use several options to fine-tune Flake8 to your project.
 | [`target`](#target)                                                                   | `string`, `string[]` | `.`     |
 | [`config`](#config)                                                                   | `string`             | -       |
 | [`plugins`](#plugins)                                                                 | `string`, `string[]` | -       |
+| [`parallel`](#parallel)                                                               | `boolean`            | `true`  |
 
 ### `target`
 
@@ -65,3 +68,7 @@ If only a name is specified, the latest version of the plugin will be installed.
 Also, you can specify any VCS URL that `pip` supports, like `git+https://git.example.com/MyProject#egg=MyProject`.
 
 See also the [`pip` documentation](https://pip.pypa.io/en/stable/reference/pip_install/) for details about such formats.
+
+### `parallel`
+
+This option allows you to control if an analysis runs in parallel mode.

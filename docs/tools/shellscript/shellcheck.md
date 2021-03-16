@@ -40,7 +40,7 @@ You can use the following options to fine-tune ShellCheck to your project.
 | Name                                                                                  | Type                           | Default       |
 | ------------------------------------------------------------------------------------- | ------------------------------ | ------------- |
 | [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`                       | -             |
-| [`target`](#target)                                                                   | `string`, `string[]`, `hash[]` | _(See below)_ |
+| [`target`](#target)                                                                   | `string`, `string[]`, `hash[]` | _(see below)_ |
 | [`include`](#include)                                                                 | `string`, `string[]`           | -             |
 | [`exclude`](#exclude)                                                                 | `string`, `string[]`           | -             |
 | [`enable`](#enable)                                                                   | `string`, `string[]`           | -             |
