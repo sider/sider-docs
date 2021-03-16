@@ -63,15 +63,15 @@ linter:
 
 You can use several options to fine-tune PHP_CodeSniffer to your project:
 
-| Name                                                                                  | Type                 | Default                       |
-| ------------------------------------------------------------------------------------- | -------------------- | ----------------------------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`             | -                             |
-| [`target`](#target)                                                                   | `string`, `string[]` | `.`                           |
-| [`standard`](#standard)                                                               | `string`, `string[]` | `Sider's recommended ruleset` |
-| [`extensions`](#extensions)                                                           | `string`, `string[]` | `php`                         |
-| [`encoding`](#encoding)                                                               | `string`             | -                             |
-| [`ignore`](#ignore)                                                                   | `string`, `string[]` | `[]`                          |
-| [`parallel`](#parallel)                                                               | `boolean`            | `false`                       |
+| Name                                                                                  | Type                 | Default       |
+| ------------------------------------------------------------------------------------- | -------------------- | ------------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`             | -             |
+| [`target`](#target)                                                                   | `string`, `string[]` | `.`           |
+| [`standard`](#standard)                                                               | `string`, `string[]` | `(See below)` |
+| [`extensions`](#extensions)                                                           | `string`, `string[]` | `php`         |
+| [`encoding`](#encoding)                                                               | `string`             | -             |
+| [`ignore`](#ignore)                                                                   | `string`, `string[]` | `[]`          |
+| [`parallel`](#parallel)                                                               | `boolean`            | `false`       |
 
 ### `target`
 
