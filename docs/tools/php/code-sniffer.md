@@ -103,7 +103,7 @@ You can also specify your own standard file path: e.g. `standard: your-own-stand
 
 ### `extensions`
 
-This option allows you to specify a list of file extensions to analyze.
+This option allows you to specify a list of file extensions to be analyzed.
 
 ### `encoding`
 
