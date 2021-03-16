@@ -29,7 +29,7 @@ linter:
 
 If you don't specify anything, Sider tries to detect the standard and target directory for your project automatically.
 If it cannot find an appropriate standard, Sider analyzes all PHP files in your repository using our [recommended ruleset](https://github.com/sider/runners/blob/HEAD/images/code_sniffer/sider_recommended_code_sniffer.xml).
-For more details, please visit [Recommended Ruleset](../../getting-started/recommended-rules.md).
+For more details, please visit ["Recommended Ruleset"](../../getting-started/recommended-rules.md).
 
 ### Standard and Analysis Target
 
@@ -67,7 +67,7 @@ You can use several options to fine-tune PHP_CodeSniffer to your project:
 | ------------------------------------------------------------------------------------- | -------------------- | ------------- |
 | [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`             | -             |
 | [`target`](#target)                                                                   | `string`, `string[]` | `.`           |
-| [`standard`](#standard)                                                               | `string`, `string[]` | `(See below)` |
+| [`standard`](#standard)                                                               | `string`, `string[]` | _(see below)_ |
 | [`extensions`](#extensions)                                                           | `string`, `string[]` | `php`         |
 | [`encoding`](#encoding)                                                               | `string`             | -             |
 | [`ignore`](#ignore)                                                                   | `string`, `string[]` | `[]`          |
@@ -83,7 +83,7 @@ alias: `dir`
 ### `standard`
 
 This option allows you to specify a coding standard of your project. If you leave this value empty, Sider tries to detect the standard automatically.
-If Sider's auto-detection fails, our recommended ruleset will be used.
+If this auto-detection fails, our [recommended ruleset](#default-configuration) will be used.
 
 You can use the following third-party standards in addition to the standards which PHP_CodeSniffer supports natively:
 
