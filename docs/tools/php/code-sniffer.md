@@ -29,7 +29,7 @@ linter:
 
 If you don't specify anything, Sider tries to detect the standard and target directory for your project automatically.
 If it cannot find an appropriate standard, Sider analyzes all PHP files in your repository using our [recommended ruleset](https://github.com/sider/runners/blob/HEAD/images/code_sniffer/sider_recommended_code_sniffer.xml).
-For more details, please visit ["Recommended Ruleset"](../../getting-started/recommended-rules.md).
+For more details, please visit [Recommended Ruleset](../../getting-started/recommended-rules.md).
 
 ### Standard and Analysis Target
 
