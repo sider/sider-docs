@@ -21,7 +21,7 @@ To customize Flake8, put a `.flake8` file in your repository.
 
 ## Default Configuration for Flake8
 
-Sider provides our [recommended ruleset](https://github.com/sider/runners/blob/HEAD/images/flake8/sider_recommended_flake8.ini) for flake8.
+Sider provides our [recommended ruleset](https://github.com/sider/runners/blob/HEAD/images/flake8/sider_recommended_flake8.ini) for Flake8.
 If your repository does not include `.flake8`, `setup.cfg` or `tox.ini`, the recommended ruleset will be used.
 For more details, please visit [Recommended Ruleset](../../getting-started/recommended-rules.md).
 
