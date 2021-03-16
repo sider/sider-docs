@@ -65,7 +65,7 @@ For more details about the options, see the [official documentation](https://det
 
 ### `target`
 
-This option allows you to specify paths to analyze.
+This option allows you to specify paths to be analyzed.
 
 alias: `input`
 
