@@ -9,7 +9,7 @@ hide_title: true
 
 | Supported Version | Language | Website                   |
 | ----------------- | -------- | ------------------------- |
-| 1.37.1            | Go       | https://golangci-lint.run |
+| 1.38.0            | Go       | https://golangci-lint.run |
 
 **GolangCI-Lint** is a linter to aggregate multiple linters and a successor to [Go Meta Linter](gometalinter.md) which is deprecated.
 
