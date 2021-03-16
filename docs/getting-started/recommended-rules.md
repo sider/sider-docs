@@ -24,5 +24,5 @@ Sider applies the recommended ruleset to the analysis tools below. Please follow
 
 - [Checkstyle](../tools/java/checkstyle.md#config)
 - [cpplint](../tools/cplusplus/cpplint.md#recommended-ruleset)
-- [checkstyle](../tools/java/checkstyle.md#config)
-- [flake8](../tools/python/flake8.md#default-configuration-for-flake8)
+- [Flake8](../tools/python/flake8.md#default-configuration-for-flake8)
+- [PHP_CodeSniffer](../tools/php/code-sniffer.md#default-configuration)
