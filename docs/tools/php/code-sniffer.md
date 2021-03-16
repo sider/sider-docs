@@ -75,7 +75,7 @@ You can use several options to fine-tune PHP_CodeSniffer to your project:
 
 ### `target`
 
-This option allows you to specify paths to analyze. The default value is dependent on the frameworks PHP_CodeSniffer supports.
+This option allows you to specify paths to be analyzed. The default value is dependent on the frameworks PHP_CodeSniffer supports.
 If you are not using any frameworks or are using a framework PHP_CodeSniffer does not support, `.` is used.
 
 alias: `dir`
