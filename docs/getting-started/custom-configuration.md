@@ -198,7 +198,7 @@ If you would like to install a gem located in a private git repository, see [pri
 
 _Type:_ `boolean`, `string`
 
-For npm-published analyzers such as [ESLint](../tools/javascript/eslint.md) or [stylelint](../tools/css/stylelint.md), you can use the `npm_install` option to configure the behavior of npm dependencies installation. This option has the following values:
+For npm-published analyzers such as [ESLint](../tools/javascript/eslint.md) or [stylelint](../tools/css/stylelint.md), you can use the `npm_install` option to configure the behavior of npm dependencies installation. This option accepts one of the following values:
 
 | Value            | Description                                                                             |
 | ---------------- | --------------------------------------------------------------------------------------- |
@@ -206,7 +206,6 @@ For npm-published analyzers such as [ESLint](../tools/javascript/eslint.md) or [
 | `false`          | Do not install any dependencies.                                                        |
 | `"production"`   | Install only dependencies for production.                                               |
 | `"development"`  | Install only dependencies for development.                                              |
-| Others           | Fail analysis.                                                                          |
 
 For example:
 
