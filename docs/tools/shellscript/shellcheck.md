@@ -17,7 +17,7 @@ ShellCheck is a static analysis tool to find bugs in shell script code. It gives
 
 To start using ShellCheck, enable it in your [repository settings](../../getting-started/repository-settings.md).
 
-For more details, see the ShellCheck's [CLI manual](https://github.com/koalaman/shellcheck/blob/master/shellcheck.1.md) and [Wiki](https://github.com/koalaman/shellcheck/wiki).
+For more details, see the ShellCheck's [CLI manual](https://github.com/koalaman/shellcheck/blob/HEAD/shellcheck.1.md) and [Wiki](https://github.com/koalaman/shellcheck/wiki).
 
 ## Configuration
 
@@ -40,7 +40,7 @@ You can use the following options to fine-tune ShellCheck to your project.
 | Name                                                                                  | Type                           | Default       |
 | ------------------------------------------------------------------------------------- | ------------------------------ | ------------- |
 | [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`                       | -             |
-| [`target`](#target)                                                                   | `string`, `string[]`, `hash[]` | _(See below)_ |
+| [`target`](#target)                                                                   | `string`, `string[]`, `hash[]` | _(see below)_ |
 | [`include`](#include)                                                                 | `string`, `string[]`           | -             |
 | [`exclude`](#exclude)                                                                 | `string`, `string[]`           | -             |
 | [`enable`](#enable)                                                                   | `string`, `string[]`           | -             |
@@ -127,4 +127,4 @@ If omitted, Sider uses the ShellCheck's default one.
 
 ### `norc`
 
-This option allows you to select whether looking for [ShellCheck's configuration files](https://github.com/koalaman/shellcheck/blob/master/shellcheck.1.md#rc-files).
+This option allows you to select whether looking for [ShellCheck's configuration files](https://github.com/koalaman/shellcheck/blob/HEAD/shellcheck.1.md#rc-files).

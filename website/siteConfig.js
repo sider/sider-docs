@@ -44,7 +44,7 @@ const siteConfig = {
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
     { page: "enterprise", label: "Enterprise" },
-    { page: "news/2020", label: "News" },
+    { page: "news/2021", label: "News" },
     { href: "https://sider.review/", label: "Sider Top" },
     { search: true },
   ],

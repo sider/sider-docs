@@ -9,9 +9,9 @@ hide_title: true
 
 > This is **BETA**. The behavior of this tool might change.
 
-| Supported Version | Language | Website                                                                    |
-| ----------------- | -------- | -------------------------------------------------------------------------- |
-| 3.3.1             | C#       | https://docs.microsoft.com/en-us/visualstudio/code-quality/fxcop-analyzers |
+| Supported Version | Language | Website                                                                                                   |
+| ----------------- | -------- | --------------------------------------------------------------------------------------------------------- |
+| 3.3.2             | C#       | https://docs.microsoft.com/en-us/visualstudio/code-quality/static-code-analysis-for-managed-code-overview |
 
 **FxCop** is a static analysis tool for [.NET platform](https://dotnet.microsoft.com/). It supports both of C# and Visual Basic .NET. However, Sider supports C# project only now.
 

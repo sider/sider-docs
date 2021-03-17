@@ -1,17 +1,15 @@
 ---
 id: remark-lint
 title: remark-lint
-sidebar_label: remark-lint (beta)
+sidebar_label: remark-lint
 hide_title: true
 ---
 
 # remark-lint
 
-> This is **BETA**. The behavior of this tool might change.
-
-| Supported Version         | Language | Runtime         | Website                                 |
-| ------------------------- | -------- | --------------- | --------------------------------------- |
-| 7.0.0+ (default: 9.0.0) ¹ | Markdown | Node.js 12.19.0 | https://github.com/remarkjs/remark-lint |
+| Supported Version         | Language | Website                                 |
+| ------------------------- | -------- | --------------------------------------- |
+| 7.0.0+ (default: 9.0.0) ¹ | Markdown | https://github.com/remarkjs/remark-lint |
 
 **remark-lint** is a pluggable linter for Markdown. It includes many rules to enforce consistency and detect possible mistakes.
 

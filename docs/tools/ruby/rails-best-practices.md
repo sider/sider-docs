@@ -7,9 +7,9 @@ hide_title: true
 
 # Rails Best Practices
 
-| Supported Version         | Language   | Website                         |
-| ------------------------- | ---------- | ------------------------------- |
-| 1.19.1+ (default: 1.20.0) | Ruby 2.7.2 | https://rails-bestpractices.com |
+| Supported Version         | Language | Website                         |
+| ------------------------- | -------- | ------------------------------- |
+| 1.19.1+ (default: 1.20.0) | Ruby     | https://rails-bestpractices.com |
 
 **Rails Best Practices** (abbr. RBP) is a code metric tool to check the quality of Rails code.
 
@@ -52,7 +52,7 @@ linter:
 This option allows you to specify a configuration file path you want.
 
 If the option is omitted and the `config/rails_best_practices.yml` file (RBP's default) in your repository does not exist,
-Sider uses the [default configuration](https://github.com/sider/runners/blob/master/images/rails_best_practices/sider_rails_best_practices.yml).
+Sider uses the [default configuration](https://github.com/sider/runners/blob/HEAD/images/rails_best_practices/sider_rails_best_practices.yml).
 
 ### `vendor`
 

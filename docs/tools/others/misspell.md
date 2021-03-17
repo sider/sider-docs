@@ -7,9 +7,9 @@ hide_title: true
 
 # Misspell
 
-| Supported Version | Language                | Website                             |
-| ----------------- | ----------------------- | ----------------------------------- |
-| 0.3.4             | Others (Spell checking) | https://github.com/client9/misspell |
+| Supported Version | Language | Website                             |
+| ----------------- | -------- | ----------------------------------- |
+| 0.3.4             | English  | https://github.com/client9/misspell |
 
 **Misspell** is a spell checker to correct commonly misspelled English.
 

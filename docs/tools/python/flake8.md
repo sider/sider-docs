@@ -7,9 +7,9 @@ hide_title: true
 
 # Flake8
 
-| Supported Version | Language     | Website                         |
-| ----------------- | ------------ | ------------------------------- |
-| 3.8.4             | Python 3.9.0 | https://gitlab.com/pycqa/flake8 |
+| Supported Version | Language | Website                  |
+| ----------------- | -------- | ------------------------ |
+| 3.9.0             | Python   | https://flake8.pycqa.org |
 
 **Flake8** is a linter to check the style and quality of Python code.
 
@@ -21,8 +21,9 @@ To customize Flake8, put a `.flake8` file in your repository.
 
 ## Default Configuration for Flake8
 
-Sider provides a [default configuration](https://github.com/sider/runners/blob/master/images/flake8/sider_config.ini) for Flake8.
-If your repository does not include `.flake8`, `setup.cfg` or `tox.ini`, the default configuration will be used.
+Sider provides our [recommended ruleset](https://github.com/sider/runners/blob/HEAD/images/flake8/sider_recommended_flake8.ini) for Flake8.
+If your repository does not include `.flake8`, `setup.cfg` or `tox.ini`, the recommended ruleset will be used.
+For more details, please visit [Recommended Ruleset](../../getting-started/recommended-rules.md).
 
 ## Configuration
 
@@ -36,7 +37,9 @@ linter:
     plugins:
       - flake8-bandit
       - flake8-builtins==1.4.1
-      - flake8-mypy>=17.3.3
+      - flake8-docstrings>=1.4.0
+      - git+https://github.com/PyCQA/flake8-import-order.git@51e16f33065512afa1a85a20b2c2d3be768f78ea
+    parallel: false
 ```
 
 You can use several options to fine-tune Flake8 to your project.
@@ -47,6 +50,7 @@ You can use several options to fine-tune Flake8 to your project.
 | [`target`](#target)                                                                   | `string`, `string[]` | `.`     |
 | [`config`](#config)                                                                   | `string`             | -       |
 | [`plugins`](#plugins)                                                                 | `string`, `string[]` | -       |
+| [`parallel`](#parallel)                                                               | `boolean`            | `true`  |
 
 ### `target`
 
@@ -58,5 +62,13 @@ This option allows you to specify a configuration file you want to use.
 
 ### `plugins`
 
-This option allows you to enable Flake8 plugins. You can set arbitrary plugin names and also specify a _minimum_ version number.
-If no version is specified, Sider will install the latest version.
+This option allows you to enable Flake8 plugins. You can set arbitrary plugin names and also specify a version specifier like `==1.3.0`.
+If only a name is specified, the latest version of the plugin will be installed.
+
+Also, you can specify any VCS URL that `pip` supports, like `git+https://git.example.com/MyProject#egg=MyProject`.
+
+See also the [`pip` documentation](https://pip.pypa.io/en/stable/reference/pip_install/) for details about such formats.
+
+### `parallel`
+
+This option allows you to control if an analysis runs in parallel mode.

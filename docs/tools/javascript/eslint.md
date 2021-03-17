@@ -7,9 +7,9 @@ hide_title: true
 
 # ESLint
 
-| Supported Version        | Language   | Runtime         | Website            |
-| ------------------------ | ---------- | --------------- | ------------------ |
-| 5.0.0+ (default: 7.12.1) | JavaScript | Node.js 12.19.0 | https://eslint.org |
+| Supported Version        | Language   | Website            |
+| ------------------------ | ---------- | ------------------ |
+| 5.0.0+ (default: 7.22.0) | JavaScript | https://eslint.org |
 
 **ESLint** is a static analysis tool for JavaScript and its flavors (e.g. TypeScript, JSX, Vue).
 It can find problems, style violations, or security issues, etc. in your code, and have so many plugins.
@@ -46,7 +46,7 @@ For more details, see the following sections.
 
 ## Default Configuration for ESLint
 
-Sider prepares the [default ESLint configuration](https://github.com/sider/runners/blob/master/images/eslint/sider_eslintrc.yml).
+Sider prepares the [default ESLint configuration](https://github.com/sider/runners/blob/HEAD/images/eslint/sider_eslintrc.yml).
 This configuration is used when you have no ESLint configurations or `sider.yml` in your repository.
 
 ## Configuration
@@ -101,34 +101,34 @@ linter:
 ### `config`
 
 This option allows you to specify an additional configuration file.
-See also the [`--config`](https://eslint.org/docs/user-guide/command-line-interface#c-config) option.
+See also the [`--config`](https://eslint.org/docs/user-guide/command-line-interface#-c-config) option.
 
 ### `ext`
 
 This option allows you to specify file extensions to analyze.
-See also the [`--ext`](https://eslint.org/docs/user-guide/command-line-interface#ext) option.
+See also the [`--ext`](https://eslint.org/docs/user-guide/command-line-interface#-ext) option.
 
 ### `ignore-path`
 
 This option allows you to exclude files from analysis by your ignore file.
-See also the [`--ignore-path`](https://eslint.org/docs/user-guide/command-line-interface#ignore-path) option.
+See also the [`--ignore-path`](https://eslint.org/docs/user-guide/command-line-interface#-ignore-path) option.
 
 ### `ignore-pattern`
 
 This option allows you to ignore files by patterns.
-See also the [`--ignore-pattern`](https://eslint.org/docs/user-guide/command-line-interface#ignore-pattern) option.
+See also the [`--ignore-pattern`](https://eslint.org/docs/user-guide/command-line-interface#-ignore-pattern) option.
 
 ### `no-ignore`
 
 This option allows you to disable the use of ignore files or patterns.
-See also the [`--no-ignore`](https://eslint.org/docs/user-guide/command-line-interface#no-ignore) option.
+See also the [`--no-ignore`](https://eslint.org/docs/user-guide/command-line-interface#-no-ignore) option.
 
 ### `global`
 
 This option allows you to define global variables. It requires a comma-separated string.
-See also the [`--global`](https://eslint.org/docs/user-guide/command-line-interface#global) option.
+See also the [`--global`](https://eslint.org/docs/user-guide/command-line-interface#-global) option.
 
 ### `quiet`
 
 This option allows you to suppress warnings. When `true`, only errors are reported.
-See also the [`--quiet`](https://eslint.org/docs/user-guide/command-line-interface#quiet) option.
+See also the [`--quiet`](https://eslint.org/docs/user-guide/command-line-interface#-quiet) option.

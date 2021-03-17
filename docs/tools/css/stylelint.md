@@ -7,9 +7,9 @@ hide_title: true
 
 # stylelint
 
-| Supported Version        | Language                    | Runtime         | Website              |
-| ------------------------ | --------------------------- | --------------- | -------------------- |
-| 8.3.0+ (default: 13.7.2) | CSS and flavors (e.g. Sass) | Node.js 12.19.0 | https://stylelint.io |
+| Supported Version         | Language                    | Website              |
+| ------------------------- | --------------------------- | -------------------- |
+| 8.3.0+ (default: 13.12.0) | CSS and flavors (e.g. Sass) | https://stylelint.io |
 
 **stylelint** is a pluggable linter to help you avoid errors and enforce conventions for CSS and CSS-like languages.
 It provides many core rules and third-party rules by the community.
@@ -32,9 +32,9 @@ If you need more customization, use the standard stylelint configuration files. 
 
 ## Default Configuration for stylelint
 
-If you have no custom configurations, Sider uses the [default configuration](https://github.com/sider/runners/blob/master/images/stylelint/sider_recommended_config.yaml).
+If you have no custom configurations, Sider uses the [default configuration](https://github.com/sider/runners/blob/HEAD/images/stylelint/sider_recommended_config.yaml).
 
-In the same way, Sider users the [default ignore file](https://github.com/sider/runners/blob/master/images/stylelint/sider_recommended_stylelintignore) if not exist.
+In the same way, Sider users the [default ignore file](https://github.com/sider/runners/blob/HEAD/images/stylelint/sider_recommended_stylelintignore) if not exist.
 
 ## Configuration
 

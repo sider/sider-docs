@@ -1,7 +1,4 @@
 plugins:
-  # Preprocessor
-  remark-frontmatter: true
-
   # Preset
   remark-preset-lint-sider: true
 

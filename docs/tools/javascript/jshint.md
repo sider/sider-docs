@@ -7,9 +7,9 @@ hide_title: true
 
 # JSHint
 
-| Supported Version | Language   | Runtime         | Website            |
-| ----------------- | ---------- | --------------- | ------------------ |
-| 2.12.0            | JavaScript | Node.js 12.19.0 | https://jshint.com |
+| Supported Version | Language   | Website            |
+| ----------------- | ---------- | ------------------ |
+| 2.12.0            | JavaScript | https://jshint.com |
 
 **JSHint** is a static analysis tool to detect errors and potential problems in JavaScript code.
 
@@ -21,9 +21,9 @@ To customize the configuration, use the standard `.jshintrc` or `.jshintignore` 
 
 ## Default Configuration for JSHint
 
-Sider uses the [default configuration](https://github.com/sider/runners/blob/master/images/jshint/sider_jshintrc) of `.jshintrc` when there is no custom configuration preset.
+Sider uses the [default configuration](https://github.com/sider/runners/blob/HEAD/images/jshint/sider_jshintrc) of `.jshintrc` when there is no custom configuration preset.
 
-In addition, Sider uses the [default configuration](https://github.com/sider/runners/blob/master/images/jshint/sider_jshintignore) of `.jshintignore`.
+In addition, Sider uses the [default configuration](https://github.com/sider/runners/blob/HEAD/images/jshint/sider_jshintignore) of `.jshintignore`.
 
 ## Configuration
 

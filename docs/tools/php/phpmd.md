@@ -7,9 +7,9 @@ hide_title: true
 
 # PHPMD
 
-| Supported Version | Language   | Website           |
-| ----------------- | ---------- | ----------------- |
-| 2.9.1             | PHP 7.4.12 | https://phpmd.org |
+| Supported Version | Language | Website           |
+| ----------------- | -------- | ----------------- |
+| 2.9.1             | PHP      | https://phpmd.org |
 
 **PHPMD** is a static analysis tool focused on detecting code smells and possible errors in your PHP code.
 
@@ -92,7 +92,7 @@ Here are the available rulesets:
 - `naming`
 - `unusedcode`
 
-If omitted, Sider uses the [default configuration](https://github.com/sider/runners/blob/master/images/phpmd/sider_config.xml).
+If omitted, Sider uses the [default configuration](https://github.com/sider/runners/blob/HEAD/images/phpmd/sider_config.xml).
 
 If you want to learn more, see the [PHPMD ruleset document](https://phpmd.org/rules/index.html).
 

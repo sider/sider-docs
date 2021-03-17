@@ -9,9 +9,9 @@ hide_title: true
 
 > This is **BETA**. The behavior of this tool might change.
 
-| Supported Version | Language             | Website                         |
-| ----------------- | -------------------- | ------------------------------- |
-| 1.14.2            | Kotlin (Java 14.0.2) | https://detekt.github.io/detekt |
+| Supported Version | Language | Website                         |
+| ----------------- | -------- | ------------------------------- |
+| 1.16.0            | Kotlin   | https://detekt.github.io/detekt |
 
 **detekt** is a linter which code smell analysis for your [Kotlin](https://kotlinlang.org) projects.
 
@@ -28,6 +28,9 @@ Put the `detekt` key in `sider.yml` to customize the execution of detekt.
 ```yaml
 linter:
   detekt:
+    target:
+      - "src/"
+      - "test/"
     baseline: "baseline.xml"
     config:
       - "path/to/detekt-config.yml"
@@ -38,8 +41,7 @@ linter:
       - "**/excludes_dir/**"
       - "**/another/excludes_dir/**"
     includes: []
-    input:
-      - "src/"
+    parallel: true
 ```
 
 ## Configuration
@@ -50,15 +52,22 @@ You can customize your detekt analysis using `sider.yml`.
 | ------------------------------------------------------------------------------------- | -------------------- | ------- |
 | [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`             | -       |
 | [`jvm_deps`](../../getting-started/custom-configuration.md#linteranalyzer_idjvm_deps) | `string[][]`         | `[]`    |
+| [`target`](#target)                                                                   | `string`, `string[]` | -       |
 | [`baseline`](#baseline)                                                               | `string`             | -       |
 | [`config`](#config)                                                                   | `string`, `string[]` | `[]`    |
 | [`config-resource`](#config-resource)                                                 | `string`, `string[]` | `[]`    |
 | [`disable-default-rulesets`](#disable-default-rulesets)                               | `boolean`            | `false` |
 | [`excludes`](#excludes)                                                               | `string`, `string[]` | `[]`    |
 | [`includes`](#includes)                                                               | `string`, `string[]` | `[]`    |
-| [`input`](#input)                                                                     | `string`, `string[]` | `.`     |
+| [`parallel`](#parallel)                                                               | `boolean`            | `false` |
 
-For more details about the options, see the [official documentation](https://arturbosch.github.io/detekt/cli.html).
+For more details about the options, see the [official documentation](https://detekt.github.io/detekt/cli.html).
+
+### `target`
+
+This option allows you to specify paths to be analyzed.
+
+alias: `input`
 
 ### `baseline`
 
@@ -85,6 +94,6 @@ This option allows you to specify glob pattern(s) of paths to exclude from the a
 
 This option allows you to specify glob pattern(s) of paths to include in the analysis.
 
-### `input`
+### `parallel`
 
-This option allows you to specify input path(s) to analyze.
+This option allows you to control if an analysis runs in parallel mode.

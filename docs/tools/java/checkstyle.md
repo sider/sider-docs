@@ -7,9 +7,9 @@ hide_title: true
 
 # Checkstyle
 
-| Supported Version | Language    | Website                |
-| ----------------- | ----------- | ---------------------- |
-| 8.36.2            | Java 14.0.2 | https://checkstyle.org |
+| Supported Version | Language | Website                |
+| ----------------- | -------- | ---------------------- |
+| 8.41              | Java     | https://checkstyle.org |
 
 **Checkstyle** is a style checker for Java code and aims to enforce a coding standard.
 
@@ -52,12 +52,17 @@ This option allows you to declare the coding standard you want to follow.
 
 Supported values are:
 
-- [`google`](https://checkstyle.org/google_style) (for `/google_checks.xml`)
-- [`sun`](https://checkstyle.org/sun_style) (for `/sun_checks.xml`)
-- Path to your [configuration file](https://checkstyle.org/config)
-  - Note that only **core** rules are supported. You **cannot** specify your custom rules or 3rd-party rules.
+- [`sider`](https://github.com/sider/runners/blob/HEAD/images/checkstyle/sider_recommended_checkstyle.xml)
+  - Sider provides our [recommended ruleset](../../getting-started/recommended-rules.md) for Checkstyle.
+- [`google`](https://checkstyle.org/google_style)
+  - alias for [`/google_checks.xml`](https://github.com/checkstyle/checkstyle/blob/HEAD/src/main/resources/google_checks.xml)
+- [`sun`](https://checkstyle.org/sun_style)
+  - alias for [`/sun_checks.xml`](https://github.com/checkstyle/checkstyle/blob/HEAD/src/main/resources/sun_checks.xml)
+- A file path or _resource_ name to your [configuration file](https://checkstyle.org/config). For example:
+  - `./config/my-checkstyle.xml`
+  - `/com/example/checkstyle/custom-ruleset.xml`
 
-When you write `google` or `sun`, config files distributed from Checkstyle are used.
+See also the [`-c` CLI option](https://checkstyle.org/cmdline.html) of Checkstyle.
 
 ### `dir`
 

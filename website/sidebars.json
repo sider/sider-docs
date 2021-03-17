@@ -22,7 +22,8 @@
           "tools/ruby/querly",
           "tools/ruby/rails-best-practices",
           "tools/ruby/brakeman",
-          "tools/ruby/haml-lint"
+          "tools/ruby/haml-lint",
+          "tools/ruby/slim-lint"
         ]
       },
       {
@@ -152,6 +153,9 @@
         "label": "Releases",
         "ids": [
           "enterprise/releases/index",
+          "enterprise/releases/202102",
+          "enterprise/releases/202101",
+          "enterprise/releases/202012",
           "enterprise/releases/202010",
           "enterprise/releases/202009",
           "enterprise/releases/202008",
@@ -166,6 +170,6 @@
         ]
       }
     ],
-    "News": ["news/2020", "news/2019"]
+    "News": ["news/2021", "news/2020", "news/2019"]
   }
 }

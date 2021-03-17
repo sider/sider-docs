@@ -7,9 +7,9 @@ hide_title: true
 
 # CoffeeLint
 
-| Supported Version         | Language     | Runtime         | Website                                 |
-| ------------------------- | ------------ | --------------- | --------------------------------------- |
-| 1.16.0+ (default: 1.16.0) | CoffeeScript | Node.js 12.19.0 | https://github.com/clutchski/coffeelint |
+| Supported Version        | Language     | Website                      |
+| ------------------------ | ------------ | ---------------------------- |
+| 1.16.0+ (default: 4.1.3) | CoffeeScript | https://coffeelint.github.io |
 
 **CoffeeLint** is a style checker that helps keep CoffeeScript code clean and consistent.
 

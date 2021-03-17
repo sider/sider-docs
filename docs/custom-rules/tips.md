@@ -22,7 +22,7 @@ In `goodcheck.yml`, you can include an `import` section.
 
 ```yml
 import:
-  - "https://raw.githubusercontent.com/acmecorp/rules/master/goodcheck.yml"
+  - "https://raw.githubusercontent.com/acmecorp/rules/main/goodcheck.yml"
 ```
 
 You can put a _personal access token_ in the URL to share your private content. Let the URL have a username and password (the GitHub username and a personal access token.) The URL itself will be a credential. Make sure to keep the rule file secret in this case.

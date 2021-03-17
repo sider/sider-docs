@@ -7,9 +7,9 @@ hide_title: true
 
 # GolangCI-Lint
 
-| Supported Version | Language  | Website                   |
-| ----------------- | --------- | ------------------------- |
-| 1.32.1            | Go 1.15.3 | https://golangci-lint.run |
+| Supported Version | Language | Website                   |
+| ----------------- | -------- | ------------------------- |
+| 1.38.0            | Go       | https://golangci-lint.run |
 
 **GolangCI-Lint** is a linter to aggregate multiple linters and a successor to [Go Meta Linter](gometalinter.md) which is deprecated.
 
@@ -23,12 +23,11 @@ If you want to customize it, put a [configuration file](https://golangci-lint.ru
 
 In addition to [enabled by default linters](https://golangci-lint.run/usage/linters/#enabled-by-default-linters), Sider enables some useful linters
 if you have no configuration file like `.golangci.yml`.
-See the [default configuration file](https://github.com/sider/runners/blob/master/images/golangci_lint/sider_golangci.yml) for details.
+See the [default configuration file](https://github.com/sider/runners/blob/HEAD/images/golangci_lint/sider_golangci.yml) for details.
 
 ### Migration from Govet and Golint
 
-Sider has deprecated [Govet](./govet.md) and [Golint](./golint.md) and instead recommended GolangCI-Lint.
-If you want to continue using them, all you have to do is enable GolangCI-Lint. They are enabled by default.
+Sider has removed [Govet](govet.md) and [Golint](golint.md). Please use GolangCI-Lint instead. These tools are enabled by default.
 
 If you want to run only Govet or Golint as before, edit your configuration file as follows:
 
@@ -74,7 +73,7 @@ You can use the following options to fine-tune GolangCI-Lint to your project.
 | Name                                                                                  | Type                 | Default |
 | ------------------------------------------------------------------------------------- | -------------------- | ------- |
 | [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`             | -       |
-| [`target`](#target)                                                                   | `string`, `string[]` | `./...` |
+| [`target`](#target)                                                                   | `string`, `string[]` | -       |
 | [`config`](#config)                                                                   | `string`             | -       |
 | [`no-config`](#no-config)                                                             | `boolean`            | `false` |
 | [`disable`](#disable)                                                                 | `string`, `string[]` | -       |

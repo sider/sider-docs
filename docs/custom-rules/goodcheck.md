@@ -120,5 +120,5 @@ rules:
 ## Links
 
 - Goodcheck [Documentation](https://github.com/sider/goodcheck)
-- Sample [goodcheck.yml](https://github.com/sider/goodcheck/blob/master/sample.yml) file
+- Sample [goodcheck.yml](https://github.com/sider/goodcheck/blob/HEAD/sample.yml) file
 - Bugs, issues, suggestions or contributions? Please [post them here](https://github.com/sider/goodcheck/issues)

@@ -9,9 +9,9 @@ hide_title: true
 
 > This is **BETA**. The behavior of this tool might change.
 
-| Supported Version | Language             | Website                  |
-| ----------------- | -------------------- | ------------------------ |
-| 0.39.0 ¹          | Kotlin (Java 14.0.2) | https://ktlint.github.io |
+| Supported Version | Language | Website                  |
+| ----------------- | -------- | ------------------------ |
+| 0.39.0 ¹          | Kotlin   | https://ktlint.github.io |
 
 **ktlint** is a linter with built-in formatter for [Kotlin](https://kotlinlang.org) programming language.
 

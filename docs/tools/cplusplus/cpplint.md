@@ -1,13 +1,11 @@
 ---
 id: cpplint
 title: cpplint
-sidebar_label: cpplint (beta)
+sidebar_label: cpplint
 hide_title: true
 ---
 
 # cpplint
-
-> This is **BETA**. The behavior of this tool might change.
 
 | Supported Version | Language | Website                            |
 | ----------------- | -------- | ---------------------------------- |
@@ -109,4 +107,4 @@ linter:
 
 ## Recommended Ruleset
 
-Sider provides our [recommended ruleset](https://github.com/sider/runners/blob/master/images/cpplint/sider_recommended_CPPLINT.cfg) for cpplint. If your repository does not include `CPPLINT.cfg`, the recommended ruleset will be used. For more details, please visit [Recommended Ruleset](../../getting-started/recommended-rules.md).
+Sider provides our [recommended ruleset](https://github.com/sider/runners/blob/HEAD/images/cpplint/sider_recommended_CPPLINT.cfg) for cpplint. If your repository does not include `CPPLINT.cfg`, the recommended ruleset will be used. For more details, please visit [Recommended Ruleset](../../getting-started/recommended-rules.md).

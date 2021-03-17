@@ -7,27 +7,29 @@ hide_title: true
 
 # Custom Analysis Configuration
 
-You don't need to do any special configuration for Sider to start analyzing your code. However, Sider also offers advanced settings for special cases via the `sider.yml` file.
+Usually, you don't need to do any special configuration for Sider to start analyzing your code.
+However, Sider also offers advanced settings for special cases via the configuration file named `sider.yml` (learn more about [YAML](https://yaml.org/)).
 
-> `sideci.yml` is still supported for the backward compatibility, but Sider recognizes `sider.yml` if both exist.
+> `sideci.yml` is still supported for the backward compatibility, but it will be unsupported in the future. Please rename it to `sider.yml` as possible.
 
 ## Configuration file
 
 Add a file named `sider.yml` in your project's root directory. Here is an example:
 
 ```yaml
+# This is a YAML file. See <https://yaml.org>.
 linter:
   rubocop:
     config: "lint_yml/.myrubocop.yml"
 
   eslint:
-    root_dir: "frontend"
+    root_dir: "frontend/"
     npm_install: false
     config: "frontend/.eslintrc"
     ext: "js,jsx"
 
   stylelint:
-    root_dir: "app/assets/stylesheets"
+    root_dir: "app/assets/stylesheets/"
     glob: "**/*.{css,scss}"
 
 ignore:
@@ -91,15 +93,17 @@ The following sections describe the available options.
 
 _Type:_ `string`
 
-This is a common option available to all analyzers. This option specifies a directory in your repository from which Sider should run the analyzer in. For example, if you have all your JavaScript files in the `./frontend` directory, you could configure `sider.yml` like this:
+This is a common option available to all analyzers. This option specifies a directory in your repository from which Sider should run the analyzer in. For example, if you would like to analyze only files in the `frontend/` directory, you could configure `sider.yml` like this:
 
 ```yaml
 linter:
   eslint:
-    root_dir: "frontend"
+    root_dir: "frontend/"
 ```
 
-Sider will run ESLint analysis in `./frontend` directory.
+In the configuration above, Sider will run ESLint at the `frontend/` directory (perhaps will load files such as `frontend/.eslintrc.js` or `frontend/package.json`).
+
+If you omit this option, Sider will use your repository root directory (it will be sufficient in most cases).
 
 ## `linter.<analyzer_id>.gems`
 
@@ -172,7 +176,7 @@ linter:
       - name: "rubocop-mycompany-standard"
         git:
           repo: "https://github.com/mycompany/rubocop-mycompany-standard.git"
-          branch: "master"
+          branch: "main"
       - name: "rubocop-mycompany-extensions"
         git:
           repo: "git@github.com/mycomapny/rubocop-mycompany-extensions.git"
@@ -194,7 +198,7 @@ If you would like to install a gem located in a private git repository, see [pri
 
 _Type:_ `boolean`, `string`
 
-For npm-published analyzers such as [ESLint](../tools/javascript/eslint.md) or [stylelint](../tools/css/stylelint.md), you can use the `npm_install` option to configure the behavior of npm dependencies installation. This option has the following values:
+For npm-published analyzers such as [ESLint](../tools/javascript/eslint.md) or [stylelint](../tools/css/stylelint.md), you can use the `npm_install` option to configure the behavior of npm dependencies installation. This option accepts one of the following values:
 
 | Value            | Description                                                                             |
 | ---------------- | --------------------------------------------------------------------------------------- |
@@ -202,7 +206,6 @@ For npm-published analyzers such as [ESLint](../tools/javascript/eslint.md) or [
 | `false`          | Do not install any dependencies.                                                        |
 | `"production"`   | Install only dependencies for production.                                               |
 | `"development"`  | Install only dependencies for development.                                              |
-| Others           | Fail analysis.                                                                          |
 
 For example:
 
@@ -259,7 +262,7 @@ Development packages provided by the OS environment may be necessary, particular
 The `apt` option allows you to specify a list of development packages your project depends on.
 The packages must satisfy the conditions below:
 
-- Packages must be compatible with [our Docker image](https://github.com/sider/devon_rex/blob/master/base/Dockerfile).
+- Packages must be compatible with [our Docker image](https://github.com/sider/devon_rex/blob/HEAD/base/Dockerfile).
 - Package names must be suffixed with "-dev".
 - Each package name must be formatted as `<name>` or `<name>=<version>`.
 
@@ -327,12 +330,12 @@ In order to use this option, add it as a top-level in `sider.yml` like this:
 ```yaml
 branches:
   exclude:
-    - master
+    - main
     - development
     - another_branch
 ```
 
-With the above setting, Sider will ignore `master`, `development` and `another_branch` branches when these branches(pull requests) are updated or opened. That is, even if these branches have any changes, Sider will not send commit status and not review them.
+With the above setting, Sider will ignore `main`, `development` and `another_branch` branches when these branches (pull requests) are updated or opened. That is, even if these branches have any changes, Sider will not send commit status and not review them.
 
 > If Sider is enabled to make status checks required on GitHub, you cannot merge a branch because Sider will not send the commit status to GitHub.
 > In this case, you need to disable the check status setting on your GitHub repository page.

@@ -10,9 +10,9 @@ hide_title: true
 > **DEPRECATED**: TSLint has been deprecated and it recommends migrating to [TypeScript ESLint](https://github.com/typescript-eslint/typescript-eslint).
 > See the [discussion](https://github.com/palantir/tslint/issues/4534) for more details.
 
-| Supported Version       | Language   | Runtime         | Website                           |
-| ----------------------- | ---------- | --------------- | --------------------------------- |
-| 5.0.0+ (default: 6.1.3) | TypeScript | Node.js 12.19.0 | https://palantir.github.io/tslint |
+| Supported Version       | Language   | Website                           |
+| ----------------------- | ---------- | --------------------------------- |
+| 5.0.0+ (default: 6.1.3) | TypeScript | https://palantir.github.io/tslint |
 
 **TSLint** is an extensible static analysis tool for TypeScript.
 It checks your code for readability, maintainability, and functionality errors.
@@ -38,7 +38,7 @@ Then, edit the configuration file as you want. For more details about the config
 
 ## Default Configuration for TSLint
 
-Sider prepares the [default TSLint configuration](https://github.com/sider/runners/blob/master/images/tslint/default_tslint.json).
+Sider prepares the [default TSLint configuration](https://github.com/sider/runners/blob/HEAD/images/tslint/default_tslint.json).
 
 ## Configuration
 

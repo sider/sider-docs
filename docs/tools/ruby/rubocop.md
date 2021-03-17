@@ -7,9 +7,9 @@ hide_title: true
 
 # RuboCop
 
-| Supported Version        | Language   | Website             |
-| ------------------------ | ---------- | ------------------- |
-| 0.61.0+ (default: 1.0.0) | Ruby 2.7.2 | https://rubocop.org |
+| Supported Version         | Language | Website             |
+| ------------------------- | -------- | ------------------- |
+| 0.61.0+ (default: 1.11.0) | Ruby     | https://rubocop.org |
 
 **RuboCop** is a pluggable static code analyzer and code formatter for Ruby.
 It has been community-driven developed and has many rules and plugins including third-party's ones.
@@ -28,7 +28,7 @@ See also the [user guide](https://docs.rubocop.org/rubocop/usage/basic_usage) fo
 
 ## Default Configuration for RuboCop
 
-If a `.rubocop.yml` file does not exist in your repository, Sider uses the [default configuration](https://github.com/sider/runners/blob/master/images/rubocop/default_rubocop.yml)
+If a `.rubocop.yml` file does not exist in your repository, Sider uses the [default configuration](https://github.com/sider/runners/blob/HEAD/images/rubocop/default_rubocop.yml)
 including the [MeowCop](https://github.com/sider/meowcop) gem.
 
 ## Configuration
@@ -65,6 +65,6 @@ If confirming whether a cop is _safe_ or not, see the [cops' document](https://d
 ### `rails`
 
 > **DEPRECATED**: The option is ignored when using the version `0.72.0` or later, and will be removed in the future.
-> Use [`rubocop-rails`](https://github.com/rubocop-hq/rubocop-rails) instead.
+> Use [`rubocop-rails`](https://github.com/rubocop/rubocop-rails) instead.
 
 This option allows you to select whether using Rails cops or not. If omitted, Sider automatically determines it.
