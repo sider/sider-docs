@@ -30,14 +30,14 @@ Here's a sample Phinder configuration in `sider.yml`:
 linter:
   phinder:
     rule: config/phinder.yml
-    php: src
+    target: src
 ```
 
 | Name                                                                                  | Type     | Default |
 | ------------------------------------------------------------------------------------- | -------- | ------- |
 | [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string` | -       |
 | [`rule`](#rule)                                                                       | `string` | -       |
-| [`php`](#php)                                                                         | `string` | -       |
+| [`target`](#target)                                                                   | `string` | -       |
 
 ### `rule`
 
@@ -51,7 +51,7 @@ linter:
     rule: rules # Phinder will use './rules/*.yml' when analyzing.
 ```
 
-### `php`
+### `target`
 
 This option allows you to specify a path to your project to analyze.
 If it is a file, Phinder will analyze merely the file.
@@ -60,5 +60,7 @@ If a directory, Phinder will analyze all the `.php` files under the directory.
 ```yaml
 linter:
   phinder:
-    php: src # Phinder will analyze '.php' files in '/src' directory.
+    target: src # Phinder will analyze '.php' files in '/src' directory.
 ```
+
+alias: `dir`

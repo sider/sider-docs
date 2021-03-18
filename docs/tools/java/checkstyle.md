@@ -25,7 +25,7 @@ You can customize Checkstyle analysis using `sider.yml`. For example:
 linter:
   checkstyle:
     config: google
-    dir: src
+    target: src
     exclude:
       - vendor
       - pattern: foo
@@ -41,7 +41,7 @@ linter:
 | [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`                       | -        |
 | [`jvm_deps`](../../getting-started/custom-configuration.md#linteranalyzer_idjvm_deps) | `string[][]`                   | `[]`     |
 | [`config`](#config)                                                                   | `string`                       | `google` |
-| [`dir`](#dir)                                                                         | `string`, `string[]`           | `.`      |
+| [`target`](#target)                                                                   | `string`, `string[]`           | `.`      |
 | [`exclude`](#exclude)                                                                 | `string`, `string[]`, `hash[]` | -        |
 | [`ignore`](#ignore)                                                                   | `string[]`                     | -        |
 | [`properties`](#properties)                                                           | `string`                       | -        |
@@ -64,9 +64,11 @@ Supported values are:
 
 See also the [`-c` CLI option](https://checkstyle.org/cmdline.html) of Checkstyle.
 
-### `dir`
+### `target`
 
-This option allows you to specify the directories you want to check in your repository.
+This option allows you to specify directories to be analyzed.
+
+alias: `dir`
 
 ### `exclude`
 

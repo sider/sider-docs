@@ -27,7 +27,7 @@ You can customize the analysis via `sider.yml`:
 linter:
   pmd_cpd:
     minimum-tokens: 70
-    files: src
+    target: src
     language: cpp
     encoding: UTF-8
     skip-duplicate-files: true
@@ -45,7 +45,7 @@ linter:
 | ------------------------------------------------------------------------------------- | -------------------- | --------------- |
 | [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`             | -               |
 | [`minimum-tokens`](#minimum-tokens)                                                   | `number`             | `100`           |
-| [`files`](#files)                                                                     | `string`, `string[]` | `.`             |
+| [`target`](#target)                                                                   | `string`, `string[]` | `.`             |
 | [`language`](#language)                                                               | `string`, `string[]` | _(see below)_   |
 | [`encoding`](#encoding)                                                               | `string`             | (PMD's default) |
 | [`skip-duplicate-files`](#skip-duplicate-files)                                       | `boolean`            | `false`         |
@@ -62,19 +62,11 @@ linter:
 
 The minimum token length which should be reported as a duplicate.
 
-### `files`
+### `target`
 
-This option allows you to specify a list of files and directories to analyze, e.g.:
+This option allows you to specify files or directories to be analyzed, e.g.:
 
-```yaml
-linter:
-  pmd_cpd:
-    files: src
-    # or
-    # files: [src, lib]
-    # or
-    # files: [path/to/Some.java, src]
-```
+alias: `files`
 
 ### `language`
 

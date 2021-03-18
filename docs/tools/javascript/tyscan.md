@@ -33,19 +33,19 @@ linter:
   tyscan:
     config: "lint_yml/tyscan.yml"
     tsconfig: "some/tsconfig.json"
-    paths:
+    target:
       - frontend
 ```
 
 You can use the following options to make analysis fitter for your project.
 
-| Name                                                                                        | Type                | Default         |
-| ------------------------------------------------------------------------------------------- | ------------------- | --------------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir)       | `string`            | -               |
-| [`npm_install`](../../getting-started/custom-configuration.md#linteranalyzer_idnpm_install) | `boolean`, `string` | -               |
-| [`config`](#config)                                                                         | `string`            | `tyscan.yml`    |
-| [`tsconfig`](#tsconfig)                                                                     | `string`            | `tsconfig.json` |
-| [`paths`](#paths)                                                                           | `string[]`          | -               |
+| Name                                                                                        | Type                 | Default         |
+| ------------------------------------------------------------------------------------------- | -------------------- | --------------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir)       | `string`             | -               |
+| [`npm_install`](../../getting-started/custom-configuration.md#linteranalyzer_idnpm_install) | `boolean`, `string`  | -               |
+| [`config`](#config)                                                                         | `string`             | `tyscan.yml`    |
+| [`tsconfig`](#tsconfig)                                                                     | `string`             | `tsconfig.json` |
+| [`target`](#target)                                                                         | `string`, `string[]` | -               |
 
 ### `config`
 
@@ -61,6 +61,8 @@ linter:
 
 This option allows you to set your TypeScript project file.
 
-### `paths`
+### `target`
 
-This option allows you to specify files or directories to analyze.
+This option allows you to specify files or directories to be analyzed.
+
+alias: `paths`

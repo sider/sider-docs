@@ -32,21 +32,23 @@ Here is a configuration example via `sider.yml`:
 ```yaml
 linter:
   jshint:
-    dir: src
+    target: src
     config: lint_yml/.jshintrc
 ```
 
 You can use sereral options to make analysis fitter for your project.
 
-| Name                                                                                  | Type     | Default |
-| ------------------------------------------------------------------------------------- | -------- | ------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string` | -       |
-| [`dir`](#dir)                                                                         | `string` | `.`     |
-| [`config`](#config)                                                                   | `string` | -       |
+| Name                                                                                  | Type                 | Default |
+| ------------------------------------------------------------------------------------- | -------------------- | ------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`             | -       |
+| [`target`](#target)                                                                   | `string`, `string[]` | `.`     |
+| [`config`](#config)                                                                   | `string`             | -       |
 
-### `dir`
+### `target`
 
-This option allows you to specify a directory to analyze.
+This option allows you to specify directories to be analyzed.
+
+alias: `dir`
 
 ### `config`
 

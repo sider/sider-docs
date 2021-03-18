@@ -44,7 +44,7 @@ You can use several options to more comfortable analysis to your project.
 | ------------------------------------------------------------------------------------- | -------------------- | ------- |
 | [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`             | -       |
 | [`target`](#target)                                                                   | `string`, `string[]` | `.`     |
-| [`exclude`](#exclude)                                                                 | `string[]`           | `[]`    |
+| [`exclude`](#exclude)                                                                 | `string`, `string[]` | -       |
 | [`locale`](#locale)                                                                   | `"US"`, `"UK"`       | -       |
 | [`ignore`](#ignore)                                                                   | `string`, `string[]` | -       |
 

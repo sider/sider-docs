@@ -26,7 +26,7 @@ Here is an example configuration via `sider.yml`:
 ```yaml
 linter:
   swiftlint:
-    path: Source/
+    target: Source/
     config: lint_yml/.swiftlint.yml
     ignore_warnings: true
     lenient: true
@@ -35,18 +35,18 @@ linter:
 
 You can use several options to fine-tune SwiftLint to your project.
 
-| Name                                                                                  | Type      | Default |
-| ------------------------------------------------------------------------------------- | --------- | ------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`  | -       |
-| [`path`](#path)                                                                       | `string`  | -       |
-| [`config`](#config)                                                                   | `string`  | -       |
-| [`ignore_warnings`](#ignore_warnings)                                                 | `boolean` | `false` |
-| [`lenient`](#lenient)                                                                 | `boolean` | `false` |
-| [`enable-all-rules`](#enable-all-rules)                                               | `boolean` | `false` |
+| Name                                                                                  | Type                 | Default |
+| ------------------------------------------------------------------------------------- | -------------------- | ------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`             | -       |
+| [`target`](#target)                                                                   | `string`, `string[]` | -       |
+| [`config`](#config)                                                                   | `string`             | -       |
+| [`ignore_warnings`](#ignore_warnings)                                                 | `boolean`            | `false` |
+| [`lenient`](#lenient)                                                                 | `boolean`            | `false` |
+| [`enable-all-rules`](#enable-all-rules)                                               | `boolean`            | `false` |
 
-### `path`
+### `target`
 
-This option allows you to specify a file or directory to analyze.
+This option allows you to specify files or directories to be analyzed.
 
 This also allows you to specify a special format `"@path/to/file"` (prefixed with `@`). You can create a file which contains a list of file names to be analyzed and pass it to the analyzer with this option.
 
@@ -67,6 +67,8 @@ linter:
 ```
 
 Note that the file path should be relative to the root directory where the `sider.yml` is located or the `root_dir` directory if it is specified.
+
+alias: `path`
 
 ### `config`
 

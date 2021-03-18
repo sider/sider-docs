@@ -25,7 +25,7 @@ You can customize JavaSee analysis using `sider.yml`. For example:
 linter:
   javasee:
     config: my_javasee.yml
-    dir:
+    target:
       - src
       - test
 ```
@@ -34,14 +34,16 @@ linter:
 | ------------------------------------------------------------------------------------- | -------------------- | ------- |
 | [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`             | -       |
 | [`config`](#config)                                                                   | `string`             | -       |
-| [`dir`](#dir)                                                                         | `string`, `string[]` | -       |
+| [`target`](#target)                                                                   | `string`, `string[]` | -       |
 
 ### `config`
 
 This option allows you to specify your configuration file path for JavaSee.
 If omitted, the default `javasee.yml` will be used.
 
-### `dir`
+### `target`
 
-This option allows you to specify directories to analyze.
+This option allows you to specify directories to be analyzed.
 If omitted, all the Java files in your repository will be analyzed.
+
+alias: `dir`

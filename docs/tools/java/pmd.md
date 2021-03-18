@@ -25,7 +25,7 @@ You can customize the analysis via `sider.yml`:
 ```yaml
 linter:
   pmd_java:
-    dir: src
+    target: src
     rulesets:
       - category/java/errorprone.xml
       - path/to/custom-ruleset.xml
@@ -37,14 +37,16 @@ linter:
 | ------------------------------------------------------------------------------------- | -------------------- | --------------- |
 | [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`             | -               |
 | [`jvm_deps`](../../getting-started/custom-configuration.md#linteranalyzer_idjvm_deps) | `string[][]`         | `[]`            |
-| [`dir`](#dir)                                                                         | `string`             | `.`             |
+| [`target`](#target)                                                                   | `string`             | `.`             |
 | [`rulesets`](#rulesets)                                                               | `string`, `string[]` | (see below)     |
 | [`encoding`](#encoding)                                                               | `string`             | (PMD's default) |
 | [`min_priority`](#min_priority)                                                       | `number`             | (PMD's default) |
 
-### `dir`
+### `target`
 
 This option allows you to specify a directory to analyze.
+
+alias: `dir`
 
 ### `rulesets`
 
