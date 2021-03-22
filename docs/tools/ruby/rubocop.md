@@ -46,12 +46,12 @@ linter:
 
 You can use the following options to make analysis fitter for your project.
 
-| Name                                                                                  | Type                 | Default |
-| ------------------------------------------------------------------------------------- | -------------------- | ------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`             | -       |
-| [`gems`](../../getting-started/custom-configuration.md#linteranalyzer_idgems)         | `string[]`, `hash[]` | -       |
-| [`config`](#config)                                                                   | `string`             | -       |
-| [`safe`](#safe)                                                                       | `boolean`            | `false` |
+| Name                                                                                  | Type                | Default |
+| ------------------------------------------------------------------------------------- | ------------------- | ------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`            | -       |
+| [`gems`](../../getting-started/custom-configuration.md#linteranalyzer_idgems)         | `string[]`, `map[]` | -       |
+| [`config`](#config)                                                                   | `string`            | -       |
+| [`safe`](#safe)                                                                       | `boolean`           | `false` |
 
 ### `config`
 

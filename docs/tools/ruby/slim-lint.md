@@ -48,7 +48,7 @@ You can use several options to fine-tune HAML-Lint to your project.
 | Name                                                                                  | Type                 | Default |
 | ------------------------------------------------------------------------------------- | -------------------- | ------- |
 | [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`             | -       |
-| [`gems`](../../getting-started/custom-configuration.md#linteranalyzer_idgems)         | `string[]`, `hash[]` | -       |
+| [`gems`](../../getting-started/custom-configuration.md#linteranalyzer_idgems)         | `string[]`, `map[]`  | -       |
 | [`target`](#target)                                                                   | `string`, `string[]` | `.`     |
 | [`config`](#config)                                                                   | `string`             | -       |
 
