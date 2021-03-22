@@ -68,7 +68,7 @@ linter:
 
 Note that the file path should be relative to the root directory where the `sider.yml` is located or the `root_dir` directory if it is specified.
 
-alias: `path`
+_alias:_ `path`
 
 ### `config`
 

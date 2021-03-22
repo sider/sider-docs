@@ -63,4 +63,4 @@ linter:
     target: src # Phinder will analyze '.php' files in '/src' directory.
 ```
 
-alias: `dir`
+_alias:_ `dir`

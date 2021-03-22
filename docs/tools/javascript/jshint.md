@@ -48,7 +48,7 @@ You can use sereral options to make analysis fitter for your project.
 
 This option allows you to specify directories to be analyzed.
 
-alias: `dir`
+_alias:_ `dir`
 
 ### `config`
 

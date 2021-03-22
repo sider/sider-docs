@@ -65,4 +65,4 @@ This option allows you to set your TypeScript project file.
 
 This option allows you to specify files or directories to be analyzed.
 
-alias: `paths`
+_alias:_ `paths`

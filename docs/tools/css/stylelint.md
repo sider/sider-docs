@@ -73,7 +73,7 @@ See also the [official document](https://stylelint.io/user-guide/usage/options) 
 
 This option allows you to specify files or directories to be analyzed. Glob patterns are available.
 
-alias: `glob`
+_alias:_ `glob`
 
 ### `config`
 

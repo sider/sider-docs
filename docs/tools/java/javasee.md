@@ -46,4 +46,4 @@ If omitted, the default `javasee.yml` will be used.
 This option allows you to specify directories to be analyzed.
 If omitted, all the Java files in your repository will be analyzed.
 
-alias: `dir`
+_alias:_ `dir`

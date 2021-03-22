@@ -67,7 +67,7 @@ For more details about the options, see the [official documentation](https://det
 
 This option allows you to specify paths to be analyzed.
 
-alias: `input`
+_alias:_ `input`
 
 ### `baseline`
 

@@ -68,7 +68,7 @@ See also the [`-c` CLI option](https://checkstyle.org/cmdline.html) of Checkstyl
 
 This option allows you to specify directories to be analyzed.
 
-alias: `dir`
+_alias:_ `dir`
 
 ### `exclude`
 

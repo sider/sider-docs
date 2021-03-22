@@ -46,7 +46,7 @@ linter:
 
 This option allows you to specify a directory to analyze.
 
-alias: `dir`
+_alias:_ `dir`
 
 ### `rulesets`
 

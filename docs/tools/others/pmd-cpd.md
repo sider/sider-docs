@@ -66,7 +66,7 @@ The minimum token length which should be reported as a duplicate.
 
 This option allows you to specify files or directories to be analyzed, e.g.:
 
-alias: `files`
+_alias:_ `files`
 
 ### `language`
 
