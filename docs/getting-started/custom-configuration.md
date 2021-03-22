@@ -105,6 +105,12 @@ In the configuration above, Sider will run ESLint at the `frontend/` directory (
 
 If you omit this option, Sider will use your repository root directory (it will be sufficient in most cases).
 
+## `linter.<analyzer_id>.dependencies`
+
+This is a common option available to some analyzers that have a dependency manager like npm or Bundler.
+
+TODO...
+
 ## `linter.<analyzer_id>.gems`
 
 _Type:_ `string[]`, `hash[]`
