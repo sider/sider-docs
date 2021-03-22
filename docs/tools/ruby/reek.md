@@ -38,7 +38,7 @@ You can use the following options to make analysis fitter for your project.
 | Name                                                                                  | Type                 | Default |
 | ------------------------------------------------------------------------------------- | -------------------- | ------- |
 | [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`             | -       |
-| [`gems`](../../getting-started/custom-configuration.md#linteranalyzer_idgems)         | `string[]`, `hash[]` | -       |
+| [`gems`](../../getting-started/custom-configuration.md#linteranalyzer_idgems)         | `string[]`, `map[]`  | -       |
 | [`target`](#target)                                                                   | `string`, `string[]` | `.`     |
 | [`config`](#config)                                                                   | `string`             | -       |
 
