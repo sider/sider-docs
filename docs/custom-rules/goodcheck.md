@@ -14,14 +14,14 @@ Goodcheck is a cross-language linter which allows you to create custom rules. Ru
 Example rules can be copied and pasted into your `goodcheck.yml` file.
 For more information on setting up Goodcheck, please see [basic instructions](#basic-instructions).
 
-The rule hash contains the following **required** keys.
+The rule map contains the following **required** keys.
 
 - `id`: a string to identify rules.
 - `pattern`: a _pattern_ or a sequence of *pattern*s.
 - `message`: a string to tell writers why the code piece should be revised.
   - We recommend writing the message in Markdown (CommonMark) so that it is shown correctly on Sider and GitHub. E.g. wrapping an HTML tag with backticks.
 
-The rule hash contains the following _optional_ keys.
+The rule map contains the following _optional_ keys.
 
 - `justification`: a sequence of strings to tell writers of exceptions to the rule.
 - `glob`: a _glob_ or a sequence of *glob*s.

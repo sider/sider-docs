@@ -107,7 +107,7 @@ If you omit this option, Sider will use your repository root directory (it will 
 
 ## `linter.<analyzer_id>.gems`
 
-_Type:_ `string[]`, `hash[]`
+_Type:_ `string[]`, `map[]`
 
 Some analyzers written in Ruby can be customized with third-party [gems](https://rubygems.org/). With Sider, you can use [Bundler](https://bundler.io/) to install any gem. The following is an example of installing RuboCop plugins or configuration gems:
 

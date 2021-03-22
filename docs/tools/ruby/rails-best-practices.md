@@ -35,17 +35,17 @@ linter:
     only: app,config
 ```
 
-| Name                                                                                  | Type                 | Default |
-| ------------------------------------------------------------------------------------- | -------------------- | ------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`             | -       |
-| [`gems`](../../getting-started/custom-configuration.md#linteranalyzer_idgems)         | `string[]`, `hash[]` | -       |
-| [`config`](#config)                                                                   | `string`             | -       |
-| [`vendor`](#vendor)                                                                   | `boolean`            | `true`  |
-| [`spec`](#spec)                                                                       | `boolean`            | `false` |
-| [`test`](#test)                                                                       | `boolean`            | `false` |
-| [`features`](#features)                                                               | `boolean`            | `false` |
-| [`exclude`](#exclude)                                                                 | `string`             | -       |
-| [`only`](#only)                                                                       | `string`             | -       |
+| Name                                                                                  | Type                | Default |
+| ------------------------------------------------------------------------------------- | ------------------- | ------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`            | -       |
+| [`gems`](../../getting-started/custom-configuration.md#linteranalyzer_idgems)         | `string[]`, `map[]` | -       |
+| [`config`](#config)                                                                   | `string`            | -       |
+| [`vendor`](#vendor)                                                                   | `boolean`           | `true`  |
+| [`spec`](#spec)                                                                       | `boolean`           | `false` |
+| [`test`](#test)                                                                       | `boolean`           | `false` |
+| [`features`](#features)                                                               | `boolean`           | `false` |
+| [`exclude`](#exclude)                                                                 | `string`            | -       |
+| [`only`](#only)                                                                       | `string`            | -       |
 
 ### `config`
 
