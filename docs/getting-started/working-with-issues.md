@@ -68,7 +68,7 @@ If you see an issue you do not think should be ignored, click the yellow `Reopen
 
 ## Who Can Close Issues?
 
-By default users with write or admin permissions can close issues.
+By default, users with write or admin permissions can close issues.
 
 You can also change this restriction to only users with admin permissions. See [Restricting access to Close button](../advanced-settings/restricting-access-to-close-button.md).
 
