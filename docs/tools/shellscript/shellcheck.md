@@ -72,7 +72,7 @@ For example, if you have a file named `hello` including the following content, S
 echo "This script's filename is `hello`."
 ```
 
-If you want to disable this shebang behavior, explicitly specify `shebang: false` as follow:
+If you want to disable this shebang behavior, explicitly specify `shebang: false` as follows:
 
 ```yaml
 linter:

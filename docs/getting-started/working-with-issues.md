@@ -60,7 +60,7 @@ If there are any closed issues in your pull request, the commit status message w
 
 ![PR status](../assets/pr-closed-status.png)
 
-Make sure to carefully review all of the changes and double-check the issues that were closed on Sider.
+Make sure to carefully review all the changes and double-check the issues that were closed on Sider.
 
 ![Reopening issues](../assets/issues-reopen-v2.png)
 
@@ -68,7 +68,7 @@ If you see an issue you do not think should be ignored, click the yellow `Reopen
 
 ## Who Can Close Issues?
 
-By default users with write or admin permissions can close issues.
+By default, users with write or admin permissions can close issues.
 
 You can also change this restriction to only users with admin permissions. See [Restricting access to Close button](../advanced-settings/restricting-access-to-close-button.md).
 

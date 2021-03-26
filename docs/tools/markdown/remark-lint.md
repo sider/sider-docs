@@ -91,7 +91,7 @@ linter:
 This option allows you to specify file extensions to analyze, and the value should be comma-separated.
 By default, remark-lint tries to find all markdown files as possible, so you may not usually need to use this option.
 
-For example, if you want to analysis only `*.md` and `*.mdown` files, you need to set the option as follow:
+For example, if you want to analyze only `*.md` and `*.mdown` files, you need to set the option as follows:
 
 ```yaml
 linter:
