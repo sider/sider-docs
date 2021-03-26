@@ -18,24 +18,24 @@ For the organization settings, Sider checks for permissions in an organization. 
 
 ## Permissions requirement for an organization
 
-| Action                                     | Billing Manager | Members | Owners |
-| ------------------------------------------ | :-------------: | :-----: | :----: |
-| Install Sider                              |                 |         |   X    |
-| See repository adding page                 |                 |    X    |   X    |
-| Add repositories                           |                 |   X¹    |   X    |
-| See repositories                           |                 |   X²    |   X    |
-| Enable repositories                        |                 |         |   X    |
-| Delete repositories                        |                 |         |   X    |
-| Register credit cards                      |                 |         |   X    |
-| Upgrade plan                               |                 |         |   X    |
-| Cancel plan                                |                 |         |   X    |
-| Assign seats                               |                 |         |   X    |
-| Sync with GitHub                           |                 |         |   X    |
-| Invite members                             |                 |         |   X    |
-| Add Billing Manager                        |                 |         |   X    |
-| Edit Billing Manager                       |                 |         |   X    |
-| Delete Billing Manager                     |                 |         |   X    |
-| Show invoices                              |        X        |    X    |   X    |
+| Action                                      | Billing Manager | Members | Owners |
+| ------------------------------------------- | :-------------: | :-----: | :----: |
+| Install Sider                               |                 |         |   X    |
+| See repository adding page                  |                 |    X    |   X    |
+| Add repositories                            |                 |   X¹    |   X    |
+| See repositories                            |                 |   X²    |   X    |
+| Enable repositories                         |                 |         |   X    |
+| Delete repositories                         |                 |         |   X    |
+| Register credit cards                       |                 |         |   X    |
+| Upgrade plan                                |                 |         |   X    |
+| Cancel plan                                 |                 |         |   X    |
+| Assign seats                                |                 |         |   X    |
+| Sync with GitHub                            |                 |         |   X    |
+| Invite members                              |                 |         |   X    |
+| Add Billing Manager                         |                 |         |   X    |
+| Edit Billing Manager                        |                 |         |   X    |
+| Delete Billing Manager                      |                 |         |   X    |
+| Show invoices                               |        X        |    X    |   X    |
 | Add supplementary information to an invoice |                 |         |   X    |
 
 ¹ Admin permission to a repository is required.
