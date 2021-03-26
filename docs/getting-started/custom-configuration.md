@@ -26,7 +26,6 @@ linter:
     root_dir: "frontend/"
     npm_install: false
     config: "frontend/.eslintrc"
-    ext: "js,jsx"
 
   stylelint:
     root_dir: "app/assets/stylesheets/"
