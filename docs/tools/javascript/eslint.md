@@ -47,11 +47,13 @@ linter:
   eslint:
     target: frontend/app
     config: .config/.eslintrc.js
-    ext: .js,.jsx,.es6
+    ext: [.js, .jsx, .es6]
     ignore-path: .my_eslintignore
     ignore-pattern: "/src/vendor/*"
     no-ignore: true
-    global: "require,exports:true"
+    global:
+      - require
+      - "exports:true"
     quiet: true
 ```
 
@@ -61,11 +63,11 @@ linter:
 | [`npm_install`](../../getting-started/custom-configuration.md#linteranalyzer_idnpm_install) | `boolean`, `string`  | -       |
 | [`target`](#target)                                                                         | `string`, `string[]` | `.`     |
 | [`config`](#config)                                                                         | `string`             | -       |
-| [`ext`](#ext)                                                                               | `string`             | `.js`   |
+| [`ext`](#ext)                                                                               | `string`, `string[]` | -       |
 | [`ignore-path`](#ignore-path)                                                               | `string`             | -       |
 | [`ignore-pattern`](#ignore-pattern)                                                         | `string`, `string[]` | -       |
 | [`no-ignore`](#no-ignore)                                                                   | `boolean`            | `false` |
-| [`global`](#global)                                                                         | `string`             | -       |
+| [`global`](#global)                                                                         | `string`, `string[]` | -       |
 | [`quiet`](#quiet)                                                                           | `boolean`            | `false` |
 
 ### `target`
@@ -86,6 +88,8 @@ linter:
 ### `dir`
 
 > **DEPRECATED**: This option is deprecated. Use the [`target`](#target) option instead.
+
+This is an alias for `target`.
 
 ### `config`
 
