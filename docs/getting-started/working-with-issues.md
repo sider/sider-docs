@@ -60,7 +60,7 @@ If there are any closed issues in your pull request, the commit status message w
 
 ![PR status](../assets/pr-closed-status.png)
 
-Make sure to carefully review all of the changes and double-check the issues that were closed on Sider.
+Make sure to carefully review all the changes and double-check the issues that were closed on Sider.
 
 ![Reopening issues](../assets/issues-reopen-v2.png)
 
