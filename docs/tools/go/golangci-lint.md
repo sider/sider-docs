@@ -91,7 +91,7 @@ See also the [official document](https://golangci-lint.run/usage/configuration/#
 
 ### `target`
 
-This option allows you to specify files or directories to analyze. If you specify some targets, configure as follow:
+This option allows you to specify files or directories to analyze. If you specify some targets, configure as follows:
 
 ```Yaml
 linter:
