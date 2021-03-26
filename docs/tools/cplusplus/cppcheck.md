@@ -60,7 +60,7 @@ You can use the following options to fine-tune Cppcheck to your project.
 
 ### `target`
 
-This option allows you to specify files or directories to analyze via Cppcheck. If you specify multiple targets, configure as follow:
+This option allows you to specify files or directories to analyze via Cppcheck. If you specify multiple targets, configure as follows:
 
 ```Yaml
 linter:
@@ -74,7 +74,7 @@ linter:
 ### `ignore`
 
 This option allows you to exclude files or directories from analysis.
-If you specify multiple targets, configure as follow:
+If you specify multiple targets, configure as follows:
 
 ```yaml
 linter:

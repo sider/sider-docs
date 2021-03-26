@@ -21,7 +21,7 @@ To start using detekt, enable it in your [repository settings](../../getting-sta
 
 ### Using detekt
 
-You can use detekt without any configuration, but we recommend to make a configuration.
+You can use detekt without any configuration, but we recommend making a configuration.
 
 Put the `detekt` key in `sider.yml` to customize the execution of detekt.
 

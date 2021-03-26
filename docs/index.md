@@ -122,7 +122,7 @@ This section has information, examples, and tips about custom rules. Learn how t
 
 ## Advanced Settings
 
-This section covers advanced features outside of the basic setup of Sider.
+This section covers advanced features outside the basic setup of Sider.
 
 - [Inline Comments](./advanced-settings/inline-comments.md)
 - [Private Dependencies](./advanced-settings/private-dependencies.md)
