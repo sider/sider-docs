@@ -11,38 +11,27 @@ hide_title: true
 | ------------------------ | ---------- | ------------------ |
 | 5.0.0+ (default: 7.22.0) | JavaScript | https://eslint.org |
 
-**ESLint** is a static analysis tool for JavaScript and its flavors (e.g. TypeScript, JSX, Vue).
+**ESLint** is a static analysis tool for JavaScript and its flavors (e.g. TypeScript, JSX, or Vue).
 It can find problems, style violations, or security issues, etc. in your code, and have so many plugins.
 
 ## Getting Started
 
 To start using ESLint, enable it in your [repository settings](../../getting-started/repository-settings.md).
-After enabled, Sider will automatically analyze your JavaScript files with the default version and [default configuration](#default-configuration-for-eslint). Or if you already have configured ESLint, Sider will install your dependencies and analyze with your configuration.
+After enabled, Sider will automatically analyze your JavaScript files with our default version and [default configuration](#default-configuration-for-eslint) (if you do not have yours).
 
-But if you want to customize more ESLint with some plugins or shareable configurations, install ESLint first:
+But, if you want to customize more ESLint with some plugins or shareable configurations, install ESLint into your project:
 
 ```console
 $ npm install eslint --save-dev
 ```
 
-Next, you may have to create your `.eslintrc.*` file(s) and configure ESLint with them. We recommend running `eslint --init`. It can ask you some questions and configure the settings for you automatically:
+Next, you need to configure ESLint for your project. We recommend `eslint --init` that helps you configure it.
 
 ```console
-$ npx eslint --init
+$ npm exec -- eslint --init
 ```
 
-For more details about the configuration, see [the ESLint documentation](https://eslint.org/docs/user-guide/getting-started).
-
-Then, if you need more customization, you can do it by adding a `sider.yml` file to your repository. For example, if you want to analyze React files in a `frontend/` directory, you may configure your `sider.yml` as follows:
-
-```yaml
-linter:
-  eslint:
-    target: frontend/
-    ext: .js,.jsx
-```
-
-For more details, see the following sections.
+See [the ESLint documentation](https://eslint.org/docs/user-guide/getting-started) to learn more.
 
 ## Default Configuration for ESLint
 
