@@ -36,7 +36,7 @@ For the organization settings, Sider checks for permissions in an organization. 
 | Edit Billing Manager                       |                 |         |   X    |
 | Delete Billing Manager                     |                 |         |   X    |
 | Show invoices                              |        X        |    X    |   X    |
-| Add supplementary information to a invoice |                 |         |   X    |
+| Add supplementary information to an invoice |                 |         |   X    |
 
 ¹ Admin permission to a repository is required.
 
