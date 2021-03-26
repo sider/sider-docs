@@ -7,8 +7,9 @@ hide_title: true
 
 # TSLint
 
-> **DEPRECATED**: TSLint has been deprecated and it recommends migrating to [TypeScript ESLint](https://github.com/typescript-eslint/typescript-eslint).
-> See the [discussion](https://github.com/palantir/tslint/issues/4534) for more details.
+> **DEPRECATED**: TSLint has been deprecated and recommends migrating to [TypeScript ESLint](https://github.com/typescript-eslint/typescript-eslint).
+> See [palantir/tslint#4534](https://github.com/palantir/tslint/issues/4534) for details.
+> And, [`tslint-to-eslint-config`](https://www.npmjs.com/package/tslint-to-eslint-config) helps you migrate it.
 
 | Supported Version       | Language   | Website                           |
 | ----------------------- | ---------- | --------------------------------- |
