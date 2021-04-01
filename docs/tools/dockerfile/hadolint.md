@@ -17,7 +17,7 @@ hide_title: true
 
 To start using hadolint, enable it in your [repository settings](../../getting-started/repository-settings.md).
 
-If you want to customize your hadolint analysis, create a [`.hadolint.yaml`](https://github.com/hadolint/hadolint#configure) file and put it into your repository.
+If you want to customize your hadolint analysis, create a file named [`.hadolint.yaml`](https://github.com/hadolint/hadolint#configure) and put it into your repository.
 
 ## Configuration
 
