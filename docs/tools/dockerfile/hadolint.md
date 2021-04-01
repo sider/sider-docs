@@ -7,21 +7,17 @@ hide_title: true
 
 # hadolint
 
-| Supported Version | Language   | Website                              |
-| ----------------- | ---------- | ------------------------------------ |
-| 1.23.0            | Dockerfile | https://github.com/hadolint/hadolint |
+| Supported Version | Language   | Website                             |
+| ----------------- | ---------- | ----------------------------------- |
+| 1.23.0            | Dockerfile | https://hadolint.github.io/hadolint |
 
-**hadolint** is a [Dockerfile](https://docs.docker.com/engine/reference/builder) linter that helps you build best practice Docker images.
+**hadolint** is a [Dockerfile](https://docs.docker.com/engine/reference/builder) linter that helps you build [best practice](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/) Docker images.
 
 ## Getting Started
 
 To start using hadolint, enable it in your [repository settings](../../getting-started/repository-settings.md).
 
-For more details for hadolint, see the command-line help:
-
-```shell
-$ hadolint --help
-```
+If you want to customize your hadolint analysis, create a [`.hadolint.yaml`](https://github.com/hadolint/hadolint#configure) file and put it into your repository.
 
 ## Configuration
 
