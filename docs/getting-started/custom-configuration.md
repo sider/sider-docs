@@ -135,8 +135,8 @@ linter:
 
   checkstyle: # via Gradle
     dependencies:
-      - "com.github.sevntu-checkstyle:sevntu-checks:1.37.1"
-      - { name: "com.github.sevntu-checkstyle:sevntu-checks", version: "1.37.1" }
+      - "io.spring.javaformat:spring-javaformat-checkstyle:0.0.27"
+      - { name: "io.spring.javaformat:spring-javaformat-checkstyle", version: "1.37.1" }
 ```
 
 See also each package manager's section below.
@@ -209,7 +209,37 @@ If you would like to install a gem located in a private Git repository, see [Pri
 
 ### For npm
 
+Sider uses [npm](https://docs.npmjs.com) to install JavaScript dependencies. There are the following ways to specify them:
+
+- Specify a dependency name without a version. This will install the latest version.
+- Specify a dependency name and version with the [`npm install`](https://docs.npmjs.com/cli/v7/commands/npm-install) format `<name>@<version>`.
+- Specify a dependency name and version with a _map_ that will be resolved into the format above.
+
+For example:
+
+```yaml
+linter:
+  eslint:
+    dependencies:
+      - "eslint-plugin-react"
+      - "eslint-plugin-react@7.23.1"
+      - { name: "eslint-plugin-react", version: "7.23.1" }
+```
+
 ### For Gradle
+
+Sider uses [Gradle](https://gradle.org) to install Java dependencies. There are the following ways to specify them:
+
+- Specify a dependency name and version with the [Gradle format](https://docs.gradle.org/current/dsl/org.gradle.api.artifacts.dsl.DependencyHandler.html) `<group>:<name>:<version>`.
+- Specify a dependency name and version with a _map_ that will be resolved into the format above.
+
+```yaml
+linter:
+  checkstyle:
+    dependencies:
+      - "io.spring.javaformat:spring-javaformat-checkstyle:0.0.27"
+      - { name: "io.spring.javaformat:spring-javaformat-checkstyle", version: "1.37.1" }
+```
 
 ## `linter.<analyzer_id>.gems`
 
