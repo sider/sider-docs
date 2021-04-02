@@ -112,9 +112,9 @@ This is a common option to install dependencies required by analyzers. The optio
 
 We supports the following package managers:
 
-- [Bundler](https://bundler.io) (for Ruby)
-- [npm](https://www.npmjs.com) (for JavaScript)
-- [Gradle](https://gradle.org) (for Java)
+- [Bundler](#for-bundler) (for Ruby)
+- [npm](#for-npm) (for JavaScript)
+- [Gradle](#for-gradle) (for Java)
 
 There are some ways to use this option, for example:
 
@@ -122,27 +122,31 @@ There are some ways to use this option, for example:
 linter:
   rubocop: # via Bundler
     dependencies:
-      - "rubocop" # dependency name
-      - { name: "rubocop-rails", version: "2.9.0" } # dependency name and version
+      - "rubocop-rails"
+      - { name: "rubocop-rails", version: "2.9.0" }
+      - { name: "rubocop-rails", version: "2.9.0", source: "..." }
+      - { name: "rubocop-rails", git: { ... } }
 
   eslint: # via npm
     dependencies:
-      - "eslint"
-      - "eslint-plugin-react@7.23.1" # npm style: `<name>@<version>`
-      - { name: "eslint-plugin-react-hooks", version: "4.2.0" }
+      - "eslint-plugin-react"
+      - "eslint-plugin-react@7.23.1"
+      - { name: "eslint-plugin-react", version: "7.23.1" }
 
   checkstyle: # via Gradle
     dependencies:
-      - "com.github.sevntu-checkstyle:sevntu-checks:1.37.1" # Gradle style: `<group>:<name>:<version>`
-      - { name: "org.apache.commons:commons-lang3", version: "3.12.0" }
+      - "com.github.sevntu-checkstyle:sevntu-checks:1.37.1"
+      - { name: "com.github.sevntu-checkstyle:sevntu-checks", version: "1.37.1" }
 ```
 
 See also each package manager's section below.
 
 ### For Bundler
 
-If required dependencies (_gems_) are in your `Gemfile.lock`, Sider will install the dependencies with no configuration.
-Also, if no `Gemfile.lock`, Sider will use our default version. This means that you basically have to do nothing.
+Sider uses [Bundler](https://bundler.io) to install Ruby dependencies (called _gems_).
+If gems for an analyzer are in your `Gemfile.lock`, Sider will install the gems with no configuration.
+Also, if `Gemfile.lock` is not found, Sider will use our default version instead of installing gems.
+This means that you _basically_ have to do nothing about installation.
 
 Sider decides a Ruby analyzer version in the following order:
 
@@ -194,19 +198,23 @@ linter:
 
 The `git` option receives the following options:
 
-| Name     | Type     | Description                                                                          |
-| -------- | -------- | ------------------------------------------------------------------------------------ |
-| `repo`   | `string` | Git repository location. The repository can be accessed via HTTP(S) or SSH protocols |
-| `branch` | `string` | Branch name                                                                          |
-| `tag`    | `string` | Tag name                                                                             |
-| `ref`    | `string` | Ref name                                                                             |
+| Name     | Type     | Description                                                     |
+| -------- | -------- | --------------------------------------------------------------- |
+| `repo`   | `string` | Git repository location accessible via HTTP(S) or SSH protocols |
+| `branch` | `string` | Branch name                                                     |
+| `tag`    | `string` | Tag name                                                        |
+| `ref`    | `string` | Ref name                                                        |
 
 If you would like to install a gem located in a private Git repository, see [Private Dependencies](../advanced-settings/private-dependencies.md).
 
+### For npm
+
+### For Gradle
+
 ## `linter.<analyzer_id>.gems`
 
-This is an alias of [`linter.<analyzer_id>.dependencies`](#linteranalyzer_iddependencies) for Ruby analysis tools.
-Please use `dependencies` instead of `gems` because the latter will be deprecated.
+This is an alias of [`linter.<analyzer_id>.dependencies`](#linteranalyzer_iddependencies).
+Please use `dependencies` instead of `gems` because it will be deprecated.
 
 ## `linter.<analyzer_id>.npm_install`
 
