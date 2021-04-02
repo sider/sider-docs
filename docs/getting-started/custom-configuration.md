@@ -111,7 +111,7 @@ _type:_ `string[]`, `map[]`
 This common option allows you to install dependencies required by analyzers.
 The option may be useful when you do not want to manage dependencies by yourself (such dependencies are often needless at runtime) or avoid some dependency problems.
 
-We supports the following package managers:
+We support the following package managers:
 
 - [Bundler](#for-bundler) (for Ruby)
 - [npm](#for-npm) (for JavaScript)
