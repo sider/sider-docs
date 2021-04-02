@@ -9,7 +9,7 @@ hide_title: true
 
 | Supported Version        | Language     | Website                      |
 | ------------------------ | ------------ | ---------------------------- |
-| 1.16.0+ (default: 4.1.3) | CoffeeScript | https://coffeelint.github.io |
+| 1.16.0+ (default: 4.1.4) | CoffeeScript | https://coffeelint.github.io |
 
 **CoffeeLint** is a style checker that helps keep CoffeeScript code clean and consistent.
 

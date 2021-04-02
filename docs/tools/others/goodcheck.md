@@ -40,11 +40,12 @@ linter:
       - app
 ```
 
-| Name                                                                                  | Type                 | Default |
-| ------------------------------------------------------------------------------------- | -------------------- | ------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`             | -       |
-| [`config`](#config)                                                                   | `string`             | -       |
-| [`target`](#target)                                                                   | `string`, `string[]` | -       |
+| Name                                                                                          | Type                 | Default |
+| --------------------------------------------------------------------------------------------- | -------------------- | ------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir)         | `string`             | -       |
+| [`dependencies`](../../getting-started/custom-configuration.md#linteranalyzer_iddependencies) | `string[]`, `map[]`  | -       |
+| [`config`](#config)                                                                           | `string`             | -       |
+| [`target`](#target)                                                                           | `string`, `string[]` | -       |
 
 ### `config`
 
