@@ -108,13 +108,15 @@ If you omit this option, Sider will use your repository root directory (sufficie
 
 _type:_ `string[]`, `map[]`
 
-This is a common option to install dependencies required by analyzers. The option is useful when you do not want to manage dependencies by yourself (such dependencies are often needless at runtime).
+This is a common option to install dependencies required by analyzers.
+The option may be useful when you do not want to manage dependencies by yourself (such dependencies are often needless at runtime) or avoid some dependency problems.
 
 We supports the following package managers:
 
 - [Bundler](#for-bundler) (for Ruby)
 - [npm](#for-npm) (for JavaScript)
 - [Gradle](#for-gradle) (for Java)
+- [APT](#for-apt) (for C/C++)
 
 There are some ways to use this option, for example:
 
@@ -154,7 +156,7 @@ Sider decides a Ruby analyzer version in the following order:
 2. in your `Gemfile.lock` file
 3. our default version
 
-If a gem version is omitted in `linter.<id>.dependencies`, the version installed will depend on your `Gemfile.lock` content.
+If a gem version is omitted in the `dependencies` option, the version installed will depend on your `Gemfile.lock` content.
 For example, when `Gemfile.lock` includes `rubocop-rails (2.9.0)` and does not include `rubocop-rspec`:
 
 ```yaml
@@ -196,7 +198,7 @@ linter:
           tag: "v0.63.0"
 ```
 
-The `git` option receives the following options:
+The `git` option accepts the following options:
 
 | Name     | Type     | Description                                                     |
 | -------- | -------- | --------------------------------------------------------------- |
@@ -209,11 +211,11 @@ If you would like to install a gem located in a private Git repository, see [Pri
 
 ### For npm
 
-Sider uses [npm](https://docs.npmjs.com) to install JavaScript dependencies. There are the following ways to specify them:
+Sider uses [npm](https://docs.npmjs.com) to install JavaScript dependencies. There are the following ways:
 
 - Specify a dependency name without a version. This will install the latest version.
 - Specify a dependency name and version with the [`npm install`](https://docs.npmjs.com/cli/v7/commands/npm-install) format `<name>@<version>`.
-- Specify a dependency name and version with a _map_ that will be resolved into the format above.
+- Specify a dependency name and version with a _map_ including `name` and `version`.
 
 For example:
 
@@ -226,12 +228,14 @@ linter:
       - { name: "eslint-plugin-react", version: "7.23.1" }
 ```
 
+If you specify this option, [`linter.<analyzer_id>.npm_install`](#linteranalyzer_idnpm_install) will be ignored.
+
 ### For Gradle
 
-Sider uses [Gradle](https://gradle.org) to install Java dependencies. There are the following ways to specify them:
+Sider uses [Gradle](https://gradle.org) to install Java dependencies. There are the following ways:
 
 - Specify a dependency name and version with the [Gradle format](https://docs.gradle.org/current/dsl/org.gradle.api.artifacts.dsl.DependencyHandler.html) `<group>:<name>:<version>`.
-- Specify a dependency name and version with a _map_ that will be resolved into the format above.
+- Specify a dependency name and version with a _map_ including `name` and `version`.
 
 ```yaml
 linter:
@@ -241,10 +245,30 @@ linter:
       - { name: "io.spring.javaformat:spring-javaformat-checkstyle", version: "1.37.1" }
 ```
 
-## `linter.<analyzer_id>.gems`
+### For APT
 
-This is an alias of [`linter.<analyzer_id>.dependencies`](#linteranalyzer_iddependencies).
-Please use `dependencies` instead of `gems` because it will be deprecated.
+Sider uses [APT](https://salsa.debian.org/apt-team/apt), which is a package manager for Debian-based Linux distributions, to install C/C++ dependencies.
+Development packages provided by the OS environment may be necessary, particularly for projects written in C/C++.
+
+There are the following ways:
+
+- Specify a dependency name without a version. This will install the latest version.
+- Specify a dependency name and version with the format `<name>=<version>`.
+- Specify a dependency name and versiont with a _map_ including `name` and `version`.
+
+```yaml
+linter:
+  clang_tidy:
+    dependencies:
+      - "libfastjson-dev"
+      - "libfastjson-dev=0.99.8-2"
+      - { name: "libfastjson-dev", version: "0.99.8-2" }
+```
+
+The dependencies must satisfy the following requirements:
+
+- Packages must be compatible with our [Docker image](https://github.com/sider/devon_rex/blob/HEAD/base/Dockerfile).
+- Package names must have the suffix `-dev`.
 
 ## `linter.<analyzer_id>.npm_install`
 
@@ -252,81 +276,40 @@ _type:_ `boolean`, `string`
 
 For npm-published analyzers such as [ESLint](../tools/javascript/eslint.md) or [stylelint](../tools/css/stylelint.md), you can use the `npm_install` option to configure the behavior of npm dependencies installation. This option accepts one of the following values:
 
-| Value            | Description                                                                             |
-| ---------------- | --------------------------------------------------------------------------------------- |
-| `true` (default) | Install dependencies via [npm](https://docs.npmjs.com/) or [Yarn](https://yarnpkg.com). |
-| `false`          | Do not install any dependencies.                                                        |
-| `"production"`   | Install only dependencies for production.                                               |
-| `"development"`  | Install only dependencies for development.                                              |
+| Value               | Description                                            |
+| ------------------- | ------------------------------------------------------ |
+| `true` (default)    | Install dependencies via [npm](https://docs.npmjs.com) |
+| `false`             | Do nothing                                             |
+| `"production"`      | Install only _production_ dependencies                 |
+| ~~`"development"`~~ | **Deprecated**. This will be removed                   |
 
 For example:
 
 ```yaml
 linter:
   eslint:
-    npm_install: "development"
+    npm_install: "production"
   stylelint:
     npm_install: false
 ```
 
-When the `npm_install` option is not `false`, Sider will try as follows:
+When the `npm_install` option is not `false`, Sider will try installing dependencies in `package.json`, `package-lock.json`, or `yarn.lock`
+via the [`npm install`](https://docs.npmjs.com/cli/v7/commands/npm-install) or [`npm ci`](https://docs.npmjs.com/cli/v7/commands/npm-ci) command.
 
-1. Check if `package.json` exists. If not present, Sider uses the default version of the analyzers.
-2. If `package.json` and `yarn.lock` exist, Sider runs the [`yarn install`](https://yarnpkg.com/lang/en/docs/cli/install/) command.
-3. If `package.json` and `package-lock.json` exist, Sider runs the [`npm ci`](https://docs.npmjs.com/cli/ci) command.
-4. If `package.json` exists but none of `yarn.lock` and `package-lock.json` exist, Sider runs the [`npm install`](https://docs.npmjs.com/cli/install) command.
-5. Checks if the analyzer is installed in the `node_modules` directory.
-6. If installed, Sider uses the installed version.
-7. If not installed (for any reason), Sider uses the pre-installed default version.
-   - In this case, Sider shows warnings.
+If the installation fails for some reason or this option is set to `false`, Sider will use our default pre-installed version.
 
-When the option is `false`, Sider will skip these installation steps and analyze with the pre-installed default version.
-You might want to set the option to `false` if you don't configure analyzer and don't want to see warnings.
+## `linter.<analyzer_id>.gems`
+
+This is an alias of [`linter.<analyzer_id>.dependencies`](#linteranalyzer_iddependencies).
+Please use `dependencies` instead of `gems` because it will be **deprecated**.
 
 ## `linter.<analyzer_id>.jvm_deps`
 
-_type:_ `string[][]`
-
-For JVM tools such as Checkstyle or ktlint, this option allows you to load third-party rules or plugins. For example:
-
-```yaml
-linter:
-  checkstyle:
-    jvm_deps:
-      - [com.github.sevntu-checkstyle, sevntu-checks, 1.37.1]
-```
-
-Each element of a `jvm_deps` array must have 3 properties: `[group, name, version]`.
-These 3 properties follows the Maven repository style, and you can install dependencies registered in Maven repositories:
-
-The currently supported repositories are:
-
-- Maven Central Repository
-- JCenter Maven Repository
-- Google's Maven Repository
+> **DEPRECATED**: This option is deprecated. Use the [`linter.<analyzer_id>.dependencies`](#for-gradle) option instead.
 
 ## `linter.<analyzer_id>.apt`
 
-_type:_ `string`, `string[]`
-
-Development packages provided by the OS environment may be necessary, particularly for projects written in C/C++. Sider lets you install packages with `APT`, which is a package manager for `Debian` based Linux distributions.
-
-The `apt` option allows you to specify a list of development packages your project depends on.
-The packages must satisfy the conditions below:
-
-- Packages must be compatible with [our Docker image](https://github.com/sider/devon_rex/blob/HEAD/base/Dockerfile).
-- Package names must be suffixed with "-dev".
-- Each package name must be formatted as `<name>` or `<name>=<version>`.
-
-Below is an example of how you install the latest version of `libgdbm-dev` and the specific version (0.99.8-2) of `libfastjson-dev`.
-
-```yaml
-linter:
-  clang_tidy:
-    apt:
-      - libgdbm-dev
-      - libfastjson-dev=0.99.8-2
-```
+> **DEPRECATED**: This option is deprecated. Use the [`linter.<analyzer_id>.dependencies`](#for-apt) option instead.
 
 ## `linter.<analyzer_id>.include-path`
 
