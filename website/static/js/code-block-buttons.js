@@ -1,5 +1,5 @@
-// Turn off ESLint for this file because it's sent down to users as-is.
-/* eslint-disable */
+/* eslint-disable -- Turn off ESLint for this file because it's sent down to users as-is. */
+/* prettier-ignore */
 window.addEventListener("load", function () {
   function button(label, ariaLabel, icon, className) {
     const btn = document.createElement("button");

@@ -55,11 +55,7 @@
       {
         "type": "subcategory",
         "label": "PHP",
-        "ids": [
-          "tools/php/code-sniffer",
-          "tools/php/phpmd",
-          "tools/php/phinder"
-        ]
+        "ids": ["tools/php/code-sniffer", "tools/php/phpmd", "tools/php/phinder"]
       },
       {
         "type": "subcategory",
@@ -79,11 +75,7 @@
       {
         "type": "subcategory",
         "label": "C/C++",
-        "ids": [
-          "tools/cplusplus/cppcheck",
-          "tools/cplusplus/cpplint",
-          "tools/cplusplus/clang-tidy"
-        ]
+        "ids": ["tools/cplusplus/cppcheck", "tools/cplusplus/cpplint", "tools/cplusplus/clang-tidy"]
       },
       {
         "type": "subcategory",
@@ -108,19 +100,10 @@
       {
         "type": "subcategory",
         "label": "Others",
-        "ids": [
-          "tools/others/goodcheck",
-          "tools/others/misspell",
-          "tools/others/languagetool",
-          "tools/others/pmd-cpd"
-        ]
+        "ids": ["tools/others/goodcheck", "tools/others/misspell", "tools/others/languagetool", "tools/others/pmd-cpd"]
       }
     ],
-    "Custom Rules": [
-      "custom-rules/introduction-to-custom-rules",
-      "custom-rules/goodcheck",
-      "custom-rules/tips"
-    ],
+    "Custom Rules": ["custom-rules/introduction-to-custom-rules", "custom-rules/goodcheck", "custom-rules/tips"],
     "Advanced Settings": [
       "advanced-settings/inline-comments",
       "advanced-settings/private-dependencies",
