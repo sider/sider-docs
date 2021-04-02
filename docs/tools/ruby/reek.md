@@ -24,9 +24,6 @@ Here is an example configuration via `sider.yml`:
 ```yaml
 linter:
   reek:
-    gems:
-      - name: "reek"
-        version: "5.2.0"
     target:
       - lib/
       - test/
@@ -35,12 +32,12 @@ linter:
 
 You can use the following options to make analysis fitter for your project.
 
-| Name                                                                                  | Type                 | Default |
-| ------------------------------------------------------------------------------------- | -------------------- | ------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`             | -       |
-| [`gems`](../../getting-started/custom-configuration.md#linteranalyzer_idgems)         | `string[]`, `map[]`  | -       |
-| [`target`](#target)                                                                   | `string`, `string[]` | `.`     |
-| [`config`](#config)                                                                   | `string`             | -       |
+| Name                                                                                          | Type                 | Default |
+| --------------------------------------------------------------------------------------------- | -------------------- | ------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir)         | `string`             | -       |
+| [`dependencies`](../../getting-started/custom-configuration.md#linteranalyzer_iddependencies) | `string[]`, `map[]`  | -       |
+| [`target`](#target)                                                                           | `string`, `string[]` | `.`     |
+| [`config`](#config)                                                                           | `string`             | -       |
 
 ### `target`
 

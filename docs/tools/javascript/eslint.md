@@ -57,18 +57,19 @@ linter:
     quiet: true
 ```
 
-| Name                                                                                        | Type                 | Default |
-| ------------------------------------------------------------------------------------------- | -------------------- | ------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir)       | `string`             | -       |
-| [`npm_install`](../../getting-started/custom-configuration.md#linteranalyzer_idnpm_install) | `boolean`, `string`  | -       |
-| [`target`](#target)                                                                         | `string`, `string[]` | `.`     |
-| [`config`](#config)                                                                         | `string`             | -       |
-| [`ext`](#ext)                                                                               | `string`, `string[]` | -       |
-| [`ignore-path`](#ignore-path)                                                               | `string`             | -       |
-| [`ignore-pattern`](#ignore-pattern)                                                         | `string`, `string[]` | -       |
-| [`no-ignore`](#no-ignore)                                                                   | `boolean`            | `false` |
-| [`global`](#global)                                                                         | `string`, `string[]` | -       |
-| [`quiet`](#quiet)                                                                           | `boolean`            | `false` |
+| Name                                                                                          | Type                 | Default |
+| --------------------------------------------------------------------------------------------- | -------------------- | ------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir)         | `string`             | -       |
+| [`dependencies`](../../getting-started/custom-configuration.md#linteranalyzer_iddependencies) | `string[]`, `map[]`  | -       |
+| [`npm_install`](../../getting-started/custom-configuration.md#linteranalyzer_idnpm_install)   | `boolean`, `string`  | -       |
+| [`target`](#target)                                                                           | `string`, `string[]` | `.`     |
+| [`config`](#config)                                                                           | `string`             | -       |
+| [`ext`](#ext)                                                                                 | `string`, `string[]` | -       |
+| [`ignore-path`](#ignore-path)                                                                 | `string`             | -       |
+| [`ignore-pattern`](#ignore-pattern)                                                           | `string`, `string[]` | -       |
+| [`no-ignore`](#no-ignore)                                                                     | `boolean`            | `false` |
+| [`global`](#global)                                                                           | `string`, `string[]` | -       |
+| [`quiet`](#quiet)                                                                             | `boolean`            | `false` |
 
 ### `target`
 

@@ -43,7 +43,6 @@ Here is an example configuration via `sider.yml`:
 ```yaml
 linter:
   stylelint:
-    npm_install: false
     target: "**/*.{css,scss}"
     config: my_stylelintrc.yaml
     syntax: sugarss
@@ -55,17 +54,18 @@ linter:
 
 You can use the following options to fine-tune stylelint to your project.
 
-| Name                                                                                        | Type                 | Default                         |
-| ------------------------------------------------------------------------------------------- | -------------------- | ------------------------------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir)       | `string`             | -                               |
-| [`npm_install`](../../getting-started/custom-configuration.md#linteranalyzer_idnpm_install) | `boolean`, `string`  | -                               |
-| [`target`](#target)                                                                         | `string`, `string[]` | `**/*.{css,less,sass,scss,sss}` |
-| [`config`](#config)                                                                         | `string`             | -                               |
-| [`syntax`](#syntax)                                                                         | `string`             | -                               |
-| [`ignore-path`](#ignore-path)                                                               | `string`             | -                               |
-| [`ignore-disables`](#ignore-disables)                                                       | `boolean`            | `false`                         |
-| [`report-needless-disables`](#report-needless-disables)                                     | `boolean`            | `false`                         |
-| [`quiet`](#quiet)                                                                           | `boolean`            | `false`                         |
+| Name                                                                                          | Type                 | Default                         |
+| --------------------------------------------------------------------------------------------- | -------------------- | ------------------------------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir)         | `string`             | -                               |
+| [`dependencies`](../../getting-started/custom-configuration.md#linteranalyzer_iddependencies) | `string[]`, `map[]`  | -                               |
+| [`npm_install`](../../getting-started/custom-configuration.md#linteranalyzer_idnpm_install)   | `boolean`, `string`  | -                               |
+| [`target`](#target)                                                                           | `string`, `string[]` | `**/*.{css,less,sass,scss,sss}` |
+| [`config`](#config)                                                                           | `string`             | -                               |
+| [`syntax`](#syntax)                                                                           | `string`             | -                               |
+| [`ignore-path`](#ignore-path)                                                                 | `string`             | -                               |
+| [`ignore-disables`](#ignore-disables)                                                         | `boolean`            | `false`                         |
+| [`report-needless-disables`](#report-needless-disables)                                       | `boolean`            | `false`                         |
+| [`quiet`](#quiet)                                                                             | `boolean`            | `false`                         |
 
 See also the [official document](https://stylelint.io/user-guide/usage/options) for details about each option.
 

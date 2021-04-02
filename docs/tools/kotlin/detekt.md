@@ -48,18 +48,18 @@ linter:
 
 You can customize your detekt analysis using `sider.yml`.
 
-| Name                                                                                  | Type                 | Default |
-| ------------------------------------------------------------------------------------- | -------------------- | ------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`             | -       |
-| [`jvm_deps`](../../getting-started/custom-configuration.md#linteranalyzer_idjvm_deps) | `string[][]`         | `[]`    |
-| [`target`](#target)                                                                   | `string`, `string[]` | -       |
-| [`baseline`](#baseline)                                                               | `string`             | -       |
-| [`config`](#config)                                                                   | `string`, `string[]` | `[]`    |
-| [`config-resource`](#config-resource)                                                 | `string`, `string[]` | `[]`    |
-| [`disable-default-rulesets`](#disable-default-rulesets)                               | `boolean`            | `false` |
-| [`excludes`](#excludes)                                                               | `string`, `string[]` | `[]`    |
-| [`includes`](#includes)                                                               | `string`, `string[]` | `[]`    |
-| [`parallel`](#parallel)                                                               | `boolean`            | `false` |
+| Name                                                                                          | Type                 | Default |
+| --------------------------------------------------------------------------------------------- | -------------------- | ------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir)         | `string`             | -       |
+| [`dependencies`](../../getting-started/custom-configuration.md#linteranalyzer_iddependencies) | `string[]`, `map[]`  | -       |
+| [`target`](#target)                                                                           | `string`, `string[]` | -       |
+| [`baseline`](#baseline)                                                                       | `string`             | -       |
+| [`config`](#config)                                                                           | `string`, `string[]` | `[]`    |
+| [`config-resource`](#config-resource)                                                         | `string`, `string[]` | `[]`    |
+| [`disable-default-rulesets`](#disable-default-rulesets)                                       | `boolean`            | `false` |
+| [`excludes`](#excludes)                                                                       | `string`, `string[]` | `[]`    |
+| [`includes`](#includes)                                                                       | `string`, `string[]` | `[]`    |
+| [`parallel`](#parallel)                                                                       | `boolean`            | `false` |
 
 For more details about the options, see the [official documentation](https://detekt.github.io/detekt/cli.html).
 

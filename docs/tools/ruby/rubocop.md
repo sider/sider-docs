@@ -38,20 +38,18 @@ Here is an example configuration via `sider.yml`:
 ```yaml
 linter:
   rubocop:
-    gems:
-      - rubocop-rspec
     config: config/.rubocop.yml
     safe: true
 ```
 
 You can use the following options to make analysis fitter for your project.
 
-| Name                                                                                  | Type                | Default |
-| ------------------------------------------------------------------------------------- | ------------------- | ------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`            | -       |
-| [`gems`](../../getting-started/custom-configuration.md#linteranalyzer_idgems)         | `string[]`, `map[]` | -       |
-| [`config`](#config)                                                                   | `string`            | -       |
-| [`safe`](#safe)                                                                       | `boolean`           | `false` |
+| Name                                                                                          | Type                | Default |
+| --------------------------------------------------------------------------------------------- | ------------------- | ------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir)         | `string`            | -       |
+| [`dependencies`](../../getting-started/custom-configuration.md#linteranalyzer_iddependencies) | `string[]`, `map[]` | -       |
+| [`config`](#config)                                                                           | `string`            | -       |
+| [`safe`](#safe)                                                                               | `boolean`           | `false` |
 
 ### `config`
 

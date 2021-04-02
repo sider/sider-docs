@@ -60,15 +60,16 @@ linter:
 
 You can use the following options to fine-tune remark-lint to your project:
 
-| Name                                                                                        | Type                 | Default |
-| ------------------------------------------------------------------------------------------- | -------------------- | ------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir)       | `string`             | -       |
-| [`npm_install`](../../getting-started/custom-configuration.md#linteranalyzer_idnpm_install) | `boolean`, `string`  | -       |
-| [`target`](#target)                                                                         | `string`, `string[]` | `.`     |
-| [`ext`](#ext)                                                                               | `string`             | -       |
-| [`rc-path`](#rc-path)                                                                       | `string`             | -       |
-| [`ignore-path`](#ignore-path)                                                               | `string`             | -       |
-| [`use`](#use)                                                                               | `string`, `string[]` | -       |
+| Name                                                                                          | Type                 | Default |
+| --------------------------------------------------------------------------------------------- | -------------------- | ------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir)         | `string`             | -       |
+| [`dependencies`](../../getting-started/custom-configuration.md#linteranalyzer_iddependencies) | `string[]`, `map[]`  | -       |
+| [`npm_install`](../../getting-started/custom-configuration.md#linteranalyzer_idnpm_install)   | `boolean`, `string`  | -       |
+| [`target`](#target)                                                                           | `string`, `string[]` | `.`     |
+| [`ext`](#ext)                                                                                 | `string`             | -       |
+| [`rc-path`](#rc-path)                                                                         | `string`             | -       |
+| [`ignore-path`](#ignore-path)                                                                 | `string`             | -       |
+| [`use`](#use)                                                                                 | `string`, `string[]` | -       |
 
 For more details about the CLI options of remark-lint, see the [document](https://www.npmjs.com/package/remark-cli#cli).
 

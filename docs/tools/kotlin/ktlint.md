@@ -40,14 +40,14 @@ linter:
     experimental: true
 ```
 
-| Name                                                                                  | Type                 | Default |
-| ------------------------------------------------------------------------------------- | -------------------- | ------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`             | -       |
-| [`jvm_deps`](../../getting-started/custom-configuration.md#linteranalyzer_idjvm_deps) | `string[][]`         | `[]`    |
-| [`target`](#target)                                                                   | `string`, `string[]` | `[]`    |
-| [`ruleset`](#ruleset)                                                                 | `string`, `string[]` | `[]`    |
-| [`disabled_rules`](#disabled_rules)                                                   | `string`, `string[]` | `[]`    |
-| [`experimental`](#experimental)                                                       | `boolean`            | `false` |
+| Name                                                                                          | Type                 | Default |
+| --------------------------------------------------------------------------------------------- | -------------------- | ------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir)         | `string`             | -       |
+| [`dependencies`](../../getting-started/custom-configuration.md#linteranalyzer_iddependencies) | `string[]`, `map[]`  | -       |
+| [`target`](#target)                                                                           | `string`, `string[]` | `[]`    |
+| [`ruleset`](#ruleset)                                                                         | `string`, `string[]` | `[]`    |
+| [`disabled_rules`](#disabled_rules)                                                           | `string`, `string[]` | `[]`    |
+| [`experimental`](#experimental)                                                               | `boolean`            | `false` |
 
 ### `target`
 

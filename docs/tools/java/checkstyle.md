@@ -36,15 +36,15 @@ linter:
     properties: checkstyle.properties
 ```
 
-| Name                                                                                  | Type                          | Default  |
-| ------------------------------------------------------------------------------------- | ----------------------------- | -------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`                      | -        |
-| [`jvm_deps`](../../getting-started/custom-configuration.md#linteranalyzer_idjvm_deps) | `string[][]`                  | `[]`     |
-| [`config`](#config)                                                                   | `string`                      | `google` |
-| [`target`](#target)                                                                   | `string`, `string[]`          | `.`      |
-| [`exclude`](#exclude)                                                                 | `string`, `string[]`, `map[]` | -        |
-| [`ignore`](#ignore)                                                                   | `string[]`                    | -        |
-| [`properties`](#properties)                                                           | `string`                      | -        |
+| Name                                                                                          | Type                          | Default |
+| --------------------------------------------------------------------------------------------- | ----------------------------- | ------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir)         | `string`                      | -       |
+| [`dependencies`](../../getting-started/custom-configuration.md#linteranalyzer_iddependencies) | `string[]`, `map[]`           | -       |
+| [`config`](#config)                                                                           | `string`                      | `sider` |
+| [`target`](#target)                                                                           | `string`, `string[]`          | `.`     |
+| [`exclude`](#exclude)                                                                         | `string`, `string[]`, `map[]` | -       |
+| [`ignore`](#ignore)                                                                           | `string[]`                    | -       |
+| [`properties`](#properties)                                                                   | `string`                      | -       |
 
 ### `config`
 
@@ -53,7 +53,7 @@ This option allows you to declare the coding standard you want to follow.
 Supported values are:
 
 - [`sider`](https://github.com/sider/runners/blob/HEAD/images/checkstyle/sider_recommended_checkstyle.xml)
-  - Sider provides our [recommended ruleset](../../getting-started/recommended-rules.md) for Checkstyle.
+  - our [recommended ruleset](../../getting-started/recommended-rules.md)
 - [`google`](https://checkstyle.org/google_style)
   - alias for [`/google_checks.xml`](https://github.com/checkstyle/checkstyle/blob/HEAD/src/main/resources/google_checks.xml)
 - [`sun`](https://checkstyle.org/sun_style)
@@ -62,7 +62,7 @@ Supported values are:
   - `./config/my-checkstyle.xml`
   - `/com/example/checkstyle/custom-ruleset.xml`
 
-See also the [`-c` CLI option](https://checkstyle.org/cmdline.html) of Checkstyle.
+See also the [`-c`](https://checkstyle.org/cmdline.html) CLI option of Checkstyle.
 
 ### `target`
 
