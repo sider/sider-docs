@@ -108,8 +108,8 @@ If you omit this option, Sider will use your repository root directory (sufficie
 
 _type:_ `string[]`, `map[]`
 
-This common option allows you to install dependencies required by analyzers.
-The option may be useful when you do not want to manage dependencies by yourself (such dependencies are often needless at runtime) or avoid some dependency problems.
+This common option allows you to tell Sider to install dependencies required by analyzers.
+The option is useful if you do not want to add extra dependencies for analyzers into your project.
 
 We support the following package managers:
 
@@ -118,45 +118,22 @@ We support the following package managers:
 - [Gradle](#for-gradle) (for Java)
 - [APT](#for-apt) (for C/C++)
 
-There are some ways to use this option, for example:
-
-```yaml
-linter:
-  rubocop: # via Bundler
-    dependencies:
-      - "rubocop-rails"
-      - { name: "rubocop-rails", version: "2.9.0" }
-      - { name: "rubocop-rails", version: "2.9.0", source: "..." }
-      - { name: "rubocop-rails", git: { ... } }
-
-  eslint: # via npm
-    dependencies:
-      - "eslint-plugin-react"
-      - "eslint-plugin-react@7.23.1"
-      - { name: "eslint-plugin-react", version: "7.23.1" }
-
-  checkstyle: # via Gradle
-    dependencies:
-      - "io.spring.javaformat:spring-javaformat-checkstyle:0.0.27"
-      - { name: "io.spring.javaformat:spring-javaformat-checkstyle", version: "1.37.1" }
-```
-
-See also each package manager's section below.
-
 ### For Bundler
 
 Sider uses [Bundler](https://bundler.io) to install Ruby dependencies (called _gems_).
-If gems for an analyzer are in your `Gemfile.lock`, Sider will install the gems with no configuration.
-Also, if `Gemfile.lock` is not found, Sider will use our default version instead of installing gems.
-This means that you _basically_ have to do nothing about installation.
 
+By default, if gems for an analyzer are in your `Gemfile.lock`, Sider will install the gems without `sider.yml`.
+Also, if `Gemfile.lock` is not found, Sider will use our default version instead of installing gems.
+
+If your analysis fails with this default behavior, the `dependencies` option helps you.
 Sider decides a Ruby analyzer version in the following order:
 
 1. by the `dependencies` option in your `sider.yml` file
 2. in your `Gemfile.lock` file
 3. our default version
 
-If a gem version is omitted in the `dependencies` option, the version installed will depend on your `Gemfile.lock` content.
+If a gem version is omitted in the `dependencies` option, a version in your `Gemfile.lock` will be installed.
+But, if the gem is not present in `Gemfile.lock`, the latest version will be installed.
 For example, when `Gemfile.lock` includes `rubocop-rails (2.9.0)` and does not include `rubocop-rspec`:
 
 ```yaml
@@ -265,10 +242,10 @@ linter:
       - { name: "libfastjson-dev", version: "0.99.8-2" }
 ```
 
-The dependencies must satisfy the following requirements:
+Note that specified dependencies must satisfy the following requirements:
 
-- Packages must be compatible with our [Docker image](https://github.com/sider/devon_rex/blob/HEAD/base/Dockerfile).
-- Package names must have the suffix `-dev`.
+- A dependency must be compatible with our [Docker image](https://github.com/sider/devon_rex/blob/HEAD/base/Dockerfile).
+- A dependency name must have the suffix `-dev`.
 
 ## `linter.<analyzer_id>.npm_install`
 
