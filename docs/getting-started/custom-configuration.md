@@ -90,7 +90,7 @@ The following sections describe the available options.
 
 ## `linter.<analyzer_id>.root_dir`
 
-_Type:_ `string`
+_type:_ `string`
 
 This is a common option available to all analyzers. This option specifies a directory in your repository from which Sider should run the analyzer in. For example, if you would like to analyze only files in the `frontend/` directory, you could configure `sider.yml` like this:
 
@@ -102,82 +102,86 @@ linter:
 
 In the configuration above, Sider will run ESLint at the `frontend/` directory (perhaps will load files such as `frontend/.eslintrc.js` or `frontend/package.json`).
 
-If you omit this option, Sider will use your repository root directory (it will be sufficient in most cases).
+If you omit this option, Sider will use your repository root directory (sufficient in most cases).
 
 ## `linter.<analyzer_id>.dependencies`
 
 _type:_ `string[]`, `map[]`
 
-This is a common option to install dependencies needed for analysis (via npm, Bundler, etc.)
+This is a common option to install dependencies required by analyzers. The option is useful when you do not want to manage dependencies by yourself (such dependencies are often needless at runtime).
 
-TODO...
+We supports the following package managers:
 
-_type:_ `string[]`, `map[]`
+- [Bundler](https://bundler.io) (for Ruby)
+- [npm](https://www.npmjs.com) (for JavaScript)
+- [Gradle](https://gradle.org) (for Java)
 
-Some analyzers written in Ruby can be customized with third-party [gems](https://rubygems.org/). With Sider, you can use [Bundler](https://bundler.io/) to install any gem. The following is an example of installing RuboCop plugins or configuration gems:
+There are some ways to use this option, for example:
 
 ```yaml
 linter:
-  rubocop:
-    gems:
-      - name: "meowcop"
-        version: "1.17.0"
+  rubocop: # via Bundler
+    dependencies:
+      - "rubocop" # dependency name
+      - { name: "rubocop-rails", version: "2.9.0" } # dependency name and version
+
+  eslint: # via npm
+    dependencies:
+      - "eslint"
+      - "eslint-plugin-react@7.23.1" # npm style: `<name>@<version>`
+      - { name: "eslint-plugin-react-hooks", version: "4.2.0" }
+
+  checkstyle: # via Gradle
+    dependencies:
+      - "com.github.sevntu-checkstyle:sevntu-checks:1.37.1" # Gradle style: `<group>:<name>:<version>`
+      - { name: "org.apache.commons:commons-lang3", version: "3.12.0" }
 ```
 
-You can also set the version of the analyzer you want to use. However, the version must meet Sider's constraints. Please refer to each analyzer page.
+See also each package manager's section below.
+
+### For Bundler
+
+If required dependencies (_gems_) are in your `Gemfile.lock`, Sider will install the dependencies with no configuration.
+Also, if no `Gemfile.lock`, Sider will use our default version. This means that you basically have to do nothing.
+
+Sider decides a Ruby analyzer version in the following order:
+
+1. by the `dependencies` option in your `sider.yml` file
+2. in your `Gemfile.lock` file
+3. our default version
+
+If a gem version is omitted in `linter.<id>.dependencies`, the version installed will depend on your `Gemfile.lock` content.
+For example, when `Gemfile.lock` includes `rubocop-rails (2.9.0)` and does not include `rubocop-rspec`:
 
 ```yaml
 linter:
   rubocop:
-    gems:
-      - name: "rubocop"
-        version: "0.66.0"
+    dependencies:
+      - "rubocop-rails" # install the version 2.9.0 (present in `Gemfile.lock`)
+      - "rubocop-rspec" # install the latest version (absent in `Gemfile.lock`)
 ```
 
-### Understanding the analyzer version
+#### Install gems from third-party RubyGems repository
 
-Sider decides the analyzer version in the following order:
-
-1. `gems` option in `sider.yml`
-2. `Gemfile.lock`
-3. The default version
-
-However, if the version written in `Gemfile.lock` does not satisfy our constraints, that version is skipped.
-
-### Install gems from `Gemfile.lock`
-
-If you want to additionally install a specific gem written in `Gemfile.lock`, you can omit the `version` as follows:
+You can also use an alternate RubyGems repository via the `source` option:
 
 ```yaml
 linter:
   rubocop:
-    gems:
-      - "rubocop-rspec"
-```
-
-If the gem is not found in `Gemfile.lock`, the latest version is installed.
-
-### Install gems from third-party RubyGems repository
-
-You can select an alternate RubyGems repository as a gem source via the source option:
-
-```yaml
-linter:
-  rubocop:
-    gems:
+    dependencies:
       - name: "rubocop-mycompany"
         version: "0.63.0"
         source: "https://gems.mycompany.com"
 ```
 
-### Install gems from Git repository
+#### Install gems from Git repository
 
-You can also install a gem in a git repository. Please note that the git option cannot be specified with version or source.
+You can also install gems from a Git repository via the `git` option. Please note that the `git` option cannot be specified with `version` or `source`.
 
 ```yaml
 linter:
   rubocop:
-    gems:
+    dependencies:
       - name: "rubocop-mycompany-standard"
         git:
           repo: "https://github.com/mycompany/rubocop-mycompany-standard.git"
@@ -188,20 +192,21 @@ linter:
           tag: "v0.63.0"
 ```
 
-`git` option has options below:
+The `git` option receives the following options:
 
-| Name     | Type     | Description                                                                        |
-| -------- | -------- | ---------------------------------------------------------------------------------- |
-| `repo`   | `string` | Git repository location. The repository can be accessed via HTTP(S)/SSH protocols. |
-| `branch` | `string` | Branch name.                                                                       |
-| `tag`    | `string` | Tag name.                                                                          |
-| `ref`    | `string` | Ref name.                                                                          |
+| Name     | Type     | Description                                                                          |
+| -------- | -------- | ------------------------------------------------------------------------------------ |
+| `repo`   | `string` | Git repository location. The repository can be accessed via HTTP(S) or SSH protocols |
+| `branch` | `string` | Branch name                                                                          |
+| `tag`    | `string` | Tag name                                                                             |
+| `ref`    | `string` | Ref name                                                                             |
 
-If you would like to install a gem located in a private git repository, see [private dependencies guide](../advanced-settings/private-dependencies.md) and configure SSH key.
+If you would like to install a gem located in a private Git repository, see [Private Dependencies](../advanced-settings/private-dependencies.md).
 
 ## `linter.<analyzer_id>.gems`
 
 This is an alias of [`linter.<analyzer_id>.dependencies`](#linteranalyzer_iddependencies) for Ruby analysis tools.
+Please use `dependencies` instead of `gems` because the latter will be deprecated.
 
 ## `linter.<analyzer_id>.npm_install`
 
