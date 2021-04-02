@@ -26,7 +26,6 @@ linter:
     root_dir: "frontend/"
     npm_install: false
     config: "frontend/.eslintrc"
-    ext: "js,jsx"
 
   stylelint:
     root_dir: "app/assets/stylesheets/"
@@ -91,7 +90,7 @@ The following sections describe the available options.
 
 ## `linter.<analyzer_id>.root_dir`
 
-_Type:_ `string`
+_type:_ `string`
 
 This is a common option available to all analyzers. This option specifies a directory in your repository from which Sider should run the analyzer in. For example, if you would like to analyze only files in the `frontend/` directory, you could configure `sider.yml` like this:
 
@@ -107,7 +106,7 @@ If you omit this option, Sider will use your repository root directory (it will 
 
 ## `linter.<analyzer_id>.gems`
 
-_Type:_ `string[]`, `map[]`
+_type:_ `string[]`, `map[]`
 
 Some analyzers written in Ruby can be customized with third-party [gems](https://rubygems.org/). With Sider, you can use [Bundler](https://bundler.io/) to install any gem. The following is an example of installing RuboCop plugins or configuration gems:
 
@@ -196,7 +195,7 @@ If you would like to install a gem located in a private git repository, see [pri
 
 ## `linter.<analyzer_id>.npm_install`
 
-_Type:_ `boolean`, `string`
+_type:_ `boolean`, `string`
 
 For npm-published analyzers such as [ESLint](../tools/javascript/eslint.md) or [stylelint](../tools/css/stylelint.md), you can use the `npm_install` option to configure the behavior of npm dependencies installation. This option accepts one of the following values:
 
@@ -233,7 +232,7 @@ You might want to set the option to `false` if you don't configure analyzer and 
 
 ## `linter.<analyzer_id>.jvm_deps`
 
-_Type:_ `string[][]`
+_type:_ `string[][]`
 
 For JVM tools such as Checkstyle or ktlint, this option allows you to load third-party rules or plugins. For example:
 
@@ -255,7 +254,7 @@ The currently supported repositories are:
 
 ## `linter.<analyzer_id>.apt`
 
-_Type:_ `string`, `string[]`
+_type:_ `string`, `string[]`
 
 Development packages provided by the OS environment may be necessary, particularly for projects written in C/C++. Sider lets you install packages with `APT`, which is a package manager for `Debian` based Linux distributions.
 
@@ -278,7 +277,7 @@ linter:
 
 ## `linter.<analyzer_id>.include-path`
 
-_Type:_ `string`, `string[]`
+_type:_ `string`, `string[]`
 
 Some C/C++ analyzers can handle include paths like C/C++ preprocessors can. With Sider, the `include-path` option allows you to add directories to include search paths.
 
@@ -303,7 +302,7 @@ If you omit this option, Sider searches for header files that are part of your p
 
 ## `ignore`
 
-_Type:_ `string[]`
+_type:_ `string[]`
 
 This option allows you to ignore specific files. It helps to improve the analysis execution time and the analysis stability.
 The format of each `ignore` item follows [gitignore(5)](https://git-scm.com/docs/gitignore).
@@ -320,7 +319,7 @@ ignore:
 
 ## `branches.exclude`
 
-_Type:_ `string[]`
+_type:_ `string[]`
 
 This option allows you to exclude branches from the analysis. If there are branches that are unnecessary for your team to analyze, use the `branches` option.
 When setting this option, Sider will not analyze the branch specified in this option.
