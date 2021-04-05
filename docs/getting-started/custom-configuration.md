@@ -121,12 +121,7 @@ We support the following package managers:
 ### For Bundler
 
 Sider uses [Bundler](https://bundler.io) to install Ruby dependencies (called _gems_).
-
-By default, if gems for an analyzer are in your `Gemfile.lock`, Sider will install the gems without `sider.yml`.
-Also, if `Gemfile.lock` is not found, Sider will use our default version instead of installing gems.
-
-If your analysis fails with this default behavior, the `dependencies` option helps you.
-Sider decides a Ruby analyzer version in the following order:
+A Ruby analyzer version is decided in the following order:
 
 1. by the `dependencies` option in your `sider.yml` file
 2. in your `Gemfile.lock` file
