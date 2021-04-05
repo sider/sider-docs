@@ -31,7 +31,7 @@ Next, you need to configure ESLint for your project. We recommend `eslint --init
 $ npm exec -- eslint --init
 ```
 
-See [the ESLint documentation](https://eslint.org/docs/user-guide/getting-started) to learn more.
+See the [ESLint documentation](https://eslint.org/docs/user-guide/getting-started) to learn more.
 
 ## Default Configuration for ESLint
 
