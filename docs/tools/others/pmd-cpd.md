@@ -64,7 +64,7 @@ The minimum token length which should be reported as a duplicate.
 
 ### `target`
 
-This option allows you to specify files or directories to be analyzed, e.g.:
+This option allows you to specify files or directories to be analyzed.
 
 _alias:_ `files`
 
