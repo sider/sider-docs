@@ -36,21 +36,18 @@ Here is an example configuration via `sider.yml`:
 ```yaml
 linter:
   slim_lint:
-    gems:
-      - rubocop
-      - slim
     target: src
     config: my-slim-lint.yml
 ```
 
 You can use several options to fine-tune HAML-Lint to your project.
 
-| Name                                                                                  | Type                 | Default |
-| ------------------------------------------------------------------------------------- | -------------------- | ------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`             | -       |
-| [`gems`](../../getting-started/custom-configuration.md#linteranalyzer_idgems)         | `string[]`, `map[]`  | -       |
-| [`target`](#target)                                                                   | `string`, `string[]` | `.`     |
-| [`config`](#config)                                                                   | `string`             | -       |
+| Name                                                                                          | Type                 | Default |
+| --------------------------------------------------------------------------------------------- | -------------------- | ------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir)         | `string`             | -       |
+| [`dependencies`](../../getting-started/custom-configuration.md#linteranalyzer_iddependencies) | `string[]`, `map[]`  | -       |
+| [`target`](#target)                                                                           | `string`, `string[]` | `.`     |
+| [`config`](#config)                                                                           | `string`             | -       |
 
 ### `target`
 

@@ -11,7 +11,7 @@ hide_title: true
 
 | Supported Version | Language              | Website               |
 | ----------------- | --------------------- | --------------------- |
-| 6.32.0            | Programming languages | https://pmd.github.io |
+| 6.33.0            | Programming languages | https://pmd.github.io |
 
 **PMD CPD** is the copy-paste detector shipped with PMD. CPD works with Java, JSP, C/C++, C#, Go, Kotlin, Ruby, Swift and [many more languages](https://pmd.github.io/pmd/pmd_userdocs_cpd.html#supported-languages).
 
@@ -27,7 +27,7 @@ You can customize the analysis via `sider.yml`:
 linter:
   pmd_cpd:
     minimum-tokens: 70
-    files: src
+    target: src
     language: cpp
     encoding: UTF-8
     skip-duplicate-files: true
@@ -45,7 +45,7 @@ linter:
 | ------------------------------------------------------------------------------------- | -------------------- | --------------- |
 | [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`             | -               |
 | [`minimum-tokens`](#minimum-tokens)                                                   | `number`             | `100`           |
-| [`files`](#files)                                                                     | `string`, `string[]` | `.`             |
+| [`target`](#target)                                                                   | `string`, `string[]` | `.`             |
 | [`language`](#language)                                                               | `string`, `string[]` | _(see below)_   |
 | [`encoding`](#encoding)                                                               | `string`             | (PMD's default) |
 | [`skip-duplicate-files`](#skip-duplicate-files)                                       | `boolean`            | `false`         |
@@ -62,19 +62,11 @@ linter:
 
 The minimum token length which should be reported as a duplicate.
 
-### `files`
+### `target`
 
-This option allows you to specify a list of files and directories to analyze, e.g.:
+This option allows you to specify files or directories to be analyzed.
 
-```yaml
-linter:
-  pmd_cpd:
-    files: src
-    # or
-    # files: [src, lib]
-    # or
-    # files: [path/to/Some.java, src]
-```
+_alias:_ `files`
 
 ### `language`
 

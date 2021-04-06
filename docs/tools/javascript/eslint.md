@@ -9,7 +9,7 @@ hide_title: true
 
 | Supported Version        | Language   | Website            |
 | ------------------------ | ---------- | ------------------ |
-| 5.0.0+ (default: 7.22.0) | JavaScript | https://eslint.org |
+| 5.0.0+ (default: 7.23.0) | JavaScript | https://eslint.org |
 
 **ESLint** is a static analysis tool for JavaScript and its flavors (e.g. TypeScript, JSX, or Vue).
 It can find problems, style violations, or security issues, etc. in your code, and have so many plugins.
@@ -47,26 +47,29 @@ linter:
   eslint:
     target: frontend/app
     config: .config/.eslintrc.js
-    ext: .js,.jsx,.es6
+    ext: [.js, .jsx, .es6]
     ignore-path: .my_eslintignore
     ignore-pattern: "/src/vendor/*"
     no-ignore: true
-    global: "require,exports:true"
+    global:
+      - require
+      - "exports:true"
     quiet: true
 ```
 
-| Name                                                                                        | Type                 | Default |
-| ------------------------------------------------------------------------------------------- | -------------------- | ------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir)       | `string`             | -       |
-| [`npm_install`](../../getting-started/custom-configuration.md#linteranalyzer_idnpm_install) | `boolean`, `string`  | -       |
-| [`target`](#target)                                                                         | `string`, `string[]` | `.`     |
-| [`config`](#config)                                                                         | `string`             | -       |
-| [`ext`](#ext)                                                                               | `string`             | `.js`   |
-| [`ignore-path`](#ignore-path)                                                               | `string`             | -       |
-| [`ignore-pattern`](#ignore-pattern)                                                         | `string`, `string[]` | -       |
-| [`no-ignore`](#no-ignore)                                                                   | `boolean`            | `false` |
-| [`global`](#global)                                                                         | `string`             | -       |
-| [`quiet`](#quiet)                                                                           | `boolean`            | `false` |
+| Name                                                                                          | Type                 | Default |
+| --------------------------------------------------------------------------------------------- | -------------------- | ------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir)         | `string`             | -       |
+| [`dependencies`](../../getting-started/custom-configuration.md#linteranalyzer_iddependencies) | `string[]`, `map[]`  | -       |
+| [`npm_install`](../../getting-started/custom-configuration.md#linteranalyzer_idnpm_install)   | `boolean`, `string`  | -       |
+| [`target`](#target)                                                                           | `string`, `string[]` | `.`     |
+| [`config`](#config)                                                                           | `string`             | -       |
+| [`ext`](#ext)                                                                                 | `string`, `string[]` | -       |
+| [`ignore-path`](#ignore-path)                                                                 | `string`             | -       |
+| [`ignore-pattern`](#ignore-pattern)                                                           | `string`, `string[]` | -       |
+| [`no-ignore`](#no-ignore)                                                                     | `boolean`            | `false` |
+| [`global`](#global)                                                                           | `string`, `string[]` | -       |
+| [`quiet`](#quiet)                                                                             | `boolean`            | `false` |
 
 ### `target`
 
@@ -86,6 +89,8 @@ linter:
 ### `dir`
 
 > **DEPRECATED**: This option is deprecated. Use the [`target`](#target) option instead.
+
+This is an alias for `target`.
 
 ### `config`
 

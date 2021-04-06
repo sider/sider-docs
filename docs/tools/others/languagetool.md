@@ -11,7 +11,7 @@ hide_title: true
 
 | Supported Version | Language          | Website                  |
 | ----------------- | ----------------- | ------------------------ |
-| 5.2               | Natural languages | https://languagetool.org |
+| 5.3               | Natural languages | https://languagetool.org |
 
 **LanguageTool** is a proofreading tool for [English, French, German, and other languages](https://languagetool.org/languages).
 It finds many mistakes like grammar errors, misspells, and so on.
@@ -70,19 +70,19 @@ linter:
 
 You can customize the analysis via the following options:
 
-| Name                                                                                  | Type       | Default                            |
-| ------------------------------------------------------------------------------------- | ---------- | ---------------------------------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`   | -                                  |
-| [`target`](#target)                                                                   | `string`   | `.`                                |
-| [`ext`](#ext)                                                                         | `string[]` | `[".txt"]`                         |
-| [`exclude`](#exclude)                                                                 | `string[]` | `["**/{requirements,robots}.txt"]` |
-| [`language`](#language)                                                               | `string`   | `en-US`                            |
-| [`encoding`](#encoding)                                                               | `string`   | `UTF-8`                            |
-| [`disable`](#disable)                                                                 | `string[]` | `[]`                               |
-| [`enable`](#enable)                                                                   | `string[]` | `[]`                               |
-| [`enabledonly`](#enabledonly)                                                         | `boolean`  | `false`                            |
-| [`disablecategories`](#disablecategories)                                             | `string[]` | `[]`                               |
-| [`enablecategories`](#enablecategories)                                               | `string[]` | `[]`                               |
+| Name                                                                                  | Type                 | Default                          |
+| ------------------------------------------------------------------------------------- | -------------------- | -------------------------------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`             | -                                |
+| [`target`](#target)                                                                   | `string`             | `.`                              |
+| [`ext`](#ext)                                                                         | `string`, `string[]` | `".txt"`                         |
+| [`exclude`](#exclude)                                                                 | `string`, `string[]` | `"**/{requirements,robots}.txt"` |
+| [`language`](#language)                                                               | `string`             | `en-US`                          |
+| [`encoding`](#encoding)                                                               | `string`             | `UTF-8`                          |
+| [`disable`](#disable)                                                                 | `string`, `string[]` | -                                |
+| [`enable`](#enable)                                                                   | `string`, `string[]` | -                                |
+| [`enabledonly`](#enabledonly)                                                         | `boolean`            | `false`                          |
+| [`disablecategories`](#disablecategories)                                             | `string`, `string[]` | -                                |
+| [`enablecategories`](#enablecategories)                                               | `string`, `string[]` | -                                |
 
 ### `target`
 

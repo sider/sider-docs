@@ -102,76 +102,64 @@ linter:
 
 In the configuration above, Sider will run ESLint at the `frontend/` directory (perhaps will load files such as `frontend/.eslintrc.js` or `frontend/package.json`).
 
-If you omit this option, Sider will use your repository root directory (it will be sufficient in most cases).
+If you omit this option, Sider will use your repository root directory (sufficient in most cases).
 
-## `linter.<analyzer_id>.gems`
+## `linter.<analyzer_id>.dependencies`
 
 _type:_ `string[]`, `map[]`
 
-Some analyzers written in Ruby can be customized with third-party [gems](https://rubygems.org/). With Sider, you can use [Bundler](https://bundler.io/) to install any gem. The following is an example of installing RuboCop plugins or configuration gems:
+This common option allows you to tell Sider to install dependencies required by analyzers.
+The option is useful if you do not want to add extra dependencies for analyzers into your project.
+
+We support the following package managers:
+
+- [Bundler](#for-bundler) (for Ruby)
+- [npm](#for-npm) (for JavaScript)
+- [Gradle](#for-gradle) (for Java)
+- [APT](#for-apt) (for C/C++)
+
+### For Bundler
+
+Sider uses [Bundler](https://bundler.io) to install Ruby dependencies (called _gems_).
+A Ruby analyzer version is decided in the following order:
+
+1. by the `dependencies` option in your `sider.yml` file
+2. in your `Gemfile.lock` file
+3. our default version
+
+If a gem version is omitted in the `dependencies` option, a version in your `Gemfile.lock` will be installed.
+But, if the gem is not present in `Gemfile.lock`, the latest version will be installed.
+For example, when `Gemfile.lock` includes `rubocop-rails (2.9.0)` and does not include `rubocop-rspec`:
 
 ```yaml
 linter:
   rubocop:
-    gems:
-      - name: "meowcop"
-        version: "1.17.0"
+    dependencies:
+      - "rubocop-rails" # install the version 2.9.0 (present in `Gemfile.lock`)
+      - "rubocop-rspec" # install the latest version (absent in `Gemfile.lock`)
 ```
 
-You can also set the version of the analyzer you want to use. However, the version must meet Sider's constraints. Please refer to each analyzer page.
+#### Install gems from third-party RubyGems repository
+
+You can also use an alternate RubyGems repository via the `source` option:
 
 ```yaml
 linter:
   rubocop:
-    gems:
-      - name: "rubocop"
-        version: "0.66.0"
-```
-
-### Understanding the analyzer version
-
-Sider decides the analyzer version in the following order:
-
-1. `gems` option in `sider.yml`
-2. `Gemfile.lock`
-3. The default version
-
-However, if the version written in `Gemfile.lock` does not satisfy our constraints, that version is skipped.
-
-### Install gems from `Gemfile.lock`
-
-If you want to additionally install a specific gem written in `Gemfile.lock`, you can omit the `version` as follows:
-
-```yaml
-linter:
-  rubocop:
-    gems:
-      - "rubocop-rspec"
-```
-
-If the gem is not found in `Gemfile.lock`, the latest version is installed.
-
-### Install gems from third-party RubyGems repository
-
-You can select an alternate RubyGems repository as a gem source via the source option:
-
-```yaml
-linter:
-  rubocop:
-    gems:
+    dependencies:
       - name: "rubocop-mycompany"
         version: "0.63.0"
         source: "https://gems.mycompany.com"
 ```
 
-### Install gems from Git repository
+#### Install gems from Git repository
 
-You can also install a gem in a git repository. Please note that the git option cannot be specified with version or source.
+You can also install gems from a Git repository via the `git` option. Please note that the `git` option cannot be specified with `version` or `source`.
 
 ```yaml
 linter:
   rubocop:
-    gems:
+    dependencies:
       - name: "rubocop-mycompany-standard"
         git:
           repo: "https://github.com/mycompany/rubocop-mycompany-standard.git"
@@ -182,16 +170,77 @@ linter:
           tag: "v0.63.0"
 ```
 
-`git` option has options below:
+The `git` option accepts the following options:
 
-| Name     | Type     | Description                                                                        |
-| -------- | -------- | ---------------------------------------------------------------------------------- |
-| `repo`   | `string` | Git repository location. The repository can be accessed via HTTP(S)/SSH protocols. |
-| `branch` | `string` | Branch name.                                                                       |
-| `tag`    | `string` | Tag name.                                                                          |
-| `ref`    | `string` | Ref name.                                                                          |
+| Name     | Type     | Description                                                     |
+| -------- | -------- | --------------------------------------------------------------- |
+| `repo`   | `string` | Git repository location accessible via HTTP(S) or SSH protocols |
+| `branch` | `string` | Branch name                                                     |
+| `tag`    | `string` | Tag name                                                        |
+| `ref`    | `string` | Ref name                                                        |
 
-If you would like to install a gem located in a private git repository, see [private dependencies guide](../advanced-settings/private-dependencies.md) and configure SSH key.
+If you would like to install a gem located in a private Git repository, see [Private Dependencies](../advanced-settings/private-dependencies.md).
+
+### For npm
+
+Sider uses [npm](https://docs.npmjs.com) to install JavaScript dependencies. There are the following ways:
+
+- Specify a dependency name without a version. This will install the latest version.
+- Specify a dependency name and version with the [`npm install`](https://docs.npmjs.com/cli/v7/commands/npm-install) format `<name>@<version>`.
+- Specify a dependency name and version with a _map_ including `name` and `version`.
+
+For example:
+
+```yaml
+linter:
+  eslint:
+    dependencies:
+      - "eslint-plugin-react"
+      - "eslint-plugin-react@7.23.1"
+      - { name: "eslint-plugin-react", version: "7.23.1" }
+```
+
+If you specify this option, [`linter.<analyzer_id>.npm_install`](#linteranalyzer_idnpm_install) will be ignored.
+
+### For Gradle
+
+Sider uses [Gradle](https://gradle.org) to install Java dependencies. There are the following ways:
+
+- Specify a dependency name and version with the [Gradle format](https://docs.gradle.org/current/dsl/org.gradle.api.artifacts.dsl.DependencyHandler.html) `<group>:<name>:<version>`.
+- Specify a dependency name and version with a _map_ including `name` and `version`.
+
+```yaml
+linter:
+  checkstyle:
+    dependencies:
+      - "io.spring.javaformat:spring-javaformat-checkstyle:0.0.27"
+      - { name: "io.spring.javaformat:spring-javaformat-checkstyle", version: "1.37.1" }
+```
+
+### For APT
+
+Sider uses [APT](https://salsa.debian.org/apt-team/apt), which is a package manager for Debian-based Linux distributions, to install C/C++ dependencies.
+Development packages provided by the OS environment may be necessary, particularly for projects written in C/C++.
+
+There are the following ways:
+
+- Specify a dependency name without a version. This will install the latest version.
+- Specify a dependency name and version with the format `<name>=<version>`.
+- Specify a dependency name and versiont with a _map_ including `name` and `version`.
+
+```yaml
+linter:
+  clang_tidy:
+    dependencies:
+      - "libfastjson-dev"
+      - "libfastjson-dev=0.99.8-2"
+      - { name: "libfastjson-dev", version: "0.99.8-2" }
+```
+
+Note that specified dependencies must satisfy the following requirements:
+
+- A dependency must be compatible with our [Docker image](https://github.com/sider/devon_rex/blob/HEAD/base/Dockerfile).
+- A dependency name must have the suffix `-dev`.
 
 ## `linter.<analyzer_id>.npm_install`
 
@@ -199,81 +248,40 @@ _type:_ `boolean`, `string`
 
 For npm-published analyzers such as [ESLint](../tools/javascript/eslint.md) or [stylelint](../tools/css/stylelint.md), you can use the `npm_install` option to configure the behavior of npm dependencies installation. This option accepts one of the following values:
 
-| Value            | Description                                                                             |
-| ---------------- | --------------------------------------------------------------------------------------- |
-| `true` (default) | Install dependencies via [npm](https://docs.npmjs.com/) or [Yarn](https://yarnpkg.com). |
-| `false`          | Do not install any dependencies.                                                        |
-| `"production"`   | Install only dependencies for production.                                               |
-| `"development"`  | Install only dependencies for development.                                              |
+| Value               | Description                                            |
+| ------------------- | ------------------------------------------------------ |
+| `true` (default)    | Install dependencies via [npm](https://docs.npmjs.com) |
+| `false`             | Do nothing                                             |
+| `"production"`      | Install only _production_ dependencies                 |
+| ~~`"development"`~~ | **Deprecated**. This will be removed                   |
 
 For example:
 
 ```yaml
 linter:
   eslint:
-    npm_install: "development"
+    npm_install: "production"
   stylelint:
     npm_install: false
 ```
 
-When the `npm_install` option is not `false`, Sider will try as follows:
+When the `npm_install` option is not `false`, Sider will try installing dependencies in `package.json`, `package-lock.json`, or `yarn.lock`
+via the [`npm install`](https://docs.npmjs.com/cli/v7/commands/npm-install) or [`npm ci`](https://docs.npmjs.com/cli/v7/commands/npm-ci) command.
 
-1. Check if `package.json` exists. If not present, Sider uses the default version of the analyzers.
-2. If `package.json` and `yarn.lock` exist, Sider runs the [`yarn install`](https://yarnpkg.com/lang/en/docs/cli/install/) command.
-3. If `package.json` and `package-lock.json` exist, Sider runs the [`npm ci`](https://docs.npmjs.com/cli/ci) command.
-4. If `package.json` exists but none of `yarn.lock` and `package-lock.json` exist, Sider runs the [`npm install`](https://docs.npmjs.com/cli/install) command.
-5. Checks if the analyzer is installed in the `node_modules` directory.
-6. If installed, Sider uses the installed version.
-7. If not installed (for any reason), Sider uses the pre-installed default version.
-   - In this case, Sider shows warnings.
+If the installation fails for some reason or this option is set to `false`, Sider will use our default pre-installed version.
 
-When the option is `false`, Sider will skip these installation steps and analyze with the pre-installed default version.
-You might want to set the option to `false` if you don't configure analyzer and don't want to see warnings.
+## `linter.<analyzer_id>.gems`
+
+This is an alias of [`linter.<analyzer_id>.dependencies`](#linteranalyzer_iddependencies).
+Please use `dependencies` instead of `gems` because it will be **deprecated**.
 
 ## `linter.<analyzer_id>.jvm_deps`
 
-_type:_ `string[][]`
-
-For JVM tools such as Checkstyle or ktlint, this option allows you to load third-party rules or plugins. For example:
-
-```yaml
-linter:
-  checkstyle:
-    jvm_deps:
-      - [com.github.sevntu-checkstyle, sevntu-checks, 1.37.1]
-```
-
-Each element of a `jvm_deps` array must have 3 properties: `[group, name, version]`.
-These 3 properties follows the Maven repository style, and you can install dependencies registered in Maven repositories:
-
-The currently supported repositories are:
-
-- Maven Central Repository
-- JCenter Maven Repository
-- Google's Maven Repository
+> **DEPRECATED**: This option is deprecated. Use the [`linter.<analyzer_id>.dependencies`](#for-gradle) option instead.
 
 ## `linter.<analyzer_id>.apt`
 
-_type:_ `string`, `string[]`
-
-Development packages provided by the OS environment may be necessary, particularly for projects written in C/C++. Sider lets you install packages with `APT`, which is a package manager for `Debian` based Linux distributions.
-
-The `apt` option allows you to specify a list of development packages your project depends on.
-The packages must satisfy the conditions below:
-
-- Packages must be compatible with [our Docker image](https://github.com/sider/devon_rex/blob/HEAD/base/Dockerfile).
-- Package names must be suffixed with "-dev".
-- Each package name must be formatted as `<name>` or `<name>=<version>`.
-
-Below is an example of how you install the latest version of `libgdbm-dev` and the specific version (0.99.8-2) of `libfastjson-dev`.
-
-```yaml
-linter:
-  clang_tidy:
-    apt:
-      - libgdbm-dev
-      - libfastjson-dev=0.99.8-2
-```
+> **DEPRECATED**: This option is deprecated. Use the [`linter.<analyzer_id>.dependencies`](#for-apt) option instead.
 
 ## `linter.<analyzer_id>.include-path`
 
