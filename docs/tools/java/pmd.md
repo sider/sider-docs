@@ -9,7 +9,7 @@ hide_title: true
 
 | Supported Version | Language | Website               |
 | ----------------- | -------- | --------------------- |
-| 6.32.0            | Java     | https://pmd.github.io |
+| 6.33.0            | Java     | https://pmd.github.io |
 
 **PMD** is a static analysis tool to detect issues about code style, security, performance, etc.
 It supports multiple programming languages but Sider supports only Java.
@@ -25,7 +25,7 @@ You can customize the analysis via `sider.yml`:
 ```yaml
 linter:
   pmd_java:
-    dir: src
+    target: src
     rulesets:
       - category/java/errorprone.xml
       - path/to/custom-ruleset.xml
@@ -33,18 +33,20 @@ linter:
     min_priority: 3
 ```
 
-| Name                                                                                  | Type                 | Default         |
-| ------------------------------------------------------------------------------------- | -------------------- | --------------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`             | -               |
-| [`jvm_deps`](../../getting-started/custom-configuration.md#linteranalyzer_idjvm_deps) | `string[][]`         | `[]`            |
-| [`dir`](#dir)                                                                         | `string`             | `.`             |
-| [`rulesets`](#rulesets)                                                               | `string`, `string[]` | (see below)     |
-| [`encoding`](#encoding)                                                               | `string`             | (PMD's default) |
-| [`min_priority`](#min_priority)                                                       | `number`             | (PMD's default) |
+| Name                                                                                          | Type                 | Default         |
+| --------------------------------------------------------------------------------------------- | -------------------- | --------------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir)         | `string`             | -               |
+| [`dependencies`](../../getting-started/custom-configuration.md#linteranalyzer_iddependencies) | `string[]`, `map[]`  | -               |
+| [`target`](#target)                                                                           | `string`             | `.`             |
+| [`rulesets`](#rulesets)                                                                       | `string`, `string[]` | (see below)     |
+| [`encoding`](#encoding)                                                                       | `string`             | (PMD's default) |
+| [`min_priority`](#min_priority)                                                               | `number`             | (PMD's default) |
 
-### `dir`
+### `target`
 
 This option allows you to specify a directory to analyze.
+
+_alias:_ `dir`
 
 ### `rulesets`
 

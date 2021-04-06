@@ -24,14 +24,13 @@ Here is an example configuration via `sider.yml`:
 ```yaml
 linter:
   brakeman:
-    gems:
-      - name: "brakeman"
-        version: "4.3.0"
+    dependencies:
+      - { name: "brakeman", version: "4.3.0" }
 ```
 
-| Name                                                                                  | Type                | Default |
-| ------------------------------------------------------------------------------------- | ------------------- | ------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`            | -       |
-| [`gems`](../../getting-started/custom-configuration.md#linteranalyzer_idgems)         | `string[]`, `map[]` | -       |
+| Name                                                                                          | Type                | Default |
+| --------------------------------------------------------------------------------------------- | ------------------- | ------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir)         | `string`            | -       |
+| [`dependencies`](../../getting-started/custom-configuration.md#linteranalyzer_iddependencies) | `string[]`, `map[]` | -       |
 
 No analyzer-specific options.

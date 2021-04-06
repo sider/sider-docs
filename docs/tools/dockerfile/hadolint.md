@@ -7,21 +7,17 @@ hide_title: true
 
 # hadolint
 
-| Supported Version | Language   | Website                              |
-| ----------------- | ---------- | ------------------------------------ |
-| 1.23.0            | Dockerfile | https://github.com/hadolint/hadolint |
+| Supported Version | Language   | Website                             |
+| ----------------- | ---------- | ----------------------------------- |
+| 2.1.0             | Dockerfile | https://hadolint.github.io/hadolint |
 
-**hadolint** is a [Dockerfile](https://docs.docker.com/engine/reference/builder) linter that helps you build best practice Docker images.
+**hadolint** is a [Dockerfile](https://docs.docker.com/engine/reference/builder) linter that helps you build [best practice](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/) Docker images.
 
 ## Getting Started
 
 To start using hadolint, enable it in your [repository settings](../../getting-started/repository-settings.md).
 
-For more details for hadolint, see the command-line help:
-
-```shell
-$ hadolint --help
-```
+If you want to customize your hadolint analysis, create a file named [`.hadolint.yaml`](https://github.com/hadolint/hadolint#configure) and put it into your repository.
 
 ## Configuration
 
@@ -48,7 +44,7 @@ You can use the following options to fine-tune hadolint to your project.
 
 ### `target`
 
-This option allows you to specify files or directories to analyze. If you specify some targets, configure as follow:
+This option allows you to specify files or directories to analyze. If you specify some targets, configure as follows:
 
 ```Yaml
 linter:
@@ -60,7 +56,7 @@ linter:
 
 ### `ignore`
 
-This option allows you to ignore some rules from result of analysis. You can specify [rules](https://github.com/hadolint/hadolint#rules) as follow:
+This option allows you to ignore some rules from result of analysis. You can specify [rules](https://github.com/hadolint/hadolint#rules) as follows:
 
 ```yaml
 linter:
@@ -74,7 +70,7 @@ See also the `--ignore` option.
 
 ### `trusted-registry`
 
-This option can warn you when images from untrusted repositories are being used in Dockerfiles. If you specify some trusted repositories, configure as follow:
+This option can warn you when images from untrusted repositories are being used in Dockerfiles. If you specify some trusted repositories, configure as follows:
 
 ```yaml
 linter:
@@ -87,7 +83,7 @@ See also the `--trusted-registry` option.
 
 ### `config`
 
-This option allow you to specify configuration file in yaml format like this [example](https://github.com/hadolint/hadolint#configure). If you specify path to configuration file, configure as follow:
+This option allow you to specify configuration file in yaml format like this [example](https://github.com/hadolint/hadolint#configure). If you specify path to configuration file, configure as follows:
 
 ```yaml
 linter:

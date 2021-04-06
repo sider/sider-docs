@@ -24,8 +24,8 @@ Here is an example configuration via `sider.yml`:
 ```yaml
 linter:
   rails_best_practices:
-    gems:
-      - "slim"
+    dependencies:
+      - slim
     config: .rails_best_practices.yml
     vendor: false
     spec: true
@@ -35,17 +35,17 @@ linter:
     only: app,config
 ```
 
-| Name                                                                                  | Type                | Default |
-| ------------------------------------------------------------------------------------- | ------------------- | ------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`            | -       |
-| [`gems`](../../getting-started/custom-configuration.md#linteranalyzer_idgems)         | `string[]`, `map[]` | -       |
-| [`config`](#config)                                                                   | `string`            | -       |
-| [`vendor`](#vendor)                                                                   | `boolean`           | `true`  |
-| [`spec`](#spec)                                                                       | `boolean`           | `false` |
-| [`test`](#test)                                                                       | `boolean`           | `false` |
-| [`features`](#features)                                                               | `boolean`           | `false` |
-| [`exclude`](#exclude)                                                                 | `string`            | -       |
-| [`only`](#only)                                                                       | `string`            | -       |
+| Name                                                                                          | Type                | Default |
+| --------------------------------------------------------------------------------------------- | ------------------- | ------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir)         | `string`            | -       |
+| [`dependencies`](../../getting-started/custom-configuration.md#linteranalyzer_iddependencies) | `string[]`, `map[]` | -       |
+| [`config`](#config)                                                                           | `string`            | -       |
+| [`vendor`](#vendor)                                                                           | `boolean`           | `true`  |
+| [`spec`](#spec)                                                                               | `boolean`           | `false` |
+| [`test`](#test)                                                                               | `boolean`           | `false` |
+| [`features`](#features)                                                                       | `boolean`           | `false` |
+| [`exclude`](#exclude)                                                                         | `string`            | -       |
+| [`only`](#only)                                                                               | `string`            | -       |
 
 ### `config`
 
@@ -83,9 +83,9 @@ This option allows you to limit only to files or directories you want. The value
 Rails Best Practices supports some template engines.
 When Sider finds the following gems in your `Gemfile.lock`, it installs them automatically for backward compatibility:
 
-- [slim](https://github.com/slim-template/slim)
-- [haml](https://github.com/haml/haml)
-- [sass](https://github.com/sass/ruby-sass)
-- [sassc](https://github.com/sass/sassc-ruby)
+- [Slim](https://github.com/slim-template/slim)
+- [Haml](https://github.com/haml/haml)
+- [Sass](https://github.com/sass/ruby-sass)
+- [SassC](https://github.com/sass/sassc-ruby)
 
-Note that these gems are not be installed when the `gems` option is specified.
+Note that these gems are not be installed when the [`dependencies`](../../getting-started/custom-configuration.md#linteranalyzer_iddependencies) option is specified.

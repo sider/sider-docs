@@ -9,7 +9,7 @@ hide_title: true
 
 | Supported Version         | Language | Website             |
 | ------------------------- | -------- | ------------------- |
-| 0.61.0+ (default: 1.11.0) | Ruby     | https://rubocop.org |
+| 0.61.0+ (default: 1.12.1) | Ruby     | https://rubocop.org |
 
 **RuboCop** is a pluggable static code analyzer and code formatter for Ruby.
 It has been community-driven developed and has many rules and plugins including third-party's ones.
@@ -38,20 +38,18 @@ Here is an example configuration via `sider.yml`:
 ```yaml
 linter:
   rubocop:
-    gems:
-      - rubocop-rspec
     config: config/.rubocop.yml
     safe: true
 ```
 
 You can use the following options to make analysis fitter for your project.
 
-| Name                                                                                  | Type                | Default |
-| ------------------------------------------------------------------------------------- | ------------------- | ------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`            | -       |
-| [`gems`](../../getting-started/custom-configuration.md#linteranalyzer_idgems)         | `string[]`, `map[]` | -       |
-| [`config`](#config)                                                                   | `string`            | -       |
-| [`safe`](#safe)                                                                       | `boolean`           | `false` |
+| Name                                                                                          | Type                | Default |
+| --------------------------------------------------------------------------------------------- | ------------------- | ------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir)         | `string`            | -       |
+| [`dependencies`](../../getting-started/custom-configuration.md#linteranalyzer_iddependencies) | `string[]`, `map[]` | -       |
+| [`config`](#config)                                                                           | `string`            | -       |
+| [`safe`](#safe)                                                                               | `boolean`           | `false` |
 
 ### `config`
 

@@ -9,7 +9,7 @@ hide_title: true
 
 | Supported Version | Language | Website                   |
 | ----------------- | -------- | ------------------------- |
-| 1.38.0            | Go       | https://golangci-lint.run |
+| 1.39.0            | Go       | https://golangci-lint.run |
 
 **GolangCI-Lint** is a linter to aggregate multiple linters and a successor to [Go Meta Linter](gometalinter.md) which is deprecated.
 
@@ -91,7 +91,7 @@ See also the [official document](https://golangci-lint.run/usage/configuration/#
 
 ### `target`
 
-This option allows you to specify files or directories to analyze. If you specify some targets, configure as follow:
+This option allows you to specify files or directories to analyze. If you specify some targets, configure as follows:
 
 ```Yaml
 linter:
