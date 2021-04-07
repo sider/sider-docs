@@ -117,6 +117,7 @@ We support the following package managers:
 - [npm](#for-npm) (for JavaScript)
 - [Gradle](#for-gradle) (for Java)
 - [APT](#for-apt) (for C/C++)
+- [pip](#for-pip) (for Python)
 
 ### For Bundler
 
@@ -241,6 +242,27 @@ Note that specified dependencies must satisfy the following requirements:
 
 - A dependency must be compatible with our [Docker image](https://github.com/sider/devon_rex/blob/HEAD/base/Dockerfile).
 - A dependency name must have the suffix `-dev`.
+
+### For pip
+
+Sider uses [pip](https://pip.pypa.io) to install Python dependencies. There are the following ways:
+
+- Specify a dependency name without a version. This will install the latest version.
+- Specify a dependency name and version with the [requirement specifiers](https://pip.pypa.io/en/stable/reference/pip_install/#requirement-specifiers) like `==1.4.1`.
+- Specify a dependency name and version with the [VCS format](https://pip.pypa.io/en/stable/reference/pip_install/#vcs-support).
+- Specify a dependency name and version with a map including name and version.
+
+For example:
+
+```yaml
+linter:
+  flake8:
+    dependencies:
+      - "flake8-bugbear"
+      - "flake8-builtins==1.4.1"
+      - "git+https://github.com/PyCQA/flake8-import-order.git@51e16f33065512afa1a85a20b2c2d3be768f78ea"
+      - { name: "flake8-docstrings", version: "==1.6.0" }
+```
 
 ## `linter.<analyzer_id>.npm_install`
 
