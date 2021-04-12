@@ -7,6 +7,7 @@ hide_title: true
 
 # Sider Enterprise Releases
 
+- [April 2021](./202104.md)
 - [March 2021](./202103.md)
 - [February 2021](./202102.md)
 - [January 2021](./202101.md)
