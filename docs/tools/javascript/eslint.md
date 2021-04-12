@@ -35,8 +35,9 @@ See the [ESLint documentation](https://eslint.org/docs/user-guide/getting-starte
 
 ## Default Configuration for ESLint
 
-Sider prepares the [default ESLint configuration](https://github.com/sider/runners/blob/HEAD/images/eslint/sider_eslintrc.yml).
+Sider provides our [recommended ruleset](https://github.com/sider/runners/blob/HEAD/images/eslint/sider_recommended_eslint.js) for ESLint.
 This configuration is used when you have no ESLint configurations or `sider.yml` in your repository.
+For more details, please visit [Recommended Ruleset](../../getting-started/recommended-rules.md).
 
 ## Configuration
 
