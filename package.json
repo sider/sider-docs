@@ -5,7 +5,7 @@
     "format": "npm run prettier -- --write"
   },
   "devDependencies": {
-    "@arkweid/lefthook": "^0.7.3",
+    "@arkweid/lefthook": "^0.7.4",
     "@mapbox/remark-lint-link-text": "^0.6.0",
     "prettier": "^2.2.1",
     "remark-cli": "^9.0.0",
