@@ -7,7 +7,7 @@
   "devDependencies": {
     "@arkweid/lefthook": "^0.7.4",
     "@mapbox/remark-lint-link-text": "^0.6.0",
-    "prettier": "^2.2.1",
+    "prettier": "^2.3.0",
     "remark-cli": "^9.0.0",
     "remark-lint": "^8.0.0",
     "remark-lint-code-block-syntax": "^0.2.1",
