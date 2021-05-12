@@ -9,7 +9,7 @@ hide_title: true
 
 | Supported Version         | Language                    | Website              |
 | ------------------------- | --------------------------- | -------------------- |
-| 8.3.0+ (default: 13.12.0) | CSS and flavors (e.g. Sass) | https://stylelint.io |
+| 8.3.0+ (default: 13.13.1) | CSS and flavors (e.g. Sass) | https://stylelint.io |
 
 **stylelint** is a pluggable linter to help you avoid errors and enforce conventions for CSS and CSS-like languages.
 It provides many core rules and third-party rules by the community.
