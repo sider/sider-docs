@@ -9,7 +9,7 @@ hide_title: true
 
 | Supported Version | Language | Website                                      |
 | ----------------- | -------- | -------------------------------------------- |
-| 3.5.8             | PHP      | https://pear.php.net/package/PHP_CodeSniffer |
+| 3.6.0             | PHP      | https://pear.php.net/package/PHP_CodeSniffer |
 
 **PHP_CodeSniffer** is a style checker to enforce a defined set of PHP coding standards.
 
