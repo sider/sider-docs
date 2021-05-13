@@ -18,6 +18,12 @@ It supports multiple programming languages but Sider supports only Java.
 
 To start using PMD, enable it in your [repository settings](../../getting-started/repository-settings.md).
 
+## Default Configuration for PMD
+
+Sider provides our [recommended ruleset](https://github.com/sider/runners/blob/HEAD/images/pmd_java/sider_recommended_pmd.xml) for PMD.
+This configuration is used when you do not have `sider.yml` in your repository.
+For more details, please visit [Recommended Ruleset](../../getting-started/recommended-rules.md).
+
 ## Configuration
 
 You can customize the analysis via `sider.yml`:
@@ -73,7 +79,7 @@ linter:
       - your_pmd_custom_rules.xml
 ```
 
-If the option is omitted, Sider uses the [default configuration](https://github.com/sider/runners/blob/HEAD/images/pmd_java/default-ruleset.xml).
+If the option is omitted, Sider uses our recommended ruleset.
 
 You can [configure predefined rules](https://pmd.github.io/pmd/pmd_userdocs_configuring_rules.html) and
 [writing your own rules](https://pmd.github.io/pmd/pmd_userdocs_extending_writing_rules_intro.html) via the XML configuration file.
