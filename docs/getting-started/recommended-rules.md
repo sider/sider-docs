@@ -24,8 +24,8 @@ Sider applies the recommended ruleset to the analysis tools below. Please follow
 
 - [Checkstyle](../tools/java/checkstyle.md#config)
 - [cpplint](../tools/cplusplus/cpplint.md#recommended-ruleset)
-- [Flake8](../tools/python/flake8.md#default-configuration-for-flake8)
-- [PHP_CodeSniffer](../tools/php/code-sniffer.md#default-configuration)
 - [ESLint](../tools/javascript/eslint.md#default-configuration-for-eslint)
-- [RuboCop](../tools/ruby/rubocop.md#default-configuration-for-rubocop)
+- [Flake8](../tools/python/flake8.md#default-configuration-for-flake8)
 - [PMD](../tools/java/pmd.md#default-configuration-for-pmd)
+- [PHP_CodeSniffer](../tools/php/code-sniffer.md#default-configuration)
+- [RuboCop](../tools/ruby/rubocop.md#default-configuration-for-rubocop)
