@@ -28,8 +28,9 @@ See also the [user guide](https://docs.rubocop.org/rubocop/usage/basic_usage) fo
 
 ## Default Configuration for RuboCop
 
-If a `.rubocop.yml` file does not exist in your repository, Sider uses the [default configuration](https://github.com/sider/runners/blob/HEAD/images/rubocop/default_rubocop.yml)
-including the [MeowCop](https://github.com/sider/meowcop) gem.
+If a `.rubocop.yml` file does not exist in your repository,
+Sider uses our [recommended ruleset](https://github.com/sider/runners/blob/HEAD/images/rubocop/sider_recommended_rubocop.yml) for RuboCop.
+For more details, please visit [Recommended Ruleset](../../getting-started/recommended-rules.md).
 
 ## Configuration
 
