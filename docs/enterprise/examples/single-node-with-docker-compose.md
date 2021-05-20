@@ -35,7 +35,7 @@ Create `/etc/sider/env` with content like this, and change the file permission a
 
 ```bash:/etc/sider/env
 RAILS_ENV=onprem
-SECRET_KEY_BASE=81efee29dbcad46f33f366f8e55e8a4b29d199b4a5f3b82c55dddab5b3107e3cf656d5ab713bdf871a2d4128334933d08bbcee49a0b0cb18d1b54af6866e7b75
+SECRET_KEY_BASE={your_secret_key}
 DATABASE_URL=mysql2://mysql:3306/sideci
 BASE_URL=https://sider.example.com
 REDIS_URL=redis://redis:6379/0
@@ -61,9 +61,9 @@ Configure `/etc/sider/docker-compose.yml` like this:
 version: "3"
 services:
   sideci_web:
-    image: 480130971618.dkr.ecr.us-east-1.amazonaws.com/sideci_onprem:release-202104.0
+    image: "{aws_account_id}.dkr.ecr.{region}.amazonaws.com/sideci_onprem:release-202104.0"
     env_file:
-      - /etc/sider/env
+      - "/etc/sider/env"
     command: ["bundle", "exec", "puma"]
     restart: always
     ports:
@@ -73,39 +73,39 @@ services:
       - redis
       - minio
   sideci_worker:
-    image: 480130971618.dkr.ecr.us-east-1.amazonaws.com/sideci_onprem:release-202104.0
+    image: "{aws_account_id}.dkr.ecr.{region}.amazonaws.com/sideci_onprem:release-202104.0"
     env_file:
-      - /etc/sider/env
+      - "/etc/sider/env"
     command: ["bundle", "exec", "sidekiq"]
     restart: always
     volumes:
-      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - "/var/run/docker.sock:/var/run/docker.sock:ro"
     depends_on:
       - mysql
       - redis
       - minio
   mysql:
-    image: mysql:5.7
+    image: "mysql:5.7"
     restart: always
     environment:
       MYSQL_ALLOW_EMPTY_PASSWORD: "true"
     volumes:
-      - mysql_data:/var/lib/mysql
+      - "mysql_data:/var/lib/mysql"
   redis:
-    image: redis:5
+    image: "redis:5"
     command: ["redis-server", "--bind", "0.0.0.0", "--appendonly", "yes"]
     restart: always
     volumes:
-      - redis_data:/data
+      - "redis_data:/data"
   minio:
-    image: minio/minio
+    image: "minio/minio"
     command: ["server", "/data"]
     restart: always
     environment:
       MINIO_ACCESS_KEY: access-key
       MINIO_SECRET_KEY: secret-key
     volumes:
-      - minio_data:/data
+      - "minio_data:/data"
 
 volumes:
   mysql_data:
