@@ -25,9 +25,9 @@ This is an example of how to start **sideci-web**.
 docker run \
   --detach \
   --restart=always \
-  --env-file=ENV_FILE \
+  --env-file={env_file} \
   --publish=80:3000 \
-  480130971618.dkr.ecr.us-east-1.amazonaws.com/sideci_onprem:TAG \
+  {aws_account_id}.dkr.ecr.{region}.amazonaws.com/sideci_onprem:{tag} \
   bundle exec puma
 ```
 
@@ -42,9 +42,9 @@ This is an example of how to start **sideci-worker**.
 docker run \
   --detach \
   --restart=always \
-  --env-file=ENV_FILE \
+  --env-file={env_file} \
   --volume=/var/run/docker.sock:/var/run/docker.sock:ro \
-  480130971618.dkr.ecr.us-east-1.amazonaws.com/sideci_onprem:TAG \
+  {aws_account_id}.dkr.ecr.{region}.amazonaws.com/sideci_onprem:{tag} \
   bundle exec sidekiq
 ```
 
@@ -64,12 +64,13 @@ Sider Enterprise administrators can do the followings on the `/admin` page:
 In order to make users administrators, run the following command:
 
 ```console
-docker run --env-file=ENV_FILE 480130971618.dkr.ecr.us-east-1.amazonaws.com/sideci_onprem:TAG bundle exec rails admin:promote[USERNAME]
+docker run --env-file={env_file} {aws_account_id}.dkr.ecr.{region}.amazonaws.com/sideci_onprem:{tag} \
+  bundle exec rails admin:promote'[{username}]'
 ```
 
-Replace `USERNAME` with a GitHub login name.
+Replace `{username}` with a GitHub login name.
 
-> The specified `USERNAME` must exist on the Sider database. Make sure the user sign up on Sider in advance.
+> The specified `{username}` must exist on the Sider database. Make sure the user sign up on Sider in advance.
 
 ## Register users on Sider manually
 
@@ -96,12 +97,12 @@ In addition, these metrics for other services should be also monitored because S
 
 ## Remove old Docker images
 
-You might want to remove old Docker images related to Sider Enterprise because they consume disk space. This is an example command to do that (replace `RUNNER_VERSION` with the latest Runner version. You can see the version on our [release page](./releases/index.md)):
+You might want to remove old Docker images related to Sider Enterprise because they consume disk space. This is an example command to do that (replace `{runner_version}` with the latest Runner version. You can see the version on our [release page](./releases/index.md)):
 
 ```console
 docker image ls --format '{{.Repository}}:{{.Tag}}' \
   | grep  sider/runner_ \
-  | grep -v RUNNER_VERSION \
+  | grep -v {runner_version} \
   | xargs docker rmi --force
 ```
 

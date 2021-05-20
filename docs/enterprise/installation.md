@@ -19,15 +19,15 @@ Sider Enterprise runs on Docker, and it requires MySQL, Redis, MinIO, and GitHub
 
 We provide Sider Enterprise as a Docker image for our customers. After you contract with Sleeek Corporation, we send you a credential, with which you can get the Sider Enterprise Docker image.
 
-Run the following command replacing `YOUR_KEY`, `YOUR_SECRET`, and `TAG` with the given credentials and the Sider Enterprise Docker image tag, and you can get the Docker image.
+Run the following command replacing `{your_key}`, `{your_secret}`, and `{tag}` with the given credentials and the Sider Enterprise Docker image tag, and you can get the Docker image.
 
 ```console
 docker run --rm \
   -v /var/run/docker.sock:/var/run/docker.sock \
-  -e AWS_ACCESS_KEY_ID=YOUR_KEY \
-  -e AWS_SECRET_ACCESS_KEY=YOUR_SECRET \
+  -e AWS_ACCESS_KEY_ID={your_key} \
+  -e AWS_SECRET_ACCESS_KEY={your_secret} \
   sider/ecr-image-puller \
-  480130971618.dkr.ecr.us-east-1.amazonaws.com/sideci_onprem:TAG
+  {aws_account_id}.dkr.ecr.{region}.amazonaws.com/sideci_onprem:{tag}
 ```
 
 > If your organization requires your machine to access via an HTTP proxy server, you should configure Docker to use it.
@@ -67,7 +67,7 @@ Now, you can run Sider Enterprise on your host. First, you have to run the follo
 
 ```console
 docker run --env-file /etc/sider-env --rm \
-  480130971618.dkr.ecr.us-east-1.amazonaws.com/sideci_onprem:TAG \
+  {aws_account_id}.dkr.ecr.{region}.amazonaws.com/sideci_onprem:{tag} \
   bundle exec rails db:setup
 ```
 
@@ -78,13 +78,14 @@ docker run --detach \
   --restart=always \
   --env-file=/etc/sider-env \
   --publish=80:3000 \
-  480130971618.dkr.ecr.us-east-1.amazonaws.com/sideci_onprem:TAG \
+  {aws_account_id}.dkr.ecr.{region}.amazonaws.com/sideci_onprem:{tag} \
   bundle exec puma
+
 docker run --detach \
   --restart=always \
   --env-file=/etc/sider-env \
   --volume=/var/run/docker.sock:/var/run/docker.sock:ro \
-  480130971618.dkr.ecr.us-east-1.amazonaws.com/sideci_onprem:TAG \
+  {aws_account_id}.dkr.ecr.{region}.amazonaws.com/sideci_onprem:{tag} \
   bundle exec sidekiq
 ```
 
