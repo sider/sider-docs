@@ -33,31 +33,37 @@ Let's set up your Sider Enterprise for a single node with these steps:
 
 Create `/etc/sider/env` with content like this, and change the file permission accessible only to be specific users. Be careful to make sure your GitHub App configurations satisfy the settings on GitHub Enterprise Server.
 
-```bash:/etc/sider/env
+```sh
 RAILS_ENV=onprem
-SECRET_KEY_BASE={your_secret_key}
+SECRET_KEY_BASE={your_credential}
 DATABASE_URL=mysql2://mysql:3306/sideci
 BASE_URL=https://sider.example.com
 REDIS_URL=redis://redis:6379/0
 GITHUB_APP_ID=1
 GITHUB_APP_NAME=sider
-GITHUB_APP_PRIVATE_KEY=REPLACE
-GITHUB_APP_OAUTH2_CLIENT_ID=REPLACE
-GITHUB_APP_OAUTH2_CLIENT_SECRET=REPLACE
-GITHUB_APP_WEBHOOK_SECRET=REPLACE
+GITHUB_APP_PRIVATE_KEY={your_credential}
+GITHUB_APP_OAUTH2_CLIENT_ID={your_credential}
+GITHUB_APP_OAUTH2_CLIENT_SECRET={your_credential}
+GITHUB_APP_WEBHOOK_SECRET={your_credential}
 GITHUB_API_ENDPOINT=https://ghe.example.com/api/v3/
 GITHUB_ENDPOINT=https://ghe.example.com/
-ENCRYPTION_SERVICE_KEY=hs2n6oI4as302bYpuQdPeIN5bft9b1VD
-ENCRYPTION_SERVICE_SALT=lhYLt2NRfLi0KiriwMt1opRahpVRuy9b
+ENCRYPTION_SERVICE_KEY={your_credential}
+ENCRYPTION_SERVICE_SALT={your_credential}
 RUNNERS_TRACES_S3_BUCKET_NAME=runner-traces
-DOCKER_RUNNERS_CONFIG={"docker_host_url":"unix:///var/run/docker.sock","s3_endpoint":"http://minio:9000","aws_access_key_id":"access-key","aws_secret_access_key":"secret-key","network_mode":"sider_default"}
+DOCKER_RUNNERS_CONFIG='{
+"docker_host_url": "unix:///var/run/docker.sock",
+"s3_endpoint": "http://minio:9000",
+"aws_access_key_id": "{your_credential}",
+"aws_secret_access_key": "{your_credential}",
+"network_mode": "bridge"
+}'
 ```
 
 ## Creating docker-compose.yml
 
 Configure `/etc/sider/docker-compose.yml` like this:
 
-```yaml:/etc/sider/docker-compose.yml
+```yaml
 version: "3"
 services:
   sideci_web:
