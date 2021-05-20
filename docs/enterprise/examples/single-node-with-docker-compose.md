@@ -52,10 +52,10 @@ ENCRYPTION_SERVICE_SALT={your_credential}
 RUNNERS_TRACES_S3_BUCKET_NAME=runner-traces
 DOCKER_RUNNERS_CONFIG='{
 "docker_host_url": "unix:///var/run/docker.sock",
-"s3_endpoint":"http://minio:9000",
-"aws_access_key_id":"{your_credential}",
-"aws_secret_access_key":"{your_credential}",
-"network_mode":"bridge"
+"s3_endpoint": "http://minio:9000",
+"aws_access_key_id": "{your_credential}",
+"aws_secret_access_key": "{your_credential}",
+"network_mode": "bridge"
 }'
 ```
 
