@@ -25,3 +25,4 @@ To start using Secet Scan, enable it in your [repository settings](../../getting
 
 - GitHub
 - AWS
+- SSH private key
