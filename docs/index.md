@@ -111,6 +111,7 @@ This section has documents about analysis tools which Sider supports. We have an
 - [Misspell](./tools/others/misspell.md)
 - [LanguageTool](./tools/others/languagetool.md)
 - [PMD CPD](./tools/others/pmd-cpd.md)
+- [Secret Scan](./tools/others/secret-scan.md)
 
 ## Custom Rules
 
