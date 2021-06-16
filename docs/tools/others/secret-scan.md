@@ -19,7 +19,7 @@ Leakage of such secrets could lead to serious security incidents that might ulti
 
 ## Getting Started
 
-To start using Secet Scan, enable it in your [repository settings](../../getting-started/repository-settings.md).
+To start using Secret Scan, enable it in your [repository settings](../../getting-started/repository-settings.md).
 
 ## Supported providers or patterns
 
