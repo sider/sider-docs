@@ -9,7 +9,7 @@ hide_title: true
 
 > This is **BETA**. The behavior of this tool might change.
 
-**Secret Scan** can detect secrets commited in your repository, for example:
+**Secret Scan** can detect secrets committed in your repository, for example:
 
 - GitHub access tokens
 - AWS secret keys
