@@ -49,7 +49,7 @@ As stated above, objects on MinIO will grow and hugely consumes disk space. If y
 docker run \
   --rm \
   --env-file={env_file} \
-  {aws_account_id}.dkr.ecr.{region}.amazonaws.com/sideci_onprem:{tag} \
+  docker.sider.review/sideci_onprem:{tag} \
   bundle exec rails onprem:s3:configure_bucket_lifecycle'[180]'
 ```
 

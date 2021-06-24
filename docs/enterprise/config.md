@@ -180,7 +180,7 @@ docker run \
   --rm \
   --env-file={env_file} \
   --volume=/var/run/docker.sock:/var/run/docker.sock \
-  {aws_account_id}.dkr.ecr.{region}.amazonaws.com/sideci_onprem:{tag} \
+  docker.sider.review/sideci_onprem:{tag} \
   bundle exec rails onprem:batch:daily
 ```
 
@@ -225,6 +225,6 @@ Consider allowing Runners to access the list of domain names below if you want t
 - `packagist.org`
 - `github.com`
 - `gitlab.com`
-- `{aws_account_id}.dkr.ecr.{region}.amazonaws.com`
+- `docker.sider.review`
 
 On top of those, you might have to allow Runners to connect to your Git servers.

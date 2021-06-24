@@ -27,7 +27,7 @@ docker run \
   --restart=always \
   --env-file={env_file} \
   --publish=80:3000 \
-  {aws_account_id}.dkr.ecr.{region}.amazonaws.com/sideci_onprem:{tag} \
+  docker.sider.review/sideci_onprem:{tag} \
   bundle exec puma
 ```
 
@@ -44,7 +44,7 @@ docker run \
   --restart=always \
   --env-file={env_file} \
   --volume=/var/run/docker.sock:/var/run/docker.sock:ro \
-  {aws_account_id}.dkr.ecr.{region}.amazonaws.com/sideci_onprem:{tag} \
+  docker.sider.review/sideci_onprem:{tag} \
   bundle exec sidekiq
 ```
 
@@ -64,7 +64,7 @@ Sider Enterprise administrators can do the followings on the `/admin` page:
 In order to make users administrators, run the following command:
 
 ```console
-docker run --env-file={env_file} {aws_account_id}.dkr.ecr.{region}.amazonaws.com/sideci_onprem:{tag} \
+docker run --env-file={env_file} docker.sider.review/sideci_onprem:{tag} \
   bundle exec rails admin:promote'[{username}]'
 ```
 

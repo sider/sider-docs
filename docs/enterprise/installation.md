@@ -22,12 +22,11 @@ We provide Sider Enterprise as a Docker image for our customers. After you contr
 Run the following command replacing `{your_key}`, `{your_secret}`, and `{tag}` with the given credentials and the Sider Enterprise Docker image tag, and you can get the Docker image.
 
 ```console
-docker run --rm \
-  -v /var/run/docker.sock:/var/run/docker.sock \
-  -e AWS_ACCESS_KEY_ID={your_key} \
-  -e AWS_SECRET_ACCESS_KEY={your_secret} \
-  sider/ecr-image-puller \
-  {aws_account_id}.dkr.ecr.{region}.amazonaws.com/sideci_onprem:{tag}
+export AWS_ACCESS_KEY_ID={your_key} \
+export AWS_SECRET_ACCESS_KEY={your_secret} \
+  && aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin docker.sider.review/sideci_onprem:{tag} \
+  && docker pull docker.sider.review/sideci_onprem:{tag} \
+  && docker logout docker.sider.review/sideci_onprem:{tag}
 ```
 
 > If your organization requires your machine to access via an HTTP proxy server, you should configure Docker to use it.
@@ -67,7 +66,7 @@ Now, you can run Sider Enterprise on your host. First, you have to run the follo
 
 ```console
 docker run --env-file /etc/sider-env --rm \
-  {aws_account_id}.dkr.ecr.{region}.amazonaws.com/sideci_onprem:{tag} \
+  docker.sider.review/sideci_onprem:{tag} \
   bundle exec rails db:setup
 ```
 
@@ -78,14 +77,14 @@ docker run --detach \
   --restart=always \
   --env-file=/etc/sider-env \
   --publish=80:3000 \
-  {aws_account_id}.dkr.ecr.{region}.amazonaws.com/sideci_onprem:{tag} \
+  docker.sider.review/sideci_onprem:{tag} \
   bundle exec puma
 
 docker run --detach \
   --restart=always \
   --env-file=/etc/sider-env \
   --volume=/var/run/docker.sock:/var/run/docker.sock:ro \
-  {aws_account_id}.dkr.ecr.{region}.amazonaws.com/sideci_onprem:{tag} \
+  docker.sider.review/sideci_onprem:{tag} \
   bundle exec sidekiq
 ```
 

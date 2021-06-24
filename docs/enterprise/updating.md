@@ -26,14 +26,14 @@ You have to do the following operations to update Sider Enterprise.
 On step #4, you must always run the following command:
 
 ```console
-docker run {aws_account_id}.dkr.ecr.{region}.amazonaws.com/sideci_onprem:{new_tag} \
+docker run docker.sider.review/sideci_onprem:{new_tag} \
   bundle exec bin/update_sider
 ```
 
 If you try to update to the `release-202007.0` or earlier, run the following command. Also, you might have to run extra update scripts in addition.
 
 ```console
-docker run {aws_account_id}.dkr.ecr.{region}.amazonaws.com/sideci_onprem:{new_tag} \
+docker run docker.sider.review/sideci_onprem:{new_tag} \
   bundle exec rails db:migrate
 ```
 
