@@ -9,7 +9,7 @@ hide_title: true
 
 | Supported Version | Language | Website                            |
 | ----------------- | -------- | ---------------------------------- |
-| 1.5.4             | C/C++    | https://github.com/cpplint/cpplint |
+| 1.5.5             | C/C++    | https://github.com/cpplint/cpplint |
 
 **cpplint** is a static analysis tool to check C/C++ files for style issues.
 
@@ -52,7 +52,7 @@ You can use the following options to fine-tune cpplint to your project.
 
 ### `target`
 
-This option allows you to specify files or directories to analyze. If you specify some targets, configure as follow:
+This option allows you to specify files or directories to analyze. If you specify some targets, configure as follows:
 
 ```Yaml
 linter:
@@ -95,7 +95,7 @@ This option allows you to specify a line-length for the project.
 
 ### `exclude`
 
-This option allows you to exclude files to analyze. You can specify some files as follow:
+This option allows you to exclude files to analyze. You can specify some files as follows:
 
 ```yaml
 linter:

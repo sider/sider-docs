@@ -9,7 +9,7 @@ hide_title: true
 
 | Supported Version | Language | Website                |
 | ----------------- | -------- | ---------------------- |
-| 8.41              | Java     | https://checkstyle.org |
+| 8.43              | Java     | https://checkstyle.org |
 
 **Checkstyle** is a style checker for Java code and aims to enforce a coding standard.
 
@@ -25,7 +25,7 @@ You can customize Checkstyle analysis using `sider.yml`. For example:
 linter:
   checkstyle:
     config: google
-    dir: src
+    target: src
     exclude:
       - vendor
       - pattern: foo
@@ -36,15 +36,15 @@ linter:
     properties: checkstyle.properties
 ```
 
-| Name                                                                                  | Type                           | Default  |
-| ------------------------------------------------------------------------------------- | ------------------------------ | -------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`                       | -        |
-| [`jvm_deps`](../../getting-started/custom-configuration.md#linteranalyzer_idjvm_deps) | `string[][]`                   | `[]`     |
-| [`config`](#config)                                                                   | `string`                       | `google` |
-| [`dir`](#dir)                                                                         | `string`, `string[]`           | `.`      |
-| [`exclude`](#exclude)                                                                 | `string`, `string[]`, `hash[]` | -        |
-| [`ignore`](#ignore)                                                                   | `string[]`                     | -        |
-| [`properties`](#properties)                                                           | `string`                       | -        |
+| Name                                                                                          | Type                          | Default |
+| --------------------------------------------------------------------------------------------- | ----------------------------- | ------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir)         | `string`                      | -       |
+| [`dependencies`](../../getting-started/custom-configuration.md#linteranalyzer_iddependencies) | `string[]`, `map[]`           | -       |
+| [`config`](#config)                                                                           | `string`                      | `sider` |
+| [`target`](#target)                                                                           | `string`, `string[]`          | `.`     |
+| [`exclude`](#exclude)                                                                         | `string`, `string[]`, `map[]` | -       |
+| [`ignore`](#ignore)                                                                           | `string[]`                    | -       |
+| [`properties`](#properties)                                                                   | `string`                      | -       |
 
 ### `config`
 
@@ -53,7 +53,7 @@ This option allows you to declare the coding standard you want to follow.
 Supported values are:
 
 - [`sider`](https://github.com/sider/runners/blob/HEAD/images/checkstyle/sider_recommended_checkstyle.xml)
-  - Sider provides our [recommended ruleset](../../getting-started/recommended-rules.md) for Checkstyle.
+  - our [recommended ruleset](../../getting-started/recommended-rules.md)
 - [`google`](https://checkstyle.org/google_style)
   - alias for [`/google_checks.xml`](https://github.com/checkstyle/checkstyle/blob/HEAD/src/main/resources/google_checks.xml)
 - [`sun`](https://checkstyle.org/sun_style)
@@ -62,11 +62,13 @@ Supported values are:
   - `./config/my-checkstyle.xml`
   - `/com/example/checkstyle/custom-ruleset.xml`
 
-See also the [`-c` CLI option](https://checkstyle.org/cmdline.html) of Checkstyle.
+See also the [`-c`](https://checkstyle.org/cmdline.html) CLI option of Checkstyle.
 
-### `dir`
+### `target`
 
-This option allows you to specify the directories you want to check in your repository.
+This option allows you to specify directories to be analyzed.
+
+_alias:_ `dir`
 
 ### `exclude`
 

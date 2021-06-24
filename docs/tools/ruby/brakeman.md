@@ -9,7 +9,7 @@ hide_title: true
 
 | Supported Version       | Language | Website                     |
 | ----------------------- | -------- | --------------------------- |
-| 4.0.0+ (default: 5.0.0) | Ruby     | https://brakemanscanner.org |
+| 4.0.0+ (default: 5.0.4) | Ruby     | https://brakemanscanner.org |
 
 **Brakeman** is a static analysis tool to detect security issues in Ruby on Rails applications.
 
@@ -24,14 +24,13 @@ Here is an example configuration via `sider.yml`:
 ```yaml
 linter:
   brakeman:
-    gems:
-      - name: "brakeman"
-        version: "4.3.0"
+    dependencies:
+      - { name: "brakeman", version: "4.3.0" }
 ```
 
-| Name                                                                                  | Type                 | Default |
-| ------------------------------------------------------------------------------------- | -------------------- | ------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`             | -       |
-| [`gems`](../../getting-started/custom-configuration.md#linteranalyzer_idgems)         | `string[]`, `hash[]` | -       |
+| Name                                                                                          | Type                | Default |
+| --------------------------------------------------------------------------------------------- | ------------------- | ------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir)         | `string`            | -       |
+| [`dependencies`](../../getting-started/custom-configuration.md#linteranalyzer_iddependencies) | `string[]`, `map[]` | -       |
 
 No analyzer-specific options.

@@ -36,16 +36,16 @@ Here is an example configuration via `sider.yml`:
 ```yaml
 linter:
   querly:
-    gems:
+    dependencies:
       - slim
     config: .config/querly.yml
 ```
 
-| Name                                                                                  | Type                 | Default |
-| ------------------------------------------------------------------------------------- | -------------------- | ------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`             | -       |
-| [`gems`](../../getting-started/custom-configuration.md#linteranalyzer_idgems)         | `string[]`, `hash[]` | -       |
-| [`config`](#config)                                                                   | `string`             | -       |
+| Name                                                                                          | Type                | Default |
+| --------------------------------------------------------------------------------------------- | ------------------- | ------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir)         | `string`            | -       |
+| [`dependencies`](../../getting-started/custom-configuration.md#linteranalyzer_iddependencies) | `string[]`, `map[]` | -       |
+| [`config`](#config)                                                                           | `string`            | -       |
 
 ### `config`
 
@@ -56,7 +56,7 @@ This option allows you to specify a configuration file path you want to use.
 Querly has a mechanism called [preprocessor](https://github.com/soutaro/querly/blob/HEAD/manual/configuration.md#preprocessor) for analyzing templates which contain Ruby code.
 Sider finds the following gems in `Gemfile.lock` and installs them automatically for backward compatibility:
 
-- [slim](https://github.com/slim-template/slim)
-- [haml](https://github.com/haml/haml)
+- [Slim](https://github.com/slim-template/slim)
+- [Haml](https://github.com/haml/haml)
 
-Note that these gems are not installed automatically when the `gems` option is specified.
+Note that these gems are not installed automatically when the [`dependencies`](../../getting-started/custom-configuration.md#linteranalyzer_iddependencies) option is specified.

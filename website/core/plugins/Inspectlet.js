@@ -11,13 +11,7 @@ const inlineScript = `
 
 class Inspectlet extends React.Component {
   render() {
-    return (
-      <script
-        type="text/javascript"
-        id="inspectletjs"
-        dangerouslySetInnerHTML={{ __html: inlineScript }}
-      />
-    );
+    return <script type="text/javascript" id="inspectletjs" dangerouslySetInnerHTML={{ __html: inlineScript }} />;
   }
 }
 

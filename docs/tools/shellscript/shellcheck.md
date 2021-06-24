@@ -9,7 +9,7 @@ hide_title: true
 
 | Supported Version | Language     | Website                    |
 | ----------------- | ------------ | -------------------------- |
-| 0.7.1             | Shell script | https://www.shellcheck.net |
+| 0.7.2             | Shell script | https://www.shellcheck.net |
 
 ShellCheck is a static analysis tool to find bugs in shell script code. It gives warnings and suggestions.
 
@@ -37,16 +37,16 @@ linter:
 
 You can use the following options to fine-tune ShellCheck to your project.
 
-| Name                                                                                  | Type                           | Default       |
-| ------------------------------------------------------------------------------------- | ------------------------------ | ------------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`                       | -             |
-| [`target`](#target)                                                                   | `string`, `string[]`, `hash[]` | _(see below)_ |
-| [`include`](#include)                                                                 | `string`, `string[]`           | -             |
-| [`exclude`](#exclude)                                                                 | `string`, `string[]`           | -             |
-| [`enable`](#enable)                                                                   | `string`, `string[]`           | -             |
-| [`shell`](#shell)                                                                     | `string`                       | -             |
-| [`severity`](#severity)                                                               | `string`                       | -             |
-| [`norc`](#norc)                                                                       | `boolean`                      | `false`       |
+| Name                                                                                  | Type                          | Default       |
+| ------------------------------------------------------------------------------------- | ----------------------------- | ------------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`                      | -             |
+| [`target`](#target)                                                                   | `string`, `string[]`, `map[]` | _(see below)_ |
+| [`include`](#include)                                                                 | `string`, `string[]`          | -             |
+| [`exclude`](#exclude)                                                                 | `string`, `string[]`          | -             |
+| [`enable`](#enable)                                                                   | `string`, `string[]`          | -             |
+| [`shell`](#shell)                                                                     | `string`                      | -             |
+| [`severity`](#severity)                                                               | `string`                      | -             |
+| [`norc`](#norc)                                                                       | `boolean`                     | `false`       |
 
 ### `target`
 
@@ -72,7 +72,7 @@ For example, if you have a file named `hello` including the following content, S
 echo "This script's filename is `hello`."
 ```
 
-If you want to disable this shebang behavior, explicitly specify `shebang: false` as follow:
+If you want to disable this shebang behavior, explicitly specify `shebang: false` as follows:
 
 ```yaml
 linter:

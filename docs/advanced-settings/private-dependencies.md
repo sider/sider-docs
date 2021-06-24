@@ -120,11 +120,11 @@ For example:
 ```yaml
 linter:
   rubocop:
-    gems:
+    dependencies:
       - name: rubocop-foo-company
         git:
           repo: git@github.com:foo-company/rubocop-foo-company.git
           tag: v1.2.3
 ```
 
-See the [`gems` option](../getting-started/custom-configuration.md#install-gems-from-git-repository) for details.
+See the [`dependencies`](../getting-started/custom-configuration.md#for-bundler) option for details.

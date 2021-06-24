@@ -34,7 +34,6 @@ This section has documents about analysis tools which Sider supports. We have an
 - [RuboCop](./tools/ruby/rubocop.md)
 - [Reek](./tools/ruby/reek.md)
 - [Querly](./tools/ruby/querly.md)
-- [Rails Best Practices](./tools/ruby/rails-best-practices.md)
 - [Brakeman](./tools/ruby/brakeman.md)
 - [HAML-Lint](./tools/ruby/haml-lint.md)
 - [Slim-Lint](./tools/ruby/slim-lint.md)
@@ -112,6 +111,7 @@ This section has documents about analysis tools which Sider supports. We have an
 - [Misspell](./tools/others/misspell.md)
 - [LanguageTool](./tools/others/languagetool.md)
 - [PMD CPD](./tools/others/pmd-cpd.md)
+- [Secret Scan](./tools/others/secret-scan.md)
 
 ## Custom Rules
 
@@ -122,7 +122,7 @@ This section has information, examples, and tips about custom rules. Learn how t
 
 ## Advanced Settings
 
-This section covers advanced features outside of the basic setup of Sider.
+This section covers advanced features outside the basic setup of Sider.
 
 - [Inline Comments](./advanced-settings/inline-comments.md)
 - [Private Dependencies](./advanced-settings/private-dependencies.md)

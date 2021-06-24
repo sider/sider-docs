@@ -9,7 +9,7 @@ hide_title: true
 
 | Supported Version         | Language                    | Website              |
 | ------------------------- | --------------------------- | -------------------- |
-| 8.3.0+ (default: 13.12.0) | CSS and flavors (e.g. Sass) | https://stylelint.io |
+| 8.3.0+ (default: 13.13.1) | CSS and flavors (e.g. Sass) | https://stylelint.io |
 
 **stylelint** is a pluggable linter to help you avoid errors and enforce conventions for CSS and CSS-like languages.
 It provides many core rules and third-party rules by the community.
@@ -43,8 +43,7 @@ Here is an example configuration via `sider.yml`:
 ```yaml
 linter:
   stylelint:
-    npm_install: false
-    glob: "**/*.{css,scss}"
+    target: "**/*.{css,scss}"
     config: my_stylelintrc.yaml
     syntax: sugarss
     ignore-path: .gitignore
@@ -55,23 +54,26 @@ linter:
 
 You can use the following options to fine-tune stylelint to your project.
 
-| Name                                                                                        | Type                | Default                         |
-| ------------------------------------------------------------------------------------------- | ------------------- | ------------------------------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir)       | `string`            | -                               |
-| [`npm_install`](../../getting-started/custom-configuration.md#linteranalyzer_idnpm_install) | `boolean`, `string` | -                               |
-| [`glob`](#glob)                                                                             | `string`            | `**/*.{css,less,sass,scss,sss}` |
-| [`config`](#config)                                                                         | `string`            | -                               |
-| [`syntax`](#syntax)                                                                         | `string`            | -                               |
-| [`ignore-path`](#ignore-path)                                                               | `string`            | -                               |
-| [`ignore-disables`](#ignore-disables)                                                       | `boolean`           | `false`                         |
-| [`report-needless-disables`](#report-needless-disables)                                     | `boolean`           | `false`                         |
-| [`quiet`](#quiet)                                                                           | `boolean`           | `false`                         |
+| Name                                                                                          | Type                 | Default                         |
+| --------------------------------------------------------------------------------------------- | -------------------- | ------------------------------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir)         | `string`             | -                               |
+| [`dependencies`](../../getting-started/custom-configuration.md#linteranalyzer_iddependencies) | `string[]`, `map[]`  | -                               |
+| [`npm_install`](../../getting-started/custom-configuration.md#linteranalyzer_idnpm_install)   | `boolean`, `string`  | -                               |
+| [`target`](#target)                                                                           | `string`, `string[]` | `**/*.{css,less,sass,scss,sss}` |
+| [`config`](#config)                                                                           | `string`             | -                               |
+| [`syntax`](#syntax)                                                                           | `string`             | -                               |
+| [`ignore-path`](#ignore-path)                                                                 | `string`             | -                               |
+| [`ignore-disables`](#ignore-disables)                                                         | `boolean`            | `false`                         |
+| [`report-needless-disables`](#report-needless-disables)                                       | `boolean`            | `false`                         |
+| [`quiet`](#quiet)                                                                             | `boolean`            | `false`                         |
 
 See also the [official document](https://stylelint.io/user-guide/usage/options) for details about each option.
 
-### `glob`
+### `target`
 
-This option allows you to specify files or directories to analyze. Glob patterns are available.
+This option allows you to specify files or directories to be analyzed. Glob patterns are available.
+
+_alias:_ `glob`
 
 ### `config`
 

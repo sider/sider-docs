@@ -9,7 +9,7 @@ hide_title: true
 
 | Supported Version | Language | Website                            |
 | ----------------- | -------- | ---------------------------------- |
-| 2.3               | C/C++    | https://github.com/danmar/cppcheck |
+| 2.4.1             | C/C++    | https://github.com/danmar/cppcheck |
 
 **Cppcheck** is a static analysis tool for C/C++ code. It aims to detect bugs, undefined behaviors, and dangerous coding constructs.
 
@@ -60,7 +60,7 @@ You can use the following options to fine-tune Cppcheck to your project.
 
 ### `target`
 
-This option allows you to specify files or directories to analyze via Cppcheck. If you specify multiple targets, configure as follow:
+This option allows you to specify files or directories to analyze via Cppcheck. If you specify multiple targets, configure as follows:
 
 ```Yaml
 linter:
@@ -74,7 +74,7 @@ linter:
 ### `ignore`
 
 This option allows you to exclude files or directories from analysis.
-If you specify multiple targets, configure as follow:
+If you specify multiple targets, configure as follows:
 
 ```yaml
 linter:

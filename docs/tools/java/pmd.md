@@ -9,7 +9,7 @@ hide_title: true
 
 | Supported Version | Language | Website               |
 | ----------------- | -------- | --------------------- |
-| 6.32.0            | Java     | https://pmd.github.io |
+| 6.35.0            | Java     | https://pmd.github.io |
 
 **PMD** is a static analysis tool to detect issues about code style, security, performance, etc.
 It supports multiple programming languages but Sider supports only Java.
@@ -18,6 +18,12 @@ It supports multiple programming languages but Sider supports only Java.
 
 To start using PMD, enable it in your [repository settings](../../getting-started/repository-settings.md).
 
+## Default Configuration for PMD
+
+Sider provides our [recommended ruleset](https://github.com/sider/runners/blob/HEAD/images/pmd_java/sider_recommended_pmd.xml) for PMD.
+This configuration is used when you do not have `sider.yml` in your repository.
+For more details, please visit [Recommended Ruleset](../../getting-started/recommended-rules.md).
+
 ## Configuration
 
 You can customize the analysis via `sider.yml`:
@@ -25,7 +31,7 @@ You can customize the analysis via `sider.yml`:
 ```yaml
 linter:
   pmd_java:
-    dir: src
+    target: src
     rulesets:
       - category/java/errorprone.xml
       - path/to/custom-ruleset.xml
@@ -33,18 +39,20 @@ linter:
     min_priority: 3
 ```
 
-| Name                                                                                  | Type                 | Default         |
-| ------------------------------------------------------------------------------------- | -------------------- | --------------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`             | -               |
-| [`jvm_deps`](../../getting-started/custom-configuration.md#linteranalyzer_idjvm_deps) | `string[][]`         | `[]`            |
-| [`dir`](#dir)                                                                         | `string`             | `.`             |
-| [`rulesets`](#rulesets)                                                               | `string`, `string[]` | (see below)     |
-| [`encoding`](#encoding)                                                               | `string`             | (PMD's default) |
-| [`min_priority`](#min_priority)                                                       | `number`             | (PMD's default) |
+| Name                                                                                          | Type                 | Default         |
+| --------------------------------------------------------------------------------------------- | -------------------- | --------------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir)         | `string`             | -               |
+| [`dependencies`](../../getting-started/custom-configuration.md#linteranalyzer_iddependencies) | `string[]`, `map[]`  | -               |
+| [`target`](#target)                                                                           | `string`             | `.`             |
+| [`rulesets`](#rulesets)                                                                       | `string`, `string[]` | (see below)     |
+| [`encoding`](#encoding)                                                                       | `string`             | (PMD's default) |
+| [`min_priority`](#min_priority)                                                               | `number`             | (PMD's default) |
 
-### `dir`
+### `target`
 
 This option allows you to specify a directory to analyze.
+
+_alias:_ `dir`
 
 ### `rulesets`
 
@@ -71,7 +79,7 @@ linter:
       - your_pmd_custom_rules.xml
 ```
 
-If the option is omitted, Sider uses the [default configuration](https://github.com/sider/runners/blob/HEAD/images/pmd_java/default-ruleset.xml).
+If the option is omitted, Sider uses our recommended ruleset.
 
 You can [configure predefined rules](https://pmd.github.io/pmd/pmd_userdocs_configuring_rules.html) and
 [writing your own rules](https://pmd.github.io/pmd/pmd_userdocs_extending_writing_rules_intro.html) via the XML configuration file.

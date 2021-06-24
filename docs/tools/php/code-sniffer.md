@@ -9,7 +9,7 @@ hide_title: true
 
 | Supported Version | Language | Website                                      |
 | ----------------- | -------- | -------------------------------------------- |
-| 3.5.8             | PHP      | https://pear.php.net/package/PHP_CodeSniffer |
+| 3.6.0             | PHP      | https://pear.php.net/package/PHP_CodeSniffer |
 
 **PHP_CodeSniffer** is a style checker to enforce a defined set of PHP coding standards.
 
@@ -78,7 +78,7 @@ You can use several options to fine-tune PHP_CodeSniffer to your project:
 This option allows you to specify paths to be analyzed. The default value is dependent on the frameworks PHP_CodeSniffer supports.
 If you are not using any frameworks or are using a framework PHP_CodeSniffer does not support, `.` is used.
 
-alias: `dir`
+_alias:_ `dir`
 
 ### `standard`
 

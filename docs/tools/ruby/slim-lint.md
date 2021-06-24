@@ -11,7 +11,7 @@ hide_title: true
 
 | Version                   | Language    | Website                          |
 | ------------------------- | ----------- | -------------------------------- |
-| 0.20.2+ (default: 0.20.2) | Slim (Ruby) | https://github.com/sds/slim-lint |
+| 0.20.2+ (default: 0.21.1) | Slim (Ruby) | https://github.com/sds/slim-lint |
 
 **Slim-Lint** is a static analysis tool to help keep your [Slim](http://slim-lang.com) files clean and readable.
 In addition to Slim-specific style and lint checks, it can check them by integrated RuboCop rules.
@@ -36,21 +36,18 @@ Here is an example configuration via `sider.yml`:
 ```yaml
 linter:
   slim_lint:
-    gems:
-      - rubocop
-      - slim
     target: src
     config: my-slim-lint.yml
 ```
 
 You can use several options to fine-tune HAML-Lint to your project.
 
-| Name                                                                                  | Type                 | Default |
-| ------------------------------------------------------------------------------------- | -------------------- | ------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`             | -       |
-| [`gems`](../../getting-started/custom-configuration.md#linteranalyzer_idgems)         | `string[]`, `hash[]` | -       |
-| [`target`](#target)                                                                   | `string`, `string[]` | `.`     |
-| [`config`](#config)                                                                   | `string`             | -       |
+| Name                                                                                          | Type                 | Default |
+| --------------------------------------------------------------------------------------------- | -------------------- | ------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir)         | `string`             | -       |
+| [`dependencies`](../../getting-started/custom-configuration.md#linteranalyzer_iddependencies) | `string[]`, `map[]`  | -       |
+| [`target`](#target)                                                                           | `string`, `string[]` | `.`     |
+| [`config`](#config)                                                                           | `string`             | -       |
 
 ### `target`
 

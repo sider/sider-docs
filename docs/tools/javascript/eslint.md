@@ -9,45 +9,35 @@ hide_title: true
 
 | Supported Version        | Language   | Website            |
 | ------------------------ | ---------- | ------------------ |
-| 5.0.0+ (default: 7.22.0) | JavaScript | https://eslint.org |
+| 5.0.0+ (default: 7.28.0) | JavaScript | https://eslint.org |
 
-**ESLint** is a static analysis tool for JavaScript and its flavors (e.g. TypeScript, JSX, Vue).
+**ESLint** is a static analysis tool for JavaScript and its flavors (e.g. TypeScript, JSX, or Vue).
 It can find problems, style violations, or security issues, etc. in your code, and have so many plugins.
 
 ## Getting Started
 
 To start using ESLint, enable it in your [repository settings](../../getting-started/repository-settings.md).
-After enabled, Sider will automatically analyze your JavaScript files with the default version and [default configuration](#default-configuration-for-eslint). Or if you already have configured ESLint, Sider will install your dependencies and analyze with your configuration.
+After enabled, Sider will automatically analyze your JavaScript files with our default version and [default configuration](#default-configuration-for-eslint) (if you do not have yours).
 
-But if you want to customize more ESLint with some plugins or shareable configurations, install ESLint first:
+But, if you want to customize more ESLint with some plugins or shareable configurations, install ESLint into your project:
 
 ```console
 $ npm install eslint --save-dev
 ```
 
-Next, you may have to create your `.eslintrc.*` file(s) and configure ESLint with them. We recommend running `eslint --init`. It can ask you some questions and configure the settings for you automatically:
+Next, you need to configure ESLint for your project. We recommend `eslint --init` that helps you configure it.
 
 ```console
-$ npx eslint --init
+$ npm exec -- eslint --init
 ```
 
-For more details about the configuration, see [the ESLint documentation](https://eslint.org/docs/user-guide/getting-started).
-
-Then, if you need more customization, you can do it by adding a `sider.yml` file to your repository. For example, if you want to analyze React files in a `frontend/` directory, you may configure your `sider.yml` as follows:
-
-```yaml
-linter:
-  eslint:
-    target: frontend/
-    ext: .js,.jsx
-```
-
-For more details, see the following sections.
+See the [ESLint documentation](https://eslint.org/docs/user-guide/getting-started) to learn more.
 
 ## Default Configuration for ESLint
 
-Sider prepares the [default ESLint configuration](https://github.com/sider/runners/blob/HEAD/images/eslint/sider_eslintrc.yml).
+Sider provides our [recommended ruleset](https://github.com/sider/runners/blob/HEAD/images/eslint/sider_recommended_eslint.js) for ESLint.
 This configuration is used when you have no ESLint configurations or `sider.yml` in your repository.
+For more details, please visit [Recommended Ruleset](../../getting-started/recommended-rules.md).
 
 ## Configuration
 
@@ -58,26 +48,29 @@ linter:
   eslint:
     target: frontend/app
     config: .config/.eslintrc.js
-    ext: .js,.jsx,.es6
+    ext: [.js, .jsx, .es6]
     ignore-path: .my_eslintignore
     ignore-pattern: "/src/vendor/*"
     no-ignore: true
-    global: "require,exports:true"
+    global:
+      - require
+      - "exports:true"
     quiet: true
 ```
 
-| Name                                                                                        | Type                 | Default |
-| ------------------------------------------------------------------------------------------- | -------------------- | ------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir)       | `string`             | -       |
-| [`npm_install`](../../getting-started/custom-configuration.md#linteranalyzer_idnpm_install) | `boolean`, `string`  | -       |
-| [`target`](#target)                                                                         | `string`, `string[]` | `.`     |
-| [`config`](#config)                                                                         | `string`             | -       |
-| [`ext`](#ext)                                                                               | `string`             | `.js`   |
-| [`ignore-path`](#ignore-path)                                                               | `string`             | -       |
-| [`ignore-pattern`](#ignore-pattern)                                                         | `string`, `string[]` | -       |
-| [`no-ignore`](#no-ignore)                                                                   | `boolean`            | `false` |
-| [`global`](#global)                                                                         | `string`             | -       |
-| [`quiet`](#quiet)                                                                           | `boolean`            | `false` |
+| Name                                                                                          | Type                 | Default |
+| --------------------------------------------------------------------------------------------- | -------------------- | ------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir)         | `string`             | -       |
+| [`dependencies`](../../getting-started/custom-configuration.md#linteranalyzer_iddependencies) | `string[]`, `map[]`  | -       |
+| [`npm_install`](../../getting-started/custom-configuration.md#linteranalyzer_idnpm_install)   | `boolean`, `string`  | -       |
+| [`target`](#target)                                                                           | `string`, `string[]` | `.`     |
+| [`config`](#config)                                                                           | `string`             | -       |
+| [`ext`](#ext)                                                                                 | `string`, `string[]` | -       |
+| [`ignore-path`](#ignore-path)                                                                 | `string`             | -       |
+| [`ignore-pattern`](#ignore-pattern)                                                           | `string`, `string[]` | -       |
+| [`no-ignore`](#no-ignore)                                                                     | `boolean`            | `false` |
+| [`global`](#global)                                                                           | `string`, `string[]` | -       |
+| [`quiet`](#quiet)                                                                             | `boolean`            | `false` |
 
 ### `target`
 
@@ -97,6 +90,8 @@ linter:
 ### `dir`
 
 > **DEPRECATED**: This option is deprecated. Use the [`target`](#target) option instead.
+
+This is an alias for `target`.
 
 ### `config`
 

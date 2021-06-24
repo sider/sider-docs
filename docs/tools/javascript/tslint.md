@@ -7,8 +7,9 @@ hide_title: true
 
 # TSLint
 
-> **DEPRECATED**: TSLint has been deprecated and it recommends migrating to [TypeScript ESLint](https://github.com/typescript-eslint/typescript-eslint).
-> See the [discussion](https://github.com/palantir/tslint/issues/4534) for more details.
+> **DEPRECATED**: TSLint has been deprecated and recommends migrating to [TypeScript ESLint](https://github.com/typescript-eslint/typescript-eslint).
+> See [palantir/tslint#4534](https://github.com/palantir/tslint/issues/4534) for details.
+> And, [`tslint-to-eslint-config`](https://www.npmjs.com/package/tslint-to-eslint-config) helps you migrate it.
 
 | Supported Version       | Language   | Website                           |
 | ----------------------- | ---------- | --------------------------------- |
@@ -56,16 +57,17 @@ linter:
 
 You can use the following options to make analysis fitter for your project.
 
-| Name                                                                                        | Type                 | Default           |
-| ------------------------------------------------------------------------------------------- | -------------------- | ----------------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir)       | `string`             | -                 |
-| [`npm_install`](../../getting-started/custom-configuration.md#linteranalyzer_idnpm_install) | `boolean`, `string`  | -                 |
-| [`glob`](#glob)                                                                             | `string`             | `**/*.ts{,x}`     |
-| [`config`](#config)                                                                         | `string`             | -                 |
-| [`exclude`](#exclude)                                                                       | `string`, `string[]` | `node_modules/**` |
-| [`project`](#project)                                                                       | `string`             | -                 |
-| [`rules-dir`](#rules-dir)                                                                   | `string`, `string[]` | -                 |
-| [`type-check`](#type-check)                                                                 | `boolean`            | `false`           |
+| Name                                                                                          | Type                 | Default           |
+| --------------------------------------------------------------------------------------------- | -------------------- | ----------------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir)         | `string`             | -                 |
+| [`dependencies`](../../getting-started/custom-configuration.md#linteranalyzer_iddependencies) | `string[]`, `map[]`  | -                 |
+| [`npm_install`](../../getting-started/custom-configuration.md#linteranalyzer_idnpm_install)   | `boolean`, `string`  | -                 |
+| [`glob`](#glob)                                                                               | `string`             | `**/*.ts{,x}`     |
+| [`config`](#config)                                                                           | `string`             | -                 |
+| [`exclude`](#exclude)                                                                         | `string`, `string[]` | `node_modules/**` |
+| [`project`](#project)                                                                         | `string`             | -                 |
+| [`rules-dir`](#rules-dir)                                                                     | `string`, `string[]` | -                 |
+| [`type-check`](#type-check)                                                                   | `boolean`            | `false`           |
 
 ### `glob`
 

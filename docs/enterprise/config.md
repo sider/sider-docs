@@ -9,7 +9,7 @@ hide_title: true
 
 Sider Enterprise depends on other services, such as MySQL, so its configuration is important to ensure working well. This document describes the details about Sider Enterprise configurations.
 
-> `TAG` on this page is a Docker image tag for Sider Enterprise. Please replace it with the actual value.
+> `{tag}` on this page is a Docker image tag for Sider Enterprise. Please replace it with the actual value.
 
 ## Core parameters
 
@@ -178,9 +178,9 @@ Sider Enterprise relies on GitHub Enterprise Server, so you should configure a c
 ```
 docker run \
   --rm \
-  --env-file=ENV_FILE \
+  --env-file={env_file} \
   --volume=/var/run/docker.sock:/var/run/docker.sock \
-  480130971618.dkr.ecr.us-east-1.amazonaws.com/sideci_onprem:TAG \
+  {aws_account_id}.dkr.ecr.{region}.amazonaws.com/sideci_onprem:{tag} \
   bundle exec rails onprem:batch:daily
 ```
 
@@ -225,6 +225,6 @@ Consider allowing Runners to access the list of domain names below if you want t
 - `packagist.org`
 - `github.com`
 - `gitlab.com`
-- `480130971618.dkr.ecr.us-east-1.amazonaws.com`
+- `{aws_account_id}.dkr.ecr.{region}.amazonaws.com`
 
 On top of those, you might have to allow Runners to connect to your Git servers.

@@ -1,15 +1,19 @@
 ---
 id: rails-best-practices
 title: Rails Best Practices
-sidebar_label: Rails Best Practices
+sidebar_label: Rails Best Practices (deprecated)
 hide_title: true
 ---
 
 # Rails Best Practices
 
+> **DEPRECATED**: We have deprecated the support of Rails Best Practices because of the lack of active development of the tool.
+> As alternatives, please consider using [RuboCop Rails](https://docs.rubocop.org/rubocop-rails), [HAML-Lint](./haml-lint.md), [Slim-Lint](./slim-lint.md), etc.
+> We will drop the support on **September 30, 2021**.
+
 | Supported Version         | Language | Website                         |
 | ------------------------- | -------- | ------------------------------- |
-| 1.19.1+ (default: 1.20.0) | Ruby     | https://rails-bestpractices.com |
+| 1.19.1+ (default: 1.20.1) | Ruby     | https://rails-bestpractices.com |
 
 **Rails Best Practices** (abbr. RBP) is a code metric tool to check the quality of Rails code.
 
@@ -24,8 +28,8 @@ Here is an example configuration via `sider.yml`:
 ```yaml
 linter:
   rails_best_practices:
-    gems:
-      - "slim"
+    dependencies:
+      - slim
     config: .rails_best_practices.yml
     vendor: false
     spec: true
@@ -35,17 +39,17 @@ linter:
     only: app,config
 ```
 
-| Name                                                                                  | Type                 | Default |
-| ------------------------------------------------------------------------------------- | -------------------- | ------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`             | -       |
-| [`gems`](../../getting-started/custom-configuration.md#linteranalyzer_idgems)         | `string[]`, `hash[]` | -       |
-| [`config`](#config)                                                                   | `string`             | -       |
-| [`vendor`](#vendor)                                                                   | `boolean`            | `true`  |
-| [`spec`](#spec)                                                                       | `boolean`            | `false` |
-| [`test`](#test)                                                                       | `boolean`            | `false` |
-| [`features`](#features)                                                               | `boolean`            | `false` |
-| [`exclude`](#exclude)                                                                 | `string`             | -       |
-| [`only`](#only)                                                                       | `string`             | -       |
+| Name                                                                                          | Type                | Default |
+| --------------------------------------------------------------------------------------------- | ------------------- | ------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir)         | `string`            | -       |
+| [`dependencies`](../../getting-started/custom-configuration.md#linteranalyzer_iddependencies) | `string[]`, `map[]` | -       |
+| [`config`](#config)                                                                           | `string`            | -       |
+| [`vendor`](#vendor)                                                                           | `boolean`           | `true`  |
+| [`spec`](#spec)                                                                               | `boolean`           | `false` |
+| [`test`](#test)                                                                               | `boolean`           | `false` |
+| [`features`](#features)                                                                       | `boolean`           | `false` |
+| [`exclude`](#exclude)                                                                         | `string`            | -       |
+| [`only`](#only)                                                                               | `string`            | -       |
 
 ### `config`
 
@@ -83,9 +87,9 @@ This option allows you to limit only to files or directories you want. The value
 Rails Best Practices supports some template engines.
 When Sider finds the following gems in your `Gemfile.lock`, it installs them automatically for backward compatibility:
 
-- [slim](https://github.com/slim-template/slim)
-- [haml](https://github.com/haml/haml)
-- [sass](https://github.com/sass/ruby-sass)
-- [sassc](https://github.com/sass/sassc-ruby)
+- [Slim](https://github.com/slim-template/slim)
+- [Haml](https://github.com/haml/haml)
+- [Sass](https://github.com/sass/ruby-sass)
+- [SassC](https://github.com/sass/sassc-ruby)
 
-Note that these gems are not be installed when the `gems` option is specified.
+Note that these gems are not be installed when the [`dependencies`](../../getting-started/custom-configuration.md#linteranalyzer_iddependencies) option is specified.

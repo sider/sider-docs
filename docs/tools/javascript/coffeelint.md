@@ -7,9 +7,9 @@ hide_title: true
 
 # CoffeeLint
 
-| Supported Version        | Language     | Website                      |
-| ------------------------ | ------------ | ---------------------------- |
-| 1.16.0+ (default: 4.1.3) | CoffeeScript | https://coffeelint.github.io |
+| Supported Version       | Language     | Website                      |
+| ----------------------- | ------------ | ---------------------------- |
+| 4.0.0+ (default: 5.0.1) | CoffeeScript | https://coffeelint.github.io |
 
 **CoffeeLint** is a style checker that helps keep CoffeeScript code clean and consistent.
 
@@ -37,11 +37,12 @@ linter:
 
 You can use the following options to make analysis fitter for your project.
 
-| Name                                                                                        | Type                | Default |
-| ------------------------------------------------------------------------------------------- | ------------------- | ------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir)       | `string`            | -       |
-| [`npm_install`](../../getting-started/custom-configuration.md#linteranalyzer_idnpm_install) | `boolean`, `string` | -       |
-| [`file`](#file)                                                                             | `string`            | -       |
+| Name                                                                                          | Type                | Default |
+| --------------------------------------------------------------------------------------------- | ------------------- | ------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir)         | `string`            | -       |
+| [`dependencies`](../../getting-started/custom-configuration.md#linteranalyzer_iddependencies) | `string[]`, `map[]` | -       |
+| [`npm_install`](../../getting-started/custom-configuration.md#linteranalyzer_idnpm_install)   | `boolean`, `string` | -       |
+| [`file`](#file)                                                                               | `string`            | -       |
 
 ### `file`
 

@@ -55,11 +55,7 @@
       {
         "type": "subcategory",
         "label": "PHP",
-        "ids": [
-          "tools/php/code-sniffer",
-          "tools/php/phpmd",
-          "tools/php/phinder"
-        ]
+        "ids": ["tools/php/code-sniffer", "tools/php/phpmd", "tools/php/phinder"]
       },
       {
         "type": "subcategory",
@@ -79,11 +75,7 @@
       {
         "type": "subcategory",
         "label": "C/C++",
-        "ids": [
-          "tools/cplusplus/cppcheck",
-          "tools/cplusplus/cpplint",
-          "tools/cplusplus/clang-tidy"
-        ]
+        "ids": ["tools/cplusplus/cppcheck", "tools/cplusplus/cpplint", "tools/cplusplus/clang-tidy"]
       },
       {
         "type": "subcategory",
@@ -112,15 +104,12 @@
           "tools/others/goodcheck",
           "tools/others/misspell",
           "tools/others/languagetool",
-          "tools/others/pmd-cpd"
+          "tools/others/pmd-cpd",
+          "tools/others/secret-scan"
         ]
       }
     ],
-    "Custom Rules": [
-      "custom-rules/introduction-to-custom-rules",
-      "custom-rules/goodcheck",
-      "custom-rules/tips"
-    ],
+    "Custom Rules": ["custom-rules/introduction-to-custom-rules", "custom-rules/goodcheck", "custom-rules/tips"],
     "Advanced Settings": [
       "advanced-settings/inline-comments",
       "advanced-settings/private-dependencies",
@@ -153,6 +142,9 @@
         "label": "Releases",
         "ids": [
           "enterprise/releases/index",
+          "enterprise/releases/202106",
+          "enterprise/releases/202104",
+          "enterprise/releases/202103",
           "enterprise/releases/202102",
           "enterprise/releases/202101",
           "enterprise/releases/202012",

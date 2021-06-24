@@ -28,7 +28,7 @@ You can customize the analysis via `sider.yml`:
 ```yaml
 linter:
   clang_tidy:
-    apt:
+    dependencies:
       - libgdbm-dev
       - libfastjson-dev=0.99.8-2
     include-path:
@@ -40,7 +40,7 @@ linter:
 | Name                                                                                          | Type                 | Default |
 | --------------------------------------------------------------------------------------------- | -------------------- | ------- |
 | [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir)         | `string`             | -       |
-| [`apt`](../../getting-started/custom-configuration.md#linteranalyzer_idapt)                   | `string`, `string[]` | -       |
+| [`dependencies`](../../getting-started/custom-configuration.md#linteranalyzer_iddependencies) | `string[]`, `map[]`  | -       |
 | [`include-path`](../../getting-started/custom-configuration.md#linteranalyzer_idinclude-path) | `string`, `string[]` | -       |
 
 No analyzer-specific options.

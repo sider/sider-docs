@@ -19,4 +19,4 @@ If an analysis tool finds more than 5 issues, a summary of the issues will be po
 
 ![Inline Comments Settings](../assets/inline-comments-setting.png)
 
-> If the Test Mode section is set to `ON`, Sider will post comments to your pull request. Note that this interface requires Sider to be enable as a GitHub App.
+> If the Test Mode section is set to `ON`, Sider will post comments to your pull request. Note that this interface requires Sider to be enabled as a GitHub App.

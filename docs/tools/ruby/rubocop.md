@@ -9,7 +9,7 @@ hide_title: true
 
 | Supported Version         | Language | Website             |
 | ------------------------- | -------- | ------------------- |
-| 0.61.0+ (default: 1.11.0) | Ruby     | https://rubocop.org |
+| 0.61.0+ (default: 1.16.1) | Ruby     | https://rubocop.org |
 
 **RuboCop** is a pluggable static code analyzer and code formatter for Ruby.
 It has been community-driven developed and has many rules and plugins including third-party's ones.
@@ -28,8 +28,9 @@ See also the [user guide](https://docs.rubocop.org/rubocop/usage/basic_usage) fo
 
 ## Default Configuration for RuboCop
 
-If a `.rubocop.yml` file does not exist in your repository, Sider uses the [default configuration](https://github.com/sider/runners/blob/HEAD/images/rubocop/default_rubocop.yml)
-including the [MeowCop](https://github.com/sider/meowcop) gem.
+If a `.rubocop.yml` file does not exist in your repository,
+Sider uses our [recommended ruleset](https://github.com/sider/runners/blob/HEAD/images/rubocop/sider_recommended_rubocop.yml) for RuboCop.
+For more details, please visit [Recommended Ruleset](../../getting-started/recommended-rules.md).
 
 ## Configuration
 
@@ -38,20 +39,18 @@ Here is an example configuration via `sider.yml`:
 ```yaml
 linter:
   rubocop:
-    gems:
-      - rubocop-rspec
     config: config/.rubocop.yml
     safe: true
 ```
 
 You can use the following options to make analysis fitter for your project.
 
-| Name                                                                                  | Type                 | Default |
-| ------------------------------------------------------------------------------------- | -------------------- | ------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`             | -       |
-| [`gems`](../../getting-started/custom-configuration.md#linteranalyzer_idgems)         | `string[]`, `hash[]` | -       |
-| [`config`](#config)                                                                   | `string`             | -       |
-| [`safe`](#safe)                                                                       | `boolean`            | `false` |
+| Name                                                                                          | Type                | Default |
+| --------------------------------------------------------------------------------------------- | ------------------- | ------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir)         | `string`            | -       |
+| [`dependencies`](../../getting-started/custom-configuration.md#linteranalyzer_iddependencies) | `string[]`, `map[]` | -       |
+| [`config`](#config)                                                                           | `string`            | -       |
+| [`safe`](#safe)                                                                               | `boolean`           | `false` |
 
 ### `config`
 

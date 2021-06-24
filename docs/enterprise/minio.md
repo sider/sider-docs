@@ -20,8 +20,8 @@ Before integrating MinIO with Sider Enterprise, you first have to create a bucke
 The parameters within [`DOCKER_RUNNERS_CONFIG`](./config.md) of Sider Enterprise is associated with the MinIO server. The relationships are the followings:
 
 - `s3_endpoint` and url - The endpoint of the MinIO server
-- `aws_access_key_id` and MINIO_ACCESS_KEY - AWS Access Key ID
-- `aws_secret_access_key` and MINIO_SECRET_KEY - AWS Secret Access Key
+- `aws_access_key_id` and `MINIO_ACCESS_KEY` - AWS Access Key ID
+- `aws_secret_access_key` and `MINIO_SECRET_KEY` - AWS Secret Access Key
 
 For example, if you run the MinIO server on the host `minio.example.com` like this:
 
@@ -48,9 +48,9 @@ As stated above, objects on MinIO will grow and hugely consumes disk space. If y
 ```console
 docker run \
   --rm \
-  --env-file=ENV_FILE \
-  480130971618.dkr.ecr.us-east-1.amazonaws.com/sideci_onprem:TAG \
-  bundle exec rails 'onprem:s3:configure_bucket_lifecycle[180]'
+  --env-file={env_file} \
+  {aws_account_id}.dkr.ecr.{region}.amazonaws.com/sideci_onprem:{tag} \
+  bundle exec rails onprem:s3:configure_bucket_lifecycle'[180]'
 ```
 
 It's sufficient to execute the above command once. If you want to reconfigure the parameter from `180` days to `90` days, then run the command with `90` again.

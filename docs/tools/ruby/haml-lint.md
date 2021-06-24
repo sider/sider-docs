@@ -34,9 +34,6 @@ Here is an example configuration via `sider.yml`:
 ```yaml
 linter:
   haml_lint:
-    gems:
-      - rubocop
-      - haml
     target: src
     include_linter:
       - EmptyScript
@@ -52,16 +49,16 @@ linter:
 
 You can use several options to fine-tune HAML-Lint to your project.
 
-| Name                                                                                  | Type                 | Default |
-| ------------------------------------------------------------------------------------- | -------------------- | ------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`             | -       |
-| [`gems`](../../getting-started/custom-configuration.md#linteranalyzer_idgems)         | `string[]`, `hash[]` | -       |
-| [`target`](#target)                                                                   | `string`, `string[]` | `.`     |
-| [`include_linter`](#include_linter)                                                   | `string`, `string[]` | -       |
-| [`exclude_linter`](#exclude_linter)                                                   | `string`, `string[]` | -       |
-| [`config`](#config)                                                                   | `string`             | -       |
-| [`exclude`](#exclude)                                                                 | `string`, `string[]` | -       |
-| [`parallel`](#parallel)                                                               | `boolean`            | `true`  |
+| Name                                                                                          | Type                 | Default |
+| --------------------------------------------------------------------------------------------- | -------------------- | ------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir)         | `string`             | -       |
+| [`dependencies`](../../getting-started/custom-configuration.md#linteranalyzer_iddependencies) | `string[]`, `map[]`  | -       |
+| [`target`](#target)                                                                           | `string`, `string[]` | `.`     |
+| [`include_linter`](#include_linter)                                                           | `string`, `string[]` | -       |
+| [`exclude_linter`](#exclude_linter)                                                           | `string`, `string[]` | -       |
+| [`config`](#config)                                                                           | `string`             | -       |
+| [`exclude`](#exclude)                                                                         | `string`, `string[]` | -       |
+| [`parallel`](#parallel)                                                                       | `boolean`            | `true`  |
 
 ### `target`
 

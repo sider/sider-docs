@@ -8,4 +8,4 @@ plugins:
   remark-lint-code-block-syntax: true
 
   # NOTE: This is *not* a lint rule and does not have a severity.
-  remark-validate-links: { root: ".", repository: "sider/sider-docs" }
+  remark-validate-links: true
