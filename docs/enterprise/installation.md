@@ -17,16 +17,25 @@ Sider Enterprise runs on Docker, and it requires MySQL, Redis, MinIO, and GitHub
 
 ## Get Docker Image
 
-We provide Sider Enterprise as a Docker image for our customers. After you contract with Sleeek Corporation, we send you a credential, with which you can get the Sider Enterprise Docker image.
+We provide Sider Enterprise as a Docker image for our customers. After you contract with Sider Corporation, we send you a credential, with which you can get the Sider Enterprise Docker image.
 
-Run the following command replacing `{your_key}`, `{your_secret}`, and `{tag}` with the given credentials and the Sider Enterprise Docker image tag, and you can get the Docker image.
+To get the Sider Enterprise Docker image, you need to install and use [AWS CLI](https://aws.amazon.com/cli/).
+
+Next, run the following commands with your credentials and the Sider Enterprise Docker image tag, and you can get the Docker image.
 
 ```console
-export AWS_ACCESS_KEY_ID={your_key} \
-export AWS_SECRET_ACCESS_KEY={your_secret} \
-  && aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin docker.sider.review/sideci_onprem:{tag} \
-  && docker pull docker.sider.review/sideci_onprem:{tag} \
-  && docker logout docker.sider.review/sideci_onprem:{tag}
+# Input your AWS credentials
+aws configure --profile sider-enterprise
+
+# Log in
+aws ecr get-login-password --profile sider-enterprise | \
+  docker login --username AWS --password-stdin docker.sider.review
+
+# Pull image
+docker pull docker.sider.review/sideci_onprem:{tag}
+
+# Log out
+docker logout docker.sider.review
 ```
 
 > If your organization requires your machine to access via an HTTP proxy server, you should configure Docker to use it.
