@@ -54,7 +54,7 @@ This option allows you to specify files to analyze. Glob patterns are also avail
 
 The default value is:
 
-```Yaml
+```yaml
 linter:
   shellcheck:
     target:

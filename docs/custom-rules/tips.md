@@ -20,7 +20,7 @@ Goodcheck has a feature to load rule definitions from a URL. You can put the Git
 
 In `goodcheck.yml`, you can include an `import` section.
 
-```yml
+```yaml
 import:
   - "https://raw.githubusercontent.com/acmecorp/rules/main/goodcheck.yml"
 ```
