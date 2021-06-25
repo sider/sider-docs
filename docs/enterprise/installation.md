@@ -19,14 +19,16 @@ Sider Enterprise runs on Docker, and it requires MySQL, Redis, MinIO, and GitHub
 
 We provide Sider Enterprise as a Docker image for our customers. After you contract with Sider Corporation, we send you a credential, with which you can get the Sider Enterprise Docker image.
 
-To get the Sider Enterprise Docker image, you need to install and use [AWS CLI](https://aws.amazon.com/cli/).
+To get the Sider Enterprise Docker image, you need to install [AWS CLI](https://aws.amazon.com/cli/). And run the following command to configure the credential.
+
+```sh
+# Configure your AWS credentials
+aws configure --profile sider-enterprise
+```
 
 Next, run the following commands with your credentials and the Sider Enterprise Docker image tag, and you can get the Docker image.
 
 ```sh
-# Input your AWS credentials
-aws configure --profile sider-enterprise
-
 # Log in
 aws ecr get-login-password --profile sider-enterprise | \
   docker login --username AWS --password-stdin docker.sider.review
