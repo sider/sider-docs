@@ -17,17 +17,28 @@ Sider Enterprise runs on Docker, and it requires MySQL, Redis, MinIO, and GitHub
 
 ## Get Docker Image
 
-We provide Sider Enterprise as a Docker image for our customers. After you contract with Sleeek Corporation, we send you a credential, with which you can get the Sider Enterprise Docker image.
+We provide Sider Enterprise as a Docker image for our customers. After you contract with Sider Corporation, we send you a credential, with which you can get the Sider Enterprise Docker image.
 
-Run the following command replacing `{your_key}`, `{your_secret}`, and `{tag}` with the given credentials and the Sider Enterprise Docker image tag, and you can get the Docker image.
+To get the Sider Enterprise Docker image, you need to install [AWS CLI](https://aws.amazon.com/cli/). And run the following command to configure the credential.
 
-```console
-docker run --rm \
-  -v /var/run/docker.sock:/var/run/docker.sock \
-  -e AWS_ACCESS_KEY_ID={your_key} \
-  -e AWS_SECRET_ACCESS_KEY={your_secret} \
-  sider/ecr-image-puller \
-  {aws_account_id}.dkr.ecr.{region}.amazonaws.com/sideci_onprem:{tag}
+```sh
+# Configure your AWS credentials and region
+aws configure --profile sider-enterprise set region us-east-1
+aws configure --profile sider-enterprise
+```
+
+Next, run the following commands with your credentials and the Sider Enterprise Docker image tag, and you can get the Docker image.
+
+```sh
+# Log in
+aws ecr get-login-password --profile sider-enterprise | \
+  docker login --username AWS --password-stdin docker.sider.review
+
+# Pull image
+docker pull docker.sider.review/sideci_onprem:{tag}
+
+# Log out
+docker logout docker.sider.review
 ```
 
 > If your organization requires your machine to access via an HTTP proxy server, you should configure Docker to use it.
@@ -65,27 +76,27 @@ These parameters depend on MySQL, Redis, MinIO, and GitHub Enterprise Server con
 
 Now, you can run Sider Enterprise on your host. First, you have to run the following command to set up the database.
 
-```console
+```sh
 docker run --env-file /etc/sider-env --rm \
-  {aws_account_id}.dkr.ecr.{region}.amazonaws.com/sideci_onprem:{tag} \
+  docker.sider.review/sideci_onprem:{tag} \
   bundle exec rails db:setup
 ```
 
 After that, you can run the Sider Enterprise services like these commands (See [Operation](./operation.md) for more details):
 
-```console
+```sh
 docker run --detach \
   --restart=always \
   --env-file=/etc/sider-env \
   --publish=80:3000 \
-  {aws_account_id}.dkr.ecr.{region}.amazonaws.com/sideci_onprem:{tag} \
+  docker.sider.review/sideci_onprem:{tag} \
   bundle exec puma
 
 docker run --detach \
   --restart=always \
   --env-file=/etc/sider-env \
   --volume=/var/run/docker.sock:/var/run/docker.sock:ro \
-  {aws_account_id}.dkr.ecr.{region}.amazonaws.com/sideci_onprem:{tag} \
+  docker.sider.review/sideci_onprem:{tag} \
   bundle exec sidekiq
 ```
 
