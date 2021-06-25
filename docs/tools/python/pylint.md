@@ -23,7 +23,7 @@ To customize Pylint, put a `.pylintrc` file in your repository.
 
 If you don't have `.pylintrc` file, you can make it by executing the command below.
 
-```bash
+```sh
 pylint --generate-rcfile > .pylintrc
 ```
 

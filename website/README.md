@@ -14,21 +14,21 @@ This website was created with [Docusaurus](https://docusaurus.io/).
 
 ```sh
 # Install dependencies
-$ yarn
+yarn
 ```
 
 2. Run your dev server:
 
 ```sh
 # Start the site
-$ yarn start
+yarn start
 ```
 
 ## Directory Structure
 
 Your project file structure should look something like this
 
-```
+```text
 my-docusaurus/
   docs/
     doc-1.md
@@ -57,7 +57,7 @@ Edit docs by navigating to `docs/` and editing the corresponding document:
 
 `docs/doc-to-be-edited.md`
 
-```markdown
+```md
 ---
 id: page-needs-edit
 title: This Doc Needs To Be Edited
@@ -74,7 +74,7 @@ Edit blog posts by navigating to `website/blog` and editing the corresponding po
 
 `website/blog/post-to-be-edited.md`
 
-```markdown
+```md
 ---
 id: post-needs-edit
 title: This Blog Post Needs To Be Edited
@@ -136,7 +136,7 @@ headerLinks: [
 
 `website/blog/2018-05-21-New-Blog-Post.md`
 
-```markdown
+```md
 ---
 author: Frank Li
 authorURL: https://twitter.com/foobarbaz

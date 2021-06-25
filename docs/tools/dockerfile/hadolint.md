@@ -46,7 +46,7 @@ You can use the following options to fine-tune hadolint to your project.
 
 This option allows you to specify files or directories to analyze. If you specify some targets, configure as follows:
 
-```Yaml
+```yaml
 linter:
   hadolint:
     target:

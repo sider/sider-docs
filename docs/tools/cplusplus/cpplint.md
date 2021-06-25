@@ -19,7 +19,7 @@ To start using cpplint, enable it in your [repository settings](../../getting-st
 
 For more details for cpplint, see the command-line help:
 
-```shell
+```console
 $ cpplint --help
 ```
 
@@ -54,7 +54,7 @@ You can use the following options to fine-tune cpplint to your project.
 
 This option allows you to specify files or directories to analyze. If you specify some targets, configure as follows:
 
-```Yaml
+```yaml
 linter:
   cpplint:
     target:
