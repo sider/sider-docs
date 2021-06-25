@@ -21,7 +21,7 @@ Sider Enterprise services run as Docker containers, so you can start the service
 
 This is an example of how to start **sideci-web**.
 
-```console
+```sh
 docker run \
   --detach \
   --restart=always \
@@ -38,7 +38,7 @@ docker run \
 
 This is an example of how to start **sideci-worker**.
 
-```console
+```sh
 docker run \
   --detach \
   --restart=always \
@@ -63,7 +63,7 @@ Sider Enterprise administrators can do the followings on the `/admin` page:
 
 In order to make users administrators, run the following command:
 
-```console
+```sh
 docker run --env-file={env_file} docker.sider.review/sideci_onprem:{tag} \
   bundle exec rails admin:promote'[{username}]'
 ```
@@ -99,7 +99,7 @@ In addition, these metrics for other services should be also monitored because S
 
 You might want to remove old Docker images related to Sider Enterprise because they consume disk space. This is an example command to do that (replace `{runner_version}` with the latest Runner version. You can see the version on our [release page](./releases/index.md)):
 
-```console
+```sh
 docker image ls --format '{{.Repository}}:{{.Tag}}' \
   | grep  sider/runner_ \
   | grep -v {runner_version} \

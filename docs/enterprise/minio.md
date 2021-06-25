@@ -25,7 +25,7 @@ The parameters within [`DOCKER_RUNNERS_CONFIG`](./config.md) of Sider Enterprise
 
 For example, if you run the MinIO server on the host `minio.example.com` like this:
 
-```console
+```sh
 export MINIO_ACCESS_KEY=minio
 export MINIO_SECRET_KEY=miniosecret
 minio server --address :9001 /data
@@ -45,7 +45,7 @@ minio server --address :9001 /data
 
 As stated above, objects on MinIO will grow and hugely consumes disk space. If you allow the deletion of old traces, you can configure the MinIO server to automatically delete old objects. After installing Sider Enterprise and configuring environment variables, run the following command. In this case, objects on MinIO older than 180 days will be deleted.
 
-```console
+```sh
 docker run \
   --rm \
   --env-file={env_file} \

@@ -23,7 +23,7 @@ To get the Sider Enterprise Docker image, you need to install and use [AWS CLI](
 
 Next, run the following commands with your credentials and the Sider Enterprise Docker image tag, and you can get the Docker image.
 
-```console
+```sh
 # Input your AWS credentials
 aws configure --profile sider-enterprise
 
@@ -73,7 +73,7 @@ These parameters depend on MySQL, Redis, MinIO, and GitHub Enterprise Server con
 
 Now, you can run Sider Enterprise on your host. First, you have to run the following command to set up the database.
 
-```console
+```sh
 docker run --env-file /etc/sider-env --rm \
   docker.sider.review/sideci_onprem:{tag} \
   bundle exec rails db:setup
@@ -81,7 +81,7 @@ docker run --env-file /etc/sider-env --rm \
 
 After that, you can run the Sider Enterprise services like these commands (See [Operation](./operation.md) for more details):
 
-```console
+```sh
 docker run --detach \
   --restart=always \
   --env-file=/etc/sider-env \

@@ -123,14 +123,14 @@ volumes:
 
 Before running the services, the database migration is necessary:
 
-```console
+```sh
 docker-compose --file /etc/sider/docker-compose.yml up --detach mysql
 docker-compose --file /etc/sider/docker-compose.yml run sideci_worker bundle exec rails db:setup
 ```
 
 After that, the services should be up and running with the command:
 
-```console
+```sh
 docker-compose --file /etc/sider/docker-compose.yml up --detach --scale sideci_worker=2
 ```
 
