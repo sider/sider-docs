@@ -23,12 +23,8 @@ To get the Sider Enterprise Docker image, you need to install [AWS CLI](https://
 
 ```sh
 # Configure your AWS credentials
+aws configure set region us-east-1 --profile sider-enterprise
 aws configure --profile sider-enterprise
-
-AWS Access Key ID [None]: {your_key}
-AWS Secret Access Key [None]: {your_secret}
-Default region name [None]: us-east-1
-Default output format [None]: {enter_key}
 ```
 
 Next, run the following commands with your credentials and the Sider Enterprise Docker image tag, and you can get the Docker image.
