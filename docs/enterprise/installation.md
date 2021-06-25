@@ -22,8 +22,8 @@ We provide Sider Enterprise as a Docker image for our customers. After you contr
 To get the Sider Enterprise Docker image, you need to install [AWS CLI](https://aws.amazon.com/cli/). And run the following command to configure the credential.
 
 ```sh
-# Configure your AWS credentials
-aws configure set region us-east-1 --profile sider-enterprise
+# Configure your AWS credentials and region
+aws configure --profile sider-enterprise set region us-east-1
 aws configure --profile sider-enterprise
 ```
 
