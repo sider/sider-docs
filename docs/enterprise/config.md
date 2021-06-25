@@ -175,7 +175,7 @@ If you leave the PUSHER\_\* variables empty, Pusher will be disabled, and Sider 
 
 Sider Enterprise relies on GitHub Enterprise Server, so you should configure a cron job to synchronize data between them. Also, it is recommended to clean up Docker containers since Runners containers won't be deleted. That's why Sider Enterprise provides a [Rake](https://github.com/ruby/rake) task for the periodic job. For example, you can set this command on each host node.
 
-```
+```sh
 docker run \
   --rm \
   --env-file={env_file} \
