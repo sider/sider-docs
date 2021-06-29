@@ -29,7 +29,7 @@ At this time, Sider will change your plan to the Free plan unless you update Sid
 
 If you're a student, you can join the Education plan through [GitHub Student Developer Pack](https://education.github.com/pack) to use Sider for free.
 
-The Education plan is for only the student's `individual organization(personal account)`. So, after joining GitHub Student Developer Pack, make sure to select your GitHub personal account when you use Sider. If you select other repositories instead of the personal account on Sider, the Standard plan with 14 days trial will be applied.
+The Education plan is only for the student's `individual organization(personal account)`. Make sure to select your GitHub individual organization when you use Sider with GitHub Student Developer Pack. If you select other repositories instead of your individual organization on Sider, We apply the Standard plan with 14 days trial to the repositories.
 
 ## Billing
 
