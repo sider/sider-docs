@@ -31,6 +31,8 @@ If you're a student, you can join the Education plan through [GitHub Student Dev
 
 The Education plan is only for the student's `individual organization(personal account)`. Make sure to select your GitHub individual organization when you use Sider with GitHub Student Developer Pack. If you select other repositories instead of your individual organization on Sider, We apply the Standard plan with 14 days trial to the repositories.
 
+If you wish to apply an Education plan to your academic organizations (e.g., student organizations, course work, research groups, etc.), contact us via the chat button at the bottom right on Sider. We welcome requests from not only students but also faculty and staff.
+
 ## Billing
 
 Sider uses [Stripe](https://stripe.com/) for payment. You can use either a credit card or a debit card. Please check our [pricing page](https://sider.review/pricing) to learn more details about billing.
