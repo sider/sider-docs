@@ -6,7 +6,7 @@
 
 We have 2 ways to get start sider-docs application as follows:
 
-```
+```console
 $ cd website    # All dependencies are in website directory.
 $ yarn          # Install dependencies.
 $ yarn start
@@ -14,7 +14,7 @@ $ yarn start
 
 or
 
-```
+```console
 $ docker-compose up
 ```
 
@@ -28,6 +28,6 @@ sider-docs is powered by [Docusaurus](https://docusaurus.io/en/). Thus, if you f
 
 To lint source files, run the following command:
 
-```
+```console
 $ yarn run lint
 ```

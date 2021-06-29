@@ -20,7 +20,7 @@ To start using stylelint, enable it in your [repository settings](../../getting-
 
 If you want to use a version except for the Sider default version or use some plugins or shareable configurations, install it into your repository as follows:
 
-```shell
+```console
 $ npm install stylelint --save-dev
 
 $ npm install stylelint-config-standard --save-dev

@@ -62,7 +62,7 @@ You can use the following options to fine-tune Cppcheck to your project.
 
 This option allows you to specify files or directories to analyze via Cppcheck. If you specify multiple targets, configure as follows:
 
-```Yaml
+```yaml
 linter:
   cppcheck:
     target:

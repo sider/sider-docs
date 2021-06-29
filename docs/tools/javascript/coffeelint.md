@@ -19,7 +19,7 @@ To start using CoffeeLint, enable it in your [repository settings](../../getting
 
 If you want to use a version except for the Sider default version, install it into your repository:
 
-```shell
+```console
 $ npm install coffeelint --save-dev
 ```
 

@@ -25,13 +25,13 @@ After enabled, Sider will automatically analyze your TypeScript files with the d
 
 But if you have no configuration yet and need more customization, install TSLint first:
 
-```shell
+```console
 $ npm install tslint --save-dev
 ```
 
 Next, create the configuration file (`tslint.json`):
 
-```shell
+```console
 $ npx tslint --init
 ```
 

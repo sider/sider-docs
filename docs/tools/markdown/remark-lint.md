@@ -23,7 +23,7 @@ Sider enables [some useful rules](https://www.npmjs.com/package/remark-preset-li
 
 In addition, you can use some rules or plugins as you want. If doing so, you need to install remark-lint on your repository via npm, for example:
 
-```shell-session
+```console
 $ npm install --save-dev remark-cli remark-lint remark-preset-lint-recommended
 ```
 

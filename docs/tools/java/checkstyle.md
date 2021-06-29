@@ -109,7 +109,7 @@ If you want to use the localization on Sider, you need to do as follows.
 
 3. Set the [`config`](#config) option in your `sider.yml` like below:
 
-   ```yml
+   ```yaml
    linter:
      checkstyle:
        config: your_checkstyle_ruleset.xml

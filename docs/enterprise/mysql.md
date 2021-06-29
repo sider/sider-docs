@@ -29,7 +29,7 @@ You should configure these parameters to handle any requests from Sider Enterpri
 
 The [`DATABASE_URL`](./config.md#mysql) of Sider Enterprise is configured as follows:
 
-```
+```text
 mysql2://{USER}:{PASSWORD}@{HOST}:{PORT}/{DATABASE_NAME}?{OPTION1}={VALUE1}&{OPTION2}={VALUE2}
 ```
 
