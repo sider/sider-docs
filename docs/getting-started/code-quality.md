@@ -11,17 +11,17 @@ You can analyze all files in the branch of the repository, and you can see the i
 
 ## Branch Analysis
 
-If you want to see the code quality of your repository, you need to analyze your branch manually or configure [Analysis Branches](../getting-started/repository-settings#branches).
+If you want to see the code quality of your repository, you need to analyze your branch manually or configure [Analysis Branches](../getting-started/repository-settings.md#branches).
 
 To analyze your branch manually, open the dashboard of the Sider and click the repository that you want to see the code quality.
 
 ![Sider dashboard](../assets/code-quality/sider-dashboard.jpg)
 
-You can see the `Branches` tab on the top of the screen. And when you click the `Branches` tab, you can see the branch list of your repository.
+You can see the `Branches` tab at the top of the screen. And when you click the `Branches` tab, you can see the branch list of your repository.
 
 ![Branch list of the repository](../assets/code-quality/branch-list.jpg)
 
-Click the `Analyze` button on the right side of the branch that you want to analyze. When the all analyzers are finished, you can see the issues and code metrics.
+Click the `Analyze` button at the right side of the branch that you want to analyze. When the all analyzers are finished, you can see the issues and code metrics.
 
 ## Files
 
@@ -29,7 +29,7 @@ After analyzing the branch, you can see the details of the result when you click
 
 ![Branch list of the repository](../assets/code-quality/files-tab.jpg)
 
-On the `Files` tab, You can see the `Duplicates`, `Complexity`, `LOC`, `Issues` and `Last commit` by each files and directories.
+On the `Files` tab, You can see the `Duplicates`, `Complexity`, `LOC`, `Issues` and `Last commit` by each file and directory.
 
 - Duplicates: code duplicates in the files or directory
 - Complexity: complexity in the file or maximum complexity in the directory
@@ -60,7 +60,7 @@ You can click a point to see its file name and metrics values on the indication 
 
 ## Issues
 
-On the `Issues` tab, you can see all issues in your the branch of the repository.
+On the `Issues` tab, you can see all issues in your branch of the repository.
 
 ![Issues tab](../assets/code-quality/issues-tab.jpg)
 
