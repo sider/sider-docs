@@ -22,6 +22,7 @@ This section has documents about how to use Sider.
 - [Custom Analysis Configuration](./getting-started/custom-configuration.md)
 - [Recommended Ruleset](./getting-started/recommended-rules.md)
 - [Working with Issues](./getting-started/working-with-issues.md)
+- [Code quality](./getting-started/code-quality.md)
 - [Permissions](./getting-started/permissions.md)
 - [Skip Analyzing](./getting-started/skip-analyzing.md)
 
