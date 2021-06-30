@@ -21,7 +21,7 @@ You can see the `Branches` tab at the top of the screen. And when you click the 
 
 ![Branch list of the repository](../assets/code-quality/branch-list.jpg)
 
-Click the `Analyze` button at the right side of the branch that you want to analyze. When the all analyzers are finished, you can see the issues and code metrics.
+Click the `Analyze` button on the right side of the branch that you want to analyze. When the all analyzers are finished, you can see the issues and code metrics.
 
 ## Files
 
@@ -65,3 +65,9 @@ On the `Issues` tab, you can see all issues in your branch of the repository.
 ![Issues tab](../assets/code-quality/issues-tab.jpg)
 
 You can filter the issues by tools or severities using `Advanced search`, and also you can filter by file or directory using `Directory tree`.
+
+## Analysis tools
+
+- Metrics Code Clone
+- Metrics Complexity
+- Metrics File Info
