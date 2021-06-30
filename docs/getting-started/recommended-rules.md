@@ -24,6 +24,7 @@ Sider applies the recommended ruleset to the analysis tools below. Please follow
 
 - [Checkstyle](../tools/java/checkstyle.md#config)
 - [cpplint](../tools/cplusplus/cpplint.md#recommended-ruleset)
+- [Cppcheck](../tools/cplusplus/cppcheck.md#default-configuration-for-cppcheck)
 - [ESLint](../tools/javascript/eslint.md#default-configuration-for-eslint)
 - [Flake8](../tools/python/flake8.md#default-configuration-for-flake8)
 - [PMD](../tools/java/pmd.md#default-configuration-for-pmd)

@@ -23,6 +23,12 @@ For more details, see the command-line help or the [online manual](https://githu
 $ cppcheck --help
 ```
 
+## Default Configuration for Cppcheck
+
+Sider provides our [recommended ruleset](https://github.com/sider/runners/blob/HEAD/images/cppcheck/sider_recommended_cppcheck.xml) for Cppcheck.
+This configuration is used when you do not have `sider.yml` in your repository or the option `suppressions-list` in the configuration.
+For more details, please visit [Recommended Ruleset](../../getting-started/recommended-rules.md).
+
 ## Configuration
 
 Here is a configuration example via [`sider.yml`](../../getting-started/custom-configuration.md):
@@ -40,6 +46,7 @@ linter:
     addon: "cert"
     bug-hunting: true
     parallel: true
+    suppressions-list: "suppressions.txt"
 ```
 
 You can use the following options to fine-tune Cppcheck to your project.
@@ -57,6 +64,7 @@ You can use the following options to fine-tune Cppcheck to your project.
 | [`addon`](#addon)                                                                             | `string`, `string[]` | -       |
 | [`bug-hunting`](#bug-hunting)                                                                 | `boolean`            | `false` |
 | [`parallel`](#parallel)                                                                       | `boolean`            | `false` |
+| [`suppressions-list`](#suppressions-list)                                                     | `string`             | `sider_recommended_cppcheck.txt` |
 
 ### `target`
 
@@ -182,3 +190,13 @@ And, the results of the following checks are affected when the `parallel` option
 
 - unusedFunction
 - Whole program analysis (ctu=Cross Translation Unit)
+
+### `suppressions-list`
+
+This option allows you to set the file path of ignoring for rules.
+In the file, you describe one rule per line like below.
+
+```
+nullPointer
+ctunullpointer
+```
