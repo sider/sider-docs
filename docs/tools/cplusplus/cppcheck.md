@@ -25,7 +25,7 @@ $ cppcheck --help
 
 ## Default Configuration for Cppcheck
 
-Sider provides our [recommended ruleset](https://github.com/sider/runners/blob/HEAD/images/cppcheck/sider_recommended_cppcheck.xml) for Cppcheck.
+Sider provides our [recommended ruleset](https://github.com/sider/runners/blob/HEAD/images/cppcheck/sider_recommended_cppcheck.txt) for Cppcheck.
 This configuration is used when you do not have `sider.yml` in your repository or the option `suppressions-list` in the configuration.
 For more details, please visit [Recommended Ruleset](../../getting-started/recommended-rules.md).
 
@@ -51,19 +51,19 @@ linter:
 
 You can use the following options to fine-tune Cppcheck to your project.
 
-| Name                                                                                          | Type                 | Default |
-| --------------------------------------------------------------------------------------------- | -------------------- | ------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir)         | `string`             | -       |
-| [`include-path`](../../getting-started/custom-configuration.md#linteranalyzer_idinclude-path) | `string`, `string[]` | -       |
-| [`target`](#target)                                                                           | `string`, `string[]` | `.`     |
-| [`ignore`](#ignore)                                                                           | `string`, `string[]` | -       |
-| [`enable`](#enable)                                                                           | `string`             | -       |
-| [`std`](#std)                                                                                 | `string`             | -       |
-| [`project`](#project)                                                                         | `string`             | -       |
-| [`language`](#language)                                                                       | `string`             | -       |
-| [`addon`](#addon)                                                                             | `string`, `string[]` | -       |
-| [`bug-hunting`](#bug-hunting)                                                                 | `boolean`            | `false` |
-| [`parallel`](#parallel)                                                                       | `boolean`            | `false` |
+| Name                                                                                          | Type                 | Default                          |
+| --------------------------------------------------------------------------------------------- | -------------------- | -------------------------------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir)         | `string`             | -                                |
+| [`include-path`](../../getting-started/custom-configuration.md#linteranalyzer_idinclude-path) | `string`, `string[]` | -                                |
+| [`target`](#target)                                                                           | `string`, `string[]` | `.`                              |
+| [`ignore`](#ignore)                                                                           | `string`, `string[]` | -                                |
+| [`enable`](#enable)                                                                           | `string`             | -                                |
+| [`std`](#std)                                                                                 | `string`             | -                                |
+| [`project`](#project)                                                                         | `string`             | -                                |
+| [`language`](#language)                                                                       | `string`             | -                                |
+| [`addon`](#addon)                                                                             | `string`, `string[]` | -                                |
+| [`bug-hunting`](#bug-hunting)                                                                 | `boolean`            | `false`                          |
+| [`parallel`](#parallel)                                                                       | `boolean`            | `false`                          |
 | [`suppressions-list`](#suppressions-list)                                                     | `string`             | `sider_recommended_cppcheck.txt` |
 
 ### `target`
