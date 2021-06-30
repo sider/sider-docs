@@ -76,7 +76,7 @@ For the code quality, we use `Metrics Code Clone`, `Metrics Complexity`, and `Me
 
 All issues are generated from your [Analysis tools](../getting-started/repository-settings.md#tools) configuration.
 
-The `Metrics Code Clone` and `Metrics Complexity` have the limitation of the languages. Check the following table. If you use not supported languages, you can't see the `Metrics Code Clone` and `Metrics Complexity` results.
+The `Metrics Code Clone` and `Metrics Complexity` have the limitation of the languages. Check the following table. If you use not supported languages, the `Metrics Code Clone` and `Metrics Complexity` can't generate results.
 
 | Language    | Metrics Code Clone | Metrics Complexity |
 | ----------- | ------------------ | ------------------ |
