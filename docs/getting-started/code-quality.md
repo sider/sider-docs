@@ -68,6 +68,33 @@ You can filter the issues by tools or severities using `Advanced search`, and al
 
 ## Analysis tools
 
-- Metrics Code Clone
-- Metrics Complexity
-- Metrics File Info
+For the code quality, we use `Metrics Code Clone`, `Metrics Complexity`, and `Metrics File Info` of the analysis tools in [Sider Runners](https://github.com/sider/runners)
+
+- Metrics Code Clone: this analysis tool makes the code duplicates in the file.
+- Metrics Complexity: this analysis tool makes the complexity in the file.
+- Metrics File Info: this analysis tool makes the last committed time and total line of the code(LOC) in the file
+
+All issues are generated from your [Analysis tools](../getting-started/repository-settings.md#tools) configuration.
+
+The `Metrics Code Clone` and `Metrics Complexity` have the limitation of the languages. Check the following table. If you use not supported languages, you can't see the `Metrics Code Clone` and `Metrics Complexity` results.
+
+| Language    | Metrics Code Clone | Metrics Complexity |
+| ----------- | ------------------ | ------------------ |
+| C++         | ◯                  | ◯                  |
+| C#          | ◯                  | ◯                  |
+| Fortran     | ×                  | ◯                  |
+| GDScript    | ×                  | ◯                  |
+| Golang      | ◯                  | ◯                  |
+| Java        | ◯                  | ◯                  |
+| JavaScript  | ◯                  | ◯                  |
+| Kotlin      | ◯                  | ×                  |
+| Lua         | ×                  | ◯                  |
+| Objective-C | ◯                  | ◯                  |
+| PHP         | ◯                  | ◯                  |
+| Python      | ◯                  | ◯                  |
+| Ruby        | ◯                  | ◯                  |
+| Rust        | ×                  | ◯                  |
+| Scala       | ×                  | ◯                  |
+| Swift       | ◯                  | ◯                  |
+| TTCN-3      | ×                  | ◯                  |
+| TypeScript  | ×                  | ◯                  |
