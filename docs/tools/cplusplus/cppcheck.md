@@ -26,7 +26,7 @@ $ cppcheck --help
 ## Default Configuration for Cppcheck
 
 Sider provides our [recommended ruleset](https://github.com/sider/runners/blob/HEAD/images/cppcheck/sider_recommended_cppcheck.txt) for Cppcheck.
-This configuration is used when you do not have `sider.yml` in your repository or the option `suppressions-list` in the configuration.
+This configuration is used This configuration is used when the `suppressions-list` option is not specified in `sider.yml`.
 For more details, please visit [Recommended Ruleset](../../getting-started/recommended-rules.md).
 
 ## Configuration
@@ -193,10 +193,11 @@ And, the results of the following checks are affected when the `parallel` option
 
 ### `suppressions-list`
 
-This option allows you to set the file path of ignoring for rules.
-In the file, you describe one rule per line like below.
+This option allows you to specify a file path of a suppressions file. You can create a suppressions file for example as follows:
 
+```text
+memleak
+uninitvar
 ```
-nullPointer
-ctunullpointer
-```
+
+You can read more about this file format in the [Cppcheck manual](https://github.com/danmar/cppcheck/blob/main/man/manual.md#suppressions-in-a-file
