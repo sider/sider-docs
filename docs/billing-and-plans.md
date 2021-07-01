@@ -25,6 +25,14 @@ Additionally, we have prepared the 14-day trial plan. This trial plan will start
 
 At this time, Sider will change your plan to the Free plan unless you update Sider's plan. The Free plan analyzes your public repositories, however, one doesn't analyze your private repositories.
 
+## Education Plan
+
+If you're a student, you can join the Education plan through [GitHub Student Developer Pack](https://education.github.com/pack) to use Sider for free.
+
+The Education plan is only for the student's [personal user account](https://docs.github.com/en/get-started/learning-about-github/types-of-github-accounts#personal-user-accounts). Make sure to select your GitHub personal user account when you use Sider with GitHub Student Developer Pack. If you select other organization's repositories instead of your personal user account on Sider, we apply the Standard plan with 14 days trial to the repositories.
+
+If you wish to apply the Education plan to your academic organizations (e.g., student organizations, course work, research groups, etc.), contact us via the chat button at the bottom right on Sider. We welcome requests from not only students but also educators.
+
 ## Billing
 
 Sider uses [Stripe](https://stripe.com/) for payment. You can use either a credit card or a debit card. Please check our [pricing page](https://sider.review/pricing) to learn more details about billing.
@@ -64,6 +72,6 @@ You can change your plan in the organization settings page within [sider.review]
 
 On this page, click `Update` and select the number of seats. Then you can check the billing preview. After click `Update` in the preview, your plan will be updated. Please note that you must be an admin role for your organization in order to change plans.
 
-### We need invoices with the address of our company.
+### We need invoices with the address of our company
 
 You can add your address to the invoice. Click "Add additional information" link in the invoice details page; then you will see the text area. In the area, you can write the address or other information.
