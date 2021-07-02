@@ -43,7 +43,7 @@ On the `Files` tab, you can explore the directories, show the file content by cl
 
 The detailed message of the issue will appear during the mouse hovers over the wavy lines. You can also make the message pinned by clicking the `View Problem` button on the hovering message.
 
-So, the `Files` tab helps you to find easily which files or directories need to be refactored.
+So, the `Files` tab helps you find easily which files or directories need to be refactored.
 
 ## Inspections
 
