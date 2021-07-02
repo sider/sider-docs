@@ -21,7 +21,7 @@ You will see the `Branches` tab at the top of the screen. And when you click the
 
 ![Branch list of the repository](../assets/code-quality/branch-list.jpg)
 
-Click the `Analyze` button on the right side of the branch that you want to analyze. After all analysis has been completed, you can see the issues and code metrics on the following tabs.
+Click the `Analyze` button on the right side of the branch that you want to analyze. After all analysis has been completed, you can see the issues and code metrics on the results tabs described in the following sections.
 
 ## Files
 
@@ -29,7 +29,7 @@ After analyzing the branch, you can see the details of the result when you click
 
 ![Branch list of the repository](../assets/code-quality/files-tab.jpg)
 
-On the `Files` tab, You can see the `Duplicates`, `Complexity`, `LOC`, `Issues` and `Last commit` for each file and directory.
+On the `Files` tab, you can see the `Duplicates`, `Complexity`, `LOC`, `Issues` and `Last commit` for each file and directory.
 
 - Duplicates: the total number of code duplicates in the file or the directory
 - Complexity: the total complexity in the file or the maximum value in the directory
@@ -47,13 +47,13 @@ So, the `Files` tab helps you find easily which files or directories need to be 
 
 ## Inspections
 
-The `Inspections` tab visualizes the code quality of your entire repository. The charts on this tab show several code quality metrics versus how often code is changing (Churn). Plotted points on individual chart indicates files and metrics. The points are limited to the highest 30 of churn values.
+The `Inspections` tab visualizes the code quality of your entire repository. The charts on this tab show several code quality metrics versus how often code is changing (Churn). Plotted points on individual chart indicate files and metrics. The points are limited to the highest 30 of churn values.
 
 - Churn: how many times and how much size a file has been changed in the specified period of time (90 days)
 
 ![Inspections tab](../assets/code-quality/inspections-tab.jpg)
 
-You can click a point to see its file name and metrics values on the indication area above the charts.
+You can click any point to see its file name and metrics values on the indication area above the charts.
 
 - Complexity: the total complexity in the file.
 - Duplicates: code duplicates in the file. The chart shows the duplication ratio(sum of duplicated line / LOC).
@@ -79,23 +79,16 @@ Our analysis tools `Metrics Code Clone`, `Metrics Complexity`, and `Metrics File
 
 The `Metrics Code Clone` and `Metrics Complexity` have the limitation of the languages. Check the following table. The `Metrics Code Clone` and `Metrics Complexity` can't generate results for files of unsupported languages.
 
-| Language    | Metrics Code Clone | Metrics Complexity |
-| ----------- | ------------------ | ------------------ |
-| C++         | ✔️                 | ✔️                 |
-| C#          | ✔️                 | ✔️                 |
-| Fortran     | -                  | ✔️                 |
-| GDScript    | -                  | ✔️                 |
-| Golang      | ✔️                 | ✔️                 |
-| Java        | ✔️                 | ✔️                 |
-| JavaScript  | ✔️                 | ✔️                 |
-| Kotlin      | ✔️                 | -                  |
-| Lua         | -                  | ✔️                 |
-| Objective-C | -                  | ✔️                 |
-| PHP         | ✔️                 | ✔️                 |
-| Python      | ✔️                 | ✔️                 |
-| Ruby        | ✔️                 | ✔️                 |
-| Rust        | -                  | ✔️                 |
-| Scala       | -                  | ✔️                 |
-| Swift       | ✔️                 | ✔️                 |
-| TTCN-3      | -                  | ✔️                 |
-| TypeScript  | -                  | ✔️                 |
+| Language   | Metrics Code Clone | Metrics Complexity |
+| ---------- | ------------------ | ------------------ |
+| C++        | ✔️                 | ✔️                 |
+| C#         | ✔️                 | ✔️                 |
+| Golang     | ✔️                 | ✔️                 |
+| Java       | ✔️                 | ✔️                 |
+| JavaScript | ✔️                 | ✔️                 |
+| Kotlin     | ✔️                 | -                  |
+| PHP        | ✔️                 | ✔️                 |
+| Python     | ✔️                 | ✔️                 |
+| Ruby       | ✔️                 | ✔️                 |
+| Swift      | ✔️                 | ✔️                 |
+| TypeScript | -                  | ✔️                 |
