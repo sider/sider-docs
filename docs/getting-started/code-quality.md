@@ -90,7 +90,7 @@ The `Metrics Code Clone` and `Metrics Complexity` have the limitation of the lan
 | JavaScript  | ✔️                 | ✔️                 |
 | Kotlin      | ✔️                 | -                  |
 | Lua         | -                  | ✔️                 |
-| Objective-C | ✔️                 | ✔️                 |
+| Objective-C | -                  | ✔️                 |
 | PHP         | ✔️                 | ✔️                 |
 | Python      | ✔️                 | ✔️                 |
 | Ruby        | ✔️                 | ✔️                 |
