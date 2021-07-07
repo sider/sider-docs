@@ -9,7 +9,7 @@ hide_title: true
 
 | Supported Version       | Language | Website                           |
 | ----------------------- | -------- | --------------------------------- |
-| 0.5.0+ (default: 1.2.0) | Ruby     | https://github.com/soutaro/querly |
+| 0.5.0+ (default: 1.3.0) | Ruby     | https://github.com/soutaro/querly |
 
 **Querly** is a customizable and pattern-based analysis tool for Ruby.
 You can easily write your own rule for your project via the YAML configuration file.

@@ -11,7 +11,7 @@ hide_title: true
 
 | Supported Version | Language              | Website               |
 | ----------------- | --------------------- | --------------------- |
-| 6.35.0            | Programming languages | https://pmd.github.io |
+| 6.36.0            | Programming languages | https://pmd.github.io |
 
 **PMD CPD** is the copy-paste detector shipped with PMD. CPD works with Java, JSP, C/C++, C#, Go, Kotlin, Ruby, Swift and [many more languages](https://pmd.github.io/pmd/pmd_userdocs_cpd.html#supported-languages).
 
