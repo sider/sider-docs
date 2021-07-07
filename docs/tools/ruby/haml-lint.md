@@ -23,7 +23,7 @@ To start using HAML-Lint, enable it in your [repository settings](../../getting-
 You can configure HAML-Lint via a file named `.haml-lint.yml`.
 But, if this file does not exist in your repository, Sider uses the [default configuration](https://github.com/sider/runners/blob/HEAD/images/haml_lint/sider_recommended_haml_lint.yml) instead.
 
-Similarly, if a `.rubocop.yml` file does not exist, Sider uses the [default configuration for RuboCop](https://github.com/sider/runners/blob/HEAD/images/haml_lint/default_rubocop.yml).
+Similarly, if a `.rubocop.yml` file does not exist, Sider uses the [default configuration for RuboCop](rubocop.md#default-configuration-for-rubocop).
 
 See also the [HAML-Lint configuration](https://github.com/sds/haml-lint#configuration) for details.
 
