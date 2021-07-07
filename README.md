@@ -22,7 +22,7 @@ It requires [Yarn](https://yarnpkg.com/en/) or [docker-compose](https://docs.doc
 
 ## Documentation
 
-sider-docs is powered by [Docusaurus](https://docusaurus.io/en/). Thus, if you face with problems, check that documents.
+sider-docs is powered by [Docusaurus](https://docusaurus.io/). Thus, if you face with problems, check that documents.
 
 ## Lint
 
