@@ -12,7 +12,10 @@ Your team might be using a Git repository to distribute such private libraries.
 Such a kind of dependencies is supported by some package managers like Bundler or npm.
 
 We support accessing to private repositories via SSH during an analysis session.
-Let's check the following steps out.
+Let’s check the following steps out.
+
+> **Tip**: Do analysis tools (e.g., ESLint or RuboCop) require your private dependencies?
+> If not, please consider using the [`dependencies` option](../getting-started/custom-configuration.md#linteranalyzer_iddependencies) of `sider.yml` instead.
 
 ## Generate SSH key pair
 
@@ -24,7 +27,7 @@ Visit **Settings** on your repository, and then click **Keys**.
 
 When you click **Generate Key**, Sider automatically generates a 4096-bit RSA key pair used for the private dependency resolution.
 
-> NOTE: We strongly recommend **against** adding secret keys to public repositories.
+> **NOTE**: We **don’t recommend** adding secret keys to public repositories.
 > Their analysis results are publicly accessible, and your secret keys might get exposed.
 
 ## Add SSH public key to GitHub
