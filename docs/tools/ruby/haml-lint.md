@@ -9,7 +9,7 @@ hide_title: true
 
 | Version                   | Language    | Website                          |
 | ------------------------- | ----------- | -------------------------------- |
-| 0.26.0+ (default: 0.37.0) | HAML (Ruby) | https://github.com/sds/haml-lint |
+| 0.26.0+ (default: 0.37.1) | HAML (Ruby) | https://github.com/sds/haml-lint |
 
 **HAML-Lint** is a static analysis tool to help keep your [HAML](https://haml.info) files clean and readable.
 In addition to HAML-specific style and lint checks, it can check them by integrated RuboCop rules.
@@ -23,7 +23,7 @@ To start using HAML-Lint, enable it in your [repository settings](../../getting-
 You can configure HAML-Lint via a file named `.haml-lint.yml`.
 But, if this file does not exist in your repository, Sider uses the [default configuration](https://github.com/sider/runners/blob/HEAD/images/haml_lint/sider_recommended_haml_lint.yml) instead.
 
-Similarly, if a `.rubocop.yml` file does not exist, Sider uses the [default configuration for RuboCop](https://github.com/sider/runners/blob/HEAD/images/haml_lint/default_rubocop.yml).
+Similarly, if a `.rubocop.yml` file does not exist, Sider uses the [default configuration for RuboCop](rubocop.md#default-configuration-for-rubocop).
 
 See also the [HAML-Lint configuration](https://github.com/sds/haml-lint#configuration) for details.
 

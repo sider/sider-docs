@@ -1,15 +1,13 @@
 ---
 id: tslint
-title: TSLint
-sidebar_label: TSLint (deprecated)
+title: TSLint (unsupported)
 hide_title: true
 ---
 
-# TSLint
+# TSLint (unsupported)
 
-> **DEPRECATED**: TSLint has been deprecated and recommends migrating to [TypeScript ESLint](https://github.com/typescript-eslint/typescript-eslint).
-> See [palantir/tslint#4534](https://github.com/palantir/tslint/issues/4534) for details.
-> And, [`tslint-to-eslint-config`](https://www.npmjs.com/package/tslint-to-eslint-config) helps you migrate it.
+> **UNSUPPORTED**: We have dropped the support for TSLint on July 8, 2021. Please migrate to [TypeScript ESLint](https://github.com/typescript-eslint/typescript-eslint).
+> [`tslint-to-eslint-config`](https://www.npmjs.com/package/tslint-to-eslint-config) might help your migration.
 
 | Supported Version       | Language   | Website                           |
 | ----------------------- | ---------- | --------------------------------- |

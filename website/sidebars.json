@@ -44,8 +44,7 @@
           "tools/javascript/eslint",
           "tools/javascript/jshint",
           "tools/javascript/tyscan",
-          "tools/javascript/coffeelint",
-          "tools/javascript/tslint"
+          "tools/javascript/coffeelint"
         ]
       },
       {
