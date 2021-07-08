@@ -6,7 +6,7 @@ hide_title: true
 
 # TSLint (unsupported)
 
-> **UNSUPPORTED**: We have dropped the support for TSLint on July x, 2021. Please migrate to [TypeScript ESLint](https://github.com/typescript-eslint/typescript-eslint).
+> **UNSUPPORTED**: We have dropped the support for TSLint on July 8, 2021. Please migrate to [TypeScript ESLint](https://github.com/typescript-eslint/typescript-eslint).
 > [`tslint-to-eslint-config`](https://www.npmjs.com/package/tslint-to-eslint-config) might help your migration.
 
 | Supported Version       | Language   | Website                           |
