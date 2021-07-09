@@ -86,8 +86,10 @@ An analysis never starts if your changed files exceed the limit.
 
 ## Installing dependencies fails
 
-If you are using private dependencies via a package manager (e.g. npm), you need extra steps.
-See ["Private Dependencies"](./advanced-settings/private-dependencies.md) for more details.
+In general, the following solutions are available to solve dependency installation problems:
+
+- If all dependencies are not necessary for analysis, you can specify only the dependencies you need by the [`dependencies`](./getting-started/custom-configuration.md#linteranalyzer_iddependencies) option of `sider.yml`. **(recommended)**
+- If _private dependencies_ are necessary for analysis, you need to take the [extra steps](./advanced-settings/private-dependencies.md).
 
 ## Too many issues detected
 
