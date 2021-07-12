@@ -20,7 +20,7 @@ To start using PHPMD, enable it in your [repository settings](../../getting-star
 ## Default Configuration for PHPMD
 
 Sider provides our [recommended ruleset](https://github.com/sider/runners/blob/HEAD/images/phpmd/sider_recommended_phpmd.xml) for PHPMD.
-This configuration is used when you have no PHPMD configurations or `sider.yml` in your repository.
+This configuration is used when the `rule` option is not specified in `sider.yml` in your repository.
 For more details, please visit [Recommended Ruleset](../../getting-started/recommended-rules.md).
 
 ## Performance Issues
