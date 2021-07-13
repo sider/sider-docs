@@ -23,6 +23,12 @@ For more details, see the command-line help or the [online manual](https://githu
 $ cppcheck --help
 ```
 
+## Default Configuration for Cppcheck
+
+Sider provides our [recommended ruleset](https://github.com/sider/runners/blob/HEAD/images/cppcheck/sider_recommended_cppcheck.txt) for Cppcheck.
+This configuration is used when the [`suppressions-list`](#suppressions-list) option is not specified in `sider.yml`.
+For more details, please visit [Recommended Ruleset](../../getting-started/recommended-rules.md).
+
 ## Configuration
 
 Here is a configuration example via [`sider.yml`](../../getting-started/custom-configuration.md):
@@ -40,23 +46,25 @@ linter:
     addon: "cert"
     bug-hunting: true
     parallel: true
+    suppressions-list: "your_suppressions.txt"
 ```
 
 You can use the following options to fine-tune Cppcheck to your project.
 
-| Name                                                                                          | Type                 | Default |
-| --------------------------------------------------------------------------------------------- | -------------------- | ------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir)         | `string`             | -       |
-| [`include-path`](../../getting-started/custom-configuration.md#linteranalyzer_idinclude-path) | `string`, `string[]` | -       |
-| [`target`](#target)                                                                           | `string`, `string[]` | `.`     |
-| [`ignore`](#ignore)                                                                           | `string`, `string[]` | -       |
-| [`enable`](#enable)                                                                           | `string`             | -       |
-| [`std`](#std)                                                                                 | `string`             | -       |
-| [`project`](#project)                                                                         | `string`             | -       |
-| [`language`](#language)                                                                       | `string`             | -       |
-| [`addon`](#addon)                                                                             | `string`, `string[]` | -       |
-| [`bug-hunting`](#bug-hunting)                                                                 | `boolean`            | `false` |
-| [`parallel`](#parallel)                                                                       | `boolean`            | `false` |
+| Name                                                                                          | Type                 | Default       |
+| --------------------------------------------------------------------------------------------- | -------------------- | ------------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir)         | `string`             | -             |
+| [`include-path`](../../getting-started/custom-configuration.md#linteranalyzer_idinclude-path) | `string`, `string[]` | -             |
+| [`target`](#target)                                                                           | `string`, `string[]` | `.`           |
+| [`ignore`](#ignore)                                                                           | `string`, `string[]` | -             |
+| [`enable`](#enable)                                                                           | `string`             | -             |
+| [`std`](#std)                                                                                 | `string`             | -             |
+| [`project`](#project)                                                                         | `string`             | -             |
+| [`language`](#language)                                                                       | `string`             | -             |
+| [`addon`](#addon)                                                                             | `string`, `string[]` | -             |
+| [`bug-hunting`](#bug-hunting)                                                                 | `boolean`            | `false`       |
+| [`parallel`](#parallel)                                                                       | `boolean`            | `false`       |
+| [`suppressions-list`](#suppressions-list)                                                     | `string`             | _(see below)_ |
 
 ### `target`
 
@@ -182,3 +190,16 @@ And, the results of the following checks are affected when the `parallel` option
 
 - unusedFunction
 - Whole program analysis (ctu=Cross Translation Unit)
+
+### `suppressions-list`
+
+This option allows you to specify a file path of a suppressions file. You can create a suppressions file for example as follows:
+
+```text
+memleak
+uninitvar
+```
+
+If omitted, Sider uses the [recommended ruleset](#default-configuration-for-cppcheck).
+
+You can read more about this file format in the [Cppcheck manual](https://github.com/danmar/cppcheck/blob/main/man/manual.md#suppressions-in-a-file).

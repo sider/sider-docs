@@ -17,6 +17,12 @@ hide_title: true
 
 To start using PHPMD, enable it in your [repository settings](../../getting-started/repository-settings.md).
 
+## Default Configuration for PHPMD
+
+Sider provides our [recommended ruleset](https://github.com/sider/runners/blob/HEAD/images/phpmd/sider_recommended_phpmd.xml) for PHPMD.
+This configuration is used when the `rule` option is not specified in `sider.yml` in your repository.
+For more details, please visit [Recommended Ruleset](../../getting-started/recommended-rules.md).
+
 ## Performance Issues
 
 PHPMD sometimes raises analysis timeout with a larger codebase.
@@ -61,16 +67,16 @@ linter:
 
 You can use several options to fine-tune PHPMD to your project:
 
-| Name                                                                                  | Type                 | Default |
-| ------------------------------------------------------------------------------------- | -------------------- | ------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`             | -       |
-| [`target`](#target)                                                                   | `string`, `string[]` | `.`     |
-| [`rule`](#rule)                                                                       | `string`, `string[]` | -       |
-| [`minimumpriority`](#minimumpriority)                                                 | `integer`            | -       |
-| [`suffixes`](#suffixes)                                                               | `string`, `string[]` | `php`   |
-| [`exclude`](#exclude)                                                                 | `string`, `string[]` | -       |
-| [`strict`](#strict)                                                                   | `boolean`            | `false` |
-| [`custom_rule_path`](#custom_rule_path)                                               | `string[]`           | `[]`    |
+| Name                                                                                  | Type                 | Default       |
+| ------------------------------------------------------------------------------------- | -------------------- | ------------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`             | -             |
+| [`target`](#target)                                                                   | `string`, `string[]` | `.`           |
+| [`rule`](#rule)                                                                       | `string`, `string[]` | _(see below)_ |
+| [`minimumpriority`](#minimumpriority)                                                 | `integer`            | -             |
+| [`suffixes`](#suffixes)                                                               | `string`, `string[]` | `php`         |
+| [`exclude`](#exclude)                                                                 | `string`, `string[]` | -             |
+| [`strict`](#strict)                                                                   | `boolean`            | `false`       |
+| [`custom_rule_path`](#custom_rule_path)                                               | `string[]`           | `[]`          |
 
 See also the [PHPMD document](https://phpmd.org/documentation/index.html) for details.
 
@@ -92,7 +98,7 @@ Here are the available rulesets:
 - `naming`
 - `unusedcode`
 
-If omitted, Sider uses the [default configuration](https://github.com/sider/runners/blob/HEAD/images/phpmd/sider_config.xml).
+If omitted, Sider uses the [recommended ruleset](#default-configuration-for-phpmd).
 
 If you want to learn more, see the [PHPMD ruleset document](https://phpmd.org/rules/index.html).
 
