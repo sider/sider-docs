@@ -67,16 +67,16 @@ linter:
 
 You can use several options to fine-tune PHPMD to your project:
 
-| Name                                                                                  | Type                 | Default |
-| ------------------------------------------------------------------------------------- | -------------------- | ------- |
-| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`             | -       |
-| [`target`](#target)                                                                   | `string`, `string[]` | `.`     |
-| [`rule`](#rule)                                                                       | `string`, `string[]` | -       |
-| [`minimumpriority`](#minimumpriority)                                                 | `integer`            | -       |
-| [`suffixes`](#suffixes)                                                               | `string`, `string[]` | `php`   |
-| [`exclude`](#exclude)                                                                 | `string`, `string[]` | -       |
-| [`strict`](#strict)                                                                   | `boolean`            | `false` |
-| [`custom_rule_path`](#custom_rule_path)                                               | `string[]`           | `[]`    |
+| Name                                                                                  | Type                 | Default       |
+| ------------------------------------------------------------------------------------- | -------------------- | ------------- |
+| [`root_dir`](../../getting-started/custom-configuration.md#linteranalyzer_idroot_dir) | `string`             | -             |
+| [`target`](#target)                                                                   | `string`, `string[]` | `.`           |
+| [`rule`](#rule)                                                                       | `string`, `string[]` | _(see below)_ |
+| [`minimumpriority`](#minimumpriority)                                                 | `integer`            | -             |
+| [`suffixes`](#suffixes)                                                               | `string`, `string[]` | `php`         |
+| [`exclude`](#exclude)                                                                 | `string`, `string[]` | -             |
+| [`strict`](#strict)                                                                   | `boolean`            | `false`       |
+| [`custom_rule_path`](#custom_rule_path)                                               | `string[]`           | `[]`          |
 
 See also the [PHPMD document](https://phpmd.org/documentation/index.html) for details.
 
