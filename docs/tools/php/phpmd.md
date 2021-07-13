@@ -17,6 +17,12 @@ hide_title: true
 
 To start using PHPMD, enable it in your [repository settings](../../getting-started/repository-settings.md).
 
+## Default Configuration for PHPMD
+
+Sider provides our [recommended ruleset](https://github.com/sider/runners/blob/HEAD/images/phpmd/sider_recommended_phpmd.xml) for PHPMD.
+This configuration is used when the `rule` option is not specified in `sider.yml` in your repository.
+For more details, please visit [Recommended Ruleset](../../getting-started/recommended-rules.md).
+
 ## Performance Issues
 
 PHPMD sometimes raises analysis timeout with a larger codebase.
@@ -92,7 +98,7 @@ Here are the available rulesets:
 - `naming`
 - `unusedcode`
 
-If omitted, Sider uses the [default configuration](https://github.com/sider/runners/blob/HEAD/images/phpmd/sider_config.xml).
+If omitted, Sider uses the [recommended ruleset](https://github.com/sider/runners/blob/HEAD/images/phpmd/sider_recommended_phpmd.xml).
 
 If you want to learn more, see the [PHPMD ruleset document](https://phpmd.org/rules/index.html).
 
