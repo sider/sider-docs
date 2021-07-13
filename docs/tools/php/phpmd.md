@@ -98,7 +98,7 @@ Here are the available rulesets:
 - `naming`
 - `unusedcode`
 
-If omitted, Sider uses the [recommended ruleset](https://github.com/sider/runners/blob/HEAD/images/phpmd/sider_recommended_phpmd.xml).
+If omitted, Sider uses the [recommended ruleset](#default-configuration-for-phpmd).
 
 If you want to learn more, see the [PHPMD ruleset document](https://phpmd.org/rules/index.html).
 

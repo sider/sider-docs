@@ -200,6 +200,6 @@ memleak
 uninitvar
 ```
 
-If omitted, Sider uses the [recommended ruleset](https://github.com/sider/runners/blob/HEAD/images/cppcheck/sider_recommended_cppcheck.txt).
+If omitted, Sider uses the [recommended ruleset](#default-configuration-for-cppcheck).
 
 You can read more about this file format in the [Cppcheck manual](https://github.com/danmar/cppcheck/blob/main/man/manual.md#suppressions-in-a-file).
