@@ -26,7 +26,7 @@ $ cppcheck --help
 ## Default Configuration for Cppcheck
 
 Sider provides our [recommended ruleset](https://github.com/sider/runners/blob/HEAD/images/cppcheck/sider_recommended_cppcheck.txt) for Cppcheck.
-This configuration is used This configuration is used when the `suppressions-list` option is not specified in `sider.yml`.
+This configuration is used when the [`suppressions-list`](#suppressions-list) option is not specified in `sider.yml`.
 For more details, please visit [Recommended Ruleset](../../getting-started/recommended-rules.md).
 
 ## Configuration
